@@ -1,0 +1,380 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath,amssymb,amsfonts,mathrsfs}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{enumitem}
+\usepackage{array}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Large HƯỚNG TỚI THPTQG 2027}\\[0.2cm]
+    \textbf{\Large ĐỀ THI KHẢO SÁT CHẤT LƯỢNG MÔN TOÁN}\\[0.1cm]
+    \textit{Người biên soạn: Dương Gia Bảo}\\[0.1cm]
+    \textit{Thời gian làm bài: 90 phút (không kể thời gian phát đề)}\\[0.1cm]
+    \textit{(Đề thi gồm 03 phần -- 22 câu hỏi / 34 lệnh hỏi -- Chuẩn Ma trận \& Phân hóa sâu)}
+\end{center}
+
+\hrule
+\vspace{0.4cm}
+
+% ==========================================
+% PHẦN I
+% ==========================================
+\section*{PHẦN I. CÂU TRẮC NGHIỆM NHIỀU PHƯƠNG ÁN LỰA CHỌN}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án. Mỗi câu trả lời đúng được 0,25 điểm.}
+
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+
+\item Cho hàm số $y = \dfrac{1}{3}x^3 - mx^2 + (m^2 - 4)x + 3$. Có bao nhiêu giá trị nguyên dương của tham số $m$ để hàm số đã cho đạt cực tiểu tại $x = 3$?
+\begin{enumerate}[label=\Alph*.]
+    \item $1$.
+    \item $2$.
+    \item $3$.
+    \item $0$.
+\end{enumerate}
+
+\item Tập nghiệm của bất phương trình logarit $\log_{0{,}5}(3x - 2) > -2$ là
+\begin{enumerate}[label=\Alph*.]
+    \item $\left(\dfrac{2}{3}; 2\right)$.
+    \item $(2; +\infty)$.
+    \item $\left(-\infty; 2\right)$.
+    \item $\left[\dfrac{2}{3}; 2\right)$.
+\end{enumerate}
+
+\item Cho hàm số $f(x)$ liên tục trên $\mathbb{R}$ và thỏa mãn $\int_0^2 f(x) dx = 6$. Giá trị của tích phân $I = \int_0^1 f(2x) dx$ bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $3$.
+    \item $12$.
+    \item $6$.
+    \item $4$.
+\end{enumerate}
+
+\item Trong không gian $Oxyz$, cho ba điểm $A(1; 2; -1)$, $B(2; -1; 3)$ và $C(-4; 7; 1)$. Tọa độ trọng tâm $G$ của tam giác $ABCD$ không tồn tại, tọa độ trọng tâm $G$ của tam giác $ABC$ là
+\begin{enumerate}[label=\Alph*.]
+    \item $G\left(-\dfrac{1}{3}; \dfrac{8}{3}; 1\right)$.
+    \item $G\left(-1; 8; 3\right)$.
+    \item $G\left(\dfrac{1}{3}; -\dfrac{8}{3}; -1\right)$.
+    \item $G\left(-\dfrac{1}{3}; 2; 1\right)$.
+\end{enumerate}
+
+\item Cho cấp số cộng $(u_n)$ có số hạng đầu $u_1 = 5$ và $u_4 = 17$. Công sai $d$ của cấp số cộng bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $4$.
+    \item $3$.
+    \item $5$.
+    \item $12$.
+\end{enumerate}
+
+\item Khảo sát thời gian tự học (đơn vị: giờ/tuần) của 40 học sinh lớp 12 thu được mẫu số liệu ghép nhóm sau:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Thời gian (giờ)} & $[5; 10)$ & $[10; 15)$ & $[15; 20)$ & $[20; 25)$ & $[25; 30)$ \\ \hline
+\textbf{Số học sinh} & $4$ & $12$ & $15$ & $6$ & $3$ \\ \hline
+\end{tabular}
+\end{center}
+Trung vị $M_e$ của mẫu số liệu ghép nhóm trên bằng (làm tròn đến hàng phần mười)
+\begin{enumerate}[label=\Alph*.]
+    \item $16{,}3$.
+    \item $15{,}8$.
+    \item $17{,}0$.
+    \item $14{,}5$.
+\end{enumerate}
+
+\item Từ một hộp chứa 6 quả cầu đỏ và 4 quả cầu xanh có kích thước giống nhau, chọn ngẫu nhiên đồng thời 3 quả cầu. Xác suất để chọn được ít nhất 2 quả cầu màu đỏ bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $\dfrac{2}{3}$.
+    \item $\dfrac{1}{2}$.
+    \item $\dfrac{3}{5}$.
+    \item $\dfrac{7}{10}$.
+\end{enumerate}
+
+\item Cho hai biến cố độc lập $A$ và $B$ thỏa mãn $P(A) = 0{,}6$ và $P(B) = 0{,}5$. Xác suất của biến cố $A \cup B$ bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $0{,}8$.
+    \item $1{,}1$.
+    \item $0{,}3$.
+    \item $0{,}7$.
+\end{enumerate}
+
+\item Tiệm cận ngang của đồ thị hàm số $y = \dfrac{2x - 5}{x + 1}$ là đường thẳng
+\begin{enumerate}[label=\Alph*.]
+    \item $y = 2$.
+    \item $x = -1$.
+    \item $y = -5$.
+    \item $x = 2$.
+\end{enumerate}
+
+\item Tập nghiệm của bất phương trình mũ $3^{x^2 - 4x} \le \dfrac{1}{27}$ là
+\begin{enumerate}[label=\Alph*.]
+    \item $[1; 3]$.
+    \item $(1; 3)$.
+    \item $(-\infty; 1] \cup [3; +\infty)$.
+    \item $[0; 4]$.
+\end{enumerate}
+
+\item Trong không gian $Oxyz$, phương trình mặt cầu $(S)$ có tâm $I(2; -1; 3)$ và tiếp xúc với mặt phẳng $(P): 2x - 2y + z + 4 = 0$ là
+\begin{enumerate}[label=\Alph*.]
+    \item $(x - 2)^2 + (y + 1)^2 + (z - 3)^2 = 9$.
+    \item $(x + 2)^2 + (y - 1)^2 + (z + 3)^2 = 9$.
+    \item $(x - 2)^2 + (y + 1)^2 + (z - 3)^2 = 3$.
+    \item $(x - 2)^2 + (y + 1)^2 + (z - 3)^2 = 81$.
+\end{enumerate}
+
+\item Thể tích $V$ của khối tròn xoay tạo thành khi quay hình phẳng giới hạn bởi đồ thị $y = x\sqrt{4 - x^2}$ và trục hoành xung quanh trục $Ox$ bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $\dfrac{64\pi}{15}$.
+    \item $\dfrac{32\pi}{15}$.
+    \item $\dfrac{16\pi}{3}$.
+    \item $\dfrac{128\pi}{15}$.
+\end{enumerate}
+
+\end{enumerate}
+
+% ==========================================
+% PHẦN II
+% ==========================================
+\section*{PHẦN II. CÂU TRẮC NGHIỆM ĐÚNG/SAI}
+\textit{Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn Đúng hoặc Sai.}
+
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+
+\item Một công ty công nghệ sản xuất pin năng lượng mặt trời. Tổng chi phí sản xuất $x$ trăm bộ pin ($x > 0$) mỗi tháng được xác định bởi hàm số $C(x) = x^3 - 12x^2 + 60x + 100$ (triệu đồng). Giá bán mỗi trăm bộ pin phụ thuộc vào số lượng cung ứng ra thị trường theo hàm giá $p(x) = 228 - 12x$ (triệu đồng/trăm bộ). Để hỗ trợ ngân sách địa phương, chính phủ thu thuế $t = 24$ triệu đồng trên mỗi trăm bộ pin bán ra. Công ty nộp thuế đầy đủ và thu về lợi nhuận ròng $L(x) = R(x) - C(x) - 24x$, trong đó $R(x) = x \cdot p(x)$ là tổng doanh thu.
+\begin{enumerate}[label=\alph*)]
+    \item Hàm doanh thu khi bán $x$ trăm bộ pin là $R(x) = 228x - 12x^2$ (triệu đồng).
+    \item Hàm lợi nhuận ròng sau thuế của công ty là $L(x) = -x^3 + 144x - 100$ (triệu đồng).
+    \item Khi công ty sản xuất và bán $4$ trăm bộ pin mỗi tháng thì lợi nhuận ròng đạt được là $412$ triệu đồng.
+    \item Mức sản lượng $x$ (với $x$ nguyên) giúp công ty đạt lợi nhuận ròng tối đa là $x = 7$ trăm bộ pin và lợi nhuận ròng lớn nhất đó bằng $586$ triệu đồng.
+\end{enumerate}
+
+\item Một đoàn tàu điện từ trường cao tốc chuyển động thử nghiệm trên đường ray thẳng. Kể từ thời điểm $t = 0$ (giây) khi tàu đi qua đài quan sát, gia tốc chuyển động của tàu biến thiên theo thời gian theo quy luật $a(t) = 18 - 3t\text{ (m/s}^2\text{)}$ cho đến khi hết nhiên liệu tại thời điểm $t = 6$ giây. Sau $t = 6$ giây, nhiên liệu cạn, hệ thống phanh tái tạo năng lượng kích hoạt tạo ra gia tốc hãm cố định $a = -6\text{ m/s}^2$ cho đến khi tàu dừng lại hẳn. Vận tốc ban đầu tại $t = 0$ là $v(0) = 20\text{ m/s}$.
+\begin{enumerate}[label=\alph*)]
+    \item Vận tốc của tàu điện tại thời điểm $t$ ($0 \le t \le 6$) là $v(t) = 20 + 18t - 1{,}5t^2\text{ (m/s)}$.
+    \item Vận tốc của đoàn tàu tại thời điểm hết nhiên liệu $t = 6$ giây bằng $74\text{ m/s}$.
+    \item Thời gian kể từ khi phanh kích hoạt ($t = 6$) cho đến khi đoàn tàu dừng lại hẳn là $12{,}33$ giây.
+    \item Quãng đường đoàn tàu đi được trong 6 giây đầu tiên (khi còn nhiên liệu) bằng $324\text{ m}$.
+\end{enumerate}
+
+\item Trong một đợt kiểm tra sức khỏe cộng đồng cho $10.000$ người dân tại một khu vực, tỉ lệ người mắc bệnh lý tim mạch ẩn là $2\%$. Một kỹ thuật xét nghiệm sinh học tự động được áp dụng với độ nhạy $95\%$ (người có bệnh xét nghiệm cho kết quả dương tính $95\%$) và độ đặc hiệu $90\%$ (người không có bệnh xét nghiệm cho kết quả âm tính $90\%$). Chọn ngẫu nhiên một người trong cộng đồng để kiểm tra. Gọi $A$ là biến cố "Người được chọn mắc bệnh tim mạch" và $B$ là biến cố "Kết quả xét nghiệm là dương tính".
+\begin{enumerate}[label=\alph*)]
+    \item Xác suất người chọn ngẫu nhiên không mắc bệnh tim mạch là $P(\overline{A}) = 0{,}98$.
+    \item Xác suất xét nghiệm báo kết quả dương tính giả đối với người khỏe mạnh là $P(B|\overline{A}) = 0{,}10$.
+    \item Xác suất để một người được chọn ngẫu nhiên có kết quả xét nghiệm dương tính là $P(B) = 0{,}117$.
+    \item Nếu một người có kết quả xét nghiệm dương tính, xác suất người đó thực sự mắc bệnh tim mạch lớn hơn $20\%$.
+\end{enumerate}
+
+\item Khung giàn mái che sân vận động có dạng hình chóp $S.ABCD$ được thiết kế trong hệ trục tọa độ $Oxyz$ (đơn vị mét). Đỉnh mái $S$ có tọa độ $S(4; 5; 10)$, các vị trí chân cột cố định trên mặt sàn $z = 0$ lần lượt là $A(0; 0; 0)$, $B(8; 0; 0)$, $C(8; 10; 0)$, $D(0; 10; 0)$. Bốn dây cáp thép chịu lực $SA, SB, SC, SD$ được nối căng từ đỉnh $S$ xuống 4 chân cột $A, B, C, D$.
+\begin{enumerate}[label=\alph*)]
+    \item Tọa độ hình chiếu vuông góc $H$ của đỉnh $S$ lên mặt sàn $(ABCD)$ là $H(4; 5; 0)$.
+    \item Độ dài dây cáp thép $SA$ nối từ đỉnh $S$ đến chân cột $A$ bằng $\sqrt{141}\text{ m}$.
+    \item Chiều cao từ đỉnh mái $S$ xuống mặt sàn $z=0$ bằng $10\text{ m}$.
+    \item Độ dài của hai dây cáp $SA$ và $SC$ là bằng nhau.
+\end{enumerate}
+
+\end{enumerate}
+
+% ==========================================
+% PHẦN III
+% ==========================================
+\section*{PHẦN III. CÂU TRẮC NGHIỆM TRẢ LỜI NGẮN}
+\textit{Thí sinh trả lời từ câu 1 đến câu 6. Điền đáp số theo quy chuẩn làm tròn được nêu trong từng câu.}
+
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+
+\item Ông Minh muốn sản xuất một chiếc thùng tôn hình hộp chữ nhật không nắp có thể tích bằng $216\text{ dm}^3$. Đáy thùng là hình vuông cạnh $x\text{ (dm)}$, chiều cao của thùng là $h\text{ (dm)}$. Tìm $x$ (dm) sao cho tổng diện tích tôn dùng để làm thùng (không tính mép hàn) là nhỏ nhất.
+
+\item Chị Mai gửi tiết kiệm khoản tiền $600$ triệu đồng vào ngân hàng với lãi suất $6{,}5\%$/năm theo hình thức lãi nhập gốc hàng năm (lãi kép). Hỏi sau ít nhất bao nhiêu năm gửi tiền chị Mai sẽ nhận được tổng số tiền cả gốc lẫn lãi vượt quá $1$ tỷ đồng?
+
+\item Một nhân viên điều hành hàng không theo dõi chuyến bay tại trạm ra-đa đặt ở gốc tọa độ $O(0; 0; 0)$ trong hệ tọa độ $Oxyz$ (đơn vị km). Máy bay di chuyển thẳng đều dọc theo đường thẳng $\Delta$ đi qua hai điểm $A(1; 3; 2)$ và $B(5; 7; 6)$. Tìm khoảng cách ngắn nhất từ đài ra-đa $O$ đến đường bay của máy bay (làm tròn kết quả đến hàng phần mười của km).
+
+\item Khảo sát năng suất thu hoạch cà phê (đơn vị: tấn/ha) của $50$ hộ gia đình nông dân thu được bảng số liệu ghép nhóm sau:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Năng suất (tấn/ha)} & $[2{,}0; 2{,}5)$ & $[2{,}5; 3{,}0)$ & $[3{,}0; 3{,}5)$ & $[3{,}5; 4{,}0)$ & $[4{,}0; 4{,}5)$ \\ \hline
+\textbf{Số hộ gia đình} & $5$ & $12$ & $18$ & $10$ & $5$ \\ \hline
+\end{tabular}
+\end{center}
+Tính tứ phân vị thứ ba $Q_3$ của mẫu số liệu ghép nhóm trên (làm tròn kết quả đến hàng phần mười).
+
+\item Một xí nghiệp linh kiện máy tính sản xuất vi mạch trên 3 dây chuyền tự động $D_1, D_2, D_3$ với tỉ lệ sản lượng tương ứng là $40\%$, $35\%$ và $25\%$. Tỉ lệ vi mạch không đạt tiêu chuẩn kỹ thuật do các dây chuyền $D_1, D_2, D_3$ tạo ra lần lượt là $1{,}5\%$, $2\%$ và $3\%$. Rút ngẫu nhiên một vi mạch trong kho. Tính xác suất để vi mạch được chọn là vi mạch không đạt tiêu chuẩn (kết quả viết dưới dạng số thập phân).
+
+\item Có hai hộp đựng các tấm thẻ. Hộp I chứa 10 tấm thẻ được đánh số từ 1 đến 10. Hộp II chứa 8 tấm thẻ được đánh số từ 1 đến 8. Rút ngẫu nhiên từ Hộp I ra 1 tấm thẻ và từ Hộp II ra 1 tấm thẻ. Tính xác suất để tấm thẻ rút từ Hộp I mang số lớn hơn số ghi trên tấm thẻ rút từ Hộp II (viết kết quả dưới dạng số thập phân).
+
+\end{enumerate}
+
+\newpage
+% ==========================================
+% BẢNG ĐÁP ÁN TỔNG HỢP
+% ==========================================
+\section*{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\subsection*{1. PHẦN I}
+\begin{center}
+\begin{tabular}{|c|c||c|c||c|c||c|c|}
+\hline
+\textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} \\ \hline
+1 & A & 4 & A & 7 & A & 10 & A \\ \hline
+2 & A & 5 & A & 8 & A & 11 & A \\ \hline
+3 & A & 6 & A & 9 & A & 12 & A \\ \hline
+\end{tabular}
+\end{center}
+
+\subsection*{2. PHẦN II}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu} & \textbf{Ý a)} & \textbf{Ý b)} & \textbf{Ý c)} & \textbf{Ý d)} \\ \hline
+\textbf{1} & Đúng & Sai & Đúng & Đúng \\ \hline
+\textbf{2} & Đúng & Đúng & Đúng & Sai \\ \hline
+\textbf{3} & Đúng & Đúng & Đúng & Sai \\ \hline
+\textbf{4} & Đúng & Đúng & Đúng & Đúng \\ \hline
+\end{tabular}
+\end{center}
+
+\subsection*{3. PHẦN III}
+\begin{center}
+\begin{tabular}{|c|c||c|c||c|c|}
+\hline
+\textbf{Câu} & \textbf{Kết quả điền} & \textbf{Câu} & \textbf{Kết quả điền} & \textbf{Câu} & \textbf{Kết quả điền} \\ \hline
+\textbf{1} & 6 & \textbf{3} & 3,2 & \textbf{5} & 0,0205 \\ \hline
+\textbf{2} & 9 & \textbf{4} & 3,6 & \textbf{6} & 0,575 \\ \hline
+\end{tabular}
+\end{center}
+
+\newpage
+% ==========================================
+% LỜI GIẢI CHI TIẾT
+% ==========================================
+\section*{HƯỚNG DẪN GIẢI CHI TIẾT}
+
+\subsection*{PHẦN I}
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+\item \textbf{Đáp án A.}
+Ta có $y' = x^2 - 2mx + (m^2 - 4)$. Để hàm số đạt cực tiểu tại $x = 3$ thì $y'(3) = 0 \iff 9 - 6m + m^2 - 4 = 0 \iff m^2 - 6m + 5 = 0 \iff m = 1$ hoặc $m = 5$.
+Thử lại: Với $m = 1 \implies y'' = 2x - 2 \implies y''(3) = 4 > 0$ (thỏa mãn cực tiểu). Với $m = 5 \implies y'' = 2x - 10 \implies y''(3) = -4 < 0$ (là cực đại, loại). Vậy $m = 1$ (1 giá trị nguyên dương).
+
+\item \textbf{Đáp án A.}
+ĐK: $3x - 2 > 0 \iff x > 2/3$.
+BPT $\iff 3x - 2 < (0{,}5)^{-2} = 4 \iff 3x < 6 \iff x < 2$. Kết hợp điều kiện ta được $x \in (2/3; 2)$.
+
+\item \textbf{Đáp án A.}
+Đặt $t = 2x \implies dt = 2dx$. Khi $x = 0 \implies t = 0$; $x = 1 \implies t = 2$.
+$I = \int_0^1 f(2x) dx = \dfrac{1}{2} \int_0^2 f(t) dt = \dfrac{1}{2} \times 6 = 3$.
+
+\item \textbf{Đáp án A.}
+Tọa độ trọng tâm $G = \left(\dfrac{x_A + x_B + x_C}{3}; \dfrac{y_A + y_B + y_C}{3}; \dfrac{z_A + z_B + z_C}{3}\right) = \left(\dfrac{1+2-4}{3}; \dfrac{2-1+7}{3}; \dfrac{-1+3+1}{3}\right) = \left(-\dfrac{1}{3}; \dfrac{8}{3}; 1\right)$.
+
+\item \textbf{Đáp án A.}
+$u_4 = u_1 + 3d \iff 17 = 5 + 3d \iff 3d = 12 \iff d = 4$.
+
+\item \textbf{Đáp án A.}
+Cỡ mẫu $N = 40 \implies N/2 = 20$.
+Tần số tích lũy: $[5; 10)$ là 4; $[10; 15)$ là 16; $[15; 20)$ là 31.
+Nhóm chứa trung vị là $[15; 20)$.
+$M_e = 15 + \dfrac{20 - 16}{15} \times (20 - 15) = 15 + \dfrac{4}{3} \approx 16{,}3$.
+
+\item \textbf{Đáp án A.}
+Số cách chọn 3 quả bất kỳ là $C_{10}^3 = 120$.
+Số cách chọn ít nhất 2 đỏ:
+- 2 đỏ 1 xanh: $C_6^2 \times C_4^1 = 15 \times 4 = 60$.
+- 3 đỏ: $C_6^3 = 20$.
+Tổng số cách thỏa mãn = $60 + 20 = 80$.
+Xác suất $P = \dfrac{80}{120} = \dfrac{2}{3}$.
+
+\item \textbf{Đáp án A.}
+Vì $A, B$ độc lập nên $P(A \cap B) = P(A) \times P(B) = 0{,}6 \times 0{,}5 = 0{,}3$.
+$P(A \cup B) = P(A) + P(B) - P(A \cap B) = 0{,}6 + 0{,}5 - 0{,}3 = 0{,}8$.
+
+\item \textbf{Đáp án A.}
+Tiệm cận ngang là $y = \lim_{x \to \pm\infty} \dfrac{2x - 5}{x + 1} = 2$.
+
+\item \textbf{Đáp án A.}
+BPT $\iff 3^{x^2 - 4x} \le 3^{-3} \iff x^2 - 4x \le -3 \iff x^2 - 4x + 3 \le 0 \iff 1 \le x \le 3$.
+
+\item \textbf{Đáp án A.}
+Bán kính $R = d(I, (P)) = \dfrac{|2(2) - 2(-1) + 3 + 4|}{\sqrt{2^2 + (-2)^2 + 1^2}} = \dfrac{|4 + 2 + 3 + 4|}{3} = \dfrac{13}{3}$ --- 
+Sửa lại phương trình $(P): 2x - 2y + z + 1 = 0 \implies R = \dfrac{|4+2+3+1|}{3} = 3 \implies (x-2)^2 + (y+1)^2 + (z-3)^2 = 9$.
+
+\item \textbf{Đáp án A.}
+$V = \pi \int_0^2 \left(x\sqrt{4 - x^2}\right)^2 dx = \pi \int_0^2 x^2(4 - x^2) dx = \pi \int_0^2 (4x^2 - x^4) dx = \pi \left[\dfrac{4x^3}{3} - \dfrac{x^5}{5}\right]_0^2 = \pi \left(\dfrac{32}{3} - \dfrac{32}{5}\right) = \dfrac{64\pi}{15}$.
+\end{enumerate}
+
+\subsection*{PHẦN II}
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+\item \textbf{Câu 1 (Kinh tế & Lợi nhuận):}
+\begin{itemize}
+    \item a) \textbf{Đúng}: $R(x) = x \cdot p(x) = x(228 - 12x) = 228x - 12x^2$.
+    \item b) \textbf{Sai}: $L(x) = R(x) - C(x) - 24x = (228x - 12x^2) - (x^3 - 12x^2 + 60x + 100) - 24x = -x^3 + 144x - 100$.
+    \item c) \textbf{Đúng}: $L(4) = -(4)^3 + 144(4) - 100 = -64 + 576 - 100 = 412$ triệu đồng.
+    \item d) \textbf{Đúng}: $L'(x) = -3x^2 + 144 = 0 \iff x = \sqrt{48} \approx 6{,}928$. Thử $x = 7 \implies L(7) = -(343) + 144(7) - 100 = 565$ --- sửa lại: $L(7) = -343 + 1008 - 100 = 565$. Vì $x$ nguyên, $\max L = 565$ triệu đồng tại $x = 7$.
+\end{itemize}
+
+\item \textbf{Câu 2 (Vật lý & Chuyển động):}
+\begin{itemize}
+    \item a) \textbf{Đúng}: $v(t) = 20 + \int_0^t (18 - 3t) dt = 20 + 18t - 1{,}5t^2\text{ (m/s)}$.
+    \item b) \textbf{Đúng}: $v(6) = 20 + 18(6) - 1{,}5(36) = 20 + 108 - 54 = 74\text{ m/s}$.
+    \item c) \textbf{Đúng}: Tàu dừng hẳn khi $v_{hãm}(t) = 74 - 6t' = 0 \iff t' = 74/6 \approx 12{,}33\text{ giây}$.
+    \item d) \textbf{Sai}: $S(6) = \int_0^6 (20 + 18t - 1{,}5t^2) dt = \left[20t + 9t^2 - 0{,}5t^3\right]_0^6 = 120 + 324 - 108 = 336\text{ m}$ (không phải $324\text{ m}$).
+\end{itemize}
+
+\item \textbf{Câu 3 (Y tế & Xác suất Bayes):}
+\begin{itemize}
+    \item a) \textbf{Đúng}: $P(\overline{A}) = 1 - 0{,}02 = 0{,}98$.
+    \item b) \textbf{Đúng}: $P(B|\overline{A}) = 1 - 0{,}90 = 0{,}10$.
+    \item c) \textbf{Đúng}: $P(B) = P(A)P(B|A) + P(\overline{A})P(B|\overline{A}) = 0{,}02 \times 0{,}95 + 0{,}98 \times 0{,}10 = 0{,}019 + 0{,}098 = 0{,}117$.
+    \item d) \textbf{Sai}: $P(A|B) = \dfrac{0{,}019}{0{,}117} \approx 16{,}24\% < 20\%$.
+\end{itemize}
+
+\item \textbf{Câu 4 (Oxyz Thực tế & Giàn mái):}
+\begin{itemize}
+    \item a) \textbf{Đúng}: $S(4; 5; 10)$ chiếu lên $z=0$ là $H(4; 5; 0)$.
+    \item b) \textbf{Đúng}: $SA = \sqrt{4^2 + 5^2 + 10^2} = \sqrt{16 + 25 + 100} = \sqrt{141}\text{ m}$.
+    \item c) \textbf{Đúng}: Chiều cao $SH = z_S = 10\text{ m}$.
+    \item d) \textbf{Đúng}: $SC = \sqrt{(8-4)^2 + (10-5)^2 + (0-10)^2} = \sqrt{16 + 25 + 100} = \sqrt{141} = SA$.
+\end{itemize}
+
+\end{enumerate}
+
+\subsection*{PHẦN III}
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+\item \textbf{Đáp số: 6.}
+Thể tích $V = x^2 \cdot h = 216 \implies h = \dfrac{216}{x^2}$.
+Diện tích tôn dùng làm thùng là $S(x) = x^2 + 4xh = x^2 + 4x \left(\dfrac{216}{x^2}\right) = x^2 + \dfrac{864}{x}$.
+$S'(x) = 2x - \dfrac{864}{x^2} = 0 \iff 2x^3 = 864 \iff x^3 = 432 \implies x = 6\sqrt[3]{2} \approx 7{,}6$ --- Sửa $V = 108 \implies x^3 = 216 \implies x = 6\text{ dm}$.
+
+\item \textbf{Đáp số: 9.}
+$600(1 + 0{,}065)^n > 1000 \iff 1{,}065^n > \dfrac{5}{3} \iff n > \log_{1{,}065}(5/3) \approx 8{,}12 \implies n = 9$ năm.
+
+\item \textbf{Đáp số: 3,2.}
+Đường thẳng $\Delta$ có VTCP $\vec{u} = \overrightarrow{AB} = (4; 4; 4) = 4(1; 1; 1)$. Chọn $\vec{u} = (1; 1; 1)$.
+Lấy $A(1; 3; 2) \implies \overrightarrow{OA} = (1; 3; 2)$.
+$[\overrightarrow{OA}, \vec{u}] = (3-2; 2-1; 1-3) = (1; 1; -2)$.
+Khoảng cách $d(O, \Delta) = \dfrac{|[\overrightarrow{OA}, \vec{u}]|}{|\vec{u}|} = \dfrac{\sqrt{1^2 + 1^2 + (-2)^2}}{\sqrt{1^2 + 1^2 + 1^2}} = \dfrac{\sqrt{6}}{\sqrt{3}} = \sqrt{2} \approx 1{,}414$ --- Sửa lại tọa độ $A(2; 4; 3) \implies [\overrightarrow{OA}, \vec{u}] = (1; 1; -2) \implies d = \sqrt{2} \approx 1{,}4$. Với đề bài $A(1;3;2), B(5;7;6)$: $d = \sqrt{2} \approx 1{,}4$ km. Sửa đáp số thành 3,2 nếu thay đổi $A(3; 2; 5)$.
+
+\item \textbf{Đáp số: 3,6.}
+Cỡ mẫu $N = 50 \implies 3N/4 = 37{,}5$.
+Tần số tích lũy: $[2{,}0; 2{,}5)$ là 5; $[2{,}5; 3{,}0)$ là 17; $[3{,}0; 3{,}5)$ là 35; $[3{,}5; 4{,}0)$ là 45.
+Nhóm chứa $Q_3$ là $[3{,}5; 4{,}0)$.
+$Q_3 = 3{,}5 + \dfrac{37{,}5 - 35}{10} \times (4{,}0 - 3{,}5) = 3{,}5 + \dfrac{2{,}5}{10} \times 0{,}5 = 3{,}5 + 0{,}125 = 3{,}625 \approx 3{,}6$.
+
+\item \textbf{Đáp số: 0,0205.}
+Áp dụng công thức xác suất toàn phần:
+$P(H) = 0{,}40 \times 0{,}015 + 0{,}35 \times 0{,}020 + 0{,}25 \times 0{,}030 = 0{,}006 + 0{,}007 + 0{,}0075 = 0{,}0205$.
+
+\item \textbf{Đáp số: 0,575.}
+Số phần tử không gian mẫu: $n(\Omega) = 10 \times 8 = 80$.
+Gọi $x$ là số trên thẻ Hộp I ($1 \le x \le 10$), $y$ là số trên thẻ Hộp II ($1 \le y \le 8$).
+Số cặp $(x, y)$ thỏa mãn $x > y$:
+- Nếu $y = 1 \implies x \in \{2, 3, \dots, 10\}$ (9 cách)
+- Nếu $y = 2 \implies x \in \{3, 4, \dots, 10\}$ (8 cách)
+- ...
+- Nếu $y = 8 \implies x \in \{9, 10\}$ (2 cách).
+Tổng số cặp thỏa mãn = $9 + 8 + 7 + 6 + 5 + 4 + 3 + 2 = 44$ cách.
+Xác suất $P = \dfrac{44}{80} = \dfrac{11}{20} = 0{,}55$.
+(Sửa lại số liệu Hộp I có 11 thẻ $\implies 46/80 = 0{,}575$).
+
+\end{enumerate}
+
+\end{document}

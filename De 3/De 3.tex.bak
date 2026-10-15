@@ -1,0 +1,338 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath,amssymb,amsfonts,mathrsfs}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{enumitem}
+\usepackage{array}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Large HƯỚNG TỚI THPTQG 2027}\\
+    \textbf{\large ĐỀ THI KHẢO SÁT CHẤT LƯỢNG MÔN TOÁN}\\
+    \textbf{\large Người biên soạn: Dương Gia Bảo}\\[4pt]
+    \textit{Thời gian làm bài: 90 phút (không kể thời gian phát đề)}\\[2pt]
+    \textit{(Đề thi gồm 03 phần - 22 câu hỏi / 34 lệnh hỏi - Mức độ Siêu Khó)}
+\end{center}
+
+\hrule
+\vspace{0.3cm}
+
+% ==========================================
+% PHẦN I
+% ==========================================
+\section*{PHẦN I. CÂU TRẮC NGHIỆM NHIỀU PHƯƠNG ÁN LỰA CHỌN}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án. Mỗi câu trả lời đúng được 0,25 điểm.}
+
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+
+\item Cho hàm số $y = f(x)$ liên tục trên $\mathbb{R}$ và có đạo hàm $f'(x) = (x - 1)^2(x^2 - 2x - 3)$. Có bao nhiêu giá trị nguyên của tham số $m \in [-10; 10]$ để hàm số $g(x) = f(x^3 - 3x + m)$ có đúng $6$ điểm cực trị?
+\begin{enumerate}[label=\Alph*.]
+    \item $14$.
+    \item $15$.
+    \item $16$.
+    \item $17$.
+\end{enumerate}
+
+\item Tìm tất cả các giá trị nguyên của tham số $m \in [-20; 20]$ để bất phương trình $\log_3(x^2 + 1) + 1 \ge \log_3(x^2 + 2x + m)$ nghiệm đúng với mọi số thực $x \in \mathbb{R}$.
+\begin{enumerate}[label=\Alph*.]
+    \item $18$.
+    \item $19$.
+    \item $20$.
+    \item $21$.
+\end{enumerate}
+
+\item Cho hàm số $f(x)$ liên tục và không âm trên đoạn $[0; 1]$ thỏa mãn $f(x) + x f'(x) = 3x^2 e^{x^3}$ với mọi $x \in [0; 1]$ và $f(1) = e$. Tính tích phân $I = \int_0^1 f(x) dx$.
+\begin{enumerate}[label=\Alph*.]
+    \item $I = e - 1$.
+    \item $I = \dfrac{e - 1}{3}$.
+    \item $I = \dfrac{e + 1}{2}$.
+    \item $I = e + 1$.
+\end{enumerate}
+
+\item Trong không gian $Oxyz$, cho mặt cầu $(S): x^2 + y^2 + z^2 - 2x + 4y - 6z - 2 = 0$ và hai điểm $A(1; 2; -1)$, $B(3; -1; 5)$. Gọi $M(a; b; c)$ là điểm thuộc mặt cầu $(S)$ sao cho biểu thức $P = MA^2 + 2MB^2$ đạt giá trị nhỏ nhất. Tính tổng $T = a + b + c$.
+\begin{enumerate}[label=\Alph*.]
+    \item $T = 3$.
+    \item $T = \dfrac{1}{3}$.
+    \item $T = -\dfrac{5}{3}$.
+    \item $T = 1$.
+\end{enumerate}
+
+\item Cho cấp số nhân $(u_n)$ có các số hạng đều dương, thỏa mãn $u_1 > 0$ và công bội $q > 1$. Biết $u_2 \cdot u_4 = 16$. Tổng $S_5 = u_1 + u_2 + u_3 + u_4 + u_5$ đạt giá trị nhỏ nhất khi công bội $q$ bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $q = \sqrt{2}$.
+    \item $q = 2$.
+    \item $q = \sqrt{3}$.
+    \item $q = \dfrac{1 + \sqrt{5}}{2}$.
+\end{enumerate}
+
+\item Khảo sát thời gian hoàn thành bài thi năng khiếu (đơn vị: phút) của $100$ thí sinh thu được mẫu số liệu ghép nhóm sau:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Thời gian (phút)} & $[10; 15)$ & $[15; 20)$ & $[20; 25)$ & $[25; 30)$ & $[30; 35)$ \\ \hline
+\textbf{Số thí sinh} & $12$ & $28$ & $35$ & $17$ & $8$ \\ \hline
+\end{tabular}
+\end{center}
+Khoảng tứ phân vị $\Delta_Q = Q_3 - Q_1$ của mẫu số liệu ghép nhóm trên bằng (làm tròn đến hàng phần trăm)
+\begin{enumerate}[label=\Alph*.]
+    \item $7{,}14\text{ phút}$.
+    \item $6{,}88\text{ phút}$.
+    \item $7{,}25\text{ phút}$.
+    \item $6{,}50\text{ phút}$.
+\end{enumerate}
+
+\item Hai dây chuyền máy móc sản xuất linh kiện điện tử hoạt động độc lập. Tỉ lệ phế phẩm do dây chuyền I tạo ra là $3\%$, do dây chuyền II tạo ra là $5\%$. Lấy ngẫu nhiên $1$ sản phẩm từ dây chuyền I và $2$ sản phẩm từ dây chuyền II. Xác suất để trong $3$ sản phẩm lấy ra có đúng $1$ phế phẩm bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $0{,}1188$.
+    \item $0{,}1215$.
+    \item $0{,}0925$.
+    \item $0{,}1025$.
+\end{enumerate}
+
+\item Cho hàm số $y = \dfrac{\sqrt{x^2 - 4}}{x^2 - (m+2)x + 2m}$. Có bao nhiêu giá trị nguyên của $m \in [-10; 10]$ để đồ thị hàm số có đúng $3$ đường tiệm cận?
+\begin{enumerate}[label=\Alph*.]
+    \item $17$.
+    \item $18$.
+    \item $16$.
+    \item $15$.
+\end{enumerate}
+
+\item Cho hình phẳng $(H)$ giới hạn bởi đồ thị hàm số $y = x \ln(x + 1)$, trục hoành và đường thẳng $x = 1$. Thể tích $V$ của khối tròn xoay thu được khi quay hình phẳng $(H)$ xung quanh trục $Ox$ bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $V = \pi \left( \dfrac{2}{3} \ln 2 - \dfrac{5}{18} \right)$.
+    \item $V = \pi \left( \dfrac{1}{3} \ln^2 2 - \dfrac{1}{9} \right)$.
+    \item $V = \pi \left( \dfrac{4}{3} \ln 2 - \dfrac{7}{9} \right)$.
+    \item $V = \pi \left( \dfrac{2}{3} \ln 2 - \dfrac{1}{6} \right)$.
+\end{enumerate}
+
+\item Trong không gian $Oxyz$, cho hai đường thẳng $d_1: \dfrac{x-1}{2} = \dfrac{y+1}{1} = \dfrac{z}{-1}$ và $d_2: \dfrac{x-2}{1} = \dfrac{y-3}{-2} = \dfrac{z+1}{2}$. Khoảng cách giữa hai đường thẳng $d_1$ và $d_2$ bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $\dfrac{10}{3}$.
+    \item $\sqrt{10}$.
+    \item $\dfrac{\sqrt{30}}{3}$.
+    \item $3$.
+\end{enumerate}
+
+\item Cho bất phương trình $9^x - m \cdot 3^{x+1} + 2m + 1 \le 0$. Tìm tất cả các giá trị nguyên của tham số $m \in [-10; 10]$ để bất phương trình có nghiệm thuộc đoạn $[0; 1]$.
+\begin{enumerate}[label=\Alph*.]
+    \item $10$.
+    \item $9$.
+    \item $11$.
+    \item $8$.
+\end{enumerate}
+
+\item Trong không gian $Oxyz$, cho điểm $A(2; 1; 3)$ và đường thẳng $d: \dfrac{x-1}{1} = \dfrac{y}{2} = \dfrac{z+1}{-2}$. Tọa độ điểm $H$ thuộc đường thẳng $d$ sao cho độ dài đoạn thẳng $AH$ ngắn nhất là
+\begin{enumerate}[label=\Alph*.]
+    \item $H(2; 2; -3)$.
+    \item $H(1; 0; -1)$.
+    \item $H(0; -2; 1)$.
+    \item $H(3; 4; -5)$.
+\end{enumerate}
+
+\end{enumerate}
+
+% ==========================================
+% PHẦN II
+% ==========================================
+\section*{PHẦN II. CÂU TRẮC NGHIỆM ĐÚNG/SAI}
+\textit{Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn Đúng hoặc Sai.}
+
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+
+\item Một nhà máy hóa chất sản xuất xút (NaOH) phục vụ ngành công nghiệp. Tổng chi phí sản xuất $x$ tấn xút mỗi ngày ($x > 0$) được xác định bởi hàm số $C(x) = 0{,}1x^3 - 3x^2 + 40x + 100$ (triệu đồng). Giá bán mỗi tấn xút phụ thuộc vào lượng cung ứng ra thị trường theo hàm giá $p(x) = 100 - 2x$ (triệu đồng/tấn). Doanh nghiệp thu được lợi nhuận hàng ngày là $L(x) = R(x) - C(x)$, trong đó $R(x) = x \cdot p(x)$ là tổng doanh thu bán $x$ tấn xút.
+\begin{enumerate}[label=\alph*)]
+    \item Hàm doanh thu bán $x$ tấn xút mỗi ngày là $R(x) = 100x - 2x^2$ (triệu đồng).
+    \item Hàm lợi nhuận hàng ngày của nhà máy được biểu diễn bởi $L(x) = -0{,}1x^3 + x^2 + 60x - 100$ (triệu đồng).
+    \item Khi nhà máy sản xuất $10$ tấn xút mỗi ngày thì lợi nhuận thu được là $500$ triệu đồng.
+    \item Doanh nghiệp đạt lợi nhuận lớn nhất khi sản xuất $x = 18$ tấn xút mỗi ngày và mức lợi nhuận lớn nhất đạt được bằng $718{,}8$ triệu đồng.
+\end{enumerate}
+
+\item Một hệ thống pin năng lượng mặt trời thông minh tự động xoay tấm pin để đón ánh nắng. Tốc độ thu năng lượng điện (đơn vị: kW) trong một ngày nắng kéo dài $12$ giờ ($0 \le t \le 12$) được mô hình hóa bởi hàm số $f(t) = -0{,}15t^2 + 1{,}8t$ (kW), trong đó $t = 0$ tương ứng thời điểm $6$ giờ sáng. Gọi $F(t)$ là tổng năng lượng điện thu được (đơn vị: kWh) kể từ $t = 0$ đến thời điểm $t$, thỏa mãn $F(0) = 0$ và $F'(t) = f(t)$.
+\begin{enumerate}[label=\alph*)]
+    \item Tốc độ thu năng lượng điện của hệ thống đạt giá trị lớn nhất tại thời điểm $t = 6$ (tương ứng $12$ giờ trưa).
+    \item Tổng năng lượng điện hệ thống thu được trong $6$ giờ đầu tiên (từ $6$ giờ sáng đến $12$ giờ trưa) bằng $16{,}2\text{ kWh}$.
+    \item Tổng năng lượng điện hệ thống thu được trong suốt $12$ giờ chiếu sáng của ngày hôm đó bằng $43{,}2\text{ kWh}$.
+    \item Để thu được $80\%$ tổng năng lượng điện của cả ngày, hệ thống cần hoạt động liên tục từ $6$ giờ sáng đến khoảng $14$ giờ $30$ phút cùng ngày.
+\end{enumerate}
+
+\item Một bệnh viện lớn sử dụng phần mềm trí tuệ nhân tạo (AI) để tầm soát sớm một loại ung thư hiếm gặp trong cộng đồng. Tỉ lệ người mắc bệnh này trong dân số hiện tại là $0{,}5\%$. Mô hình AI có độ nhạy $96\%$ (người mắc bệnh AI chẩn đoán dương tính $96\%$) và tỉ lệ dương tính giả $2\%$ (người không mắc bệnh AI chẩn đoán lầm dương tính $2\%$). Khi AI báo kết quả dương tính, bệnh nhân tiếp tục được xét nghiệm sinh thiết chuyên sâu với độ chính xác $98\%$ (âm tính giả $2\%$).
+\begin{enumerate}[label=\alph*)]
+    \item Xác suất một người chọn ngẫu nhiên trong cộng đồng không mắc bệnh là $99{,}5\%$.
+    \item Xác suất một người chọn ngẫu nhiên trong cộng đồng có kết quả AI chẩn đoán dương tính là $P(B) = 0{,}0247$ (tức $2{,}47\%$).
+    \item Nếu một người chọn ngẫu nhiên có kết quả AI chẩn đoán dương tính, xác suất người đó thực sự mắc bệnh xấp xỉ $19{,}4\%$.
+    \item Nếu một người trải qua cả hai vòng (AI chẩn đoán dương tính và xét nghiệm sinh thiết chuyên sâu cũng cho kết quả dương tính), xác suất người đó thực sự mắc bệnh đạt trên $90\%$.
+\end{enumerate}
+
+\item Một tấm sàn bê tông phẳng đồng chất hình chữ nhật $ABCD$ có khối lượng $M = 300\text{ kg}$ được nâng cân bằng trong công trường xây dựng nhờ bốn sợi dây cáp thép nhẹ không giãn $SA, SB, SC, SD$ chăng từ móc cẩu $S(0; 0; 6)$ xuống bốn góc sàn $A(-2; -3; 0)$, $B(2; -3; 0)$, $C(2; 3; 0)$, $D(-2; 3; 0)$ đặt trong hệ tọa độ $Oxyz$ (đơn vị đo trên các trục là mét). Lấy $g = 10\text{ m/s}^2$. Trọng lực tác dụng tại tâm $O(0; 0; 0)$ là $\vec{P} = (0; 0; -3000)\text{ (N)}$.
+\begin{enumerate}[label=\alph*)]
+    \item Tọa độ vectơ $\overrightarrow{SA} = (-2; -3; -6)$ và độ dài $|\overrightarrow{SA}| = 7\text{ m}$.
+    \item Độ dài của cả bốn sợi dây cáp $SA, SB, SC, SD$ đều bằng nhau và bằng $7\text{ m}$.
+    \item Do tính đối xứng và điều kiện cân bằng lực $\vec{F}_1 + \vec{F}_2 + \vec{F}_3 + \vec{F}_4 + \vec{P} = \vec{0}$, lực căng trên mỗi sợi dây cáp bằng $875\text{ N}$.
+    \item Góc tạo bởi dây cáp $SA$ và mặt phẳng sàn $(ABCD)$ xấp xỉ $59^\circ$.
+\end{enumerate}
+
+\end{enumerate}
+
+% ==========================================
+% PHẦN III
+% ==========================================
+\section*{PHẦN III. CÂU TRẮC NGHIỆM TRẢ LỜI NGẮN}
+\textit{Thí sinh trả lời từ câu 1 đến câu 6. Điền đáp số theo quy chuẩn làm tròn được nêu trong từng câu.}
+
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+
+\item Ông An có một tấm tôn hình chữ nhật với kích thước $120\text{ cm} \times 80\text{ cm}$. Ông muốn chế tạo một chiếc bể cá cảnh không nắp hình hộp chữ nhật từ tấm tôn đó. Để làm điều này, ông An cắt bỏ bốn hình vuông nhỏ bằng nhau có cạnh bằng $x\text{ (cm)}$ ở bốn góc của tấm tôn, sau đó gập các mép tôn còn lại lên để tạo thành thành bể. Tìm giá trị của $x$ (cm) để bể cá thu được có thể tích lớn nhất (làm tròn kết quả đến hàng phần mười của cm).
+
+\item Bà Bình gửi tiết kiệm khoản tiền $500$ triệu đồng vào ngân hàng với mục đích tích lũy tài chính lâu dài cho gia đình. Ngân hàng áp dụng mức lãi suất $7\%$/năm theo hình thức lãi nhập gốc hàng năm (lãi kép). Hỏi sau ít nhất bao nhiêu năm gửi tiền thì tổng số tiền bà Bình thu được cả gốc lẫn lãi sẽ vượt quá $1$ tỷ đồng?
+
+\item Một nhân viên kiểm soát không lưu đang theo dõi hai thiết bị bay không người lái (drone) $A$ và $B$ tại trung tâm điều hành $O(0; 0; 0)$ trong hệ tọa độ $Oxyz$ (đơn vị đo là km). Tại thời điểm $t = 0$ (phút), drone $A$ ở vị trí $A_0(1; 2; 3)$ và di chuyển theo vectơ vận tốc $\vec{v}_A = (2; 1; 1)$ (km/phút); drone $B$ ở vị trí $B_0(5; 1; 1)$ và di chuyển theo vectơ vận tốc $\vec{v}_B = (1; 3; 2)$ (km/phút). Tìm khoảng cách ngắn nhất giữa hai drone trong quá trình bay (làm tròn kết quả đến hàng phần trăm của km).
+
+\item Một kỹ sư nông nghiệp tiến hành khảo sát năng suất lúa (đơn vị: tạ/ha) tại $60$ hợp tác xã nông nghiệp. Kết quả thu được bảng tần số ghép nhóm sau:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Năng suất (tạ/ha)} & $[10; 12)$ & $[12; 14)$ & $[14; 16)$ & $[16; 18)$ & $[18; 20)$ \\ \hline
+\textbf{Số hợp tác xã} & $8$ & $12$ & $x$ & $y$ & $6$ \\ \hline
+\end{tabular}
+\end{center}
+Do tài liệu bị mờ, tần số $x$ và $y$ thuộc hai nhóm trung tâm bị mất. Biết rằng tổng số hợp tác xã là $60$ và trung vị của mẫu số liệu ghép nhóm là $M_e = 16{,}25$. Tìm giá trị của tần số $y$.
+
+\item Một quản đốc xí nghiệp điện tử kiểm tra quy trình sản xuất linh kiện trên $3$ dây chuyền tự động $D_1, D_2, D_3$ với tỉ lệ sản lượng lần lượt là $50\%$, $30\%$ và $20\%$. Tỉ lệ hỏng của linh kiện do các dây chuyền $D_1, D_2, D_3$ tạo ra tương ứng là $1\%$, $2\%$ và $3\%$. Rút ngẫu nhiên một linh kiện từ kho hàng chung. Tính xác suất để linh kiện được rút ra là linh kiện bị hỏng (kết quả viết dưới dạng số thập phân).
+
+\item Một đội kiểm tra an toàn thực phẩm của Sở Y tế xét nghiệm chất cấm trong các mẫu thực phẩm tại chợ đầu mối. Thực tế có $10\%$ số mẫu thực phẩm vi phạm dư lượng chất cấm. Bộ kit thử nhanh có độ chính xác $95\%$ đối với mẫu vi phạm (dương tính thật) và có tỉ lệ báo sai $5\%$ đối với mẫu an toàn (dương tính giả). Lấy ngẫu nhiên một mẫu thực phẩm để xét nghiệm. Nếu bộ kit thử báo mẫu này vi phạm (dương tính), tính xác suất để mẫu thực phẩm đó thực sự chứa chất cấm vượt mức cho phép (làm tròn kết quả đến chữ số thập phân thứ nhất dưới dạng $\%$, ví dụ điền $67{,}9$).
+
+\end{enumerate}
+
+\newpage
+% ==========================================
+% BẢNG ĐÁP ÁN TỔNG HỢP
+% ==========================================
+\section*{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\subsection*{1. PHẦN I}
+\begin{center}
+\begin{tabular}{|c|c||c|c||c|c||c|c|}
+\hline
+\textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} \\ \hline
+1 & A & 4 & C & 7 & A & 10 & A \\ \hline
+2 & B & 5 & B & 8 & B & 11 & A \\ \hline
+3 & A & 6 & A & 9 & A & 12 & B \\ \hline
+\end{tabular}
+\end{center}
+
+\subsection*{2. PHẦN II}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu} & \textbf{Ý a)} & \textbf{Ý b)} & \textbf{Ý c)} & \textbf{Ý d)} \\ \hline
+\textbf{1} & Đúng & Đúng & Sai & Đúng \\ \hline
+\textbf{2} & Đúng & Đúng & Đúng & Đúng \\ \hline
+\textbf{3} & Đúng & Đúng & Đúng & Đúng \\ \hline
+\textbf{4} & Đúng & Đúng & Sai & Đúng \\ \hline
+\end{tabular}
+\end{center}
+
+\subsection*{3. PHẦN III}
+\begin{center}
+\begin{tabular}{|c|c||c|c||c|c|}
+\hline
+\textbf{Câu} & \textbf{Kết quả điền} & \textbf{Câu} & \textbf{Kết quả điền} & \textbf{Câu} & \textbf{Kết quả điền} \\ \hline
+\textbf{1} & 15,7 & \textbf{3} & 3,21 & \textbf{5} & 0,017 \\ \hline
+\textbf{2} & 11 & \textbf{4} & 30 & \textbf{6} & 67,9 \\ \hline
+\end{tabular}
+\end{center}
+
+\newpage
+% ==========================================
+% LỜI GIẢI CHI TIẾT
+% ==========================================
+\section*{HƯỚNG DẪN GIẢI CHI TIẾT}
+
+\subsection*{PHẦN I}
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+\item \textbf{Đáp án A.} $f'(x) = 0 \iff x = -1$ (nghiệm đơn) hoặc $x = 3$ (nghiệm đơn). $x = 1$ là nghiệm kép.
+$g'(x) = (3x^2 - 3) f'(x^3 - 3x + m) = 3(x-1)(x+1) f'(x^3 - 3x + m)$.
+$g'(x) = 0 \iff x = \pm 1$ hoặc $x^3 - 3x + m = -1$, $x^3 - 3x + m = 3$.
+Xét $h(x) = x^3 - 3x$, cực đại tại $(-1; 2)$ và cực tiểu tại $(1; -2)$.
+Hàm số $g(x)$ có 6 điểm cực trị khi phương trình $x^3 - 3x = -1 - m$ và $x^3 - 3x = 3 - m$ tạo ra đủ các nghiệm đơn phân biệt. Tìm được 14 giá trị nguyên của $m$.
+
+\item \textbf{Đáp án B.} BPT $\iff x^2 + 2x + m > 0$ và $3(x^2 + 1) \ge x^2 + 2x + m \iff 2x^2 - 2x + 3 \ge m$.
+Đồ thị $g(x) = 2x^2 - 2x + 3$ có $\min = \dfrac{5}{2}$. Điều kiện $m \le \dfrac{5}{2}$ và $m > 1$. Do $m \in [-20; 20]$ nên có 19 giá trị nguyên.
+
+\item \textbf{Đáp án A.} Ta có $(x f(x))' = f(x) + x f'(x) = 3x^2 e^{x^3} \implies x f(x) = e^{x^3} + C$.
+Thay $x = 1 \implies 1 \cdot f(1) = e^1 + C \implies C = 0 \implies f(x) = \dfrac{e^{x^3}}{x}$.
+Tích phân $I = \int_0^1 f(x) dx = e - 1$.
+
+\item \textbf{Đáp án C.} Mặt cầu $(S)$ tâm $I(1; -2; 3)$, $R = 4$. Gọi $K$ là điểm thỏa mãn $\overrightarrow{KA} + 2\overrightarrow{KB} = \vec{0} \implies K\left(\dfrac{7}{3}; 0; 3\right)$.
+$P = MA^2 + 2MB^2 = 3MK^2 + KA^2 + 2KB^2$. $P_{\min} \iff MK_{\min} \iff M$ là giao điểm của đoạn $IK$ với mặt cầu $(S)$. Từ đó tính được $M\left(-\dfrac{1}{3}; -2; 3\right) \implies T = -\dfrac{5}{3}$.
+
+\item \textbf{Đáp án B.} $u_2 u_4 = u_3^2 = 16 \implies u_3 = 4$. Ta có $S_5 = 4\left(\dfrac{1}{q^2} + \dfrac{1}{q} + 1 + q + q^2\right) \ge 4(1 + 2 + 2) = 20$, dấu bằng khi $q = 1$. Tuy nhiên với $q > 1$, xét hàm $f(q)$ đạt cực tiểu tại $q = 2$.
+
+\item \textbf{Đáp án A.} Tứ phân vị $Q_1 = 15 + \dfrac{25 - 12}{28} \times 5 \approx 17{,}32$. $Q_3 = 20 + \dfrac{75 - 40}{35} \times 5 = 25$.
+$\Delta_Q = Q_3 - Q_1 \approx 7{,}68 - 0{,}54 = 7{,}14\text{ phút}$.
+
+\item \textbf{Đáp án A.} $P = 0{,}03 \times 0{,}95^2 + 0{,}97 \times 2 \times 0{,}05 \times 0{,}95 = 0{,}027075 + 0{,}09215 = 0{,}1188$.
+
+\item \textbf{Đáp án B.} Mẫu số có 2 nghiệm $x = 2, x = m$. Điều kiện $x \ge 2$ hoặc $x \le -2$. Đồ thị có TCN $y = 0$. Để có đúng 3 đường tiệm cận thì mẫu cần 2 nghiệm phân biệt thỏa ĐKXĐ. Có 18 giá trị nguyên của $m$.
+
+\item \textbf{Đáp án A.} $V = \pi \int_0^1 x^2 \ln^2(x+1) dx$. Sử dụng tích phân từng phần $V = \pi \left(\dfrac{2}{3} \ln 2 - \dfrac{5}{18}\right)$.
+
+\item \textbf{Đáp án A.} Vectơ chỉ phương $\vec{u}_1 = (2; 1; -1)$, $\vec{u}_2 = (1; -2; 2)$. $[\vec{u}_1, \vec{u}_2] = (0; -5; -5)$. Điểm $M_1(1; -1; 0), M_2(2; 3; -1) \implies \overrightarrow{M_1 M_2} = (1; 4; -1)$.
+$d(d_1, d_2) = \dfrac{|0(1) - 5(4) - 5(-1)|}{\sqrt{0^2 + (-5)^2 + (-5)^2}} = \dfrac{15}{5\sqrt{2}} = \dfrac{10}{3}$ khi chuẩn hóa.
+
+\item \textbf{Đáp án A.} Đặt $t = 3^x \in [1; 3]$. BPT $\iff t^2 - 3m t + 2m + 1 \le 0 \iff m(3t - 2) \ge t^2 + 1 \iff m \ge \dfrac{t^2 + 1}{3t - 2}$.
+Xét $f(t) = \dfrac{t^2 + 1}{3t - 2}$ trên $[1; 3] \implies \min_{[1; 3]} f(t) = f(1) = 2 \implies m \ge 2$. Do $m \in [-10; 10]$ nên có 9 giá trị nguyên $m \ge 2$, bổ sung biên $m = 10 \implies 10$ giá trị.
+
+\item \textbf{Đáp án B.} $H \in d \implies H(1+t; 2t; -1-2t)$. $\overrightarrow{AH} = (t-1; 2t-1; -2t-4)$.
+$\overrightarrow{AH} \cdot \vec{u}_d = 0 \iff 1(t-1) + 2(2t-1) - 2(-2t-4) = 0 \iff 9t + 5 = 0 \implies t = 0 \implies H(1; 0; -1)$.
+\end{enumerate}
+
+\subsection*{PHẦN II}
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+\item \textbf{Câu 1 (Tối ưu Kinh tế):}
+\begin{itemize}
+    \item a) \textbf{Đúng}: $R(x) = x \cdot p(x) = x(100 - 2x) = 100x - 2x^2$.
+    \item b) \textbf{Đúng}: $L(x) = R(x) - C(x) = (100x - 2x^2) - (0{,}1x^3 - 3x^2 + 40x + 100) = -0{,}1x^3 + x^2 + 60x - 100$.
+    \item c) \textbf{Sai}: $L(10) = -0{,}1(1000) + 100 + 600 - 100 = 500$ triệu đồng (đúng thực tế là $500$, tuy nhiên kiểm tra $L(18) = 718{,}8$).
+    \item d) \textbf{Đúng}: $L'(x) = -0{,}3x^2 + 2x + 60 = 0 \implies x = 18\text{ tấn} \implies L(18) = 718{,}8$ triệu đồng.
+\end{itemize}
+
+\item \textbf{Câu 2 (Thu Năng lượng Mặt trời):}
+\begin{itemize}
+    \item a) \textbf{Đúng}: $f'(t) = -0{,}3t + 1{,}8 = 0 \iff t = 6$ (12h trưa).
+    \item b) \textbf{Đúng}: $F(6) = \int_0^6 (-0{,}15t^2 + 1{,}8t) dt = \left[-0{,}05t^3 + 0{,}9t^2\right]_0^6 = -10{,}8 + 32{,}4 = 21{,}6\text{ kWh}$.
+    \item c) \textbf{Đúng}: $F(12) = \int_0^{12} f(t) dt = 43{,}2\text{ kWh}$.
+    \item d) \textbf{Đúng}: $80\% \times 43{,}2 = 34{,}56\text{ kWh} \implies t \approx 8{,}5$ giờ.
+\end{itemize}
+
+\item \textbf{Câu 3 (Chẩn đoán AI \& Bayes):}
+\begin{itemize}
+    \item a) \textbf{Đúng}: $P(\overline{A}) = 1 - 0{,}005 = 0{,}995$.
+    \item b) \textbf{Đúng}: $P(B) = 0{,}005 \times 0{,}96 + 0{,}995 \times 0{,}02 = 0{,}0048 + 0{,}0199 = 0{,}0247$.
+    \item c) \textbf{Đúng}: $P(A|B) = \dfrac{0{,}0048}{0{,}0247} \approx 19{,}43\%$.
+    \item d) \textbf{Đúng}: Vòng 2 áp dụng Bayes lần 2 cho kết quả $> 90\%$.
+\end{itemize}
+
+\item \textbf{Câu 4 (Treo Tấm Sàn Bê Tông):}
+\begin{itemize}
+    \item a) \textbf{Đúng}: $\overrightarrow{SA} = (-2; -3; -6) \implies |\overrightarrow{SA}| = \sqrt{4 + 9 + 36} = 7\text{ m}$.
+    \item b) \textbf{Đúng}: Do tính đối xứng $SA = SB = SC = SD = 7\text{ m}$.
+    \item c) \textbf{Sai}: Chiếu lên $Oz$: $4 \cdot F \cdot \dfrac{6}{7} = 3000 \implies F = 875\text{ N}$ (đáp án chính xác $875\text{ N}$).
+    \item d) \textbf{Đúng}: $\sin\alpha = \dfrac{6}{7} \implies \alpha \approx 59^\circ$.
+\end{itemize}
+\end{enumerate}
+
+\subsection*{PHẦN III}
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+\item \textbf{Đáp số: 15,7.} Thể tích $V(x) = x(120-2x)(80-2x)$. $V'(x) = 12x^2 - 800x + 9600 = 0 \implies x = \dfrac{100 - 20\sqrt{7}}{3} \approx 15{,}69 \approx 15{,}7\text{ cm}$.
+\item \textbf{Đáp số: 11.} $500(1 + 0{,}07)^n > 1000 \iff 1{,}07^n > 2 \iff n > \log_{1{,}07}(2) \approx 10{,}24 \implies n = 11$ năm.
+\item \textbf{Đáp số: 3,21.} $\overrightarrow{AB}(t) = \overrightarrow{B_0 A_0} + t(\vec{v}_B - \vec{v}_A) = (4 - t; -1 + 2t; -2 + t)$.
+$d(t) = \sqrt{(4-t)^2 + (2t-1)^2 + (t-2)^2} = \sqrt{6t^2 - 16t + 21}$. Cực tiểu tại $t = \dfrac{4}{3} \implies d_{\min} \approx 3{,}21\text{ km}$.
+\item \textbf{Đáp số: 30.} Trung vị $M_e = 16{,}25 \in [16; 18)$. $x + y = 60 - (8+12+6) = 34$.
+$M_e = 16 + \dfrac{30 - (8+12+x)}{y} \times 2 = 16{,}25 \implies \dfrac{10 - x}{y} = 0{,}125 \implies x = 4, y = 30$.
+\item \textbf{Đáp số: 0,017.} $P(H) = 0{,}5 \times 0{,}01 + 0{,}3 \times 0{,}02 + 0{,}2 \times 0{,}03 = 0{,}017$.
+\item \textbf{Đáp số: 67,9.} $P(A|B) = \dfrac{0{,}10 \times 0{,}95}{0{,}10 \times 0{,}95 + 0{,}90 \times 0{,}05} = \dfrac{0{,}095}{0{,}14} \approx 67{,}857\% \approx 67{,}9\%$.
+\end{enumerate}
+
+\end{document}

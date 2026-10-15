@@ -1,0 +1,336 @@
+{
+  "keywords_hash": "dae235ac6d5b6b8cf323ca168f2584f2",
+  "total_files": 47,
+  "total_chunks": 2843,
+  "files": [
+    {
+      "file": "[Live] Tổng ôn 20 bài toán quen thuộc.pdf",
+      "type": ".pdf",
+      "mtime": 1780897457.93,
+      "size": 913519,
+      "num_chunks": 6
+    },
+    {
+      "file": "Chuyên Lê Hồng Phong.pdf",
+      "type": ".pdf",
+      "mtime": 1780197385.86,
+      "size": 1667846,
+      "num_chunks": 5
+    },
+    {
+      "file": "Chuyên Lê Khiết.pdf",
+      "type": ".pdf",
+      "mtime": 1780806840.36,
+      "size": 896569,
+      "num_chunks": 4
+    },
+    {
+      "file": "chuyên môn số 08 – Cà Mau .pdf",
+      "type": ".pdf",
+      "mtime": 1779890491.24,
+      "size": 410333,
+      "num_chunks": 4
+    },
+    {
+      "file": "Chuyên đề ôn thi tốt nghiệp THPT năm 2026 môn Toán – Nguyễn Tiến Hà.pdf",
+      "type": ".pdf",
+      "mtime": 1791865181.43,
+      "size": 20034525,
+      "num_chunks": 653
+    },
+    {
+      "file": "GD&ĐT Ninh Bình.pdf",
+      "type": ".pdf",
+      "mtime": 1780027799.83,
+      "size": 442299,
+      "num_chunks": 4
+    },
+    {
+      "file": "Hưng Yên.pdf",
+      "type": ".pdf",
+      "mtime": 1776238890.67,
+      "size": 1120902,
+      "num_chunks": 4
+    },
+    {
+      "file": "Liên trường THPT – Nghệ An.pdf",
+      "type": ".pdf",
+      "mtime": 1780197421.02,
+      "size": 1257888,
+      "num_chunks": 5
+    },
+    {
+      "file": "LTT 7-10.pdf",
+      "type": ".pdf",
+      "mtime": 1791621103.58,
+      "size": 452224,
+      "num_chunks": 6
+    },
+    {
+      "file": "Lào Cai.pdf",
+      "type": ".pdf",
+      "mtime": 1776238984.5,
+      "size": 389405,
+      "num_chunks": 4
+    },
+    {
+      "file": "Lê Thánh Tông - Nguyễn Khuyến.pdf",
+      "type": ".pdf",
+      "mtime": 1780495915.02,
+      "size": 755139,
+      "num_chunks": 6
+    },
+    {
+      "file": "Lê Thánh Tông.pdf",
+      "type": ".pdf",
+      "mtime": 1777784480.66,
+      "size": 832252,
+      "num_chunks": 6
+    },
+    {
+      "file": "lần 2 trường Long Thạnh – An Giang.pdf",
+      "type": ".pdf",
+      "mtime": 1780722837.7,
+      "size": 396667,
+      "num_chunks": 4
+    },
+    {
+      "file": "lần 2 trường THPT Dương Quảng Hàm – Hưng Yên.pdf",
+      "type": ".pdf",
+      "mtime": 1780728924.35,
+      "size": 481631,
+      "num_chunks": 6
+    },
+    {
+      "file": "Marie curie.pdf",
+      "type": ".pdf",
+      "mtime": 1778749057.69,
+      "size": 624225,
+      "num_chunks": 5
+    },
+    {
+      "file": "Nghệ An Đợt 3.pdf",
+      "type": ".pdf",
+      "mtime": 1778749010.73,
+      "size": 1099159,
+      "num_chunks": 4
+    },
+    {
+      "file": "Nguyễn Khuyến & Lê Thánh Tông.pdf",
+      "type": ".pdf",
+      "mtime": 1789801845.88,
+      "size": 721209,
+      "num_chunks": 6
+    },
+    {
+      "file": "Ninh Bình lần 3.pdf",
+      "type": ".pdf",
+      "mtime": 1778383749.95,
+      "size": 547868,
+      "num_chunks": 4
+    },
+    {
+      "file": "Ninh Bình.pdf",
+      "type": ".pdf",
+      "mtime": 1776239068.03,
+      "size": 682576,
+      "num_chunks": 4
+    },
+    {
+      "file": "Phương pháp tiếp cận bài toán thực tế trong đề thi THPT QG 2026 môn Toán.pdf",
+      "type": ".pdf",
+      "mtime": 1791865221.52,
+      "size": 4122431,
+      "num_chunks": 43
+    },
+    {
+      "file": "Phương pháp trải phẳng giải một số bài toán ứng dụng thực tế – Đặng Việt Đông.pdf",
+      "type": ".pdf",
+      "mtime": 1791865205.76,
+      "size": 2284991,
+      "num_chunks": 56
+    },
+    {
+      "file": "Sơn La.pdf",
+      "type": ".pdf",
+      "mtime": 1776239125.17,
+      "size": 508815,
+      "num_chunks": 4
+    },
+    {
+      "file": "THCS-THPT Nguyễn Khuyến.pdf",
+      "type": ".pdf",
+      "mtime": 1779607996.0,
+      "size": 1945599,
+      "num_chunks": 6
+    },
+    {
+      "file": "THI THPTQG 2026.pdf",
+      "type": ".pdf",
+      "mtime": 1785985854.21,
+      "size": 1937649,
+      "num_chunks": 4
+    },
+    {
+      "file": "THPT An Lương Đông – Huế.pdf",
+      "type": ".pdf",
+      "mtime": 1779773612.34,
+      "size": 638698,
+      "num_chunks": 4
+    },
+    {
+      "file": "THPT chuyên KHTN – Hà Nội.pdf",
+      "type": ".pdf",
+      "mtime": 1776239237.53,
+      "size": 411667,
+      "num_chunks": 4
+    },
+    {
+      "file": "THPT chuyên – Phú Thọ.pdf",
+      "type": ".pdf",
+      "mtime": 1780197362.96,
+      "size": 552288,
+      "num_chunks": 4
+    },
+    {
+      "file": "THPT Mường Lát- Thanh Hoá.pdf",
+      "type": ".pdf",
+      "mtime": 1776600611.13,
+      "size": 578624,
+      "num_chunks": 4
+    },
+    {
+      "file": "THPT Nguyễn Thị DIệu.pdf",
+      "type": ".pdf",
+      "mtime": 1778748983.64,
+      "size": 467275,
+      "num_chunks": 4
+    },
+    {
+      "file": "THPT Ngô Quyền – TP HCM.pdf",
+      "type": ".pdf",
+      "mtime": 1780027775.53,
+      "size": 682578,
+      "num_chunks": 5
+    },
+    {
+      "file": "THPT Trần Phú – Phú Thọ.pdf",
+      "type": ".pdf",
+      "mtime": 1776239287.39,
+      "size": 609218,
+      "num_chunks": 4
+    },
+    {
+      "file": "THPT Yên Lạc - Phú Thọ.pdf",
+      "type": ".pdf",
+      "mtime": 1779607832.29,
+      "size": 399054,
+      "num_chunks": 6
+    },
+    {
+      "file": "THPT – Bắc Ninh.pdf",
+      "type": ".pdf",
+      "mtime": 1776239190.94,
+      "size": 690307,
+      "num_chunks": 4
+    },
+    {
+      "file": "Toán thực tế.pdf",
+      "type": ".pdf",
+      "mtime": 1791472010.16,
+      "size": 11629122,
+      "num_chunks": 297
+    },
+    {
+      "file": "Tuyên Quang.pdf",
+      "type": ".pdf",
+      "mtime": 1776239337.69,
+      "size": 1814215,
+      "num_chunks": 4
+    },
+    {
+      "file": "Tổng ôn.pdf",
+      "type": ".pdf",
+      "mtime": 1791472023.5,
+      "size": 23477626,
+      "num_chunks": 576
+    },
+    {
+      "file": "Vận dụng cao.pdf",
+      "type": ".pdf",
+      "mtime": 1791472043.72,
+      "size": 15582215,
+      "num_chunks": 717
+    },
+    {
+      "file": "Xác suất.pdf",
+      "type": ".pdf",
+      "mtime": 1791815936.69,
+      "size": 5849834,
+      "num_chunks": 160
+    },
+    {
+      "file": "Ôn tập.pdf",
+      "type": ".pdf",
+      "mtime": 1791472033.93,
+      "size": 16649892,
+      "num_chunks": 165
+    },
+    {
+      "file": "Đề Cao Bằng.pdf",
+      "type": ".pdf",
+      "mtime": 1776238439.97,
+      "size": 1234153,
+      "num_chunks": 4
+    },
+    {
+      "file": "Đề Huế.pdf",
+      "type": ".pdf",
+      "mtime": 1776238642.07,
+      "size": 2028966,
+      "num_chunks": 4
+    },
+    {
+      "file": "Đề Hà Tĩnh.pdf",
+      "type": ".pdf",
+      "mtime": 1776238569.85,
+      "size": 1772614,
+      "num_chunks": 4
+    },
+    {
+      "file": "Đề Nghệ An.pdf",
+      "type": ".pdf",
+      "mtime": 1776238700.25,
+      "size": 1263625,
+      "num_chunks": 4
+    },
+    {
+      "file": "Đề Thanh Hoá.pdf",
+      "type": ".pdf",
+      "mtime": 1776238830.66,
+      "size": 446260,
+      "num_chunks": 4
+    },
+    {
+      "file": "Đồng Nai đợt 2.pdf",
+      "type": ".pdf",
+      "mtime": 1778749110.88,
+      "size": 1684093,
+      "num_chunks": 4
+    },
+    {
+      "file": "Đồng Nai.pdf",
+      "type": ".pdf",
+      "mtime": 1778384607.59,
+      "size": 1456933,
+      "num_chunks": 4
+    },
+    {
+      "file": "Đồng Tháp.pdf",
+      "type": ".pdf",
+      "mtime": 1785851106.32,
+      "size": 1788815,
+      "num_chunks": 4
+    }
+  ]
+}

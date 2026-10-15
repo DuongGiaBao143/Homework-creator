@@ -1,0 +1,262 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath,amssymb,amsfonts,mathrsfs}
+\usepackage{geometry}
+\geometry{top=2cm,bottom=2cm,left=2cm,right=2cm}
+\usepackage{enumitem}
+\usepackage{array}
+
+\begin{document}
+
+% ==========================================
+% HEADER
+% ==========================================
+\begin{center}
+    \textbf{\Large HƯỚNG TỚI THPTQG 2027}\\[0.5em]
+    \textbf{\Large ĐỀ THI KHẢO SÁT CHẤT LƯỢNG MÔN TOÁN}\\[0.5em]
+    \textit{Người biên soạn: Dương Gia Bảo}\\[0.5em]
+    \rule{0.5\textwidth}{0.4pt}
+\end{center}
+
+\vspace{0.5cm}
+
+% ==========================================
+% PHẦN I
+% ==========================================
+\section*{PHẦN I. CÂU TRẮC NGHIỆM 4 PHƯƠNG ÁN}
+\textit{Thí sinh chọn 01 phương án đúng nhất từ câu 1 đến câu 12.}
+
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+
+\item Cho hàm số $y = \dfrac{x^2 - (m+1)x + 2m - 1}{x - m}$. Có bao nhiêu giá trị nguyên của tham số $m \in [-10; 10]$ để đồ thị hàm số có hai điểm cực trị nằm về hai phía đối với trục hoành $Ox$?
+\begin{enumerate}[label=\Alph*.]
+    \item $3$.
+    \item $4$.
+    \item $5$.
+    \item $18$.
+\end{enumerate}
+
+\item Tìm tất cả các giá trị thực của tham số $m$ để bất phương trình $4^x - m \cdot 2^{x+1} + 2m + 3 \le 0$ có nghiệm thực $x \in [0; 2]$.
+\begin{enumerate}[label=\Alph*.]
+    \item $m \ge 3$.
+    \item $m \ge \dfrac{19}{6}$.
+    \item $m \le 3$.
+    \item $3 \le m \le \dfrac{19}{6}$.
+\end{enumerate}
+
+\item Cho hàm số $f(x)$ liên tục trên $\mathbb{R}$ và thỏa mãn $f(x) + f(2-x) = x^3 - 3x^2 + 2x + 4$ với mọi $x \in \mathbb{R}$. Tích phân $I = \int_0^2 f(x) \, \mathrm{d}x$ bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $I = 4$.
+    \item $I = 8$.
+    \item $I = -4$.
+    \item $I = 2$.
+\end{enumerate}
+
+\item Trong không gian $Oxyz$, cho mặt cầu $(S): x^2 + y^2 + z^2 - 2x + 4y - 6z - 2 = 0$ và điểm $A(3; 1; -1)$. Từ $A$ kẻ các tiếp tuyến đến mặt cầu $(S)$, tập hợp các tiếp điểm $M$ tạo thành một đường tròn $(C)$. Bán kính $r$ của đường tròn $(C)$ bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $r = \dfrac{4\sqrt{377}}{29}$.
+    \item $r = \sqrt{13}$.
+    \item $r = \dfrac{16\sqrt{29}}{29}$.
+    \item $r = \dfrac{2\sqrt{29}}{3}$.
+\end{enumerate}
+
+\item Hai người thợ A và B cùng sản xuất độc lập một loại linh kiện điện tử. Xác suất người thợ A tạo ra sản phẩm đạt chuẩn là $0{,}80$, người thợ B tạo ra sản phẩm đạt chuẩn là $0{,}90$. Lấy ngẫu nhiên từ mỗi người 1 sản phẩm để kiểm tra. Biết rằng trong 2 sản phẩm lấy ra có đúng 1 sản phẩm đạt chuẩn, xác suất để sản phẩm đạt chuẩn đó là của người thợ A bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $\dfrac{4}{13}$.
+    \item $\dfrac{9}{13}$.
+    \item $0{,}80$.
+    \item $\dfrac{1}{4}$.
+\end{enumerate}
+
+\item Khảo sát số giờ tự học mỗi tuần của $50$ học sinh lớp 12 thu được bảng số liệu ghép nhóm sau:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+Số giờ tự học (giờ) & $[5; 10)$ & $[10; 15)$ & $[15; 20)$ & $[20; 25)$ \\
+\hline
+Số học sinh & 8 & 15 & 17 & 10 \\
+\hline
+\end{tabular}
+\end{center}
+Khoảng tứ phân vị $\Delta_Q = Q_3 - Q_1$ của mẫu số liệu ghép nhóm trên bằng (làm tròn kết quả đến hàng phần trăm)
+\begin{enumerate}[label=\Alph*.]
+    \item $7{,}76$.
+    \item $8{,}75$.
+    \item $9{,}26$.
+    \item $6{,}50$.
+\end{enumerate}
+
+\item Có bao nhiêu giá trị nguyên của tham số $m \in [-10; 10]$ để phương trình $9^x - 2(m+1) \cdot 3^x + 6m - 3 = 0$ có hai nghiệm thực $x_1, x_2$ thỏa mãn $x_1 + x_2 > 2$?
+\begin{enumerate}[label=\Alph*.]
+    \item $8$.
+    \item $9$.
+    \item $10$.
+    \item $7$.
+\end{enumerate}
+
+\item Cho hình phẳng $(H)$ giới hạn bởi đồ thị hàm số $y = (x-1)e^x$, trục hoành và hai đường thẳng $x = 0, x = 2$. Thể tích $V$ của khối tròn xoay tạo thành khi quay hình phẳng $(H)$ xung quanh trục $Ox$ bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $V = \dfrac{\pi(e^4 - 5)}{4}$.
+    \item $V = \dfrac{e^4 - 5}{4}$.
+    \item $V = \dfrac{\pi(e^4 + 1)}{4}$.
+    \item $V = \dfrac{\pi(e^4 - 1)}{2}$.
+\end{enumerate}
+
+\item Trong không gian $Oxyz$, cho hai điểm $A(1; 2; -1)$, $B(3; 0; 3)$ và mặt phẳng $(P): x - 2y + 2z - 1 = 0$. Tọa độ điểm $M(a; b; c)$ thuộc mặt phẳng $(P)$ sao cho biểu thức $T = MA^2 + 2MB^2$ đạt giá trị nhỏ nhất. Tổng $a + b + c$ bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $\dfrac{116}{27}$.
+    \item $\dfrac{14}{3}$.
+    \item $\dfrac{85}{27}$.
+    \item $4$.
+\end{enumerate}
+
+\item Cho cấp số nhân $(u_n)$ có tất cả các số hạng đều dương thỏa mãn $u_1 + u_2 + u_3 = 13$ và $\log_3 u_5 - \log_3 u_2 = 3$. Tổng $6$ số hạng đầu tiên $S_6$ của cấp số nhân bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $364$.
+    \item $728$.
+    \item $243$.
+    \item $121$.
+\end{enumerate}
+
+\item Trong không gian $Oxyz$, cho hình hộp $ABCD.A'B'C'D'$ có tọa độ các đỉnh $A(1; 0; 1)$, $B(2; 1; 2)$, $D(1; -1; 0)$ và $C'(4; 5; 6)$. Tọa độ đỉnh $A'$ của hình hộp là
+\begin{enumerate}[label=\Alph*.]
+    \item $A'(3; 5; 6)$.
+    \item $A'(2; 5; 5)$.
+    \item $A'(4; 4; 5)$.
+    \item $A'(1; 6; 7)$.
+\end{enumerate}
+
+\item Một hộp chứa $15$ quả cầu gồm $7$ quả cầu màu đỏ và $8$ quả cầu màu xanh. Lấy ngẫu nhiên đồng thời $4$ quả cầu từ hộp. Tính xác suất để trong $4$ quả cầu lấy ra có ít nhất $1$ quả cầu màu đỏ và số quả cầu màu xanh nhiều hơn số quả cầu màu đỏ.
+\begin{enumerate}[label=\Alph*.]
+    \item $\dfrac{56}{195}$.
+    \item $\dfrac{66}{195}$.
+    \item $\dfrac{112}{195}$.
+    \item $\dfrac{28}{195}$.
+\end{enumerate}
+
+\end{enumerate}
+
+% ==========================================
+% PHẦN II
+% ==========================================
+\section*{PHẦN II. CÂU TRẮC NGHIỆM ĐÚNG/SAI}
+\textit{Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn Đúng hoặc Sai.}
+
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+
+\item Một xưởng hóa chất sản xuất xút công nghiệp NaOH. Tổng chi phí sản xuất $x$ ngàn tấn sản phẩm trong một tháng ($x > 0$) được mô hình hóa bởi hàm số $C(x) = x^3 - 12x^2 + 60x + 100$ (triệu đồng). Giá bán mỗi ngàn tấn sản phẩm phụ thuộc vào sản lượng cung ứng ra thị trường theo hàm giá $p(x) = 180 - 6x$ (triệu đồng/ngàn tấn). Lợi nhuận ròng thu được là $L(x) = R(x) - C(x)$, trong đó $R(x) = x \cdot p(x)$ là tổng doanh thu.
+\begin{enumerate}[label=\alph*)]
+    \item Hàm số biểu diễn tổng doanh thu khi xưởng bán $x$ ngàn tấn sản phẩm là $R(x) = 180x - 6x^2$ (triệu đồng).
+    \item Khi không bị giới hạn sản lượng, hàm lợi nhuận ròng của xưởng là $L(x) = -x^3 + 6x^2 + 120x - 100$ (triệu đồng) và đạt giá trị lớn nhất tại $x = 2 + 2\sqrt{11} \approx 8{,}63$ ngàn tấn.
+    \item Do quy định về hạn ngạch xả thải bảo vệ môi trường, sản lượng tối đa xưởng được phép sản xuất trong tháng là $x \le 6$ ngàn tấn. Mức lợi nhuận lớn nhất xưởng có thể đạt được dưới điều kiện hạn ngạch này vẫn là $739{,}73$ triệu đồng tại $x \approx 8{,}63$ ngàn tấn.
+    \item Thực tế dưới điều kiện hạn ngạch môi trường $x \le 6$ ngàn tấn, mức lợi nhuận lớn nhất xưởng đạt được nằm tại điểm biên $x = 6$ ngàn tấn và bằng $620$ triệu đồng.
+\end{enumerate}
+
+\item Một cơ sở y tế triển khai quy trình tầm soát bệnh lý di truyền ẩn $X$ trong cộng đồng với tỉ lệ mắc bệnh thực tế là $2\%$ ($P(D) = 0{,}02$). Quy trình kiểm định gồm 2 tầng độc lập:
+- Tầng 1 (Xét nghiệm nhanh): Độ nhạy đạt $95\%$ ($P(T_1^+ | D) = 0{,}95$) và độ đặc hiệu đạt $90\%$ ($P(T_1^- | \bar{D}) = 0{,}90$).
+- Tầng 2 (Xét nghiệm PCR chuyên sâu): Chỉ thực hiện đối với những người có kết quả $T_1^+$ ở tầng 1. Xét nghiệm PCR có độ nhạy $98\%$ ($P(T_2^+ | D) = 0{,}98$) và độ đặc hiệu $95\%$ ($P(T_2^- | \bar{D}) = 0{,}95$).
+\begin{enumerate}[label=\alph*)]
+    \item Xác suất để một người được chọn ngẫu nhiên trong cộng đồng có kết quả dương tính ở Tầng 1 là $P(T_1^+) = 0{,}117$ ($11{,}7\%$).
+    \item Biết một người có kết quả dương tính ở Tầng 1, xác suất người đó thực sự mắc bệnh $X$ là $P(D | T_1^+) \approx 16{,}24\%$.
+    \item Một kỹ thuật viên nhận định: "Do xét nghiệm PCR ở Tầng 2 có độ đặc hiệu $95\%$ và độ nhạy $98\%$ rất cao, nên xác suất một người dương tính ở cả 2 tầng thực sự mắc bệnh $X$ sẽ vượt quá $95\%$".
+    \item Xác suất thực tế để một người có kết quả dương tính ở cả 2 tầng xét nghiệm thực sự mắc bệnh $X$ xấp xỉ $79{,}17\%$.
+\end{enumerate}
+
+\item Một thiết bị thử nghiệm chuyển động thẳng với gia tốc biến thiên theo thời gian $a(t) = 6t - 18\text{ (m/s}^2\text{)}$ với $t \ge 0$ (giây). Vận tốc ban đầu của vật tại thời điểm $t = 0$ là $v(0) = 24\text{ m/s}$.
+\begin{enumerate}[label=\alph*)]
+    \item Biểu thức vận tốc của vật thể theo thời gian $t$ là $v(t) = 3t^2 - 18t + 24\text{ (m/s)}$.
+    \item Trong khoảng thời gian từ $t = 0$ đến $t = 2$ giây, vật thể chuyển động theo chiều dương và đi được quãng đường $s_1 = 20\text{ m}$.
+    \item Độ dời của vật tại thời điểm $t = 4$ giây so với vị trí ban đầu $t = 0$ là $16\text{ m}$. Từ đó kết luận quãng đường vật đi được trong 4 giây đầu tiên bằng $16\text{ m}$.
+    \item Tổng quãng đường thực tế mà vật thể đi được trong 4 giây đầu tiên kể từ $t = 0$ bằng $24\text{ m}$.
+\end{enumerate}
+
+\item Trong không gian $Oxyz$ (đơn vị đo là mét), hai thiết bị bay không người lái (drone) $A$ và $B$ cất cánh đồng thời tại thời điểm $t = 0$ (giây):
+- Drone $A$ xuất phát từ $A_0(1; 2; 5)$ bay thẳng đều với vectơ vận tốc $\vec{v}_A = (2; 1; -1)\text{ (m/s)}$.
+- Drone $B$ xuất phát từ $B_0(10; -5; 2)$ bay thẳng đều với vectơ vận tốc $\vec{v}_B = (-1; 4; 2)\text{ (m/s)}$.
+\begin{enumerate}[label=\alph*)]
+    \item Tại thời điểm $t = 1$ giây, tọa độ vị trí của hai drone lần lượt là $A(3; 3; 4)$ và $B(9; -1; 4)$.
+    \item Khoảng cách giữa hai drone tại thời điểm $t \ge 0$ được xác định bởi hàm số $d(t) = \sqrt{27t^2 - 114t + 139}\text{ (m)}$.
+    \item Trong một đợt kiểm thử bị giới hạn thời gian bay $t \in [0; 1{,}5]$ giây, kỹ thuật viên kết luận khoảng cách ngắn nhất giữa hai drone đạt được tại $t = \frac{19}{9} \approx 2{,}11$ giây với giá trị $d \approx 4{,}32\text{ m}$.
+    \item Thực tế trong khoảng thời gian kiểm thử $t \in [0; 1{,}5]$ giây, khoảng cách ngắn nhất giữa hai drone đạt được tại thời điểm biên $t = 1{,}5$ giây và bằng $d = \sqrt{28{,}75} \approx 5{,}36\text{ m}$.
+\end{enumerate}
+
+\end{enumerate}
+
+% ==========================================
+% PHẦN III
+% ==========================================
+\section*{PHẦN III. CÂU TRẮC NGHIỆM TRẢ LỜI NGẮN}
+\textit{Thí sinh trả lời từ câu 1 đến câu 6. Mỗi câu trả lời đúng được 0,5 điểm.}
+
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+
+\item Một công ty năng lượng thiết kế một bể chứa nhiên liệu công nghiệp hình hộp chữ nhật không nắp có thể tích cố định $V = 128\text{ m}^3$. Đáy bể là hình chữ nhật có chiều dài gấp $2$ lần chiều rộng (gọi chiều rộng đáy là $x\text{ (m)}$, $x > 0$). Chi phí vật liệu chế tạo đáy bể là $300.000\text{ đồng/m}^2$, chi phí vật liệu làm hai mặt bên chiều rộng là $200.000\text{ đồng/m}^2$, và chi phí làm hai mặt bên chiều dài là $200.000\text{ đồng/m}^2$. Tìm chiều rộng $x$ (mét) của đáy bể để tổng chi phí vật liệu chế tạo bể chứa là nhỏ nhất.
+
+\item Cho hình chóp $S.ABCD$ có đáy $ABCD$ là hình vuông cạnh $a = 6$, cạnh bên $SA$ vuông góc với mặt phẳng đáy $(ABCD)$. Gọi $h$ là chiều cao $SA$ của hình chóp. Biết rằng khoảng cách giữa hai đường thẳng chéo nhau $SC$ và $BD$ bằng $2\sqrt{3}$. Tính chiều cao $h = SA$ của hình chóp.
+
+\item Hai robot tự hành $A$ và $B$ xuất phát đồng thời tại thời điểm $t = 0$ (giây) và chuyển động trên hai trục tọa độ vuông góc $Ox$ và $Oy$ (đơn vị đo là mét):
+- Robot $A$ di chuyển trên trục $Ox$ với vị trí được xác định bởi $x(t) = 6 - 2t\text{ (m)}$.
+- Robot $B$ di chuyển trên trục $Oy$ với vận tốc $v_B(t) = 2e^t\text{ (m/s)}$ và vị trí ban đầu $y(0) = 0\text{ (m)}$ (suy ra $y(t) = 2e^t - 2$).
+Tính khoảng cách ngắn nhất giữa hai robot trong quá trình chuyển động với $t \ge 0$ (làm tròn kết quả đến hàng phần trăm).
+
+\item Trong không gian $Oxyz$, một nguồn sáng điểm $S(0; 0; 12)$ chiếu ánh sáng xuống mặt phẳng đất $Oxy$ ($z = 0$). Một đĩa tròn mỏng có bán kính $R = 2\text{ m}$ nằm song song với mặt phẳng $Oxy$, có tâm $C(0; 0; z(t))$ di chuyển thẳng đứng xuống dưới theo chiều âm của trục $Oz$ với tốc độ không đổi $v = 1{,}5\text{ m/s}$. Bóng của đĩa tròn trên mặt đất $Oxy$ là một hình tròn có diện tích $S(t)$. Tại thời điểm đĩa tròn ở độ cao $z = 6\text{ m}$, tốc độ thay đổi diện tích bóng của đĩa tròn trên mặt đất bằng $k\pi\text{ (m}^2/\text{s)}$. Tìm giá trị của $k$.
+
+\item Hai xạ thủ $A$ và $B$ tham gia một trò chơi bắn súng đối kháng lặp lại vô hạn lượt cho đến khi có người bắn trúng mục tiêu đầu tiên thì trò chơi dừng lại. Xạ thủ $A$ thực hiện phát bắn trước. Xác suất bắn trúng mục tiêu của xạ thủ $A$ trong mỗi lần bắn là $p_1 = \frac{1}{4}$. Xạ thủ $B$ thực hiện phát bắn sau. Xác suất bắn trúng mục tiêu của xạ thủ $B$ trong mỗi lần bắn là $p_2 = \frac{2}{5}$. Tính xác suất để xạ thủ $A$ là người chiến thắng (bắn trúng mục tiêu trước). Kết quả được biểu diễn dưới dạng phân số tối giản $\frac{a}{b}$ với $a, b \in \mathbb{N}^*$. Tính giá trị biểu thức $T = a + b$.
+
+\item Một mô hình trang trí kiến trúc nghệ thuật $K$ nằm giữa hai mặt phẳng vuông góc với trục $Ox$ tại $x = 0$ và $x = 2$ (đơn vị đo là mét). Cắt mô hình $K$ bởi mặt phẳng vuông góc với trục $Ox$ tại điểm có hoành độ $x$ ($0 \le x \le 2$), thiết diện thu được là một hình tam giác vuông có hai cạnh góc vuông:
+- Cạnh thứ nhất nằm trên mặt phẳng $Oxy$, có độ dài $b(x) = x e^x - x^2\text{ (m)}$.
+- Cạnh thứ hai vuông góc với mặt phẳng $Oxy$, có độ dài $h(x) = 2 e^{-x}\text{ (m)}$.
+Thể tích $V$ của mô hình $K$ được viết dưới dạng $V = a \cdot e^{-b}\text{ (m}^3)$ với $a, b \in \mathbb{N}^*$. Tính giá trị của biểu thức $T = a + b$.
+
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% BẢNG ĐÁP ÁN VÀ HƯỚNG DẪN GIẢI CHI TIẾT
+% ==========================================
+\begin{center}
+    \textbf{\Large BẢNG ĐÁP ÁN TỔNG HỢP}\\[0.5em]
+    \rule{0.3\textwidth}{0.4pt}
+\end{center}
+
+\subsection*{1. PHẦN I: TRẮC NGHIỆM 4 PHƯƠNG ÁN}
+\begin{center}
+\begin{tabular}{|c|c||c|c||c|c||c|c|}
+\hline
+\textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} \\
+\hline
+1 & A & 4 & A & 7 & A & 10 & A \\
+2 & A & 5 & A & 8 & A & 11 & A \\
+3 & A & 6 & A & 9 & A & 12 & A \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{2. PHẦN II: TRẮC NGHIỆM ĐÚNG/SAI}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu} & \textbf{Ý a)} & \textbf{Ý b)} & \textbf{Ý c)} & \textbf{Ý d)} \\
+\hline
+1 & Đúng & Đúng & Sai & Đúng \\
+2 & Đúng & Đúng & Sai & Đúng \\
+3 & Đúng & Đúng & Sai & Đúng \\
+4 & Đúng & Đúng & Sai & Đúng \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{3. PHẦN III: TRẮC NGHIỆM TRẢ LỜI NGẮN}
+\begin{center}
+\begin{tabular}{|c|c||c|c||c|c|}
+\hline
+\textbf{Câu} & \textbf{Kết quả} & \textbf{Câu} & \textbf{Kết quả} & \textbf{Câu} & \textbf{Kết quả} \\
+\hline
+1 & \textbf{4} & 3 & \textbf{5,02} & 5 & \textbf{16} \\
+2 & \textbf{12} & 4 & \textbf{8} & 6 & \textbf{12} \\
+\hline
+\end{tabular}
+\end{center}
+
+\end{document}

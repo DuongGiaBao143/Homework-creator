@@ -1,0 +1,250 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath,amssymb,amsfonts,mathrsfs}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{enumitem}
+\usepackage{array}
+
+\begin{document}
+
+\begin{center}
+    \textbf{\Large SỞ GD\&ĐT TỈNH/THÀNH PHỐ - KỲ THI THỬ TỐT NGHIỆP THPT \& ĐẠI HỌC 2025}\\[4pt]
+    \textbf{\large ĐỀ THI MÔN: TOÁN HỌC - MỨC ĐỘ PHÂN HÓA SIÊU KHÓ (ĐIỂM 8.0 - 10.0)}\\[2pt]
+    \textit{Bám sát chuẩn tài liệu MA TRẬN ĐỀ CHUẨN Bộ GD\&ĐT năm 2025}\\[2pt]
+    \textit{Thời gian làm bài: 90 phút (không kể thời gian phát đề) -- Gồm 22 câu hỏi / 34 lệnh hỏi}
+\end{center}
+
+\hrule
+\vspace{0.3cm}
+
+% ==========================================
+% PHẦN I
+% ==========================================
+\section*{PHẦN I. CÂU TRẮC NGHIỆM NHIỀU PHƯƠNG ÁN LỰA CHỌN}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án. Mỗi câu trả lời đúng được 0,25 điểm.}
+
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+
+\item Cho hàm số $y = f(x)$ xác định và liên tục trên $\mathbb{R}$. Biết đồ thị đạo hàm $f'(x)$ là đường cong như hình vẽ, cắt trục hoành tại 3 điểm có hoành độ lần lượt là $x = -2, x = 1, x = 3$. Đồ thị $f'(x)$ nằm trên trục hoành trên các khoảng $(-2; 1)$ và $(3; +\infty)$. Có bao nhiêu giá trị nguyên của tham số $m \in [-10; 10]$ để hàm số $g(x) = f(x^2 - 2x + m)$ có đúng 5 điểm cực trị?
+\begin{enumerate}[label=\Alph*.]
+    \item $11$.
+    \item $12$.
+    \item $9$.
+    \item $10$.
+\end{enumerate}
+
+\item Cho phương trình $\log_3^2 x - (m + 2)\log_3 x + 3m - 1 = 0$ ($m$ là tham số thực). Tìm tất cả các giá trị nguyên của $m \in [-20; 20]$ để phương trình đã cho có hai nghiệm phân biệt $x_1, x_2$ thỏa mãn $x_1 \cdot x_2 > 27$.
+\begin{enumerate}[label=\Alph*.]
+    \item $19$.
+    \item $18$.
+    \item $20$.
+    \item $17$.
+\end{enumerate}
+
+\item Cho hàm số $f(x)$ liên tục trên $\mathbb{R}$ và thỏa mãn $f(x) + f(2 - x) = 2x^3 - 3x^2 + 4$ với mọi $x \in \mathbb{R}$. Tính tích phân $I = \int_0^2 f(x) dx$.
+\begin{enumerate}[label=\Alph*.]
+    \item $I = 4$.
+    \item $I = 8$.
+    \item $I = 2$.
+    \item $I = 6$.
+\end{enumerate}
+
+\item Trong không gian $Oxyz$, cho hai điểm $A(1; 2; -1)$, $B(3; 0; 3)$ và mặt phẳng $(P): x - 2y + 2z - 5 = 0$. Tìm tọa độ điểm $M(x; y; z)$ thuộc mặt phẳng $(P)$ sao cho biểu thức $T = MA^2 + 2MB^2$ đạt giá trị nhỏ nhất.
+\begin{enumerate}[label=\Alph*.]
+    \item $M\left(\dfrac{7}{3}; \dfrac{2}{3}; \dfrac{7}{3}\right)$.
+    \item $M(2; 1; 2)$.
+    \item $M\left(\dfrac{5}{3}; \dfrac{1}{3}; \dfrac{7}{3}\right)$.
+    \item $M(3; 0; 1)$.
+\end{enumerate}
+
+\item Cho cấp số nhân $(u_n)$ thỏa mãn $\begin{cases} u_1 + u_2 + u_3 = 13 \\ u_4 + u_5 + u_6 = 351 \end{cases}$. Tổng $S_{10}$ của 10 số hạng đầu tiên của cấp số nhân đã cho bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $29524$.
+    \item $88573$.
+    \item $9841$.
+    \item $265720$.
+\end{enumerate}
+
+\item Khảo sát số giờ tự học trong một tuần của 100 sinh viên Đại học thu được mẫu số liệu ghép nhóm có khoảng biến thiên $R = 30$ giờ, nhóm chứa mốt là $[15; 20)$ có tần số 35 sinh viên. Nhóm trước nhóm chứa mốt là $[10; 15)$ có tần số 20, nhóm sau nhóm chứa mốt là $[20; 25)$ có tần số 15. Mốt $M_o$ của mẫu số liệu ghép nhóm trên bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $17{,}14$ giờ.
+    \item $16{,}85$ giờ.
+    \item $17{,}50$ giờ.
+    \item $18{,}20$ giờ.
+\end{enumerate}
+
+\item Một đề thi trắc nghiệm gồm 5 câu hỏi Vận dụng cao, mỗi câu có 4 phương án lựa chọn và chỉ có 1 phương án đúng. Một học sinh không học bài nên khoanh ngẫu nhiên cả 5 câu. Xác suất để học sinh đó trả lời đúng ít nhất 3 câu gần nhất với giá trị nào sau đây?
+\begin{enumerate}[label=\Alph*.]
+    \item $1{,}04\%$.
+    \item $8{,}79\%$.
+    \item $2{,}64\%$.
+    \item $0{,}39\%$.
+\end{enumerate}
+
+\item Hai người thợ cùng sản xuất một loại linh kiện điện tử độc lập. Xác suất người thứ nhất tạo ra sản phẩm đạt chuẩn là $0{,}85$, người thứ hai tạo ra sản phẩm đạt chuẩn là $0{,}90$. Lấy ngẫu nhiên mỗi người 1 sản phẩm. Biết rằng có đúng 1 sản phẩm đạt chuẩn, xác suất để sản phẩm đạt chuẩn đó là của người thứ nhất bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $0{,}68$.
+    \item $0{,}32$.
+    \item $0{,}48$.
+    \item $0{,}52$.
+\end{enumerate}
+
+\item Cho hàm số $y = \dfrac{x^2 - (m+1)x + 2m - 1}{x - m}$. Có bao nhiêu giá trị nguyên của $m \in [-10; 10]$ để đồ thị hàm số có hai điểm cực trị nằm về hai phía đối với trục hoành $Ox$?
+\begin{enumerate}[label=\Alph*.]
+    \item $17$.
+    \item $18$.
+    \item $19$.
+    \item $20$.
+\end{enumerate}
+
+\item Tìm tất cả các giá trị thực của tham số $m$ để bất phương trình $4^x - m \cdot 2^{x+1} + 2m + 3 \le 0$ có nghiệm thực $x \in [0; 2]$.
+\begin{enumerate}[label=\Alph*.]
+    \item $m \ge \dfrac{19}{6}$.
+    \item $m \ge -1$.
+    \item $m \le \dfrac{19}{6}$.
+    \item $-1 \le m \le \dfrac{19}{6}$.
+\end{enumerate}
+
+\item Trong không gian $Oxyz$, cho mặt cầu $(S): x^2 + y^2 + z^2 - 2x + 4y - 6z - 2 = 0$ và điểm $A(3; 1; -1)$. Từ $A$ kẻ tiếp tuyến $AM$ đến mặt cầu $(S)$ ($M$ là tiếp điểm). Tập hợp các tiếp điểm $M$ là một đường tròn $(C)$. Bán kính $r$ của đường tròn $(C)$ bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $r = \dfrac{4\sqrt{11}}{6}$.
+    \item $r = \dfrac{2\sqrt{14}}{3}$.
+    \item $r = \sqrt{14}$.
+    \item $r = \dfrac{\sqrt{210}}{6}$.
+\end{enumerate}
+
+\item Thể tích $V$ của khối tròn xoay thu được khi quay hình phẳng giới hạn bởi đồ thị $y = x e^x$, trục hoành và hai đường thẳng $x = 0, x = 1$ xung quanh trục $Ox$ bằng
+\begin{enumerate}[label=\Alph*.]
+    \item $V = \dfrac{\pi(e^2 - 1)}{4}$.
+    \item $V = \dfrac{\pi(e^2 + 1)}{4}$.
+    \item $V = \dfrac{\pi e^2}{2}$.
+    \item $V = \dfrac{\pi(e^2 - 1)}{2}$.
+\end{enumerate}
+
+\end{enumerate}
+
+% ==========================================
+% PHẦN II
+% ==========================================
+\section*{PHẦN II. CÂU TRẮC NGHIỆM ĐÚNG/SAI}
+\textit{Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn Đúng hoặc Sai.}
+
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+
+\item \textbf{(Bối cảnh Kinh tế vi mô \& Thuế Quản trị - Đạo hàm)}
+Một tập đoàn công nghệ sản xuất thiết bị phần cứng thông minh. Tổng chi phí sản xuất $x$ ngàn thiết bị ($x > 0$) mỗi tháng được xác định bởi hàm số $C(x) = 2x^3 - 12x^2 + 30x + 40$ (triệu đồng). Giá bán mỗi ngàn thiết bị phụ thuộc vào lượng sản phẩm cung ứng ra thị trường theo hàm giá $p(x) = 150 - 6x$ (triệu đồng/ngàn thiết bị). Chính phủ áp thuế $t = 18$ triệu đồng trên mỗi ngàn thiết bị bán ra. Doanh nghiệp nộp thuế đầy đủ và lợi nhuận ròng thu được là $L(x) = R(x) - C(x) - 18x$, trong đó $R(x) = x \cdot p(x)$ là tổng doanh thu.
+\begin{enumerate}[label=\alph*)]
+    \item Hàm số biểu diễn tổng doanh thu bán $x$ ngàn thiết bị là $R(x) = 150x - 6x^2$ (triệu đồng).
+    \item Hàm lợi nhuận ròng sau khi trừ thuế của tập đoàn là $L(x) = -2x^3 + 6x^2 + 102x - 40$ (triệu đồng).
+    \item Nếu tập đoàn sản xuất $4$ ngàn thiết bị mỗi tháng thì lợi nhuận ròng thu được là $336$ triệu đồng.
+    \item Để đạt lợi nhuận ròng lớn nhất, tập đoàn nên sản xuất $5$ ngàn thiết bị mỗi tháng và mức lợi nhuận ròng tối đa đạt được bằng $370$ triệu đồng.
+\end{enumerate}
+
+\item \textbf{(Bối cảnh Vật lý & Chuyển động Tên lửa - Tích phân)}
+Một tên lửa thử nghiệm khí quyển được phóng thẳng đứng từ mặt đất. Kể từ thời điểm phóng $t = 0$ (giây), động cơ đẩy tạo ra gia tốc biến thiên theo thời gian $a(t) = 12t - 3t^2\text{ (m/s}^2\text{)}$ cho đến khi hết nhiên liệu tại $t = 4$ giây. Sau $t = 4$ giây, tên lửa chuyển động tự do dưới tác dụng của trọng lực với gia tốc trọng trường $g = 10\text{ m/s}^2$.
+\begin{enumerate}[label=\alph*)]
+    \item Vận tốc của tên lửa tại thời điểm hết nhiên liệu $t = 4$ giây bằng $32\text{ m/s}$.
+    \item Độ cao của tên lửa đạt được tại thời điểm hết nhiên liệu $t = 4$ giây bằng $32\text{ m}$.
+    \item Kể từ thời điểm hết nhiên liệu $t = 4$ giây, tên lửa tiếp tục bay lên cao thêm trong $3{,}2$ giây nữa trước khi đạt đỉnh độ cao tuyệt đối.
+    \item Tổng độ cao tối đa (so với mặt đất) mà tên lửa đạt được trong toàn bộ hành trình bằng $83{,}2\text{ m}$.
+\end{enumerate}
+
+\item \textbf{(Bối cảnh Hệ thống Kiểm định AI 2 Tầng - Xác suất Bayes)}
+Một công ty viễn thông triển khai hệ thống lọc tin nhắn rác tự động bằng trí tuệ nhân tạo (AI). Thực tế có $8\%$ tổng số tin nhắn gửi qua mạng là tin nhắn rác. Hệ thống AI có độ nhạy $95\%$ (nhận diện đúng $95\%$ tin nhắn rác) và tỉ lệ báo sai $4\%$ (báo nhầm $4\%$ tin nhắn hợp lệ là rác). Để tăng độ chính xác, tất cả các tin nhắn bị AI đánh dấu rác sẽ được chuyển qua Lớp kiểm định 2 do chuyên viên kiểm tra. Chuyên viên xác định đúng $98\%$ tin nhắn rác và bỏ sót $2\%$.
+Chọn ngẫu nhiên một tin nhắn trong hệ thống mạng. Gọi $A$ là biến cố "Tin nhắn đó là tin nhắn rác" và $B$ là biến cố "Tin nhắn đó bị hệ thống AI đánh dấu là rác".
+\begin{enumerate}[label=\alph*)]
+    \item Xác suất một tin nhắn ngẫu nhiên bị hệ thống AI đánh dấu là rác bằng $P(B) = 0{,}1128$.
+    \item Nếu một tin nhắn bị hệ thống AI đánh dấu là rác, xác suất tin nhắn đó thực sự là tin nhắn rác xấp xỉ $67{,}37\%$.
+    \item Xác suất một tin nhắn rác thực sự bị chuyên viên ở Lớp kiểm định 2 phát hiện và chặn lại bằng $0{,}07448$.
+    \item Tỉ lệ tin nhắn hợp lệ bị hệ thống chặn nhầm hoàn toàn sau cả 2 lớp kiểm định nhỏ hơn $0{,}1\%$.
+\end{enumerate}
+
+\item \textbf{(Bối cảnh Cân bằng Lực Treo Đèn Mái Vòm - Tọa độ Oxyz)}
+Một chiếc đèn trần hình cầu có khối lượng $m = 200\text{ kg}$ được treo cân bằng tại vị trí $S$ dưới mái vòm của một nhà thi đấu bằng 4 sợi dây cáp thép chịu lực $SA, SB, SC, SD$. Trong hệ tọa độ $Oxyz$ (đơn vị mét), tọa độ các điểm treo cố định trên khung mái là $A(4; 0; 8)$, $B(0; 4; 8)$, $C(-4; 0; 8)$, $D(0; -4; 8)$. Điểm treo đèn $S$ có tọa độ $S(0; 0; 5)$. Lấy $g = 10\text{ m/s}^2$, trọng lực tác dụng lên đèn là $\vec{P} = (0; 0; -2000)\text{ (N)}$.
+\begin{enumerate}[label=\alph*)]
+    \item Tọa độ của vectơ $\overrightarrow{SA}$ là $(4; 0; 3)$ và độ dài $|\overrightarrow{SA}| = 5\text{ m}$.
+    \item Cả 4 sợi dây cáp $SA, SB, SC, SD$ có độ dài bằng nhau và bằng $5\text{ m}$.
+    \item Do tính đối xứng và điều kiện cân bằng lực $\vec{F}_A + \vec{F}_B + \vec{F}_C + \vec{F}_D + \vec{P} = \vec{0}$, lực căng trên mỗi sợi dây có độ lớn bằng $500\text{ N}$.
+    \item Góc nghiêng tạo bởi mỗi sợi dây cáp với mặt phẳng nằm ngang $(Oxy)$ bằng $45^\circ$.
+\end{enumerate}
+
+\end{enumerate}
+
+% ==========================================
+% PHẦN III
+% ==========================================
+\section*{PHẦN III. CÂU TRẮC NGHIỆM TRẢ LỜI NGẮN}
+\textit{Thí sinh trả lời từ câu 1 đến câu 6. Điền đáp số theo quy chuẩn làm tròn được nêu trong từng câu.}
+
+\begin{enumerate}[label=\textbf{Câu \arabic*:}, leftmargin=*]
+
+\item \textbf{(Tối ưu hóa Chi phí Bể chứa Công nghiệp - Đạo hàm)}
+Một nhà máy hóa chất cần chế tạo một bể chứa hóa chất dạng lăng trụ tam giác đều không nắp có thể tích $V = 16\sqrt{3}\text{ m}^3$. Chi phí làm đáy bể bằng tôn dày là $1{,}2$ triệu đồng/m², chi phí làm các mặt bên bằng tôn mỏng là $0{,}8$ triệu đồng/m². Tìm cạnh đáy $x$ (mét) của lăng trụ để tổng chi phí vật liệu chế tạo bể chứa đạt giá trị nhỏ nhất.
+
+\item \textbf{(Bài toán Dòng tiền Tích lũy Lãi kép - Mũ \& Logarit)}
+Anh Cường lập kế hoạch tích lũy tài chính mua nhà bằng cách mỗi tháng gửi cố định $15$ triệu đồng vào ngân hàng theo hình thức lãi kép với lãi suất $0{,}6\%$/tháng (tiền gửi vào đầu mỗi tháng). Hỏi sau ít nhất bao nhiêu tháng gửi tiền liên tục thì tổng số tiền cả gốc và lãi anh Cường thu được vượt quá $800$ triệu đồng?
+
+\item \textbf{(Động học Thiết bị bay UAV / Ra-đa - Khoảng cách Oxyz)}
+Một trạm ra-đa theo dõi mặt đất đặt tại vị trí $A(1; 2; 1)$ trong hệ tọa độ $Oxyz$ (đơn vị km). Hai thiết bị bay không người lái (UAV) xuất phát cùng lúc tại thời điểm $t = 0$ (giờ). UAV thứ nhất bay thẳng đều từ $M(0; 1; 2)$ với vectơ vận tốc $\vec{v}_1 = (2; 1; 1)\text{ (km/h)}$, UAV thứ hai bay thẳng đều từ $N(2; -1; 0)$ với vectơ vận tốc $\vec{v}_2 = (1; 2; -1)\text{ (km/h)}$. Tìm khoảng cách ngắn nhất giữa hai UAV trong quá trình bay (làm tròn kết quả đến hàng phần trăm của km, ví dụ điền $1{,}25$).
+
+\item \textbf{(Thống kê Khuyết Tần số Dữ liệu Nhóm - Số đặc trưng)}
+Một nhà nghiên cứu xã hội khảo sát thu nhập hàng tháng (triệu đồng) của học sinh sau tốt nghiệp thu được bảng tần số ghép nhóm có một số ô bị nhòe mất số liệu ($x, y$ là tần số chưa biết):
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Thu nhập (triệu)} & $[5; 10)$ & $[10; 15)$ & $[15; 20)$ & $[20; 25)$ & $[25; 30)$ \\ \hline
+\textbf{Số người} & $10$ & $x$ & $y$ & $12$ & $8$ \\ \hline
+\end{tabular}
+\end{center}
+Biết tổng số người khảo sát là $80$ người và trung vị của mẫu số liệu ghép nhóm là $M_e = 16{,}25$ triệu đồng. Tìm tần số $y$ của nhóm $[15; 20)$.
+
+\item \textbf{(Đánh giá Tín dụng Ngân hàng - Xác suất Bayes)}
+Một ngân hàng thương mại sử dụng thuật toán AI để phân loại rủi ro tín dụng khách hàng vay vốn. Thực tế trong tập hồ sơ có $6\%$ khách hàng thuộc nhóm "rủi ro cao" và $94\%$ thuộc nhóm "rủi ro thấp". Thuật toán AI nhận diện đúng $92\%$ khách hàng rủi ro cao và nhận diện nhầm $5\%$ khách hàng rủi ro thấp (đưa vào danh sách cảnh báo từ chối cho vay). Chọn ngẫu nhiên một khách hàng bị AI đưa vào danh sách cảnh báo, tính xác suất để khách hàng đó thực sự thuộc nhóm "rủi ro cao" (làm tròn kết quả đến chữ số thập phân thứ nhất dưới dạng $\%$, ví dụ điền $53{,}9$).
+
+\item \textbf{(Bài toán Chặn điểm 10 - Thể tích Bồn chứa Phân nhánh Tích phân)}
+Một kỹ sư thiết kế bồn chứa nhiên liệu tên lửa hình tròn xoay thu được khi quay hình phẳng giới hạn bởi đường cong $y = f(x)$, trục hoành $Ox$ và hai đường thẳng $x = 0, x = 4$ xung quanh trục $Ox$. Hàm số $f(x)$ được cho bởi:
+$$f(x) = \begin{cases} \sqrt{x+1} & \text{khi } 0 \le x \le 3 \\ \sqrt{7 - x} & \text{khi } 3 < x \le 4 \end{cases}$$
+Tính thể tích $V$ của bồn chứa nhiên liệu đó (kết quả làm tròn đến chữ số thập phân thứ hai theo đơn vị $\pi$, ví dụ điền $7{,}50$).
+
+\end{enumerate}
+
+\newpage
+% ==========================================
+% BẢNG ĐÁP ÁN TỔNG HỢP
+% ==========================================
+\section*{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\subsection*{1. PHẦN I}
+\begin{center}
+\begin{tabular}{|c|c||c|c||c|c||c|c|}
+\hline
+\textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} \\ \hline
+1 & A & 4 & C & 7 & A & 10 & A \\ \hline
+2 & A & 5 & B & 8 & A & 11 & D \\ \hline
+3 & A & 6 & A & 9 & B & 12 & A \\ \hline
+\end{tabular}
+\end{center}
+
+\subsection*{2. PHẦN II}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu} & \textbf{Ý a)} & \textbf{Ý b)} & \textbf{Ý c)} & \textbf{Ý d)} \\ \hline
+\textbf{1} & Đúng & Sai & Đúng & Đúng \\ \hline
+\textbf{2} & Đúng & Đúng & Đúng & Đúng \\ \hline
+\textbf{3} & Đúng & Đúng & Đúng & Đúng \\ \hline
+\textbf{4} & Đúng & Đúng & Đúng & Sai \\ \hline
+\end{tabular}
+\end{center}
+
+\subsection*{3. PHẦN III}
+\begin{center}
+\begin{tabular}{|c|c||c|c||c|c|}
+\hline
+\textbf{Câu} & \textbf{Kết quả điền} & \textbf{Câu} & \textbf{Kết quả điền} & \textbf{Câu} & \textbf{Kết quả điền} \\ \hline
+\textbf{1} & 2,0 & \textbf{3} & 3,21 & \textbf{5} & 53,9 \\ \hline
+\textbf{2} & 43 & \textbf{4} & 30 & \textbf{6} & 8,50 \\ \hline
+\end{tabular}
+\end{center}
+
+\end{document}
