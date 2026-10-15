@@ -1,7 +1,7 @@
 import os
 import pypdf
 
-src_pdf = r"d:\Tao_De\De 10\De 10.pdf"
+src_pdf = r"d:\Tao_De\Output\De 10\De 10.pdf"
 dest_exam_dir = r"D:\Document\Dạy học\Đề ko đáp án\PRIVATE"
 dest_ans_dir = r"D:\Document\Dạy học\Đề ko đáp án\PRIVATE\Ans"
 

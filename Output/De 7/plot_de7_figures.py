@@ -8,7 +8,7 @@ import matplotlib.pyplot as plt
 from mpl_toolkits.mplot3d.art3d import Poly3DCollection
 from PIL import Image, ImageChops
 
-OUT_DIR = r"d:\Tao_De\De 7\images"
+OUT_DIR = r"d:\Tao_De\Output\De 7\images"
 os.makedirs(OUT_DIR, exist_ok=True)
 
 plt.rcParams["font.family"] = "DejaVu Sans"

@@ -48,7 +48,7 @@ def plot_de6_p2_c4():
     ax.view_init(elev=22, azim=-55)
     ax.legend(loc='upper left', fontsize=8)
     plt.tight_layout()
-    plt.savefig(r'd:\Tao_De\De 6\images\phan2_cau4_haidrone_3d.png', dpi=300, bbox_inches='tight')
+    plt.savefig(r'd:\Tao_De\Output\De 6\images\phan2_cau4_haidrone_3d.png', dpi=300, bbox_inches='tight')
     plt.close()
 
 # 2. Đề 6 - Phần III - Câu 1: Bể chứa hình hộp chữ nhật không nắp (rộng x, dài 2x, cao h)
@@ -83,7 +83,7 @@ def plot_de6_p3_c1():
     ax.axis('off')
     ax.view_init(elev=24, azim=-52)
     plt.tight_layout()
-    plt.savefig(r'd:\Tao_De\De 6\images\phan3_cau1_bechua_3d.png', dpi=300, bbox_inches='tight')
+    plt.savefig(r'd:\Tao_De\Output\De 6\images\phan3_cau1_bechua_3d.png', dpi=300, bbox_inches='tight')
     plt.close()
 
 # 3. Đề 6 - Phần III - Câu 2: Hình chóp S.ABCD đáy hình vuông cạnh 6, SA vuông góc đáy
@@ -118,7 +118,7 @@ def plot_de6_p3_c2():
     ax.set_aspect('equal')
     ax.axis('off')
     plt.tight_layout()
-    plt.savefig(r'd:\Tao_De\De 6\images\phan3_cau2_hinhchop.png', dpi=300, bbox_inches='tight')
+    plt.savefig(r'd:\Tao_De\Output\De 6\images\phan3_cau2_hinhchop.png', dpi=300, bbox_inches='tight')
     plt.close()
 
 # 4. Đề 6 - Phần III - Câu 3: Hai robot trên trục Ox, Oy
@@ -154,7 +154,7 @@ def plot_de6_p3_c3():
     ax.set_aspect('equal')
     ax.axis('off')
     plt.tight_layout()
-    plt.savefig(r'd:\Tao_De\De 6\images\phan3_cau3_hairobot_oxy.png', dpi=300, bbox_inches='tight')
+    plt.savefig(r'd:\Tao_De\Output\De 6\images\phan3_cau3_hairobot_oxy.png', dpi=300, bbox_inches='tight')
     plt.close()
 
 # 5. Đề 6 - Phần III - Câu 4: Nguồn sáng S(0,0,12) chiếu bóng đĩa tròn xuống mặt đất Oxy
@@ -190,7 +190,7 @@ def plot_de6_p3_c4():
     ax.view_init(elev=20, azim=-45)
     ax.axis('off')
     plt.tight_layout()
-    plt.savefig(r'd:\Tao_De\De 6\images\phan3_cau4_nonanhsang.png', dpi=300, bbox_inches='tight')
+    plt.savefig(r'd:\Tao_De\Output\De 6\images\phan3_cau4_nonanhsang.png', dpi=300, bbox_inches='tight')
     plt.close()
 
 # 6. Đề 6 - Phần III - Câu 6: Thiết diện tam giác vuông từ x=0 đến x=2
@@ -221,7 +221,7 @@ def plot_de6_p3_c6():
     ax.view_init(elev=24, azim=-58)
     ax.legend(loc='upper left', fontsize=8)
     plt.tight_layout()
-    plt.savefig(r'd:\Tao_De\De 6\images\phan3_cau6_thietdien_3d.png', dpi=300, bbox_inches='tight')
+    plt.savefig(r'd:\Tao_De\Output\De 6\images\phan3_cau6_thietdien_3d.png', dpi=300, bbox_inches='tight')
     plt.close()
 
 # 7. Đề 4 - Phần II - Câu 4: Mái che sân tennis hình chóp S.ABCD trong Oxyz (Không lộ tọa độ H)
@@ -257,7 +257,7 @@ def plot_de4_p2_c4():
     ax.tick_params(labelsize=7)
     ax.view_init(elev=22, azim=-50)
     plt.tight_layout()
-    plt.savefig(r'd:\Tao_De\De 4\images\phan2_cau4_maiche_oxyz.png', dpi=300, bbox_inches='tight')
+    plt.savefig(r'd:\Tao_De\Output\De 4\images\phan2_cau4_maiche_oxyz.png', dpi=300, bbox_inches='tight')
     plt.close()
 
 # 8. Đề 4 - Phần III - Câu 1: Thùng đựng rác không nắp đáy vuông cạnh x, cao h
@@ -292,7 +292,7 @@ def plot_de4_p3_c1():
     ax.axis('off')
     ax.view_init(elev=23, azim=-48)
     plt.tight_layout()
-    plt.savefig(r'd:\Tao_De\De 4\images\phan3_cau1_thungrac_3d.png', dpi=300, bbox_inches='tight')
+    plt.savefig(r'd:\Tao_De\Output\De 4\images\phan3_cau1_thungrac_3d.png', dpi=300, bbox_inches='tight')
     plt.close()
 
 # 9. Đề 5 - Phần II - Câu 4: Mái vòm nhà thi đấu hình chóp S.ABCD trong Oxyz (Không lộ tọa độ H)
@@ -328,7 +328,7 @@ def plot_de5_p2_c4():
     ax.tick_params(labelsize=7)
     ax.view_init(elev=22, azim=-50)
     plt.tight_layout()
-    plt.savefig(r'd:\Tao_De\De 5\images\phan2_cau4_maivom_oxyz.png', dpi=300, bbox_inches='tight')
+    plt.savefig(r'd:\Tao_De\Output\De 5\images\phan2_cau4_maivom_oxyz.png', dpi=300, bbox_inches='tight')
     plt.close()
 
 if __name__ == '__main__':

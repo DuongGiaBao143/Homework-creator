@@ -8,6 +8,9 @@ Bất cứ khi nào người dùng:
 
 ---
 
+### THƯ MỤC ĐẦU RA
+Tất cả thư mục đề được lưu tại `D:\Tao_De\Output\De <số_đề>`; bản demo lưu tại `D:\Tao_De\Output\Demo`. Khi tạo đề mới, tạo thư mục dưới `Output`, không tạo thư mục đề trực tiếp ở gốc dự án.
+
 ### QUY CHUẨN HEADLINE & HEADNOTE BẮT BUỘC TRONG TẤT CẢ CÁC ĐỀ:
 1. **Headline (Tiêu đề đầu đề & Header trang):** `HƯỚNG TỚI THPTQG 2027`
 2. **Headnote / Thông tin tác giả:** `Người biên soạn: Dương Gia Bảo`
@@ -62,8 +65,8 @@ Bất cứ khi nào người dùng:
    - Tất cả tài liệu nguồn của người dùng (`.pdf`, `.docx`, `.tex`, `.md`, `.txt`) được đặt trong thư mục `d:\Tao_De\Nguon_Tai_Lieu`.
    - Khi người dùng yêu cầu tạo Đề số `<số_đề>` mới mà chưa có file `.tex`:
      + Chạy lệnh `python "d:\Tao_De\scripts\index_tai_lieu.py" --exam <số_đề>` để tự động quét kho tài liệu nguồn, phân loại theo chuyên đề và trích xuất ngữ liệu tham khảo vào `d:\Tao_De\Nguon_Tai_Lieu\_index\sample_de_<số_đề>.md`.
-     + Đọc ngữ liệu tham khảo vừa trích xuất kết hợp với cấu trúc các đề trước (`De 1`..`De 6`) để tổng hợp bộ 22 câu hỏi mới (Phần I: 12 câu, Phần II: 4 câu Đúng/Sai, Phần III: 6 câu Trả lời ngắn), không trùng lặp với các đề cũ, loại bỏ ngay từ đầu dạng toán hàm hợp $g(x)=f(u(x))$.
-     + Dùng Python (`SymPy`) tính toán và thiết kế bộ số liệu chuẩn xác 100% trước khi ghi ra file `d:\Tao_De\De <số_đề>\De <số_đề>.tex`.
+     + Đọc ngữ liệu tham khảo vừa trích xuất kết hợp với cấu trúc các đề trước (`Output/De 1`..`Output/De 6`) để tổng hợp bộ 22 câu hỏi mới (Phần I: 12 câu, Phần II: 4 câu Đúng/Sai, Phần III: 6 câu Trả lời ngắn), không trùng lặp với các đề cũ, loại bỏ ngay từ đầu dạng toán hàm hợp $g(x)=f(u(x))$.
+     + Dùng Python (`SymPy`) tính toán và thiết kế bộ số liệu chuẩn xác 100% trước khi ghi ra file `d:\Tao_De\Output\De <số_đề>\De <số_đề>.tex`.
 
 1. **Pha 1: Audit & Giải độc lập bằng Python (SymPy/NumPy)**
    - Không tin tưởng đáp án/lời giải có sẵn của file gốc.
@@ -90,7 +93,7 @@ Bất cứ khi nào người dùng:
      + **Giữ nút thắt và độ khó gốc khi chế tác**: phải có bước tự mô hình hóa, phối hợp nhiều điều kiện, lựa chọn đường đi/cấu hình hoặc lập luận tối ưu. Không biến câu khó thành bài thay số trực tiếp, lấy đạo hàm một hàm mục tiêu đã cho sẵn hoặc tính một tích phân đã thiết lập sẵn. Tên tài liệu và `vdc_score` không tự chứng minh độ khó.
      + Hình minh họa không được giải hộ bước then chốt: nếu tự tìm cách trải phẳng là phần phân loại của bài, chỉ vẽ hình không gian/ngữ cảnh, không đưa sẵn toàn bộ hình trải phẳng cùng đường ngắn nhất.
      + Các câu còn lại ưu tiên ba tài liệu trên và ngữ liệu Vận dụng/Vận dụng cao khác; sắp xếp Phần III theo độ khó tăng dần. Tiếp tục loại bỏ hàm hợp, tích phân hàm ẩn máy móc và dạng không phù hợp GDPT 2018.
-     + **Trước khi xuất PDF**, ghi đối chiếu câu Phần III với **tên file nguồn chính xác, trang PDF, số câu gốc nếu có và nút thắt tạo độ khó** vào `De <số_đề>/nguon_de<số_đề>.md`. Kiểm đếm ít nhất **2 câu độc lập từ ba file chỉ định**; nếu chưa đủ hoặc đã giản lược mất độ khó, chọn/thay câu cho đạt rồi mới nghiệm thu.
+     + **Trước khi xuất PDF**, ghi đối chiếu câu Phần III với **tên file nguồn chính xác, trang PDF, số câu gốc nếu có và nút thắt tạo độ khó** vào `Output/De <số_đề>/nguon_de<số_đề>.md`. Kiểm đếm ít nhất **2 câu độc lập từ ba file chỉ định**; nếu chưa đủ hoặc đã giản lược mất độ khó, chọn/thay câu cho đạt rồi mới nghiệm thu.
      + Ràng buộc này áp dụng từ **đề 13 trở đi**; giữ nguyên đề 1–12, trừ khi người dùng yêu cầu sửa một đề cụ thể.
    - Cân bằng đáp án Phần I: Phân bố đều $3\text{A} - 3\text{B} - 3\text{C} - 3\text{D}$.
    - Đồng bộ 3 phần: Đề bài & 4 phương án $\longleftrightarrow$ Bảng đáp án $\longleftrightarrow$ Hướng dẫn giải chi tiết.

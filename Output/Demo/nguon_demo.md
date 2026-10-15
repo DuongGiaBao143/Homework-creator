@@ -30,4 +30,4 @@ Phần III được thiết kế với hai câu mở đầu ở mức vận dụ
 - Biên dịch thành công, không có overfull; đã xem bản render toàn bộ 11 trang và kiểm tra hình dưới dạng trắng đen.
 - `De_demo.pdf`: 5 trang đề, đủ 12+4+6 câu, không có bảng đáp án hay lời giải.
 - `Dap_an_demo.pdf`: 6 trang bảng đáp án và lời giải; `Demo.pdf`: bản đầy đủ 11 trang.
-- Các file lưu riêng trong `D:\Tao_De\Demo`; chưa xuất vào thư mục đề chính thức PRIVATE và chưa hiệu chuẩn độ khó bằng học sinh làm thử.
+- Các file lưu riêng trong `D:\Tao_De\Output\Demo`; chưa xuất vào thư mục đề chính thức PRIVATE và chưa hiệu chuẩn độ khó bằng học sinh làm thử.

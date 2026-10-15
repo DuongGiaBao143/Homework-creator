@@ -39,7 +39,7 @@ ax.set_xlim(-1.1, 7.8)
 ax.set_ylim(-1.0, 5.5)
 ax.set_aspect('equal')
 ax.axis('off')
-plt.savefig(r'd:\Tao_De\De 6\images\phan3_cau3_hairobot_oxy.png', dpi=300, bbox_inches='tight', pad_inches=0.05, facecolor='white')
+plt.savefig(r'd:\Tao_De\Output\De 6\images\phan3_cau3_hairobot_oxy.png', dpi=300, bbox_inches='tight', pad_inches=0.05, facecolor='white')
 plt.close(fig)
 
 # 2. Fix De 6 P3 C4: Light cone S(0,0,12), disk R=2 so label does not overlap disk
@@ -69,7 +69,7 @@ for rx in [-4.0, -2.8, 2.8, 4.0]:
 ax.set_xlim(-4.6, 5.2)
 ax.set_ylim(-1.4, 13.2)
 ax.axis('off')
-plt.savefig(r'd:\Tao_De\De 6\images\phan3_cau4_nonanhsang.png', dpi=300, bbox_inches='tight', pad_inches=0.05, facecolor='white')
+plt.savefig(r'd:\Tao_De\Output\De 6\images\phan3_cau4_nonanhsang.png', dpi=300, bbox_inches='tight', pad_inches=0.05, facecolor='white')
 plt.close(fig)
 
 # 3. Fix De 6 P3 C6: 3D solid with clean non-overlapping ticks
@@ -100,12 +100,12 @@ ax.set_zlabel('$h(x)$', fontsize=11, labelpad=-2)
 ax.tick_params(labelsize=9, pad=0)
 ax.view_init(elev=22, azim=-55)
 ax.legend(loc='upper left', fontsize=9.5, framealpha=0.9)
-plt.savefig(r'd:\Tao_De\De 6\images\phan3_cau6_thietdien_3d.png', dpi=300, bbox_inches='tight', pad_inches=0.05, facecolor='white')
+plt.savefig(r'd:\Tao_De\Output\De 6\images\phan3_cau6_thietdien_3d.png', dpi=300, bbox_inches='tight', pad_inches=0.05, facecolor='white')
 plt.close(fig)
 
 # Auto-crop whitespace around all PNG plots across De 4, 5, 6
 for d in [4, 5, 6]:
-    img_dir = rf'd:\Tao_De\De {d}\images'
+    img_dir = rf'd:\Tao_De\Output\De {d}\images'
     for fname in os.listdir(img_dir):
         if fname.endswith('.png'):
             fpath = os.path.join(img_dir, fname)

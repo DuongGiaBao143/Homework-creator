@@ -1,6 +1,6 @@
 # Nguồn và kiểm toán đề 12
 
-Đề được biên soạn mới từ các mô-típ trong `../Nguon_Tai_Lieu/_index/sample_de_12.md`. Số liệu, cách hỏi và lời giải được thiết kế lại rồi giải độc lập bằng `verify_de12.py`; không sao chép đáp án nguồn. Theo yêu cầu người dùng, không đối chiếu nội dung với 11 đề trước.
+Đề được biên soạn mới từ các mô-típ trong `../../Nguon_Tai_Lieu/_index/sample_de_12.md`. Số liệu, cách hỏi và lời giải được thiết kế lại rồi giải độc lập bằng `verify_de12.py`; không sao chép đáp án nguồn. Theo yêu cầu người dùng, không đối chiếu nội dung với 11 đề trước.
 
 | Câu | Ngữ liệu tham khảo trong mẫu đề 12 | Nội dung chế tác |
 |---|---|---|
