@@ -1,0 +1,97 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.5cm,top=2cm,bottom=2cm,headheight=17pt]{geometry}
+\usepackage{amsmath,amssymb,amsfonts,graphicx,enumitem,fancyhdr,tikz,needspace}
+\usetikzlibrary{calc,arrows.meta,patterns}
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or Math gives us hope that every problem has a solution% Trang 7
+    \or Math + You = Champion% Trang 8
+    \or Where Frustration Becomes Inspiration% Trang 9
+    \or Turning Confusion into Clarity% Trang 10
+    \or Don't be an X, be a Y of mathematics% Trang 11
+    \or Don't get mad. Learn to add% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\newcommand{\soDe}{N}
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[4pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GK1}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ \soDe}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.2cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{000\soDe}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.2cm}
+
+% Đây là khung soạn thảo, không phải đề đã hoàn thành.
+\section*{PHẦN I. Trắc nghiệm nhiều lựa chọn (12 câu)}
+\begin{enumerate}[label=\textbf{Câu \arabic*.}]
+% Điền đủ 12 câu, mỗi câu 4 phương án, cân bằng 3A-3B-3C-3D.
+\item \textit{[Điền nội dung 12 câu trắc nghiệm.]}
+\end{enumerate}
+
+\section*{PHẦN II. Trắc nghiệm đúng/sai (2 câu)}
+\begin{enumerate}[label=\textbf{Câu \arabic*.}]
+% Điền đủ 2 câu, mỗi câu 4 ý a), b), c), d).
+\item \textit{[Điền nội dung 2 câu đúng/sai, mỗi câu 4 ý.]}
+\end{enumerate}
+
+\section*{PHẦN III. Trả lời ngắn (4 câu)}
+\begin{enumerate}[label=\textbf{Câu \arabic*.}]
+% Điền đủ 4 câu; nêu đơn vị và quy tắc làm tròn nếu có.
+\item \textit{[Điền nội dung 4 câu trả lời ngắn.]}
+\end{enumerate}
+
+\section*{PHẦN IV. Tự luận (4 câu)}
+\begin{enumerate}[label=\textbf{Câu \arabic*.}]
+% Điền đủ 4 câu yêu cầu trình bày lập luận.
+\item \textit{[Điền nội dung 4 câu tự luận.]}
+\end{enumerate}
+\newpage
+\section*{BẢNG ĐÁP ÁN TỔNG HỢP}
+% Bảng đáp án cho cả 4 phần (Phần I, II, III, IV tóm tắt kết quả). Không nhét hình vẽ vào trong ô table.
+\newpage
+\section*{HÌNH VẼ MIỀN NGHIỆM HỆ BẤT PHƯƠNG TRÌNH}
+% Vẽ miền nghiệm cho các câu hệ BPT ở Phần III và Phần IV, vẽ ở ngoài table cho to, tô màu miền nghiệm rõ ràng, không cần giải thích.
+\end{document}

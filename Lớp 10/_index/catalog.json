@@ -1,0 +1,470 @@
+{
+  "rules_hash": "37dac948e7ed05dbb5cf1a983723f0da6ab1723dd6e6c7de32104920b9762395",
+  "physical_files": 36,
+  "unique_files": 34,
+  "extracted_files_this_run": 0,
+  "cache_hits": 34,
+  "duplicates": [
+    {
+      "source": "Nguon_Tai_Lieu/dataset/cac-ki-thuat-dem-nang-cao-trong-bai-toan-to-hop-va-xac-suat-mai-thanh-luan (1).pdf",
+      "duplicate_of": "Nguon_Tai_Lieu/dataset/cac-ki-thuat-dem-nang-cao-trong-bai-toan-to-hop-va-xac-suat-mai-thanh-luan.pdf",
+      "sha256": "d3beef4df04cf8ce874ad68ba7075dadf9fefd293e06697842dfd767b9907560"
+    },
+    {
+      "source": "Nguon_Tai_Lieu/dataset/dai-cuong-ve-cac-phep-dem-va-bai-toan-xac-suat-mai-tran-nhat-khoa (1).pdf",
+      "duplicate_of": "Nguon_Tai_Lieu/dataset/dai-cuong-ve-cac-phep-dem-va-bai-toan-xac-suat-mai-tran-nhat-khoa.pdf",
+      "sha256": "ff638e9f51123d38d824101f1b3a62e1cb1d3732efb7a185bf40081d33524598"
+    }
+  ],
+  "files": [
+    {
+      "total_pages": 147,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 1067684,
+      "mtime_ns": 1792286219031359900,
+      "source": "Nguon_Tai_Lieu/dataset/Ngân hàng câu hỏi ôn tập chương mệnh đề và tập hợp Toán 10 – Lê Minh Kha.pdf",
+      "sha256": "f1468014ceeea783f2be8aad4ba4eb8f7fa3438b884e8acc5d2f591ad4f778a3",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 181,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 1770988,
+      "mtime_ns": 1792286392946685600,
+      "source": "Nguon_Tai_Lieu/dataset/bo-de-kiem-tra-theo-bai-hoc-mon-toan-10-hoc-ki-1-co-dap-an.pdf",
+      "sha256": "a89452640eec98d528cc6e6134b7673c1e87066fd0bfa43faebd946fec4d2930",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 60,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 1008305,
+      "mtime_ns": 1792286311251199800,
+      "source": "Nguon_Tai_Lieu/dataset/cac-dang-toan-cac-so-dac-trung-cua-mau-so-lieu-khong-ghep-nhom-toan-10-thuong-gap.pdf",
+      "sha256": "2700142c8c154263c7881320748048bb0344657c23486f6f47ee1368ef82d70a",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 225,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 8198299,
+      "mtime_ns": 1792286369761799900,
+      "source": "Nguon_Tai_Lieu/dataset/cac-ki-thuat-dem-nang-cao-trong-bai-toan-to-hop-va-xac-suat-mai-thanh-luan.pdf",
+      "sha256": "d3beef4df04cf8ce874ad68ba7075dadf9fefd293e06697842dfd767b9907560",
+      "role": "dataset",
+      "review": [
+        "nang-cao"
+      ]
+    },
+    {
+      "total_pages": 117,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 4751332,
+      "mtime_ns": 1792286326036960600,
+      "source": "Nguon_Tai_Lieu/dataset/chuyen-de-bat-phuong-trinh-bac-hai-mot-an-toan-10.pdf",
+      "sha256": "7f4a5dc1915b63ebcac4193ec245b6499a9e0128f54fbeb2cd38296687a89de2",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 213,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 1426209,
+      "mtime_ns": 1792286345514518200,
+      "source": "Nguon_Tai_Lieu/dataset/chuyen-de-boi-duong-hoc-sinh-gioi-bat-dang-thuc-diem-roi-va-ky-thuat-chung-minh.pdf",
+      "sha256": "cd6cc84be82a232af95484cb930cf7a6483585a055137e6241becb2d0414fa6d",
+      "role": "dataset",
+      "review": [
+        "bat-dang-thuc"
+      ]
+    },
+    {
+      "total_pages": 143,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 8715454,
+      "mtime_ns": 1792286237886679600,
+      "source": "Nguon_Tai_Lieu/dataset/chuyen-de-bpt-va-he-bpt-bac-nhat-hai-an-toan-10-dinh-huong-cau-truc-moi.pdf",
+      "sha256": "37dc6d8e8542493027832fd51ed82bd24deb3199d1fdb0d0941c8de9e4633141",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 256,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 10234222,
+      "mtime_ns": 1792286322465317300,
+      "source": "Nguon_Tai_Lieu/dataset/chuyen-de-ham-so-do-thi-va-ung-dung-mon-toan-10-chuong-trinh-moi.pdf",
+      "sha256": "d9f0e0fd32a82a3ff88771776b2b9c285a44a8efeb32649882e8dd716decff97",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 154,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 7666714,
+      "mtime_ns": 1792286289459959300,
+      "source": "Nguon_Tai_Lieu/dataset/chuyen-de-he-thuc-luong-trong-tam-giac-mon-toan-10-chuong-trinh-moi.pdf",
+      "sha256": "06c5d455b9deedceb0f44cde7ebf7df679eae3fec73cf3e90e9dfeed3baf1ab0",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 402,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 15527119,
+      "mtime_ns": 1792286361930005400,
+      "source": "Nguon_Tai_Lieu/dataset/chuyen-de-phuong-phap-toa-do-trong-mat-phang-toan-10-chuong-trinh-moi.pdf",
+      "sha256": "5f89cb2aaa4107a4e936b1ae9287279b80b092cdadadc7f1c35ba9d36dcfc95e",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 236,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 8775191,
+      "mtime_ns": 1792286359067503600,
+      "source": "Nguon_Tai_Lieu/dataset/chuyen-de-phuong-phap-toa-do-trong-mat-phang-toan-10.pdf",
+      "sha256": "9b3d1b3999e4937d5644cd28c75b38a312c49a6b801a5d87b956f9c198b9b65f",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 186,
+      "ocr_pages": 1,
+      "empty_pages": [
+        1
+      ],
+      "size": 5647016,
+      "mtime_ns": 1792286314531436900,
+      "source": "Nguon_Tai_Lieu/dataset/chuyen-de-thong-ke-toan-10.pdf",
+      "sha256": "08e29758d0ad6a8d4a66518cfd83a00408dcc5f344fdd0c79ebd856945a581f2",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 93,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 9151730,
+      "mtime_ns": 1792286283163679600,
+      "source": "Nguon_Tai_Lieu/dataset/chuyen-de-toan-10-chuong-he-thuc-luong-trong-tam-giac-va-ung-dung.pdf",
+      "sha256": "65a912f197d89893b95467aea4ef24078720fb0e38259096c7d63581c3d0b50f",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 248,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 12178747,
+      "mtime_ns": 1792286299182176200,
+      "source": "Nguon_Tai_Lieu/dataset/chuyen-de-vecto-mon-toan-10-chuong-trinh-moi-phan-nhat-linh.pdf",
+      "sha256": "4f80105042686413b43090995b7cbf17e30b000e809381c8a4293c4e803760d2",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 58,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 1979530,
+      "mtime_ns": 1792286375140353400,
+      "source": "Nguon_Tai_Lieu/dataset/chuyen-de-xac-suat-co-dien-on-thi-tn-thpt-hsa-tsa-hsg-mon-toan.pdf",
+      "sha256": "52e00426f7692f775843c5336214f9ee49630cd4c2db3225f2c4332d1ccf3986",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 136,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 869808,
+      "mtime_ns": 1792286372496498000,
+      "source": "Nguon_Tai_Lieu/dataset/dai-cuong-ve-cac-phep-dem-va-bai-toan-xac-suat-mai-tran-nhat-khoa.pdf",
+      "sha256": "ff638e9f51123d38d824101f1b3a62e1cb1d3732efb7a185bf40081d33524598",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 69,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 3531529,
+      "mtime_ns": 1792286234535783500,
+      "source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-bpt-va-he-bpt-bac-nhat-hai-an.pdf",
+      "sha256": "8c02890310f4ae3337711a8fc3ca75761f3f0878aa1bf3e38e0d62e1e087ee53",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 61,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 1153859,
+      "mtime_ns": 1792286386933472000,
+      "source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-cac-quy-tac-tinh-xac-suat.pdf",
+      "sha256": "beb898176fe0510647bd454a341edda0973e15e267a308b6ecc7c1fbd0fd14a9",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 77,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 1844696,
+      "mtime_ns": 1792286278796853900,
+      "source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-he-thuc-luong-trong-tam-giac.pdf",
+      "sha256": "404822f530069cf94afe2de05a777b4f7921dba8650bdbd70fefcd3a27925bce",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 60,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 1375879,
+      "mtime_ns": 1792286227243703700,
+      "source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-menh-de-va-tap-hop.pdf",
+      "sha256": "ce7a930fc98aa63c758ec10d96cda2baa34cfb902cdf39659e35772d71cacb71",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 154,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 3707169,
+      "mtime_ns": 1792286355448992700,
+      "source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-phuong-phap-toa-do-trong-mat-phang.pdf",
+      "sha256": "537cf9db7fd1752318fea3b9b98e0cf042bf08f337dc13ac61cfa4322aeb41bf",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 156,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 3772801,
+      "mtime_ns": 1792286293037848100,
+      "source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-vecto.pdf",
+      "sha256": "34c577af5bf4e68a732918ae52a6568c1c0a76c6563720acc4b1b9d21ae61f9f",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 26,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 496067,
+      "mtime_ns": 1792286349390945800,
+      "source": "Nguon_Tai_Lieu/dataset/khai-thac-hai-tinh-chat-cua-ham-so-trong-chung-minh-bat-dang-thuc.pdf",
+      "sha256": "4491887d3a0d8cf19c9d6574ffd3b35bfb1b5f802cc085ffd2a53a307252a744",
+      "role": "dataset",
+      "review": [
+        "bat-dang-thuc"
+      ]
+    },
+    {
+      "total_pages": 18,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 335370,
+      "mtime_ns": 1792286365207536400,
+      "source": "Nguon_Tai_Lieu/dataset/ky-thuat-phan-tap-dong-du-giai-bai-toan-to-hop-xac-suat-co-yeu-to-chia-het.pdf",
+      "sha256": "d7b37c04d1b61d007d687a20d25cdaca3a6d977ea5bd15850c0bdb363c3799bd",
+      "role": "dataset",
+      "review": [
+        "phan-tap-dong-du"
+      ]
+    },
+    {
+      "total_pages": 22,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 940886,
+      "mtime_ns": 1792286296001113200,
+      "source": "Nguon_Tai_Lieu/dataset/luyen-ky-nang-toan-10-trac-nghiem-dung-sai-vector-trong-mat-phang.pdf",
+      "sha256": "738fdafdaef1445b0ea20e5da2f555dca68c08d977636a740c91fcfddee3b3b9",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 26,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 489318,
+      "mtime_ns": 1792286389693611900,
+      "source": "Nguon_Tai_Lieu/dataset/luyen-tap-chung-toan-11-thpt-quy-tac-tinh-xac-suat.pdf",
+      "sha256": "5873650d45cf1a707b7698ba6814c87afae2e3eb1fd5d184c8796cba0a51e495",
+      "role": "dataset",
+      "review": [
+        "toan-11"
+      ]
+    },
+    {
+      "total_pages": 89,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 2199599,
+      "mtime_ns": 1792286224247121900,
+      "source": "Nguon_Tai_Lieu/dataset/phuong-phap-giai-toan-va-bai-tap-chuyen-de-menh-de-va-tap-hop-toan-10.pdf",
+      "sha256": "f43fb182b547a2e419d99f8a7c070baabaebd0db7ef47b2a95b1f5ba5f80e7a9",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 10,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 1524709,
+      "mtime_ns": 1792286338960004600,
+      "source": "Nguon_Tai_Lieu/dataset/su-dung-tinh-chat-cua-luy-thua-de-giai-phuong-trinh-va-he-phuong-trinh.pdf",
+      "sha256": "5c10ed455f7d3ea5ada4b70ff246c5c553cfe86b51bd08a3ccd5e057467ed77e",
+      "role": "dataset",
+      "review": [
+        "luy-thua"
+      ]
+    },
+    {
+      "total_pages": 211,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 15655780,
+      "mtime_ns": 1792286231215720100,
+      "source": "Nguon_Tai_Lieu/dataset/toan-thuc-te-he-bat-phuong-trinh-bac-nhat-hai-an-dang-viet-dong.pdf",
+      "sha256": "ea317b2b9b1b7d336f3d54b82a3c643511baa65d6803e41b6f19fb22f8117e31",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 49,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 2064742,
+      "mtime_ns": 1792286319332037700,
+      "source": "Nguon_Tai_Lieu/dataset/tong-hop-100-bai-toan-thuc-te-ve-ham-so-bac-hai.pdf",
+      "sha256": "f23395a526c1d173fe0e2ceda11cda04dc842889099f93f160a0161606feff2c",
+      "role": "dataset",
+      "review": []
+    },
+    {
+      "total_pages": 186,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 3612554,
+      "mtime_ns": 1792286352136692200,
+      "source": "Nguon_Tai_Lieu/dataset/tuyen-tap-300-bai-toan-bat-dang-thuc-chon-loc-co-loi-giai-chi-tiet.pdf",
+      "sha256": "7360e4839cd66e1a5a46331f9d76c4ef0974f2a6e0e602ade427977469e128b4",
+      "role": "dataset",
+      "review": [
+        "bat-dang-thuc"
+      ]
+    },
+    {
+      "total_pages": 5,
+      "ocr_pages": 0,
+      "empty_pages": [],
+      "size": 527941,
+      "mtime_ns": 1792286329330849100,
+      "source": "Nguon_Tai_Lieu/dataset/ung-dung-dinh-ly-viete-trong-phuong-trinh-bac-ba-nguyen-thanh-hai.pdf",
+      "sha256": "10fa1d72b4ae590bd56ba7c7fabbfd5e7d078a19c59e6393bd25d74d9898dace",
+      "role": "dataset",
+      "review": [
+        "bac-ba"
+      ]
+    },
+    {
+      "total_pages": 106,
+      "ocr_pages": 106,
+      "empty_pages": [],
+      "size": 13608338,
+      "mtime_ns": 1783079077944393700,
+      "source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sha256": "dba1641d06b712fdb9c197da1d2a2719a48aae59285947eae01826f4d88abfce",
+      "role": "sgk",
+      "review": []
+    },
+    {
+      "total_pages": 102,
+      "ocr_pages": 102,
+      "empty_pages": [
+        2
+      ],
+      "size": 13211989,
+      "mtime_ns": 1784725044036719900,
+      "source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-2-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sha256": "fde62f33f3be53e430194b741b4fe477be4188dad04d466b2cd7c5c160ac4653",
+      "role": "sgk",
+      "review": []
+    }
+  ],
+  "topics": {
+    "menh_de_tap_hop": {
+      "sgk": 17,
+      "dataset": 627
+    },
+    "bpt_hai_an": {
+      "sgk": 11,
+      "dataset": 438
+    },
+    "he_thuc_luong": {
+      "sgk": 13,
+      "dataset": 338
+    },
+    "vecto": {
+      "sgk": 27,
+      "dataset": 727
+    },
+    "thong_ke": {
+      "sgk": 18,
+      "dataset": 252
+    },
+    "ham_so_bac_hai": {
+      "sgk": 15,
+      "dataset": 624
+    },
+    "tam_thuc_bac_hai": {
+      "sgk": 6,
+      "dataset": 158
+    },
+    "pt_quy_bac_hai": {
+      "sgk": 5,
+      "dataset": 35
+    },
+    "duong_thang": {
+      "sgk": 13,
+      "dataset": 316
+    },
+    "duong_tron": {
+      "sgk": 5,
+      "dataset": 363
+    },
+    "conic": {
+      "sgk": 12,
+      "dataset": 250
+    },
+    "to_hop": {
+      "sgk": 17,
+      "dataset": 61
+    },
+    "xac_suat": {
+      "sgk": 13,
+      "dataset": 173
+    }
+  },
+  "total_chunks": 4280
+}

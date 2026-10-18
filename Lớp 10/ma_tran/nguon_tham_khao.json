@@ -1,0 +1,367 @@
+{
+  "method": "Khảo sát 20 PDF/530 trang bằng trích xuất văn bản; đọc đề đầu đại diện mỗi file và các trang ma trận/đặc tả. Không coi nhiều mã đề hoặc bản biên soạn lại là những mẫu độc lập. Đã xem trực quan hai ma trận, đề và biểu điểm sườn chính; OCR trang scan. Chưa kiểm toán toàn bộ lời giải.",
+  "files": [
+    {
+      "title": "Bộ ôn SGK thống nhất (31 trang)",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/bo-de-on-tap-giua-hoc-ky-1-toan-10-nam-hoc-2026-2027-theo-sgk-thong-nhat.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 3
+      },
+      "note": "Đề đầu. Lời dẫn phần II ghi 4 nhưng thực tế có 2 câu; không đếm theo lời dẫn.",
+      "sha256": "00db173133a3bd00d983b7b74bd345348fdc39e510d865cb7ebd4506c2aa2438",
+      "total_pdf_pages": 31
+    },
+    {
+      "title": "Bộ ôn Lê Minh Kha (191 trang)",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/bo-de-on-tap-giua-ki-1-toan-10-nam-2026-2027-chuong-trinh-moi-thong-nhat-sgk.pdf",
+      "analyzed_question_pages": [
+        3,
+        4,
+        5,
+        6
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 3
+      },
+      "note": "Đề đầu lặp lại nội dung Nguyễn Trãi; lời giải từ trang PDF 66; không tính như mẫu độc lập mới.",
+      "sha256": "e50ce33a5c6aca7d2c315bffc6e9535ad82f13db54ac890464fd2ef0de0d611b",
+      "total_pdf_pages": 191
+    },
+    {
+      "title": "Bộ ôn Ngô Đức Tài",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/bo-de-on-tap-kiem-tra-dinh-ki-hoc-ki-1-mon-toan-10-ngo-duc-tai.pdf",
+      "analyzed_question_pages": [
+        8,
+        9,
+        10
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 3
+      },
+      "note": "Đề đầu giữa kỳ. Sách có cả cuối kỳ, khối cuối kỳ bắt đầu từ trang PDF 68.",
+      "sha256": "b9228f81072992f376d358bb0dd12d4ef709a66409561edbe1a1b1389c62225d",
+      "total_pdf_pages": 152
+    },
+    {
+      "title": "Đông Thái",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-hoc-ky-1-toan-10-nam-2025-2026-truong-dong-thai-an-giang.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 4,
+        "III": 0,
+        "IV": 3
+      },
+      "note": "Không có trả lời ngắn; 4 câu đúng/sai.",
+      "sha256": "a9f6f7b61a4fec8087426adc8e835d608d4056e424afca457127e7740481381c",
+      "total_pdf_pages": 6
+    },
+    {
+      "title": "Gia Bình 1",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-hoc-ky-1-toan-10-nam-2025-2026-truong-thpt-gia-binh-1-bac-ninh.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 3
+      },
+      "note": "Có vectơ trong trắc nghiệm, đúng/sai và tự luận.",
+      "sha256": "a11ddb43815036a9fe9d4f92bd4a577a7df9d5557054530df2d5babebcb0a376",
+      "total_pdf_pages": 5
+    },
+    {
+      "title": "Lục Nam",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-hoc-ky-1-toan-10-nam-2025-2026-truong-thpt-luc-nam-bac-ninh.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 3
+      },
+      "note": "Có hàm số và vectơ; tiến độ rộng hơn sườn ba mạch.",
+      "sha256": "a6faaef84ab344cf9645d45583162a7fb8b13d9608ca4456341c91d97b1f522f",
+      "total_pdf_pages": 10
+    },
+    {
+      "title": "Lý Tự Trọng",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-hoc-ky-1-toan-10-nam-2025-2026-truong-thpt-ly-tu-trong-da-nang.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 3
+      },
+      "note": "Ba mạch chính; tự luận gồm tập hợp, miền nghiệm và hình thực tế.",
+      "sha256": "6f316d451da39c42df9e7ef294652f7b4f79ef5c09a6fc1353023a5fc87f2a34",
+      "total_pdf_pages": 11
+    },
+    {
+      "title": "Ngô Gia Tự 1",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-hoc-ky-1-toan-10-nam-2025-2026-truong-thpt-ngo-gia-tu-1-dak-lak.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 3,
+        "III": 4,
+        "IV": 3
+      },
+      "note": "3 câu đúng/sai; phần tự luận 2 điểm.",
+      "sha256": "26537e801643eecbd25323823ec10fa86fa60f5a557a9bff3107a018be3077d8",
+      "total_pdf_pages": 8
+    },
+    {
+      "title": "Nguyễn Công Trứ",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-hoc-ky-1-toan-10-nam-2025-2026-truong-thpt-nguyen-cong-tru-dak-lak.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 4,
+        "III": 2,
+        "IV": 4
+      },
+      "note": "4 đúng/sai, 2 ngắn, 4 tự luận; không khớp mẫu đã chốt.",
+      "sha256": "2117006d292f966d089c9b04af0ca7dd821a8e1d44aab55cc8393db60d220cf0",
+      "total_pdf_pages": 8
+    },
+    {
+      "title": "Nguyễn Du",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-hoc-ky-1-toan-10-nam-2025-2026-truong-thpt-nguyen-du-hung-yen.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 3
+      },
+      "note": "Có vectơ nhập môn ở phần I.",
+      "sha256": "c89f3d03bb01f1e69ed3c484e0380b0426de4adec2d216cf482e572fd0927323",
+      "total_pdf_pages": 7
+    },
+    {
+      "title": "Nhữ Văn Lan",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-hoc-ky-1-toan-10-nam-2025-2026-truong-thpt-nhu-van-lan-hai-phong.pdf",
+      "analyzed_question_pages": [
+        1,
+        2
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 3
+      },
+      "note": "Ba mạch chính; trang PDF 3 là phiếu làm bài, không phải thêm một đề.",
+      "sha256": "f17d6341b52dd45947a342ee698de045ab726268632fe67b2dfa3ff266c11b30",
+      "total_pdf_pages": 12
+    },
+    {
+      "title": "Xuân Trường",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-hoc-ky-1-toan-10-nam-2025-2026-truong-thpt-xuan-truong-ninh-binh.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 4
+      },
+      "note": "Khớp cấu trúc; phần I chia 4–4–4 theo ba mạch; chọn làm sườn chính.",
+      "sha256": "c1783aa963ff8151a3c4b1bd85bcf8c27464964b5e9836b27b2922c363685b27",
+      "total_pdf_pages": 10
+    },
+    {
+      "title": "Việt Đức",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-hoc-ky-1-toan-10-nam-2026-2027-truong-thpt-viet-duc-ha-noi.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 2
+      },
+      "note": "Bản scan; chỉ mệnh đề–tập hợp và bất phương trình; không có lượng giác/tam giác.",
+      "sha256": "a19b691d25145c78af80081a3dd54ccb69482f6908143ca07d2d86397ee8ee3d",
+      "total_pdf_pages": 5
+    },
+    {
+      "title": "Chuyên Vị Thanh",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-ki-1-toan-10-nam-2025-2026-truong-thpt-chuyen-vi-thanh-can-tho.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3,
+        4
+      ],
+      "first_exam_counts": {
+        "I": 24,
+        "II": 4,
+        "III": 0,
+        "IV": 0
+      },
+      "note": "60 phút; có hàm số bậc hai; không dùng làm sườn 90 phút hiện tại.",
+      "sha256": "1c0b774443a46f6abc3144877deef04d6589ab868378bcbd315231ee380ef376",
+      "total_pdf_pages": 6
+    },
+    {
+      "title": "Duy Tân",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-ki-1-toan-10-nam-2025-2026-truong-thpt-duy-tan-quang-ngai.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 3
+      },
+      "note": "Trang đề phải OCR; có đủ ba mạch chính.",
+      "sha256": "fa8b643455115eb7c6f92e4fa6dee9f9ce290f435bf98542763fe95ab4d6a13f",
+      "total_pdf_pages": 8
+    },
+    {
+      "title": "Nguyễn Thái Bình",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-ki-1-toan-10-nam-2025-2026-truong-thpt-nguyen-thai-binh-da-nang.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 3
+      },
+      "note": "3–2–2–3 điểm; tự luận mô hình hóa và tập hợp.",
+      "sha256": "3329b804a7f9a7aa7f3e98ada08ac646b1f9fb50460daf8768e2bd6ac2a66d7b",
+      "total_pdf_pages": 10
+    },
+    {
+      "title": "Nguyễn Trãi",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-ky-1-toan-10-nam-2025-2026-truong-thpt-nguyen-trai-da-nang.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 3
+      },
+      "note": "Có ma trận/đặc tả nhưng vài mã câu trong đặc tả không khớp vị trí câu thực tế.",
+      "sha256": "be0774aff7785235c200024d2fea7e2339f01a93ffaa85821a898bace690ceb5",
+      "total_pdf_pages": 14
+    },
+    {
+      "title": "Nguyễn Văn Cừ",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-ky-1-toan-10-nam-2025-2026-truong-thpt-nguyen-van-cu-hai-phong.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 4
+      },
+      "note": "Khớp cấu trúc; tự luận 1–1–0,5–0,5 điểm; có vectơ trong phần I.",
+      "sha256": "064fc5b2a950f6762e3de8d0657577e845b98897c7a42d62cb94691ad961966f",
+      "total_pdf_pages": 10
+    },
+    {
+      "title": "Quế Sơn",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-ky-1-toan-10-nam-2025-2026-truong-thpt-que-son-da-nang.pdf",
+      "analyzed_question_pages": [
+        1,
+        2
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 2,
+        "III": 4,
+        "IV": 3
+      },
+      "note": "Có ma trận/đặc tả. Chủ đề câu ngắn trong bảng khác đề thực tế.",
+      "sha256": "bc10eede1a3ef7c9e88cc9ff360827283bc5966c6f08505aef323cd92bdb2229",
+      "total_pdf_pages": 11
+    },
+    {
+      "title": "Lê Thị Hồng Gấm",
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-on-tap-gk1-toan-10-nam-2026-2027-truong-thpt-le-thi-hong-gam-tp-hcm.pdf",
+      "analyzed_question_pages": [
+        1,
+        2,
+        3
+      ],
+      "first_exam_counts": {
+        "I": 12,
+        "II": 4,
+        "III": 4,
+        "IV": 0
+      },
+      "note": "Đề đầu có 3 phần, không có tự luận; phần III 3 điểm.",
+      "sha256": "78f48b64b559a41fef15f9490523d830711a5a5d141eb1cf7f5975d0da801b9b",
+      "total_pdf_pages": 15
+    }
+  ]
+}

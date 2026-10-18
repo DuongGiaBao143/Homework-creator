@@ -1,0 +1,556 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{vietnam}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[left=1.5cm,right=1.5cm,top=2cm,bottom=2cm,headheight=17pt]{geometry}
+\usepackage{enumitem,array,graphicx,tikz,fancyhdr,needspace}
+\usetikzlibrary{arrows.meta,calc,patterns}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\textbf{HƯỚNG TỚI THPTQG 2027}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*:},leftmargin=*,itemsep=8pt,topsep=5pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=*,itemsep=3pt,topsep=3pt}
+
+\newcommand{\bonpa}[4]{\par\smallskip\noindent
+\begin{tabular}{@{}p{0.47\linewidth}p{0.47\linewidth}@{}}
+\textbf{A.} #1 & \textbf{B.} #2\\[3pt]
+\textbf{C.} #3 & \textbf{D.} #4\end{tabular}}
+
+\newcommand{\loigiai}[1]{\par\medskip\Needspace{4\baselineskip}\noindent\textbf{#1}\par\nobreak}
+
+\begin{document}
+
+\noindent
+\begin{minipage}[t]{0.40\textwidth}
+    \centering
+    \textbf{HƯỚNG TỚI THPTQG 2027}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[4pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.58\textwidth}
+    \centering
+    \textbf{ĐỀ THI KHẢO SÁT CHẤT LƯỢNG}\\
+    \textbf{ĐỀ SỐ 16}\\
+    \textbf{Môn thi: TOÁN}\\
+    \textit{\small Thời gian làm bài: 90 phút, không kể thời gian phát đề}
+\end{minipage}
+
+\vspace{0.2cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0016}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.2cm}
+
+\section*{\large PHẦN I. CÂU TRẮC NGHIỆM NHIỀU PHƯƠNG ÁN LỰA CHỌN}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu thí sinh chỉ chọn một phương án. Mỗi câu trả lời đúng được 0,25 điểm.}
+
+\begin{enumerate}
+\item Cho hàm số $y = -x^3 + 3x^2 - 4$. Hàm số đã cho đồng biến trên khoảng nào dưới đây?
+\bonpa{$(0; 2)$.}{$(-\infty; 0)$.}{$(2; +\infty)$.}{$(-1; 3)$.}
+
+\item Cho hàm số $y = \dfrac{x^2 - 3x + 6}{x - 1}$. Giá trị cực tiểu của hàm số đã cho bằng
+\bonpa{$-5$.}{$3$.}{$-1$.}{$5$.}
+
+\item Đường tiệm cận xiên của đồ thị hàm số $y = \dfrac{2x^2 - 3x + 5}{x + 1}$ có phương trình là
+\bonpa{$y = 2x + 5$.}{$y = 2x - 3$.}{$y = 2x - 5$.}{$y = x - 5$.}
+
+\item Nghiệm của phương trình $\log_2(3x - 1) = 3$ là
+\bonpa{$x = \dfrac{7}{3}$.}{$x = \dfrac{10}{3}$.}{$x = 1$.}{$x = 3$.}
+
+\item Họ tất cả các nguyên hàm của hàm số $f(x) = 3x^2 + 2\sin x$ là
+\bonpa{$x^3 - 2\cos x + C$.}{$x^3 + 2\cos x + C$.}{$6x - 2\cos x + C$.}{$x^3 + 2\sin x + C$.}
+
+\item Cho $\displaystyle\int_1^3 f(x)\,\mathrm{d}x = 4$ và $\displaystyle\int_1^3 g(x)\,\mathrm{d}x = -2$. Khi đó $\displaystyle\int_1^3 [2f(x) - 3g(x)]\,\mathrm{d}x$ bằng
+\bonpa{$2$.}{$14$.}{$6$.}{$10$.}
+
+\item Trong không gian $Oxyz$, cho hai điểm $A(1; 2; -1)$ và $B(3; 0; 5)$. Tọa độ trung điểm $M$ của đoạn thẳng $AB$ là
+\bonpa{$(4; 2; 4)$.}{$(1; -1; 3)$.}{$(2; 1; 2)$.}{$(2; -1; 3)$.}
+
+\item Trong không gian $Oxyz$, mặt cầu $(S): x^2 + y^2 + z^2 - 2x + 4y - 6z + 5 = 0$ có bán kính bằng
+\bonpa{$9$.}{$\sqrt{5}$.}{$\sqrt{19}$.}{$3$.}
+
+\item Khảo sát thời gian tự học mỗi ngày (đơn vị: giờ) của $40$ học sinh thu được bảng số liệu ghép nhóm sau:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+Thời gian & $[0; 1)$ & $[1; 2)$ & $[2; 3)$ & $[3; 4)$\\\hline
+Số học sinh & $6$ & $14$ & $12$ & $8$\\\hline
+\end{tabular}
+\end{center}
+Thời gian tự học trung bình của mẫu số liệu ghép nhóm này bằng
+\bonpa{$2{,}05$ giờ.}{$2{,}15$ giờ.}{$1{,}95$ giờ.}{$2{,}20$ giờ.}
+
+\item Một hộp chứa $10$ quả bóng bàn gồm $6$ quả màu trắng và $4$ quả màu vàng. Lấy ngẫu nhiên lần lượt hai quả bóng (không hoàn lại). Biết rằng quả bóng lấy ra ở lần thứ nhất có màu trắng, xác suất để quả bóng lấy ra ở lần thứ hai cũng có màu trắng bằng
+\bonpa{$\dfrac{3}{5}$.}{$\dfrac{5}{9}$.}{$\dfrac{1}{3}$.}{$\dfrac{2}{9}$.}
+
+\item Trong không gian $Oxyz$, khoảng cách từ điểm $A(1; -2; 3)$ đến mặt phẳng $(P): 2x - 2y + z + 3 = 0$ bằng
+\bonpa{$3$.}{$\dfrac{10}{3}$.}{$4$.}{$2$.}
+
+\item Cho cấp số nhân $(u_n)$ có số hạng đầu $u_1 = 3$ và công bội $q = 2$. Tổng của $6$ số hạng đầu tiên $S_6$ bằng
+\bonpa{$192$.}{$93$.}{$381$.}{$189$.}
+\end{enumerate}
+
+\newpage
+\section*{\large PHẦN II. CÂU TRẮC NGHIỆM ĐÚNG SAI}
+\textit{Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai. Ở mỗi câu, thí sinh chỉ chọn chính xác 1 ý được 0,1 điểm; chỉ chọn chính xác 2 ý được 0,25 điểm; chỉ chọn chính xác 3 ý được 0,5 điểm; chọn chính xác cả 4 ý được 1,0 điểm.}
+
+\begin{enumerate}
+\item Một doanh nghiệp sản xuất một loại thiết bị gia dụng. Khi sản xuất và bán $x$ nghìn thiết bị ($0 < x \le 15$), hàm tổng chi phí được cho bởi $C(x) = x^3 - 12x^2 + 72x + 100$ (trăm triệu đồng). Giá bán mỗi nghìn thiết bị phụ thuộc vào lượng cung theo hàm giá $p(x) = 120 - 3x$ (trăm triệu đồng). Giả sử toàn bộ sản phẩm sản xuất ra đều được bán hết.
+\begin{enumerate}
+\item Hàm tổng doanh thu của doanh nghiệp là $R(x) = 120x - 3x^2$ (trăm triệu đồng).
+\item Doanh thu biên của doanh nghiệp tại mức sản lượng $x = 5$ nghìn thiết bị là $80$ trăm triệu đồng.
+\item Doanh nghiệp đạt lợi nhuận lớn nhất khi mức sản lượng bằng $8$ nghìn thiết bị.
+\item Mức lợi nhuận lớn nhất của doanh nghiệp bằng $348$ trăm triệu đồng.
+\end{enumerate}
+
+\item \begin{minipage}[t]{0.56\linewidth}
+Trong không gian $Oxyz$ (đơn vị: kilômét), một trạm điều phối không lưu đặt tại gốc tọa độ $O(0; 0; 0)$ có vùng phủ sóng radar là một khối cầu bán kính $50\text{ km}$. Một chiếc máy bay di chuyển thẳng đều với vận tốc $480\text{ km/h}$, quỹ đạo là đường thẳng $d$ đi qua điểm $A(20; 10; 20)$ và có vectơ chỉ phương $\vec{u} = (2; -2; -1)$.
+\begin{enumerate}
+\item Mặt cầu giới hạn vùng phủ sóng radar của trạm có phương trình $x^2 + y^2 + z^2 = 2500$.
+\item Khoảng cách ngắn nhất từ trạm radar $O$ đến đường bay của máy bay bằng $30\text{ km}$.
+\item Điểm $B(26; 4; 17)$ không thuộc đường bay của máy bay.
+\item Thời gian máy bay di chuyển trong vùng phủ sóng của trạm radar là $12$ phút.
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.41\linewidth}
+\vspace{-0.3\baselineskip}
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round, font=\large]
+\fill[teal!8] (0,0) circle (2.8);
+\draw[teal!70!black, thick] (0,0) circle (2.8);
+\draw[->, blue!65!black, very thick] (-3.8,1.68) -- (3.8,1.68) node[right, black] {$d$};
+\draw[dashed, thick] (0,0) -- (0,1.68) node[midway, right] {$30$};
+\draw[thick] (0,1.45) -- (0.23,1.45) -- (0.23,1.68);
+\draw[dashed, thick] (0,0) -- (2.236,1.68);
+\node[above] at (1.1,0.9) {$50$};
+\fill (0,0) circle (2.5pt) node[below left] {$O$};
+\fill (0,1.68) circle (2.5pt) node[above left] {$H$};
+\fill (-2.236,1.68) circle (2pt) node[above left] {$M_1$};
+\fill (2.236,1.68) circle (2pt) node[above right] {$M_2$};
+\node at (0,-2.3) {\small Vùng phủ sóng radar};
+\end{tikzpicture}%
+}
+\end{minipage}
+
+\item Một bệnh viện thực hiện xét nghiệm tầm soát một loại bệnh cho nhóm người đến khám. Theo thống kê dịch tễ, tỉ lệ người thực sự mắc bệnh này trong nhóm người đến khám là $4\%$. Kỹ thuật xét nghiệm có độ chính xác như sau:
+\begin{itemize}[leftmargin=*,itemsep=2pt,topsep=2pt]
+\item Đối với người mắc bệnh, xác suất xét nghiệm cho kết quả dương tính là $95\%$.
+\item Đối với người không mắc bệnh, xác suất xét nghiệm cho kết quả dương tính giả là $5\%$.
+\end{itemize}
+Chọn ngẫu nhiên một người trong nhóm đến khám để làm xét nghiệm.
+\begin{enumerate}
+\item Xác suất để người được chọn có kết quả xét nghiệm dương tính là $0{,}086$.
+\item Xác suất để người được chọn không mắc bệnh và có kết quả xét nghiệm âm tính là $0{,}912$.
+\item Biết người được chọn có kết quả xét nghiệm âm tính, xác suất người đó thực sự mắc bệnh lớn hơn $0{,}01$.
+\item Trong số những người có kết quả xét nghiệm dương tính, tỉ lệ người thực sự mắc bệnh nhỏ hơn $50\%$.
+\end{enumerate}
+
+\item \begin{minipage}[t]{0.56\linewidth}
+Một khuôn viên hình chữ nhật $ABCD$ có chiều dài $AB = 6\text{ m}$ và chiều rộng $AD = 4\text{ m}$. Người ta thiết kế một bồn hoa được giới hạn bởi một đường cong parabol có đỉnh là trung điểm của cạnh $CD$ và đi qua hai điểm $A, B$. Phần đất giới hạn bởi parabol và đoạn thẳng $AB$ là phần đất trồng hoa (phần gạch chéo), phần còn lại của hình chữ nhật được lát gạch men (phần để trắng).
+\begin{enumerate}
+\item Trong hệ trục tọa độ $Oxy$ với gốc $O$ là trung điểm của $AB$, parabol có phương trình $y = -\dfrac{4}{9}x^2 + 4$.
+\item Diện tích phần đất dùng để trồng hoa bằng $18\text{ m}^2$.
+\item Tỉ số giữa diện tích phần đất trồng hoa và diện tích phần lát gạch bằng $2$.
+\item Chi phí trồng hoa là $150\,000$ đồng/m$^2$ và chi phí lát gạch là $250\,000$ đồng/m$^2$. Tổng chi phí hoàn thiện toàn bộ mảnh đất là $4{,}4$ triệu đồng.
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.41\linewidth}
+\vspace{-0.3\baselineskip}
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[>=Stealth, line cap=round, line join=round, font=\large]
+\draw[thick] (-3,0) rectangle (3,4);
+\draw[pattern=north east lines, pattern color=teal!70!black] (-3,0) parabola bend (0,4) (3,0) -- cycle;
+\draw[thick, blue!65!black] (-3,0) parabola bend (0,4) (3,0);
+\draw[->] (-3.6,0) -- (3.8,0) node[right] {$x$};
+\draw[->] (0,-0.5) -- (0,4.6) node[above] {$y$};
+\fill (-3,0) circle (2pt) node[below left] {$A$};
+\fill (3,0) circle (2pt) node[below right] {$B$};
+\fill (3,4) circle (2pt) node[above right] {$C$};
+\fill (-3,4) circle (2pt) node[above left] {$D$};
+\fill (0,4) circle (2pt) node[above left] {$I$};
+\fill (0,0) circle (2pt) node[below left] {$O$};
+\draw[<->] (-3,-0.6) -- (3,-0.6) node[midway, fill=white] {$6\,\mathrm{m}$};
+\draw[<->] (3.4,0) -- (3.4,4) node[midway, fill=white, right] {$4\,\mathrm{m}$};
+\end{tikzpicture}%
+}
+\end{minipage}
+\end{enumerate}
+
+\Needspace{8\baselineskip}
+\section*{\large PHẦN III. CÂU TRẮC NGHIỆM TRẢ LỜI NGẮN}
+\textit{Thí sinh trả lời từ câu 1 đến câu 6. Mỗi câu trả lời đúng được 0,5 điểm. Chỉ làm tròn ở kết quả cuối cùng.}
+
+\begin{enumerate}
+\item Điểm kiểm tra học kỳ môn Toán của $50$ học sinh được thống kê theo các nhóm điểm trong bảng sau, trong đó $x$ và $y$ là hai tần số chưa biết:
+\begin{center}
+\resizebox{0.95\linewidth}{!}{%
+\begin{tabular}{|l|c|c|c|c|c|c|}\hline
+Khoảng điểm & $[4; 5)$ & $[5; 6)$ & $[6; 7)$ & $[7; 8)$ & $[8; 9)$ & $[9; 10)$\\\hline
+Số học sinh & $6$ & $12$ & $x$ & $y$ & $8$ & $4$\\\hline
+\end{tabular}%
+}
+\end{center}
+Biết điểm trung bình của mẫu số liệu ghép nhóm bằng $6{,}82$. Tứ phân vị thứ ba $Q_3$ của mẫu số liệu ghép nhóm bằng bao nhiêu? \textit{(Làm tròn kết quả đến hàng phần trăm.)}
+
+\item \begin{minipage}[t]{0.70\linewidth}
+Trong loạt sút luân lưu 11m của một trận chung kết bóng đá, một cầu thủ thực hiện các lượt sút phạt đền. Theo thống kê, xác suất anh thực hiện thành công quả phạt đền đầu tiên là $0{,}85$. Ở các quả tiếp theo, nếu quả sút ngay trước đó thành công thì xác suất sút thành công là $0{,}90$; nếu quả sút ngay trước đó thất bại thì xác suất sút thành công chỉ là $0{,}70$. Xác suất để cầu thủ này sút thành công ít nhất $2$ quả trong $3$ quả phạt đền đầu tiên bằng bao nhiêu? \textit{(Làm tròn kết quả đến hàng phần trăm.)}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.28\linewidth}
+\vspace{-0.3\baselineskip}
+\centering
+\includegraphics[width=\linewidth, height=3.6cm, keepaspectratio]{cr7_c1_trophy.png}
+\end{minipage}
+
+\item Người ta cần làm một bồn chứa nước bằng inox dạng hình hộp chữ nhật không có nắp với thể tích $V = 16\text{ m}^3$. Đáy bồn là hình chữ nhật có chiều dài gấp đôi chiều rộng. Giá vật liệu làm đáy là $300\,000$ đồng/m$^2$ và giá vật liệu làm các mặt xung quanh là $200\,000$ đồng/m$^2$. Chi phí nhỏ nhất để mua vật liệu làm bồn chứa nước đó bằng bao nhiêu triệu đồng? \textit{(Làm tròn kết quả đến hàng phần mười.)}
+
+\item Một khối đá điêu khắc nghệ thuật có chiều cao $3\text{ m}$ đặt trên mặt phẳng nằm ngang. Khi cắt khối đá bởi mặt phẳng nằm ngang cách mặt đất một khoảng $h\text{ m}$ ($0 \le h \le 3$), thiết diện thu được là một hình vuông có độ dài cạnh bằng $\sqrt{9 - h^2}\text{ m}$. Thể tích của khối đá điêu khắc đó bằng bao nhiêu mét khối?
+
+\item \begin{minipage}[t]{0.65\linewidth}
+Một kỹ sư thiết kế mô hình trang trí cho sân khấu ngoài trời có dạng hình lập phương $ABCD.A_1B_1C_1D_1$ với độ dài mỗi cạnh bằng $6\text{ m}$. Người kỹ sư muốn gắn một dàn đèn led thẳng nối từ một điểm $M$ trên đoạn thẳng $AD_1$ xuống một điểm $N$ trên đoạn thẳng $BD$ thỏa mãn điều kiện $AM = DN$. Chiều dài ngắn nhất của dàn đèn led nối giữa $M$ và $N$ bằng bao nhiêu mét? \textit{(Làm tròn kết quả đến hàng phần trăm.)}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.32\linewidth}
+\vspace{-0.3\baselineskip}
+\centering
+\resizebox{\linewidth}{!}{%
+\begin{tikzpicture}[line join=round, line cap=round, >=Stealth, font=\normalsize, scale=0.75]
+\coordinate (A) at (0,0);
+\coordinate (B) at (3.2,0);
+\coordinate (D) at (1.1,1.1);
+\coordinate (C) at ($(B)+(D)-(A)$);
+\coordinate (A1) at (0,3.2);
+\coordinate (B1) at ($(B)+(A1)-(A)$);
+\coordinate (D1) at ($(D)+(A1)-(A)$);
+\coordinate (C1) at ($(C)+(A1)-(A)$);
+
+\draw[thick] (A)--(B)--(C)--(C1)--(D1)--(A1)--cycle;
+\draw[thick] (B)--(B1)--(C1);
+\draw[thick] (A1)--(B1);
+\draw[dashed, thick] (A)--(D)--(C);
+\draw[dashed, thick] (D)--(D1);
+
+\draw[thick, teal!80!black] (A)--(D1);
+\draw[thick, teal!80!black] (B)--(D);
+
+\coordinate (M) at ($(A)!0.33!(D1)$);
+\coordinate (N) at ($(D)!0.33!(B)$);
+\draw[very thick, red!80!black] (M)--(N);
+
+\fill (A) circle (1.8pt) node[below left] {$A$};
+\fill (B) circle (1.8pt) node[below right] {$B$};
+\fill (C) circle (1.8pt) node[right] {$C$};
+\fill (D) circle (1.8pt) node[above left] {$D$};
+\fill (A1) circle (1.8pt) node[above left] {$A_1$};
+\fill (B1) circle (1.8pt) node[above right] {$B_1$};
+\fill (C1) circle (1.8pt) node[above right] {$C_1$};
+\fill (D1) circle (1.8pt) node[above left] {$D_1$};
+\fill (M) circle (2.2pt) node[left] {$M$};
+\fill (N) circle (2.2pt) node[above right] {$N$};
+\end{tikzpicture}%
+}
+\end{minipage}
+
+\item Một nhóm bạn trẻ tổ chức dã ngoại đã dựng một chiếc lều có dạng hình chóp lục giác đều $S.ABCDEF$ với đáy là lục giác đều $ABCDEF$. Vào buổi tối, nhóm bạn muốn trang trí lều bằng một sợi dây đèn led quấn vòng quanh bề mặt các mặt bên của lều, bắt đầu từ đỉnh $A$ của đáy, quấn quanh lều qua tất cả các cạnh bên và kết thúc tại trung điểm $M$ của cạnh bên $SA$. Biết rằng tất cả các cạnh bên của lều đều dài $2\text{ m}$ và góc ở đỉnh của mỗi mặt bên là $\widehat{ASB} = \widehat{BSC} = \dots = 20^\circ$. Chiều dài ngắn nhất của sợi dây đèn led bằng bao nhiêu mét? \textit{(Làm tròn kết quả đến hàng phần mười.)}
+\end{enumerate}
+
+\begin{center}
+\textbf{---------- HẾT ----------}
+\end{center}
+
+\newpage
+\section*{\large BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\subsection*{PHẦN I}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} \\
+\hline
+A & B & C & D & A & B & C & D & A & B & C & D \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{PHẦN II}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu} & \textbf{Lệnh hỏi a)} & \textbf{Lệnh hỏi b)} & \textbf{Lệnh hỏi c)} & \textbf{Lệnh hỏi d)} \\
+\hline
+\textbf{1} & Đ & S & Đ & Đ \\
+\hline
+\textbf{2} & Đ & Đ & S & S \\
+\hline
+\textbf{3} & Đ & Đ & S & Đ \\
+\hline
+\textbf{4} & Đ & S & Đ & Đ \\
+\hline
+\end{tabular}
+\end{center}
+
+\subsection*{PHẦN III}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} & \textbf{Câu 5} & \textbf{Câu 6} \\
+\hline
+$7{,}96$ & $0{,}92$ & $7{,}2$ & $18$ & $3{,}46$ & $2{,}6$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+\section*{\large HƯỚNG DẪN GIẢI CHI TIẾT}
+
+\subsection*{PHẦN I}
+
+\loigiai{Câu 1.}
+Ta có đạo hàm $y' = -3x^2 + 6x = -3x(x - 2)$.\\
+Xét dấu $y'$: $y' > 0 \iff 0 < x < 2$. Do đó hàm số đồng biến trên khoảng $(0; 2)$.\\
+\textbf{Chọn A.}
+
+\loigiai{Câu 2.}
+Hàm số $y = \dfrac{x^2 - 3x + 6}{x - 1} = x - 2 + \dfrac{4}{x - 1}$.\\
+Tập xác định $D = \mathbb{R} \setminus \{1\}$. Đạo hàm $y' = 1 - \dfrac{4}{(x - 1)^2} = \dfrac{(x - 1)^2 - 4}{(x - 1)^2} = \dfrac{x^2 - 2x - 3}{(x - 1)^2}$.\\
+Cho $y' = 0 \iff x = -1$ hoặc $x = 3$.\\
+Bảng biến thiên cho thấy trên khoảng $(1; +\infty)$, hàm số đạt cực tiểu tại $x = 3$. Giá trị cực tiểu là $y(3) = \dfrac{3^2 - 3(3) + 6}{3 - 1} = 3$.\\
+\textbf{Chọn B.}
+
+\loigiai{Câu 3.}
+Chia đa thức: $2x^2 - 3x + 5 = (2x - 5)(x + 1) + 10 \implies y = 2x - 5 + \dfrac{10}{x + 1}$.\\
+Vì $\lim_{x \to \pm\infty} [y - (2x - 5)] = \lim_{x \to \pm\infty} \dfrac{10}{x + 1} = 0$, nên đường tiệm cận xiên của đồ thị là $y = 2x - 5$.\\
+\textbf{Chọn C.}
+
+\loigiai{Câu 4.}
+Điều kiện $3x - 1 > 0 \iff x > \dfrac{1}{3}$.\\
+Phương trình tương đương với $3x - 1 = 2^3 = 8 \iff 3x = 9 \iff x = 3$ (thỏa mãn điều kiện).\\
+\textbf{Chọn D.}
+
+\loigiai{Câu 5.}
+Sử dụng bảng nguyên hàm cơ bản:
+$$\int (3x^2 + 2\sin x)\,\mathrm{d}x = 3 \cdot \dfrac{x^3}{3} + 2(-\cos x) + C = x^3 - 2\cos x + C.$$
+\textbf{Chọn A.}
+
+\loigiai{Câu 6.}
+Theo tính chất tuyến tính của tích phân:
+$$\int_1^3 [2f(x) - 3g(x)]\,\mathrm{d}x = 2\int_1^3 f(x)\,\mathrm{d}x - 3\int_1^3 g(x)\,\mathrm{d}x = 2(4) - 3(-2) = 8 + 6 = 14.$$
+\textbf{Chọn B.}
+
+\loigiai{Câu 7.}
+Tọa độ trung điểm $M$ của đoạn thẳng $AB$ là:
+$$x_M = \dfrac{1 + 3}{2} = 2;\quad y_M = \dfrac{2 + 0}{2} = 1;\quad z_M = \dfrac{-1 + 5}{2} = 2 \implies M(2; 1; 2).$$
+\textbf{Chọn C.}
+
+\loigiai{Câu 8.}
+Phương trình mặt cầu có dạng $x^2 + y^2 + z^2 - 2ax - 2by - 2cz + d = 0$ với $a = 1, b = -2, c = 3, d = 5$.\\
+Bán kính mặt cầu: $R = \sqrt{a^2 + b^2 + c^2 - d} = \sqrt{1^2 + (-2)^2 + 3^2 - 5} = \sqrt{1 + 4 + 9 - 5} = \sqrt{9} = 3$.\\
+\textbf{Chọn D.}
+
+\loigiai{Câu 9.}
+Giá trị đại diện của các nhóm:
+$c_1 = 0{,}5$; $c_2 = 1{,}5$; $c_3 = 2{,}5$; $c_4 = 3{,}5$.\\
+Thời gian tự học trung bình:
+$$\bar{x} = \dfrac{6(0{,}5) + 14(1{,}5) + 12(2{,}5) + 8(3{,}5)}{40} = \dfrac{3 + 21 + 30 + 28}{40} = \dfrac{82}{40} = 2{,}05\text{ giờ}.$$
+\textbf{Chọn A.}
+
+\loigiai{Câu 10.}
+Ban đầu trong hộp có $6$ quả trắng và $4$ quả vàng ($10$ quả).\\
+Sau khi quả thứ nhất được lấy ra là quả màu trắng, trong hộp còn lại $9$ quả bóng, trong đó có $5$ quả màu trắng và $4$ quả màu vàng.\\
+Xác suất để quả thứ hai cũng có màu trắng là $\dfrac{5}{9}$.\\
+\textbf{Chọn B.}
+
+\loigiai{Câu 11.}
+Khoảng cách từ điểm $A(1; -2; 3)$ đến mặt phẳng $(P): 2x - 2y + z + 3 = 0$:
+$$d(A, (P)) = \dfrac{|2(1) - 2(-2) + 3 + 3|}{\sqrt{2^2 + (-2)^2 + 1^2}} = \dfrac{|2 + 4 + 3 + 3|}{\sqrt{9}} = \dfrac{12}{3} = 4.$$
+\textbf{Chọn C.}
+
+\loigiai{Câu 12.}
+Tổng của $6$ số hạng đầu tiên của cấp số nhân:
+$$S_6 = u_1 \cdot \dfrac{q^6 - 1}{q - 1} = 3 \cdot \dfrac{2^6 - 1}{2 - 1} = 3 \cdot (64 - 1) = 3 \cdot 63 = 189.$$
+\textbf{Chọn D.}
+
+\subsection*{PHẦN II}
+
+\loigiai{Câu 1.}
+a) Doanh thu khi bán $x$ nghìn thiết bị với giá $p(x) = 120 - 3x$ là:
+$$R(x) = x \cdot p(x) = x(120 - 3x) = 120x - 3x^2\text{ (trăm triệu đồng)}.$$
+Khẳng định a) \textbf{ĐÚNG}.\\
+b) Doanh thu biên: $R'(x) = 120 - 6x$.\\
+Tại $x = 5$, doanh thu biên là $R'(5) = 120 - 6(5) = 90$ trăm triệu đồng $\ne 80$.\\
+Khẳng định b) \textbf{SAI}.\\
+c) Hàm lợi nhuận của doanh nghiệp:
+$$P(x) = R(x) - C(x) = (120x - 3x^2) - (x^3 - 12x^2 + 72x + 100) = -x^3 + 9x^2 + 48x - 100.$$
+Đạo hàm: $P'(x) = -3x^2 + 18x + 48 = -3(x^2 - 6x - 16) = -3(x - 8)(x + 2)$.\\
+Trên khoảng $(0; 15]$, $P'(x) = 0 \iff x = 8$.\\
+Với $0 < x < 8$, $P'(x) > 0$; với $8 < x \le 15$, $P'(x) < 0$. Do đó hàm số đạt cực đại và là giá trị lớn nhất tại $x = 8$ nghìn thiết bị.\\
+Khẳng định c) \textbf{ĐÚNG}.\\
+d) Mức lợi nhuận lớn nhất bằng:
+$$P(8) = -(8^3) + 9(8^2) + 48(8) - 100 = -512 + 576 + 384 - 100 = 348\text{ (trăm triệu đồng)}.$$
+Khẳng định d) \textbf{ĐÚNG}.
+
+\loigiai{Câu 2.}
+a) Trạm radar đặt tại gốc $O(0; 0; 0)$ với bán kính $R = 50\text{ km}$, mặt cầu biên giới hạn vùng phủ sóng có phương trình:
+$$(x - 0)^2 + (y - 0)^2 + (z - 0)^2 = 50^2 \iff x^2 + y^2 + z^2 = 2500.$$
+Khẳng định a) \textbf{ĐÚNG}.\\
+b) Đường thẳng $d$ đi qua $A(20; 10; 20)$ và có $\vec{u} = (2; -2; -1)$.\\
+Ta có $\vec{OA} = (20; 10; 20)$. Tích vô hướng $\vec{OA} \cdot \vec{u} = 20(2) + 10(-2) + 20(-1) = 40 - 20 - 20 = 0$.\\
+Suy ra $OA \perp \vec{u}$, nghĩa là $A$ chính là hình chiếu vuông góc $H$ của $O$ lên $d$.\\
+Do đó khoảng cách ngắn nhất từ $O$ đến đường bay là:
+$$d(O, d) = OA = \sqrt{20^2 + 10^2 + 20^2} = \sqrt{400 + 100 + 400} = \sqrt{900} = 30\text{ km}.$$
+Khẳng định b) \textbf{ĐÚNG}.\\
+c) Phương trình tham số của $d$: $\begin{cases} x = 20 + 2t \\ y = 10 - 2t \\ z = 20 - t \end{cases}$.\\
+Thay tọa độ điểm $B(26; 4; 17)$ vào: $\begin{cases} 20 + 2t = 26 \implies t = 3 \\ 10 - 2(3) = 4 \\ 20 - 3 = 17 \end{cases}$ (thỏa mãn).\\
+Do đó $B \in d$, khẳng định $B$ không thuộc đường bay là \textbf{SAI}.\\
+d) Đoạn đường bay nằm trong vùng phủ sóng radar tương ứng với dây cung $M_1 M_2$ của mặt cầu.\\
+Độ dài dây cung: $L = 2\sqrt{R^2 - d^2} = 2\sqrt{50^2 - 30^2} = 2 \cdot 40 = 80\text{ km}$.\\
+Thời gian máy bay bay trong vùng phủ sóng radar:
+$$\Delta t = \dfrac{L}{v} = \dfrac{80}{480}\text{ giờ} = \dfrac{1}{6}\text{ giờ} = 10\text{ phút} \ne 12\text{ phút}.$$
+Khẳng định d) \textbf{SAI}.
+
+\loigiai{Câu 3.}
+Gọi $B$ là biến cố "Người được chọn thực sự mắc bệnh", $T$ là biến cố "Kết quả xét nghiệm dương tính".\\
+Theo giả thiết: $P(B) = 0{,}04 \implies P(\bar{B}) = 0{,}96$; $P(T|B) = 0{,}95$; $P(T|\bar{B}) = 0{,}05$.\\
+a) Theo công thức xác suất toàn phần:
+$$P(T) = P(B)P(T|B) + P(\bar{B})P(T|\bar{B}) = 0{,}04 \times 0{,}95 + 0{,}96 \times 0{,}05 = 0{,}038 + 0{,}048 = 0{,}086.$$
+Khẳng định a) \textbf{ĐÚNG}.\\
+b) Xác suất người đó không mắc bệnh và có kết quả âm tính:
+$$P(\bar{B} \cap \bar{T}) = P(\bar{B})P(\bar{T}|\bar{B}) = 0{,}96 \times (1 - 0{,}05) = 0{,}96 \times 0{,}95 = 0{,}912.$$
+Khẳng định b) \textbf{ĐÚNG}.\\
+c) Xác suất người đó thực sự mắc bệnh khi biết kết quả âm tính:
+$$P(B|\bar{T}) = \dfrac{P(B \cap \bar{T})}{P(\bar{T})} = \dfrac{P(B)P(\bar{T}|B)}{1 - P(T)} = \dfrac{0{,}04 \times (1 - 0{,}95)}{1 - 0{,}086} = \dfrac{0{,}04 \times 0{,}05}{0{,}914} = \dfrac{0{,}002}{0{,}914} \approx 0{,}00219.$$
+Vì $0{,}00219 < 0{,}01$, nên khẳng định c) \textbf{SAI}.\\
+d) Xác suất người đó thực sự mắc bệnh khi biết kết quả dương tính:
+$$P(B|T) = \dfrac{P(B \cap T)}{P(T)} = \dfrac{0{,}038}{0{,}086} = \dfrac{38}{86} = \dfrac{19}{43} \approx 0{,}4419 = 44{,}19\% < 50\%.$$
+Khẳng định d) \textbf{ĐÚNG}.
+
+\loigiai{Câu 4.}
+a) Chọn hệ trục $Oxy$ với $O$ là trung điểm $AB$, ta có $A(-3; 0), B(3; 0)$, đỉnh $I(0; 4)$.\\
+Parabol có dạng $y = ax^2 + 4$. Đi qua $B(3; 0) \implies 0 = a(3^2) + 4 \implies a = -\dfrac{4}{9}$.\\
+Vậy parabol có phương trình $y = -\dfrac{4}{9}x^2 + 4$.\\
+Khẳng định a) \textbf{ĐÚNG}.\\
+b) Diện tích phần đất trồng hoa (phần gạch chéo) là:
+$$S_1 = \int_{-3}^3 \left(-\dfrac{4}{9}x^2 + 4\right)\,\mathrm{d}x = 2 \left[-\dfrac{4}{27}x^3 + 4x\right]_0^3 = 2(-4 + 12) = 16\text{ m}^2 \ne 18\text{ m}^2.$$
+Khẳng định b) \textbf{SAI}.\\
+c) Diện tích toàn bộ mảnh đất chữ nhật: $S_{ABCD} = 6 \times 4 = 24\text{ m}^2$.\\
+Diện tích phần lát gạch men (phần để trắng): $S_2 = 24 - 16 = 8\text{ m}^2$.\\
+Tỉ số giữa diện tích trồng hoa và lát gạch là $\dfrac{S_1}{S_2} = \dfrac{16}{8} = 2$.\\
+Khẳng định c) \textbf{ĐÚNG}.\\
+d) Tổng chi phí hoàn thiện mảnh đất:
+$$T = 16 \times 150\,000 + 8 \times 250\,000 = 2\,400\,000 + 2\,000\,000 = 4\,400\,000\text{ đồng} = 4{,}4\text{ triệu đồng}.$$
+Khẳng định d) \textbf{ĐÚNG}.
+
+\subsection*{PHẦN III}
+
+\loigiai{Câu 1.}
+Tổng số học sinh $n = 50 \implies 6 + 12 + x + y + 8 + 4 = 50 \iff x + y = 20$.\\
+Các giá trị đại diện của từng nhóm là $4{,}5; 5{,}5; 6{,}5; 7{,}5; 8{,}5; 9{,}5$.\\
+Điểm trung bình của mẫu số liệu ghép nhóm:
+$$\bar{x} = \dfrac{6(4{,}5) + 12(5{,}5) + 6{,}5x + 7{,}5y + 8(8{,}5) + 4(9{,}5)}{50} = \dfrac{199 + 6{,}5x + 7{,}5y}{50} = 6{,}82.$$
+Suy ra $199 + 6{,}5x + 7{,}5y = 341 \iff 6{,}5x + 7{,}5y = 142$.\\
+Giải hệ phương trình:
+$$\begin{cases} x + y = 20 \\ 6{,}5x + 7{,}5y = 142 \end{cases} \iff \begin{cases} x = 8 \\ y = 12. \end{cases}$$
+Xác định tứ phân vị thứ ba $Q_3$:\\
+Vị trí của $Q_3$ là $\dfrac{3n}{4} = \dfrac{3 \times 50}{4} = 37{,}5$.\\
+Tần số tích lũy của các nhóm:\\
+Nhóm 1: $cf_1 = 6$.\\
+Nhóm 2: $cf_2 = 6 + 12 = 18$.\\
+Nhóm 3: $cf_3 = 18 + 8 = 26$.\\
+Nhóm 4: $cf_4 = 26 + 12 = 38$.\\
+Do $26 < 37{,}5 \le 38$, nên nhóm chứa $Q_3$ là nhóm 4: $[7; 8)$.\\
+Áp dụng công thức tính tứ phân vị:
+$$Q_3 = 7 + \dfrac{37{,}5 - 26}{12} \cdot (8 - 7) = 7 + \dfrac{11{,}5}{12} = 7 + \dfrac{23}{24} \approx 7{,}9583... \approx 7{,}96.$$
+\textbf{Đáp số: $7{,}96$.}
+
+\loigiai{Câu 2.}
+Ký hiệu $S_i$ là biến cố sút thành công ở quả thứ $i$, $F_i$ là biến cố sút thất bại ở quả thứ $i$ ($i \in \{1, 2, 3\}$).\\
+Cầu thủ sút thành công ít nhất $2$ quả trong $3$ quả tương ứng với $4$ biến cố xung khắc sau:
+\begin{enumerate}[label=--]
+\item Cả $3$ quả đều thành công $(S_1 S_2 S_3)$:
+$$P(S_1 S_2 S_3) = P(S_1) \cdot P(S_2|S_1) \cdot P(S_3|S_2) = 0{,}85 \times 0{,}90 \times 0{,}90 = 0{,}6885.$$
+\item Đúng $2$ quả đầu thành công $(S_1 S_2 F_3)$:
+$$P(S_1 S_2 F_3) = P(S_1) \cdot P(S_2|S_1) \cdot P(F_3|S_2) = 0{,}85 \times 0{,}90 \times (1 - 0{,}90) = 0{,}85 \times 0{,}90 \times 0{,}10 = 0{,}0765.$$
+\item Quả $1$ và quả $3$ thành công $(S_1 F_2 S_3)$:
+$$P(S_1 F_2 S_3) = P(S_1) \cdot P(F_2|S_1) \cdot P(S_3|F_2) = 0{,}85 \times (1 - 0{,}90) \times 0{,}70 = 0{,}85 \times 0{,}10 \times 0{,}70 = 0{,}0595.$$
+\item Quả $2$ và quả $3$ thành công $(F_1 S_2 S_3)$:
+$$P(F_1 S_2 S_3) = P(F_1) \cdot P(S_2|F_1) \cdot P(S_3|S_2) = (1 - 0{,}85) \times 0{,}70 \times 0{,}90 = 0{,}15 \times 0{,}70 \times 0{,}90 = 0{,}0945.$$
+\end{enumerate}
+Xác suất để cầu thủ sút thành công ít nhất $2$ quả trong $3$ quả phạt đền đầu tiên là:
+$$P = 0{,}6885 + 0{,}0765 + 0{,}0595 + 0{,}0945 = 0{,}9190 \approx 0{,}92.$$
+\textbf{Đáp số: $0{,}92$.}
+
+\loigiai{Câu 3.}
+Gọi chiều rộng đáy là $x\text{ (m)}$ ($x > 0$), khi đó chiều dài đáy là $2x\text{ (m)}$.\\
+Gọi $h\text{ (m)}$ là chiều cao của bồn nước. Thể tích bồn là:
+$$V = x \cdot (2x) \cdot h = 2x^2 h = 16 \implies h = \dfrac{8}{x^2}.$$
+Diện tích đáy bồn: $S_{\text{đáy}} = x \cdot 2x = 2x^2\text{ (m}^2)$.\\
+Diện tích $4$ mặt xung quanh: $S_{\text{xq}} = 2(x + 2x)h = 6xh = 6x \cdot \dfrac{8}{x^2} = \dfrac{48}{x}\text{ (m}^2)$.\\
+Tổng chi phí làm bồn nước (đơn vị: nghìn đồng):
+$$C(x) = 300 \cdot (2x^2) + 200 \cdot \dfrac{48}{x} = 600x^2 + \dfrac{9600}{x}.$$
+Xét hàm số $C(x)$ trên $(0; +\infty)$:
+$$C'(x) = 1200x - \dfrac{9600}{x^2} = \dfrac{1200(x^3 - 8)}{x^2}.$$
+Cho $C'(x) = 0 \iff x^3 = 8 \iff x = 2\text{ (m)}$.\\
+Bảng biến thiên cho thấy $C(x)$ đạt giá trị nhỏ nhất tại $x = 2$.\\
+Chi phí nhỏ nhất:
+$$C(2) = 600(2^2) + \dfrac{9600}{2} = 2400 + 4800 = 7200\text{ nghìn đồng} = 7{,}2\text{ triệu đồng}.$$
+\textbf{Đáp số: $7{,}2$.}
+
+\loigiai{Câu 4.}
+Mặt phẳng nằm ngang cắt khối đá ở độ cao $h$ ($0 \le h \le 3$) tạo ra thiết diện là hình vuông cạnh $a = \sqrt{9 - h^2}\text{ m}$.\\
+Diện tích thiết diện tại độ cao $h$ là:
+$$S(h) = a^2 = \left(\sqrt{9 - h^2}\right)^2 = 9 - h^2\text{ (m}^2).$$
+Thể tích của khối đá điêu khắc:
+$$V = \int_0^3 S(h)\,\mathrm{d}h = \int_0^3 (9 - h^2)\,\mathrm{d}h = \left[9h - \dfrac{h^3}{3}\right]_0^3 = \left(9 \cdot 3 - \dfrac{3^3}{3}\right) - 0 = 27 - 9 = 18\text{ m}^3.$$
+\textbf{Đáp số: $18$.}
+
+\loigiai{Câu 5.}
+Chọn hệ trục toạ độ $Oxyz$ sao cho gốc $A(0; 0; 0)$, tia $Ax$ trùng tia $AB$, tia $Ay$ trùng tia $AD$, tia $Az$ trùng tia $AA_1$.\\
+Độ dài cạnh lập phương $a = 6\text{ m}$. Tọa độ các điểm liên quan:
+$$A(0; 0; 0),\quad D_1(0; 6; 6),\quad B(6; 0; 0),\quad D(0; 6; 0).$$
+Ta có $\vec{AD_1} = (0; 6; 6)$ và $AD_1 = \sqrt{0^2 + 6^2 + 6^2} = 6\sqrt{2}\text{ m}$.\\
+$\vec{DB} = (6; -6; 0)$ và $DB = \sqrt{6^2 + (-6)^2 + 0^2} = 6\sqrt{2}\text{ m}$.\\
+Vì $M$ thuộc đoạn $AD_1$, ta đặt $\vec{AM} = t \vec{AD_1}$ với $0 \le t \le 1$.\\
+Khi đó $AM = t \cdot AD_1 = t \cdot 6\sqrt{2}$.\\
+Theo giả thiết $DN = AM = t \cdot 6\sqrt{2}$, và vì $N$ thuộc đoạn $BD$, nên $\vec{DN} = t \vec{DB}$.\\
+Tọa độ điểm $M$ và $N$:
+$$M = (0; 6t; 6t);\quad N = D + t\vec{DB} = (0 + 6t; 6 - 6t; 0) = (6t; 6 - 6t; 0).$$
+Vectơ $\vec{MN} = (6t; 6 - 12t; -6t) = 6(t; 1 - 2t; -t)$.\\
+Độ dài bình phương $MN^2$:
+$$MN^2 = 36 \left[ t^2 + (1 - 2t)^2 + (-t)^2 \right] = 36(6t^2 - 4t + 1).$$
+Tam thức bậc hai $g(t) = 6t^2 - 4t + 1$ đạt giá trị nhỏ nhất tại đỉnh $t = \dfrac{4}{2 \times 6} = \dfrac{1}{3} \in [0; 1]$.\\
+Giá trị nhỏ nhất của $g(t)$ là $g\left(\dfrac{1}{3}\right) = 6\left(\dfrac{1}{9}\right) - 4\left(\dfrac{1}{3}\right) + 1 = \dfrac{1}{3}$.\\
+Do đó $MN_{\min}^2 = 36 \times \dfrac{1}{3} = 12 \implies MN_{\min} = \sqrt{12} = 2\sqrt{3} \approx 3{,}4641... \approx 3{,}46\text{ m}$.\\
+\textbf{Đáp số: $3{,}46$.}
+
+\loigiai{Câu 6.}
+Chiếc lều có dạng hình chóp lục giác đều $S.ABCDEF$, có $6$ mặt bên là $6$ tam giác cân bằng nhau có chung đỉnh $S$.\\
+Góc ở đỉnh của mỗi mặt bên là $\alpha = 20^\circ$. Chiều dài mỗi cạnh bên là $SA = 2\text{ m}$.\\
+Điểm $M$ là trung điểm của cạnh bên $SA$, do đó $SM = \dfrac{SA}{2} = 1\text{ m}$.\\
+Ta trải phẳng $6$ mặt bên của hình chóp liên tiếp lên một mặt phẳng thành $6$ tam giác cân chung đỉnh $S$ kề nhau: $\Delta S A_1 A_2, \Delta S A_2 A_3, \dots, \Delta S A_6 A_7$, trong đó $A_1 \equiv A$ và tia $S A_7$ ứng với cạnh bên $SA$ sau khi khép kín $1$ vòng.\\
+Góc ở đỉnh của hình quạt tạo bởi $6$ tam giác cân sau khi trải phẳng là:
+$$\widehat{A_1 S A_7} = 6 \times 20^\circ = 120^\circ.$$
+Vị trí điểm bắt đầu là $A_1$ (với $SA_1 = 2\text{ m}$), vị trí điểm kết thúc là $M$ trên đoạn $SA_7$ (với $SM = 1\text{ m}$).\\
+Độ dài ngắn nhất của sợi dây quấn quanh lều chính là khoảng cách giữa $A_1$ và $M$ trên mặt phẳng trải phẳng.\\
+Áp dụng định lý côsin trong tam giác $A_1 S M$:
+$$A_1 M^2 = SA_1^2 + SM^2 - 2 \cdot SA_1 \cdot SM \cdot \cos \widehat{A_1 S M}$$
+$$= 2^2 + 1^2 - 2 \cdot 2 \cdot 1 \cdot \cos 120^\circ = 4 + 1 - 4 \cdot \left(-\dfrac{1}{2}\right) = 5 + 2 = 7.$$
+Suy ra $A_1 M = \sqrt{7} \approx 2{,}64575... \approx 2{,}6\text{ m}$.\\
+\textbf{Đáp số: $2{,}6$.}
+
+\end{document}

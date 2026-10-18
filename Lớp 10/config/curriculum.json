@@ -1,0 +1,254 @@
+{
+  "name": "Toán 10 - Kết nối tri thức với cuộc sống",
+  "page_note": "Trang PDF đếm từ 1; trong đúng hai bản scan hiện có, trang PDF = trang in + 1. Khoảng trang kiểm theo mục lục, không phải chứng nhận từng bài tập thuộc chương trình.",
+  "books": {
+    "1": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+    "2": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-2-ket-noi-tri-thuc-voi-cuoc-song.pdf"
+  },
+  "topics": {
+    "menh_de_tap_hop": {
+      "title": "Mệnh đề và tập hợp",
+      "volume": "1",
+      "printed_pages": [
+        5,
+        21
+      ],
+      "keywords": [
+        "mệnh đề",
+        "tập hợp",
+        "biểu đồ Venn",
+        "phủ định",
+        "điều kiện cần",
+        "điều kiện đủ"
+      ]
+    },
+    "bpt_hai_an": {
+      "title": "Bất phương trình và hệ bất phương trình bậc nhất hai ẩn",
+      "volume": "1",
+      "printed_pages": [
+        22,
+        32
+      ],
+      "keywords": [
+        "hai ẩn",
+        "miền nghiệm",
+        "bất phương trình bậc nhất",
+        "hệ bpt",
+        "quy hoạch tuyến tính"
+      ]
+    },
+    "he_thuc_luong": {
+      "title": "Hệ thức lượng trong tam giác",
+      "volume": "1",
+      "printed_pages": [
+        33,
+        45
+      ],
+      "keywords": [
+        "hệ thức lượng",
+        "định lí sin",
+        "định lý sin",
+        "định lí côsin",
+        "định lý cosin",
+        "công thức Heron",
+        "giải tam giác",
+        "giá trị lượng giác"
+      ]
+    },
+    "vecto": {
+      "title": "Vectơ và tích vô hướng trong mặt phẳng",
+      "volume": "1",
+      "printed_pages": [
+        46,
+        72
+      ],
+      "keywords": [
+        "vectơ",
+        "vecto",
+        "vector",
+        "tích vô hướng",
+        "hai vect",
+        "tọa độ của vect"
+      ]
+    },
+    "thong_ke": {
+      "title": "Số gần đúng và thống kê mẫu số liệu không ghép nhóm",
+      "volume": "1",
+      "printed_pages": [
+        73,
+        90
+      ],
+      "keywords": [
+        "số gần đúng",
+        "sai số",
+        "số trung bình",
+        "trung vị",
+        "tứ phân vị",
+        "phương sai",
+        "độ lệch chuẩn",
+        "khoảng biến thiên",
+        "không ghép nhóm"
+      ]
+    },
+    "ham_so_bac_hai": {
+      "title": "Hàm số, đồ thị và hàm số bậc hai",
+      "volume": "2",
+      "printed_pages": [
+        4,
+        18
+      ],
+      "keywords": [
+        "hàm số",
+        "tập xác định",
+        "parabol",
+        "đồ thị",
+        "trục đối xứng",
+        "lợi nhuận lớn nhất"
+      ]
+    },
+    "tam_thuc_bac_hai": {
+      "title": "Dấu tam thức và bất phương trình bậc hai một ẩn",
+      "volume": "2",
+      "printed_pages": [
+        19,
+        24
+      ],
+      "keywords": [
+        "tam thức",
+        "bất phương trình bậc hai",
+        "dấu của",
+        "dấu tam thức"
+      ]
+    },
+    "pt_quy_bac_hai": {
+      "title": "Phương trình quy về phương trình bậc hai",
+      "volume": "2",
+      "printed_pages": [
+        25,
+        29
+      ],
+      "keywords": [
+        "phương trình quy",
+        "phương trình chứa căn",
+        "phương trình vô tỉ",
+        "phương trình vô tỷ",
+        "bình phương hai vế"
+      ]
+    },
+    "duong_thang": {
+      "title": "Đường thẳng, góc và khoảng cách trong Oxy",
+      "volume": "2",
+      "printed_pages": [
+        30,
+        42
+      ],
+      "keywords": [
+        "phương trình đường thẳng",
+        "vectơ pháp tuyến",
+        "vecto pháp tuyến",
+        "vectơ chỉ phương",
+        "khoảng cách từ một điểm",
+        "khoảng cách từ điểm",
+        "góc giữa hai đường thẳng"
+      ]
+    },
+    "duong_tron": {
+      "title": "Đường tròn trong mặt phẳng tọa độ",
+      "volume": "2",
+      "printed_pages": [
+        43,
+        47
+      ],
+      "keywords": [
+        "phương trình đường tròn",
+        "đường tròn",
+        "tiếp tuyến của đường tròn"
+      ]
+    },
+    "conic": {
+      "title": "Ba đường conic",
+      "volume": "2",
+      "printed_pages": [
+        48,
+        59
+      ],
+      "keywords": [
+        "conic",
+        "elip",
+        "ellipse",
+        "hypebol",
+        "hyperbol",
+        "tiêu điểm",
+        "tiêu cự",
+        "đường chuẩn"
+      ]
+    },
+    "to_hop": {
+      "title": "Quy tắc đếm, hoán vị, chỉnh hợp, tổ hợp và nhị thức Newton",
+      "volume": "2",
+      "printed_pages": [
+        60,
+        76
+      ],
+      "keywords": [
+        "quy tắc đếm",
+        "quy tắc cộng",
+        "quy tắc nhân",
+        "hoán vị",
+        "chỉnh hợp",
+        "tổ hợp",
+        "nhị thức",
+        "newton"
+      ]
+    },
+    "xac_suat": {
+      "title": "Xác suất theo định nghĩa cổ điển",
+      "volume": "2",
+      "printed_pages": [
+        77,
+        89
+      ],
+      "keywords": [
+        "xác suất",
+        "không gian mẫu",
+        "biến cố",
+        "phép thử",
+        "gieo xúc xắc",
+        "đồng xu"
+      ]
+    }
+  },
+  "blocked_patterns": [
+    "đạo hàm",
+    "nguyên hàm",
+    "tích phân",
+    "giới hạn hàm",
+    "logarit",
+    "logarithm",
+    "hàm số mũ",
+    "phương trình mũ",
+    "phương trình lượng giác",
+    "cấp số cộng",
+    "cấp số nhân",
+    "bayes",
+    "xác suất có điều kiện",
+    "biến cố độc lập",
+    "quy tắc nhân xác suất",
+    "công thức nhân xác suất",
+    "công thức xác suất toàn phần",
+    "mặt cầu",
+    "mặt phẳng trong không gian",
+    "oxyz",
+    "số phức",
+    "định lý viet bậc ba"
+  ],
+  "review_filename_patterns": [
+    "toan-11",
+    "toan-12",
+    "nang-cao",
+    "bat-dang-thuc",
+    "luy-thua",
+    "bac-ba",
+    "phan-tap-dong-du"
+  ]
+}

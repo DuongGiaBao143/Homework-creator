@@ -1,0 +1,13 @@
+{
+  "grade": 10,
+  "duration_minutes": 90,
+  "matrix": "config/giua_ki_1.json",
+  "sections": [
+    {"id": "I", "type": "multiple_choice", "title": "Trắc nghiệm nhiều lựa chọn", "count": 12, "choices": 4},
+    {"id": "II", "type": "true_false", "title": "Trắc nghiệm đúng/sai", "count": 2, "statements_per_question": 4},
+    {"id": "III", "type": "short_answer", "title": "Trả lời ngắn", "count": 4},
+    {"id": "IV", "type": "written", "title": "Tự luận", "count": 4}
+  ],
+  "multiple_choice_answer_balance": {"A": 3, "B": 3, "C": 3, "D": 3},
+  "scoring_note": "Chưa ấn định điểm từng phần. Khi cần thang điểm, ghi rõ trong hồ sơ đề và bảo đảm tổng 10 điểm; không tự áp dụng cách chấm đề THPT cho phần tự luận."
+}
