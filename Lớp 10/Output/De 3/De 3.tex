@@ -1,0 +1,387 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.5cm,top=1.6cm,bottom=1.5cm]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel}
+\definecolor{ink}{RGB}{30,55,70}
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or Math gives us hope that every problem has a solution% Trang 7
+    \or Math + You = Champion% Trang 8
+    \or Where Frustration Becomes Inspiration% Trang 9
+    \or Turning Confusion into Clarity% Trang 10
+    \or Don't be an X, be a Y of mathematics% Trang 11
+    \or Don't get mad. Learn to add% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.16}
+\newcommand{\parttitle}[1]{\par\vspace{3pt}{\large\bfseries\color{ink}#1}\par\vspace{2pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[3pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{13pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.5cm,labelsep=.18cm,itemsep=3.5pt,topsep=2pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.65cm,itemsep=2.5pt,topsep=2pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[4pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GK1}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 03}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.2cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0003}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.2cm}
+
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Trả lời câu 1 đến câu 12. Mỗi câu chỉ chọn một phương án.}
+\begin{enumerate}
+\item Câu nào sau đây là một mệnh đề toán học?
+\four{Trời hôm nay nhiều mây quá!}{Số $2026$ chia hết cho $2$.}{Mấy giờ rồi bạn ơi?}{Hãy chú ý lắng nghe bài giảng!}
+\item Cho mệnh đề chứa biến $P(n)\colon\text{ ``}n \text{ là số chính phương''}$ với $n\in\mathbb{N}$. Khẳng định nào sau đây là một mệnh đề đúng?
+\four{$P(2)$.}{$P(3)$.}{$P(9)$.}{$P(5)$.}
+\item Cho tập hợp $A = \{0; 1; 2\}$. Khẳng định nào sau đây đúng?
+\four{$\{0\} \in A$.}{$1 \subset A$.}{$3 \in A$.}{$\{1; 2\} \subset A$.}
+\item Cho tập hợp $X = \{x \in \mathbb{N} \mid x < 5\}$. Số phần tử của tập hợp $X$ là
+\four{$5$.}{$4$.}{$6$.}{Vô số.}
+\item Bất phương trình nào sau đây là bất phương trình bậc nhất hai ẩn $x, y$?
+\four{$x^2 + 2y \leq 4$.}{$4x - y \geq 6$.}{$2xy + 3 > 0$.}{$x + y^3 < 1$.}
+\item Cặp số $(x; y)$ nào sau đây là một nghiệm của bất phương trình $x - 3y + 5 \leq 0$?
+\four{$(0; 0)$.}{$(2; 1)$.}{$(1; 3)$.}{$(4; 1)$.}
+\item Hệ bất phương trình nào sau đây là hệ bất phương trình bậc nhất hai ẩn $x, y$?
+\two{$\begin{cases} x + y^2 \leq 2 \\ 2x - y > 0 \end{cases}$}{$\begin{cases} xy \geq 1 \\ x - y < 3 \end{cases}$}{$\begin{cases} x^2 - y \leq 4 \\ 3x + 2y \geq 1 \end{cases}$}{$\begin{cases} x - 2y \leq 3 \\ 3x + y > 1 \end{cases}$}
+\item Điểm nào sau đây thuộc miền nghiệm của hệ bất phương trình $\begin{cases} x \geq 0 \\ y \geq 0 \\ x + y \leq 6 \\ x + 3y \geq 6 \end{cases}$?
+\four{$(3; 2)$.}{$(0; 1)$.}{$(5; 2)$.}{$(-1; 4)$.}
+\item Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$. Khẳng định nào sau đây đúng?
+\four{$\sin\alpha < 0$.}{$\cos\alpha < 0$.}{$\tan\alpha > 0$.}{$\cot\alpha > 0$.}
+\item Với mọi góc $\alpha$ thỏa mãn $0^\circ \leq \alpha \leq 180^\circ$, khẳng định nào sau đây đúng?
+\two{$\sin(180^\circ - \alpha) = -\sin\alpha$.}{$\cos(180^\circ - \alpha) = \cos\alpha$.}{$\sin(180^\circ - \alpha) = \sin\alpha$.}{$\cos(180^\circ - \alpha) = \sin\alpha$.}
+\item Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$. Khẳng định nào sau đây đúng?
+\two{$b^2 = a^2 + c^2 + 2ac\cos B$.}{$b^2 = a^2 + c^2 - 2ac\sin B$.}{$b^2 = a^2 + c^2 - 2ab\cos B$.}{$b^2 = a^2 + c^2 - 2ac\cos B$.}
+\item Cho tam giác $ABC$ có $BC = a, CA = b, AB = c$ và diện tích $S$. Khẳng định nào sau đây đúng?
+\four{$S = \dfrac{1}{2}ac\sin B$.}{$S = \dfrac{1}{2}ac\cos B$.}{$S = ac\sin B$.}{$S = \dfrac{1}{2}bc\sin B$.}
+\end{enumerate}
+
+\par\vspace{8pt}
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Với mỗi ý a), b), c), d) trong từng câu, hãy xác định đúng hoặc sai.}
+\begin{enumerate}
+\item Cho hai tập hợp $A = (-4; 3]$ và $B = [-1; 5)$.
+\begin{enumerate}
+\item $-4 \in A$.
+\item $3 \in A$.
+\item $A \cap B = [-1; 3]$.
+\item $A \setminus B = (-4; -1)$.
+\end{enumerate}
+\item Một công ty du lịch bố trí hai loại xe: xe loại $A$ (chở được tối đa $40$ khách, chi phí $3$ triệu đồng/chuyến) và xe loại $B$ (chở được tối đa $20$ khách, chi phí $2$ triệu đồng/chuyến). Công ty cần chở ít nhất $160$ khách và tổng số xe hai loại được huy động không vượt quá $6$ xe. Gọi $x, y$ lần lượt là số xe loại $A$ và loại $B$ ($x, y$ là các số nguyên không âm).
+\begin{enumerate}
+\item Tổng số hành khách được chở tối đa bởi $x$ xe loại $A$ và $y$ xe loại $B$ là $40x + 20y$ (người).
+\item Phương án sử dụng $2$ xe loại $A$ và $3$ xe loại $B$ chở đủ số lượng khách theo yêu cầu.
+\item Các phương án sử dụng xe thỏa mãn hệ bất phương trình
+$\begin{cases} 2x + y \geq 8, \\ x + y \leq 6, \\ x, y \in \mathbb{Z},\ x \geq 0,\ y \geq 0. \end{cases}$
+\item Nếu công ty điều động đúng $3$ xe loại $A$ thì cần thuê ít nhất $2$ xe loại $B$.
+\end{enumerate}
+\end{enumerate}
+
+\vspace{7pt}
+\parttitle{PHẦN III. Trả lời ngắn}
+\textit{Ghi kết quả vào ô đáp số. Chỉ làm tròn khi câu hỏi yêu cầu.}
+\begin{enumerate}
+\item Cho hai tập hợp $A = \{x \in \mathbb{Z} \mid -2 \leq x < 6\}$ và $B = \{x \in \mathbb{Z} \mid (x + 1)(x - 3) \leq 0\}$. Tập hợp $A \cup B$ có bao nhiêu phần tử?
+\answerbox
+\item Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$ và $\cos\alpha = -\dfrac{5}{13}$. Tính giá trị của biểu thức
+\[
+P = \frac{\sin\alpha + \tan\alpha}{\cos\alpha}.
+\]
+\answerbox
+\item \begin{minipage}[t]{0.48\linewidth}
+Để tính chiều cao $CD$ của một tháp truyền hình trên đỉnh một ngọn đồi thẳng đứng, người quan sát chọn hai vị trí $A$ và $B$ trên mặt đất bằng phẳng sao cho $A, B$ và chân đồi $H$ thẳng hàng. Khoảng cách giữa $A$ và $B$ là $30\text{ m}$. Từ $A$ và $B$, người đo đo được góc nâng đến đỉnh tháp $C$ lần lượt là $30^\circ$ và $45^\circ$. Chân tháp $D$ ở độ cao $15\text{ m}$ so với mặt đất (tức $HD = 15\text{ m}$). Tính chiều cao $CD$ của tháp truyền hình, \textit{làm tròn đến hàng phần mười theo mét}.
+\par\vspace{4pt}\answerbox
+\end{minipage}\hfill%
+\begin{minipage}[t]{0.50\linewidth}
+\vspace{-0.4\baselineskip}
+\centering
+\begin{tikzpicture}[scale=1.05, font=\normalsize, >=Stealth, line join=round, line cap=round]
+    % Mặt đất và đồi
+    \draw[line width=1.2pt] (-0.3,0) -- (4.6,0) node[right=1pt, font=\small\bfseries] {Mặt đất};
+    \draw[line width=1.3pt, fill=gray!25] (3.8,0) rectangle (4.2,1.5);
+    \node[left=2pt, font=\small\bfseries] at (3.8,0.75) {Đồi ($15\text{ m}$)};
+    
+    % Tháp truyền hình
+    \draw[line width=2.0pt, ink] (4.0,1.5) -- (4.0,4.1) coordinate (C);
+    \coordinate (D) at (4.0,1.5);
+    \coordinate (H) at (4.0,0);
+    
+    % Các điểm ngắm
+    \coordinate (A) at (0.3,0);
+    \coordinate (B) at (2.4,0);
+    
+    % Tia ngắm
+    \draw[line width=1.4pt, ink] (A) -- (C);
+    \draw[line width=1.4pt, ink] (B) -- (C);
+    \draw[dashed, line width=1.0pt, gray!80!black] (H) -- (D);
+    
+    % Kích thước và góc
+    \draw[<->, line width=1.0pt] (0.3,-0.45) -- node[below=1pt, font=\small\bfseries] {$30\text{ m}$} (2.4,-0.45);
+    \pic[draw, line width=1.0pt, angle radius=8mm] {angle=H--A--C};
+    \node at ($(A)+(15:12mm)$) [font=\small\bfseries] {$30^\circ$};
+    \pic[draw, line width=1.0pt, angle radius=7mm] {angle=H--B--C};
+    \node at ($(B)+(26:11mm)$) [font=\small\bfseries] {$45^\circ$};
+    
+    % Nhãn đỉnh
+    \fill (A) circle (2.5pt) node[below=2pt, font=\normalsize\bfseries] {$A$};
+    \fill (B) circle (2.5pt) node[below=2pt, font=\normalsize\bfseries] {$B$};
+    \fill (H) circle (2.5pt) node[below=2pt, font=\normalsize\bfseries] {$H$};
+    \fill (D) circle (3pt) node[right=3pt, font=\normalsize\bfseries] {$D$};
+    \fill (C) circle (3pt) node[above=2pt, font=\Large\bfseries] {$C$};
+\end{tikzpicture}
+\end{minipage}
+\item Gọi $D$ là tập hợp tất cả các điểm $(x; y)$ thỏa mãn hệ bất phương trình
+\[
+x \geq 0,\quad y \geq 0,\quad 2x + y \leq 8,\quad x + y \leq 5.
+\]
+Tìm giá trị lớn nhất của tham số thực $m$ để bất phương trình $2x + (m - 1)y \leq 12$ nghiệm đúng với \textbf{mọi} điểm $(x; y) \in D$.
+\par\answerbox
+\end{enumerate}
+
+\par\vspace{8pt}
+\parttitle{PHẦN IV. Tự luận}
+\textit{Trình bày lập luận và các bước tính trên giấy làm bài.}
+\begin{enumerate}
+\item Cho hai tập hợp $A = (-\infty; 4]$ và $B = (-2; 7)$.
+Xác định các tập hợp $A \cap B$, $A \cup B$, $A \setminus B$ và biểu diễn tập hợp $A \cap B$ trên trục số.
+\item Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$ và biểu thức
+\[
+E = \frac{1 + 2\sin\alpha\cos\alpha}{\cos^2\alpha - \sin^2\alpha}.
+\]
+\begin{enumerate}
+\item Chứng minh rằng $E = \dfrac{1 + \tan\alpha}{1 - \tan\alpha}$.
+\item Tính giá trị của biểu thức $E$ khi $\sin\alpha = \dfrac{4}{5}$.
+\end{enumerate}
+\item Một mảnh đất có dạng hình thang vuông $ABCD$ vuông tại $A$ và $D$. Người ta đo được chiều cao $AD = 40\text{ m}$, đáy bé $AB = 30\text{ m}$ và góc nhọn $\widehat{BCD} = 45^\circ$ như hình vẽ bên dưới.
+\begin{enumerate}
+\item Tính độ dài cạnh đáy lớn $CD$ và cạnh bên $BC$.
+\item Tính diện tích của mảnh đất $ABCD$ theo đơn vị mét vuông.
+\end{enumerate}
+\begin{center}
+\begin{tikzpicture}[scale=1.2, line join=round, line cap=round, font=\normalsize]
+    % Tọa độ các đỉnh: A(0, 3.2), D(0,0), B(2.4, 3.2), H(2.4, 0), C(5.6, 0)
+    \coordinate (D) at (0,0);
+    \coordinate (A) at (0,3.2);
+    \coordinate (B) at (2.4,3.2);
+    \coordinate (H) at (2.4,0);
+    \coordinate (C) at (5.6,0);
+    
+    % Miền hình thang
+    \fill[ink!8] (A) -- (B) -- (C) -- (D) -- cycle;
+    \draw[line width=1.5pt, ink] (A) -- (B) -- (C) -- (D) -- cycle;
+    \draw[dashed, line width=1.2pt, red!80!black] (B) -- node[right=1pt, font=\normalsize\bfseries, red!80!black] {$h = 40\text{ m}$} (H);
+    
+    % Kích thước
+    \draw[line width=1.5pt, ink] (A) -- node[above=2pt, font=\normalsize\bfseries, black] {$30\text{ m}$} (B);
+    \draw[line width=1.5pt, ink] (A) -- node[left=2pt, font=\normalsize\bfseries, black] {$40\text{ m}$} (D);
+    
+    % Góc vuông
+    \pic[draw, line width=1.0pt, angle radius=4mm] {right angle=D--A--B};
+    \pic[draw, line width=1.0pt, angle radius=4mm] {right angle=A--D--C};
+    \pic[draw, line width=1.0pt, angle radius=4mm] {right angle=B--H--C};
+    
+    % Góc C
+    \pic[draw, line width=1.1pt, angle radius=8mm, angle eccentricity=1.45, "$45^\circ$", font=\normalsize\bfseries] {angle=B--C--H};
+    
+    % Nhãn đỉnh
+    \fill (A) circle (3pt) node[above left=2pt, font=\Large\bfseries] {$A$};
+    \fill (B) circle (3pt) node[above right=2pt, font=\Large\bfseries] {$B$};
+    \fill (C) circle (3pt) node[below right=2pt, font=\Large\bfseries] {$C$};
+    \fill (D) circle (3pt) node[below left=2pt, font=\Large\bfseries] {$D$};
+    \fill (H) circle (2.5pt) node[below=2pt, font=\normalsize\bfseries] {$H$};
+\end{tikzpicture}
+\end{center}
+\item Một trang trại chăn nuôi dự định phối trộn hai loại thức ăn công nghiệp $X$ và $Y$ cho đàn bò mỗi ngày.
+Mỗi bao thức ăn loại $X$ có giá $200\,000$ đồng, chứa $3$ đơn vị đạm và $2$ đơn vị khoáng.
+Mỗi bao thức ăn loại $Y$ có giá $250\,000$ đồng, chứa $2$ đơn vị đạm và $4$ đơn vị khoáng.
+Mỗi ngày, đàn bò cần tối thiểu $18$ đơn vị đạm và $24$ đơn vị khoáng. Do sức chứa của kho dự trữ, tổng số bao thức ăn cả hai loại không vượt quá $10$ bao.
+\begin{enumerate}
+\item Gọi $x, y$ lần lượt là số bao thức ăn loại $X$ và loại $Y$ mà trang trại mua mỗi ngày ($x, y \in \mathbb{N}$). Lập hệ bất phương trình biểu thị các điều kiện của bài toán và viết biểu thức chi phí $C(x; y)$ thu mua mỗi ngày.
+\item Trang trại nên mua bao nhiêu bao mỗi loại để chi phí hàng ngày là nhỏ nhất? Tính số chi phí nhỏ nhất đó.
+\end{enumerate}
+\end{enumerate}
+\vfill
+\begin{center}\textbf{--- HẾT ---}\end{center}
+
+\newpage
+\begin{center}
+{\Large\bfseries BẢNG ĐÁP ÁN TỔNG HỢP}\\[5pt]
+{\bfseries ÔN TẬP GIỮA KỲ I -- ĐỀ SỐ 03}
+\end{center}
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\begin{center}
+\begin{tabularx}{\linewidth}{|>{\bfseries}l|*{12}{>{\centering\arraybackslash}X|}}\hline
+Câu&1&2&3&4&5&6&7&8&9&10&11&12\\\hline
+Đáp án&B&C&D&A&B&C&D&A&B&C&D&A\\\hline
+\end{tabularx}
+\end{center}
+
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+\textbf{Câu}&\textbf{a)}&\textbf{b)}&\textbf{c)}&\textbf{d)}\\\hline
+1&Sai&Đúng&Đúng&Đúng\\\hline
+2&Đúng&Sai&Đúng&Đúng\\\hline
+\end{tabular}
+\end{center}
+
+\parttitle{PHẦN III. Trả lời ngắn}
+\begin{center}
+\begin{tabularx}{\linewidth}{|>{\bfseries}l|*{4}{>{\centering\arraybackslash}X|}}\hline
+Câu&1&2&3&4\\\hline
+Đáp số&$8$&$\dfrac{96}{25}$&$26{,}0\text{ m}$&$3{,}4$\\\hline
+\end{tabularx}
+\end{center}
+
+\parttitle{PHẦN IV. Tự luận -- kết quả cần đạt}
+\begin{tabularx}{\linewidth}{|c|>{\raggedright\arraybackslash}X|}\hline
+\textbf{Câu}&\textbf{Kết quả tóm tắt}\\\hline
+1&$A\cap B = (-2; 4]$; $A\cup B = (-\infty; 7)$; $A\setminus B = (-\infty; -2]$.\\
+&Trục số của $A\cap B$: lấy nửa khoảng $(-2; 4]$, gạch bỏ toàn bộ phần bên ngoài.\\[4pt]\hline
+2&a) Biến đổi: $E = \dfrac{(\cos\alpha+\sin\alpha)^2}{\cos^2\alpha-\sin^2\alpha} = \dfrac{\cos\alpha+\sin\alpha}{\cos\alpha-\sin\alpha} = \dfrac{1+\tan\alpha}{1-\tan\alpha}$.\\
+&b) Khi $\sin\alpha = \dfrac{4}{5}$ thì $\cos\alpha = -\dfrac{3}{5} \implies \tan\alpha = -\dfrac{4}{3} \implies E = -\dfrac{1}{7}$.\\[4pt]\hline
+3&a) Kẻ $BH\perp CD \implies DH = 30\text{ m}, BH = 40\text{ m}$. Tam giác $BHC$ vuông cân tại $H \implies HC = 40\text{ m}$.\\
+&Đáy lớn $CD = 70\text{ m}$; cạnh bên $BC = 40\sqrt{2}\text{ m} \approx 56{,}57\text{ m}$.\\
+&b) Diện tích mảnh đất: $S_{ABCD} = \dfrac{(30+70)\cdot 40}{2} = \boxed{2000\text{ m}^2}$.\\[4pt]\hline
+4&a) Hệ BPT: $\begin{cases} 3x + 2y \geq 18 \\ x + 2y \geq 12 \\ x + y \leq 10 \\ x, y \in \mathbb{Z},\ x \geq 0,\ y \geq 0 \end{cases}$; Chi phí: $C(x; y) = 200\,000x + 250\,000y$ (đồng).\\
+&b) Trang trại nên mua \textbf{4 bao loại $X$} và \textbf{4 bao loại $Y$}; chi phí nhỏ nhất là $\boxed{1\,800\,000\text{ đồng}}$.\\\hline
+\end{tabularx}
+
+\newpage
+\begin{center}
+{\Large\bfseries HÌNH VẼ MIỀN NGHIỆM HỆ BẤT PHƯƠNG TRÌNH}\\[3pt]
+{\normalsize\bfseries (PHẦN III -- CÂU 4 \& PHẦN IV -- CÂU 4)}
+\end{center}
+
+\vspace{6pt}
+\begin{center}
+\textbf{\large 1. Phần III -- Câu 4: Miền đa giác $D$ của hệ bất phương trình}\\[6pt]
+\begin{tikzpicture}[scale=1.2, font=\normalsize, >=Stealth, line join=round, line cap=round]
+    % Trục toạ độ
+    \draw[->, line width=1.2pt] (-1.0,0) -- (6.0,0) node[below=2pt, font=\normalsize\bfseries] {$x$};
+    \draw[->, line width=1.2pt] (0,-0.8) -- (0,6.5) node[left=2pt, font=\normalsize\bfseries] {$y$};
+    \node[below left=2pt, font=\normalsize\bfseries] at (0,0) {$O$};
+    
+    % Miền D tô màu
+    \fill[blue!15] (0,0) -- (4,0) -- (3,2) -- (0,5) -- cycle;
+    
+    % Đường 2x + y = 8 (đi qua (4;0), (3;2), (0;8))
+    \draw[line width=1.3pt, blue!80!black] (1.0,6.0) -- (4.5,-1.0);
+    \node[above right, font=\normalsize\bfseries, blue!80!black] at (1.2,5.6) {$d_1\colon 2x+y=8$};
+    
+    % Đường x + y = 5 (đi qua (0;5), (3;2), (5;0))
+    \draw[line width=1.3pt, teal!80!black] (-0.6,5.6) -- (5.6,-0.6);
+    \node[above left, font=\normalsize\bfseries, teal!80!black] at (-0.2,5.2) {$d_2\colon x+y=5$};
+    
+    % Cạnh miền đa giác D (nét rất đậm)
+    \draw[line width=2.0pt, ink] (0,0) -- (4,0) -- (3,2) -- (0,5) -- cycle;
+    
+    % Các đỉnh của miền D
+    \fill (0,0) circle (3.5pt);
+    \fill (4,0) circle (3.8pt);
+    \node[below=4pt, font=\normalsize\bfseries, black] at (4,0) {$A(4;0)$};
+    \fill (3,2) circle (4.0pt) node[above right=3pt, font=\normalsize\bfseries, black] {$B(3;2)$};
+    \fill (0,5) circle (3.8pt) node[left=4pt, font=\normalsize\bfseries, black] {$C(0;5)$};
+    
+    % Đường dóng đỉnh B(3;2)
+    \draw[dashed, line width=1.0pt, gray!80!black] (3,0) -- (3,2) -- (0,2);
+    \node[below left=1pt, font=\normalsize\bfseries, black] at (3,0) {$3$};
+    \node[left=4pt, font=\normalsize\bfseries, black] at (0,2) {$2$};
+    
+    % Nhãn miền D
+    \node[ink, font=\Large\bfseries] at (1.4, 1.5) {Miền $D$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{6pt}
+\hrule
+\vspace{6pt}
+
+\begin{center}
+\textbf{\large 2. Phần IV -- Câu 4: Miền nghiệm của bài toán tối ưu chi phí}\\[6pt]
+\begin{tikzpicture}[scale=0.85, font=\normalsize, >=Stealth, line join=round, line cap=round]
+    % Trục toạ độ
+    \draw[->, line width=1.2pt] (-1.0,0) -- (12.0,0) node[below=2pt, font=\normalsize\bfseries] {$x$ (bao loại $X$)};
+    \draw[->, line width=1.2pt] (0,-1.0) -- (0,11.5) node[left=2pt, font=\normalsize\bfseries] {$y$ (bao loại $Y$)};
+    \node[below left=2pt, font=\normalsize\bfseries] at (0,0) {$O$};
+    
+    % Miền nghiệm hình học là tam giác MNP (với M(3; 4.5), N(4;6), P(8;2))
+    \fill[ink!15] (3,4.5) -- (4,6) -- (8,2) -- cycle;
+    
+    % Đường 3x + 2y = 18 (đi qua (0;9), (3;4.5), (4;6))
+    \draw[line width=1.3pt, blue!80!black] (1.5,6.75) -- (6.5,-0.75);
+    \node[above left, font=\normalsize\bfseries, blue!80!black] at (2.2,5.7) {$3x+2y=18$};
+    
+    % Đường x + 2y = 12 (đi qua (0;6), (3;4.5), (8;2))
+    \draw[line width=1.3pt, teal!80!black] (0,6) -- (11.0,0.5);
+    \node[above right, font=\normalsize\bfseries, teal!80!black] at (9.0,1.5) {$x+2y=12$};
+    
+    % Đường x + y = 10 (đi qua (4;6), (8;2))
+    \draw[line width=1.3pt, magenta!80!black] (2.0,8.0) -- (10.5,-0.5);
+    \node[above right, font=\normalsize\bfseries, magenta!80!black] at (6.0,4.2) {$x+y=10$};
+    
+    % Cạnh miền nghiệm tam giác MNP
+    \draw[line width=2.0pt, ink] (3,4.5) -- (4,6) -- (8,2) -- cycle;
+    
+    % Các đỉnh hình học
+    \fill (4,6) circle (3.8pt) node[above right=2pt, font=\normalsize\bfseries, black] {$N(4;6)$};
+    \fill (8,2) circle (3.8pt) node[below left=2pt, font=\normalsize\bfseries, black] {$P(8;2)$};
+    \fill (3,4.5) circle (3.5pt) node[below left=2pt, font=\normalsize\bfseries, black] {$M(3; 4{,}5)$};
+    
+    % Điểm tối ưu nguyên (4; 4)
+    \fill[red] (4,4) circle (4.2pt) node[above right=2pt, font=\normalsize\bfseries, red!80!black] {Tối ưu $(4;4)$};
+    \draw[dashed, line width=1.0pt, red!80!black] (4,0) -- (4,4) -- (0,4);
+    \node[below=2pt, font=\normalsize\bfseries, red!80!black] at (4,0) {$4$};
+    \node[left=3pt, font=\normalsize\bfseries, red!80!black] at (0,4) {$4$};
+    
+    % Nhãn miền nghiệm
+    \node[ink, font=\Large\bfseries] at (5.0, 3.2) {Miền $MNP$};
+\end{tikzpicture}
+\end{center}
+\end{document}
