@@ -1,0 +1,377 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.5cm,top=1.6cm,bottom=1.5cm]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel}
+\definecolor{ink}{RGB}{30,55,70}
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or Math gives us hope that every problem has a solution% Trang 7
+    \or Math + You = Champion% Trang 8
+    \or Where Frustration Becomes Inspiration% Trang 9
+    \or Turning Confusion into Clarity% Trang 10
+    \or Don't be an X, be a Y of mathematics% Trang 11
+    \or Don't get mad. Learn to add% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+\setlength{\tabcolsep}{5pt}
+\renewcommand{\arraystretch}{1.16}
+\newcommand{\parttitle}[1]{\par\vspace{3pt}{\large\bfseries\color{ink}#1}\par\vspace{2pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[3pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{13pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.5cm,labelsep=.18cm,itemsep=2.2pt,topsep=1.5pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.65cm,itemsep=1.5pt,topsep=1.5pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[4pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GK1}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 05}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.2cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0005}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.2cm}
+
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Trả lời câu 1 đến câu 12. Mỗi câu chỉ chọn một phương án.}
+\begin{enumerate}
+\item Phát biểu nào sau đây là một mệnh đề?
+\four{Bạn có thích học môn Toán không?}{Đề thi hôm nay dài quá!}{Hãy làm bài tập về nhà đầy đủ!}{$16$ chia hết cho $4$.}
+\item Cho hai số tự nhiên $a$ và $b$. Trong các mệnh đề sau, mệnh đề nào đúng?
+\two{Nếu tích $a\cdot b$ là số lẻ thì $a$ và $b$ đều là số lẻ.}{Nếu tích $a\cdot b$ là số chẵn thì $a$ và $b$ đều là số chẵn.}{Nếu tổng $a+b$ là số chẵn thì $a$ và $b$ đều là số chẵn.}{Nếu tổng $a+b$ là số lẻ thì $a$ và $b$ đều là số lẻ.}
+\item Mệnh đề phủ định của mệnh đề ``$17$ là số nguyên tố'' là mệnh đề nào sau đây?
+\four{$17$ là một hợp số.}{$17$ không phải là số nguyên tố.}{$17$ chia hết cho $3$.}{$17$ là một số chẵn.}
+\item Cho hai tập hợp $A = (-\infty; 2]$ và $B = (-1; +\infty)$. Khi đó tập hợp $A \cap B$ bằng
+\four{$(-\infty; -1)$.}{$[2; +\infty)$.}{$(-1; 2]$.}{$[-1; 2]$.}
+\item Bất phương trình nào sau đây là bất phương trình bậc nhất hai ẩn $x, y$?
+\four{$2x^2 + 3y \leq 5$.}{$x - 3y^2 > 1$.}{$2xy + y \geq 4$.}{$3x - 4y + 2 \leq 0$.}
+\item Cặp số $(x; y)$ nào sau đây là một nghiệm của bất phương trình $2x + y - 4 > 0$?
+\four{$(2; 1)$.}{$(0; 0)$.}{$(1; 1)$.}{$(0; 4)$.}
+\item Hệ bất phương trình nào sau đây là hệ bất phương trình bậc nhất hai ẩn $x, y$?
+\two{$\begin{cases} x^2 + y \leq 2 \\ x - y > 0 \end{cases}$}{$\begin{cases} 2x - y \geq 1 \\ x + 3y \leq 4 \end{cases}$}{$\begin{cases} xy \leq 1 \\ 2x - y > 3 \end{cases}$}{$\begin{cases} x - 2y \leq 5 \\ y^2 - 1 \geq 0 \end{cases}$}
+\item Điểm nào sau đây thuộc miền nghiệm của hệ bất phương trình $\begin{cases} x \geq 0 \\ y \geq 0 \\ x + y \leq 4 \\ 2x - y \leq 2 \end{cases}$?
+\four{$(3; 2)$.}{$(-1; 2)$.}{$(1; 1)$.}{$(2; 3)$.}
+\item Cho góc $\alpha$ thỏa mãn $0^\circ < \alpha < 180^\circ$. Khẳng định nào sau đây luôn đúng?
+\four{$\cos\alpha > 0$.}{$\tan\alpha > 0$.}{$\cot\alpha > 0$.}{$\sin\alpha > 0$.}
+\item Với mọi góc $\alpha$ thỏa mãn $0^\circ \leq \alpha \leq 180^\circ$, khẳng định nào sau đây đúng?
+\two{$\cos(180^\circ - \alpha) = -\cos\alpha$.}{$\cos(180^\circ - \alpha) = \cos\alpha$.}{$\sin(180^\circ - \alpha) = -\sin\alpha$.}{$\cos(180^\circ - \alpha) = -\sin\alpha$.}
+\item Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$. Khẳng định nào sau đây đúng?
+\two{$a^2 = b^2 + c^2 + 2bc\cos A$.}{$a^2 = b^2 + c^2 - 2bc\cos A$.}{$a^2 = b^2 + c^2 - 2bc\sin A$.}{$a^2 = b^2 + c^2 - bc\cos A$.}
+\item Cho tam giác $ABC$ có nửa chu vi $p = \dfrac{a + b + c}{2}$. Diện tích $S$ của tam giác $ABC$ được tính theo công thức Heron nào sau đây?
+\two{$S = p(p - a)(p - b)(p - c)$.}{$S = \sqrt{(p - a)(p - b)(p - c)}$.}{$S = \sqrt{p(p - a)(p - b)(p - c)}$.}{$S = \sqrt{p(a + b - c)(b + c - a)(c + a - b)}$.}
+\end{enumerate}
+
+\par\vspace{8pt}
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Với mỗi ý a), b), c), d) trong từng câu, hãy xác định đúng hoặc sai.}
+\begin{enumerate}
+\item Cho hai tập hợp $A = (-2; 4]$ và $B = [1; 7)$.
+\begin{enumerate}
+\item $-2 \in A$.
+\item $4 \in A$.
+\item $A \cap B = [1; 4]$.
+\item $A \setminus B = (-2; 1)$.
+\end{enumerate}
+\item Một xưởng may gia công sản xuất hai loại áo: áo sơ mi (gọi số lượng là $x$) và áo khoác (gọi số lượng là $y$), với $x, y$ là các số nguyên không âm. Để may một chiếc áo sơ mi cần $2\text{ m}$ vải cotton và $3$ giờ công lao động. Để may một chiếc áo khoác cần $4\text{ m}$ vải cotton và $1$ giờ công lao động. Trong một tuần, xưởng có tối đa $80\text{ m}$ vải cotton và quỹ thời gian lao động tối đa là $45$ giờ.
+\begin{enumerate}
+\item Tổng số mét vải cotton cần dùng để may $x$ áo sơ mi và $y$ áo khoác là $2x + 4y$ (m).
+\item Kế hoạch sản xuất $20$ chiếc áo sơ mi và $12$ chiếc áo khoác trong một tuần là khả thi.
+\item Các phương án sản xuất khả thi $(x; y)$ thỏa mãn hệ bất phương trình:\\
+$\begin{cases} x + 2y \leq 40, \\ 3x + y \leq 45, \\ x, y \in \mathbb{Z},\ x \geq 0,\ y \geq 0. \end{cases}$
+\item Nếu xưởng may đúng $10$ chiếc áo sơ mi thì có thể may tối đa $16$ chiếc áo khoác.
+\end{enumerate}
+\end{enumerate}
+
+\par\vspace{8pt}
+\parttitle{PHẦN III. Trả lời ngắn}
+\textit{Ghi kết quả vào ô đáp số. Chỉ làm tròn khi câu hỏi yêu cầu.}
+\begin{enumerate}
+\item Cho hai tập hợp $A = \{x \in \mathbb{Z} \mid -3 \leq 2x + 1 \leq 9\}$ và $B = \{x \in \mathbb{Z} \mid x^2 < 9\}$. Tập hợp $A \cap B$ có bao nhiêu phần tử?
+\answerbox
+\item Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$ và $\tan\alpha = -\dfrac{3}{4}$. Tính giá trị của biểu thức
+\[
+G = \frac{4\sin\alpha - 3\cos\alpha}{2\sin\alpha + \cos\alpha}.
+\]
+\answerbox
+\item \begin{minipage}[t]{0.52\linewidth}
+Hai chiếc tàu thủy cùng xuất phát từ một vị trí cảng $A$, đi thẳng theo hai hướng tạo với nhau một góc $60^\circ$ như hình vẽ bên. Tàu thứ nhất chạy với tốc độ $20\text{ km/h}$, tàu thứ hai chạy với tốc độ $15\text{ km/h}$. Hỏi sau $2$ giờ kể từ lúc xuất phát, khoảng cách giữa hai con tàu là bao nhiêu kilômét? (\textit{làm tròn kết quả đến hàng phần mười}).
+\par\vspace{4pt}\answerbox
+\end{minipage}\hfill%
+\begin{minipage}[t]{0.46\linewidth}
+\vspace{-0.4\baselineskip}
+\centering
+\begin{tikzpicture}[scale=0.08, font=\normalsize, >=Stealth, line join=round, line cap=round]
+    % Điểm A tại (0,0), tàu 1 tại B(40,0), tàu 2 tại C(15, 25.98)
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (40,0);
+    \coordinate (C) at (15, 25.98);
+    
+    % Vẽ các đoạn đường đi
+    \draw[line width=1.5pt, ink, ->] (A) -- (B) node[midway, below=2pt, font=\small\bfseries, black] {$40\text{ km}$};
+    \draw[line width=1.5pt, ink, ->] (A) -- (C) node[midway, above left=1pt, font=\small\bfseries, black] {$30\text{ km}$};
+    \draw[dashed, line width=1.3pt, red!85!black] (B) -- node[above right=1pt, font=\normalsize\bfseries, red!85!black] {$d$} (C);
+    
+    % Góc BAC
+    \pic[draw, line width=1.1pt, angle radius=9mm, angle eccentricity=1.5, "$60^\circ$", font=\normalsize\bfseries] {angle=B--A--C};
+    
+    % Các điểm cảng và tàu
+    \fill (A) circle (35pt) node[below left=2pt, font=\normalsize\bfseries] {Cảng $A$};
+    \fill (B) circle (35pt) node[right=3pt, font=\normalsize\bfseries] {Tàu 1 ($B$)};
+    \fill (C) circle (35pt) node[above=3pt, font=\normalsize\bfseries] {Tàu 2 ($C$)};
+\end{tikzpicture}
+\end{minipage}
+\item Gọi $D$ là miền nghiệm (hình đa giác bao gồm cả các cạnh) của hệ bất phương trình
+\[
+x \geq 0,\quad y \geq 0,\quad 3x + y \leq 9,\quad x + y \leq 7.
+\]
+Tìm giá trị lớn nhất của tham số thực $m$ để bất phương trình $x + (m - 1)y \leq 14$ nghiệm đúng với \textbf{mọi} điểm $(x; y) \in D$.
+\par\answerbox
+\end{enumerate}
+
+\par\vspace{8pt}
+\parttitle{PHẦN IV. Tự luận}
+\textit{Trình bày lập luận và các bước tính trên giấy làm bài.}
+\begin{enumerate}
+\item Cho hai tập hợp $A = (-3; 5]$ và $B = [0; 8)$.
+\begin{enumerate}
+\item Xác định các tập hợp $A \cap B$, $A \cup B$ và $A \setminus B$.
+\item Biểu diễn tập hợp $A \setminus B$ trên trục số.
+\end{enumerate}
+\item Cho góc $\alpha$ thỏa mãn $0^\circ < \alpha < 180^\circ$ và $\sin\alpha + \cos\alpha = \dfrac{7}{5}$.
+\begin{enumerate}
+\item Tính giá trị của tích $\sin\alpha\cos\alpha$.
+\item Tính giá trị của biểu thức $F = \dfrac{\sin^3\alpha + \cos^3\alpha}{\sin\alpha + \cos\alpha}$.
+\end{enumerate}
+\item \begin{minipage}[t]{0.56\linewidth}
+Một mảnh đất hình tứ giác $ABCD$ được chia thành hai phần như hình vẽ bên. Biết rằng tam giác $ABD$ vuông tại $A$ có $AB = 60\text{ m}$, $AD = 80\text{ m}$; phần đất còn lại là tam giác $BCD$ đều cạnh $BD$.
+\begin{enumerate}
+\item Tính độ dài đường phân chia $BD$.
+\item Tính diện tích toàn bộ mảnh đất tứ giác $ABCD$, \textit{làm tròn kết quả đến hàng đơn vị theo mét vuông}.
+\end{enumerate}
+\end{minipage}\hfill%
+\begin{minipage}[t]{0.42\linewidth}
+\vspace{-0.3\baselineskip}
+\centering
+\begin{tikzpicture}[scale=0.038, line join=round, line cap=round, font=\normalsize]
+    % Đỉnh A(0,0), D(80,0), B(0,60)
+    % C sao cho BCD đều: BD có độ dài 100, trung điểm M(40,30), véc tơ BD = (80,-60)
+    % Véc tơ pháp tuyến ngoài: (60,80) chuẩn hóa * 50*sqrt(3) -> C = M + (30*sqrt(3), 40*sqrt(3)) ~ (40+51.96, 30+69.28) = (91.96, 99.28)
+    \coordinate (A) at (0,0);
+    \coordinate (D) at (80,0);
+    \coordinate (B) at (0,60);
+    \coordinate (C) at (91.96, 99.28);
+    
+    % Miền tứ giác
+    \fill[ink!8] (A) -- (D) -- (C) -- (B) -- cycle;
+    \draw[line width=1.5pt, ink] (A) -- (D) -- (C) -- (B) -- cycle;
+    \draw[dashed, line width=1.3pt, red!85!black] (B) -- node[midway, below left=1pt, font=\small\bfseries, red!85!black] {$BD$} (D);
+    
+    % Góc vuông tại A
+    \draw[line width=1.0pt] (0,8) -- (8,8) -- (8,0);
+    
+    % Kích thước
+    \node[left=2pt, font=\small\bfseries] at (0,30) {$60\text{ m}$};
+    \node[below=2pt, font=\small\bfseries] at (40,0) {$80\text{ m}$};
+    
+    % Nhãn đỉnh
+    \fill (A) circle (65pt) node[below left=2pt, font=\normalsize\bfseries] {$A$};
+    \fill (B) circle (65pt) node[left=3pt, font=\normalsize\bfseries] {$B$};
+    \fill (D) circle (65pt) node[below right=2pt, font=\normalsize\bfseries] {$D$};
+    \fill (C) circle (65pt) node[above right=2pt, font=\normalsize\bfseries] {$C$};
+    
+    \node[ink, font=\small\bfseries] at (60, 60) {$\Delta BCD$ đều};
+\end{tikzpicture}
+\end{minipage}
+\item Một xưởng cơ khí gia công sản xuất hai loại sản phẩm cơ khí: loại I và loại II. Để sản xuất được một sản phẩm loại I cần $1\text{ kg}$ thép, $2$ giờ gia công máy tiện và $1$ giờ hoàn thiện trên máy mài, đem lại tiền lãi $30$ triệu đồng. Để sản xuất một sản phẩm loại II cần $1\text{ kg}$ thép, $3$ giờ gia công máy tiện và $2$ giờ hoàn thiện trên máy mài, đem lại tiền lãi $40$ triệu đồng. Trong một đợt sản xuất, xưởng có sẵn $8\text{ kg}$ thép, $18$ giờ máy tiện và $11$ giờ máy mài. Giả sử sản phẩm sản xuất ra đều được tiêu thụ hết.
+\begin{enumerate}
+\item Gọi $x, y$ lần lượt là số lượng sản phẩm loại I và loại II mà xưởng sản xuất ($x, y \in \mathbb{N}$). Lập hệ bất phương trình biểu thị các điều kiện ràng buộc của bài toán và viết biểu thức hàm tiền lãi $T(x; y)$.
+\item Xưởng cần sản xuất bao nhiêu sản phẩm mỗi loại để thu được tiền lãi lớn nhất? Tính số tiền lãi lớn nhất đó.
+\end{enumerate}
+\end{enumerate}
+\par\vspace{3pt}
+\centerline{\textbf{--- HẾT ---}}
+
+\newpage
+\begin{center}
+{\Large\bfseries BẢNG ĐÁP ÁN TỔNG HỢP}\\[5pt]
+{\bfseries ÔN TẬP GIỮA KỲ I -- ĐỀ SỐ 05}
+\end{center}
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\begin{center}
+\begin{tabularx}{\linewidth}{|>{\bfseries}l|*{12}{>{\centering\arraybackslash}X|}}\hline
+Câu&1&2&3&4&5&6&7&8&9&10&11&12\\\hline
+Đáp án&D&A&B&C&D&A&B&C&D&A&B&C\\\hline
+\end{tabularx}
+\end{center}
+
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}\hline
+\textbf{Câu}&\textbf{a)}&\textbf{b)}&\textbf{c)}&\textbf{d)}\\\hline
+1&Sai&Đúng&Đúng&Đúng\\\hline
+2&Đúng&Sai&Đúng&Sai\\\hline
+\end{tabular}
+\end{center}
+
+\parttitle{PHẦN III. Trả lời ngắn}
+\begin{center}
+\begin{tabularx}{\linewidth}{|>{\bfseries}l|*{4}{>{\centering\arraybackslash}X|}}\hline
+Câu&1&2&3&4\\\hline
+Đáp số&$5$&$12$&$36{,}1\text{ km}$&$3$\\\hline
+\end{tabularx}
+\end{center}
+
+\parttitle{PHẦN IV. Tự luận -- kết quả cần đạt}
+\begin{tabularx}{\linewidth}{|c|>{\raggedright\arraybackslash}X|}\hline
+\textbf{Câu}&\textbf{Kết quả tóm tắt}\\\hline
+1&a) $A\cap B = [0; 5]$; $A\cup B = (-3; 8)$; $A\setminus B = (-3; 0)$.\\
+&b) Biểu diễn trên trục số: lấy khoảng $(-3; 0)$, gạch bỏ phần còn lại bên ngoài.\\[4pt]\hline
+2&a) $(\sin\alpha + \cos\alpha)^2 = 1 + 2\sin\alpha\cos\alpha = \dfrac{49}{25} \implies \sin\alpha\cos\alpha = \boxed{\dfrac{12}{25}}$.\\
+&b) $F = \dfrac{\sin^3\alpha + \cos^3\alpha}{\sin\alpha + \cos\alpha} = 1 - \sin\alpha\cos\alpha = 1 - \dfrac{12}{25} = \boxed{\dfrac{13}{25}}$.\\[4pt]\hline
+3&a) Tam giác $ABD$ vuông tại $A \implies BD = \sqrt{60^2 + 80^2} = \boxed{100\text{ m}}$.\\
+&b) $S_{ABD} = \dfrac{1}{2}\cdot 60\cdot 80 = 2400\text{ m}^2$; $S_{BCD} = \dfrac{100^2\sqrt{3}}{4} = 2500\sqrt{3} \approx 4330{,}13\text{ m}^2$.\\
+&Tổng diện tích: $S = 2400 + 2500\sqrt{3} \approx \boxed{6730\text{ m}^2}$.\\[4pt]\hline
+4&a) Hệ BPT: $\begin{cases} x + y \leq 8 \\ 2x + 3y \leq 18 \\ x + 2y \leq 11 \\ x, y \in \mathbb{Z},\ x \geq 0,\ y \geq 0 \end{cases}$; Tiền lãi: $T(x; y) = 30x + 40y$ (triệu đồng).\\
+&b) Tọa độ các đỉnh: $(0; 0)$, $(8; 0)$, $(6; 2)$, $(3; 4)$, $(0; 5{,}5)$.\\
+&Xưởng cần sản xuất \textbf{6 sản phẩm loại I} và \textbf{2 sản phẩm loại II}; tiền lãi lớn nhất đạt $\boxed{260\text{ triệu đồng}}$.\\\hline
+\end{tabularx}
+
+\newpage
+\begin{center}
+{\Large\bfseries HÌNH VẼ MIỀN NGHIỆM HỆ BẤT PHƯƠNG TRÌNH}\\[3pt]
+{\normalsize\bfseries (PHẦN III -- CÂU 4 \& PHẦN IV -- CÂU 4)}
+\end{center}
+
+\vspace{6pt}
+\begin{center}
+\textbf{\large 1. Phần III -- Câu 4: Miền đa giác $D$ của hệ bất phương trình}\\[6pt]
+\begin{tikzpicture}[scale=1.0, font=\normalsize, >=Stealth, line join=round, line cap=round]
+    % Trục toạ độ
+    \draw[->, line width=1.2pt] (-1.0,0) -- (6.0,0) node[below=2pt, font=\normalsize\bfseries] {$x$};
+    \draw[->, line width=1.2pt] (0,-0.8) -- (0,8.5) node[left=2pt, font=\normalsize\bfseries] {$y$};
+    \node[below left=2pt, font=\normalsize\bfseries] at (0,0) {$O$};
+    
+    % Miền D tô màu tứ giác OABC
+    \fill[blue!15] (0,0) -- (3,0) -- (1,6) -- (0,7) -- cycle;
+    
+    % Đường 3x + y = 9 (qua (3;0), (1;6), (0;9))
+    \draw[line width=1.3pt, blue!80!black] (0.33,8.0) -- (3.67,-2.0);
+    \node[above right, font=\normalsize\bfseries, blue!80!black] at (2.2,3.5) {$d_1\colon 3x+y=9$};
+    
+    % Đường x + y = 7 (qua (0;7), (1;6), (7;0))
+    \draw[line width=1.3pt, teal!80!black] (-0.8,7.8) -- (5.2,1.8);
+    \node[above right, font=\normalsize\bfseries, teal!80!black] at (0.2,7.2) {$d_2\colon x+y=7$};
+    
+    % Cạnh miền đa giác D (nét rất đậm)
+    \draw[line width=2.0pt, ink] (0,0) -- (3,0) -- (1,6) -- (0,7) -- cycle;
+    
+    % Các đỉnh của miền D
+    \fill (0,0) circle (3.5pt);
+    \fill (3,0) circle (3.8pt);
+    \node[below right=2pt, font=\normalsize\bfseries, black] at (3,0) {$A(3;0)$};
+    \fill (1,6) circle (4.0pt) node[above right=3pt, font=\normalsize\bfseries, black] {$B(1;6)$};
+    \fill (0,7) circle (3.8pt) node[left=4pt, font=\normalsize\bfseries, black] {$C(0;7)$};
+    
+    % Đường dóng đỉnh B(1;6)
+    \draw[dashed, line width=1.0pt, gray!80!black] (1,0) -- (1,6) -- (0,6);
+    \node[below=3pt, font=\normalsize\bfseries, black] at (1,0) {$1$};
+    \node[left=4pt, font=\normalsize\bfseries, black] at (0,6) {$6$};
+    
+    % Nhãn miền D
+    \node[ink, font=\Large\bfseries] at (1.0, 2.8) {Miền $D$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{6pt}
+\hrule
+\vspace{6pt}
+
+\begin{center}
+\textbf{\large 2. Phần IV -- Câu 4: Miền nghiệm ngũ giác $OABCD$ của bài toán tối ưu}\\[6pt]
+\begin{tikzpicture}[scale=1.1, font=\normalsize, >=Stealth, line join=round, line cap=round]
+    % Trục toạ độ
+    \draw[->, line width=1.2pt] (-1.0,0) -- (10.0,0) node[below=2pt, font=\normalsize\bfseries] {$x$ (sản phẩm loại I)};
+    \draw[->, line width=1.2pt] (0,-0.8) -- (0,7.5) node[left=2pt, font=\normalsize\bfseries] {$y$ (sản phẩm loại II)};
+    \node[below left=2pt, font=\normalsize\bfseries] at (0,0) {$O$};
+    
+    % Miền nghiệm ngũ giác O(0,0) - A(8,0) - B(6,2) - C(3,4) - D(0, 5.5)
+    \fill[ink!15] (0,0) -- (8,0) -- (6,2) -- (3,4) -- (0,5.5) -- cycle;
+    
+    % Đường x + y = 8 (qua (8;0), (6;2), (0;8))
+    \draw[line width=1.3pt, blue!80!black] (2.0,6.0) -- (8.8,-0.8);
+    \node[above right, font=\normalsize\bfseries, blue!80!black] at (7.0,1.5) {$x+y=8$};
+    
+    % Đường 2x + 3y = 18 (qua (0;6), (3;4), (6;2), (9;0))
+    \draw[line width=1.3pt, teal!80!black] (0.5,5.67) -- (9.5,-0.33);
+    \node[above right, font=\normalsize\bfseries, teal!80!black] at (3.5,4.3) {$2x+3y=18$};
+    
+    % Đường x + 2y = 11 (qua (0;5.5), (3;4), (11;0))
+    \draw[line width=1.3pt, purple!80!black] (-0.8,5.9) -- (7.5,1.75);
+    \node[above left, font=\normalsize\bfseries, purple!80!black] at (1.2,5.2) {$x+2y=11$};
+    
+    % Cạnh miền nghiệm ngũ giác
+    \draw[line width=2.0pt, ink] (0,0) -- (8,0) -- (6,2) -- (3,4) -- (0,5.5) -- cycle;
+    
+    % Các đỉnh
+    \fill (0,0) circle (3.5pt);
+    \fill (8,0) circle (3.8pt) node[below=3pt, font=\normalsize\bfseries, black] {$A(8;0)$};
+    \fill (6,2) circle (4.2pt) node[above right=3pt, font=\normalsize\bfseries, red!80!black] {$\mathbf{B(6;2)\ [Max]}$};
+    \fill (3,4) circle (3.8pt) node[above right=3pt, font=\normalsize\bfseries, black] {$C(3;4)$};
+    \fill (0,5.5) circle (3.8pt) node[left=4pt, font=\normalsize\bfseries, black] {$D(0; 5{,}5)$};
+    
+    % Đường dóng đỉnh B(6;2)
+    \draw[dashed, line width=1.0pt, red!80!black] (6,0) -- (6,2) -- (0,2);
+    \node[below=3pt, font=\normalsize\bfseries, black] at (6,0) {$6$};
+    \node[left=4pt, font=\normalsize\bfseries, black] at (0,2) {$2$};
+    
+    % Đường dóng đỉnh C(3;4)
+    \draw[dashed, line width=0.8pt, gray!80!black] (3,0) -- (3,4) -- (0,4);
+    \node[below=3pt, font=\normalsize\bfseries, black] at (3,0) {$3$};
+    \node[left=4pt, font=\normalsize\bfseries, black] at (0,4) {$4$};
+    
+    % Nhãn miền nghiệm
+    \node[ink, font=\Large\bfseries] at (2.5, 1.8) {Miền ngũ giác};
+\end{tikzpicture}
+\end{center}
+\end{document}
