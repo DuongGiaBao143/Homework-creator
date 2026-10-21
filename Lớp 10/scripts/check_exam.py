@@ -23,27 +23,65 @@ def validate_exam(root, exam):
         raise ValueError("Hồ sơ phải đủ, không lặp: I=12, II=2, III=4, IV=4.")
     if data.get("matrix_id") != matrix["id"]:
         raise ValueError("Hồ sơ thiếu hoặc sai mã ma trận đang áp dụng.")
-    slots = {f"{q['section']}.{q['number']}": q for q in matrix["questions"]}
+    slots = {f"{q['section']}.{q['number']}": q for q in matrix.get("questions", [])}
+    pool_by_id = {s["id"]: s for s in matrix.get("skill_pool", [])}
     assigned = set()
     for question in questions:
         label = f"{question['section']}.{question['number']}"
-        reference = question.get("matrix_slot", label)
-        if not isinstance(reference, str) or reference not in slots:
-            raise ValueError(f"{label}: mã dạng bài trong ma trận không hợp lệ.")
-        slot = slots[reference]
-        if slot["section"] != question["section"]:
-            raise ValueError(f"{label}: chỉ được hoán đổi dạng bài trong cùng phần của ma trận.")
-        if reference in assigned:
-            raise ValueError(f"{label}: lặp dạng bài {reference} trong ma trận.")
-        assigned.add(reference)
-        if question.get("topic") != slot["topic"]:
-            raise ValueError(f"{label}: chủ đề không khớp ma trận ({slot['topic']}).")
-        if question.get("level") != slot["level"]:
-            raise ValueError(f"{label}: mức độ không khớp ma trận ({slot['level']}).")
-        if "statements" in slot:
-            items = question.get("statements", [])
-            if len(items) != 4 or {(s.get("id"), s.get("level")) for s in items} != {(s["id"], s["level"]) for s in slot["statements"]}:
-                raise ValueError(f"{label}: a–d hoặc mức độ từng ý không khớp ma trận.")
+        topic = question.get("topic")
+        level = question.get("level")
+        skill_id = question.get("skill_id") or question.get("skill_code")
+
+        # Mode A: New flexible skill_pool validation
+        if skill_id is not None:
+            if topic not in matrix["allowed_topics"]:
+                raise ValueError(f"{label}: chủ đề không khớp ma trận ({topic}).")
+            if skill_id not in pool_by_id:
+                raise ValueError(f"{label}: mã kỹ năng '{skill_id}' không tồn tại trong skill_pool của ma trận.")
+            skill_def = pool_by_id[skill_id]
+            if question["section"] not in skill_def.get("applicable_sections", [question["section"]]):
+                raise ValueError(f"{label}: dạng bài {skill_id} không áp dụng cho phần {question['section']} của ma trận.")
+            if topic != skill_def["topic"]:
+                raise ValueError(f"{label}: chủ đề không khớp dạng bài trong ma trận ({skill_def['topic']}).")
+            if question["section"] == "II":
+                if level != "mixed":
+                    raise ValueError(f"{label}: Phần II phải có level='mixed' theo ma trận.")
+                items = question.get("statements", [])
+                if len(items) != 4 or {s.get("id") for s in items} != set("abcd"):
+                    raise ValueError(f"{label}: a–d hoặc mức độ từng ý không khớp ma trận.")
+                if any(s.get("level") not in {"NB", "TH", "VD"} for s in items):
+                    raise ValueError(f"{label}: mức độ từng ý đúng/sai không khớp ma trận.")
+            elif level != skill_def["level"]:
+                raise ValueError(f"{label}: mức độ không khớp dạng bài trong ma trận ({skill_def['level']}).")
+
+        # Mode B: Slot-based validation (matrix_slot or default baseline slots)
+        else:
+            reference = question["matrix_slot"] if "matrix_slot" in question else label
+            if not isinstance(reference, str) or reference not in slots:
+                raise ValueError(f"{label}: mã dạng bài trong ma trận không hợp lệ.")
+            slot = slots[reference]
+            if slot["section"] != question["section"]:
+                raise ValueError(f"{label}: chỉ được hoán đổi dạng bài trong cùng phần của ma trận.")
+            if reference in assigned:
+                raise ValueError(f"{label}: lặp dạng bài {reference} trong ma trận.")
+            assigned.add(reference)
+            if topic != slot["topic"]:
+                raise ValueError(f"{label}: chủ đề không khớp ma trận ({slot['topic']}).")
+            if level != slot["level"]:
+                raise ValueError(f"{label}: mức độ không khớp ma trận ({slot['level']}).")
+            if "statements" in slot:
+                items = question.get("statements", [])
+                if len(items) != 4 or {(s.get("id"), s.get("level")) for s in items} != {(s["id"], s["level"]) for s in slot["statements"]}:
+                    raise ValueError(f"{label}: a–d hoặc mức độ từng ý không khớp ma trận.")
+
+    # Global exam check
+    exam_topics = {q["topic"] for q in questions}
+    if not set(matrix["allowed_topics"]).issubset(exam_topics):
+        raise ValueError(f"Đề thi phải bao phủ đủ các mạch kiến thức theo ma trận: {set(matrix['allowed_topics'])}.")
+
+    sec2_topics = [q["topic"] for q in questions if q["section"] == "II"]
+    if len(sec2_topics) == 2 and sec2_topics[0] == sec2_topics[1]:
+        raise ValueError("Phần II phải chọn 2 chủ đề khác nhau theo ma trận để đảm bảo độ bao quát.")
     checked_sources = set()
     with connect(root) as conn:
         for question in questions:

@@ -3,7 +3,7 @@
   "status": "active",
   "grade": 10,
   "duration_minutes": 90,
-  "purpose": "Sườn đề mới bám nội dung Xuân Trường, đúng cấu trúc người dùng; mức độ 40/30/30 tham chiếu hai ma trận kèm theo.",
+  "purpose": "Ma trận đề kiểm tra Giữa kỳ I Toán 10 (GDPT 2018) theo Khung phân bổ ba mạch kiến thức kết hợp Ngân hàng dạng bài (Skill Pool) linh hoạt, không cố định câu hỏi.",
   "allowed_topics": [
     "menh_de_tap_hop",
     "bpt_hai_an",
@@ -21,7 +21,7 @@
     "to_hop",
     "xac_suat"
   ],
-  "scope_note": "Giới hạn giữa kỳ I của sườn được chọn, không phải khẳng định mọi đề giữa kỳ của các trường đều có cùng tiến độ.",
+  "scope_note": "Giới hạn kiến thức Giữa kỳ I theo SGK Toán 10 Kết nối tri thức với cuộc sống (Tập 1, Bài 1 đến Bài 6).",
   "sgk_anchors": {
     "volume": "1",
     "source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
@@ -64,81 +64,406 @@
     "TH": 3.0,
     "VD": 3.0
   },
-  "scoring_note": "Phân bổ mức độ quy ước mỗi ý đúng/sai 0,25 điểm trong ma trận. Đây không tự xác định cách chấm điểm thực tế; nhiều nguồn chấm lũy tiến 0,1/0,25/0,5/1 theo số ý đúng. Cần ghi rõ quy tắc khi tạo đề/đáp án.",
-  "modifications_from_primary": [
-    "Giữ số câu và phân bố ba mạch; được sắp lại thứ tự dạng bài trong cùng phần. Mỗi dạng xuất hiện đúng một lần; hồ sơ dùng matrix_slot để tham chiếu mã dạng gốc.",
-    "Đổi điểm tự luận từ 0,5–1–0,5–1 của Xuân Trường sang 0,5–0,5–1–1 để câu hình thực tế có điểm tương xứng.",
-    "Nhãn NB/TH/VD ở từng vị trí là đề xuất chuyên môn, không phải nhãn công bố trong file Xuân Trường.",
-    "Các vị trí VD phải giữ bước mô hình hóa hoặc suy luận; không biến thành thay số trực tiếp."
-  ],
-  "references": {
-    "XT": {
-      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-hoc-ky-1-toan-10-nam-2025-2026-truong-thpt-xuan-truong-ninh-binh.pdf",
-      "exam_code": "1101",
-      "question_pages": [
-        1,
-        2,
-        3
-      ],
-      "rubric_pages": [
-        8,
-        9
-      ],
-      "use": "Sườn chính: khớp 12+2+4+4; ba mạch kiến thức; biểu điểm tự luận"
-    },
-    "NVC": {
-      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-ky-1-toan-10-nam-2025-2026-truong-thpt-nguyen-van-cu-hai-phong.pdf",
-      "exam_code": "1001",
-      "question_pages": [
-        1,
-        2,
-        3
-      ],
-      "use": "Sườn cùng cấu trúc nhưng có vectơ nhập môn"
-    },
-    "NT": {
-      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-ky-1-toan-10-nam-2025-2026-truong-thpt-nguyen-trai-da-nang.pdf",
-      "matrix_pages": [
-        10
-      ],
-      "specification_pages": [
-        11,
-        12,
-        13
-      ],
-      "use": "Ma trận gốc: 40% Biết, 30% Hiểu, 30% Vận dụng; cấu trúc 12+2+4+3"
-    },
-    "QS": {
-      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-ky-1-toan-10-nam-2025-2026-truong-thpt-que-son-da-nang.pdf",
-      "matrix_pages": [
-        7
-      ],
-      "specification_pages": [
-        8,
-        9,
-        10,
-        11
-      ],
-      "question_pages": [
-        1,
-        2
-      ],
-      "use": "Ma trận gốc 40/30/30, cần lưu ý lệch chủ đề phần trả lời ngắn giữa bảng và đề"
-    },
-    "VD": {
-      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-hoc-ky-1-toan-10-nam-2026-2027-truong-thpt-viet-duc-ha-noi.pdf",
-      "question_pages": [
-        1,
-        2,
-        3,
-        4
-      ],
-      "rubric_pages": [
-        5
-      ],
-      "use": "Biến thể chỉ hai mạch, 12+2+4+2; không gộp vào sườn ba mạch"
+  "scoring_note": "Phân bổ mức độ tham khảo: mỗi ý đúng/sai 0,25 điểm. Pipeline kiểm tra số câu, chủ đề, mức độ nhận thức và nguồn dẫn; không áp đặt quy tắc chấm lũy tiến.",
+  "blueprint": {
+    "section_rules": {
+      "I": {
+        "count": 12,
+        "type": "multiple_choice",
+        "description": "12 câu trắc nghiệm nhiều lựa chọn, phân bổ đều 4 câu cho mỗi mạch kiến thức; mức độ Nhận biết (NB) hoặc Thông hiểu (TH).",
+        "topic_counts": {
+          "menh_de_tap_hop": 4,
+          "bpt_hai_an": 4,
+          "he_thuc_luong": 4
+        },
+        "allowed_levels": ["NB", "TH"]
+      },
+      "II": {
+        "count": 2,
+        "type": "true_false",
+        "description": "2 câu trắc nghiệm Đúng/Sai, chọn linh hoạt 2 trong 3 mạch kiến thức (cho phép cả Hệ thức lượng). Mỗi câu 4 ý: a, b là NB; c, d là TH.",
+        "distinct_topics": true,
+        "allowed_topic_pairs": [
+          ["menh_de_tap_hop", "bpt_hai_an"],
+          ["menh_de_tap_hop", "he_thuc_luong"],
+          ["bpt_hai_an", "he_thuc_luong"]
+        ],
+        "statements_per_question": 4,
+        "statement_levels": [
+          {"id": "a", "level": "NB"},
+          {"id": "b", "level": "NB"},
+          {"id": "c", "level": "TH"},
+          {"id": "d", "level": "TH"}
+        ]
+      },
+      "III": {
+        "count": 4,
+        "type": "short_answer",
+        "description": "4 câu trả lời ngắn, gồm các bài toán Thông hiểu (TH) và Vận dụng (VD) phân bổ trên 3 mạch kiến thức.",
+        "allowed_levels": ["TH", "VD"],
+        "level_distribution": {
+          "TH": 2,
+          "VD": 2
+        }
+      },
+      "IV": {
+        "count": 4,
+        "type": "written",
+        "description": "4 câu tự luận, gồm các bài toán Thông hiểu (TH) và Vận dụng (VD) trình bày lập luận rõ ràng.",
+        "allowed_levels": ["TH", "VD"],
+        "level_distribution": {
+          "TH": 2,
+          "VD": 2
+        }
+      }
     }
   },
+  "skill_pool": [
+    {
+      "id": "MD_NB_01",
+      "topic": "menh_de_tap_hop",
+      "level": "NB",
+      "skill": "Nhận biết một phát biểu là mệnh đề toán học; phân biệt với câu cảm thán, câu hỏi, câu cầu khiến",
+      "search_query": "mệnh đề câu khẳng định đúng sai",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "MD_NB_02",
+      "topic": "menh_de_tap_hop",
+      "level": "NB",
+      "skill": "Xét tính đúng sai của một mệnh đề toán học đơn giản (số học, hình học)",
+      "search_query": "mệnh đề đúng mệnh đề sai tam giác số nguyên tố",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "MD_NB_03",
+      "topic": "menh_de_tap_hop",
+      "level": "NB",
+      "skill": "Nhận biết mệnh đề chứa biến và tìm giá trị của biến để mệnh đề đúng hoặc sai",
+      "search_query": "mệnh đề chứa biến chia hết số tự nhiên",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "MD_NB_04",
+      "topic": "menh_de_tap_hop",
+      "level": "NB",
+      "skill": "Phát biểu và nhận biết mệnh đề phủ định của một mệnh đề (kể cả mệnh đề chứa ký hiệu với mọi, tồn tại)",
+      "search_query": "mệnh đề phủ định với mọi tồn tại",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "MD_NB_05",
+      "topic": "menh_de_tap_hop",
+      "level": "NB",
+      "skill": "Mệnh đề kéo theo, mệnh đề đảo, mệnh đề tương đương; xác định điều kiện cần, điều kiện đủ",
+      "search_query": "mệnh đề kéo theo điều kiện cần điều kiện đủ mệnh đề đảo",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "TH_NB_01",
+      "topic": "menh_de_tap_hop",
+      "level": "NB",
+      "skill": "Phân biệt ký hiệu thuộc, không thuộc, quan hệ tập con, tập hợp rỗng",
+      "search_query": "phần tử thuộc tập con tập rỗng",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "TH_NB_02",
+      "topic": "menh_de_tap_hop",
+      "level": "NB",
+      "skill": "Xác định tập hợp bằng cách liệt kê phần tử hoặc chỉ ra tính chất đặc trưng",
+      "search_query": "liệt kê phần tử tính chất đặc trưng phương trình nghiệm",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "TH_NB_03",
+      "topic": "menh_de_tap_hop",
+      "level": "NB",
+      "skill": "Xác định số phần tử của tập hợp, số tập con của một tập hợp hữu hạn",
+      "search_query": "số phần tử số tập con tập hợp hữu hạn",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "TH_NB_04",
+      "topic": "menh_de_tap_hop",
+      "level": "NB",
+      "skill": "Nhận biết các tập hợp số N, Z, Q, R và các tập con của R (khoảng, đoạn, nửa khoảng)",
+      "search_query": "tập hợp số khoảng đoạn nửa khoảng trục số",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "TH_TH_01",
+      "topic": "menh_de_tap_hop",
+      "level": "TH",
+      "skill": "Thực hiện phép toán giao, hợp, hiệu, phần bù của các tập hợp hữu hạn",
+      "search_query": "giao hợp hiệu phần bù tập hợp phần tử",
+      "applicable_sections": ["I", "II", "III", "IV"]
+    },
+    {
+      "id": "TH_TH_02",
+      "topic": "menh_de_tap_hop",
+      "level": "TH",
+      "skill": "Thực hiện phép toán giao, hợp, hiệu của các khoảng, đoạn, nửa khoảng trên tập số thực",
+      "search_query": "giao hợp khoảng đoạn nửa khoảng tập số thực",
+      "applicable_sections": ["I", "II", "III", "IV"]
+    },
+    {
+      "id": "TH_TH_03",
+      "topic": "menh_de_tap_hop",
+      "level": "TH",
+      "skill": "Biểu diễn các tập hợp số, khoảng đoạn và kết quả phép toán tập hợp trên trục số",
+      "search_query": "biểu diễn trục số khoảng đoạn gạch bỏ",
+      "applicable_sections": ["IV"]
+    },
+    {
+      "id": "TH_TH_04",
+      "topic": "menh_de_tap_hop",
+      "level": "TH",
+      "skill": "Đếm số phần tử, số nguyên thuộc tập hợp hoặc giao/hợp các khoảng thỏa mãn điều kiện",
+      "search_query": "đếm số nguyên số phần tử giao khoảng tập hợp",
+      "applicable_sections": ["III"]
+    },
+    {
+      "id": "TH_TH_05",
+      "topic": "menh_de_tap_hop",
+      "level": "TH",
+      "skill": "Ứng dụng tập hợp giải bài toán thực tế đơn giản bằng biểu đồ Venn hoặc công thức cộng phần tử",
+      "search_query": "biểu đồ Venn học sinh giỏi môn toán tiếng anh",
+      "applicable_sections": ["II", "III", "IV"]
+    },
+    {
+      "id": "TH_VD_01",
+      "topic": "menh_de_tap_hop",
+      "level": "VD",
+      "skill": "Tìm điều kiện của tham số m để giao, hợp của hai tập hợp số rỗng, khác rỗng hoặc là tập con",
+      "search_query": "tham số m để tập hợp con giao nhau khác rỗng khoảng đoạn",
+      "applicable_sections": ["III", "IV"]
+    },
+    {
+      "id": "TH_VD_02",
+      "topic": "menh_de_tap_hop",
+      "level": "VD",
+      "skill": "Bài toán thực tế suy luận logic nhiều tập hợp hoặc tối ưu số phần tử",
+      "search_query": "bài toán thực tế khảo sát số lượng tập hợp",
+      "applicable_sections": ["III", "IV"]
+    },
+    {
+      "id": "BPT_NB_01",
+      "topic": "bpt_hai_an",
+      "level": "NB",
+      "skill": "Nhận dạng bất phương trình bậc nhất hai ẩn",
+      "search_query": "bất phương trình bậc nhất hai ẩn nhận dạng",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "BPT_NB_02",
+      "topic": "bpt_hai_an",
+      "level": "NB",
+      "skill": "Nhận dạng hệ bất phương trình bậc nhất hai ẩn",
+      "search_query": "hệ bất phương trình bậc nhất hai ẩn nhận biết",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "BPT_NB_03",
+      "topic": "bpt_hai_an",
+      "level": "NB",
+      "skill": "Kiểm tra một cặp số hoặc điểm có là nghiệm của bất phương trình bậc nhất hai ẩn",
+      "search_query": "thay toạ độ kiểm tra nghiệm bất phương trình hai ẩn",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "BPT_NB_04",
+      "topic": "bpt_hai_an",
+      "level": "NB",
+      "skill": "Kiểm tra một cặp số hoặc điểm có là nghiệm của hệ bất phương trình bậc nhất hai ẩn",
+      "search_query": "điểm thuộc miền nghiệm hệ bất phương trình hai ẩn",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "BPT_NB_05",
+      "topic": "bpt_hai_an",
+      "level": "NB",
+      "skill": "Xác định phương trình đường thẳng bờ của nửa mặt phẳng miền nghiệm",
+      "search_query": "đường thẳng bờ miền nghiệm mặt phẳng toạ độ",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "BPT_TH_01",
+      "topic": "bpt_hai_an",
+      "level": "TH",
+      "skill": "Xác định miền nghiệm của bất phương trình hoặc hệ bất phương trình từ hình vẽ đồ thị cho trước",
+      "search_query": "hình vẽ miền nghiệm nửa mặt phẳng gạch sọc toạ độ",
+      "applicable_sections": ["I", "II", "III"]
+    },
+    {
+      "id": "BPT_TH_02",
+      "topic": "bpt_hai_an",
+      "level": "TH",
+      "skill": "Biểu diễn hình học tập nghiệm của bất phương trình bậc nhất hai ẩn trên mặt phẳng tọa độ Oxy",
+      "search_query": "biểu diễn miền nghiệm bất phương trình hai ẩn oxy vẽ đường thẳng",
+      "applicable_sections": ["II", "IV"]
+    },
+    {
+      "id": "BPT_TH_03",
+      "topic": "bpt_hai_an",
+      "level": "TH",
+      "skill": "Biểu diễn hình học miền nghiệm của hệ bất phương trình và xác định tọa độ các đỉnh của miền đa giác",
+      "search_query": "miền đa giác toạ độ các đỉnh hệ bất phương trình",
+      "applicable_sections": ["II", "III", "IV"]
+    },
+    {
+      "id": "BPT_TH_04",
+      "topic": "bpt_hai_an",
+      "level": "TH",
+      "skill": "Mô hình hóa bài toán thực tế đơn giản: thiết lập bất phương trình hoặc hệ bất phương trình từ ngữ cảnh",
+      "search_query": "thiết lập hệ bất phương trình chi phí thời gian năng suất",
+      "applicable_sections": ["II", "III", "IV"]
+    },
+    {
+      "id": "BPT_VD_01",
+      "topic": "bpt_hai_an",
+      "level": "VD",
+      "skill": "Bài toán tối ưu hóa tuyến tính thực tế: lập hệ ràng buộc, vẽ miền nghiệm đa giác, tìm GTLN/GTNN của biểu thức mục tiêu F(x, y)",
+      "search_query": "tối ưu tuyến tính lợi nhuận lớn nhất miền đa giác sản xuất",
+      "applicable_sections": ["IV"]
+    },
+    {
+      "id": "BPT_VD_02",
+      "topic": "bpt_hai_an",
+      "level": "VD",
+      "skill": "Tìm tham số để bất phương trình bậc nhất hai ẩn nghiệm đúng với mọi điểm thuộc miền đa giác",
+      "search_query": "tham số miền nghiệm đa giác nghiệm đúng với mọi điểm",
+      "applicable_sections": ["III"]
+    },
+    {
+      "id": "BPT_VD_03",
+      "topic": "bpt_hai_an",
+      "level": "VD",
+      "skill": "Bài toán thực tế tìm giá trị lớn nhất hoặc nhỏ nhất của chi phí, lợi nhuận dạng câu hỏi ngắn",
+      "search_query": "giá trị lớn nhất nhỏ nhất biểu thức F x y miền nghiệm",
+      "applicable_sections": ["III"]
+    },
+    {
+      "id": "LG_NB_01",
+      "topic": "he_thuc_luong",
+      "level": "NB",
+      "skill": "Nhận dạng giá trị lượng giác của một góc từ 0 đến 180 độ (góc đặc biệt, góc nhọn, góc tù)",
+      "search_query": "giá trị lượng giác sin cos tan cot góc đặc biệt",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "LG_NB_02",
+      "topic": "he_thuc_luong",
+      "level": "NB",
+      "skill": "Xác định dấu của các giá trị lượng giác sin, cos, tan, cot theo góc nhọn hoặc tù",
+      "search_query": "dấu giá trị lượng giác góc tù góc nhọn nửa đường tròn đơn vị",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "LG_NB_03",
+      "topic": "he_thuc_luong",
+      "level": "NB",
+      "skill": "Mối quan hệ lượng giác của hai góc bù nhau, phụ nhau",
+      "search_query": "hai góc bù nhau hai góc phụ nhau giá trị lượng giác",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "HTL_NB_01",
+      "topic": "he_thuc_luong",
+      "level": "NB",
+      "skill": "Nhận dạng công thức định lý côsin trong tam giác và hệ quả tính góc",
+      "search_query": "định lý côsin định lý cosin bình phương cạnh góc kẹp giữa",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "HTL_NB_02",
+      "topic": "he_thuc_luong",
+      "level": "NB",
+      "skill": "Nhận dạng công thức định lý sin trong tam giác và bán kính đường tròn ngoại tiếp",
+      "search_query": "định lý sin bán kính đường tròn ngoại tiếp cạnh đối diện",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "HTL_NB_03",
+      "topic": "he_thuc_luong",
+      "level": "NB",
+      "skill": "Nhận dạng các công thức tính diện tích tam giác (Heron, nửa tích cạnh nhân sin góc kẹp, abc/4R, pr)",
+      "search_query": "công thức diện tích tam giác Heron bán kính nội tiếp",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "HTL_NB_04",
+      "topic": "he_thuc_luong",
+      "level": "NB",
+      "skill": "Nhận dạng công thức tính độ dài đường trung tuyến của tam giác",
+      "search_query": "độ dài đường trung tuyến tam giác công thức",
+      "applicable_sections": ["I", "II"]
+    },
+    {
+      "id": "LG_TH_01",
+      "topic": "he_thuc_luong",
+      "level": "TH",
+      "skill": "Tính các giá trị lượng giác còn lại khi biết một giá trị lượng giác và khoảng góc",
+      "search_query": "cho sin tính cos tan cot hệ thức lượng giác cơ bản",
+      "applicable_sections": ["I", "II", "III", "IV"]
+    },
+    {
+      "id": "LG_TH_02",
+      "topic": "he_thuc_luong",
+      "level": "TH",
+      "skill": "Rút gọn hoặc tính giá trị của biểu thức lượng giác; biến đổi lượng giác có điều kiện",
+      "search_query": "rút gọn biểu thức lượng giác tính giá trị biểu thức góc bù",
+      "applicable_sections": ["I", "II", "III", "IV"]
+    },
+    {
+      "id": "HTL_TH_01",
+      "topic": "he_thuc_luong",
+      "level": "TH",
+      "skill": "Giải tam giác: tính cạnh, tính góc của tam giác khi biết 3 cạnh hoặc 2 cạnh và góc kẹp giữa",
+      "search_query": "giải tam giác tính cạnh tính góc định lý cosin sin",
+      "applicable_sections": ["I", "II", "III", "IV"]
+    },
+    {
+      "id": "HTL_TH_02",
+      "topic": "he_thuc_luong",
+      "level": "TH",
+      "skill": "Tính bán kính ngoại tiếp R, bán kính nội tiếp r, chiều cao, chu vi hoặc diện tích tam giác",
+      "search_query": "tính bán kính ngoại tiếp nội tiếp diện tích tam giác Heron",
+      "applicable_sections": ["I", "II", "III", "IV"]
+    },
+    {
+      "id": "HTL_TH_03",
+      "topic": "he_thuc_luong",
+      "level": "TH",
+      "skill": "Bài toán thực tế đơn giản ứng dụng giải tam giác (đo khoảng cách, chiều cao 1 tam giác)",
+      "search_query": "bài toán thực tế khoảng cách chiều cao góc ngắm tam giác",
+      "applicable_sections": ["II", "III", "IV"]
+    },
+    {
+      "id": "HTL_VD_01",
+      "topic": "he_thuc_luong",
+      "level": "VD",
+      "skill": "Mô hình hóa bài toán thực tế đo đạc gián tiếp phối hợp nhiều tam giác (đo chiều cao tháp, khoảng cách 2 điểm gián tiếp)",
+      "search_query": "đo chiều cao tháp hải đăng hai góc ngắm khoảng cách hai tàu",
+      "applicable_sections": ["III", "IV"]
+    },
+    {
+      "id": "HTL_VD_02",
+      "topic": "he_thuc_luong",
+      "level": "VD",
+      "skill": "Chứng minh hệ thức hình học hoặc nhận dạng đặc điểm tam giác (vuông, cân, đều) dựa vào hệ thức lượng",
+      "search_query": "chứng minh đẳng thức tam giác nhận dạng tam giác vuông cân",
+      "applicable_sections": ["III", "IV"]
+    },
+    {
+      "id": "HTL_VD_03",
+      "topic": "he_thuc_luong",
+      "level": "VD",
+      "skill": "Bài toán cực trị hình học tam giác, tìm khoảng cách ngắn nhất, góc nhìn lớn nhất",
+      "search_query": "cực trị khoảng cách góc nhìn lớn nhất hệ thức lượng tam giác",
+      "applicable_sections": ["III", "IV"]
+    }
+  ],
   "questions": [
     {
       "section": "I",
@@ -146,14 +471,13 @@
       "topic": "menh_de_tap_hop",
       "level": "NB",
       "max_points": 0.25,
-      "skill": "Nhận biết phát biểu là mệnh đề",
+      "skill_id": "MD_NB_01",
+      "skill": "Nhận biết một phát biểu là mệnh đề toán học",
       "reference": {
         "source_id": "XT",
         "section": "I",
         "number": 4,
-        "pages": [
-          1
-        ]
+        "pages": [1]
       }
     },
     {
@@ -162,14 +486,13 @@
       "topic": "menh_de_tap_hop",
       "level": "NB",
       "max_points": 0.25,
+      "skill_id": "MD_NB_03",
       "skill": "Mệnh đề chứa biến hoặc kiểm tính đúng/sai đơn giản",
       "reference": {
         "source_id": "XT",
         "section": "I",
         "number": 8,
-        "pages": [
-          1
-        ]
+        "pages": [1]
       }
     },
     {
@@ -178,14 +501,13 @@
       "topic": "menh_de_tap_hop",
       "level": "NB",
       "max_points": 0.25,
+      "skill_id": "TH_NB_01",
       "skill": "Phân biệt ký hiệu thuộc và tập con",
       "reference": {
         "source_id": "XT",
         "section": "I",
         "number": 5,
-        "pages": [
-          1
-        ]
+        "pages": [1]
       }
     },
     {
@@ -194,14 +516,13 @@
       "topic": "menh_de_tap_hop",
       "level": "NB",
       "max_points": 0.25,
+      "skill_id": "TH_NB_02",
       "skill": "Nhận biết tập con, số phần tử hoặc phép toán tập hợp đơn giản",
       "reference": {
         "source_id": "XT",
         "section": "I",
         "number": 11,
-        "pages": [
-          2
-        ]
+        "pages": [2]
       }
     },
     {
@@ -210,14 +531,13 @@
       "topic": "bpt_hai_an",
       "level": "NB",
       "max_points": 0.25,
+      "skill_id": "BPT_NB_01",
       "skill": "Nhận dạng bất phương trình bậc nhất hai ẩn",
       "reference": {
         "source_id": "XT",
         "section": "I",
         "number": 7,
-        "pages": [
-          1
-        ]
+        "pages": [1]
       }
     },
     {
@@ -226,14 +546,13 @@
       "topic": "bpt_hai_an",
       "level": "NB",
       "max_points": 0.25,
-      "skill": "Thay tọa độ kiểm tra một nghiệm",
+      "skill_id": "BPT_NB_03",
+      "skill": "Thay tọa độ kiểm tra một nghiệm của bất phương trình",
       "reference": {
         "source_id": "XT",
         "section": "I",
         "number": 2,
-        "pages": [
-          1
-        ]
+        "pages": [1]
       }
     },
     {
@@ -242,14 +561,13 @@
       "topic": "bpt_hai_an",
       "level": "NB",
       "max_points": 0.25,
+      "skill_id": "BPT_NB_02",
       "skill": "Nhận dạng hệ bất phương trình bậc nhất hai ẩn",
       "reference": {
         "source_id": "XT",
         "section": "I",
         "number": 12,
-        "pages": [
-          2
-        ]
+        "pages": [2]
       }
     },
     {
@@ -258,14 +576,13 @@
       "topic": "bpt_hai_an",
       "level": "NB",
       "max_points": 0.25,
+      "skill_id": "BPT_NB_04",
       "skill": "Kiểm tra điểm thuộc/không thuộc miền nghiệm hệ",
       "reference": {
         "source_id": "XT",
         "section": "I",
         "number": 10,
-        "pages": [
-          1
-        ]
+        "pages": [1]
       }
     },
     {
@@ -274,14 +591,13 @@
       "topic": "he_thuc_luong",
       "level": "NB",
       "max_points": 0.25,
+      "skill_id": "LG_NB_02",
       "skill": "Dấu giá trị lượng giác theo khoảng góc",
       "reference": {
         "source_id": "XT",
         "section": "I",
         "number": 3,
-        "pages": [
-          1
-        ]
+        "pages": [1]
       }
     },
     {
@@ -290,14 +606,13 @@
       "topic": "he_thuc_luong",
       "level": "NB",
       "max_points": 0.25,
+      "skill_id": "LG_NB_03",
       "skill": "Hệ thức hai góc bù nhau",
       "reference": {
         "source_id": "XT",
         "section": "I",
         "number": 9,
-        "pages": [
-          1
-        ]
+        "pages": [1]
       }
     },
     {
@@ -306,14 +621,13 @@
       "topic": "he_thuc_luong",
       "level": "NB",
       "max_points": 0.25,
+      "skill_id": "HTL_NB_01",
       "skill": "Nhận dạng định lý sin/côsin",
       "reference": {
         "source_id": "XT",
         "section": "I",
         "number": 6,
-        "pages": [
-          1
-        ]
+        "pages": [1]
       }
     },
     {
@@ -322,14 +636,13 @@
       "topic": "he_thuc_luong",
       "level": "NB",
       "max_points": 0.25,
+      "skill_id": "HTL_NB_03",
       "skill": "Nhận dạng công thức diện tích tam giác",
       "reference": {
         "source_id": "XT",
         "section": "I",
         "number": 1,
-        "pages": [
-          1
-        ]
+        "pages": [1]
       }
     },
     {
@@ -338,36 +651,19 @@
       "topic": "menh_de_tap_hop",
       "level": "mixed",
       "max_points": 1.0,
+      "skill_id": "TH_TH_01",
       "skill": "Một ngữ cảnh tập hợp: nhận biết phần tử/tập con rồi kiểm tra giao, hợp, hiệu và đầu mút khoảng",
       "reference": {
         "source_id": "XT",
         "section": "II",
         "number": 2,
-        "pages": [
-          2
-        ]
+        "pages": [2]
       },
       "statements": [
-        {
-          "id": "a",
-          "level": "NB",
-          "blueprint_weight": 0.25
-        },
-        {
-          "id": "b",
-          "level": "NB",
-          "blueprint_weight": 0.25
-        },
-        {
-          "id": "c",
-          "level": "TH",
-          "blueprint_weight": 0.25
-        },
-        {
-          "id": "d",
-          "level": "TH",
-          "blueprint_weight": 0.25
-        }
+        {"id": "a", "level": "NB", "blueprint_weight": 0.25},
+        {"id": "b", "level": "NB", "blueprint_weight": 0.25},
+        {"id": "c", "level": "TH", "blueprint_weight": 0.25},
+        {"id": "d", "level": "TH", "blueprint_weight": 0.25}
       ]
     },
     {
@@ -376,36 +672,19 @@
       "topic": "bpt_hai_an",
       "level": "mixed",
       "max_points": 1.0,
+      "skill_id": "BPT_TH_04",
       "skill": "Một ngữ cảnh thực tế: đọc ý nghĩa biến/chi phí, lập và kiểm tra điều kiện bất phương trình",
       "reference": {
         "source_id": "XT",
         "section": "II",
         "number": 1,
-        "pages": [
-          2
-        ]
+        "pages": [2]
       },
       "statements": [
-        {
-          "id": "a",
-          "level": "NB",
-          "blueprint_weight": 0.25
-        },
-        {
-          "id": "b",
-          "level": "NB",
-          "blueprint_weight": 0.25
-        },
-        {
-          "id": "c",
-          "level": "TH",
-          "blueprint_weight": 0.25
-        },
-        {
-          "id": "d",
-          "level": "TH",
-          "blueprint_weight": 0.25
-        }
+        {"id": "a", "level": "NB", "blueprint_weight": 0.25},
+        {"id": "b", "level": "NB", "blueprint_weight": 0.25},
+        {"id": "c", "level": "TH", "blueprint_weight": 0.25},
+        {"id": "d", "level": "TH", "blueprint_weight": 0.25}
       ]
     },
     {
@@ -414,14 +693,13 @@
       "topic": "menh_de_tap_hop",
       "level": "TH",
       "max_points": 0.5,
+      "skill_id": "TH_TH_04",
       "skill": "Đếm phần tử hoặc số nguyên trong tập hợp xác định bằng điều kiện",
       "reference": {
         "source_id": "XT",
         "section": "III",
         "number": 1,
-        "pages": [
-          2
-        ]
+        "pages": [2]
       }
     },
     {
@@ -430,14 +708,13 @@
       "topic": "he_thuc_luong",
       "level": "TH",
       "max_points": 0.5,
+      "skill_id": "LG_TH_02",
       "skill": "Tính/biến đổi giá trị lượng giác với điều kiện góc, quy định dạng đáp số",
       "reference": {
         "source_id": "XT",
         "section": "III",
         "number": 4,
-        "pages": [
-          3
-        ]
+        "pages": [3]
       }
     },
     {
@@ -446,14 +723,13 @@
       "topic": "bpt_hai_an",
       "level": "VD",
       "max_points": 0.5,
+      "skill_id": "BPT_VD_02",
       "skill": "Tìm tham số để một bất phương trình đúng với mọi điểm của miền đa giác",
       "reference": {
         "source_id": "XT",
         "section": "III",
         "number": 3,
-        "pages": [
-          3
-        ]
+        "pages": [3]
       }
     },
     {
@@ -462,14 +738,13 @@
       "topic": "he_thuc_luong",
       "level": "VD",
       "max_points": 0.5,
+      "skill_id": "HTL_VD_01",
       "skill": "Mô hình hóa đo khoảng cách/chiều cao qua tam giác, xác định đúng đại lượng cần tìm",
       "reference": {
         "source_id": "XT",
         "section": "III",
         "number": 2,
-        "pages": [
-          2
-        ]
+        "pages": [2]
       }
     },
     {
@@ -478,14 +753,13 @@
       "topic": "menh_de_tap_hop",
       "level": "TH",
       "max_points": 0.5,
+      "skill_id": "TH_TH_03",
       "skill": "Trình bày phép giao/hợp/hiệu của hai tập hợp, biểu diễn trên trục số",
       "reference": {
         "source_id": "XT",
         "section": "IV",
         "number": 1,
-        "pages": [
-          3
-        ]
+        "pages": [3]
       }
     },
     {
@@ -494,14 +768,13 @@
       "topic": "he_thuc_luong",
       "level": "TH",
       "max_points": 0.5,
+      "skill_id": "LG_TH_02",
       "skill": "Trình bày phép biến đổi lượng giác và kiểm điều kiện/dấu",
       "reference": {
         "source_id": "XT",
         "section": "IV",
         "number": 2,
-        "pages": [
-          3
-        ]
+        "pages": [3]
       }
     },
     {
@@ -510,14 +783,13 @@
       "topic": "he_thuc_luong",
       "level": "VD",
       "max_points": 1.0,
+      "skill_id": "HTL_VD_01",
       "skill": "Mô hình hóa hình thực tế, phân chia thành tam giác và tính chiều cao/diện tích",
       "reference": {
         "source_id": "XT",
         "section": "IV",
         "number": 3,
-        "pages": [
-          3
-        ]
+        "pages": [3]
       }
     },
     {
@@ -526,17 +798,43 @@
       "topic": "bpt_hai_an",
       "level": "VD",
       "max_points": 1.0,
+      "skill_id": "BPT_VD_01",
       "skill": "Lập hệ ràng buộc, xác định miền nghiệm, tối ưu hàm tuyến tính và kết luận theo đơn vị thực tế",
       "reference": {
         "source_id": "XT",
         "section": "IV",
         "number": 4,
-        "pages": [
-          3
-        ]
+        "pages": [3]
       }
     }
   ],
-  "counts_note": "22 câu lớn; khi tách 8 ý đúng/sai có 28 đơn vị phân bổ cấp câu/ý. Các ý nhỏ của tự luận chưa đếm thành câu lớn riêng.",
-  "workflow_note": "config/exam_structure.json chọn ma trận này qua trường matrix. GEMINI.md chứa ma trận và pipeline Pha 0–4. Số câu trong ma trận là mã dạng tham chiếu; được hoán đổi trong cùng phần, giữ đủ mỗi dạng đúng một lần. Bộ lấy mẫu gán nguồn theo mã dạng gốc; check_exam.py dùng matrix_slot (mặc định section.number) để kiểm ánh xạ cùng phần, không lặp, đúng chủ đề và mức độ của 22 câu cùng 8 ý đúng/sai. Kỹ năng thực tế cần agent đối chiếu. Không kiểm điểm số."
+  "references": {
+    "XT": {
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-hoc-ky-1-toan-10-nam-2025-2026-truong-thpt-xuan-truong-ninh-binh.pdf",
+      "exam_code": "1101",
+      "question_pages": [1, 2, 3],
+      "rubric_pages": [8, 9],
+      "use": "Sườn tham khảo cấu trúc 12+2+4+4 và ba mạch kiến thức"
+    },
+    "NVC": {
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-ky-1-toan-10-nam-2025-2026-truong-thpt-nguyen-van-cu-hai-phong.pdf",
+      "exam_code": "1001",
+      "question_pages": [1, 2, 3],
+      "use": "Sườn tham khảo cấu trúc 12+2+4+4 có câu hỏi hình học/lượng giác mở rộng"
+    },
+    "NT": {
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-ky-1-toan-10-nam-2025-2026-truong-thpt-nguyen-trai-da-nang.pdf",
+      "matrix_pages": [10],
+      "specification_pages": [11, 12, 13],
+      "use": "Ma trận tham chiếu tỷ lệ mức độ 40% Biết, 30% Hiểu, 30% Vận dụng"
+    },
+    "QS": {
+      "source": "Nguon_Tai_Lieu/Đề thi/giữa kì/de-giua-ky-1-toan-10-nam-2025-2026-truong-thpt-que-son-da-nang.pdf",
+      "matrix_pages": [7],
+      "specification_pages": [8, 9, 10, 11],
+      "question_pages": [1, 2],
+      "use": "Ma trận tham chiếu yêu cầu cần đạt phân theo chủ đề"
+    }
+  },
+  "workflow_note": "Ma trận sử dụng Khung phân bổ (Blueprint) kết hợp Ngân hàng dạng bài (Skill Pool). Khi tạo đề mới, các câu hỏi được chọn đa dạng từ Skill Pool theo tỷ lệ mạch kiến thức và mức độ, không cố định câu hỏi ở một dạng duy nhất. check_exam.py kiểm tra sự phù hợp của kỹ năng, chủ đề, mức độ và nguồn dẫn SGK/dataset."
 }

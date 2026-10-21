@@ -169,3 +169,13 @@ Khi tạo đề mới theo sườn này:
 7. Chỉ xuất PDF sau khi đúng phạm vi, cấu trúc, mức độ và kiểm toán lời giải. Chưa tạo đề hay PDF mới trong lượt phân tích này.
 
 Nếu muốn bám riêng Việt Đức, phải dùng sườn hai mạch và chuyển/thiết kế lại phần tự luận cho đủ 4 câu theo yêu cầu; không lấy tỷ trọng ba mạch của báo cáo này áp vào đề đó.
+
+
+## Nâng cấp: Chuyển đổi sang Ma trận Khung phân bổ (Blueprint Quota) và Ngân hàng Dạng bài (Skill Pool)
+
+Nhằm giải quyết triệt để vấn đề sườn cố định (fixed question slots) ở phiên bản ban đầu:
+- **Hạn chế cũ:** Mỗi vị trí câu hỏi trên đề bị khóa cứng vào một kỹ năng đơn lẻ của đề Xuân Trường 1101 (ví dụ I.1 luôn là nhận biết mệnh đề, I.6 luôn là thay tọa độ kiểm tra nghiệm, II.1 luôn là tập hợp, II.2 luôn là BPT, Hệ thức lượng không bao giờ được xuất hiện ở Đúng/Sai). Điều này làm các đề sinh ra bị đơn điệu, không phản ánh được tính đa dạng của đề thi thực tế.
+- **Kiến trúc mới:**
+  1. **Khung phân bổ tỷ lệ (Blueprint Quota):** Cố định số câu theo chuẩn 12 + 2 + 4 + 4 (90 phút) và tỷ lệ mức độ/chủ đề trên 3 mạch kiến thức. Cho phép Phần II Đúng/Sai chọn linh hoạt 2 trong 3 mạch kiến thức (bao gồm cả Hệ thức lượng trong tam giác).
+  2. **Ngân hàng Dạng bài (Skill Pool GDPT 2018):** Xây dựng 43 dạng bài / yêu cầu cần đạt chi tiết cho cả 3 mạch theo SGK Kết nối tri thức (Bài 1 đến Bài 6). Khi tạo đề, hệ thống bốc ngẫu nhiên dạng bài từ Skill Pool theo seed, giúp mỗi đề thi mang một diện mạo mới mẻ, phong phú và bao quát toàn diện chương trình.
+  3. **Bộ kiểm hồ sơ linh hoạt:** `check_exam.py` hỗ trợ cả mã `skill_id` mới và mã `matrix_slot` cũ, bảo đảm tương thích ngược 100% với các đề đã biên soạn trước đó (Đề 1 đến Đề 5).
