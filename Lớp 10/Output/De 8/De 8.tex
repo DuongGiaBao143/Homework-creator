@@ -1,0 +1,515 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.5cm,top=1.4cm,bottom=1.4cm]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or Math gives us hope that every problem has a solution% Trang 7
+    \or Math + You = Champion% Trang 8
+    \or Where Frustration Becomes Inspiration% Trang 9
+    \or Turning Confusion into Clarity% Trang 10
+    \or Don't be an X, be a Y of mathematics% Trang 11
+    \or Don't get mad. Learn to add% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.5pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\newcommand{\parttitle}[1]{\par\vspace{2pt}{\large\bfseries\color{ink}#1}\par\vspace{1pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[2pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{12pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.4cm,labelsep=.15cm,itemsep=1.5pt,topsep=1.0pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.6cm,itemsep=1.0pt,topsep=1.0pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[4pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GK1}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 08}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.2cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0008}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.2cm}
+
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án đúng duy nhất.}
+\begin{enumerate}
+\item Tập hợp gồm tất cả các số thực $x$ thỏa mãn $-1 < x \le 4$ được viết dưới dạng khoảng, đoạn, nửa khoảng là
+\four{$(-1; 4]$.}{$[-1; 4)$.}{$(-1; 4)$.}{$[-1; 4]$.}
+
+\item Trong các phát biểu sau đây, phát biểu nào là một mệnh đề toán học?
+\four{Ngày mai trời có mưa không?}{Phương trình $x^2 - 4 = 0$ có hai nghiệm thực.}{Thời tiết hôm nay thật mát mẻ!}{Hãy học bài thật chăm chỉ nhé!}
+
+\item Cho hai tập hợp $A = \{0; 1; 2; 3; 4\}$ và $B = \{2; 3; 5; 7\}$. Giao của hai tập hợp $A \cap B$ bằng
+\four{$\{0; 1; 4\}$.}{$\{2; 3\}$.}{$\{5; 7\}$.}{$\{0; 1; 2; 3; 4; 5; 7\}$.}
+
+\item Liệt kê các phần tử của tập hợp $A = \{x \in \mathbb{Z} \mid x^2 - 5x + 6 = 0\}$.
+\four{$A = \{2\}$.}{$A = \{3\}$.}{$A = \{2; 3\}$.}{$A = \{-3; -2\}$.}
+
+\item Cặp số $(x; y)$ nào sau đây là một nghiệm của hệ bất phương trình $\begin{cases} x + y - 2 \le 0 \\ 2x - y + 1 > 0 \end{cases}$?
+\four{$(1; 2)$.}{$(2; 1)$.}{$(0; 1)$.}{$(0; 0)$.}
+
+\item Cặp số $(x; y)$ nào sau đây \textbf{không phải} là nghiệm của bất phương trình $x - 2y + 4 \ge 0$?
+\four{$(0; 0)$.}{$(2; 1)$.}{$(1; 3)$.}{$(-2; 1)$.}
+
+\item Miền nghiệm của bất phương trình $x - y - 1 \ge 0$ là nửa mặt phẳng (kể cả bờ $d: x - y - 1 = 0$) chứa điểm nào sau đây?
+\four{$M(0; 0)$.}{$N(2; 0)$.}{$P(1; 2)$.}{$Q(-1; 0)$.}
+
+\item Đường thẳng bờ của miền nghiệm của bất phương trình $2x - 5y + 10 \le 0$ có phương trình là
+\four{$2x - 5y = 0$.}{$5x - 2y + 10 = 0$.}{$2x + 5y + 10 = 0$.}{$2x - 5y + 10 = 0$.}
+
+\item Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$. Công thức tính độ dài đường trung tuyến $m_a$ kẻ từ đỉnh $A$ là
+\four{$m_a^2 = \dfrac{b^2 + c^2}{2} - \dfrac{a^2}{4}$.}{$m_a^2 = \dfrac{b^2 + c^2 - a^2}{2}$.}{$m_a^2 = \dfrac{2(b^2 + c^2) + a^2}{4}$.}{$m_a^2 = \dfrac{b^2 + c^2}{4} - \dfrac{a^2}{2}$.}
+
+\item Cho góc nhọn $\alpha$ thỏa mãn $0^\circ < \alpha < 90^\circ$ và $\cos \alpha = \dfrac{4}{5}$. Giá trị của $\sin \alpha$ bằng
+\four{$\dfrac{3}{5}$.}{$-\dfrac{3}{5}$.}{$\dfrac{1}{5}$.}{$\dfrac{9}{25}$.}
+
+\item Cho tam giác $ABC$ nội tiếp đường tròn bán kính $R$, có các cạnh $BC = a, CA = b, AB = c$. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$\dfrac{a}{\sin A} = R$.}{$\dfrac{a}{\sin A} = \dfrac{R}{2}$.}{$\dfrac{a}{\sin A} = 2R$.}{$\dfrac{a}{\sin A} = 4R$.}
+
+\item Với mọi góc $\alpha$ thỏa mãn $0^\circ < \alpha < 180^\circ$, khẳng định nào sau đây là \textbf{đúng}?
+\four{$\sin(180^\circ - \alpha) = -\sin \alpha$.}{$\cos(180^\circ - \alpha) = \cos \alpha$.}{$\tan(180^\circ - \alpha) = \tan \alpha$.}{$\sin(180^\circ - \alpha) = \sin \alpha$.}
+\end{enumerate}
+
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Thí sinh trả lời từ câu 13 đến câu 14. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}[resume]
+\item Cho hai tập hợp $A = \{x \in \mathbb{R} \mid x^2 - 4x + 3 = 0\}$ và $B = \{x \in \mathbb{N} \mid x \le 3\}$.
+\begin{enumerate}
+    \item Tập hợp $A$ có đúng $2$ phần tử là $\{1; 3\}$.
+    \item Tập hợp $B$ gồm $4$ phần tử là $\{0; 1; 2; 3\}$.
+    \item Giao của hai tập hợp là $A \cap B = \{1; 3\}$.
+    \item Hiệu của hai tập hợp là $B \setminus A = \{2\}$.
+\end{enumerate}
+
+\item Cho hệ bất phương trình bậc nhất hai ẩn $\begin{cases} x \ge 0,\; y \ge 0 \\ x + y \le 5 \\ 2x + 3y \le 12 \end{cases}$. Biết miền nghiệm của hệ là miền tứ giác $OABC$ trên mặt phẳng tọa độ $Oxy$.
+\begin{enumerate}
+    \item Điểm gốc tọa độ $O(0; 0)$ thuộc miền nghiệm của hệ bất phương trình đã cho.
+    \item Tọa độ đỉnh $A$ nằm trên trục hoành $Ox$ là $A(5; 0)$.
+    \item Tọa độ đỉnh $B$ là giao điểm của hai đường thẳng $x + y = 5$ và $2x + 3y = 12$ là $B(3; 2)$.
+    \item Biểu thức $F(x, y) = 2x + y$ đạt giá trị lớn nhất trên miền nghiệm bằng $11$.
+\end{enumerate}
+\end{enumerate}
+
+\parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 15 đến câu 18. Viết kết quả vào ô quy định.}
+\begin{enumerate}[resume]
+\item Cho hai tập hợp số $A = [-4; 3]$ và $B = (0; 7]$. Tìm số nguyên $x$ thuộc tập hợp giao $A \cap B$.
+\answerbox
+
+\item Cho hệ bất phương trình bậc nhất hai ẩn $\begin{cases} x \ge 0,\; y \ge 0 \\ x + y \le 6 \\ 2x + y \le 8 \end{cases}$.
+Tìm giá trị lớn nhất của biểu thức $F(x, y) = 5x + 3y$ trên miền nghiệm của hệ.
+\answerbox
+
+\item Cho tam giác $ABC$ có độ dài hai cạnh $b = AC = 5$, $c = AB = 8$ và góc xen giữa $\widehat{A} = 60^\circ$. Tính độ dài cạnh $a = BC$.
+\answerbox
+
+\item \begin{minipage}[t]{0.62\linewidth}
+Hai chiếc tàu thủy $B$ và $C$ cùng xuất phát từ một cảng biển $A$ vào cùng một thời điểm, di chuyển thẳng đều theo hai hướng tạo với nhau một góc $\widehat{BAC} = 60^\circ$. Tàu thứ nhất chạy với vận tốc $30\text{ km/h}$, tàu thứ hai chạy với vận tốc $40\text{ km/h}$. Hỏi sau $2$ giờ kể từ lúc khởi hành, khoảng cách giữa hai tàu là bao nhiêu kilômét? (\textit{Làm tròn kết quả đến hàng đơn vị}).
+\vspace{6pt}
+
+\answerbox
+\end{minipage}\hfill
+\begin{minipage}[t]{0.35\linewidth}
+\centering
+\begin{tikzpicture}[scale=0.75, every node/.style={scale=0.85}]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (3.0,0);
+    % AC = 4.0, angle = 60 deg
+    \coordinate (C) at (2.0, 3.464);
+
+    \draw[thick, ink] (A) node[below left] {$A$} -- (B) node[below right] {$B$};
+    \draw[thick, ink] (A) -- (C) node[above] {$C$};
+    \draw[dashed, teal!80!black, line width=1.1pt] (B) -- (C);
+
+    \filldraw[black] (A) circle (1.8pt);
+    \filldraw[blue!80!black] (B) circle (2.2pt);
+    \filldraw[red!80!black] (C) circle (2.2pt);
+
+    \draw (0.6,0) arc (0:60:0.6);
+    \node at (0.9,0.35) {\small $60^\circ$};
+    \node at (1.5,-0.3) {\small $60\text{ km}$};
+    \node at (0.6,1.8) {\small $80\text{ km}$};
+    \node[right, teal!80!black] at (2.7,1.8) {$d = ?$};
+\end{tikzpicture}
+\end{minipage}
+\end{enumerate}
+
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày lời giải chi tiết từ câu 19 đến câu 22.}
+\begin{enumerate}[resume]
+\item \textit{(1,0 điểm)} Cho hai tập hợp khác rỗng $A = [m; m + 3]$ và $B = [-2; 4]$ với $m$ là tham số thực. Tìm tất cả các giá trị của $m$ để tập hợp giao $A \cap B$ khác rỗng ($A \cap B \ne \varnothing$).
+
+\item \textit{(0,75 điểm)} Cho góc $\alpha$ thỏa mãn $0^\circ < \alpha < 180^\circ$ và $\sin \alpha + \cos \alpha = \dfrac{7}{5}$.
+\begin{enumerate}
+    \item Tính giá trị của biểu thức $M = \sin \alpha \cdot \cos \alpha$.
+    \item Tính giá trị của biểu thức $N = \sin^3 \alpha + \cos^3 \alpha$.
+\end{enumerate}
+
+\item \begin{minipage}[t]{0.58\linewidth}
+\textit{(0,75 điểm)} Để xác định khoảng cách giữa hai vị trí $A$ và $B$ nằm ở hai bên bờ một khúc sông mà không thể qua sông đo trực tiếp được, một nhóm đo đạc chọn điểm mốc $C$ ở cùng phía bờ sông với điểm $A$. Nhóm đo được khoảng cách $AC = 80\text{ m}$, và dùng giác kế xác định được hai góc $\widehat{CAB} = 75^\circ$ và $\widehat{ACB} = 60^\circ$. Tính khoảng cách $AB$ giữa hai vị trí (\textit{làm tròn kết quả đến một chữ số thập phân}).
+\end{minipage}\hfill
+\begin{minipage}[t]{0.38\linewidth}
+\centering
+\begin{tikzpicture}[scale=0.82, every node/.style={scale=0.85}]
+    \coordinate (A) at (0,0);
+    \coordinate (C) at (3.2,0);
+    % B: góc A = 75 độ, góc C = 60 độ => góc B = 45 độ
+    % AC = 3.2. AB = 3.2 * sin(60)/sin(45) = 3.92
+    % By coordinates: A=(0,0), C=(3.2,0).
+    % B is at (3.92 * cos 75, 3.92 * sin 75) = (1.015, 3.786)
+    \coordinate (B) at (1.015, 3.786);
+
+    % River representation
+    \draw[blue!40, fill=blue!8, dashed] (-0.5,1.8) .. controls (1.5,1.4) .. (4.0,2.2) -- (4.0,2.8) .. controls (1.5,2.0) .. (-0.5,2.4) -- cycle;
+    \node[blue!70!black, font=\scriptsize\itshape] at (2.2,2.3) {Dòng sông};
+
+    \draw[thick, ink] (A) node[below left] {$A$} -- (C) node[below right] {$C$};
+    \draw[thick, teal!80!black] (A) -- (B) node[above] {$B$};
+    \draw[thick, teal!80!black] (C) -- (B);
+
+    \filldraw[black] (A) circle (1.8pt);
+    \filldraw[black] (C) circle (1.8pt);
+    \filldraw[red!80!black] (B) circle (2.2pt);
+
+    \node at (1.6,-0.3) {\small $80\text{ m}$};
+    \node at (0.4,0.4) {\small $75^\circ$};
+    \node at (2.7,0.35) {\small $60^\circ$};
+\end{tikzpicture}
+\end{minipage}
+
+\item \textit{(0,5 điểm)} Một cơ sở sản xuất cần pha chế hai loại dung dịch khử khuẩn: loại $X$ và loại $Y$.
+\begin{itemize}[leftmargin=0.5cm]
+    \item Để pha chế $1$ lít dung dịch loại $X$ cần $10\text{ ml}$ hóa chất A và $30\text{ ml}$ hóa chất B.
+    \item Để pha chế $1$ lít dung dịch loại $Y$ cần $20\text{ ml}$ hóa chất A và $20\text{ ml}$ hóa chất B.
+\end{itemize}
+Cơ sở hiện có sẵn $800\text{ ml}$ hóa chất A và $1200\text{ ml}$ hóa chất B dự trữ. Biết mỗi lít dung dịch loại $X$ mang lại lợi nhuận $50\,000$ đồng, mỗi lít dung dịch loại $Y$ mang lại lợi nhuận $60\,000$ đồng. Hỏi cơ sở cần pha chế bao nhiêu lít dung dịch mỗi loại để tổng lợi nhuận thu được là lớn nhất?
+\end{enumerate}
+
+\newpage
+% =========================================================================
+% BẢNG ĐÁP ÁN VÀ LỜI GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\vspace{0.2cm}
+\textbf{1. Phần I: Trắc nghiệm nhiều lựa chọn}
+\begin{center}
+{\setlength{\tabcolsep}{2.5pt}\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} & \textbf{Câu 5} & \textbf{Câu 6} & \textbf{Câu 7} & \textbf{Câu 8} & \textbf{Câu 9} & \textbf{Câu 10} & \textbf{Câu 11} & \textbf{Câu 12} \\
+\hline
+\textbf{A} & \textbf{B} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{C} & \textbf{B} & \textbf{D} & \textbf{A} & \textbf{A} & \textbf{C} & \textbf{D} \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{2. Phần II: Trắc nghiệm đúng/sai}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu hỏi} & \textbf{Ý a)} & \textbf{Ý b)} & \textbf{Ý c)} & \textbf{Ý d)} \\
+\hline
+\textbf{Câu 13} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} \\
+\hline
+\textbf{Câu 14} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{3. Phần III: Trắc nghiệm trả lời ngắn}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Câu 15} & \textbf{Câu 16} & \textbf{Câu 17} & \textbf{Câu 18} \\
+\hline
+\textbf{3} & \textbf{22} & \textbf{7} & \textbf{72} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{4. Phần IV: Tự luận}
+\begin{center}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Câu hỏi} & \textbf{Kết quả tóm tắt} \\
+\hline
+\textbf{Câu 19} & $m \in [-5; 4]$ hay $-5 \le m \le 4$. \\
+\hline
+\textbf{Câu 20} & a) $M = \dfrac{12}{25}$;\quad b) $N = \dfrac{91}{125}$. \\
+\hline
+\textbf{Câu 21} & Khoảng cách $AB \approx 98{,}0\text{ m}$. \\
+\hline
+\textbf{Câu 22} & Pha chế \textbf{20 lít loại X} và \textbf{30 lít loại Y}; lợi nhuận lớn nhất là $2\,800\,000$ đồng. \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+% =========================================================================
+% HÌNH VẼ MIỀN NGHIỆM ĐỘC LẬP NGOÀI BẢNG CHO CÂU 16 VÀ CÂU 22
+% =========================================================================
+\parttitle{HÌNH VẼ BIỂU DIỄN MIỀN NGHIỆM (HỆ BẤT PHƯƠNG TRÌNH)}
+
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\textbf{Hình 1: Miền nghiệm Câu 16}\\[6pt]
+\begin{tikzpicture}[scale=0.75, >=Stealth]
+    % Trục toạ độ
+    \draw[line width=1.2pt, ->] (-0.8,0) -- (5.5,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-0.8) -- (0,7.0) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left, font=\normalsize\bfseries] at (0,0) {$O$};
+
+    % Đa giác nghiệm O(0;0), A(4;0), B(2;4), C(0;6)
+    \fill[fill=ink!18] (0,0) -- (4,0) -- (2,4) -- (0,6) -- cycle;
+    \draw[line width=1.8pt, blue!70!black] (0,0) -- (4,0) -- (2,4) -- (0,6) -- cycle;
+
+    % Đường d1: x + y = 6 (cắt (6;0) và (0;6))
+    \draw[line width=1.1pt, dashed, red!80!black] (-0.3, 6.3) -- (6.3, -0.3) node[above right, font=\small] {$d_1: x+y=6$};
+    % Đường d2: 2x + y = 8 (cắt (4;0) và (0;8))
+    \draw[line width=1.1pt, dashed, teal!80!black] (-0.3, 8.6) -- (4.4, -0.8) node[below right, font=\small] {$d_2: 2x+y=8$};
+
+    % Đỉnh
+    \filldraw[black] (0,0) circle (3pt);
+    \filldraw[black] (4,0) circle (3.5pt) node[below, font=\normalsize\bfseries] {$A(4;0)$};
+    \filldraw[black] (2,4) circle (3.5pt) node[above right, font=\normalsize\bfseries] {$B(2;4)$};
+    \filldraw[black] (0,6) circle (3.5pt) node[left, font=\normalsize\bfseries] {$C(0;6)$};
+
+    % Dóng tọa độ B
+    \draw[dotted, thick] (2,0) node[below, font=\small] {$2$} -- (2,4) -- (0,4) node[left, font=\small] {$4$};
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\textbf{Hình 2: Miền nghiệm Câu 22 (Quy hoạch tuyến tính)}\\[6pt]
+\begin{tikzpicture}[x=0.065cm, y=0.065cm, >=Stealth]
+    % Trục toạ độ
+    \draw[line width=1.2pt, ->] (-8,0) -- (55,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-8) -- (0,52) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left, font=\normalsize\bfseries] at (0,0) {$O$};
+
+    % Đa giác nghiệm O(0;0), A(40;0), B(20;30), C(0;40)
+    \fill[fill=ink!18] (0,0) -- (40,0) -- (20,30) -- (0,40) -- cycle;
+    \draw[line width=1.8pt, blue!70!black] (0,0) -- (40,0) -- (20,30) -- (0,40) -- cycle;
+
+    % d1: x + 2y = 80 (cắt (80;0) và (0;40))
+    \draw[line width=1.1pt, dashed, red!80!black] (-5, 42.5) -- (52, 14) node[above right, font=\small] {$d_1: x+2y=80$};
+    % d2: 3x + 2y = 120 (cắt (40;0) và (0;60))
+    \draw[line width=1.1pt, dashed, teal!80!black] (-3, 64.5) -- (44, -6) node[below right, font=\small] {$d_2: 3x+2y=120$};
+
+    % Đỉnh
+    \filldraw[black] (0,0) circle (3pt);
+    \filldraw[black] (40,0) circle (3.5pt) node[below, font=\normalsize\bfseries] {$A(40;0)$};
+    \filldraw[black] (20,30) circle (3.5pt) node[above right, font=\normalsize\bfseries] {$B(20;30)$};
+    \filldraw[black] (0,40) circle (3.5pt) node[left, font=\normalsize\bfseries] {$C(0;40)$};
+
+    % Dóng tọa độ B
+    \draw[dotted, thick] (20,0) node[below, font=\small] {$20$} -- (20,30) -- (0,30) node[left, font=\small] {$30$};
+\end{tikzpicture}
+\end{minipage}
+
+\newpage
+% =========================================================================
+% HƯỚNG DẪN GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{HƯỚNG DẪN GIẢI CHI TIẾT}
+
+\textbf{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\begin{itemize}[leftmargin=0.6cm, itemsep=3pt]
+    \item \textbf{Câu 1:} Tập hợp $\{x \in \mathbb{R} \mid -1 < x \le 4\}$ có đầu mút bên trái là ngoặc tròn và bên phải là ngoặc vuông, viết dưới dạng nửa khoảng là $(-1; 4]$. Chọn \textbf{A}.
+    \item \textbf{Câu 2:} Mệnh đề toán học là phát biểu mang tính đúng hoặc sai về sự kiện toán học. Câu ``Phương trình $x^2 - 4 = 0$ có hai nghiệm thực'' là mệnh đề toán học (đúng với nghiệm $x = \pm 2$). Chọn \textbf{B}.
+    \item \textbf{Câu 3:} $A \cap B = \{x \mid x \in A \text{ và } x \in B\} = \{2; 3\}$. Chọn \textbf{B}.
+    \item \textbf{Câu 4:} $x^2 - 5x + 6 = 0 \iff (x - 2)(x - 3) = 0 \iff x = 2$ hoặc $x = 3$. Vì $2, 3 \in \mathbb{Z}$ nên $A = \{2; 3\}$. Chọn \textbf{C}.
+    \item \textbf{Câu 5:} Thay $(0; 0)$ vào hệ: $0 + 0 - 2 = -2 \le 0$ (thỏa mãn) và $2(0) - 0 + 1 = 1 > 0$ (thỏa mãn). Chọn \textbf{D}.
+    \item \textbf{Câu 6:} Thay $(1; 3)$ vào vế trái: $1 - 2(3) + 4 = -1 < 0$, không thỏa mãn bất phương trình. Chọn \textbf{C}.
+    \item \textbf{Câu 7:} Thay $N(2; 0)$ vào vế trái: $2 - 0 - 1 = 1 \ge 0$ (thỏa mãn). Vậy miền nghiệm chứa điểm $N(2; 0)$. Chọn \textbf{B}.
+    \item \textbf{Câu 8:} Bất phương trình $2x - 5y + 10 \le 0$ có đường thẳng bờ tương ứng là phương trình dấu đẳng thức: $2x - 5y + 10 = 0$. Chọn \textbf{D}.
+    \item \textbf{Câu 9:} Theo công thức tính độ dài đường trung tuyến: $m_a^2 = \dfrac{b^2 + c^2}{2} - \dfrac{a^2}{4}$. Chọn \textbf{A}.
+    \item \textbf{Câu 10:} Vì $0^\circ < \alpha < 90^\circ$ nên $\sin \alpha > 0$. Do đó:
+    $\sin \alpha = \sqrt{1 - \cos^2 \alpha} = \sqrt{1 - \dfrac{16}{25}} = \dfrac{3}{5}$. Chọn \textbf{A}.
+    \item \textbf{Câu 11:} Theo định lý sin trong tam giác: $\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2R$. Chọn \textbf{C}.
+    \item \textbf{Câu 12:} Với hai góc bù nhau: $\sin(180^\circ - \alpha) = \sin \alpha$. Chọn \textbf{D}.
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{PHẦN II. Trắc nghiệm đúng/sai}
+\begin{itemize}[leftmargin=0.6cm, itemsep=3pt]
+    \item \textbf{Câu 13:}
+    \begin{itemize}
+        \item a) Phương trình $x^2 - 4x + 3 = 0 \iff x = 1$ hoặc $x = 3$. Vậy $A = \{1; 3\}$, có đúng 2 phần tử $\Rightarrow$ \textbf{Đúng}.
+        \item b) $x \in \mathbb{N}$ và $x \le 3 \implies B = \{0; 1; 2; 3\}$ có 4 phần tử $\Rightarrow$ \textbf{Đúng}.
+        \item c) $A \cap B = \{1; 3\} \cap \{0; 1; 2; 3\} = \{1; 3\}$ $\Rightarrow$ \textbf{Đúng}.
+        \item d) $B \setminus A = \{0; 1; 2; 3\} \setminus \{1; 3\} = \{0; 2\}$. Phát biểu ghi $\{2\}$ là thiếu phần tử $0$ $\Rightarrow$ \textbf{Sai}.
+    \end{itemize}
+
+    \item \textbf{Câu 14:}
+    \begin{itemize}
+        \item a) Gốc $O(0; 0)$ thỏa mãn tất cả các bất phương trình trong hệ $\Rightarrow$ \textbf{Đúng}.
+        \item b) Điểm trên trục hoành ($y = 0$): $x \le 5$ và $2x \le 12 \implies x \le 5$. Vậy đỉnh $A(5; 0)$ $\Rightarrow$ \textbf{Đúng}.
+        \item c) Giải hệ $\begin{cases} x + y = 5 \\ 2x + 3y = 12 \end{cases} \iff \begin{cases} x = 3 \\ y = 2 \end{cases}$. Điểm $B(3; 2)$ $\Rightarrow$ \textbf{Đúng}.
+        \item d) Các đỉnh của miền tứ giác là $O(0; 0)$, $A(5; 0)$, $B(3; 2)$, $C(0; 4)$.
+        Tính $F(x, y) = 2x + y$:
+        $F(O) = 0$; $F(A) = 2(5) + 0 = 10$; $F(B) = 2(3) + 2 = 8$; $F(C) = 2(0) + 4 = 4$.
+        Giá trị lớn nhất của $F$ trên miền nghiệm là $10$ (tại $A(5; 0)$). Phát biểu ghi $11$ là $\Rightarrow$ \textbf{Sai}.
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{PHẦN III. Trắc nghiệm trả lời ngắn}
+\begin{itemize}[leftmargin=0.6cm, itemsep=3pt]
+    \item \textbf{Câu 15:} Giao của hai tập hợp là $A \cap B = [-4; 3] \cap (0; 7] = (0; 3]$.
+    Các số nguyên thuộc nửa khoảng $(0; 3]$ là $\{1; 2; 3\}$. Vậy có tất cả $3$ số nguyên.
+    \item \textbf{Câu 16:} Miền nghiệm của hệ là miền tứ giác $OABC$ với các đỉnh:
+    $O(0; 0)$, $A(4; 0)$ (giao của $2x + y = 8$ với trục $Ox$), $B(2; 4)$ (giao điểm của $x + y = 6$ và $2x + y = 8$), $C(0; 6)$ (giao của $x + y = 6$ với trục $Oy$).
+    Tính giá trị $F(x, y) = 5x + 3y$ tại các đỉnh:
+    \begin{itemize}
+        \item $F(O) = 0$;
+        \item $F(A) = 5(4) + 3(0) = 20$;
+        \item $F(B) = 5(2) + 3(4) = 10 + 12 = 22$;
+        \item $F(C) = 5(0) + 3(6) = 18$.
+    \end{itemize}
+    Vậy giá trị lớn nhất là $22$ (đạt tại đỉnh $B(2; 4)$).
+    \item \textbf{Câu 17:} Áp dụng định lý côsin trong tam giác $ABC$:
+    \[
+    a^2 = b^2 + c^2 - 2bc \cos A = 5^2 + 8^2 - 2 \cdot 5 \cdot 8 \cdot \cos 60^\circ = 25 + 64 - 40 = 49 \implies a = \sqrt{49} = 7.
+    \]
+    \item \textbf{Câu 18:} Sau $2$ giờ, quãng đường hai tàu đi được lần lượt là:
+    $AB = 30 \times 2 = 60\text{ km}$ và $AC = 40 \times 2 = 80\text{ km}$.
+    Khoảng cách giữa hai tàu là độ dài cạnh $BC$ trong $\triangle ABC$:
+    \[
+    BC^2 = AB^2 + AC^2 - 2 AB \cdot AC \cdot \cos 60^\circ = 60^2 + 80^2 - 2 \cdot 60 \cdot 80 \cdot \dfrac{1}{2} = 3600 + 6400 - 4800 = 5200.
+    \]
+    Suy ra $BC = \sqrt{5200} = 20\sqrt{13} \approx 72{,}11\text{ km}$. Làm tròn đến hàng đơn vị là $72\text{ km}$.
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{PHẦN IV. Tự luận}
+\begin{itemize}[leftmargin=0.6cm, itemsep=4pt]
+    \item \textbf{Câu 19:}
+    Hai tập hợp $A = [m; m + 3]$ và $B = [-2; 4]$ có độ dài lần lượt là $3$ và $6$ nên luôn khác rỗng với mọi $m$.
+    Để $A \cap B \ne \varnothing$, điều kiện cần và đủ là đoạn $A$ không nằm hoàn toàn về bên trái hay bên phải đoạn $B$:
+    \[
+    \begin{cases}
+    m \le 4 \\
+    m + 3 \ge -2
+    \end{cases}
+    \iff
+    \begin{cases}
+    m \le 4 \\
+    m \ge -5
+    \end{cases}
+    \iff -5 \le m \le 4.
+    \]
+    Vậy tất cả các giá trị của tham số $m$ thỏa mãn là $m \in [-5; 4]$.
+
+    \item \textbf{Câu 20:}
+    \begin{enumerate}
+        \item Bình phương hai vế của đẳng thức $\sin \alpha + \cos \alpha = \dfrac{7}{5}$:
+        \[
+        (\sin \alpha + \cos \alpha)^2 = \dfrac{49}{25} \iff \sin^2 \alpha + \cos^2 \alpha + 2\sin \alpha \cos \alpha = \dfrac{49}{25}.
+        \]
+        Vì $\sin^2 \alpha + \cos^2 \alpha = 1$ nên:
+        \[
+        1 + 2M = \dfrac{49}{25} \iff 2M = \dfrac{24}{25} \iff M = \dfrac{12}{25}.
+        \]
+        \item Áp dụng hằng đẳng thức tổng hai lập phương:
+        \[
+        N = \sin^3 \alpha + \cos^3 \alpha = (\sin \alpha + \cos \alpha)(\sin^2 \alpha - \sin \alpha \cos \alpha + \cos^2 \alpha).
+        \]
+        Thay các giá trị đã biết:
+        \[
+        N = \dfrac{7}{5} \left(1 - M\right) = \dfrac{7}{5} \left(1 - \dfrac{12}{25}\right) = \dfrac{7}{5} \cdot \dfrac{13}{25} = \dfrac{91}{125}.
+        \]
+    \end{enumerate}
+
+    \item \textbf{Câu 21:}
+    Trong tam giác $\triangle ABC$, tổng ba góc bằng $180^\circ$, suy ra:
+    \[
+    \widehat{ABC} = 180^\circ - (\widehat{CAB} + \widehat{ACB}) = 180^\circ - (75^\circ + 60^\circ) = 45^\circ.
+    \]
+    Áp dụng định lý sin trong tam giác $\triangle ABC$:
+    \[
+    \dfrac{AB}{\sin \widehat{ACB}} = \dfrac{AC}{\sin \widehat{ABC}} \implies AB = \dfrac{AC \cdot \sin 60^\circ}{\sin 45^\circ} = \dfrac{80 \cdot \dfrac{\sqrt{3}}{2}}{\dfrac{\sqrt{2}}{2}} = 80 \cdot \sqrt{\dfrac{3}{2}} = 40\sqrt{6}\text{ m}.
+    \]
+    Ta có $40\sqrt{6} \approx 97{,}979\text{ m}$. Làm tròn kết quả đến một chữ số thập phân, khoảng cách $AB$ là $98{,}0\text{ m}$.
+
+    \item \textbf{Câu 22:}
+    Gọi $x, y$ lần lượt là số lít dung dịch loại $X$ và loại $Y$ mà cơ sở cần pha chế ($x, y \ge 0$).
+    \begin{itemize}
+        \item Lượng hóa chất A sử dụng: $10x + 20y \le 800 \iff x + 2y \le 80$.
+        \item Lượng hóa chất B sử dụng: $30x + 20y \le 1200 \iff 3x + 2y \le 120$.
+    \end{itemize}
+    Ta có hệ bất phương trình ràng buộc:
+    \[
+    \begin{cases}
+    x \ge 0,\; y \ge 0 \\
+    x + 2y \le 80 \\
+    3x + 2y \le 120
+    \end{cases}
+    \]
+    Miền nghiệm của hệ là miền tứ giác $OABC$ với các đỉnh:
+    \begin{itemize}
+        \item $O(0; 0)$;
+        \item $A(40; 0)$ (giao điểm của $3x + 2y = 120$ với trục $Ox$);
+        \item $B(20; 30)$ (nghiệm của hệ $\begin{cases} x + 2y = 80 \\ 3x + 2y = 120 \end{cases}$);
+        \item $C(0; 40)$ (giao điểm của $x + 2y = 80$ với trục $Oy$).
+    \end{itemize}
+    Tổng lợi nhuận thu được là $F(x, y) = 50x + 60y$ (nghìn đồng). Tính giá trị của $F$ tại các đỉnh:
+    \begin{itemize}
+        \item $F(O) = 0$;
+        \item $F(A) = 50(40) + 60(0) = 2000$ (nghìn đồng) = $2$ triệu đồng;
+        \item $F(B) = 50(20) + 60(30) = 1000 + 1800 = 2800$ (nghìn đồng) = $2{,}8$ triệu đồng;
+        \item $F(C) = 50(0) + 60(40) = 2400$ (nghìn đồng) = $2{,}4$ triệu đồng.
+    \end{itemize}
+    Giá trị lớn nhất của $F(x, y)$ đạt được tại đỉnh $B(20; 30)$.\\
+    Vậy cơ sở cần pha chế \textbf{20 lít dung dịch loại X} và \textbf{30 lít dung dịch loại Y} để thu được lợi nhuận lớn nhất là \textbf{2.800.000 đồng}.
+\end{itemize}
+
+\end{document}
