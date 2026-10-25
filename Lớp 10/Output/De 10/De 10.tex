@@ -1,0 +1,585 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.5cm,top=1.4cm,bottom=1.4cm]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or Math gives us hope that every problem has a solution% Trang 7
+    \or Math + You = Champion% Trang 8
+    \or Where Frustration Becomes Inspiration% Trang 9
+    \or Turning Confusion into Clarity% Trang 10
+    \or Don't be an X, be a Y of mathematics% Trang 11
+    \or Don't get mad. Learn to add% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.5pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\newcommand{\parttitle}[1]{\par\vspace{2pt}{\large\bfseries\color{ink}#1}\par\vspace{1pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[2pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{12pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.4cm,labelsep=.15cm,itemsep=1.5pt,topsep=1.0pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.6cm,itemsep=1.0pt,topsep=1.0pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[4pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GK1}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 10}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.2cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0010}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.2cm}
+
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án đúng duy nhất.}
+\begin{enumerate}
+\item Tập hợp gồm tất cả các số thực $x$ thỏa mãn $-2 \le x < 5$ được viết dưới dạng khoảng, đoạn, nửa khoảng là
+\four{$(-2; 5]$.}{$[-2; 5)$.}{$(-2; 5)$.}{$[-2; 5]$.}
+
+\item Trong các phát biểu sau đây, phát biểu nào là một mệnh đề toán học?
+\four{Tam giác đều có ba góc bằng $60^\circ$.}{Bạn có thích học môn Toán không?}{Thời tiết hôm nay thật đẹp!}{Hãy làm bài tập về nhà đầy đủ nhé!}
+
+\item Cho hai tập hợp số $A = [-3; 2)$ và $B = (0; 4]$. Khi đó tập hợp giao $A \cap B$ bằng
+\four{$[-3; 4]$.}{$(0; 2]$.}{$(0; 2)$.}{$[-3; 0)$.}
+
+\item Cho mệnh đề kéo theo: ``Nếu tam giác $ABC$ đều thì tam giác $ABC$ cân''. Mệnh đề đảo của mệnh đề trên là
+\four{Nếu tam giác $ABC$ không đều thì tam giác $ABC$ không cân.}{Nếu tam giác $ABC$ không cân thì tam giác $ABC$ không đều.}{Nếu tam giác $ABC$ đều thì tam giác $ABC$ vuông.}{Nếu tam giác $ABC$ cân thì tam giác $ABC$ đều.}
+
+\item Cặp số $(x; y)$ nào sau đây là một nghiệm của hệ bất phương trình $\begin{cases} x - y + 1 > 0 \\ 2x + y - 4 \le 0 \end{cases}$?
+\four{$(1; 1)$.}{$(2; 2)$.}{$(0; 5)$.}{$(3; 0)$.}
+
+\item Cặp số $(x; y)$ nào sau đây \textbf{không phải} là nghiệm của bất phương trình $2x - 3y + 6 \ge 0$?
+\four{$(0; 0)$.}{$(1; 1)$.}{$(-1; 2)$.}{$(3; 2)$.}
+
+\item Đường thẳng bờ của nửa mặt phẳng miền nghiệm của bất phương trình $3x - 4y + 12 \ge 0$ có phương trình là
+\four{$3x + 4y + 12 = 0$.}{$4x - 3y + 12 = 0$.}{$3x - 4y = 0$.}{$3x - 4y + 12 = 0$.}
+
+\item Miền nghiệm của bất phương trình $2x + y - 4 \le 0$ là nửa mặt phẳng (kể cả bờ $d: 2x + y - 4 = 0$) chứa điểm nào sau đây?
+\four{$M(2; 1)$.}{$O(0; 0)$.}{$N(1; 3)$.}{$P(3; 0)$.}
+
+\item Giá trị của $\cos 120^\circ$ bằng
+\four{$\dfrac{1}{2}$.}{$-\dfrac{\sqrt{3}}{2}$.}{$-\dfrac{1}{2}$.}{$\dfrac{\sqrt{3}}{2}$.}
+
+\item Cho góc nhọn $\alpha$ thỏa mãn $0^\circ < \alpha < 90^\circ$ và $\sin \alpha = \dfrac{3}{5}$. Giá trị của biểu thức $P = 2\cos^2 \alpha - 1$ bằng
+\four{$\dfrac{7}{25}$.}{$-\dfrac{7}{25}$.}{$\dfrac{24}{25}$.}{$\dfrac{16}{25}$.}
+
+\item Với mọi góc $\alpha$ thỏa mãn $0^\circ < \alpha < 180^\circ$, khẳng định nào sau đây là \textbf{đúng}?
+\four{$\sin(180^\circ - \alpha) = -\sin \alpha$.}{$\cos(180^\circ - \alpha) = -\cos \alpha$.}{$\tan(180^\circ - \alpha) = \tan \alpha$.}{$\cos(180^\circ - \alpha) = \cos \alpha$.}
+
+\item Cho tam giác $ABC$ có độ dài các cạnh $BC = a, CA = b, AB = c$. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$a^2 = b^2 + c^2 + 2bc\cos A$.}{$a^2 = b^2 + c^2 - bc\cos A$.}{$a^2 = b^2 + c^2 - 2bc\sin A$.}{$a^2 = b^2 + c^2 - 2bc\cos A$.}
+\end{enumerate}
+
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Thí sinh trả lời từ câu 13 đến câu 14. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}[resume]
+\item Cho hai tập hợp $A = \{x \in \mathbb{N} \mid (x^2 - 9)(2x^2 - 5x + 2) = 0\}$ và $B = \{x \in \mathbb{Z} \mid -2 \le x \le 2\}$.
+\begin{enumerate}
+    \item Số phần tử của tập hợp $A$ là $n(A) = 2$.
+    \item Số tập hợp con của tập hợp $A$ là $4$.
+    \item Giao của hai tập hợp là $A \cap B = \{2\}$.
+    \item Tập hợp hiệu $B \setminus A$ có đúng $3$ phần tử.
+\end{enumerate}
+
+\item Cho tam giác $ABC$ có độ dài ba cạnh lần lượt là $a = BC = 7$, $b = CA = 5$, $c = AB = 6$.
+\begin{enumerate}
+    \item Nửa chu vi của tam giác $ABC$ bằng $p = 9$.
+    \item Côsin của góc $A$ có giá trị bằng $\cos A = \dfrac{1}{5}$.
+    \item Diện tích của tam giác $ABC$ bằng $S = 6\sqrt{6}$.
+    \item Bán kính đường tròn nội tiếp của tam giác $ABC$ bằng $r = \sqrt{6}$.
+\end{enumerate}
+\end{enumerate}
+
+\parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 15 đến câu 18. Viết kết quả vào ô quy định.}
+\begin{enumerate}[resume]
+\item Cho hai tập hợp số $A = [-3; 5]$ và $B = (1; 9)$. Tìm số phần tử nguyên thuộc tập hợp giao $A \cap B$.
+\answerbox
+
+\item Một cửa hàng bán hai loại nước ép trái cây: loại I và loại II. Mỗi lít loại I cần dùng $2\text{ kg}$ cam và $1\text{ kg}$ táo, đem lại lợi nhuận $40$ nghìn đồng. Mỗi lít loại II cần dùng $1\text{ kg}$ cam và $2\text{ kg}$ táo, đem lại lợi nhuận $50$ nghìn đồng. Cửa hàng có sẵn $10\text{ kg}$ cam và $10\text{ kg}$ táo. Hỏi lợi nhuận lớn nhất mà cửa hàng có thể thu được từ việc bán hai loại nước ép là bao nhiêu nghìn đồng?
+\answerbox
+
+\item Cho tam giác $ABC$ có độ dài hai cạnh $AB = 6$, $AC = 10$ và góc kẹp giữa $\widehat{BAC} = 120^\circ$. Tính độ dài cạnh $BC$.
+\answerbox
+
+\item \begin{minipage}[t]{0.62\linewidth}
+Một trạm hải đăng $A$ và một ngọn đồi $B$ cùng nằm ở bờ biển. Một con tàu ở vị trí $C$ ngoài khơi. Khoảng cách giữa trạm hải đăng $A$ và ngọn đồi $B$ đo được là $AB = 600\text{ m}$. Từ trạm hải đăng $A$, người ta đo được góc nhìn giữa ngọn đồi $B$ và con tàu $C$ là $\widehat{CAB} = 45^\circ$. Từ ngọn đồi $B$, người ta đo được góc $\widehat{CBA} = 105^\circ$. Tính khoảng cách từ ngọn đồi $B$ đến con tàu $C$ (tức độ dài đoạn thẳng $BC$) theo đơn vị mét (\textit{làm tròn kết quả đến hàng đơn vị}).
+\vspace{6pt}
+
+\answerbox
+\end{minipage}\hfill
+\begin{minipage}[t]{0.35\linewidth}
+\centering
+\begin{tikzpicture}[scale=0.72, every node/.style={scale=0.85}]
+    % Bờ biển và biển
+    \draw[blue!40, fill=blue!8, dashed] (-0.3,0.5) .. controls (1.5,0.8) .. (4.2,0.3) -- (4.2,4.0) -- (-0.3,4.0) -- cycle;
+    \node[blue!70!black, font=\scriptsize\itshape] at (2.0,3.6) {Vùng biển};
+
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2.6,0);
+    % Góc A = 45 độ, góc B = 105 độ => góc C = 30 độ.
+    % BC = 600*sqrt(2) approx 849. Tỉ lệ: AB = 2.6 => BC = 2.6 * sqrt(2) approx 3.68.
+    % Vector BC tạo với BA (hướng Tây) góc 105 độ => hướng BC tạo với Ox góc 75 độ.
+    % C = B + (3.68 * cos 75, 3.68 * sin 75) = (2.6 + 0.95, 3.55) = (3.55, 3.55)
+    \coordinate (C) at (3.55, 3.55);
+
+    % Đường bờ nối A, B
+    \draw[line width=1.3pt, ink] (-0.5,-0.1) -- (A) node[below left] {$A$} -- (B) node[below right] {$B$} -- (4.0,-0.1);
+    \node[below, font=\scriptsize\itshape] at (1.3,-0.4) {Bờ biển};
+
+    % Các tia ngắm
+    \draw[thick, ink] (A) -- (B);
+    \draw[thick, teal!80!black] (A) -- (C) node[above right] {$C$ (Tàu)};
+    \draw[dashed, red!80!black, line width=1.1pt] (B) -- (C);
+
+    \filldraw[black] (A) circle (2.0pt);
+    \filldraw[black] (B) circle (2.0pt);
+    \filldraw[red!80!black] (C) circle (2.4pt);
+
+    \draw (0.6,0) arc (0:45:0.6);
+    \node at (0.9,0.25) {\small $45^\circ$};
+
+    \draw (2.1,0) arc (180:75:0.5);
+    \node at (2.1,0.5) {\small $105^\circ$};
+
+    \node at (1.3,-0.2) {\small $600\text{ m}$};
+    \node[right, red!80!black] at (3.1,1.8) {$d = ?$};
+\end{tikzpicture}
+\end{minipage}
+\end{enumerate}
+
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày lời giải chi tiết từ câu 19 đến câu 22.}
+\begin{enumerate}[resume]
+\item \textit{(1,0 điểm)} Một lớp $10$ có $42$ học sinh, trong đó có $25$ bạn thích chơi môn bóng đá, $18$ bạn thích chơi môn bóng rổ, và có $7$ bạn không thích chơi môn thể thao nào trong hai môn này.
+\begin{enumerate}
+    \item Hỏi có bao nhiêu học sinh trong lớp thích chơi cả hai môn bóng đá và bóng rổ?
+    \item Có bao nhiêu học sinh trong lớp chỉ thích chơi đúng một trong hai môn thể thao trên?
+\end{enumerate}
+
+\item \textit{(0,75 điểm)} Cho góc $\alpha$ thỏa mãn $0^\circ < \alpha < 180^\circ$ và $\sin \alpha + \cos \alpha = \dfrac{1}{5}$.
+\begin{enumerate}
+    \item Tính giá trị của biểu thức $P = \sin \alpha \cdot \cos \alpha$.
+    \item Tính giá trị của biểu thức $Q = \sin^3 \alpha + \cos^3 \alpha$.
+\end{enumerate}
+
+\item \begin{minipage}[t]{0.58\linewidth}
+\textit{(0,75 điểm)} Giả sử $CD = h$ là chiều cao của một tháp truyền hình trên mặt đất phẳng, trong đó $C$ là chân tháp, $D$ là đỉnh tháp. Để đo chiều cao tháp, nhóm học sinh chọn hai điểm $A$ và $B$ trên mặt đất thẳng hàng với chân tháp $C$ (điểm $B$ nằm giữa $A$ và $C$). Nhóm đo được khoảng cách $AB = 40\text{ m}$, và dùng giác kế đo được các góc nâng nhìn lên đỉnh tháp lần lượt là $\widehat{CAD} = 30^\circ$ và $\widehat{CBD} = 45^\circ$. Tính chiều cao $h$ của ngọn tháp (\textit{làm tròn kết quả đến chữ số thập phân thứ nhất}).
+\end{minipage}\hfill
+\begin{minipage}[t]{0.38\linewidth}
+\centering
+\begin{tikzpicture}[scale=0.82, every node/.style={scale=0.85}]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (1.6,0);
+    \coordinate (C) at (3.8,0);
+    \coordinate (D) at (3.8,2.2);
+
+    % Mặt đất
+    \draw[line width=1.2pt, ink] (-0.3,0) -- (4.3,0);
+    % Tháp CD
+    \draw[line width=2.0pt, teal!80!black] (C) node[below] {$C$} -- (D) node[above] {$D$};
+    \node[right, teal!80!black] at (3.8,1.1) {$h$};
+
+    % Các tia ngắm
+    \draw[thick, ink] (A) node[below] {$A$} -- (D);
+    \draw[thick, ink] (B) node[below] {$B$} -- (D);
+
+    % Chân vuông góc tại C
+    \draw (3.55,0) -- (3.55,0.25) -- (3.8,0.25);
+
+    % Điểm đỉnh
+    \filldraw[black] (A) circle (1.8pt);
+    \filldraw[black] (B) circle (1.8pt);
+    \filldraw[black] (C) circle (1.8pt);
+    \filldraw[red!80!black] (D) circle (2.2pt);
+
+    % Góc nâng
+    \draw (0.6,0) arc (0:30:0.6);
+    \node at (0.9,0.2) {\small $30^\circ$};
+
+    \draw (2.1,0) arc (0:45:0.5);
+    \node at (2.3,0.3) {\small $45^\circ$};
+
+    \node at (0.8,-0.3) {\small $40\text{ m}$};
+\end{tikzpicture}
+\end{minipage}
+
+\item \textit{(0,5 điểm)} Một phân xưởng may mặc dự định sản xuất hai loại áo: áo sơ mi (loại I) và áo khoác gió (loại II).
+\begin{itemize}[leftmargin=0.5cm]
+    \item Để may một chiếc áo loại I cần $2\text{ m}^2$ vải và $3$ giờ công lao động.
+    \item Để may một chiếc áo loại II cần $3\text{ m}^2$ vải và $2$ giờ công lao động.
+\end{itemize}
+Phân xưởng hiện có tối đa $180\text{ m}^2$ vải và tổng quỹ thời gian làm việc không quá $180$ giờ công. Biết rằng mỗi chiếc áo loại I bán ra đem lại lợi nhuận $120\,000$ đồng, mỗi chiếc áo loại II đem lại lợi nhuận $100\,000$ đồng. Hỏi phân xưởng nên sản xuất bao nhiêu chiếc áo mỗi loại để thu được tổng lợi nhuận là lớn nhất? Tổng lợi nhuận lớn nhất đó là bao nhiêu?
+\end{enumerate}
+
+\newpage
+% =========================================================================
+% BẢNG ĐÁP ÁN VÀ LỜI GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\vspace{0.2cm}
+\textbf{1. Phần I: Trắc nghiệm nhiều lựa chọn}
+\begin{center}
+{\setlength{\tabcolsep}{2.5pt}\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} & \textbf{Câu 5} & \textbf{Câu 6} & \textbf{Câu 7} & \textbf{Câu 8} & \textbf{Câu 9} & \textbf{Câu 10} & \textbf{Câu 11} & \textbf{Câu 12} \\
+\hline
+\textbf{B} & \textbf{A} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{C} & \textbf{D} & \textbf{B} & \textbf{C} & \textbf{A} & \textbf{B} & \textbf{D} \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{2. Phần II: Trắc nghiệm đúng/sai}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu hỏi} & \textbf{Ý a)} & \textbf{Ý b)} & \textbf{Ý c)} & \textbf{Ý d)} \\
+\hline
+\textbf{Câu 13} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} \\
+\hline
+\textbf{Câu 14} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{3. Phần III: Trắc nghiệm trả lời ngắn}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Câu 15} & \textbf{Câu 16} & \textbf{Câu 17} & \textbf{Câu 18} \\
+\hline
+\textbf{4} & \textbf{300} & \textbf{14} & \textbf{849} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{4. Phần IV: Tự luận}
+\begin{center}
+\begin{tabular}{|c|l|}
+\hline
+\textbf{Câu hỏi} & \textbf{Kết quả tóm tắt} \\
+\hline
+\textbf{Câu 19} & a) $8$ học sinh;\quad b) $27$ học sinh. \\
+\hline
+\textbf{Câu 20} & a) $P = -\dfrac{12}{25}$;\quad b) $Q = \dfrac{37}{125}$. \\
+\hline
+\textbf{Câu 21} & Chiều cao tháp $h \approx 54{,}6\text{ m}$. \\
+\hline
+\textbf{Câu 22} & Sản xuất \textbf{36 áo loại I} và \textbf{36 áo loại II}; lợi nhuận lớn nhất $7\,920\,000$ đồng. \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+% =========================================================================
+% HÌNH VẼ BIỂU DIỄN MIỀN NGHIỆM (HỆ BẤT PHƯƠNG TRÌNH) NGOÀI BẢNG
+% =========================================================================
+\parttitle{HÌNH VẼ BIỂU DIỄN MIỀN NGHIỆM (HỆ BẤT PHƯƠNG TRÌNH)}
+
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+\textbf{Hình 1: Miền nghiệm Câu 16}\\[6pt]
+\begin{tikzpicture}[scale=0.70, >=Stealth]
+    % Trục toạ độ
+    \draw[line width=1.2pt, ->] (-0.8,0) -- (6.2,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-0.8) -- (0,6.2) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left, font=\normalsize\bfseries] at (0,0) {$O$};
+
+    % Đa giác nghiệm O(0;0), A(5;0), B(10/3; 10/3), C(0;5)
+    \fill[fill=ink!18] (0,0) -- (5,0) -- (3.333,3.333) -- (0,5) -- cycle;
+    \draw[line width=1.8pt, blue!70!black] (0,0) -- (5,0) -- (3.333,3.333) -- (0,5) -- cycle;
+
+    % d1: 2x + y = 10 (đi qua (5;0) và (0;10))
+    \draw[line width=1.1pt, dashed, red!80!black] (2.2, 5.6) -- (5.4, -0.8) node[below right, font=\small] {$d_1$};
+    % d2: x + 2y = 10 (đi qua (10;0) và (0;5))
+    \draw[line width=1.1pt, dashed, teal!80!black] (-0.8, 5.4) -- (5.8, 2.1) node[above right, font=\small] {$d_2$};
+
+    % Đỉnh
+    \filldraw[black] (0,0) circle (3pt);
+    \filldraw[black] (5,0) circle (3.5pt) node[below, font=\normalsize\bfseries] {$A(5;0)$};
+    \filldraw[black] (3.333,3.333) circle (3.5pt) node[above right, font=\normalsize\bfseries] {$B\left(\frac{10}{3}; \frac{10}{3}\right)$};
+    \filldraw[black] (0,5) circle (3.5pt) node[left, font=\normalsize\bfseries] {$C(0;5)$};
+
+    % Dóng toạ độ B
+    \draw[dotted, thick] (3.333,0) node[below, font=\small] {$\frac{10}{3}$} -- (3.333,3.333) -- (0,3.333) node[left, font=\small] {$\frac{10}{3}$};
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.49\textwidth}
+\centering
+\textbf{Hình 2: Miền nghiệm Câu 22 (Quy hoạch tuyến tính)}\\[6pt]
+\begin{tikzpicture}[x=0.052cm, y=0.052cm, >=Stealth]
+    % Trục toạ độ
+    \draw[line width=1.2pt, ->] (-8,0) -- (72,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-8) -- (0,72) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left, font=\normalsize\bfseries] at (0,0) {$O$};
+
+    % Đa giác nghiệm O(0;0), A(60;0), B(36;36), C(0;60)
+    \fill[fill=ink!18] (0,0) -- (60,0) -- (36,36) -- (0,60) -- cycle;
+    \draw[line width=1.8pt, blue!70!black] (0,0) -- (60,0) -- (36,36) -- (0,60) -- cycle;
+
+    % d1: 2x + 3y = 180 (cắt (90;0) và (0;60))
+    \draw[line width=1.1pt, dashed, red!80!black] (-5, 63.3) -- (68, 14.7) node[above right, font=\small] {$d_1$};
+    % d2: 3x + 2y = 180 (cắt (60;0) và (0;90))
+    \draw[line width=1.1pt, dashed, teal!80!black] (15, 67.5) -- (64, -6) node[below right, font=\small] {$d_2$};
+
+    % Đỉnh
+    \filldraw[black] (0,0) circle (3pt);
+    \filldraw[black] (60,0) circle (3.5pt) node[below, font=\normalsize\bfseries] {$A(60;0)$};
+    \filldraw[black] (36,36) circle (3.5pt) node[above right, font=\normalsize\bfseries] {$B(36;36)$};
+    \filldraw[black] (0,60) circle (3.5pt) node[left, font=\normalsize\bfseries] {$C(0;60)$};
+
+    % Dóng toạ độ B
+    \draw[dotted, thick] (36,0) node[below, font=\small] {$36$} -- (36,36) -- (0,36) node[left, font=\small] {$36$};
+\end{tikzpicture}
+\end{minipage}
+
+\vspace{0.4cm}
+% =========================================================================
+% LỜI GIẢI CHI TIẾT 22 CÂU
+% =========================================================================
+\parttitle{HƯỚNG DẪN GIẢI CHI TIẾT}
+
+\textbf{PHẦN I. TRẮC NGHIỆM NHIỀU LỰA CHỌN}
+
+\begin{enumerate}
+\item Tập hợp $\{x \in \mathbb{R} \mid -2 \le x < 5\}$ gồm các số thực lớn hơn hoặc bằng $-2$ và nhỏ hơn $5$, nên được viết dưới dạng nửa khoảng là $[-2; 5)$.\\
+\textbf{Chọn B.}
+
+\item Phát biểu ``Tam giác đều có ba góc bằng $60^\circ$'' là một khẳng định có tính đúng sai xác định (khẳng định đúng), do đó là một mệnh đề toán học. Các phát biểu còn lại là câu hỏi, câu cảm thán hoặc câu cầu khiến.\\
+\textbf{Chọn A.}
+
+\item Giao của hai tập hợp $A = [-3; 2)$ và $B = (0; 4]$ là phần tử thuộc cả hai tập: $A \cap B = (0; 2)$.\\
+\textbf{Chọn C.}
+
+\item Cho mệnh đề kéo theo $P \Rightarrow Q$. Mệnh đề đảo là $Q \Rightarrow P$. Do đó mệnh đề đảo của ``Nếu tam giác $ABC$ đều thì tam giác $ABC$ cân'' là ``Nếu tam giác $ABC$ cân thì tam giác $ABC$ đều''.\\
+\textbf{Chọn D.}
+
+\item Thay tọa độ các điểm vào hệ bất phương trình. Với cặp $(1; 1)$, ta thấy:\\
+$\begin{cases} 1 - 1 + 1 = 1 > 0 \\ 2(1) + 1 - 4 = -1 \le 0 \end{cases}$ (thỏa mãn cả hai bất phương trình trong hệ).\\
+Do đó $(1; 1)$ là nghiệm của hệ bất phương trình đã cho.\\
+\textbf{Chọn A.}
+
+\item Thay $(-1; 2)$ vào bất phương trình: $2(-1) - 3(2) + 6 = -2 - 6 + 6 = -2 < 0$, không thỏa mãn $2x - 3y + 6 \ge 0$. Vậy $(-1; 2)$ không phải là nghiệm.\\
+\textbf{Chọn C.}
+
+\item Bất phương trình bậc nhất hai ẩn có đường thẳng bờ tương ứng bằng cách thay dấu bất đẳng thức bằng dấu bằng: $3x - 4y + 12 = 0$.\\
+\textbf{Chọn D.}
+
+\item Thay $O(0; 0)$ vào bất phương trình: $2(0) + 0 - 4 = -4 \le 0$ (đúng). Vậy nửa mặt phẳng miền nghiệm chứa gốc tọa độ $O(0; 0)$.\\
+\textbf{Chọn B.}
+
+\item Ta có $\cos 120^\circ = -\cos(180^\circ - 120^\circ) = -\cos 60^\circ = -\dfrac{1}{2}$.\\
+\textbf{Chọn C.}
+
+\item Vì $\alpha$ là góc nhọn nên $\cos \alpha > 0$. Ta có $\cos^2 \alpha = 1 - \sin^2 \alpha = 1 - \left(\dfrac{3}{5}\right)^2 = \dfrac{16}{25}$.\\
+Do đó $P = 2\cos^2 \alpha - 1 = 2 \cdot \dfrac{16}{25} - 1 = \dfrac{32}{25} - 1 = \dfrac{7}{25}$.\\
+\textbf{Chọn A.}
+
+\item Theo tính chất của hai góc bù nhau: với mọi góc $\alpha \in (0^\circ; 180^\circ)$, ta có $\cos(180^\circ - \alpha) = -\cos \alpha$.\\
+\textbf{Chọn B.}
+
+\item Theo định lý côsin trong tam giác $ABC$, bình phương một cạnh bằng tổng bình phương hai cạnh còn lại trừ đi hai lần tích của chúng với côsin của góc xen giữa: $a^2 = b^2 + c^2 - 2bc\cos A$.\\
+\textbf{Chọn D.}
+\end{enumerate}
+
+\textbf{PHẦN II. TRẮC NGHIỆM ĐÚNG/SAI}
+
+\begin{enumerate}[resume]
+\item \textbf{Lời giải:}
+\begin{itemize}
+    \item Xét tập hợp $A$: $(x^2 - 9)(2x^2 - 5x + 2) = 0 \Leftrightarrow \left[\begin{array}{l} x^2 - 9 = 0 \\ 2x^2 - 5x + 2 = 0 \end{array}\right. \Leftrightarrow \left[\begin{array}{l} x = \pm 3 \\ x = 2 \\ x = \frac{1}{2} \end{array}\right.$.\\
+    Vì $x \in \mathbb{N}$ nên ta chỉ nhận $x = 3$ và $x = 2$. Do đó $A = \{2; 3\}$.
+    \item Xét tập hợp $B$: $x \in \mathbb{Z}$ và $-2 \le x \le 2 \Rightarrow B = \{-2; -1; 0; 1; 2\}$.
+\end{itemize}
+Xét tính đúng/sai của từng khẳng định:
+\begin{enumerate}
+    \item Tập hợp $A = \{2; 3\}$ có đúng $2$ phần tử, tức $n(A) = 2$. $\rightarrow$ \textbf{Đúng}.
+    \item Số tập con của tập hợp $A$ có $2$ phần tử là $2^2 = 4$. $\rightarrow$ \textbf{Đúng}.
+    \item Giao của hai tập hợp: $A \cap B = \{2; 3\} \cap \{-2; -1; 0; 1; 2\} = \{2\}$. $\rightarrow$ \textbf{Đúng}.
+    \item Hiệu của hai tập hợp: $B \setminus A = \{-2; -1; 0; 1\}$. Tập hợp này gồm $4$ phần tử, nên phát biểu có $3$ phần tử là sai. $\rightarrow$ \textbf{Sai}.
+\end{enumerate}
+
+\item \textbf{Lời giải:}
+Tam giác $ABC$ có $a = 7, b = 5, c = 6$.
+\begin{enumerate}
+    \item Nửa chu vi: $p = \dfrac{a + b + c}{2} = \dfrac{7 + 5 + 6}{2} = 9$. $\rightarrow$ \textbf{Đúng}.
+    \item Áp dụng định lý côsin: $\cos A = \dfrac{b^2 + c^2 - a^2}{2bc} = \dfrac{5^2 + 6^2 - 7^2}{2 \cdot 5 \cdot 6} = \dfrac{25 + 36 - 49}{60} = \dfrac{12}{60} = \dfrac{1}{5}$. $\rightarrow$ \textbf{Đúng}.
+    \item Áp dụng công thức Heron:
+    \[ S = \sqrt{p(p-a)(p-b)(p-c)} = \sqrt{9 \cdot 2 \cdot 4 \cdot 3} = \sqrt{216} = 6\sqrt{6} \]
+    Do đó khẳng định diện tích $S = 6\sqrt{6}$ là đúng. $\rightarrow$ \textbf{Đúng}.
+    \item Bán kính đường tròn nội tiếp: $r = \dfrac{S}{p} = \dfrac{6\sqrt{6}}{9} = \dfrac{2\sqrt{6}}{3} \ne \sqrt{6}$. Do đó phát biểu $r = \sqrt{6}$ là sai. $\rightarrow$ \textbf{Sai}.
+\end{enumerate}
+\end{enumerate}
+
+\textbf{PHẦN III. TRẮC NGHIỆM TRẢ LỜI NGẮN}
+
+\begin{enumerate}[resume]
+\item Ta có tập hợp giao: $A \cap B = [-3; 5] \cap (1; 9) = (1; 5]$.\\
+Các phần tử nguyên thuộc nửa khoảng $(1; 5]$ là các số nguyên thỏa mãn $1 < x \le 5$, bao gồm: $2, 3, 4, 5$.\\
+Vậy có tất cả $4$ phần tử nguyên.\\
+\textbf{Đáp số: 4.}
+
+\item Gọi $x \ge 0, y \ge 0$ lần lượt là số lít nước ép loại I và loại II cửa hàng pha chế.\\
+Số lượng cam cần dùng là: $2x + y \le 10$ (kg).\\
+Số lượng táo cần dùng là: $x + 2y \le 10$ (kg).\\
+Ta có hệ bất phương trình ràng buộc:
+$\begin{cases} x \ge 0,\; y \ge 0 \\ 2x + y \le 10 \\ x + 2y \le 10 \end{cases}$.\\
+Miền nghiệm của hệ là miền tứ giác $OABC$ với $O(0; 0)$, $A(5; 0)$, $C(0; 5)$ và $B$ là giao điểm của hai đường thẳng $2x + y = 10$ và $x + 2y = 10$. Giải hệ ta được $B\left(\dfrac{10}{3}; \dfrac{10}{3}\right)$.\\
+Tổng lợi nhuận thu được là $F(x, y) = 40x + 50y$ (nghìn đồng).\\
+Tính giá trị của $F(x, y)$ tại các đỉnh của miền nghiệm:
+\begin{itemize}
+    \item $F(0; 0) = 0$ nghìn đồng.
+    \item $F(5; 0) = 40(5) + 50(0) = 200$ nghìn đồng.
+    \item $F\left(\dfrac{10}{3}; \dfrac{10}{3}\right) = 40 \cdot \dfrac{10}{3} + 50 \cdot \dfrac{10}{3} = \dfrac{900}{3} = 300$ nghìn đồng.
+    \item $F(0; 5) = 40(0) + 50(5) = 250$ nghìn đồng.
+\end{itemize}
+Lợi nhuận lớn nhất đạt được là $300$ nghìn đồng.\\
+\textbf{Đáp số: 300.}
+
+\item Áp dụng định lý côsin trong tam giác $ABC$:
+\[ BC^2 = AB^2 + AC^2 - 2AB \cdot AC \cdot \cos \widehat{BAC} \]
+Thay số ta được:
+\[ BC^2 = 6^2 + 10^2 - 2 \cdot 6 \cdot 10 \cdot \cos 120^\circ = 36 + 100 - 120 \cdot \left(-\dfrac{1}{2}\right) = 136 + 60 = 196 \]
+Suy ra $BC = \sqrt{196} = 14$.\\
+\textbf{Đáp số: 14.}
+
+\item Trong tam giác $ABC$, tổng ba góc trong một tam giác bằng $180^\circ$:
+\[ \widehat{ACB} = 180^\circ - \widehat{CAB} - \widehat{CBA} = 180^\circ - 45^\circ - 105^\circ = 30^\circ \]
+Áp dụng định lý sin trong tam giác $ABC$:
+\[ \dfrac{BC}{\sin \widehat{CAB}} = \dfrac{AB}{\sin \widehat{ACB}} \implies BC = \dfrac{AB \cdot \sin \widehat{CAB}}{\sin \widehat{ACB}} \]
+Thay các giá trị $AB = 600\text{ m}$, $\widehat{CAB} = 45^\circ$, $\widehat{ACB} = 30^\circ$:
+\[ BC = \dfrac{600 \cdot \sin 45^\circ}{\sin 30^\circ} = \dfrac{600 \cdot \frac{\sqrt{2}}{2}}{\frac{1}{2}} = 600\sqrt{2} \approx 848{,}53\text{ m} \]
+Làm tròn đến hàng đơn vị ta được $849\text{ m}$.\\
+\textbf{Đáp số: 849.}
+\end{enumerate}
+
+\textbf{PHẦN IV. TỰ LUẬN}
+
+\begin{enumerate}[resume]
+\item \textbf{Lời giải:}
+Gọi $A$ là tập hợp học sinh thích chơi bóng đá, $B$ là tập hợp học sinh thích chơi bóng rổ.\\
+Theo đề bài: số học sinh của lớp là $n(U) = 42$; số học sinh thích bóng đá là $n(A) = 25$; số học sinh thích bóng rổ là $n(B) = 18$; số học sinh không thích môn nào là $7$.
+\begin{enumerate}
+    \item Số học sinh thích ít nhất một trong hai môn thể thao là:
+    \[ n(A \cup B) = 42 - 7 = 35\text{ (học sinh)} \]
+    Áp dụng công thức cộng số phần tử của hai tập hợp:
+    \[ n(A \cup B) = n(A) + n(B) - n(A \cap B) \]
+    Suy ra số học sinh thích chơi cả hai môn là:
+    \[ n(A \cap B) = n(A) + n(B) - n(A \cup B) = 25 + 18 - 35 = 8\text{ (học sinh)} \]
+    \item Số học sinh chỉ thích chơi bóng đá là:
+    \[ n(A) - n(A \cap B) = 25 - 8 = 17\text{ (học sinh)} \]
+    Số học sinh chỉ thích chơi môn bóng rổ là:
+    \[ n(B) - n(A \cap B) = 18 - 8 = 10\text{ (học sinh)} \]
+    Vậy số học sinh chỉ thích chơi đúng một trong hai môn thể thao trên là:
+    \[ 17 + 10 = 27\text{ (học sinh)} \]
+\end{enumerate}
+
+\item \textbf{Lời giải:}
+Cho $\sin \alpha + \cos \alpha = \dfrac{1}{5}$.
+\begin{enumerate}
+    \item Bình phương hai vế của đẳng thức đã cho:
+    \[ (\sin \alpha + \cos \alpha)^2 = \left(\dfrac{1}{5}\right)^2 \]
+    \[ \Leftrightarrow \sin^2 \alpha + 2\sin \alpha \cos \alpha + \cos^2 \alpha = \dfrac{1}{25} \]
+    Vì $\sin^2 \alpha + \cos^2 \alpha = 1$ nên:
+    \[ 1 + 2\sin \alpha \cos \alpha = \dfrac{1}{25} \Leftrightarrow 2\sin \alpha \cos \alpha = \dfrac{1}{25} - 1 = -\dfrac{24}{25} \]
+    Suy ra:
+    \[ P = \sin \alpha \cdot \cos \alpha = -\dfrac{12}{25} \]
+    \item Áp dụng hằng đẳng thức tổng hai lập phương:
+    \[ Q = \sin^3 \alpha + \cos^3 \alpha = (\sin \alpha + \cos \alpha)(\sin^2 \alpha - \sin \alpha \cos \alpha + \cos^2 \alpha) \]
+    Thay $\sin^2 \alpha + \cos^2 \alpha = 1$ và các giá trị đã biết vào biểu thức:
+    \[ Q = (\sin \alpha + \cos \alpha)(1 - \sin \alpha \cos \alpha) = \dfrac{1}{5} \left(1 - \left(-\dfrac{12}{25}\right)\right) = \dfrac{1}{5} \left(1 + \dfrac{12}{25}\right) = \dfrac{1}{5} \cdot \dfrac{37}{25} = \dfrac{37}{125} \]
+\end{enumerate}
+
+\item \textbf{Lời giải:}
+Xét ba điểm $A, B, C$ thẳng hàng trên mặt đất, tam giác $ACD$ vuông tại $C$ và tam giác $BCD$ vuông tại $C$.\\
+Trong tam giác vuông $BCD$:
+\[ \tan \widehat{CBD} = \dfrac{CD}{BC} \implies BC = \dfrac{CD}{\tan 45^\circ} = \dfrac{h}{1} = h \]
+Trong tam giác vuông $ACD$:
+\[ \tan \widehat{CAD} = \dfrac{CD}{AC} \implies AC = \dfrac{CD}{\tan 30^\circ} = \dfrac{h}{\frac{1}{\sqrt{3}}} = h\sqrt{3} \]
+Vì điểm $B$ nằm giữa $A$ và $C$ nên:
+\[ AB = AC - BC = h\sqrt{3} - h = h(\sqrt{3} - 1) \]
+Theo đề bài $AB = 40\text{ m}$, do đó:
+\[ h(\sqrt{3} - 1) = 40 \implies h = \dfrac{40}{\sqrt{3} - 1} = \dfrac{40(\sqrt{3} + 1)}{3 - 1} = 20(\sqrt{3} + 1) \]
+Tính giá trị gần đúng:
+\[ h = 20(1{,}73205 + 1) = 20 \cdot 2{,}73205 \approx 54{,}641\text{ m} \]
+Làm tròn đến chữ số thập phân thứ nhất, chiều cao của tháp truyền hình là $h \approx 54{,}6\text{ m}$.
+
+\item \textbf{Lời giải:}
+Gọi $x \ge 0$ là số chiếc áo sơ mi (loại I) và $y \ge 0$ là số chiếc áo khoác gió (loại II) mà phân xưởng sản xuất.\\
+Theo bài ra:
+\begin{itemize}
+    \item Lượng vải cần dùng là $2x + 3y\text{ (m}^2\text{)}$, không vượt quá $180\text{ m}^2$: $2x + 3y \le 180$.
+    \item Số giờ công lao động cần dùng là $3x + 2y\text{ (giờ)}$, không vượt quá $180\text{ giờ}$: $3x + 2y \le 180$.
+\end{itemize}
+Ta có hệ bất phương trình mô tả các điều kiện ràng buộc:
+\[ \begin{cases} x \ge 0 \\ y \ge 0 \\ 2x + 3y \le 180 \\ 3x + 2y \le 180 \end{cases} \]
+Miền nghiệm của hệ bất phương trình trên là miền tứ giác $OABC$ (kể cả bờ) trong mặt phẳng tọa độ $Oxy$, với:
+\begin{itemize}
+    \item $O(0; 0)$ là gốc tọa độ.
+    \item $A(60; 0)$ là giao điểm của đường thẳng $d_2: 3x + 2y = 180$ với trục hoành $Ox$.
+    \item $B(36; 36)$ là giao điểm của hai đường thẳng $d_1: 2x + 3y = 180$ và $d_2: 3x + 2y = 180$.
+    \item $C(0; 60)$ là giao điểm của đường thẳng $d_1: 2x + 3y = 180$ với trục tung $Oy$.
+\end{itemize}
+Tổng lợi nhuận thu được là hàm số bậc nhất hai ẩn:
+\[ T(x, y) = 120\,000x + 100\,000y\text{ (đồng)} \]
+Theo định lý quy hoạch tuyến tính, giá trị lớn nhất của $T(x, y)$ trên miền đa giác $OABC$ đạt được tại một trong các đỉnh của đa giác. Tính giá trị $T(x, y)$ tại các đỉnh:
+\begin{align*}
+    T(O) &= T(0; 0) = 0\text{ đồng}\\
+    T(A) &= T(60; 0) = 120\,000 \cdot 60 + 0 = 7\,200\,000\text{ đồng}\\
+    T(B) &= T(36; 36) = 120\,000 \cdot 36 + 100\,000 \cdot 36 = 36 \cdot 220\,000 = 7\,920\,000\text{ đồng}\\
+    T(C) &= T(0; 60) = 0 + 100\,000 \cdot 60 = 6\,000\,000\text{ đồng}
+\end{align*}
+So sánh các giá trị trên, ta thấy $T(x, y)$ đạt giá trị lớn nhất bằng $7\,920\,000$ đồng khi $x = 36$ và $y = 36$.\\
+\textbf{Kết luận:} Phân xưởng nên sản xuất \textbf{36 chiếc áo loại I} và \textbf{36 chiếc áo loại II} để thu được lợi nhuận lớn nhất là \textbf{7\,920\,000 đồng}.
+\end{enumerate}
+
+\end{document}
