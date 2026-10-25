@@ -342,55 +342,49 @@ def generate_exam_slots(matrix, rng):
             ]
         })
 
-    # Section III: 4 short answer questions (2 TH + 2 VD)
-    sec3_configs = [
-        ("menh_de_tap_hop", "TH"),
-        ("bpt_hai_an", "VD"),
-        ("he_thuc_luong", "TH"),
-        ("he_thuc_luong", "VD")
-    ]
-    for sec3_num, (topic_key, lvl) in enumerate(sec3_configs, 1):
-        candidates = [s for s in pool_by_topic.get(topic_key, [])
-                      if "III" in s.get("applicable_sections", []) and s.get("level") == lvl]
-        chosen_skill = rng.choice(candidates) if candidates else {
-            "id": f"P3_{sec3_num}",
-            "skill": f"Kỹ năng {topic_key} {lvl}",
-            "search_query": topic_key
-        }
-        slots.append({
-            "section": "III",
-            "number": sec3_num,
-            "topic": topic_key,
-            "level": lvl,
-            "skill_id": chosen_skill["id"],
-            "skill": chosen_skill["skill"],
-            "search_query": chosen_skill.get("search_query", chosen_skill["skill"])
-        })
+    # Dynamic sampling for Section III (short answer: 4 questions, 2 TH + 2 VD)
+    # and Section IV (written: 4 questions, 2 TH + 2 VD) across all 3 allowed topics
+    def _sample_dynamic_section(section_name):
+        double_topic = rng.choice(matrix["allowed_topics"])
+        other_topics = [t for t in matrix["allowed_topics"] if t != double_topic]
+        topic_assignment = [double_topic, double_topic, other_topics[0], other_topics[1]]
+        levels = ["TH", "TH", "VD", "VD"]
+        rng.shuffle(levels)
+        pairs = list(zip(topic_assignment, levels))
+        rng.shuffle(pairs)
 
-    # Section IV: 4 written questions (2 TH + 2 VD)
-    sec4_configs = [
-        ("menh_de_tap_hop", "TH"),
-        ("he_thuc_luong", "TH"),
-        ("he_thuc_luong", "VD"),
-        ("bpt_hai_an", "VD")
-    ]
-    for sec4_num, (topic_key, lvl) in enumerate(sec4_configs, 1):
-        candidates = [s for s in pool_by_topic.get(topic_key, [])
-                      if "IV" in s.get("applicable_sections", []) and s.get("level") == lvl]
-        chosen_skill = rng.choice(candidates) if candidates else {
-            "id": f"P4_{sec4_num}",
-            "skill": f"Tự luận {topic_key} {lvl}",
-            "search_query": topic_key
-        }
-        slots.append({
-            "section": "IV",
-            "number": sec4_num,
-            "topic": topic_key,
-            "level": lvl,
-            "skill_id": chosen_skill["id"],
-            "skill": chosen_skill["skill"],
-            "search_query": chosen_skill.get("search_query", chosen_skill["skill"])
-        })
+        sec_slots = []
+        used_skills = set()
+        for idx, (topic_key, lvl) in enumerate(pairs, 1):
+            candidates = [s for s in pool
+                          if section_name in s.get("applicable_sections", [])
+                          and s["topic"] == topic_key
+                          and s["level"] == lvl
+                          and s["id"] not in used_skills]
+            if not candidates:
+                candidates = [s for s in pool
+                              if section_name in s.get("applicable_sections", [])
+                              and s["topic"] == topic_key
+                              and s["level"] == lvl]
+            chosen_skill = rng.choice(candidates) if candidates else {
+                "id": f"P{section_name}_{idx}",
+                "skill": f"Kỹ năng {topic_key} {lvl}",
+                "search_query": topic_key
+            }
+            used_skills.add(chosen_skill["id"])
+            sec_slots.append({
+                "section": section_name,
+                "number": idx,
+                "topic": topic_key,
+                "level": lvl,
+                "skill_id": chosen_skill["id"],
+                "skill": chosen_skill["skill"],
+                "search_query": chosen_skill.get("search_query", chosen_skill["skill"])
+            })
+        return sec_slots
+
+    slots.extend(_sample_dynamic_section("III"))
+    slots.extend(_sample_dynamic_section("IV"))
 
     return slots
 
