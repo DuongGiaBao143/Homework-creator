@@ -1,0 +1,465 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.5cm,top=1.4cm,bottom=1.4cm]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or Math gives us hope that every problem has a solution% Trang 7
+    \or Math + You = Champion% Trang 8
+    \or Where Frustration Becomes Inspiration% Trang 9
+    \or Turning Confusion into Clarity% Trang 10
+    \or Don't be an X, be a Y of mathematics% Trang 11
+    \or Don't get mad. Learn to add% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.5pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\newcommand{\parttitle}[1]{\par\vspace{2pt}{\large\bfseries\color{ink}#1}\par\vspace{1pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[2pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{12pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.4cm,labelsep=.15cm,itemsep=1.5pt,topsep=1.0pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.6cm,itemsep=1.0pt,topsep=1.0pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[4pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GK1}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 11}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.2cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0011}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.2cm}
+
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án đúng duy nhất.}
+\begin{enumerate}
+\item Tập hợp các số thực $x$ thỏa mãn $-2 \le x < 5$ được viết dưới dạng khoảng, đoạn, nửa khoảng là
+\four{$[-2; 5)$.}{$(-2; 5]$.}{$[-2; 5]$.}{$(-2; 5)$.}
+
+\item Cho tập hợp $A = \{1; 2; 3; 4\}$. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$\{2\} \in A$.}{$\{1; 2\} \subset A$.}{$5 \in A$.}{$\varnothing \in A$.}
+
+\item Trong các phát biểu sau đây, câu nào là một \textbf{mệnh đề toán học}?
+\four{Trời hôm nay đẹp quá!}{Bạn có thích học môn Toán không?}{Số $17$ là một số nguyên tố.}{Hãy làm bài tập cẩn thận nhé!}
+
+\item Cho tập hợp $A$ có $3$ phần tử. Số tập hợp con của tập hợp $A$ là
+\four{$3$.}{$6$.}{$7$.}{$8$.}
+
+\item Đường thẳng bờ của miền nghiệm của bất phương trình $3x - 2y + 6 \ge 0$ có phương trình là
+\four{$3x - 2y + 6 = 0$.}{$3x - 2y - 6 = 0$.}{$2x - 3y + 6 = 0$.}{$3x + 2y + 6 = 0$.}
+
+\item Cặp số $(x; y)$ nào sau đây là một nghiệm của hệ bất phương trình $\begin{cases} x + 2y - 4 \le 0 \\ x - y + 1 \ge 0 \end{cases}$?
+\four{$(2; 2)$.}{$(0; 1)$.}{$(3; 1)$.}{$(-2; 4)$.}
+
+\item Hệ bất phương trình nào sau đây là một hệ bất phương trình bậc nhất hai ẩn?
+\four{$\begin{cases} x^2 + y \le 1 \\ x - y > 0 \end{cases}$}{$\begin{cases} x + y - z \le 2 \\ x - y \ge 1 \end{cases}$}{$\begin{cases} 2x - y + 1 \le 0 \\ x + 3y - 5 > 0 \end{cases}$}{$\begin{cases} xy + 1 \le 0 \\ x - y \ge 0 \end{cases}$}
+
+\item Miền nghiệm của bất phương trình $2x - y + 2 \ge 0$ là nửa mặt phẳng bờ đường thẳng $d: 2x - y + 2 = 0$ chứa điểm nào sau đây?
+\four{$M(-2; 0)$.}{$N(0; 3)$.}{$P(-3; 1)$.}{$Q(1; 1)$.}
+
+\item Giá trị của $\cos 120^\circ$ bằng
+\four{$-\dfrac{1}{2}$.}{$\dfrac{1}{2}$.}{$-\dfrac{\sqrt{3}}{2}$.}{$\dfrac{\sqrt{3}}{2}$.}
+
+\item Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$ và $\sin \alpha = \dfrac{3}{5}$. Giá trị của $\cos \alpha$ bằng
+\four{$\dfrac{4}{5}$.}{$-\dfrac{4}{5}$.}{$-\dfrac{3}{4}$.}{$\dfrac{16}{25}$.}
+
+\item Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$ và diện tích $S$. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$S = \dfrac{abc}{2R}$.}{$S = p \cdot R$.}{$S = \dfrac{1}{2}ab \sin C$.}{$S = \dfrac{1}{2}bc \sin C$.}
+
+\item Cho tam giác $ABC$ có $BC = a$ và bán kính đường tròn ngoại tiếp là $R$. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$\dfrac{a}{\sin A} = R$.}{$\dfrac{a}{\sin A} = \dfrac{R}{2}$.}{$\dfrac{a}{\sin A} = 4R$.}{$\dfrac{a}{\sin A} = 2R$.}
+\end{enumerate}
+
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Thí sinh trả lời từ câu 13 đến câu 14. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}[resume]
+\item Cho hai tập hợp số $A = (-3; 4]$ và $B = [1; 6)$.
+\begin{enumerate}
+    \item Tập hợp $A$ là nửa khoảng gồm tất cả các số thực $x$ thỏa mãn $-3 < x \le 4$.
+    \item Giao của hai tập hợp là nửa khoảng $A \cap B = [1; 4]$.
+    \item Hợp của hai tập hợp là khoảng $A \cup B = (-3; 6)$.
+    \item Hiệu của hai tập hợp là $A \setminus B = (-3; 1]$.
+\end{enumerate}
+
+\item Cho hệ bất phương trình bậc nhất hai ẩn $\begin{cases} x \ge 0,\; y \ge 0 \\ x + y \le 4 \\ 2x + y \le 6 \end{cases}$. Biết miền nghiệm của hệ là miền tứ giác $OABC$ trên mặt phẳng tọa độ $Oxy$.
+\begin{enumerate}
+    \item Điểm gốc tọa độ $O(0; 0)$ thuộc miền nghiệm của hệ bất phương trình đã cho.
+    \item Tọa độ đỉnh $A$ nằm trên trục hoành $Ox$ là $A(3; 0)$.
+    \item Tọa độ đỉnh $B$ là giao điểm của hai đường thẳng $x + y = 4$ và $2x + y = 6$ là $B(2; 2)$.
+    \item Biểu thức $F(x, y) = 3x + 2y$ đạt giá trị lớn nhất trên miền nghiệm bằng $12$.
+\end{enumerate}
+\end{enumerate}
+
+\parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 15 đến câu 18. Viết kết quả vào ô quy định.}
+\begin{enumerate}[resume]
+\item Cho hai tập hợp số $A = [-5; 3)$ và $B = (-1; 6]$. Tìm số phần tử nguyên thuộc tập hợp giao $A \cap B$.
+\answerbox
+
+\item Cho hệ bất phương trình bậc nhất hai ẩn $\begin{cases} x \ge 0,\; y \ge 0 \\ x + 2y \le 8 \\ 3x + 2y \le 12 \end{cases}$.
+Tìm giá trị lớn nhất của biểu thức $F(x, y) = 4x + 3y$ trên miền nghiệm của hệ.
+\answerbox
+
+\item Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$ và $\cos \alpha = -\dfrac{5}{13}$.
+Tính giá trị của biểu thức $P = 13\sin \alpha - 5\tan \alpha$.
+\answerbox
+
+\item \begin{minipage}[t]{0.62\linewidth}
+Hai chiếc tàu thủy rời một cảng biển $A$ vào cùng một thời điểm, di chuyển thẳng đều theo hai hướng tạo với nhau một góc $\widehat{BAC} = 120^\circ$. Sau một khoảng thời gian, tàu thứ nhất đến vị trí $B$ cách cảng $70\text{ m}$, tàu thứ hai đến vị trí $C$ cách cảng $100\text{ m}$. Hỏi khoảng cách giữa hai chiếc tàu lúc này là bao nhiêu mét? (\textit{Làm tròn kết quả đến hàng đơn vị}).
+\vspace{6pt}
+
+\answerbox
+\end{minipage}\hfill
+\begin{minipage}[t]{0.35\linewidth}
+\centering
+\begin{tikzpicture}[scale=0.72, every node/.style={scale=0.85}]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (2.4,0);
+    % AC = 3.4, angle = 120 deg
+    \coordinate (C) at (-1.7, 2.94);
+
+    \draw[thick, ink] (A) node[below] {$A$} -- (B) node[below right] {$B$};
+    \draw[thick, ink] (A) -- (C) node[above left] {$C$};
+    \draw[dashed, teal!80!black, line width=1.1pt] (B) -- (C);
+
+    \filldraw[black] (A) circle (1.8pt);
+    \filldraw[blue!80!black] (B) circle (2.2pt);
+    \filldraw[red!80!black] (C) circle (2.2pt);
+
+    \draw (0.5,0) arc (0:120:0.5);
+    \node at (0.2,0.65) {\small $120^\circ$};
+    \node at (1.2,-0.3) {\small $70\text{ m}$};
+    \node at (-1.2,1.3) {\small $100\text{ m}$};
+    \node[teal!80!black] at (0.9,1.9) {$d = ?$};
+\end{tikzpicture}
+\end{minipage}
+\end{enumerate}
+
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày lời giải chi tiết từ câu 19 đến câu 22.}
+\begin{enumerate}[resume]
+\item \textit{(1,0 điểm)} Cho hai tập hợp $A = \{x \in \mathbb{R} \mid (x^2 - 9)(x^2 - 3x + 2) = 0\}$ và $B = \{x \in \mathbb{N} \mid x < 5\}$.
+\begin{enumerate}
+    \item Liệt kê tất cả các phần tử của tập hợp $A$ và tập hợp $B$.
+    \item Xác định các tập hợp $A \cap B$, $A \cup B$ và $A \setminus B$.
+\end{enumerate}
+
+\item \textit{(0,75 điểm)} Cho góc $\alpha$ thỏa mãn $0^\circ < \alpha < 180^\circ$ và $\tan \alpha = 3$. Tính giá trị của biểu thức:
+\[
+P = \dfrac{2\sin \alpha + 3\cos \alpha}{4\sin \alpha - 5\cos \alpha}.
+\]
+
+\item \textit{(0,75 điểm)} Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$.
+\begin{enumerate}
+    \item Chứng minh rằng: $a = b \cos C + c \cos B$.
+    \item Chứng minh rằng nếu tam giác $ABC$ thỏa mãn $\dfrac{a}{\cos A} = \dfrac{b}{\cos B}$ thì tam giác $ABC$ là tam giác cân tại đỉnh $C$.
+\end{enumerate}
+
+\item \textit{(0,5 điểm)} Một xưởng mộc sản xuất hai loại sản phẩm: Bàn làm việc (loại I) và Ghế tựa (loại II).
+\begin{itemize}[leftmargin=0.5cm]
+    \item Để sản xuất 1 chiếc bàn loại I cần 3 giờ gia công gỗ và 2 giờ hoàn thiện.
+    \item Để sản xuất 1 chiếc ghế loại II cần 1 giờ gia công gỗ và 2 giờ hoàn thiện.
+\end{itemize}
+Mỗi tuần xưởng có tối đa 180 giờ gia công gỗ và 160 giờ hoàn thiện. Biết rằng mỗi chiếc bàn loại I đem lại lợi nhuận $400\,000$ đồng và mỗi chiếc ghế loại II đem lại lợi nhuận $200\,000$ đồng. Hỏi mỗi tuần xưởng cần sản xuất bao nhiêu chiếc bàn loại I và bao nhiêu chiếc ghế loại II để tổng lợi nhuận thu được là lớn nhất?
+\end{enumerate}
+
+\newpage
+% =========================================================================
+% BẢNG ĐÁP ÁN VÀ LỜI GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\vspace{0.2cm}
+\textbf{1. Phần I: Trắc nghiệm nhiều lựa chọn}
+\begin{center}
+{\setlength{\tabcolsep}{2.5pt}\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} & \textbf{Câu 5} & \textbf{Câu 6} & \textbf{Câu 7} & \textbf{Câu 8} & \textbf{Câu 9} & \textbf{Câu 10} & \textbf{Câu 11} & \textbf{Câu 12} \\
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{2. Phần II: Trắc nghiệm đúng/sai}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu hỏi} & \textbf{Ý a)} & \textbf{Ý b)} & \textbf{Ý c)} & \textbf{Ý d)} \\
+\hline
+\textbf{Câu 13} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} \\
+\hline
+\textbf{Câu 14} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{3. Phần III: Trắc nghiệm trả lời ngắn}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Câu 15} & \textbf{Câu 16} & \textbf{Câu 17} & \textbf{Câu 18} \\
+\hline
+\textbf{3} & \textbf{17} & \textbf{24} & \textbf{148} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{4. Phần IV: Tự luận}
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Câu hỏi} & \textbf{Kết quả tóm tắt} \\
+\hline
+\textbf{Câu 19} & a) $A = \{-3; 1; 2; 3\},\; B = \{0; 1; 2; 3; 4\}$;\quad b) $A \cap B = \{1; 2; 3\},\; A \setminus B = \{-3\}$. \\
+\hline
+\textbf{Câu 20} & $P = \dfrac{9}{7}$. \\
+\hline
+\textbf{Câu 21} & a) Áp dụng định lý côsin: $b \cos C + c \cos B = a$;\quad b) Chứng minh $\tan A = \tan B \implies A = B$. \\
+\hline
+\textbf{Câu 22} & Sản xuất \textbf{50 chiếc bàn loại I} và \textbf{30 chiếc ghế loại II}; lợi nhuận lớn nhất là $26\,000\,000$ đồng. \\
+\hline
+\end{tabularx}
+\end{center}
+
+\vspace{0.4cm}
+% =========================================================================
+% HÌNH VẼ BIỂU DIỄN MIỀN NGHIỆM (HỆ BẤT PHƯƠNG TRÌNH)
+% =========================================================================
+\parttitle{HÌNH VẼ BIỂU DIỄN MIỀN NGHIỆM (HỆ BẤT PHƯƠNG TRÌNH)}
+
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\textbf{Hình 1: Miền nghiệm Câu 16}\\[6pt]
+\begin{tikzpicture}[scale=0.75, >=Stealth]
+    % Trục toạ độ
+    \draw[line width=1.2pt, ->] (-0.8,0) -- (6.0,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-0.8) -- (0,5.5) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left, font=\normalsize\bfseries] at (0,0) {$O$};
+
+    % Đa giác nghiệm O(0;0), A(4;0), B(2;3), C(0;4)
+    \fill[fill=ink!18] (0,0) -- (4,0) -- (2,3) -- (0,4) -- cycle;
+    \draw[line width=1.8pt, blue!70!black] (0,0) -- (4,0) -- (2,3) -- (0,4) -- cycle;
+
+    % Đường d1: x + 2y = 8 (cắt (8;0) và (0;4))
+    \draw[line width=1.1pt, dashed, red!80!black] (-0.4, 4.2) -- (5.5, 1.25) node[above right, font=\small] {$d_1: x+2y=8$};
+    % Đường d2: 3x + 2y = 12 (cắt (4;0) và (0;6))
+    \draw[line width=1.1pt, dashed, teal!80!black] (-0.3, 6.45) -- (4.4, -0.6) node[below right, font=\small] {$d_2: 3x+2y=12$};
+
+    % Đỉnh
+    \filldraw[black] (0,0) circle (3pt);
+    \filldraw[black] (4,0) circle (3.5pt) node[below, font=\normalsize\bfseries] {$A(4;0)$};
+    \filldraw[black] (2,3) circle (3.5pt) node[above right, font=\normalsize\bfseries] {$B(2;3)$};
+    \filldraw[black] (0,4) circle (3.5pt) node[left, font=\normalsize\bfseries] {$C(0;4)$};
+
+    % Dóng tọa độ B
+    \draw[dotted, thick] (2,0) node[below, font=\small] {$2$} -- (2,3) -- (0,3) node[left, font=\small] {$3$};
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\textbf{Hình 2: Miền nghiệm Câu 22 (Quy hoạch tuyến tính)}\\[6pt]
+\begin{tikzpicture}[x=0.045cm, y=0.045cm, >=Stealth]
+    % Trục toạ độ
+    \draw[line width=1.2pt, ->] (-10,0) -- (85,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-10) -- (0,95) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left, font=\normalsize\bfseries] at (0,0) {$O$};
+
+    % Đa giác nghiệm O(0;0), A(60;0), B(50;30), C(0;80)
+    \fill[fill=ink!18] (0,0) -- (60,0) -- (50,30) -- (0,80) -- cycle;
+    \draw[line width=1.8pt, blue!70!black] (0,0) -- (60,0) -- (50,30) -- (0,80) -- cycle;
+
+    % d1: 3x + y = 180 (cắt (60;0) và (0;180))
+    \draw[line width=1.1pt, dashed, red!80!black] (44, 48) -- (64, -12) node[below right, font=\small] {$d_1: 3x+y=180$};
+    % d2: x + y = 80 (cắt (80;0) và (0;80))
+    \draw[line width=1.1pt, dashed, teal!80!black] (-5, 85) -- (85, -5) node[above right, font=\small] {$d_2: x+y=80$};
+
+    % Đỉnh
+    \filldraw[black] (0,0) circle (3pt);
+    \filldraw[black] (60,0) circle (3.5pt) node[below, font=\normalsize\bfseries] {$A(60;0)$};
+    \filldraw[black] (50,30) circle (3.5pt) node[above right, font=\normalsize\bfseries] {$B(50;30)$};
+    \filldraw[black] (0,80) circle (3.5pt) node[left, font=\normalsize\bfseries] {$C(0;80)$};
+
+    % Dóng tọa độ B
+    \draw[dotted, thick] (50,0) node[below, font=\small] {$50$} -- (50,30) -- (0,30) node[left, font=\small] {$30$};
+\end{tikzpicture}
+\end{minipage}
+
+\newpage
+% =========================================================================
+% HƯỚNG DẪN GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{HƯỚNG DẪN GIẢI CHI TIẾT}
+
+\textbf{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\begin{itemize}[leftmargin=0.6cm, itemsep=3pt]
+    \item \textbf{Câu 1:} Tập hợp các số thực thỏa mãn $-2 \le x < 5$ gồm các số lớn hơn hoặc bằng $-2$ và nhỏ hơn $5$, được ký hiệu là nửa khoảng $[-2; 5)$. Chọn \textbf{A}.
+    \item \textbf{Câu 2:} Vì $1 \in A$ và $2 \in A$ nên tập hợp $\{1; 2\}$ là một tập con của $A$, viết là $\{1; 2\} \subset A$. Chọn \textbf{B}.
+    \item \textbf{Câu 3:} Phát biểu ``Số $17$ là một số nguyên tố'' là một câu khẳng định có tính đúng sai xác định về mặt toán học (cụ thể là mệnh đề đúng). Chọn \textbf{C}.
+    \item \textbf{Câu 4:} Một tập hợp gồm $n$ phần tử thì có tất cả $2^n$ tập hợp con. Với $n = 3$, số tập con là $2^3 = 8$. Chọn \textbf{D}.
+    \item \textbf{Câu 5:} Đường thẳng bờ của miền nghiệm của bất phương trình $3x - 2y + 6 \ge 0$ là đường thẳng có phương trình $3x - 2y + 6 = 0$. Chọn \textbf{A}.
+    \item \textbf{Câu 6:} Thay tọa độ điểm $(0; 1)$ vào hệ:
+    $\begin{cases} 0 + 2(1) - 4 = -2 \le 0 \\ 0 - 1 + 1 = 0 \ge 0 \end{cases}$ (thỏa mãn cả hai bất phương trình). Chọn \textbf{B}.
+    \item \textbf{Câu 7:} Hệ $\begin{cases} 2x - y + 1 \le 0 \\ x + 3y - 5 > 0 \end{cases}$ gồm các bất phương trình bậc nhất hai ẩn $x, y$. Các phương án khác chứa $x^2$, 3 ẩn $x, y, z$, hoặc chứa tích $xy$. Chọn \textbf{C}.
+    \item \textbf{Câu 8:} Thay tọa độ điểm $Q(1; 1)$ vào vế trái bất phương trình: $2(1) - 1 + 2 = 3 \ge 0$ (thỏa mãn). Vậy miền nghiệm chứa điểm $Q(1; 1)$. Chọn \textbf{D}.
+    \item \textbf{Câu 9:} Ta có $\cos 120^\circ = \cos(180^\circ - 60^\circ) = -\cos 60^\circ = -\dfrac{1}{2}$. Chọn \textbf{A}.
+    \item \textbf{Câu 10:} Vì $90^\circ < \alpha < 180^\circ$ nên $\cos \alpha < 0$. Do đó:
+    $\cos \alpha = -\sqrt{1 - \sin^2 \alpha} = -\sqrt{1 - \dfrac{9}{25}} = -\dfrac{4}{5}$. Chọn \textbf{B}.
+    \item \textbf{Câu 11:} Theo công thức tính diện tích tam giác: $S = \dfrac{1}{2}ab \sin C$. Chọn \textbf{C}.
+    \item \textbf{Câu 12:} Theo định lý sin trong tam giác: $\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2R$. Chọn \textbf{D}.
+\end{itemize}
+
+\vspace{0.15cm}
+\textbf{PHẦN II. Trắc nghiệm đúng/sai}
+\begin{itemize}[leftmargin=0.6cm, itemsep=1.5pt, topsep=1pt]
+    \item \textbf{Câu 13:}
+    \begin{itemize}[itemsep=1pt]
+        \item a) Nửa khoảng $A = (-3; 4]$ gồm tất cả các số thực $x$ thỏa mãn $-3 < x \le 4 \implies$ \textbf{Đúng}.
+        \item b) Giao của hai tập hợp: $A \cap B = (-3; 4] \cap [1; 6) = [1; 4] \implies$ \textbf{Đúng}.
+        \item c) Hợp của hai tập hợp: $A \cup B = (-3; 4] \cup [1; 6) = (-3; 6) \implies$ \textbf{Đúng}.
+        \item d) Hiệu của hai tập hợp: $A \setminus B = (-3; 4] \setminus [1; 6) = (-3; 1)$. Phát biểu ghi $(-3; 1]$ là sai vì $1 \in B \implies$ \textbf{Sai}.
+    \end{itemize}
+
+    \item \textbf{Câu 14:}
+    \begin{itemize}[itemsep=1pt]
+        \item a) Điểm gốc $O(0; 0)$ thỏa mãn tất cả các bất phương trình trong hệ $\implies$ \textbf{Đúng}.
+        \item b) Giao điểm của đường thẳng bờ với trục hoành ($y = 0$): $x \le 4$ và $2x \le 6 \implies x \le 3$. Vậy $A(3; 0) \implies$ \textbf{Đúng}.
+        \item c) Tọa độ giao điểm $B$ là nghiệm của hệ $\begin{cases} x + y = 4 \\ 2x + y = 6 \end{cases} \iff \begin{cases} x = 2 \\ y = 2 \end{cases}$. Vậy $B(2; 2) \implies$ \textbf{Đúng}.
+        \item d) Các đỉnh của miền tứ giác là $O(0; 0)$, $A(3; 0)$, $B(2; 2)$, $C(0; 4)$.
+        Tính $F(x, y) = 3x + 2y$:
+        $F(O) = 0$; $F(A) = 3(3) + 2(0) = 9$; $F(B) = 3(2) + 2(2) = 10$; $F(C) = 3(0) + 2(4) = 8$.
+        Giá trị lớn nhất của $F(x, y)$ trên miền nghiệm bằng $10$ (tại $B(2; 2)$). Phát biểu ghi bằng $12$ là $\implies$ \textbf{Sai}.
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.15cm}
+\textbf{PHẦN III. Trắc nghiệm trả lời ngắn}
+\begin{itemize}[leftmargin=0.6cm, itemsep=1.5pt, topsep=1pt]
+    \item \textbf{Câu 15:} Ta có $A \cap B = [-5; 3) \cap (-1; 6] = (-1; 3)$.
+    Các số nguyên thuộc khoảng $(-1; 3)$ là $\{0; 1; 2\}$. Vậy có tất cả $3$ số nguyên.
+    \item \textbf{Câu 16:} Miền nghiệm của hệ là miền tứ giác $OABC$ với các đỉnh:
+    $O(0; 0)$, $A(4; 0)$ (giao điểm của $3x + 2y = 12$ với trục $Ox$), $B(2; 3)$ (giao điểm của hai đường thẳng $x + 2y = 8$ và $3x + 2y = 12$), $C(0; 4)$ (giao điểm của $x + 2y = 8$ với trục $Oy$).
+    Tính giá trị của $F(x, y) = 4x + 3y$ tại các đỉnh: $F(O) = 0$; $F(A) = 4(4) + 3(0) = 16$; $F(B) = 4(2) + 3(3) = 17$; $F(C) = 4(0) + 3(4) = 12$.
+    Vậy giá trị lớn nhất của $F(x, y)$ trên miền nghiệm bằng $17$ (đạt tại đỉnh $B(2; 3)$).
+    \item \textbf{Câu 17:} Vì $90^\circ < \alpha < 180^\circ$ nên $\sin \alpha > 0$ và $\tan \alpha < 0$.
+    Ta có $\sin \alpha = \sqrt{1 - \cos^2 \alpha} = \sqrt{1 - \left(-\frac{5}{13}\right)^2} = \frac{12}{13}$.
+    Suy ra $\tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{12/13}{-5/13} = -\frac{12}{5}$.
+    Do đó: $P = 13\sin \alpha - 5\tan \alpha = 13 \cdot \frac{12}{13} - 5 \cdot \left(-\frac{12}{5}\right) = 12 - (-12) = 24$.
+    \item \textbf{Câu 18:} Vị trí của cảng là $A$, hai tàu tại $B$ và $C$. Ta có $AB = 70\text{ m},\; AC = 100\text{ m},\; \widehat{BAC} = 120^\circ$.
+    Áp dụng định lý côsin trong $\triangle ABC$:
+    \[
+    BC^2 = AB^2 + AC^2 - 2 AB \cdot AC \cdot \cos 120^\circ = 70^2 + 100^2 - 2 \cdot 70 \cdot 100 \cdot \left(-\dfrac{1}{2}\right) = 21900.
+    \]
+    Suy ra $BC = \sqrt{21900} = 10\sqrt{219} \approx 147{,}986\text{ m}$. Làm tròn kết quả đến hàng đơn vị là $148\text{ m}$.
+\end{itemize}
+
+\vspace{0.15cm}
+\textbf{PHẦN IV. Tự luận}
+\begin{itemize}[leftmargin=0.6cm, itemsep=2pt, topsep=1pt]
+    \item \textbf{Câu 19:}
+    \begin{enumerate}[label=\alph*), itemsep=1pt]
+        \item Giải phương trình xác định tập hợp $A$:
+        $(x^2 - 9)(x^2 - 3x + 2) = 0 \iff x \in \{\pm 3; 1; 2\}$.
+        Do đó: $A = \{-3; 1; 2; 3\}$.\\
+        Tập hợp $B$ gồm các số tự nhiên nhỏ hơn $5$: $B = \{0; 1; 2; 3; 4\}$.
+        \item Thực hiện các phép toán tập hợp:
+        $A \cap B = \{1; 2; 3\}$;\quad
+        $A \cup B = \{-3; 0; 1; 2; 3; 4\}$;\quad
+        $A \setminus B = \{-3\}$.
+    \end{enumerate}
+
+    \item \textbf{Câu 20:}
+    Vì $\tan \alpha = 3$ xác định nên $\cos \alpha \ne 0$.
+    Chia cả tử và mẫu của biểu thức $P$ cho $\cos \alpha$, ta được:
+    \[
+    P = \dfrac{2\tan \alpha + 3}{4\tan \alpha - 5} = \dfrac{2(3) + 3}{4(3) - 5} = \dfrac{9}{7}.
+    \]
+
+    \item \textbf{Câu 21:}
+    \begin{enumerate}[label=\alph*), itemsep=1pt]
+        \item Áp dụng hệ quả của định lý côsin cho góc $C$ và góc $B$:
+        $\cos C = \dfrac{a^2 + b^2 - c^2}{2ab},\; \cos B = \dfrac{a^2 + c^2 - b^2}{2ac}$.
+        Thay vào vế phải của đẳng thức:
+        \[
+        VP = b \cos C + c \cos B = \dfrac{a^2 + b^2 - c^2}{2a} + \dfrac{a^2 + c^2 - b^2}{2a} = \dfrac{2a^2}{2a} = a = VT.
+        \]
+        Vậy đẳng thức $a = b \cos C + c \cos B$ được chứng minh.
+        \item Theo định lý sin trong tam giác $ABC$, ta có $a = 2R \sin A$ và $b = 2R \sin B$. Do đó:
+        \[
+        \dfrac{a}{\cos A} = \dfrac{b}{\cos B} \iff \dfrac{2R \sin A}{\cos A} = \dfrac{2R \sin B}{\cos B} \iff \tan A = \tan B.
+        \]
+        Vì $0^\circ < A, B < 180^\circ$ nên $\tan A = \tan B \implies A = B$.
+        Tam giác $ABC$ có $\widehat{A} = \widehat{B}$ nên cân tại đỉnh $C$.
+    \end{enumerate}
+
+    \item \textbf{Câu 22:}
+    Gọi $x, y$ lần lượt là số chiếc bàn loại I và số chiếc ghế loại II xưởng sản xuất trong một tuần ($x, y \in \mathbb{N}$).
+    \begin{itemize}[itemsep=1pt]
+        \item Tổng số giờ gia công gỗ: $3x + y \le 180$.
+        \item Tổng số giờ hoàn thiện: $2x + 2y \le 160 \iff x + y \le 80$.
+    \end{itemize}
+    Ta có hệ bất phương trình ràng buộc:
+    $\begin{cases} x \ge 0,\; y \ge 0 \\ 3x + y \le 180 \\ x + y \le 80 \end{cases}$.\\
+    Miền nghiệm của hệ là miền tứ giác $OABC$ với tọa độ các đỉnh:
+    $O(0; 0)$, $A(60; 0)$, $B(50; 30)$, $C(0; 80)$.\\
+    Tổng lợi nhuận thu được trong tuần là biểu thức: $F(x, y) = 400x + 200y$ (nghìn đồng).
+    Tính giá trị của $F(x, y)$ tại các đỉnh của miền nghiệm:
+    \begin{itemize}[itemsep=1pt]
+        \item $F(O) = 0$;
+        \item $F(A) = 400(60) + 200(0) = 24\,000$ (nghìn đồng) = $24$ triệu đồng;
+        \item $F(B) = 400(50) + 200(30) = 20\,000 + 6\,000 = 26\,000$ (nghìn đồng) = $26$ triệu đồng;
+        \item $F(C) = 400(0) + 200(80) = 16\,000$ (nghìn đồng) = $16$ triệu đồng.
+    \end{itemize}
+    Giá trị lớn nhất của $F(x, y)$ là $26\,000$ nghìn đồng, đạt được khi $x = 50$ và $y = 30$.\\
+    Vậy mỗi tuần xưởng mộc cần sản xuất \textbf{50 chiếc bàn loại I} và \textbf{30 chiếc ghế loại II} để đạt lợi nhuận lớn nhất là \textbf{26.000.000 đồng}.
+\end{itemize}
+
+\end{document}
