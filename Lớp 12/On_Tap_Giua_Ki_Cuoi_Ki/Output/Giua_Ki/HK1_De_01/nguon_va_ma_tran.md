@@ -67,4 +67,5 @@ Nguồn có thể chứa kiến thức ngoài phạm vi ở các câu khác trê
 - Đã kiểm tra độc lập 12 câu nhiều lựa chọn, 16 ý đúng/sai, 6 câu trả lời ngắn.
 - Đã render và xem đủ 9 trang; sửa nhãn O trên đồ thị, xác nhận các trang còn lại không thay đổi hình ảnh sau bản cuối.
 - Không có lỗi XeLaTeX, overfull, thiếu kí tự; Times New Roman đã nhúng; số trang đề trên header/footer khớp.
+- Đã xuất bản phục vụ giảng dạy sang D:\Document\Dạy học\Dạy lớp 12\Ôn GK (1.pdf, HK1_De_01.pdf và bản đáp án tại Ans/).
 - Chưa đo thời gian làm thực tế, chưa thử in giấy và chưa hiệu chuẩn độ khó bằng học sinh làm thử.

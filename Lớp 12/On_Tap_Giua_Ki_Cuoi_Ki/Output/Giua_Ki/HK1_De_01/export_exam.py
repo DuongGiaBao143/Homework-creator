@@ -56,6 +56,18 @@ for filename, start, end, title in (
     reopened = PdfReader(target)
     assert len(reopened.pages) == end-start
     assert [p.extract_text() for p in reopened.pages] == texts[start:end]
+
+# Tự động xuất bản sang thư mục giảng dạy Ôn GK Lớp 12
+export_dir = Path(r"D:\Document\Dạy học\Dạy lớp 12\Ôn GK")
+if export_dir.exists():
+    ans_dir = export_dir / "Ans"
+    ans_dir.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(BASE / "De_thi.pdf", export_dir / "1.pdf")
+    shutil.copy2(BASE / "Dap_an.pdf", ans_dir / "1.pdf")
+    shutil.copy2(BASE / "De_thi.pdf", export_dir / "HK1_De_01.pdf")
+    shutil.copy2(BASE / "Dap_an.pdf", ans_dir / "HK1_De_01.pdf")
+    print(f"[EXPORT] Đã xuất bản đề và đáp án sang: {export_dir}")
+
 report = {"status": "passed", "exam_pages": split, "answer_pages": len(reader.pages)-split,
           "combined_pages": len(reader.pages), "question_counts": [12, 4, 6],
           "exam_contains_no_answer_sections": True, "correct_exam_page_footers": True,

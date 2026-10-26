@@ -15,4 +15,4 @@
 - Công cụ chung là `scripts/index_tai_lieu.py`: quét tài liệu mới/thay đổi, phân loại và bốc ngữ liệu theo số đề. Mặc định `--exam` dùng quy trình THPTQG; thêm `--mode hoc-ki --topics ... --output ...` để bốc theo phạm vi cho chuyên đề/giữa kì/cuối kì. Xem lệnh trong `README.md`.
 - Script xuất ngữ liệu tham khảo Markdown; bước biên soạn câu hỏi, giải kiểm tra và xuất PDF thực hiện tiếp theo quy trình của nhánh.
 
-Các PDF đề/đáp án đã xuất bản tại `D:\Document\Dạy học\Đề ko đáp án\PRIVATE` vẫn giữ vị trí cũ. Xem [README](README.md) để biết cấu trúc mới.
+Các PDF đề/đáp án THPTQG đã xuất bản tại `D:\Document\Dạy học\Đề ko đáp án\PRIVATE` vẫn giữ vị trí cũ. Đề thi giữa kì xuất bản tại `D:\Document\Dạy học\Dạy lớp 12\Ôn GK`. Xem [README](README.md) để biết cấu trúc mới.

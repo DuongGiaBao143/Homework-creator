@@ -30,4 +30,7 @@ Nhánh này phục vụ dạy học theo chương/chuyên đề và ôn kiểm t
 
 Ảnh và đồ thị cần rõ khi in trắng đen; dùng nét/họa tiết thay cho chỉ dẫn chỉ dựa vào màu. Đề mới mang tiêu đề như “ÔN TẬP CHUYÊN ĐỀ: …”, “ÔN TẬP GIỮA KÌ I” hoặc “ÔN TẬP CUỐI KÌ II”; ghi biên soạn Dương Gia Bảo.
 
-Mặc định lưu bản hoàn chỉnh trong `Output/` của nhánh này. Khi cần xuất sang PRIVATE, dùng khu vực riêng `D:\Document\Dạy học\Đề ko đáp án\PRIVATE\Lop12_Giua_Ki_Cuoi_Ki\<loại>\<mã đề>\` với `De_thi.pdf` và `Dap_an.pdf`; kiểm tra đích trước khi ghi. Các file đánh số ở PRIVATE gốc thuộc bộ THPTQG hiện có.
+Mặc định lưu bản hoàn chỉnh trong `Output/` của nhánh này.
+Khi xuất bản phục vụ giảng dạy:
+- **Đề thi giữa kì:** Xuất bản vào `D:\Document\Dạy học\Dạy lớp 12\Ôn GK` với bản đề bài `<số_đề>.pdf` và bản đáp án `Ans\<số_đề>.pdf` (có thể kèm bí danh `<mã_đề>.pdf`).
+- **Chuyên đề / Cuối kì hoặc xuất riêng:** Khi cần lưu trữ thêm vào PRIVATE, dùng `D:\Document\Dạy học\Đề ko đáp án\PRIVATE\Lop12_Giua_Ki_Cuoi_Ki\<loại>\<mã đề>\`. Các file đánh số ở PRIVATE gốc thuộc bộ THPTQG hiện có.
