@@ -1,7 +1,7 @@
 {
   "keywords_hash": "dae235ac6d5b6b8cf323ca168f2584f2",
-  "total_files": 47,
-  "total_chunks": 2843,
+  "total_files": 49,
+  "total_chunks": 3563,
   "files": [
     {
       "file": "[Live] Tổng ôn 20 bài toán quen thuộc.pdf",
@@ -44,6 +44,13 @@
       "mtime": 1780027799.83,
       "size": 442299,
       "num_chunks": 4
+    },
+    {
+      "file": "huong-dan-on-thi-tot-nghiep-trung-hoc-pho-thong-mon-toan-nam-hoc-2026-2027.pdf",
+      "type": ".pdf",
+      "mtime": 1793003334.08,
+      "size": 8428989,
+      "num_chunks": 555
     },
     {
       "file": "Hưng Yên.pdf",
@@ -156,6 +163,13 @@
       "mtime": 1776239125.17,
       "size": 508815,
       "num_chunks": 4
+    },
+    {
+      "file": "tai-lieu-on-thi-tn-thpt-2027-mon-toan-truong-thpt-so-1-le-hong-phong-dak-lak.pdf",
+      "type": ".pdf",
+      "mtime": 1793003326.26,
+      "size": 16649892,
+      "num_chunks": 165
     },
     {
       "file": "THCS-THPT Nguyễn Khuyến.pdf",
