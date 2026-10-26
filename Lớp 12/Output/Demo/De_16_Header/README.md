@@ -7,6 +7,8 @@ Bản thử ngày 26/10/2026, chờ duyệt trước khi áp dụng cho cả b�
 - `De_16_demo.tex`: nguồn riêng, biên dịch bằng XeLaTeX (font Times New Roman của Windows).
 - Nội dung 22 câu và hình vẽ giữ nguyên nguồn `../../De 16/De 16.tex`; chỉ thay font, header, footer và cách ngắt dòng.
 - Chữ văn bản Times New Roman 12pt; công thức giữ font Computer Modern (cùng kiểu nét toán với KaTeX trong mẫu).
+- Khoảng cách bổ sung giữa hai hàng đáp án A–B và C–D tăng từ 3pt lên 8pt để phân số không chồng nhau.
+- Giữ khối đáp án cùng đoạn đề bài ngay trước đó khi ngắt trang.
 
 Biên dịch trong thư mục này: `xelatex -interaction=nonstopmode -halt-on-error -no-shell-escape De_16_demo.tex`.
 
