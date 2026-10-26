@@ -4,58 +4,23 @@ Bất cứ khi nào người dùng:
 - Yêu cầu **tạo đề mới** (ví dụ: "tạo đề 7", "sinh đề 8") $\implies$ **Chạy từ Pha 0 đến Pha 4** (tự động đọc Kho Tài Liệu Nguồn tại `d:\Tao_De\Lớp 12\Nguon_Tai_Lieu` để tổng hợp câu hỏi và tạo file `.tex` mới).
 - Hoặc cung cấp một đề thi Toán có sẵn (file `.tex`, mã nguồn LaTeX, hoặc yêu cầu xử lý đề như "xử lý đề 4", "quăng đề vào") $\implies$ **Chạy từ Pha 1 đến Pha 4**.
 
-**TỰ ĐỘNG CHẠY TOÀN DIỆN (theo skill `pipeline-de-toan`), KHÔNG CHỜ NGƯỜI DÙNG PHẢI PROMPT NHẮC TỪNG BƯỚC:**
+**TỰ ĐỘNG CHẠY TOÀN DIỆN theo pipeline trong file này, KHÔNG CHỜ NGƯỜI DÙNG PHẢI PROMPT NHẮC TỪNG BƯỚC:**
 
 ---
 
 ### THƯ MỤC ĐẦU RA
 Tất cả thư mục đề được lưu tại `D:\Tao_De\Lớp 12\Output\De <số_đề>`; bản demo lưu tại `D:\Tao_De\Lớp 12\Output\Demo`. Khi tạo đề mới, tạo thư mục dưới `Output`, không tạo thư mục đề trực tiếp ở gốc dự án.
 
-### QUY CHUẨN HEADLINE & HEADNOTE BẮT BUỘC TRONG TẤT CẢ CÁC ĐỀ:
-1. **Headline (Tiêu đề đầu đề & Header trang):** `HƯỚNG TỚI THPTQG 2027`
-2. **Headnote / Thông tin tác giả:** `Người biên soạn: Dương Gia Bảo`
-3. **Cấu hình chuẩn LaTeX (`fancyhdr` & Tiêu đề):**
-   ```latex
-   \pagestyle{fancy}
-   \fancyhf{}
-   \lhead{\small\textbf{HƯỚNG TỚI THPTQG 2027}}
-   \rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
-   \rfoot{\small Trang \thepage}
-   \renewcommand{\headrulewidth}{0.4pt}
-   ```
-   Khối tiêu đề đầu trang (2 cột chuẩn đề thi Sở GD&ĐT + dòng `Họ và tên:... SBD:...` kèm khung `Mã đề thi 000<số_đề>` thay cho line ngang, không lặp lại tên người biên soạn vì đã có ở headnote):
-   ```latex
-   \noindent
-   \begin{minipage}[t]{0.40\textwidth}
-       \centering
-       \textbf{HƯỚNG TỚI THPTQG 2027}\\[-2pt]
-       \rule{3.2cm}{0.6pt}\\[4pt]
-       \textbf{ĐỀ CHÍNH THỨC}
-   \end{minipage}\hfill
-   \begin{minipage}[t]{0.58\textwidth}
-       \centering
-       \textbf{ĐỀ THI KHẢO SÁT CHẤT LƯỢNG}\\
-       \textbf{ĐỀ SỐ <số_đề>}\\
-       \textbf{Môn thi: TOÁN}\\
-       \textit{\small Thời gian làm bài: 90 phút, không kể thời gian phát đề}
-   \end{minipage}
-
-   \vspace{0.2cm}
-   \noindent
-   \begin{minipage}[b]{0.78\textwidth}
-       \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
-   \end{minipage}\hfill
-   \begin{minipage}[b]{0.20\textwidth}
-       \hfill
-       \setlength{\fboxrule}{0.8pt}%
-       \fbox{\begin{minipage}{2.3cm}
-           \centering
-           \textbf{\small Mã đề thi}\\
-           \textbf{000<số_đề>}
-       \end{minipage}}
-   \end{minipage}
-   \vspace{0.2cm}
-   ```
+### QUY CHUẨN TRÌNH BÀY THPTQG (ĐÃ DUYỆT NGÀY 26/10/2026)
+- **Nguồn mẫu chuẩn:** sao chép `templates/de_mau.tex` vào `Output/De <số_đề>/De <số_đề>.tex` khi tạo đề mới. Mẫu được lấy từ `Output/Demo/De_16_Header/De_16_demo.pdf` đã duyệt, bao gồm cả sửa giãn dòng đáp án. Giữ đường dẫn ảnh tương đối theo thư mục đề.
+- **Font và biên dịch:** chữ văn bản **Times New Roman 12pt**, đủ thường/đậm/nghiêng/đậm nghiêng, nạp bằng `fontspec` từ font Windows; công thức giữ Computer Modern như demo. Dùng **XeLaTeX**; không ghép thêm `vietnam`, `inputenc` hoặc `fontenc` của bản pdfLaTeX cũ. Giữ lề và cỡ chữ từng khối theo template.
+- **Header trang đầu:** hai cột. Bên trái là `HƯỚNG TỚI THPTQG 2027`, `Biên soạn: Dương Gia Bảo`, khung `ĐỀ ÔN TẬP / CHÍNH THỨC` và số trang đề. Bên phải là `KỲ KHẢO SÁT CHẤT LƯỢNG LỚP 12`, `NĂM HỌC 2026 - 2027`, `Môn: TOÁN - Lớp 12 (ĐỀ SỐ <số_đề>)`, thời gian 90 phút và khung mã đề. Dưới hai cột là dòng `Họ và tên học sinh: ... Lớp: ...` có đường kẻ trên/dưới.
+- **Mã đề:** đặt `\soDe` bằng số nguyên 1–9999; `\maDe` trong template tự đệm thành đúng **4 chữ số**: 1 → `0001`, 16 → `0016`, 100 → `0100`, 1000 → `1000`. Không nối chuỗi `000` với số đề.
+- **Số trang:** đặt `\soTrangDe` bằng số trang **chỉ của đề bài** sau khi tách PDF. Khung đầu đề hiển thị tối thiểu 2 chữ số (`05 trang`); footer đề là `Trang <trang>/<số trang đề> - Mã đề: <mã đề>`. Không dùng tổng số trang của PDF gộp cả đáp án. Trước phần đáp án ở trang mới, chuyển sang `\pagestyle{answers}` để footer lời giải không mang mẫu số trang đề.
+- **Các trang tiếp theo:** bên trái `HƯỚNG TỚI THPTQG 2027`, bên phải `Biên soạn: Dương Gia Bảo`, có đường kẻ mảnh; trang đầu dùng `\thispagestyle{firstpage}`.
+- **Phần I:** dùng macro `\bonpa` của template cho cả 12 câu. Hàng A–B và C–D có khoảng cách bổ sung **8pt** (`\[8pt]`); giữ `\par\nobreak\smallskip\nobreak\noindent` để khối đáp án không tách khỏi đoạn câu hỏi trước nó. Kiểm tra trực quan cả câu có phân số ở hai hàng, căn thức và tích phân; không giảm giãn dòng chỉ để ép số trang.
+- Chuẩn này áp dụng khi tạo hoặc chỉnh định dạng đề lớp 12. Khi chỉ được yêu cầu cập nhật pipeline, giữ nguyên các PDF đã phát hành; chỉ xuất lại cả bộ khi người dùng yêu cầu.
+- Khi sửa template, chạy `python -B "scripts/test_exam_template.py"` từ thư mục lớp 12 để kiểm tra mã đề, số trang và footer bằng PDF biên dịch thực tế (cần XeLaTeX và `pypdf`).
 
 ---
 
@@ -135,9 +100,11 @@ Tất cả thư mục đề được lưu tại `D:\Tao_De\Lớp 12\Output\De <s
        ```
    - **LƯU Ý:** **Tuyệt đối không chèn ảnh cũ tái sử dụng sai lệch nội dung.**
 
-4. **Pha 4: Biên dịch pdflatex, Tách Đề & Đáp án, và Xuất bản**
+4. **Pha 4: Biên dịch XeLaTeX, Tách Đề & Đáp án, và Xuất bản**
    - Thêm `\usepackage{graphicx}` vào preamble (nếu có hình ảnh).
-   - Biên dịch bằng `pdflatex -interaction=nonstopmode`.
+   - Biên dịch trong thư mục đề bằng `xelatex -interaction=nonstopmode -halt-on-error -no-shell-escape "De <số_đề>.tex"`. Trong VS Code chọn recipe `xelatex` (recipe `pdflatex` vẫn giữ cho nguồn cũ/lớp 10).
+   - Sau khi xác định trang bắt đầu `BẢNG ĐÁP ÁN TỔNG HỢP`, cập nhật `\soTrangDe` bằng số trang trước marker, biên dịch lại rồi mới tách/xuất bản. Kiểm tra số trang cuối cùng khớp khung header và footer.
+   - Trước khi xuất bản, render và xem tất cả trang; kiểm tra font Times New Roman đã nhúng, mã đề đúng 4 chữ số, đủ 12+4+6 câu, đề không lộ đáp án, hai hàng phương án không chồng nhau và câu hỏi không tách khỏi khối phương án. Không chấp nhận thiếu ký tự hoặc lỗi biên dịch.
    - Xử lý triệt để overfull hbox nếu có, đảm bảo layout đẹp mắt, không tràn lề.
    - Đảm bảo `BẢNG ĐÁP ÁN TỔNG HỢP` và `HƯỚNG DẪN GIẢI CHI TIẾT` bắt đầu ở trang mới (`\newpage`).
    - **Tự động Tách Đề bài và Đáp án thành 2 file PDF riêng biệt bằng Python (`pypdf`):**

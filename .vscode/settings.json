@@ -5,9 +5,26 @@
     {
       "name": "pdflatex",
       "tools": ["pdflatex"]
+    },
+    {
+      "name": "xelatex",
+      "tools": ["xelatex"]
     }
   ],
   "latex-workshop.latex.tools": [
+    {
+      "name": "xelatex",
+      "command": "xelatex",
+      "cwd": "%DIR%",
+      "args": [
+        "-synctex=1",
+        "-interaction=nonstopmode",
+        "-file-line-error",
+        "-halt-on-error",
+        "-no-shell-escape",
+        "%DOCFILE_EXT%"
+      ]
+    },
     {
       "name": "pdflatex",
       "command": "pdflatex",

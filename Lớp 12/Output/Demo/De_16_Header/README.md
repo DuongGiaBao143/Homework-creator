@@ -1,6 +1,6 @@
 # Demo header và font đề 16
 
-Bản thử ngày 26/10/2026, chờ duyệt trước khi áp dụng cho cả bộ.
+Mẫu đã duyệt ngày 26/10/2026, gồm cả sửa giãn dòng đáp án. Đã tích hợp vào `../../../templates/de_mau.tex` và quy trình `../../../GEMINI.md`; các bản phát hành cũ chưa được xuất lại.
 
 - `De_16_demo.pdf`: chỉ đề bài, 5 trang, mã 0016.
 - `De_16_header.png`: ảnh xem nhanh header.
