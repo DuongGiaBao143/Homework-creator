@@ -1,21 +1,20 @@
 import os
 import pypdf
 
-src_pdf = r"d:\Tao_De\Lớp 12\Output\De 10\De 10.pdf"
+src_pdf = r"d:\Tao_De\Lớp 12\On_Thi_THPTQG\Output\De 11\De 11.pdf"
 dest_exam_dir = r"D:\Document\Dạy học\Đề ko đáp án\PRIVATE"
 dest_ans_dir = r"D:\Document\Dạy học\Đề ko đáp án\PRIVATE\Ans"
 
 os.makedirs(dest_exam_dir, exist_ok=True)
 os.makedirs(dest_ans_dir, exist_ok=True)
 
-dest_exam_pdf = os.path.join(dest_exam_dir, "10.pdf")
-dest_ans_pdf = os.path.join(dest_ans_dir, "10.pdf")
+dest_exam_pdf = os.path.join(dest_exam_dir, "11.pdf")
+dest_ans_pdf = os.path.join(dest_ans_dir, "11.pdf")
 
 reader = pypdf.PdfReader(src_pdf)
 total_pages = len(reader.pages)
 print(f"Tổng số trang file gốc: {total_pages}")
 
-# Tìm trang bắt đầu Bảng đáp án tổng hợp
 split_idx = -1
 for i, page in enumerate(reader.pages):
     text = page.extract_text() or ""

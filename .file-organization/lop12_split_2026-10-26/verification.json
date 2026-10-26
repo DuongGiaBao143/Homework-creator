@@ -1,0 +1,34 @@
+{
+  "original_files_verified": 295,
+  "unchanged_content": 284,
+  "files_updated_for_paths_or_index_support": [
+    "Lớp 12\\On_Thi_THPTQG\\GEMINI.md",
+    "Lớp 12\\On_Thi_THPTQG\\generate_all_math_plots.py",
+    "Lớp 12\\On_Thi_THPTQG\\update_plots.py",
+    "Lớp 12\\On_Thi_THPTQG\\Output\\De 10\\split_de10.py",
+    "Lớp 12\\On_Thi_THPTQG\\Output\\De 11\\split_de11.py",
+    "Lớp 12\\On_Thi_THPTQG\\Output\\De 7\\plot_de7_figures.py",
+    "Lớp 12\\On_Thi_THPTQG\\Output\\Demo\\nguon_demo.md",
+    "Lớp 12\\On_Thi_THPTQG\\scripts\\index_tai_lieu.py",
+    "Lớp 12\\On_Thi_THPTQG\\scripts\\split_generic.py",
+    "Lớp 12\\On_Thi_THPTQG\\scripts\\test_exam_template.py",
+    "Lớp 12\\On_Thi_THPTQG\\scripts\\test_index_tai_lieu.py"
+  ],
+  "latex_image_references_resolved": 49,
+  "thpt_sources": 49,
+  "thpt_chunks": 3563,
+  "school_sources": 0,
+  "school_chunks": 0,
+  "all_python_sources_compile": true,
+  "all_original_pdf_tex_images_unchanged": true,
+  "tests": {
+    "count": 6,
+    "result": "passed",
+    "includes": [
+      "XeLaTeX template with 5 exam codes",
+      "existing THPT hard-source rules",
+      "separate school RAG CLI and unchanged THPT index"
+    ]
+  },
+  "test_environment": "XeLaTeX requires access to the user MiKTeX configuration outside the sandbox."
+}

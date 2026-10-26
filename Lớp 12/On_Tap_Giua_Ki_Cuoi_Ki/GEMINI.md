@@ -1,0 +1,32 @@
+# Ôn chuyên đề, giữa kì và cuối kì Toán 12
+
+## Mục tiêu và phạm vi
+
+Nhánh này phục vụ dạy học theo chương/chuyên đề và ôn kiểm tra định kì. Trước khi tạo đề, xác định chuyên đề hoặc kì kiểm tra, phạm vi kiến thức đã học, mức học sinh, thời lượng, cấu trúc và thang điểm từ yêu cầu/ma trận người dùng đưa.
+
+- Chỉ hỏi thông tin còn thiếu có ảnh hưởng đến nội dung hoặc cấu trúc. Có thể dùng cấu trúc của đề mẫu/ma trận đã cung cấp.
+- Nếu chưa có mẫu/ma trận và người dùng không chỉ định cấu trúc, đề xuất cấu trúc phù hợp với phạm vi và thời lượng trước khi chốt đề.
+- Chọn câu trong phạm vi đã học; độ khó theo nhóm học sinh. Các đề ôn cùng chuyên đề được phép tập trung vào một mạch kiến thức.
+- Quy định 12 + 4 + 6, ít nhất hai câu khó từ ba tài liệu bắt buộc và header “HƯỚNG TỚI THPTQG 2027” thuộc nhánh THPTQG; nhánh này dùng tiêu đề chuyên đề/kì kiểm tra được giao.
+
+## Lưu nguồn và đầu ra
+
+- Tài liệu: `Nguon_Tai_Lieu/Chuyen_De/`, `Nguon_Tai_Lieu/Giua_Ki/`, `Nguon_Tai_Lieu/Cuoi_Ki/`. Giữ tên gốc có ý nghĩa.
+- RAG riêng: `Nguon_Tai_Lieu/_index/`. Quét bằng lệnh `--source-dir` trong `../README.md`.
+- Nếu kho nguồn này còn trống, có thể tra `../On_Thi_THPTQG/Nguon_Tai_Lieu/_index/extracted_chunks.jsonl` theo chủ đề rồi đọc PDF gốc ở kho đó. Ghi đúng tên file, trang và số câu; giữ vị trí tài liệu gốc.
+- Đầu ra: `Output/Chuyen_De/<tên chuyên đề hoặc mã đề>/`, `Output/Giua_Ki/<học kì và mã đề>/`, `Output/Cuoi_Ki/<học kì và mã đề>/`.
+- Mỗi đề giữ chung mã nguồn `.tex`, PDF gộp, `De_thi.pdf`, `Dap_an.pdf`, script kiểm tra và hồ sơ nguồn. Tách tên/thư mục để các đề ôn không ghi đè nhau.
+- Bộ `Output/Chuyen_De/De_HamSo/` và `scripts/verify_chuyen_de_ham_so.py` được chuyển từ cấu trúc cũ; chỉ sửa nội dung khi người dùng yêu cầu.
+
+## Quy trình tạo đề
+
+1. Chốt phạm vi, lập ma trận theo nội dung, mức độ, dạng câu và điểm. Bảo đảm tổng điểm, thời lượng khớp yêu cầu.
+2. Tra RAG theo đúng mạch kiến thức, mở trang nguồn để xác nhận đầy đủ dữ kiện/hình. Khi chế tác bài, giữ bối cảnh và đơn vị hợp lý.
+3. Giải độc lập từng câu, kiểm tra đáp án, các ý đúng/sai, điều kiện xác định và làm tròn. Lưu script kiểm tra khi có tính toán đáng kể.
+4. Dùng Times New Roman 12pt/XeLaTeX cho đề mới; có thể tham khảo bố cục và macro `\bonpa` trong `../On_Thi_THPTQG/templates/de_mau.tex`, giữ khoảng cách hai hàng đáp án 8pt. Điều chỉnh tiêu đề, thời gian và các phần theo ma trận riêng.
+5. Đáp án và lời giải bắt đầu ở trang mới; tách PDF đề/đáp án. Render để kiểm tra chữ, hình, ngắt trang, không lộ lời giải trong đề.
+6. Ghi phạm vi, ma trận/thang điểm, nguồn (file/trang/câu) và kết quả kiểm tra vào hồ sơ của đề. Báo rõ phần chưa kiểm chứng.
+
+Ảnh và đồ thị cần rõ khi in trắng đen; dùng nét/họa tiết thay cho chỉ dẫn chỉ dựa vào màu. Đề mới mang tiêu đề như “ÔN TẬP CHUYÊN ĐỀ: …”, “ÔN TẬP GIỮA KÌ I” hoặc “ÔN TẬP CUỐI KÌ II”; ghi biên soạn Dương Gia Bảo.
+
+Mặc định lưu bản hoàn chỉnh trong `Output/` của nhánh này. Khi cần xuất sang PRIVATE, dùng khu vực riêng `D:\Document\Dạy học\Đề ko đáp án\PRIVATE\Lop12_Giua_Ki_Cuoi_Ki\<loại>\<mã đề>\` với `De_thi.pdf` và `Dap_an.pdf`; kiểm tra đích trước khi ghi. Các file đánh số ở PRIVATE gốc thuộc bộ THPTQG hiện có.

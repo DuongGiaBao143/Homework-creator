@@ -10,7 +10,7 @@ from pypdf import PdfReader
 class ExamTemplateTest(unittest.TestCase):
     def test_rendered_codes_and_answer_footer(self):
         template = (Path(__file__).resolve().parents[1] / "templates" / "de_mau.tex").read_text(encoding="utf-8")
-        with tempfile.TemporaryDirectory(prefix="exam-template-") as work:
+        with tempfile.TemporaryDirectory(prefix="exam-template-", dir=Path(__file__).resolve().parent) as work:
             work = Path(work)
             for number in (1, 16, 100, 1000, 9999):
                 with self.subTest(number=number):

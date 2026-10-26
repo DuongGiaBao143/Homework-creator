@@ -30,7 +30,7 @@ except ImportError:
     from pypdf import PdfReader
     logging.getLogger("pypdf").setLevel(logging.ERROR)
 
-BASE_DIR = Path(r"d:\Tao_De\Lớp 12")
+BASE_DIR = Path(__file__).resolve().parents[1]
 SOURCE_DIR = BASE_DIR / "Nguon_Tai_Lieu"
 INDEX_DIR = SOURCE_DIR / "_index"
 CATALOG_PATH = INDEX_DIR / "catalog.json"
@@ -780,7 +780,7 @@ def sample_part3_hard_sources(chunks: list[dict], rng: random.Random) -> list[di
 def sample_for_new_exam(exam_num: int, per_topic: int = 2, force_reindex: bool = False, reclassify: bool = False):
     all_chunks = sync_index(force_reindex=force_reindex, reclassify=reclassify)
     if not all_chunks:
-        print("[INFO] Thư mục d:\\Tao_De\\Lớp 12\\Nguon_Tai_Lieu hiện chưa có file tài liệu nào.")
+        print(f"[INFO] Thư mục {SOURCE_DIR} hiện chưa có file tài liệu nào.")
         return
 
     rng = random.Random(exam_num * 2027)
@@ -855,7 +855,18 @@ if __name__ == "__main__":
     parser.add_argument("--reindex", action="store_true", help="Ép quét lại toàn bộ kho tài liệu từ đầu")
     parser.add_argument("--reclassify", action="store_true", help="Ép phân loại và chấm điểm VDC lại toàn bộ các đoạn")
     parser.add_argument("--workers", type=int, default=None, help="Số luồng chạy song song")
+    parser.add_argument("--source-dir", type=Path, help="Quét kho nguồn riêng; ghi _index ngay trong kho đó, không lấy mẫu đề THPTQG")
     args = parser.parse_args()
+
+    if args.source_dir is not None:
+        if args.exam is not None:
+            parser.error("--exam chỉ dùng với kho THPTQG mặc định; kho học kì cần chọn ngữ liệu theo phạm vi riêng.")
+        if not args.source_dir.is_dir():
+            parser.error(f"Kho nguồn không tồn tại hoặc không phải thư mục: {args.source_dir}")
+        SOURCE_DIR = args.source_dir.resolve()
+        INDEX_DIR = SOURCE_DIR / "_index"
+        CATALOG_PATH = INDEX_DIR / "catalog.json"
+        CHUNKS_PATH = INDEX_DIR / "extracted_chunks.jsonl"
 
     if args.exam is not None:
         sample_for_new_exam(args.exam, force_reindex=args.reindex, reclassify=args.reclassify)

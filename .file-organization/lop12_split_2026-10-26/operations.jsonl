@@ -1,0 +1,224 @@
+{"Action":"move","Source":"D:\\Tao_De\\Lớp 12\\Nguon_Tai_Lieu","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Nguon_Tai_Lieu","Status":"completed"}
+{"Action":"move","Source":"D:\\Tao_De\\Lớp 12\\Output","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output","Status":"failed","Error":"You do not have sufficient access rights to perform this operation or the item is hidden, system, or read only."}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\GEMINI.md","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\GEMINI.md","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\generate_all_math_plots.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\generate_all_math_plots.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\update_plots.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\update_plots.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 10\\compare_angles.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 10\\compare_angles.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 10\\cr7_penalty.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 10\\cr7_penalty.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 10\\De 10.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 10\\De 10.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 10\\De 10.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 10\\De 10.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 10\\De 10.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 10\\De 10.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 10\\De 10.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 10\\De 10.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 10\\page_10_radar.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 10\\page_10_radar.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 10\\page_4_new.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 10\\page_4_new.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 10\\page_4_radar.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 10\\page_4_radar.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 10\\page_5_cr7.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 10\\page_5_cr7.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 10\\split_de10.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 10\\split_de10.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 10\\verify_de10.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 10\\verify_de10.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 11\\cr7_football.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 11\\cr7_football.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 11\\De 11.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 11\\De 11.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 11\\De 11.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 11\\De 11.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 11\\De 11.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 11\\De 11.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 11\\De 11.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 11\\De 11.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 11\\page_4_preview.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 11\\page_4_preview.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 11\\page_5_preview.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 11\\page_5_preview.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 11\\split_de11.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 11\\split_de11.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 11\\verify_de11.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 11\\verify_de11.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 12\\12_Ans.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 12\\12_Ans.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 12\\12.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 12\\12.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 12\\De 12.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 12\\De 12.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 12\\De 12.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 12\\De 12.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 12\\De 12.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 12\\De 12.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 12\\De 12.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 12\\De 12.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 12\\nguon_de12.md","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 12\\nguon_de12.md","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 12\\split_de12.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 12\\split_de12.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 12\\verify_de12.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 12\\verify_de12.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 13\\De 13.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 13\\De 13.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 13\\De 13.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 13\\De 13.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 13\\De 13.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 13\\De 13.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 13\\De 13.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 13\\De 13.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 13\\prev_1.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 13\\prev_1.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 13\\prev_2.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 13\\prev_2.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 13\\prev_3.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 13\\prev_3.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 13\\prev_4.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 13\\prev_4.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 13\\prev_5.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 13\\prev_5.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 13\\verify_de13.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 13\\verify_de13.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 13\\images\\de13_beverage_can.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 13\\images\\de13_beverage_can.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 13\\images\\de13_spam_filter.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 13\\images\\de13_spam_filter.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 14\\cr7_siuuu_alnassr.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 14\\cr7_siuuu_alnassr.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 14\\De 14.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 14\\De 14.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 14\\De 14.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 14\\De 14.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 14\\De 14.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 14\\De 14.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 14\\De 14.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 14\\De 14.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 14\\prev_1.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 14\\prev_1.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 14\\prev_2.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 14\\prev_2.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 14\\prev_3.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 14\\prev_3.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 14\\prev_4.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 14\\prev_4.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 14\\prev_5.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 14\\prev_5.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 14\\verify_de14.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 14\\verify_de14.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 14\\images\\de14_chip_factory.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 14\\images\\de14_chip_factory.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 14\\images\\de14_corridor_turn.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 14\\images\\de14_corridor_turn.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 15\\15_Ans.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 15\\15_Ans.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 15\\15.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 15\\15.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 15\\De 15.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 15\\De 15.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 15\\De 15.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 15\\De 15.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 15\\De 15.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 15\\De 15.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 15\\De 15.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 15\\De 15.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 15\\nguon_de15.md","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 15\\nguon_de15.md","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 15\\split_de15.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 15\\split_de15.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 15\\verify_de15.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 15\\verify_de15.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 16\\16_Ans.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 16\\16_Ans.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 16\\16.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 16\\16.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 16\\cr7_c1_trophy.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 16\\cr7_c1_trophy.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 16\\De 16.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 16\\De 16.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 16\\De 16.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 16\\De 16.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 16\\De 16.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 16\\De 16.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 16\\De 16.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 16\\De 16.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 16\\nguon_de16.md","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 16\\nguon_de16.md","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 16\\split_de16.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 16\\split_de16.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 16\\verify_de16.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 16\\verify_de16.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 2\\De 2.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 2\\De 2.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 2\\De 2.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 2\\De 2.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 2\\De 2.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 2\\De 2.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 2\\De 2.synctex.gz","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 2\\De 2.synctex.gz","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 2\\De 2.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 2\\De 2.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 2\\De 2.tex.before-ampersand-fix-20261012-163304.bak","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 2\\De 2.tex.before-ampersand-fix-20261012-163304.bak","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 2\\images\\phan2_cau2_tenlua.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 2\\images\\phan2_cau2_tenlua.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 2\\images\\phan2_cau4_dentreo.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 2\\images\\phan2_cau4_dentreo.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 2\\images\\phan3_cau1_bechuahoachat.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 2\\images\\phan3_cau1_bechuahoachat.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 2\\images\\phan3_cau3_rada_uav.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 2\\images\\phan3_cau3_rada_uav.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 2\\images\\phan3_cau6_bonchuanhienlieu.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 2\\images\\phan3_cau6_bonchuanhienlieu.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 3\\De 3.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 3\\De 3.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 3\\De 3.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 3\\De 3.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 3\\De 3.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 3\\De 3.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 3\\De 3.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 3\\De 3.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 3\\De 3.tex.bak","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 3\\De 3.tex.bak","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 3\\images\\phan2_cau1_nhamayxut.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 3\\images\\phan2_cau1_nhamayxut.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 3\\images\\phan2_cau2_pinmattroi.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 3\\images\\phan2_cau2_pinmattroi.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 3\\images\\phan2_cau3_aitamsoat.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 3\\images\\phan2_cau3_aitamsoat.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 3\\images\\phan2_cau4_sancap.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 3\\images\\phan2_cau4_sancap.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 3\\images\\phan3_cau1_bechuanuoc.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 3\\images\\phan3_cau1_bechuanuoc.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 3\\images\\phan3_cau2_tietkiem.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 3\\images\\phan3_cau2_tietkiem.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 3\\images\\phan3_cau3_drone.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 3\\images\\phan3_cau3_drone.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 3\\images\\phan3_cau5_daychuyen.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 3\\images\\phan3_cau5_daychuyen.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 3\\images\\phan3_cau6_kitthucpham.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 3\\images\\phan3_cau6_kitthucpham.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\De 4.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\De 4.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\De 4.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\De 4.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\De 4.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\De 4.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\De 4.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\De 4.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\De 4.tex.bak","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\De 4.tex.bak","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\images\\phan2_cau1_maybaoholaodong.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\images\\phan2_cau1_maybaoholaodong.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\images\\phan2_cau2_vantoc_phanh.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\images\\phan2_cau2_vantoc_phanh.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\images\\phan2_cau2_xephanh.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\images\\phan2_cau2_xephanh.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\images\\phan2_cau3_tamsoatvirus.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\images\\phan2_cau3_tamsoatvirus.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\images\\phan2_cau4_maiche_oxyz.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\images\\phan2_cau4_maiche_oxyz.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\images\\phan2_cau4_maichecap.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\images\\phan2_cau4_maichecap.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\images\\phan3_cau1_thungrac_3d.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\images\\phan3_cau1_thungrac_3d.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\images\\phan3_cau1_thungton.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\images\\phan3_cau1_thungton.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\images\\phan3_cau2_tietkiem.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\images\\phan3_cau2_tietkiem.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\images\\phan3_cau3_maybayradar.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\images\\phan3_cau3_maybayradar.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\images\\phan3_cau5_daychuyen.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\images\\phan3_cau5_daychuyen.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 4\\images\\phan3_cau5_daychuyenmay.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 4\\images\\phan3_cau5_daychuyenmay.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\De 5.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\De 5.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\De 5.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\De 5.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\De 5.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\De 5.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\De 5.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\De 5.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\De 5.tex.bak","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\De 5.tex.bak","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\De 5.tex.before-syntax-fix-20261012-214630.bak","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\De 5.tex.before-syntax-fix-20261012-214630.bak","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\De 5.tex.before-table-fix-20261012-214559.bak","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\De 5.tex.before-table-fix-20261012-214559.bak","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\images\\phan2_cau1_loinhuan_phuy.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\images\\phan2_cau1_loinhuan_phuy.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\images\\phan2_cau1_thungphuy.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\images\\phan2_cau1_thungphuy.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\images\\phan2_cau2_thietbibay.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\images\\phan2_cau2_thietbibay.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\images\\phan2_cau3_aisangloc.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\images\\phan2_cau3_aisangloc.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\images\\phan2_cau4_maivom_oxyz.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\images\\phan2_cau4_maivom_oxyz.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\images\\phan2_cau4_maivom.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\images\\phan2_cau4_maivom.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\images\\phan3_cau1_catton.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\images\\phan3_cau1_catton.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\images\\phan3_cau2_tietkiem.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\images\\phan3_cau2_tietkiem.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\images\\phan3_cau3_maybayradar.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\images\\phan3_cau3_maybayradar.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\images\\phan3_cau5_daychuyen.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\images\\phan3_cau5_daychuyen.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 5\\images\\phan3_cau5_daychuyenmay.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 5\\images\\phan3_cau5_daychuyenmay.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\De 6.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\De 6.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\De 6.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\De 6.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\De 6.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\De 6.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\De 6.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\De 6.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\De 6.tex.bak","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\De 6.tex.bak","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\De 6.tex.before-ampersand-fix-20261012-221208.bak","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\De 6.tex.before-ampersand-fix-20261012-221208.bak","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan2_cau1_loinhuan.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan2_cau1_loinhuan.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan2_cau1_nhamayxut.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan2_cau1_nhamayxut.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan2_cau2_tamsoatbenh.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan2_cau2_tamsoatbenh.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan2_cau2_xetnghiem.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan2_cau2_xetnghiem.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan2_cau3_thietbichuyendong.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan2_cau3_thietbichuyendong.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan2_cau3_vantoc.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan2_cau3_vantoc.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan2_cau4_haidrone_3d.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan2_cau4_haidrone_3d.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan2_cau4_haidrone.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan2_cau4_haidrone.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan3_cau1_bechua_3d.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan3_cau1_bechua_3d.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan3_cau1_bechuanhienlieu.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan3_cau1_bechuanhienlieu.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan3_cau2_hinhchop.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan3_cau2_hinhchop.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan3_cau3_hairobot_oxy.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan3_cau3_hairobot_oxy.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan3_cau3_hairobot.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan3_cau3_hairobot.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan3_cau4_nguonsang.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan3_cau4_nguonsang.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan3_cau4_nonanhsang.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan3_cau4_nonanhsang.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan3_cau5_bansung.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan3_cau5_bansung.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan3_cau6_kientruc.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan3_cau6_kientruc.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\phan3_cau6_thietdien_3d.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\phan3_cau6_thietdien_3d.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 6\\images\\test_robot.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 6\\images\\test_robot.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 7\\De 7.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 7\\De 7.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 7\\De 7.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 7\\De 7.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 7\\De 7.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 7\\De 7.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 7\\De 7.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 7\\De 7.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 7\\plot_de7_figures.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 7\\plot_de7_figures.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 7\\verify_de7.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 7\\verify_de7.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 7\\images\\phan2_cau4_khinhkhicau_oxyz.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 7\\images\\phan2_cau4_khinhkhicau_oxyz.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 7\\images\\phan3_cau1_caysao_ho.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 7\\images\\phan3_cau1_caysao_ho.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 7\\images\\phan3_cau2_giado_chaucay.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 7\\images\\phan3_cau2_giado_chaucay.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 7\\images\\phan3_cau3_elip_beca.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 7\\images\\phan3_cau3_elip_beca.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 7\\images\\phan3_cau4_laser_oxyz.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 7\\images\\phan3_cau4_laser_oxyz.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 7\\images\\phan3_cau6_logo_conca.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 7\\images\\phan3_cau6_logo_conca.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 8\\De 8.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 8\\De 8.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 8\\De 8.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 8\\De 8.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 8\\De 8.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 8\\De 8.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 8\\De 8.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 8\\De 8.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 8\\verify_de8.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 8\\verify_de8.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 9\\De 9.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 9\\De 9.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 9\\De 9.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 9\\De 9.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 9\\De 9.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 9\\De 9.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 9\\De 9.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 9\\De 9.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De 9\\verify_de9.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\De 9\\verify_de9.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\Demo\\Dap_an_demo.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\Demo\\Dap_an_demo.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\Demo\\De_demo.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\Demo\\De_demo.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\Demo\\Demo.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\Demo\\Demo.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\Demo\\Demo.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\Demo\\Demo.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\Demo\\Demo.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\Demo\\Demo.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\Demo\\Demo.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\Demo\\Demo.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\Demo\\export_demo.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\Demo\\export_demo.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\Demo\\nguon_demo.md","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\Demo\\nguon_demo.md","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\Demo\\verify_demo.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\Demo\\verify_demo.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\Demo\\De_16_Header\\De_16_demo.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\Demo\\De_16_Header\\De_16_demo.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\Demo\\De_16_Header\\De_16_demo.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\Demo\\De_16_Header\\De_16_demo.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\Demo\\De_16_Header\\De_16_header.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\Demo\\De_16_Header\\De_16_header.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\Demo\\De_16_Header\\README.md","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\Output\\Demo\\De_16_Header\\README.md","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De_HamSo\\De_HamSo_Dap_an.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Tap_Giua_Ki_Cuoi_Ki\\Output\\Chuyen_De\\De_HamSo\\De_HamSo_Dap_an.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De_HamSo\\De_HamSo_De_thi.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Tap_Giua_Ki_Cuoi_Ki\\Output\\Chuyen_De\\De_HamSo\\De_HamSo_De_thi.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De_HamSo\\De_HamSo.aux","Destination":"D:\\Tao_De\\Lớp 12\\On_Tap_Giua_Ki_Cuoi_Ki\\Output\\Chuyen_De\\De_HamSo\\De_HamSo.aux","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De_HamSo\\De_HamSo.log","Destination":"D:\\Tao_De\\Lớp 12\\On_Tap_Giua_Ki_Cuoi_Ki\\Output\\Chuyen_De\\De_HamSo\\De_HamSo.log","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De_HamSo\\De_HamSo.pdf","Destination":"D:\\Tao_De\\Lớp 12\\On_Tap_Giua_Ki_Cuoi_Ki\\Output\\Chuyen_De\\De_HamSo\\De_HamSo.pdf","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\Output\\De_HamSo\\De_HamSo.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Tap_Giua_Ki_Cuoi_Ki\\Output\\Chuyen_De\\De_HamSo\\De_HamSo.tex","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\resources\\cr7\\cr7_c1_trophy.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\resources\\cr7\\cr7_c1_trophy.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\resources\\cr7\\cr7_face.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\resources\\cr7\\cr7_face.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\resources\\cr7\\cr7_sad.avif","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\resources\\cr7\\cr7_sad.avif","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\resources\\cr7\\cr7_siuuu_alnassr.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\resources\\cr7\\cr7_siuuu_alnassr.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\resources\\cr7\\cr7_siuuu_real.jpg","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\resources\\cr7\\cr7_siuuu_real.jpg","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\resources\\cr7\\cr7_smile_alnassr.png","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\resources\\cr7\\cr7_smile_alnassr.png","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\scripts\\compress_pdfs.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\scripts\\compress_pdfs.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\scripts\\index_tai_lieu.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\scripts\\index_tai_lieu.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\scripts\\split_generic.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\scripts\\split_generic.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\scripts\\test_exam_template.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\scripts\\test_exam_template.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\scripts\\test_index_tai_lieu.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\scripts\\test_index_tai_lieu.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\scripts\\verify_chuyen_de_ham_so.py","Destination":"D:\\Tao_De\\Lớp 12\\On_Tap_Giua_Ki_Cuoi_Ki\\scripts\\verify_chuyen_de_ham_so.py","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\scripts\\__pycache__\\index_tai_lieu.cpython-310.pyc","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\scripts\\__pycache__\\index_tai_lieu.cpython-310.pyc","Status":"completed"}
+{"Action":"move_file","Source":"D:\\Tao_De\\Lớp 12\\templates\\de_mau.tex","Destination":"D:\\Tao_De\\Lớp 12\\On_Thi_THPTQG\\templates\\de_mau.tex","Status":"completed"}
+{"Action":"remove_empty_source_directories","Source":"D:\\Tao_De\\Lớp 12\\Output","Status":"completed"}
+{"Action":"remove_empty_source_directories","Source":"D:\\Tao_De\\Lớp 12\\resources","Status":"completed"}
+{"Action":"remove_empty_source_directories","Source":"D:\\Tao_De\\Lớp 12\\scripts","Status":"completed"}
+{"Action":"remove_empty_source_directories","Source":"D:\\Tao_De\\Lớp 12\\templates","Status":"completed"}
+{"Status":"all_moves_verified_before_path_updates","Files":295,"SHA256":"all_match","LastWriteTimeUtc":"all_match"}

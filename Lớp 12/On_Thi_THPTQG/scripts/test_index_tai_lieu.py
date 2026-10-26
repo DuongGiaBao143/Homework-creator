@@ -4,6 +4,8 @@ from io import StringIO
 from pathlib import Path
 import json
 import random
+import subprocess
+import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -62,6 +64,28 @@ class Part3SourcesTest(unittest.TestCase):
             old_sample = (Path(tmp)/"sample_de_12.md").read_text(encoding="utf-8")
             self.assertNotIn("KHU VỰC 0:", old_sample)
             self.assertNotIn("ít nhất 2/6 câu khó", old_sample)
+
+
+class SeparateSourceTest(unittest.TestCase):
+    def test_school_index_is_separate_from_thptqg(self):
+        before = index.CATALOG_PATH.read_bytes(), index.CHUNKS_PATH.read_bytes()
+        with tempfile.TemporaryDirectory(dir=Path(__file__).resolve().parent) as tmp:
+            source = Path(tmp) / "Nguon_Tai_Lieu"
+            source.mkdir()
+            (source / "toi_uu.txt").write_text("Câu 1. Bài toán tối ưu thực tế: tìm chi phí nhỏ nhất khi xây dựng bể chứa nước.", encoding="utf-8")
+            command = [sys.executable, "-B", "-X", "utf8", str(Path(index.__file__)), "--source-dir", str(source)]
+            rejected = subprocess.run(command + ["--exam", "13"], capture_output=True)
+            self.assertNotEqual(rejected.returncode, 0)
+            self.assertFalse((source / "_index").exists())
+            result = subprocess.run(command + ["--workers", "1"], capture_output=True)
+            self.assertEqual(result.returncode, 0, result.stderr.decode(errors="replace"))
+            catalog = json.loads((source / "_index" / "catalog.json").read_text(encoding="utf-8"))
+            self.assertEqual(catalog["total_files"], 1)
+            self.assertEqual(catalog["total_chunks"], 1)
+            chunks = [json.loads(line) for line in (source / "_index" / "extracted_chunks.jsonl").read_text(encoding="utf-8").splitlines()]
+            self.assertEqual(chunks[0]["source"], "toi_uu.txt")
+            self.assertIn("dang_ham_so_toi_uu_thuc_te", chunks[0]["topics"])
+        self.assertEqual(before, (index.CATALOG_PATH.read_bytes(), index.CHUNKS_PATH.read_bytes()))
 
 
 if __name__ == "__main__":
