@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "part_I": {
+    "Cau_1": "B",
+    "Cau_2": "A",
+    "Cau_3": "C",
+    "Cau_4": "D",
+    "Cau_5": "A",
+    "Cau_6": "B",
+    "Cau_7": "C",
+    "Cau_8": "D",
+    "Cau_9": "B",
+    "Cau_10": "A",
+    "Cau_11": "C",
+    "Cau_12": "D"
+  },
+  "part_I_distribution": {
+    "B": 3,
+    "A": 3,
+    "C": 3,
+    "D": 3
+  },
+  "part_II": {
+    "Cau_1": [
+      true,
+      true,
+      false,
+      true
+    ],
+    "Cau_2": [
+      true,
+      true,
+      true,
+      false
+    ],
+    "Cau_3": [
+      true,
+      false,
+      true,
+      true
+    ],
+    "Cau_4": [
+      true,
+      true,
+      false,
+      true
+    ]
+  },
+  "part_III": {
+    "Cau_1": "4",
+    "Cau_2": "15",
+    "Cau_3": "3",
+    "Cau_4": "3",
+    "Cau_5": "18",
+    "Cau_6": "720"
+  }
+}
