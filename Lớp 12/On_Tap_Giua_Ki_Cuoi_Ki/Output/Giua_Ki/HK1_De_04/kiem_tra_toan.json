@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "multiple_choice": [
+    "A",
+    "C",
+    "D",
+    "B",
+    "B",
+    "D",
+    "C",
+    "A",
+    "C",
+    "D",
+    "A",
+    "B"
+  ],
+  "true_false": [
+    [
+      true,
+      false,
+      true,
+      false
+    ],
+    [
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      false,
+      true
+    ]
+  ],
+  "short_answers": [
+    "13",
+    "11",
+    "16",
+    "3",
+    "10",
+    "1,2"
+  ],
+  "checked": {
+    "multiple_choice": 12,
+    "true_false_statements": 16,
+    "short_answers": 6
+  },
+  "scope": "Bài 1–8; ứng dụng đạo hàm và vectơ/tọa độ trong không gian",
+  "note": "Kiểm tra toán học độc lập 100% bằng SymPy."
+}
