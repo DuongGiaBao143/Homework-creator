@@ -9,9 +9,10 @@
 
 - Khi tiếp tục một đề có sẵn, theo nhánh đang chứa đề đó.
 - Khi chỉ nói “tạo đề lớp 12” mà chưa rõ mục tiêu, hỏi ngắn để chọn nhánh trước khi tạo đề.
-- Mỗi nhánh có `Nguon_Tai_Lieu/` và `Output/` riêng. Chỉ mục nằm tại `Nguon_Tai_Lieu/_index/` của chính nhánh đó.
+- Nguồn dùng chung cho mọi loại đề lớp 12: `Nguon_Tai_Lieu/`, với một chỉ mục tại `Nguon_Tai_Lieu/_index/`. Hai nhánh chỉ tách quy trình và `Output/`.
 - Quy tắc THPTQG 12 câu nhiều lựa chọn + 4 đúng/sai + 6 trả lời ngắn, quota nguồn câu khó và xuất bản PRIVATE theo số đề thuộc nhánh `On_Thi_THPTQG`.
 - Đề chuyên đề, giữa kì, cuối kì theo nội dung đã học, ma trận và thời lượng được giao; số đề được quản lý riêng.
-- Công cụ quét RAG hiện có nằm tại `On_Thi_THPTQG/scripts/index_tai_lieu.py`. Dùng `--source-dir` để quét kho riêng của nhánh học kì; xem lệnh trong `README.md`.
+- Công cụ chung là `scripts/index_tai_lieu.py`: quét tài liệu mới/thay đổi, phân loại và bốc ngữ liệu theo số đề. Mặc định `--exam` dùng quy trình THPTQG; thêm `--mode hoc-ki --topics ... --output ...` để bốc theo phạm vi cho chuyên đề/giữa kì/cuối kì. Xem lệnh trong `README.md`.
+- Script xuất ngữ liệu tham khảo Markdown; bước biên soạn câu hỏi, giải kiểm tra và xuất PDF thực hiện tiếp theo quy trình của nhánh.
 
 Các PDF đề/đáp án đã xuất bản tại `D:\Document\Dạy học\Đề ko đáp án\PRIVATE` vẫn giữ vị trí cũ. Xem [README](README.md) để biết cấu trúc mới.

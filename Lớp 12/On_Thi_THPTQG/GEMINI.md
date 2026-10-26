@@ -3,7 +3,7 @@
 Chỉ áp dụng trong nhánh `On_Thi_THPTQG`. Đề chuyên đề, giữa kì và cuối kì dùng quy trình riêng tại `../On_Tap_Giua_Ki_Cuoi_Ki/GEMINI.md`.
 
 Bất cứ khi nào người dùng:
-- Yêu cầu **tạo đề mới** (ví dụ: "tạo đề 7", "sinh đề 8") $\implies$ **Chạy từ Pha 0 đến Pha 4** (tự động đọc Kho Tài Liệu Nguồn tại `d:\Tao_De\Lớp 12\On_Thi_THPTQG\Nguon_Tai_Lieu` để tổng hợp câu hỏi và tạo file `.tex` mới).
+- Yêu cầu **tạo đề mới** (ví dụ: "tạo đề 7", "sinh đề 8") $\implies$ **Chạy từ Pha 0 đến Pha 4** (tự động đọc Kho Tài Liệu Nguồn tại `d:\Tao_De\Lớp 12\Nguon_Tai_Lieu` để tổng hợp câu hỏi và tạo file `.tex` mới).
 - Hoặc cung cấp một đề thi Toán có sẵn (file `.tex`, mã nguồn LaTeX, hoặc yêu cầu xử lý đề như "xử lý đề 4", "quăng đề vào") $\implies$ **Chạy từ Pha 1 đến Pha 4**.
 
 **TỰ ĐỘNG CHẠY TOÀN DIỆN theo pipeline trong file này, KHÔNG CHỜ NGƯỜI DÙNG PHẢI PROMPT NHẮC TỪNG BƯỚC:**
@@ -29,9 +29,9 @@ Tất cả thư mục đề được lưu tại `D:\Tao_De\Lớp 12\On_Thi_THPTQ
 ### QUY TRÌNH XỬ LÝ CHI TIẾT (PHA 0 $\to$ PHA 4):
 
 0. **Pha 0: Tự động Tổng hợp & Tạo Đề mới từ Kho Tài Liệu Nguồn Local RAG (Thay thế hoàn toàn bước dùng web NotebookLM)**
-   - Tất cả tài liệu nguồn của người dùng (`.pdf`, `.docx`, `.tex`, `.md`, `.txt`) được đặt trong thư mục `d:\Tao_De\Lớp 12\On_Thi_THPTQG\Nguon_Tai_Lieu`.
+   - Tất cả tài liệu nguồn của người dùng (`.pdf`, `.docx`, `.tex`, `.md`, `.txt`) được đặt trong thư mục `d:\Tao_De\Lớp 12\Nguon_Tai_Lieu`.
    - Khi người dùng yêu cầu tạo Đề số `<số_đề>` mới mà chưa có file `.tex`:
-     + Chạy lệnh `python "d:\Tao_De\Lớp 12\On_Thi_THPTQG\scripts\index_tai_lieu.py" --exam <số_đề>` để tự động quét kho tài liệu nguồn, phân loại theo chuyên đề và trích xuất ngữ liệu tham khảo vào `d:\Tao_De\Lớp 12\On_Thi_THPTQG\Nguon_Tai_Lieu\_index\sample_de_<số_đề>.md`.
+     + Chạy lệnh `python "d:\Tao_De\Lớp 12\scripts\index_tai_lieu.py" --exam <số_đề>` để tự động quét kho tài liệu nguồn, phân loại theo chuyên đề và trích xuất ngữ liệu tham khảo vào `d:\Tao_De\Lớp 12\Nguon_Tai_Lieu\_index\sample_de_<số_đề>.md`.
      + Đọc ngữ liệu tham khảo vừa trích xuất kết hợp với cấu trúc các đề trước (`Output/De 1`..`Output/De 6`) để tổng hợp bộ 22 câu hỏi mới (Phần I: 12 câu, Phần II: 4 câu Đúng/Sai, Phần III: 6 câu Trả lời ngắn), không trùng lặp với các đề cũ, loại bỏ ngay từ đầu dạng toán hàm hợp $g(x)=f(u(x))$.
      + Dùng Python (`SymPy`) tính toán và thiết kế bộ số liệu chuẩn xác 100% trước khi ghi ra file `d:\Tao_De\Lớp 12\On_Thi_THPTQG\Output\De <số_đề>\De <số_đề>.tex`.
 

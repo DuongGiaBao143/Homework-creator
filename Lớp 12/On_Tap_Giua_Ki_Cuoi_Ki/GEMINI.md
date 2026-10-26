@@ -11,9 +11,10 @@ Nhánh này phục vụ dạy học theo chương/chuyên đề và ôn kiểm t
 
 ## Lưu nguồn và đầu ra
 
-- Tài liệu: `Nguon_Tai_Lieu/Chuyen_De/`, `Nguon_Tai_Lieu/Giua_Ki/`, `Nguon_Tai_Lieu/Cuoi_Ki/`. Giữ tên gốc có ý nghĩa.
-- RAG riêng: `Nguon_Tai_Lieu/_index/`. Quét bằng lệnh `--source-dir` trong `../README.md`.
-- Nếu kho nguồn này còn trống, có thể tra `../On_Thi_THPTQG/Nguon_Tai_Lieu/_index/extracted_chunks.jsonl` theo chủ đề rồi đọc PDF gốc ở kho đó. Ghi đúng tên file, trang và số câu; giữ vị trí tài liệu gốc.
+- Tài liệu dùng chung với nhánh THPTQG tại `../Nguon_Tai_Lieu/`; giữ tên gốc có ý nghĩa, không sao chép thành kho riêng.
+- Một RAG chung tại `../Nguon_Tai_Lieu/_index/`. Công cụ: `../scripts/index_tai_lieu.py`.
+- Khi tạo đề, chạy công cụ với `--mode hoc-ki --exam <số> --topics <các nhãn thuộc phạm vi> --output <thư mục đề>/ngu_lieu_rag.md` để tự bốc ngữ liệu từ kho chung. Ví dụ Bài 1–8 có trong `../README.md`.
+- Mở từng trang PDF được bốc để chọn bài đúng phạm vi; một trang có thể gồm nhiều bài và nhãn chỉ là gợi ý. Ghi đúng tên file, trang và số câu trong hồ sơ nguồn.
 - Đầu ra: `Output/Chuyen_De/<tên chuyên đề hoặc mã đề>/`, `Output/Giua_Ki/<học kì và mã đề>/`, `Output/Cuoi_Ki/<học kì và mã đề>/`.
 - Mỗi đề giữ chung mã nguồn `.tex`, PDF gộp, `De_thi.pdf`, `Dap_an.pdf`, script kiểm tra và hồ sơ nguồn. Tách tên/thư mục để các đề ôn không ghi đè nhau.
 - Bộ `Output/Chuyen_De/De_HamSo/` và `scripts/verify_chuyen_de_ham_so.py` được chuyển từ cấu trúc cũ; chỉ sửa nội dung khi người dùng yêu cầu.
@@ -21,7 +22,7 @@ Nhánh này phục vụ dạy học theo chương/chuyên đề và ôn kiểm t
 ## Quy trình tạo đề
 
 1. Chốt phạm vi, lập ma trận theo nội dung, mức độ, dạng câu và điểm. Bảo đảm tổng điểm, thời lượng khớp yêu cầu.
-2. Tra RAG theo đúng mạch kiến thức, mở trang nguồn để xác nhận đầy đủ dữ kiện/hình. Khi chế tác bài, giữ bối cảnh và đơn vị hợp lý.
+2. Chạy RAG chung để bốc theo các nhãn thuộc phạm vi; đọc `ngu_lieu_rag.md` rồi mở trang nguồn để xác nhận từng bài đầy đủ dữ kiện/hình và đúng kiến thức đã học. Khi chế tác bài, giữ bối cảnh và đơn vị hợp lý.
 3. Giải độc lập từng câu, kiểm tra đáp án, các ý đúng/sai, điều kiện xác định và làm tròn. Lưu script kiểm tra khi có tính toán đáng kể.
 4. Dùng Times New Roman 12pt/XeLaTeX cho đề mới; có thể tham khảo bố cục và macro `\bonpa` trong `../On_Thi_THPTQG/templates/de_mau.tex`, giữ khoảng cách hai hàng đáp án 8pt. Điều chỉnh tiêu đề, thời gian và các phần theo ma trận riêng.
 5. Đáp án và lời giải bắt đầu ở trang mới; tách PDF đề/đáp án. Render để kiểm tra chữ, hình, ngắt trang, không lộ lời giải trong đề.

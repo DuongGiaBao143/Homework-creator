@@ -35,9 +35,9 @@ Phần I phân bố 3 đáp án A, 3 B, 3 C, 3 D. Phần II chấm theo số ý 
 
 ## Tra cứu nguồn Local RAG
 
-Kho học kì chưa có PDF riêng. Đã tra chỉ mục `_index/extracted_chunks.jsonl` của kho THPTQG (đường dẫn thực tế ghi dưới đây), đọc trang nguồn để tham khảo dạng bài. Tất cả câu trong đề được biên soạn/đổi số liệu và giải độc lập; đáp án nguồn không được dùng làm kết quả kiểm tra.
+Nguồn và chỉ mục RAG dùng chung cho toàn bộ lớp 12. Đề này đã tra chỉ mục `_index/extracted_chunks.jsonl` và đọc trang PDF gốc để tham khảo dạng bài. Tất cả câu trong đề được biên soạn/đổi số liệu và giải độc lập; đáp án nguồn không được dùng làm kết quả kiểm tra.
 
-Nguồn thực tế: `D:\Tao_De\Lớp 12\On_Thi_THPTQG\Nguon_Tai_Lieu\`.
+Nguồn thực tế: `D:\Tao_De\Lớp 12\Nguon_Tai_Lieu\`. Đường dẫn được cập nhật sau khi đưa kho nguồn về dùng chung; nội dung đề và PDF giữ nguyên.
 
 | Câu/nhóm câu | Tài liệu và trang PDF | Cách sử dụng |
 |---|---|---|

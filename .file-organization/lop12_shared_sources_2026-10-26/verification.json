@@ -1,0 +1,19 @@
+{
+  "moved_files_verified": 69,
+  "source_pdf_hashes_preserved": 50,
+  "updated_after_move": [
+    "Lớp 12\\Nguon_Tai_Lieu\\_index\\catalog.json",
+    "Lớp 12\\Nguon_Tai_Lieu\\_index\\extracted_chunks.jsonl",
+    "Lớp 12\\scripts\\index_tai_lieu.py",
+    "Lớp 12\\scripts\\test_index_tai_lieu.py"
+  ],
+  "shared_sources": 50,
+  "shared_chunks": 3705,
+  "new_source_pages": 142,
+  "existing_output_pdfs_unchanged": 33,
+  "rag_tests_passed": 8,
+  "school_cli_sample_unique_pages": 16,
+  "school_sample_labels_within_selected_scope": true,
+  "python_sources_compile": true,
+  "note": "Topic labels apply to pages; individual questions still require checking against the original PDF."
+}

@@ -849,26 +849,64 @@ def sample_for_new_exam(exam_num: int, per_topic: int = 2, force_reindex: bool =
     print(f"[OK] Đã trích xuất ngữ liệu ƯU TIÊN VDC cho Đề {exam_num} tại: {out_file}")
 
 
+def sample_for_school_exam(exam_num: int, topics: list[str], output_path: Path,
+                           per_topic: int = 2, force_reindex: bool = False, reclassify: bool = False):
+    if exam_num < 1 or per_topic < 1 or not topics or any(t not in TOPIC_KEYWORDS for t in topics):
+        raise ValueError("Cần số đề dương và danh sách chuyên đề hợp lệ.")
+    output_path = Path(output_path).resolve()
+    if output_path == SOURCE_DIR.resolve() or SOURCE_DIR.resolve() in output_path.parents:
+        raise ValueError("Lưu ngữ liệu trong Output của đề, không ghi vào kho nguồn dùng chung.")
+    if output_path.exists():
+        raise FileExistsError(f"Không ghi đè hồ sơ ngữ liệu đã có: {output_path}")
+    all_chunks = sync_index(force_reindex=force_reindex, reclassify=reclassify)
+    allowed = set(topics)
+    # shortcut: nhãn được gán theo trang; phải mở PDF để kiểm tra phạm vi của từng bài.
+    candidates = [c for c in all_chunks if set(c.get("topics", [])) & allowed
+                  and set(c.get("topics", [])) <= allowed | {"general"}]
+    rng = random.Random(exam_num * 2027)
+    used = set()
+    lines = [f"# NGỮ LIỆU ÔN TẬP CHUYÊN ĐỀ / HỌC KÌ — ĐỀ {exam_num}\n",
+             f"Kho nguồn dùng chung: `{SOURCE_DIR}`.\n",
+             "Chỉ chọn bài đúng phạm vi dưới đây; đọc trang PDF gốc để kiểm tra đề bài và hình vẽ.",
+             "Nhãn chỉ hỗ trợ lọc theo trang, không bảo đảm mọi bài trên trang đều thuộc phạm vi.",
+             "Cấu trúc, thời lượng và độ khó theo yêu cầu của đề học kì; không áp quota nguồn khó THPTQG.\n",
+             "## Phạm vi đã chọn", *[f"- `{topic}`" for topic in topics], ""]
+    for topic in topics:
+        pool = [c for c in candidates if topic in c["topics"] and (c["source"], c["location"]) not in used]
+        if not pool:
+            if any(topic in c["topics"] and (c["source"], c["location"]) in used for c in candidates):
+                continue
+            raise ValueError(f"Không đủ ngữ liệu riêng cho {topic}; cần kiểm tra nguồn hoặc nhãn trước khi tạo đề.")
+        lines.append(f"## Chủ đề: `{topic}`")
+        for item in weighted_sample_vdc(rng, pool, per_topic, prefer_vdc=False):
+            used.add((item["source"], item["location"]))
+            lines.extend([f"### Nguồn: `{item['source']}` ({item['location']})",
+                          "```text", item["text"], "```\n"])
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    with output_path.open("x", encoding="utf-8") as stream:
+        stream.write("\n".join(lines))
+    print(f"[OK] Đã bốc {len(used)} trang ngữ liệu từ kho chung cho đề học kì {exam_num}: {output_path}")
+
+
 if __name__ == "__main__":
     parser = argparse.ArgumentParser()
     parser.add_argument("--exam", type=int, default=None, help="Số thứ tự đề cần lấy mẫu ngữ liệu từ chỉ mục có sẵn")
     parser.add_argument("--reindex", action="store_true", help="Ép quét lại toàn bộ kho tài liệu từ đầu")
     parser.add_argument("--reclassify", action="store_true", help="Ép phân loại và chấm điểm VDC lại toàn bộ các đoạn")
     parser.add_argument("--workers", type=int, default=None, help="Số luồng chạy song song")
-    parser.add_argument("--source-dir", type=Path, help="Quét kho nguồn riêng; ghi _index ngay trong kho đó, không lấy mẫu đề THPTQG")
+    parser.add_argument("--mode", choices=("thptqg", "hoc-ki"), default="thptqg", help="Chế độ bốc ngữ liệu; cả hai dùng chung một kho nguồn và chỉ mục")
+    parser.add_argument("--topics", nargs="+", choices=list(TOPIC_KEYWORDS), help="Các chuyên đề được phép dùng cho đề học kì")
+    parser.add_argument("--output", type=Path, help="File Markdown ngữ liệu mới trong thư mục đầu ra của đề học kì")
     args = parser.parse_args()
 
-    if args.source_dir is not None:
-        if args.exam is not None:
-            parser.error("--exam chỉ dùng với kho THPTQG mặc định; kho học kì cần chọn ngữ liệu theo phạm vi riêng.")
-        if not args.source_dir.is_dir():
-            parser.error(f"Kho nguồn không tồn tại hoặc không phải thư mục: {args.source_dir}")
-        SOURCE_DIR = args.source_dir.resolve()
-        INDEX_DIR = SOURCE_DIR / "_index"
-        CATALOG_PATH = INDEX_DIR / "catalog.json"
-        CHUNKS_PATH = INDEX_DIR / "extracted_chunks.jsonl"
-
-    if args.exam is not None:
+    if args.mode == "hoc-ki":
+        if args.exam is None or not args.topics or args.output is None:
+            parser.error("Chế độ hoc-ki cần --exam, --topics và --output để xác định phạm vi và hồ sơ ngữ liệu riêng.")
+        sample_for_school_exam(args.exam, args.topics, args.output,
+                               force_reindex=args.reindex, reclassify=args.reclassify)
+    elif args.topics is not None or args.output is not None:
+        parser.error("--topics và --output dùng cùng --mode hoc-ki.")
+    elif args.exam is not None:
         sample_for_new_exam(args.exam, force_reindex=args.reindex, reclassify=args.reclassify)
     else:
         chunks = sync_index(force_reindex=args.reindex, max_workers=args.workers, reclassify=args.reclassify)

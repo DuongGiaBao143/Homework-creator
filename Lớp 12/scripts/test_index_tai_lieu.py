@@ -4,8 +4,6 @@ from io import StringIO
 from pathlib import Path
 import json
 import random
-import subprocess
-import sys
 import tempfile
 import unittest
 from unittest.mock import patch
@@ -66,26 +64,54 @@ class Part3SourcesTest(unittest.TestCase):
             self.assertNotIn("ít nhất 2/6 câu khó", old_sample)
 
 
-class SeparateSourceTest(unittest.TestCase):
-    def test_school_index_is_separate_from_thptqg(self):
-        before = index.CATALOG_PATH.read_bytes(), index.CHUNKS_PATH.read_bytes()
-        with tempfile.TemporaryDirectory(dir=Path(__file__).resolve().parent) as tmp:
-            source = Path(tmp) / "Nguon_Tai_Lieu"
-            source.mkdir()
-            (source / "toi_uu.txt").write_text("Câu 1. Bài toán tối ưu thực tế: tìm chi phí nhỏ nhất khi xây dựng bể chứa nước.", encoding="utf-8")
-            command = [sys.executable, "-B", "-X", "utf8", str(Path(index.__file__)), "--source-dir", str(source)]
-            rejected = subprocess.run(command + ["--exam", "13"], capture_output=True)
-            self.assertNotEqual(rejected.returncode, 0)
-            self.assertFalse((source / "_index").exists())
-            result = subprocess.run(command + ["--workers", "1"], capture_output=True)
-            self.assertEqual(result.returncode, 0, result.stderr.decode(errors="replace"))
-            catalog = json.loads((source / "_index" / "catalog.json").read_text(encoding="utf-8"))
-            self.assertEqual(catalog["total_files"], 1)
-            self.assertEqual(catalog["total_chunks"], 1)
-            chunks = [json.loads(line) for line in (source / "_index" / "extracted_chunks.jsonl").read_text(encoding="utf-8").splitlines()]
-            self.assertEqual(chunks[0]["source"], "toi_uu.txt")
-            self.assertIn("dang_ham_so_toi_uu_thuc_te", chunks[0]["topics"])
-        self.assertEqual(before, (index.CATALOG_PATH.read_bytes(), index.CHUNKS_PATH.read_bytes()))
+class SharedSourceTest(unittest.TestCase):
+    def test_default_source_is_shared_at_grade_root(self):
+        self.assertEqual(index.SOURCE_DIR, Path(__file__).resolve().parents[1] / "Nguon_Tai_Lieu")
+
+    def test_school_scope_deduplicates_and_skips_thpt_quota(self):
+        allowed = ["dang_ham_so_toi_uu_thuc_te", "dang_oxyz_vecto_toa_do_diem"]
+        first, second, outside, mixed = [chunk(name) for name in ("ham_so.pdf", "vecto.pdf", "bayes.pdf", "mixed.pdf")]
+        first["topics"] = [allowed[0]]
+        second["topics"] = [allowed[1]]
+        outside["topics"] = ["dang_xac_suat_co_dieu_kien_bayes"]
+        mixed["topics"] = [allowed[0], "dang_xac_suat_co_dieu_kien_bayes"]
+        with tempfile.TemporaryDirectory(dir=Path(__file__).resolve().parent) as tmp, \
+                patch.object(index, "sync_index", return_value=[first, second, outside, mixed]), redirect_stdout(StringIO()):
+            out = Path(tmp) / "ngu_lieu.md"
+            index.sample_for_school_exam(13, allowed, out, per_topic=1)
+            text = out.read_text(encoding="utf-8")
+            self.assertIn("ham_so.pdf", text)
+            self.assertIn("vecto.pdf", text)
+            self.assertNotIn("bayes.pdf", text)
+            self.assertNotIn("mixed.pdf", text)
+            self.assertNotIn("KHU VỰC 0", text)
+            self.assertEqual(text.count("### Nguồn:"), 2)
+            again = Path(tmp) / "again.md"
+            index.sample_for_school_exam(13, allowed, again, per_topic=1)
+            self.assertEqual(text, again.read_text(encoding="utf-8"))
+
+    def test_one_page_covering_two_topics_is_not_repeated(self):
+        topics = ["dang_ham_so_cuc_tri", "dang_ham_so_gtln_gtnn"]
+        shared = chunk("ham_so.pdf")
+        shared["topics"] = topics
+        with tempfile.TemporaryDirectory(dir=Path(__file__).resolve().parent) as tmp, \
+                patch.object(index, "sync_index", return_value=[shared]), redirect_stdout(StringIO()):
+            out = Path(tmp) / "ngu_lieu.md"
+            index.sample_for_school_exam(1, topics, out)
+            self.assertEqual(out.read_text(encoding="utf-8").count("### Nguồn:"), 1)
+
+    def test_invalid_scope_and_existing_output_are_preserved(self):
+        with tempfile.TemporaryDirectory(dir=Path(__file__).resolve().parent) as tmp, \
+                patch.object(index, "sync_index", side_effect=AssertionError("Validate before indexing")):
+            target = Path(tmp) / "ngu_lieu.md"
+            with self.assertRaises(ValueError):
+                index.sample_for_school_exam(1, ["unknown_topic"], target)
+            with self.assertRaises(ValueError):
+                index.sample_for_school_exam(1, ["dang_ham_so_toi_uu_thuc_te"], index.SOURCE_DIR / "sample.md")
+            target.write_text("Hồ sơ cũ", encoding="utf-8")
+            with self.assertRaises(FileExistsError):
+                index.sample_for_school_exam(1, ["dang_ham_so_toi_uu_thuc_te"], target)
+            self.assertEqual(target.read_text(encoding="utf-8"), "Hồ sơ cũ")
 
 
 if __name__ == "__main__":
