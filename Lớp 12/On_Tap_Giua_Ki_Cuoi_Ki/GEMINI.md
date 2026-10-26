@@ -32,5 +32,5 @@ Nhánh này phục vụ dạy học theo chương/chuyên đề và ôn kiểm t
 
 Mặc định lưu bản hoàn chỉnh trong `Output/` của nhánh này.
 Khi xuất bản phục vụ giảng dạy:
-- **Đề thi giữa kì:** Xuất bản vào `D:\Document\Dạy học\Dạy lớp 12\Ôn GK` với bản đề bài `<số_đề>.pdf` và bản đáp án `Ans\<số_đề>.pdf` (có thể kèm bí danh `<mã_đề>.pdf`).
+- **Đề thi giữa kì:** Xuất bản vào `D:\Document\Dạy học\Dạy lớp 12\Ôn GK` với bản đề bài duy nhất `<số_đề>.pdf` và bản đáp án `Ans\<số_đề>.pdf` (không sinh file trùng lặp mang tên mã đề).
 - **Chuyên đề / Cuối kì hoặc xuất riêng:** Khi cần lưu trữ thêm vào PRIVATE, dùng `D:\Document\Dạy học\Đề ko đáp án\PRIVATE\Lop12_Giua_Ki_Cuoi_Ki\<loại>\<mã đề>\`. Các file đánh số ở PRIVATE gốc thuộc bộ THPTQG hiện có.

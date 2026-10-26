@@ -64,8 +64,6 @@ if export_dir.exists():
     ans_dir.mkdir(parents=True, exist_ok=True)
     shutil.copy2(BASE / "De_thi.pdf", export_dir / "1.pdf")
     shutil.copy2(BASE / "Dap_an.pdf", ans_dir / "1.pdf")
-    shutil.copy2(BASE / "De_thi.pdf", export_dir / "HK1_De_01.pdf")
-    shutil.copy2(BASE / "Dap_an.pdf", ans_dir / "HK1_De_01.pdf")
     print(f"[EXPORT] Đã xuất bản đề và đáp án sang: {export_dir}")
 
 report = {"status": "passed", "exam_pages": split, "answer_pages": len(reader.pages)-split,

@@ -71,8 +71,6 @@ if export_dir.exists():
     ans_dir.mkdir(parents=True, exist_ok=True)
     shutil.copy2(BASE / "De_thi.pdf", export_dir / "2.pdf")
     shutil.copy2(BASE / "Dap_an.pdf", ans_dir / "2.pdf")
-    shutil.copy2(BASE / "De_thi.pdf", export_dir / "HK1_De_02.pdf")
-    shutil.copy2(BASE / "Dap_an.pdf", ans_dir / "HK1_De_02.pdf")
     print(f"[EXPORT] Đã xuất bản đề và đáp án sang: {export_dir}")
 
 report = {
