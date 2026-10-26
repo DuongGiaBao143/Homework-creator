@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "multiple_choice": [
+    "A",
+    "B",
+    "C",
+    "D",
+    "A",
+    "B",
+    "C",
+    "D",
+    "A",
+    "B",
+    "C",
+    "D"
+  ],
+  "true_false": [
+    [
+      true,
+      false,
+      true,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false
+    ],
+    [
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      false,
+      true
+    ]
+  ],
+  "short_answers": [
+    "6",
+    "9",
+    "108",
+    "2,2",
+    "4",
+    "10"
+  ],
+  "checked": {
+    "multiple_choice": 12,
+    "true_false_statements": 16,
+    "short_answers": 6
+  },
+  "scope": "Chương I & Chương II Toán 12 GDPT 2018 (Bài 1–8)",
+  "note": "Kiểm tra toán học độc lập 100% bằng SymPy thành công hoàn hảo."
+}

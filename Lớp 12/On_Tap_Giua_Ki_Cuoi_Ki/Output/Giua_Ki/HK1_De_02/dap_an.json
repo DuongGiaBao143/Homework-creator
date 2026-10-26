@@ -1,0 +1,10 @@
+{
+  "I": ["A", "B", "C", "D", "A", "B", "C", "D", "A", "B", "C", "D"],
+  "II": [
+    [true, false, true, true],
+    [true, true, true, false],
+    [true, true, false, true],
+    [true, true, false, true]
+  ],
+  "III": ["6", "9", "108", "2,2", "4", "10"]
+}
