@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "exam_pages": 4,
+  "answer_pages": 5,
+  "combined_pages": 9,
+  "question_counts": [
+    12,
+    4,
+    6
+  ],
+  "exam_contains_no_answer_sections": true,
+  "correct_exam_page_footers": true,
+  "embedded_times_new_roman": [
+    "JUNMMS+TimesNewRomanPSMT",
+    "PEGYVR+TimesNewRomanPS-BoldMT",
+    "QYIGGH+TimesNewRomanPS-ItalicMT"
+  ],
+  "latex_errors_or_overfull": false,
+  "visual_qa": "passed: all 9 pages reviewed; final pages 1 and 9 re-rendered and reviewed; 7 other pages match previous reviewed renders byte-for-byte"
+}

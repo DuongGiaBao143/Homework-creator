@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "multiple_choice": [
+    "A",
+    "C",
+    "B",
+    "D",
+    "A",
+    "B",
+    "D",
+    "C",
+    "B",
+    "D",
+    "C",
+    "A"
+  ],
+  "true_false": [
+    [
+      true,
+      false,
+      true,
+      false
+    ],
+    [
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      false,
+      false,
+      true
+    ],
+    [
+      false,
+      true,
+      true,
+      true
+    ]
+  ],
+  "short_answers": [
+    "5",
+    "11",
+    "2250",
+    "7,2",
+    "2",
+    "720"
+  ],
+  "checked": {
+    "multiple_choice": 12,
+    "true_false_statements": 16,
+    "short_answers": 6
+  },
+  "scope": "Bài 1–8 theo ảnh; ứng dụng đạo hàm và vectơ/tọa độ trong không gian",
+  "note": "Kiểm tra toán học bằng SymPy; kiểm tra PDF, bố cục và số trang thực hiện riêng."
+}
