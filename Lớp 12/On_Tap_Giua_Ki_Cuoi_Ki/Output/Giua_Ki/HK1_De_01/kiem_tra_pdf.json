@@ -16,5 +16,7 @@
     "QYIGGH+TimesNewRomanPS-ItalicMT"
   ],
   "latex_errors_or_overfull": false,
-  "visual_qa": "pending"
+  "visual_qa": "passed: page 4 with cable-route illustration reviewed; other 8 pages render identically to the previously reviewed version",
+  "illustration_III6": "A, D, C on shore; B offshore; right angle at C; AC=8 km, BC=3 km; shore/undersea cable labels; no optimal position disclosed",
+  "published_pdfs_verified": true
 }

@@ -66,6 +66,7 @@ Tất cả thư mục đề được lưu tại `D:\Tao_De\Lớp 12\On_Thi_THPTQ
    - Đồng bộ 3 phần: Đề bài & 4 phương án $\longleftrightarrow$ Bảng đáp án $\longleftrightarrow$ Hướng dẫn giải chi tiết.
 
 3. **Pha 3: Tự động Sinh & Chèn Hình Minh Họa (Chuẩn Kép: Có Màu Đẹp Khi Chiếu Màn Hình + Phân Biệt 100% Khi In Trắng Đen)**
+   - **Cực trị/tối ưu gắn thực tế:** bắt buộc có hình minh họa hoặc sơ đồ dữ kiện theo `../AGENTS.md`; hình thể hiện bối cảnh, quan hệ và kích thước đã cho, không đưa sẵn cấu hình tối ưu hay lời giải.
    - **QUY TẮC SỐ 1 — CÓ MÀU KHI CHIẾU GIẢNG BÀI & KHÔNG PHỤ THUỘC MÀU KHI IN TRẮNG ĐEN:**
      + **Trên hình vẽ (`TikZ` & Python 2D):** **VẪN VẼ CÓ MÀU SẮC HÀI HÒA** (`blue!55!black`, `teal`, `orange!85!red`,...) để người dạy chiếu file lên màn hình giảng trực tiếp dễ nhìn, sinh động; **ĐỒNG THỜI kết hợp họa tiết gạch chéo (`pattern=north east lines` / `hatch="///"`), tô đậm, tô nhạt, để trắng** giữa các miền khác nhau.
      + **Trong lời văn đề bài:** Khi đã vẽ hình ra, **CẤM TUYỆT ĐỐI đề cập đến màu sắc** để chỉ các phần trên hình (cấm viết *"phần tô màu đỏ"*, *"đường màu xanh"*, *"miền màu cam"*). Chỉ được mô tả bằng các đặc điểm nhận diện được bằng mắt thường cả khi in trắng đen: **`phần gạch chéo`**, **`phần tô đậm`**, **`phần để trắng`**,...
@@ -82,7 +83,7 @@ Tất cả thư mục đề được lưu tại `D:\Tao_De\Lớp 12\On_Thi_THPTQ
        * **CẤM TUYỆT ĐỐI** dùng `projection="3d"` (`mpl_toolkits.mplot3d`) của `matplotlib` với hộp xám 3D và lưới `grid` dày đặc gây khuất trục $Oxyz$.
      + **Các bài toán Xác suất / Thống kê / Lãi suất / Ngữ cảnh thực tế phi hình học:** Tạo hình minh họa bằng AI hoặc bỏ qua nếu không cần thiết.
      + **ĐẶC QUY TẮC — BÀI TOÁN BÓNG ĐÁ (SÚT PHẠT ĐỀN, GHI BÀN, THI ĐẤU):** Bất cứ khi nào đề thi xuất hiện câu hỏi liên quan đến chủ đề bóng đá (sút phạt đền, penalty, ghi bàn,...), hình minh họa đi kèm **BẮT BUỘC LIÊN QUAN ĐẾN CRISTIANO RONALDO (CR7)** (sử dụng kho ảnh lưu tại d:\Tao_De\Lớp 12\On_Thi_THPTQG\resources\cr7 như dáng nhảy SIUUU, ăn mừng cúp C1,...). Đặt cạnh đề bài bằng minipage một cách thẩm mỹ, kích thích cảm hứng học tập của học sinh.
-   - **Giới hạn số lượng hình ở Phần II:** Ở Phần II (4 câu Đúng/Sai), **chỉ tạo và chèn tối đa 1–2 hình minh họa mỗi đề**, không tràn lan ở mọi câu.
+   - **Số lượng hình ở Phần II:** Thông thường giữ 1–2 hình minh họa; phải bổ sung hình/sơ đồ cho các câu cực trị/tối ưu thực tế theo quy tắc bắt buộc ở trên.
    - **Quy chuẩn kích thước & vị trí chèn ảnh (Đặt bên phải đề bài bằng `minipage`):**
      + Đặt nằm bên phải của đề bài bằng cấu trúc `minipage` (`0.55\linewidth` cho đề bài và `0.42\linewidth` cho hình vẽ với `\resizebox{\linewidth}{!}{\begin{tikzpicture}...\end{tikzpicture}}`):
        ```latex

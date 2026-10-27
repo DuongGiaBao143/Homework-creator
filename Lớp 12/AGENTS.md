@@ -7,3 +7,4 @@
 - Tất cả tài liệu nguồn lớp 12 dùng chung tại `Nguon_Tai_Lieu/`, chỉ mục chung tại `Nguon_Tai_Lieu/_index/`, công cụ chung tại `scripts/index_tai_lieu.py`. Không tạo kho nguồn riêng trong từng nhánh.
 - Bốc ngữ liệu cho THPTQG bằng `--exam`; cho chuyên đề/học kì bằng `--mode hoc-ki --exam --topics --output` theo hướng dẫn trong `README.md`. Luôn đọc trang PDF gốc và kiểm tra từng bài thuộc phạm vi được giao.
 - Đầu ra và hồ sơ ngữ liệu của đề học kì lưu trong nhánh tương ứng. Giữ nguyên tài liệu gốc và các bản đề đã phát hành trừ khi được yêu cầu chỉnh sửa.
+- Câu cực trị/tối ưu gắn với thực tế phải có hình minh họa hoặc sơ đồ dữ kiện phù hợp. Ưu tiên TikZ/vector, rõ khi in trắng đen; thể hiện bố trí, điểm và số liệu đã cho, không vẽ sẵn vị trí tối ưu hoặc đưa công thức/lời giải vào hình. Áp dụng khi tạo đề mới hoặc chỉnh câu thuộc dạng này ở cả hai nhánh.

@@ -69,3 +69,10 @@ Nguồn có thể chứa kiến thức ngoài phạm vi ở các câu khác trê
 - Không có lỗi XeLaTeX, overfull, thiếu kí tự; Times New Roman đã nhúng; số trang đề trên header/footer khớp.
 - Đã xuất bản phục vụ giảng dạy sang D:\Document\Dạy học\Dạy lớp 12\Ôn GK (1.pdf, HK1_De_01.pdf và bản đáp án tại Ans/).
 - Chưa đo thời gian làm thực tế, chưa thử in giấy và chưa hiệu chuẩn độ khó bằng học sinh làm thử.
+
+## Cập nhật hình minh họa — 27/10/2026
+
+- Theo feedback người dùng, bổ sung hình TikZ cho câu III.6: A, D, C nằm trên bờ; B trên đảo; BC vuông góc bờ, BC = 3 km, AC = 8 km; phân biệt đoạn cáp trên bờ và dưới biển. Hình không cho sẵn vị trí tối ưu.
+- Đã chạy lại kiểm tra toán học và kiểm tra PDF; đáp án giữ nguyên, đề 4 trang, lời giải 5 trang.
+- Đã render lại đủ 9 trang: chỉ trang 4 thay đổi và đã xem trực quan, 8 trang khác khớp hình ảnh với bản đã kiểm tra.
+- Đã cập nhật và đối chiếu hash bản giảng dạy `D:\Document\Dạy học\Dạy lớp 12\Ôn GK\1.pdf` và `Ans\1.pdf` với bản trong dự án.

@@ -25,6 +25,7 @@ Nhánh này phục vụ dạy học theo chương/chuyên đề và ôn kiểm t
 2. Chạy RAG chung để bốc theo các nhãn thuộc phạm vi; đọc `ngu_lieu_rag.md` rồi mở trang nguồn để xác nhận từng bài đầy đủ dữ kiện/hình và đúng kiến thức đã học. Khi chế tác bài, giữ bối cảnh và đơn vị hợp lý.
 3. Giải độc lập từng câu, kiểm tra đáp án, các ý đúng/sai, điều kiện xác định và làm tròn. Lưu script kiểm tra khi có tính toán đáng kể.
 4. Dùng Times New Roman 12pt/XeLaTeX cho đề mới; có thể tham khảo bố cục và macro `\bonpa` trong `../On_Thi_THPTQG/templates/de_mau.tex`, giữ khoảng cách hai hàng đáp án 8pt. Điều chỉnh tiêu đề, thời gian và các phần theo ma trận riêng.
+   - Bài cực trị/tối ưu trong bối cảnh thực tế bắt buộc có hình minh họa hoặc sơ đồ dữ kiện; ví dụ kéo cáp, rào đất, đóng hộp, thiết kế bể. Vẽ đúng các điểm, quan hệ và kích thước đã cho; không cho sẵn vị trí tối ưu hoặc bước giải then chốt. Xem quy tắc chung tại `../AGENTS.md`.
 5. Đáp án và lời giải bắt đầu ở trang mới; tách PDF đề/đáp án. Render để kiểm tra chữ, hình, ngắt trang, không lộ lời giải trong đề.
 6. Ghi phạm vi, ma trận/thang điểm, nguồn (file/trang/câu) và kết quả kiểm tra vào hồ sơ của đề. Báo rõ phần chưa kiểm chứng.
 

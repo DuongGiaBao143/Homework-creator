@@ -171,6 +171,26 @@ gọi $C$ là chân đường vuông góc từ $B$ xuống bờ, biết $AC=8$ k
 Người ta kéo cáp từ $A$ dọc bờ đến một điểm $D$ trên đoạn $AC$, rồi kéo thẳng từ $D$ đến $B$.
 Chi phí cáp trên bờ là $60$ triệu đồng/km và dưới biển là $100$ triệu đồng/km.
 Chi phí thấp nhất của tuyến cáp bằng bao nhiêu triệu đồng?
+\begin{center}
+\begin{tikzpicture}[x=0.9cm,y=0.75cm,>=Stealth,font=\small]
+\draw[thin] (-0.5,0)--(8,0) node[right] {Bờ biển};
+\draw[very thick,blue!60!black] (0,0)--(3.3,0)
+  node[midway,above=4pt] {Cáp trên bờ};
+\draw[very thick,blue!60!black] (3.3,0)--(7,2.7)
+  node[midway,sloped,above=3pt] {Cáp dưới biển};
+\draw[dashed] (7,0)--(7,2.7) node[midway,right=4pt] {$3$ km};
+\draw (6.72,0)--(6.72,0.28)--(7,0.28);
+\foreach \x/\y/\name in {0/0/A,3.3/0/D,7/0/C}{
+  \fill (\x,\y) circle (1.6pt);
+  \node[below=3pt,fill=white,inner sep=1pt] at (\x,\y) {$\name$};
+}
+\fill (7,2.7) circle (1.6pt);
+\node[above=3pt] at (7,2.7) {$B$ (đảo)};
+\node at (2,1.8) {Biển};
+\draw[<->] (0,-0.85)--(7,-0.85) node[midway,fill=white,inner sep=2pt] {$8$ km};
+\end{tikzpicture}
+\par\smallskip{\small\textit{Hình minh họa, không theo tỉ lệ.}}
+\end{center}
 \otraloi
 \end{enumerate}
 \begin{center}\textbf{---------------- HẾT ----------------}\end{center}
