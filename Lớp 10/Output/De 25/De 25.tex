@@ -1,0 +1,554 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.2cm,top=1.05cm,bottom=1.1cm]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or The only way to learn mathematics is to do mathematics% Trang 7
+    \or Small steps every day lead to big results% Trang 8
+    \or Every expert was once a beginner% Trang 9
+    \or Success is the sum of small efforts repeated daily% Trang 10
+    \or Mathematics is the music of reason% Trang 11
+    \or Believe you can and you're halfway there% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{16pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.4pt}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.04}
+\newcommand{\parttitle}[1]{\par\vspace{1.5pt}{\large\bfseries\color{ink}#1}\par\vspace{0.5pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[1.5pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{10pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.2cm,labelsep=.1cm,itemsep=0.4pt,topsep=0.4pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=0.4pt,topsep=0.4pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[3pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GK1}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 25}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.08cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0025}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.08cm}
+
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án đúng duy nhất.}
+\begin{enumerate}
+\item Miền không bị gạch chéo (kể cả bờ $d$) trong hình vẽ bên dưới là miền nghiệm của bất phương trình nào sau đây?
+
+\par\vspace{1pt}{\centering
+\begin{tikzpicture}[scale=0.75, >=Stealth]
+    \draw[line width=1.1pt, ->] (-1.2,0) -- (4.2,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.1pt, ->] (0,-0.8) -- (0,2.8) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left=2pt, font=\normalsize\bfseries] at (0,0) {$O$};
+    \fill[pattern=north east lines, pattern color=gray!60] (-1.0,2.66) -- (4.0,2.66) -- (4.0,-0.66) -- cycle;
+    \draw[line width=1.4pt, ink] (-1.0,2.66) -- (4.0,-0.66) node[above right, font=\normalsize\bfseries] {$d$};
+    \filldraw[black] (3,0) circle (2.2pt) node[below=2pt, font=\normalsize\bfseries] {$3$};
+    \filldraw[black] (0,2) circle (2.2pt) node[left=2pt, font=\normalsize\bfseries] {$2$};
+\end{tikzpicture}\par}\vspace{1pt}
+
+\four{$2x + 3y \le 6$.}{$2x + 3y \ge 6$.}{$3x + 2y \le 6$.}{$3x + 2y \ge 6$.}
+
+\item Trong các hệ bất phương trình sau, hệ nào là hệ bất phương trình bậc nhất hai ẩn?
+\two{$\begin{cases} x - 2y > 1 \\ x^2 + y \le 3 \end{cases}$}{$\begin{cases} 2x - 3y \le 5 \\ x + y > 0 \end{cases}$}{$\begin{cases} x - y + 2z \le 0 \\ 3x + y > 1 \end{cases}$}{$\begin{cases} xy + 2 \ge 0 \\ x - y < 4 \end{cases}$}
+
+\item Đường thẳng bờ của nửa mặt phẳng miền nghiệm của bất phương trình $4x - 3y + 12 \ge 0$ có phương trình là
+\four{$4x + 3y + 12 = 0$.}{$3x - 4y + 12 = 0$.}{$4x - 3y + 12 = 0$.}{$4x - 3y - 12 = 0$.}
+
+\item Cho hệ bất phương trình $\begin{cases} x - y < 2 \\ 2x + y \ge 3 \end{cases}$. Điểm nào sau đây thuộc miền nghiệm của hệ bất phương trình đã cho?
+\four{$M(0; 1)$.}{$N(3; 0)$.}{$P(0; 0)$.}{$Q(2; 1)$.}
+
+\item Cặp số $(x; y)$ nào sau đây là một nghiệm của bất phương trình $3x - 2y + 4 > 0$?
+\four{$(1; 2)$.}{$(-2; 0)$.}{$(0; 3)$.}{$(-3; 1)$.}
+
+\item Trong các bất phương trình sau, bất phương trình nào là bất phương trình bậc nhất hai ẩn?
+\four{$2x^2 + 3y \le 6$.}{$5x - 2y + 1 > 0$.}{$x - 3y + z \ge 0$.}{$2x + \dfrac{3}{y} < 1$.}
+
+\item Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$ và $\sin \alpha = \dfrac{3}{5}$. Giá trị của $\cos \alpha$ bằng
+\four{$\dfrac{4}{5}$.}{$\dfrac{16}{25}$.}{$-\dfrac{4}{5}$.}{$-\dfrac{3}{4}$.}
+
+\item Cho góc $\alpha$ là góc tù ($90^\circ < \alpha < 180^\circ$). Khẳng định nào sau đây là đúng?
+\four{$\cos \alpha > 0$.}{$\tan \alpha > 0$.}{$\cot \alpha > 0$.}{$\sin \alpha > 0$.}
+
+\item Với mọi góc $\alpha$ ($0^\circ \le \alpha \le 180^\circ$), khẳng định nào sau đây là đúng?
+\four{$\sin(180^\circ - \alpha) = \sin \alpha$.}{$\cos(180^\circ - \alpha) = \cos \alpha$.}{$\tan(180^\circ - \alpha) = \tan \alpha$.}{$\sin(180^\circ - \alpha) = -\sin \alpha$.}
+
+\item Cho tam giác $ABC$ có các cạnh $a, b, c$, nửa chu vi $p$, bán kính đường tròn nội tiếp $r$. Diện tích $S$ của tam giác $ABC$ được tính theo công thức nào sau đây?
+\four{$S = \dfrac{abc}{R}$.}{$S = p \cdot r$.}{$S = \dfrac{1}{2}ab\sin B$.}{$S = \sqrt{(p-a)(p-b)(p-c)}$.}
+
+\item Cho tam giác $ABC$ có độ dài ba cạnh là $a, b, c$. Độ dài đường trung tuyến $m_a$ kẻ từ đỉnh $A$ được tính theo công thức nào sau đây?
+\two{$m_a^2 = \dfrac{b^2 + c^2 - a^2}{2}$.}{$m_a^2 = \dfrac{2(b^2 + c^2) + a^2}{4}$.}{$m_a^2 = \dfrac{2(b^2 + c^2) - a^2}{4}$.}{$m_a^2 = \dfrac{b^2 + c^2 - 2a^2}{4}$.}
+
+\item Cho tam giác $ABC$ có cạnh $a = 6$ và góc $\widehat{A} = 30^\circ$. Bán kính $R$ của đường tròn ngoại tiếp tam giác $ABC$ bằng
+\four{$R = 3$.}{$R = 12$.}{$R = 6\sqrt{3}$.}{$R = 6$.}
+\end{enumerate}
+
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Thí sinh trả lời từ câu 1 đến câu 2. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}
+\item Để đo khoảng cách từ bờ sông đến một vị trí $C$ của một con thuyền đang neo đậu trên sông, hai người quan sát đứng tại hai điểm $A$ và $B$ trên bờ cùng phía, cách nhau một khoảng $AB = 40\text{ m}$. Người ta đo được các góc $\widehat{CAB} = 60^\circ$ và $\widehat{CBA} = 45^\circ$.
+
+\par\vspace{1pt}{\centering
+\begin{tikzpicture}[scale=0.72, >=Stealth]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (5.5,0);
+    \coordinate (C) at (2.013, 3.487);
+    
+    \draw[line width=1.1pt, fill=blue!5] (-0.8,-0.2) rectangle (6.3,3.9);
+    \draw[line width=1.4pt, ink] (A) -- (B) node[midway, below=2pt, font=\normalsize\bfseries] {$AB = 40\text{ m}$};
+    \draw[line width=1.3pt, ink] (A) -- (C);
+    \draw[line width=1.3pt, ink] (B) -- (C);
+    
+    \filldraw[black] (A) circle (2.5pt) node[below left=2pt, font=\normalsize\bfseries] {$A$};
+    \filldraw[black] (B) circle (2.5pt) node[below right=2pt, font=\normalsize\bfseries] {$B$};
+    \filldraw[black] (C) circle (2.8pt) node[above=2pt, font=\normalsize\bfseries] {$C\text{ (Thuyền)}$};
+    
+    \draw[line width=1.0pt] (0.7,0) arc (0:60:0.7);
+    \node[font=\small\bfseries] at (1.0,0.35) {$60^\circ$};
+    
+    \draw[line width=1.0pt] (4.8,0) arc (180:135:0.7);
+    \node[font=\small\bfseries] at (4.4,0.35) {$45^\circ$};
+\end{tikzpicture}\par}\vspace{1pt}
+
+\begin{enumerate}
+    \item Số đo của góc $\widehat{ACB}$ bằng $75^\circ$.
+    \item Trong tam giác $ABC$, ta có hệ thức $\dfrac{BC}{\sin \widehat{CAB}} = \dfrac{AC}{\sin \widehat{CBA}} = \dfrac{AB}{\sin \widehat{ACB}}$.
+    \item Khoảng cách từ vị trí quan sát $A$ đến con thuyền $C$ (làm tròn đến hàng phần mười) là $32{,}6\text{ m}$.
+    \item Khoảng cách ngắn nhất từ con thuyền $C$ đến đường thẳng bờ sông $AB$ xấp xỉ bằng $25{,}4\text{ m}$.
+\end{enumerate}
+
+\item Cho bất phương trình bậc nhất hai ẩn $x - 2y + 4 \ge 0$ và gọi $d$ là đường thẳng có phương trình $x - 2y + 4 = 0$.
+
+\par\vspace{1pt}{\centering
+\begin{tikzpicture}[scale=0.72, >=Stealth]
+    \draw[line width=1.1pt, ->] (-4.6,0) -- (2.6,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.1pt, ->] (0,-1.0) -- (0,3.0) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below right=2pt, font=\normalsize\bfseries] at (0,0) {$O$};
+    
+    \fill[pattern=north east lines, pattern color=gray!60] (-4.4,-0.2) -- (-4.4,2.8) -- (1.6,2.8) -- cycle;
+    \draw[line width=1.4pt, ink] (-4.4,-0.2) -- (1.6,2.8) node[above left, font=\normalsize\bfseries] {$d$};
+    
+    \filldraw[black] (-4,0) circle (2.2pt) node[below=2pt, font=\normalsize\bfseries] {$-4$};
+    \filldraw[black] (0,2) circle (2.2pt) node[right=2pt, font=\normalsize\bfseries] {$2$};
+\end{tikzpicture}\par}\vspace{1pt}
+
+\begin{enumerate}
+    \item Đường thẳng $d$ đi qua hai điểm $A(-4; 0)$ và $B(0; 2)$.
+    \item Điểm gốc toạ độ $O(0; 0)$ thuộc miền nghiệm của bất phương trình $x - 2y + 4 \ge 0$.
+    \item Điểm $M(2; 4)$ thuộc miền nghiệm của bất phương trình đã cho.
+    \item Miền nghiệm của bất phương trình đã cho là nửa mặt phẳng kể cả bờ $d$ chứa điểm $O(0; 0)$.
+\end{enumerate}
+\end{enumerate}
+
+\parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 4. Điền kết quả vào ô tương ứng.}
+\begin{enumerate}
+\item Bác An cần mua hai loại phân bón $X$ và $Y$ cho trang trại. Mỗi bao phân bón $X$ có giá $200$ nghìn đồng, cung cấp $2\text{ kg}$ đạm và $1\text{ kg}$ lân. Mỗi bao phân bón $Y$ có giá $300$ nghìn đồng, cung cấp $1\text{ kg}$ đạm và $3\text{ kg}$ lân. Theo quy trình canh tác, trang trại cần tối thiểu $8\text{ kg}$ đạm và $9\text{ kg}$ lân. Biết rằng trang trại có thể mua số lượng bao phân bón là số thực không âm. Tính chi phí nhỏ nhất (đơn vị: nghìn đồng) mà bác An phải trả để mua phân bón.
+\answerbox
+
+\item Cho tam giác $ABC$ có góc $\widehat{B} = 40^\circ$ và độ dài các cạnh thỏa mãn hệ thức $a = 2b\cos C$. Tính số đo của góc $\widehat{A}$ (theo đơn vị độ).
+\answerbox
+
+\item Cho hệ bất phương trình bậc nhất hai ẩn có miền nghiệm là miền tam giác $OAB$ (kể cả các cạnh) trong hình vẽ bên dưới.
+
+\par\vspace{1pt}{\centering
+\begin{tikzpicture}[scale=0.72, >=Stealth]
+    \draw[line width=1.1pt, ->] (-0.6,0) -- (4.8,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.1pt, ->] (0,-0.6) -- (0,3.6) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left=2pt, font=\normalsize\bfseries] at (0,0) {$O$};
+    
+    \coordinate (O) at (0,0);
+    \coordinate (A) at (4,0);
+    \coordinate (B) at (1,3);
+    
+    \fill[ink!15] (O) -- (A) -- (B) -- cycle;
+    \draw[line width=1.4pt, ink] (O) -- (A) -- (B) -- cycle;
+    
+    \draw[dashed, line width=0.8pt] (1,0) -- (1,3) -- (0,3);
+    \filldraw[black] (O) circle (2.2pt);
+    \filldraw[black] (A) circle (2.2pt) node[below=2pt, font=\normalsize\bfseries] {$A(4; 0)$};
+    \filldraw[black] (B) circle (2.2pt) node[above right=2pt, font=\normalsize\bfseries] {$B(1; 3)$};
+    \node[below=2pt, font=\normalsize\bfseries] at (1,0) {$1$};
+    \node[left=2pt, font=\normalsize\bfseries] at (0,3) {$3$};
+\end{tikzpicture}\par}\vspace{1pt}
+
+Giá trị lớn nhất của biểu thức $F(x; y) = 2x + 5y$ trên miền nghiệm tam giác $OAB$ bằng bao nhiêu?
+\answerbox
+
+\item Cho tam giác $ABC$ có độ dài ba cạnh lần lượt là $a = 13$, $b = 14$ và $c = 15$. Tính bán kính đường tròn nội tiếp $r$ của tam giác $ABC$.
+\answerbox
+\end{enumerate}
+
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày chi tiết lời giải từ câu 1 đến câu 4.}
+\begin{enumerate}
+\item \textit{(1,0 điểm)} Một xưởng cơ khí dự định sản xuất hai loại sản phẩm $A$ và $B$. Để sản xuất một đơn vị sản phẩm $A$, xưởng cần $2$ giờ sử dụng máy cắt và $1$ giờ sử dụng máy hàn, mang lại lợi nhuận $400$ nghìn đồng. Để sản xuất một đơn vị sản phẩm $B$, xưởng cần $1$ giờ sử dụng máy cắt và $2$ giờ sử dụng máy hàn, mang lại lợi nhuận $300$ nghìn đồng. Mỗi ngày, máy cắt hoạt động tối đa $10$ giờ, máy hàn hoạt động tối đa $8$ giờ. Gọi $x$ và $y$ lần lượt là số đơn vị sản phẩm $A$ và $B$ xưởng sản xuất trong một ngày ($x \ge 0, y \ge 0$).
+\begin{enumerate}
+    \item Thiết lập hệ bất phương trình mô tả các điều kiện ràng buộc đối với $x, y$ và biểu diễn miền nghiệm của hệ trên mặt phẳng tọa độ $Oxy$.
+    \item Xác định số lượng sản phẩm mỗi loại cần sản xuất để xưởng đạt tổng lợi nhuận lớn nhất trong ngày và tính số tiền lợi nhuận lớn nhất đó.
+\end{enumerate}
+
+\item \textit{(0,5 điểm)} Cho tam giác $ABC$ có ba cạnh $a, b, c$ và độ dài các đường cao tương ứng là $h_a, h_b, h_c$. Giả sử các cạnh của tam giác thỏa mãn hệ thức $b + c = 2a$.
+\begin{enumerate}
+    \item Chứng minh rằng $\sin B + \sin C = 2\sin A$.
+    \item Chứng minh rằng $\dfrac{2}{h_a} = \dfrac{1}{h_b} + \dfrac{1}{h_c}$.
+\end{enumerate}
+
+\item \textit{(0,75 điểm)} Một công ty dự định dùng hai loại xe tải để vận chuyển ít nhất $140$ tấn hàng và $18$ nhân viên phục vụ. Công ty có thể thuê tối đa $9$ xe loại lớn (loại I) và tối đa $8$ xe loại nhỏ (loại II). Mỗi xe loại I có thể chở được $20$ tấn hàng và $2$ nhân viên. Mỗi xe loại II có thể chở được $10$ tấn hàng và $2$ nhân viên. Gọi $x, y$ lần lượt là số xe loại I và loại II được thuê ($x, y \in \mathbb{N}$).
+\begin{enumerate}
+    \item Hãy thiết lập hệ bất phương trình bậc nhất hai ẩn mô tả các điều kiện ràng buộc đối với $x$ và $y$.
+    \item Nếu công ty thuê $6$ xe loại I và $3$ xe loại II thì có đáp ứng được yêu cầu vận chuyển trên không? Giải thích vì sao.
+\end{enumerate}
+
+\item \textit{(0,75 điểm)} Để đo chiều cao của một ngọn tháp truyền hình mà không thể trèo lên đỉnh tháp, người ta đặt một giác kế thẳng đứng có chiều cao $CD = 1{,}2\text{ m}$ tại điểm $D$ trên mặt đất bằng phẳng, cách chân tháp $B$ một khoảng $DB = 50\text{ m}$. Từ đỉnh giác kế $C$, người ta ngắm đỉnh tháp $A$ dưới góc nâng $\widehat{ACH} = 35^\circ$ (với $H$ là điểm trên thân tháp sao cho $CH \perp AB$).
+
+\par\vspace{1pt}{\centering
+\begin{tikzpicture}[scale=0.72, >=Stealth]
+    \draw[line width=1.1pt] (-0.8,0) -- (5.8,0);
+    \coordinate (D) at (0,0);
+    \coordinate (C) at (0,0.7);
+    \coordinate (B) at (4.8,0);
+    \coordinate (H) at (4.8,0.7);
+    \coordinate (A) at (4.8,3.8);
+    
+    \draw[line width=1.8pt, ink] (B) -- (A) node[above=2pt, font=\normalsize\bfseries] {$A$};
+    \draw[line width=1.5pt, ink] (D) -- (C) node[above left=1pt, font=\normalsize\bfseries] {$C$};
+    \draw[line width=1.1pt, ink] (C) -- (A);
+    \draw[dashed, line width=0.9pt] (C) -- (H);
+    
+    \filldraw[black] (D) circle (2.2pt) node[below=2pt, font=\normalsize\bfseries] {$D$};
+    \filldraw[black] (B) circle (2.2pt) node[below=2pt, font=\normalsize\bfseries] {$B$};
+    \filldraw[black] (H) circle (2.2pt) node[right=2pt, font=\normalsize\bfseries] {$H$};
+    \filldraw[black] (C) circle (2.2pt);
+    \filldraw[black] (A) circle (2.2pt);
+    
+    \draw[<->, line width=0.8pt] (0,-0.35) -- (4.8,-0.35) node[midway, fill=white, inner sep=1pt, font=\normalsize\bfseries] {$50\text{ m}$};
+    \node[left=2pt, font=\normalsize\bfseries] at (0,0.35) {$1{,}2\text{ m}$};
+    
+    \draw[line width=0.9pt] (0.8,0.7) arc (0:35:0.8);
+    \node[font=\small\bfseries] at (1.2,1.0) {$35^\circ$};
+    
+    \draw (4.8,0) rectangle (4.55,0.25);
+    \draw (4.8,0.7) rectangle (4.55,0.95);
+    \draw (0,0) rectangle (0.25,0.25);
+\end{tikzpicture}\par}\vspace{1pt}
+
+\begin{enumerate}
+    \item Tính độ dài đoạn thẳng $AH$.
+    \item Tính chiều cao toàn phần của ngọn tháp $AB$ (kết quả làm tròn đến hàng phần mười của mét).
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+% =========================================================================
+% BẢNG ĐÁP ÁN VÀ LỜI GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\vspace{0.1cm}
+\textbf{1. Phần I: Trắc nghiệm nhiều lựa chọn}
+\begin{center}
+{\setlength{\tabcolsep}{2.5pt}\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} & \textbf{Câu 5} & \textbf{Câu 6} & \textbf{Câu 7} & \textbf{Câu 8} & \textbf{Câu 9} & \textbf{Câu 10} & \textbf{Câu 11} & \textbf{Câu 12} \\
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.1cm}
+\textbf{2. Phần II: Trắc nghiệm đúng/sai}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu} & \textbf{Ý a)} & \textbf{Ý b)} & \textbf{Ý c)} & \textbf{Ý d)} \\
+\hline
+\textbf{Câu 1} & \textbf{Đ} & \textbf{Đ} & \textbf{S} & \textbf{Đ} \\
+\hline
+\textbf{Câu 2} & \textbf{Đ} & \textbf{Đ} & \textbf{S} & \textbf{Đ} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.1cm}
+\textbf{3. Phần III: Trả lời ngắn}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} \\
+\hline
+\textbf{1200} & \textbf{100} & \textbf{17} & \textbf{4} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\parttitle{HƯỚNG DẪN GIẢI CHI TIẾT}
+
+\textbf{\large PHẦN I. Trắc nghiệm nhiều lựa chọn}
+
+\textbf{Câu 1.} Đường thẳng $d$ cắt trục hoành tại $(3; 0)$ và cắt trục tung tại $(0; 2)$. Phương trình đoạn chắn của $d$ là $\dfrac{x}{3} + \dfrac{y}{2} = 1 \iff 2x + 3y - 6 = 0$. Gốc tọa độ $O(0; 0)$ thuộc miền không bị gạch chéo; thay tọa độ $O(0; 0)$ vào ta có $2(0) + 3(0) = 0 \le 6$ (thỏa mãn). Vậy miền không bị gạch chéo là miền nghiệm của bất phương trình $2x + 3y \le 6$. Chọn \textbf{A}.
+
+\textbf{Câu 2.} Hệ bất phương trình bậc nhất hai ẩn là hệ gồm các bất phương trình bậc nhất hai ẩn $x, y$. Phương án B gồm hai bất phương trình bậc nhất hai ẩn $2x - 3y \le 5$ và $x + y > 0$. Các phương án khác chứa bậc hai ($x^2$), ba ẩn ($z$) hoặc tích hai ẩn ($xy$). Chọn \textbf{B}.
+
+\textbf{Câu 3.} Nửa mặt phẳng bờ $d$ của bất phương trình $4x - 3y + 12 \ge 0$ được xác định bởi phương trình tương ứng khi thay dấu bất đẳng thức bằng dấu bằng: $4x - 3y + 12 = 0$. Chọn \textbf{C}.
+
+\textbf{Câu 4.} Thay tọa độ từng điểm vào hệ:
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Với $M(0; 1)$: $2(0) + 1 = 1 \ge 3$ (sai).
+    \item Với $N(3; 0)$: $3 - 0 = 3 < 2$ (sai).
+    \item Với $P(0; 0)$: $2(0) + 0 = 0 \ge 3$ (sai).
+    \item Với $Q(2; 1)$: $2 - 1 = 1 < 2$ (đúng) và $2(2) + 1 = 5 \ge 3$ (đúng).
+\end{itemize}
+Vậy $Q(2; 1)$ thuộc miền nghiệm của hệ. Chọn \textbf{D}.
+
+\textbf{Câu 5.} Thay tọa độ các cặp số vào vế trái $3x - 2y + 4$:
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Với $(1; 2)$: $3(1) - 2(2) + 4 = 3 > 0$ (thỏa mãn).
+    \item Với $(-2; 0)$: $3(-2) - 0 + 4 = -2 < 0$.
+    \item Với $(0; 3)$: $3(0) - 2(3) + 4 = -2 < 0$.
+    \item Với $(-3; 1)$: $3(-3) - 2(1) + 4 = -7 < 0$.
+\end{itemize}
+Chọn \textbf{A}.
+
+\textbf{Câu 6.} Bất phương trình $5x - 2y + 1 > 0$ có dạng $ax + by + c > 0$ với $a = 5 \ne 0, b = -2 \ne 0$, là bất phương trình bậc nhất hai ẩn $x, y$. Chọn \textbf{B}.
+
+\textbf{Câu 7.} Vì $90^\circ < \alpha < 180^\circ$ nên $\cos \alpha < 0$. Áp dụng hệ thức cơ bản:
+\[
+\cos^2 \alpha = 1 - \sin^2 \alpha = 1 - \left(\dfrac{3}{5}\right)^2 = \dfrac{16}{25} \implies \cos \alpha = -\sqrt{\dfrac{16}{25}} = -\dfrac{4}{5}.
+\]
+Chọn \textbf{C}.
+
+\textbf{Câu 8.} Với góc tù $\alpha$ ($90^\circ < \alpha < 180^\circ$), điểm biểu diễn trên nửa đường tròn đơn vị có tung độ dương và hoành độ âm. Do đó $\sin \alpha > 0$, $\cos \alpha < 0$, $\tan \alpha < 0$, $\cot \alpha < 0$. Khẳng định đúng là $\sin \alpha > 0$. Chọn \textbf{D}.
+
+\textbf{Câu 9.} Theo tính chất của hai góc bù nhau, với mọi góc $\alpha$ thỏa mãn $0^\circ \le \alpha \le 180^\circ$, ta luôn có $\sin(180^\circ - \alpha) = \sin \alpha$. Chọn \textbf{A}.
+
+\textbf{Câu 10.} Diện tích tam giác tính theo bán kính đường tròn nội tiếp là $S = p \cdot r$. Chọn \textbf{B}.
+
+\textbf{Câu 11.} Công thức tính độ dài đường trung tuyến $m_a$ là $m_a^2 = \dfrac{2(b^2 + c^2) - a^2}{4}$. Chọn \textbf{C}.
+
+\textbf{Câu 12.} Áp dụng định lí sin: $\dfrac{a}{\sin A} = 2R \implies R = \dfrac{a}{2\sin A} = \dfrac{6}{2\sin 30^\circ} = \dfrac{6}{2 \cdot 0{,}5} = 6$. Chọn \textbf{D}.
+
+\vspace{0.15cm}
+\textbf{\large PHẦN II. Trắc nghiệm đúng/sai}
+
+\textbf{Câu 1.}
+\begin{enumerate}[itemsep=1.5pt, topsep=1.5pt]
+    \item \textbf{Đúng}: Tổng ba góc trong tam giác $ABC$ bằng $180^\circ$, suy ra $\widehat{ACB} = 180^\circ - (60^\circ + 45^\circ) = 75^\circ$.
+    \item \textbf{Đúng}: Theo định lí sin trong tam giác $ABC$, tỉ số giữa mỗi cạnh và sin của góc đối diện luôn bằng nhau: $\dfrac{BC}{\sin A} = \dfrac{AC}{\sin B} = \dfrac{AB}{\sin C}$.
+    \item \textbf{Sai}: Áp dụng định lí sin:
+    \[
+    AC = \dfrac{AB \cdot \sin \widehat{CBA}}{\sin \widehat{ACB}} = \dfrac{40 \cdot \sin 45^\circ}{\sin 75^\circ} = \dfrac{40 \cdot \dfrac{\sqrt{2}}{2}}{\dfrac{\sqrt{6}+\sqrt{2}}{4}} = \dfrac{80}{\sqrt{3}+1} = 40(\sqrt{3}-1) \approx 29{,}3\text{ m}.
+    \]
+    Do đó giá trị $32{,}6\text{ m}$ là sai.
+    \item \textbf{Đúng}: Khoảng cách ngắn nhất từ con thuyền $C$ đến đường bờ sông $AB$ là độ dài đường cao $h_C$:
+    \[
+    h_C = AC \cdot \sin 60^\circ = 40(\sqrt{3}-1) \cdot \dfrac{\sqrt{3}}{2} = 20(3 - \sqrt{3}) \approx 25{,}36\text{ m} \approx 25{,}4\text{ m}.
+    \]
+\end{enumerate}
+
+\textbf{Câu 2.}
+\begin{enumerate}[itemsep=1.5pt, topsep=1.5pt]
+    \item \textbf{Đúng}: Cho $y = 0 \implies x + 4 = 0 \iff x = -4$, điểm $A(-4; 0) \in d$. Cho $x = 0 \implies -2y + 4 = 0 \iff y = 2$, điểm $B(0; 2) \in d$.
+    \item \textbf{Đúng}: Thay tọa độ gốc $O(0; 0)$ vào bất phương trình: $0 - 2(0) + 4 = 4 \ge 0$ (mệnh đề đúng).
+    \item \textbf{Sai}: Thay tọa độ $M(2; 4)$ vào vế trái: $2 - 2(4) + 4 = -2 < 0$, không thỏa mãn bất phương trình.
+    \item \textbf{Đúng}: Vì bờ $d$ chia mặt phẳng thành hai nửa và $O(0; 0)$ thỏa mãn bất phương trình (có dấu $\ge$) nên miền nghiệm là nửa mặt phẳng kể cả bờ $d$ chứa điểm $O(0; 0)$.
+\end{enumerate}
+
+\vspace{0.15cm}
+\textbf{\large PHẦN III. Trắc nghiệm trả lời ngắn}
+
+\textbf{Câu 1.}
+Gọi $x$ và $y$ lần lượt là số bao phân bón loại $X$ và $Y$ ($x \ge 0, y \ge 0$).
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Lượng đạm cần cung cấp: $2x + y \ge 8$.
+    \item Lượng lân cần cung cấp: $x + 3y \ge 9$.
+\end{itemize}
+Biểu thức tổng chi phí (đơn vị: nghìn đồng) là $F(x; y) = 200x + 300y$.
+Miền nghiệm của hệ bất phương trình có các đỉnh:
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Điểm $A(0; 8)$ (giao điểm của $2x + y = 8$ và $x = 0$): $F(0; 8) = 200(0) + 300(8) = 2400$.
+    \item Điểm $B(3; 2)$ (giao điểm của $2x + y = 8$ và $x + 3y = 9$): $F(3; 2) = 200(3) + 300(2) = 1200$.
+    \item Điểm $C(9; 0)$ (giao điểm của $x + 3y = 9$ và $y = 0$): $F(9; 0) = 200(9) + 300(0) = 1800$.
+\end{itemize}
+Vậy $F(x; y)$ đạt giá trị nhỏ nhất bằng $1200$ tại $x = 3, y = 2$. Đáp số: \textbf{1200}.
+
+\textbf{Câu 2.}
+Theo định lí côsin trong tam giác $ABC$, ta có $\cos C = \dfrac{a^2 + b^2 - c^2}{2ab}$. Thay vào đẳng thức $a = 2b\cos C$:
+\[
+a = 2b \cdot \dfrac{a^2 + b^2 - c^2}{2ab} = \dfrac{a^2 + b^2 - c^2}{a} \iff a^2 = a^2 + b^2 - c^2 \iff b^2 = c^2 \iff b = c.
+\]
+Do đó tam giác $ABC$ cân tại $A$, suy ra $\widehat{C} = \widehat{B} = 40^\circ$. Số đo góc $\widehat{A} = 180^\circ - (\widehat{B} + \widehat{C}) = 180^\circ - 80^\circ = 100^\circ$.
+Đáp số: \textbf{100}.
+
+\textbf{Câu 3.}
+Miền nghiệm là tam giác $OAB$ với $O(0; 0)$, $A(4; 0)$, $B(1; 3)$. Biểu thức $F(x; y) = 2x + 5y$ đạt giá trị lớn nhất tại một trong các đỉnh của tam giác:
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Tại $O(0; 0)$: $F(0; 0) = 2(0) + 5(0) = 0$.
+    \item Tại $A(4; 0)$: $F(4; 0) = 2(4) + 5(0) = 8$.
+    \item Tại $B(1; 3)$: $F(1; 3) = 2(1) + 5(3) = 17$.
+\end{itemize}
+Vậy giá trị lớn nhất của $F(x; y)$ là $17$. Đáp số: \textbf{17}.
+
+\textbf{Câu 4.}
+Nửa chu vi của tam giác $ABC$ là $p = \dfrac{13 + 14 + 15}{2} = 21$.
+Diện tích tam giác tính theo công thức Heron:
+\[
+S = \sqrt{21(21-13)(21-14)(21-15)} = \sqrt{21 \cdot 8 \cdot 7 \cdot 6} = 84.
+\]
+Bán kính đường tròn nội tiếp: $r = \dfrac{S}{p} = \dfrac{84}{21} = 4$. Đáp số: \textbf{4}.
+
+\vspace{0.15cm}
+\textbf{\large PHẦN IV. Tự luận}
+
+\textbf{Câu 1.}
+a) Số giờ sử dụng máy cắt là $2x + y$, số giờ sử dụng máy hàn là $x + 2y$.
+Vì số giờ khả dụng mỗi ngày của máy cắt tối đa $10$ giờ, máy hàn tối đa $8$ giờ và số sản phẩm không âm, ta có hệ bất phương trình ràng buộc:
+\[
+\begin{cases}
+2x + y \le 10 \\
+x + 2y \le 8 \\
+x \ge 0,\ y \ge 0.
+\end{cases}
+\]
+
+Miền nghiệm của hệ là miền tứ giác $OABC$ (kể cả biên) trên mặt phẳng tọa độ $Oxy$:
+
+\par\vspace{1pt}{\centering
+\begin{tikzpicture}[scale=0.72, >=Stealth]
+    \draw[line width=1.1pt, ->] (-0.8,0) -- (6.2,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.1pt, ->] (0,-0.8) -- (0,5.2) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left=2pt, font=\normalsize\bfseries] at (0,0) {$O$};
+    
+    \coordinate (O) at (0,0);
+    \coordinate (A) at (5,0);
+    \coordinate (B) at (4,2);
+    \coordinate (C) at (0,4);
+    
+    \fill[ink!18] (O) -- (A) -- (B) -- (C) -- cycle;
+    \draw[line width=1.5pt, ink] (O) -- (A) -- (B) -- (C) -- cycle;
+    
+    \draw[line width=1.1pt, red!80!black] (-0.3, 10.6) -- (5.4, -0.8) node[above right, font=\small\bfseries] {$2x+y=10$};
+    \draw[line width=1.1pt, blue!80!black] (-0.8, 4.4) -- (7.8, 0.1) node[above, font=\small\bfseries] {$x+2y=8$};
+    
+    \draw[dashed, line width=0.8pt] (4,0) -- (4,2) -- (0,2);
+    
+    \filldraw[black] (O) circle (2.2pt);
+    \filldraw[black] (A) circle (2.2pt) node[below=2pt, font=\normalsize\bfseries] {$A(5;0)$};
+    \filldraw[black] (B) circle (2.5pt) node[above right=2pt, font=\normalsize\bfseries] {$B(4;2)$};
+    \filldraw[black] (C) circle (2.2pt) node[left=2pt, font=\normalsize\bfseries] {$C(0;4)$};
+    \node[below=2pt, font=\normalsize\bfseries] at (4,0) {$4$};
+    \node[left=2pt, font=\normalsize\bfseries] at (0,2) {$2$};
+\end{tikzpicture}\par}\vspace{1pt}
+
+b) Tổng lợi nhuận thu được trong ngày (đơn vị: nghìn đồng) là $F(x; y) = 400x + 300y$.
+Giá trị lớn nhất của $F(x; y)$ đạt được tại một trong các đỉnh của tứ giác $OABC$:
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Tại $O(0; 0)$: $F(0; 0) = 0$.
+    \item Tại $A(5; 0)$: $F(5; 0) = 400(5) + 300(0) = 2000$ (nghìn đồng).
+    \item Tại $B(4; 2)$: $F(4; 2) = 400(4) + 300(2) = 1600 + 600 = 2200$ (nghìn đồng).
+    \item Tại $C(0; 4)$: $F(0; 4) = 400(0) + 300(4) = 1200$ (nghìn đồng).
+\end{itemize}
+So sánh các giá trị, $F(x; y)$ đạt giá trị lớn nhất bằng $2\,200$ nghìn đồng khi $x = 4$ và $y = 2$.
+Vậy xưởng cần sản xuất $4$ sản phẩm loại $A$ và $2$ sản phẩm loại $B$ để đạt lợi nhuận lớn nhất là $2\,200\,000$ đồng.
+
+\vspace{0.15cm}
+\textbf{Câu 2.}
+a) Theo định lí sin, ta có $a = 2R\sin A$, $b = 2R\sin B$, $c = 2R\sin C$.
+Từ giả thiết $b + c = 2a$, thay vào ta được:
+\[
+2R\sin B + 2R\sin C = 2(2R\sin A) \iff 2R(\sin B + \sin C) = 2R(2\sin A) \iff \sin B + \sin C = 2\sin A.
+\]
+b) Gọi $S$ là diện tích tam giác $ABC$. Ta có $S = \dfrac{1}{2}a h_a = \dfrac{1}{2}b h_b = \dfrac{1}{2}c h_c \implies a = \dfrac{2S}{h_a},\ b = \dfrac{2S}{h_b},\ c = \dfrac{2S}{h_c}$.
+Thay vào hệ thức $b + c = 2a$:
+\[
+\dfrac{2S}{h_b} + \dfrac{2S}{h_c} = 2 \cdot \dfrac{2S}{h_a} \iff \dfrac{1}{h_b} + \dfrac{1}{h_c} = \dfrac{2}{h_a}.
+\]
+Đẳng thức được chứng minh.
+
+\vspace{0.15cm}
+\textbf{Câu 3.}
+a) Gọi $x, y$ lần lượt là số xe loại I và loại II được thuê ($x, y \in \mathbb{N}$).
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Khối lượng hàng vận chuyển được: $20x + 10y \ge 140 \iff 2x + y \ge 14$.
+    \item Số nhân viên vận chuyển được: $2x + 2y \ge 18 \iff x + y \ge 9$.
+    \item Giới hạn số xe thuê: $0 \le x \le 9$ và $0 \le y \le 8$.
+\end{itemize}
+Vậy hệ bất phương trình ràng buộc là:
+\[
+\begin{cases}
+2x + y \ge 14 \\
+x + y \ge 9 \\
+0 \le x \le 9,\ 0 \le y \le 8 \\
+x, y \in \mathbb{N}.
+\end{cases}
+\]
+
+b) Xét phương án thuê $6$ xe loại I và $3$ xe loại II, tức là $(x; y) = (6; 3)$:
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Điều kiện số xe: $0 \le 6 \le 9$ và $0 \le 3 \le 8$ (thỏa mãn).
+    \item Khối lượng hàng: $20(6) + 10(3) = 120 + 30 = 150 \ge 140$ (tấn) (đáp ứng yêu cầu).
+    \item Số nhân viên: $2(6) + 2(3) = 12 + 6 = 18 \ge 18$ (người) (đáp ứng yêu cầu).
+\end{itemize}
+Vì cặp số $(6; 3)$ thỏa mãn tất cả các điều kiện ràng buộc của hệ, nên phương án này hoàn toàn đáp ứng được nhu cầu vận chuyển của công ty.
+
+\vspace{0.15cm}
+\textbf{Câu 4.}
+a) Tứ giác $CDBH$ có ba góc vuông $\widehat{CDB} = \widehat{DBH} = \widehat{BHC} = 90^\circ$ nên $CDBH$ là hình chữ nhật.
+Suy ra $CH = DB = 50\text{ m},\ BH = CD = 1{,}2\text{ m}$.
+Trong tam giác vuông $ACH$ vuông tại $H$, ta có:
+\[
+AH = CH \cdot \tan \widehat{ACH} = 50 \cdot \tan 35^\circ \approx 50 \cdot 0{,}7002 = 35{,}01\text{ m}.
+\]
+b) Chiều cao toàn phần của ngọn tháp $AB$ là:
+\[
+AB = AH + BH \approx 35{,}01 + 1{,}2 = 36{,}21\text{ m}.
+\]
+Làm tròn đến hàng phần mười của mét, ta được chiều cao ngọn tháp là $36{,}2\text{ m}$.
+
+\end{document}
