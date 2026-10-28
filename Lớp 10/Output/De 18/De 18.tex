@@ -1,0 +1,549 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.5cm,top=1.4cm,bottom=1.4cm]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or Math gives us hope that every problem has a solution% Trang 7
+    \or Math + You = Champion% Trang 8
+    \or Where Frustration Becomes Inspiration% Trang 9
+    \or Turning Confusion into Clarity% Trang 10
+    \or Don't be an X, be a Y of mathematics% Trang 11
+    \or Don't get mad. Learn to add% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.5pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\newcommand{\parttitle}[1]{\par\vspace{2pt}\nopagebreak{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[2pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{12pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.4cm,labelsep=.15cm,itemsep=1.5pt,topsep=1.0pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.6cm,itemsep=1.0pt,topsep=1.0pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[4pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GK1}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 18}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.2cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0018}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.2cm}
+
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án đúng duy nhất.}
+\begin{enumerate}
+\item Cho hai tập hợp $A = \{1; 2; 3; 4; 5\}$ và $B = \{2; 4; 6; 8\}$. Tập hợp hiệu $A \setminus B$ bằng
+\four{$\{1; 3; 5\}$.}{$\{2; 4\}$.}{$\{6; 8\}$.}{$\{1; 2; 3; 4; 5; 6; 8\}$.}
+
+\item Cho mệnh đề chứa biến $P(x): ``x^2 - 5x + 6 = 0"$ với $x \in \mathbb{R}$. Trong các giá trị sau của $x$, giá trị nào làm cho $P(x)$ là một mệnh đề đúng?
+\four{$x = 1$.}{$x = 2$.}{$x = 4$.}{$x = -2$.}
+
+\item Cho tập hợp $X = \{a; b; c\}$. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$a \subset X$.}{$\{a; b\} \in X$.}{$\{b; c\} \subset X$.}{$\varnothing \in X$.}
+
+\item Số tập hợp con của một tập hợp gồm $4$ phần tử là
+\four{$4$.}{$8$.}{$12$.}{$16$.}
+
+\item Cặp số $(x; y)$ nào sau đây là một nghiệm của hệ bất phương trình $\begin{cases} 2x - y + 1 > 0 \\ x + 2y - 4 \le 0 \end{cases}$?
+\four{$(1; 1)$.}{$(0; 1)$.}{$(2; 2)$.}{$(-1; 0)$.}
+
+\item Hệ bất phương trình nào sau đây là một hệ bất phương trình bậc nhất hai ẩn?
+\four{$\begin{cases} x^2 + 2y \le 3 \\ x - y > 1 \end{cases}$}{$\begin{cases} 3x - y + 2 \ge 0 \\ x + 4y - 5 < 0 \end{cases}$}{$\begin{cases} x + 2y - z \le 0 \\ 2x - y \ge 3 \end{cases}$}{$\begin{cases} 2xy - 1 \le 0 \\ x + y > 2 \end{cases}$}
+
+\item Điểm nào sau đây thuộc miền nghiệm của bất phương trình $3x - 2y + 6 \ge 0$?
+\four{$M(-3; 0)$.}{$N(0; 4)$.}{$P(1; 2)$.}{$Q(-4; 1)$.}
+
+\item Miền nghiệm của bất phương trình $x - 2y + 2 \le 0$ là nửa mặt phẳng bờ đường thẳng $d: x - 2y + 2 = 0$ (kể cả bờ $d$) chứa điểm nào sau đây?
+\four{$O(0; 0)$.}{$M(2; 0)$.}{$N(1; 1)$.}{$P(0; 2)$.}
+
+\item Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$a^2 = b^2 + c^2 - 2bc \cos A$.}{$a^2 = b^2 + c^2 + 2bc \cos A$.}{$a^2 = b^2 + c^2 - 2bc \sin A$.}{$a^2 = b^2 + c^2 - bc \cos A$.}
+
+\item Với mọi góc $\alpha$ thỏa mãn $0^\circ \le \alpha \le 180^\circ$, khẳng định nào sau đây là \textbf{đúng}?
+\four{$\sin(180^\circ - \alpha) = -\sin \alpha$.}{$\cos(180^\circ - \alpha) = -\cos \alpha$.}{$\cos(180^\circ - \alpha) = \cos \alpha$.}{$\tan(180^\circ - \alpha) = \tan \alpha$ ($\alpha \ne 90^\circ$).}
+
+\item Giá trị của $\sin 150^\circ$ bằng
+\four{$-\dfrac{1}{2}$.}{$-\dfrac{\sqrt{3}}{2}$.}{$\dfrac{1}{2}$.}{$\dfrac{\sqrt{3}}{2}$.}
+
+\item Biểu thức rút gọn của $P = \cos(90^\circ - \alpha) \cdot \sin \alpha + \cos^2 \alpha$ với $0^\circ < \alpha < 90^\circ$ là
+\four{$0$.}{$2$.}{$-1$.}{$1$.}
+\end{enumerate}
+
+\vspace{2pt}
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\nopagebreak
+\textit{Thí sinh trả lời từ câu 13 đến câu 14. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}\par\nopagebreak
+\begin{enumerate}[resume,beginpenalty=10000]
+\item Xét tính đúng, sai của các phát biểu sau:
+\begin{enumerate}
+    \item Câu ``Hà Nội là thủ đô của Việt Nam'' là một mệnh đề.
+    \item Mệnh đề phủ định của mệnh đề ``$P: \forall x \in \mathbb{R},\; x^2 + 1 > 0$'' là ``$\overline{P}: \exists x \in \mathbb{R},\; x^2 + 1 \le 0$''.
+    \item Mệnh đề ``$\forall n \in \mathbb{N},\; n^2 + n + 1 \text{ là số nguyên tố}$'' là một mệnh đề đúng.
+    \item Cho mệnh đề kéo theo: ``Nếu một số tự nhiên có chữ số tận cùng bằng $0$ thì số đó chia hết cho $5$''. Mệnh đề đảo của mệnh đề này là một mệnh đề đúng.
+\end{enumerate}
+
+\item Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$ (góc tù). Xét tính đúng, sai của các khẳng định sau:
+\begin{enumerate}
+    \item $\sin \alpha > 0$.
+    \item $\cos \alpha > 0$.
+    \item Biết $\cos \alpha = -\dfrac{3}{5}$. Khi đó $\tan \alpha = -\dfrac{4}{3}$.
+    \item Với $\cos \alpha = -\dfrac{3}{5}$, giá trị của biểu thức $E = \dfrac{2\sin \alpha + \cos \alpha}{\sin \alpha - 2\cos \alpha}$ bằng $\dfrac{1}{2}$.
+\end{enumerate}
+\end{enumerate}
+
+\parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 15 đến câu 18. Viết kết quả vào ô quy định.}
+\begin{enumerate}[resume]
+\item Cho hai tập hợp số $A = [-4; 5)$ và $B = (-1; 8]$. Tìm số phần tử nguyên thuộc tập hợp giao $A \cap B$.
+\answerbox
+
+\item Cho miền tam giác $OAB$ (kể cả các cạnh) với các đỉnh $O(0; 0), A(3; 0), B(0; 4)$ trên mặt phẳng tọa độ $Oxy$. Tìm giá trị nhỏ nhất của tham số $m$ để bất phương trình $2x + 3y \le m$ nghiệm đúng với mọi điểm $(x; y)$ thuộc miền tam giác $OAB$.
+\answerbox
+
+\item Cho hai tập hợp khác rỗng $A = [m; m + 2]$ và $B = (-3; 5)$. Có bao nhiêu giá trị nguyên của tham số $m$ để $A \subset B$?
+\answerbox
+
+\item \begin{minipage}[t]{0.62\linewidth}
+Để đo khoảng cách giữa hai vị trí $A$ và $B$ bị ngăn cách bởi một hồ nước, người ta chọn một điểm mốc $C$ có thể quan sát được cả hai điểm $A$ và $B$. Bằng các thiết bị đo đạc chuyên dụng, người ta xác định được khoảng cách $CA = 50\text{ m}$, $CB = 80\text{ m}$ và góc $\widehat{ACB} = 60^\circ$ (như hình vẽ bên). Khoảng cách giữa hai vị trí $A$ và $B$ là bao nhiêu mét?
+\vspace{6pt}
+
+\answerbox
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.35\linewidth}
+\centering
+\begin{tikzpicture}[baseline=(current bounding box.north), scale=0.72, every node/.style={scale=0.85}]
+    \coordinate (C) at (0,0);
+    \coordinate (B) at (3.6,0);
+    \coordinate (A) at (1.4, 2.42);
+
+    % Minh họa hồ nước
+    \fill[blue!12, rounded corners=12pt] (1.0, 0.4) -- (2.6, 0.7) -- (3.0, 1.8) -- (1.6, 2.2) -- (0.8, 1.2) -- cycle;
+    \node[blue!70!black, font=\scriptsize\itshape] at (1.8, 1.3) {Hồ nước};
+
+    \draw[thick, ink] (C) node[below left] {$C$} -- (B) node[below right] {$B$};
+    \draw[thick, ink] (C) -- (A) node[above] {$A$};
+    \draw[dashed, red!80!black, line width=1.1pt] (A) -- (B);
+
+    \filldraw[black] (C) circle (2.2pt);
+    \filldraw[blue!80!black] (B) circle (2.5pt);
+    \filldraw[red!80!black] (A) circle (2.5pt);
+
+    \draw (0.6,0) arc (0:60:0.6);
+    \node at (0.9,0.35) {\small $60^\circ$};
+    \node at (1.9,-0.3) {\small $80\text{ m}$};
+    \node at (0.3,1.35) {\small $50\text{ m}$};
+    \node[red!80!black, font=\bfseries] at (2.9,1.4) {$d = ?$};
+\end{tikzpicture}
+\end{minipage}
+\end{enumerate}
+
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày lời giải chi tiết từ câu 19 đến câu 22.}
+\begin{enumerate}[resume]
+\item \textit{(0,75 điểm)} Cho hai tập hợp khác rỗng $A = (m - 1; m + 3)$ và $B = [1; 5]$.
+\begin{enumerate}
+    \item Với $m = 3$, hãy xác định các tập hợp $A, B$ và tìm $A \cap B$.
+    \item Tìm tất cả các giá trị của tham số $m$ để $A \cap B \ne \varnothing$.
+\end{enumerate}
+
+\item \textit{(1,0 điểm)} Cho hệ bất phương trình bậc nhất hai ẩn:
+\[
+\begin{cases}
+x \ge 0 \\
+y \ge 0 \\
+x + y \le 5 \\
+2x + y \le 8
+\end{cases}
+\]
+\begin{enumerate}
+    \item Biểu diễn hình học miền nghiệm của hệ bất phương trình đã cho trên mặt phẳng tọa độ $Oxy$.
+    \item Xác định tọa độ các đỉnh của miền tứ giác nghiệm $OABC$.
+    \item Tìm giá trị lớn nhất của biểu thức $F(x, y) = 3x + 2y$ trên miền nghiệm của hệ.
+\end{enumerate}
+
+\item \textit{(0,75 điểm)} Cho góc $\alpha$ thỏa mãn $0^\circ < \alpha < 180^\circ$ và $\tan \alpha = -2$.
+\begin{enumerate}
+    \item Tính giá trị của biểu thức: $P = \dfrac{2\sin \alpha - 3\cos \alpha}{3\sin \alpha + 4\cos \alpha}$.
+    \item Tính giá trị của biểu thức: $Q = \dfrac{\sin^2 \alpha + 2\sin \alpha \cos \alpha - 3\cos^2 \alpha}{2\sin^2 \alpha - \cos^2 \alpha}$.
+\end{enumerate}
+
+\item \textit{(0,5 điểm)} Lớp 10A có 45 học sinh. Trong đợt khảo sát sở thích thể thao tham gia câu lạc bộ của trường gồm ba môn: Bóng đá, Cầu lông và Bóng rổ, kết quả thu được như sau:
+\begin{itemize}[leftmargin=0.5cm]
+    \item Có 25 học sinh thích Bóng đá, 20 học sinh thích Cầu lông và 18 học sinh thích Bóng rổ.
+    \item Có 10 học sinh thích cả Bóng đá và Cầu lông; 8 học sinh thích cả Bóng đá và Bóng rổ; 7 học sinh thích cả Cầu lông và Bóng rổ.
+    \item Có 4 học sinh thích cả ba môn thể thao trên.
+\end{itemize}
+\begin{enumerate}
+    \item Hỏi có bao nhiêu học sinh lớp 10A thích ít nhất một trong ba môn thể thao nói trên?
+    \item Hỏi có bao nhiêu học sinh lớp 10A không thích bất kỳ môn thể thao nào trong ba môn trên?
+    \item Hỏi có bao nhiêu học sinh lớp 10A chỉ thích đúng một môn thể thao trong ba môn trên?
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+% =========================================================================
+% BẢNG ĐÁP ÁN VÀ LỜI GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\vspace{0.2cm}
+\textbf{1. Phần I: Trắc nghiệm nhiều lựa chọn}
+\begin{center}
+{\setlength{\tabcolsep}{2.5pt}\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} & \textbf{Câu 5} & \textbf{Câu 6} & \textbf{Câu 7} & \textbf{Câu 8} & \textbf{Câu 9} & \textbf{Câu 10} & \textbf{Câu 11} & \textbf{Câu 12} \\
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{2. Phần II: Trắc nghiệm đúng/sai}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu hỏi} & \textbf{Ý a)} & \textbf{Ý b)} & \textbf{Ý c)} & \textbf{Ý d)} \\
+\hline
+\textbf{Câu 13} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} & \textbf{Sai} \\
+\hline
+\textbf{Câu 14} & \textbf{Đúng} & \textbf{Sai} & \textbf{Đúng} & \textbf{Đúng} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{3. Phần III: Trắc nghiệm trả lời ngắn}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Câu 15} & \textbf{Câu 16} & \textbf{Câu 17} & \textbf{Câu 18} \\
+\hline
+\textbf{5} & \textbf{12} & \textbf{5} & \textbf{70} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{4. Phần IV: Tự luận}
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Câu hỏi} & \textbf{Kết quả tóm tắt} \\
+\hline
+\textbf{Câu 19} & a) Với $m = 3: A = (2; 6),\; A \cap B = (2; 5]$.\quad b) $A \cap B \ne \varnothing \iff -2 < m < 6$. \\
+\hline
+\textbf{Câu 20} & a) Miền tứ giác $OABC$.\quad b) $O(0; 0), A(4; 0), B(3; 2), C(0; 5)$.\quad c) $\max F(x, y) = 13$ tại $B(3; 2)$. \\
+\hline
+\textbf{Câu 21} & a) $P = \dfrac{7}{2}$.\quad b) $Q = -\dfrac{3}{7}$. \\
+\hline
+\textbf{Câu 22} & a) $42$ học sinh thích ít nhất một môn;\quad b) $3$ học sinh không thích môn nào;\quad c) $25$ học sinh chỉ thích đúng một môn. \\
+\hline
+\end{tabularx}
+\end{center}
+
+\vspace{0.3cm}
+% =========================================================================
+% HÌNH VẼ BIỂU DIỄN MIỀN NGHIỆM (HỆ BẤT PHƯƠNG TRÌNH)
+% =========================================================================
+\parttitle{HÌNH VẼ BIỂU DIỄN MIỀN NGHIỆM (HỆ BẤT PHƯƠNG TRÌNH)}
+
+\begin{center}
+\textbf{Hình vẽ miền nghiệm của hệ bất phương trình (Câu 20 / IV.2)}\\[6pt]
+\begin{tikzpicture}[scale=0.85, >=Stealth]
+    % Trục toạ độ to rõ
+    \draw[line width=1.2pt, ->] (-0.8,0) -- (6.5,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-0.8) -- (0,7.0) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left, font=\normalsize\bfseries] at (0,0) {$O$};
+
+    % Đa giác nghiệm O(0;0), A(4;0), B(3;2), C(0;5)
+    \fill[fill=ink!18] (0,0) -- (4,0) -- (3,2) -- (0,5) -- cycle;
+    \draw[line width=2.0pt, blue!70!black] (0,0) -- (4,0) -- (3,2) -- (0,5) -- cycle;
+
+    % Đường biên d1: x + y = 5 (cắt (5;0) và (0;5))
+    \draw[line width=1.2pt, dashed, red!80!black] (-0.4, 5.4) -- (5.6, -0.6) node[above right, font=\normalsize\bfseries] {$d_1: x+y=5$};
+
+    % Đường biên d2: 2x + y = 8 (cắt (4;0) và (0;8))
+    \draw[line width=1.2pt, dashed, teal!80!black] (-0.3, 8.6) -- (4.5, -1.0) node[below right, font=\normalsize\bfseries] {$d_2: 2x+y=8$};
+
+    % Các đỉnh to rõ
+    \filldraw[black] (0,0) circle (3.5pt);
+    \filldraw[black] (4,0) circle (3.5pt) node[below, font=\normalsize\bfseries] {$A(4;0)$};
+    \filldraw[black] (3,2) circle (3.5pt) node[above right, font=\normalsize\bfseries] {$B(3;2)$};
+    \filldraw[black] (0,5) circle (3.5pt) node[left, font=\normalsize\bfseries] {$C(0;5)$};
+
+    % Đường gióng tọa độ đỉnh B(3;2)
+    \draw[dotted, line width=1.0pt, black!70] (3,0) node[below, font=\normalsize\bfseries] {$3$} -- (3,2) -- (0,2) node[left, font=\normalsize\bfseries] {$2$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.2cm}
+% =========================================================================
+% HƯỚNG DẪN GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{HƯỚNG DẪN GIẢI CHI TIẾT}
+
+\textbf{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\begin{enumerate}
+\item Hiệu $A \setminus B$ là tập hợp gồm các phần tử thuộc $A$ nhưng không thuộc $B$.
+Ta thấy $A = \{1; 2; 3; 4; 5\}$ và $B = \{2; 4; 6; 8\}$. Các phần tử chung của $A$ và $B$ là $2$ và $4$.
+Do đó $A \setminus B = \{1; 3; 5\}$. Chọn \textbf{A}.
+
+\item Phương trình $x^2 - 5x + 6 = 0 \iff (x - 2)(x - 3) = 0 \iff \left[\begin{aligned} x &= 2 \\ x &= 3 \end{aligned}\right.$.
+Trong các phương án cho, chỉ có $x = 2$ làm cho $P(x)$ trở thành mệnh đề đúng. Chọn \textbf{B}.
+
+\item Tập hợp $X = \{a; b; c\}$ có các tập con gồm 2 phần tử là $\{a; b\}, \{b; c\}, \{c; a\}$.
+Do đó khẳng định $\{b; c\} \subset X$ là khẳng định đúng. Chọn \textbf{C}.
+
+\item Số tập con của một tập hợp hữu hạn gồm $n$ phần tử là $2^n$. Với $n = 4$, số tập hợp con là $2^4 = 16$. Chọn \textbf{D}.
+
+\item Thay lần lượt tọa độ các điểm vào hệ bất phương trình:\\
+Với cặp số $(1; 1)$: $\begin{cases} 2(1) - 1 + 1 = 2 > 0 \\ 1 + 2(1) - 4 = -1 \le 0 \end{cases}$ (thỏa mãn cả hai bất phương trình).\\
+Vậy $(1; 1)$ là nghiệm của hệ. Chọn \textbf{A}.
+
+\item Hệ bất phương trình bậc nhất hai ẩn là hệ gồm hai hay nhiều bất phương trình, trong đó mỗi bất phương trình là bất phương trình bậc nhất hai ẩn dạng $ax + by + c < 0$ (hoặc $\le 0, > 0, \ge 0$).
+Hệ ở phương án B: $\begin{cases} 3x - y + 2 \ge 0 \\ x + 4y - 5 < 0 \end{cases}$ là hệ bất phương trình bậc nhất hai ẩn. Chọn \textbf{B}.
+
+\item Thay tọa độ các điểm vào vế trái $f(x, y) = 3x - 2y + 6$:
+- Điểm $P(1; 2)$: $f(1, 2) = 3(1) - 2(2) + 6 = 5 \ge 0$ (thỏa mãn). Chọn \textbf{C}.
+
+\item Thay tọa độ các điểm vào biểu thức $x - 2y + 2$:
+- Điểm $P(0; 2)$: $0 - 2(2) + 2 = -2 \le 0$ (thỏa mãn).
+Vậy miền nghiệm chứa điểm $P(0; 2)$. Chọn \textbf{D}.
+
+\item Theo định lý côsin trong tam giác $ABC$, ta có:
+$a^2 = b^2 + c^2 - 2bc \cos A$. Chọn \textbf{A}.
+
+\item Hai góc bù nhau có $\cos$ đối nhau, nghĩa là $\cos(180^\circ - \alpha) = -\cos \alpha$. Chọn \textbf{B}.
+
+\item Áp dụng tính chất của hai góc bù nhau:
+$\sin 150^\circ = \sin(180^\circ - 30^\circ) = \sin 30^\circ = \dfrac{1}{2}$. Chọn \textbf{C}.
+
+\item Vì hai góc $\alpha$ và $90^\circ - \alpha$ phụ nhau nên $\cos(90^\circ - \alpha) = \sin \alpha$.
+Khi đó: $P = \sin \alpha \cdot \sin \alpha + \cos^2 \alpha = \sin^2 \alpha + \cos^2 \alpha = 1$. Chọn \textbf{D}.
+\end{enumerate}
+
+\textbf{PHẦN II. Trắc nghiệm đúng/sai}
+\begin{enumerate}[resume]
+\item \textbf{Câu 13:}
+\begin{enumerate}
+    \item \textbf{Đúng.} Câu ``Hà Nội là thủ đô của Việt Nam'' là một câu khẳng định có tính đúng đắn xác định (mệnh đề đúng).
+    \item \textbf{Đúng.} Phủ định của mệnh đề chứa ký hiệu $\forall$ là mệnh đề chứa ký hiệu $\exists$ và đổi dấu $>$ thành $\le$.
+    \item \textbf{Sai.} Thử với $n = 4 \in \mathbb{N}$, ta có $n^2 + n + 1 = 4^2 + 4 + 1 = 21 = 3 \times 7$ là một hợp số. Do đó mệnh đề trên là sai.
+    \item \textbf{Sai.} Mệnh đề đảo là: ``Nếu một số tự nhiên chia hết cho $5$ thì số đó có chữ số tận cùng bằng $0$''. Mệnh đề này sai vì số tự nhiên tận cùng bằng $5$ cũng chia hết cho $5$ (ví dụ số $15$).
+\end{enumerate}
+
+\item \textbf{Câu 14:}
+\begin{enumerate}
+    \item \textbf{Đúng.} Với góc tù $90^\circ < \alpha < 180^\circ$, điểm $M$ trên nửa đường tròn đơn vị có tung độ dương, do đó $\sin \alpha > 0$.
+    \item \textbf{Sai.} Với góc tù $90^\circ < \alpha < 180^\circ$, hoành độ điểm $M$ âm, do đó $\cos \alpha < 0$.
+    \item \textbf{Đúng.} Ta có $\sin^2 \alpha = 1 - \cos^2 \alpha = 1 - \left(-\dfrac{3}{5}\right)^2 = \dfrac{16}{25}$. Vì $\sin \alpha > 0$ nên $\sin \alpha = \dfrac{4}{5}$.
+    Suy ra $\tan \alpha = \dfrac{\sin \alpha}{\cos \alpha} = \dfrac{4/5}{-3/5} = -\dfrac{4}{3}$.
+    \item \textbf{Đúng.} Thay $\sin \alpha = \dfrac{4}{5}$ và $\cos \alpha = -\dfrac{3}{5}$ vào biểu thức $E$:
+    \[
+    E = \dfrac{2\left(\dfrac{4}{5}\right) + \left(-\dfrac{3}{5}\right)}{\dfrac{4}{5} - 2\left(-\dfrac{3}{5}\right)} = \dfrac{\dfrac{8 - 3}{5}}{\dfrac{4 + 6}{5}} = \dfrac{5}{10} = \dfrac{1}{2}.
+    \]
+\end{enumerate}
+\end{enumerate}
+
+\textbf{PHẦN III. Trắc nghiệm trả lời ngắn}
+\begin{enumerate}[resume]
+\item Ta có: $A = [-4; 5)$ và $B = (-1; 8]$.
+Giao của hai tập hợp là $A \cap B = (-1; 5)$.
+Các phần tử nguyên thuộc khoảng $(-1; 5)$ là: $0, 1, 2, 3, 4$.
+Vậy có tất cả $5$ phần tử nguyên.
+
+\item Miền tam giác $OAB$ là miền đóng và bị chặn tạo bởi ba đỉnh $O(0; 0), A(3; 0), B(0; 4)$.
+Xét hàm số $f(x, y) = 2x + 3y$ trên miền tam giác $OAB$:
+Giá trị của $f(x, y)$ tại các đỉnh là:
+- Tại $O(0; 0)$: $f(0, 0) = 2(0) + 3(0) = 0$.
+- Tại $A(3; 0)$: $f(3, 0) = 2(3) + 3(0) = 6$.
+- Tại $B(0; 4)$: $f(0, 4) = 2(0) + 3(4) = 12$.
+Do đó giá trị lớn nhất của $2x + 3y$ trên miền tam giác $OAB$ bằng $12$, đạt tại đỉnh $B(0; 4)$.
+Để bất phương trình $2x + 3y \le m$ nghiệm đúng với mọi điểm $(x; y)$ thuộc miền tam giác $OAB$, điều kiện cần và đủ là $m \ge \max_{(x; y) \in OAB} (2x + 3y) = 12$.
+Vậy giá trị nhỏ nhất của tham số $m$ là $12$.
+
+\item Để $A \subset B$, với $A = [m; m + 2]$ và $B = (-3; 5)$, ta cần có:
+\[
+\begin{cases}
+-3 < m \\
+m + 2 < 5
+\end{cases}
+\iff
+\begin{cases}
+m > -3 \\
+m < 3
+\end{cases}
+\iff -3 < m < 3.
+\]
+Các giá trị nguyên của $m$ thỏa mãn là: $-2, -1, 0, 1, 2$.
+Vậy có $5$ giá trị nguyên của $m$.
+
+\item Áp dụng định lý côsin trong tam giác $ABC$, ta có:
+\[
+AB^2 = CA^2 + CB^2 - 2 \cdot CA \cdot CB \cdot \cos \widehat{ACB}.
+\]
+Thay các giá trị đã biết: $CA = 50\text{ m}, CB = 80\text{ m}, \widehat{ACB} = 60^\circ$:
+\[
+AB^2 = 50^2 + 80^2 - 2 \cdot 50 \cdot 80 \cdot \cos 60^\circ = 2500 + 6400 - 2 \cdot 50 \cdot 80 \cdot \dfrac{1}{2} = 8900 - 4000 = 4900.
+\]
+Suy ra: $AB = \sqrt{4900} = 70\text{ m}$.
+Vậy khoảng cách giữa hai vị trí $A$ và $B$ là $70\text{ m}$.
+\end{enumerate}
+
+\textbf{PHẦN IV. Tự luận}
+\begin{enumerate}[resume]
+\item \textbf{Câu 19:}
+\begin{enumerate}
+    \item Với $m = 3$, ta có:
+    $A = (3 - 1; 3 + 3) = (2; 6)$.
+    Tập hợp $B = [1; 5]$.
+    Do đó: $A \cap B = (2; 6) \cap [1; 5] = (2; 5]$.
+    \item Để $A \cap B = \varnothing$, điều kiện là khoảng $A = (m - 1; m + 3)$ và đoạn $B = [1; 5]$ không có điểm chung, tức là:
+    \[
+    \left[\begin{aligned}
+    m + 3 &\le 1 \\
+    m - 1 &\ge 5
+    \end{aligned}\right.
+    \iff
+    \left[\begin{aligned}
+    m &\le -2 \\
+    m &\ge 6
+    \end{aligned}\right.
+    \]
+    Do đó, để $A \cap B \ne \varnothing$ thì điều kiện cần và đủ là: $-2 < m < 6$.
+\end{enumerate}
+
+\item \textbf{Câu 20:}
+\begin{enumerate}
+    \item Vẽ các đường thẳng trên mặt phẳng tọa độ $Oxy$:
+    - Đường thẳng $d_1: x + y = 5$ đi qua điểm $(5; 0)$ và $(0; 5)$.
+    - Đường thẳng $d_2: 2x + y = 8$ đi qua điểm $(4; 0)$ và $(0; 8)$.
+    Gốc tọa độ $O(0; 0)$ thỏa mãn cả hai bất phương trình $x + y \le 5$ và $2x + y \le 8$.
+    Kết hợp điều kiện $x \ge 0, y \ge 0$, miền nghiệm của hệ là miền tứ giác $OABC$ kể cả bờ (như hình vẽ ở phần minh họa).
+    \item Tọa độ các đỉnh của miền nghiệm:
+    - $O(0; 0)$ là gốc tọa độ.
+    - $A(4; 0)$ là giao điểm của $d_2$ với trục hoành $Ox$.
+    - $B$ là giao điểm của $d_1$ và $d_2$. Tọa độ điểm $B$ là nghiệm của hệ:
+    \[
+    \begin{cases} x + y = 5 \\ 2x + y = 8 \end{cases} \iff \begin{cases} x = 3 \\ y = 2 \end{cases} \implies B(3; 2).
+    \]
+    - $C(0; 5)$ là giao điểm của $d_1$ với trục tung $Oy$.\\[2pt]
+    Vậy bốn đỉnh của miền nghiệm tứ giác là $O(0; 0)$, $A(4; 0)$, $B(3; 2)$ và $C(0; 5)$.
+    \item Tính giá trị của biểu thức $F(x, y) = 3x + 2y$ tại bốn đỉnh:
+    - Tại $O(0; 0)$: $F(0, 0) = 3(0) + 2(0) = 0$.
+    - Tại $A(4; 0)$: $F(4, 0) = 3(4) + 2(0) = 12$.
+    - Tại $B(3; 2)$: $F(3, 2) = 3(3) + 2(2) = 13$.
+    - Tại $C(0; 5)$: $F(0, 5) = 3(0) + 2(5) = 10$.
+    So sánh các giá trị trên, ta được giá trị lớn nhất của $F(x, y)$ là $13$, đạt tại điểm $B(3; 2)$.
+\end{enumerate}
+
+\item \textbf{Câu 21:}
+\begin{enumerate}
+    \item Do $\tan \alpha = -2$ xác định nên $\cos \alpha \ne 0$. Chia cả tử và mẫu của biểu thức $P$ cho $\cos \alpha$:
+    \[
+    P = \dfrac{\dfrac{2\sin \alpha - 3\cos \alpha}{\cos \alpha}}{\dfrac{3\sin \alpha + 4\cos \alpha}{\cos \alpha}} = \dfrac{2\tan \alpha - 3}{3\tan \alpha + 4}.
+    \]
+    Thay $\tan \alpha = -2$ vào biểu thức:
+    \[
+    P = \dfrac{2(-2) - 3}{3(-2) + 4} = \dfrac{-4 - 3}{-6 + 4} = \dfrac{-7}{-2} = \dfrac{7}{2}.
+    \]
+    \item Chia cả tử và mẫu của biểu thức $Q$ cho $\cos^2 \alpha \ne 0$:
+    \[
+    Q = \dfrac{\dfrac{\sin^2 \alpha}{\cos^2 \alpha} + 2 \cdot \dfrac{\sin \alpha}{\cos \alpha} - 3}{2 \cdot \dfrac{\sin^2 \alpha}{\cos^2 \alpha} - 1} = \dfrac{\tan^2 \alpha + 2\tan \alpha - 3}{2\tan^2 \alpha - 1}.
+    \]
+    Thay $\tan \alpha = -2$ vào:
+    \[
+    Q = \dfrac{(-2)^2 + 2(-2) - 3}{2(-2)^2 - 1} = \dfrac{4 - 4 - 3}{2(4) - 1} = \dfrac{-3}{7} = -\dfrac{3}{7}.
+    \]
+\end{enumerate}
+
+\item \textbf{Câu 22:}
+Gọi $A, B, C$ lần lượt là tập hợp các học sinh thích môn Bóng đá, Cầu lông và Bóng rổ.
+Theo đề bài, ta có số phần tử của các tập hợp là:
+$|A| = 25,\; |B| = 20,\; |C| = 18$.
+$|A \cap B| = 10,\; |A \cap C| = 8,\; |B \cap C| = 7$.
+$|A \cap B \cap C| = 4$.
+Tổng số học sinh cả lớp là $N = 45$.
+\begin{enumerate}
+    \item Số học sinh thích ít nhất một môn thể thao chính là số phần tử của tập hợp hợp $A \cup B \cup C$.
+    Áp dụng công thức cộng số phần tử cho ba tập hợp:
+    \[
+    |A \cup B \cup C| = |A| + |B| + |C| - (|A \cap B| + |A \cap C| + |B \cap C|) + |A \cap B \cap C|.
+    \]
+    Thay số:
+    \[
+    |A \cup B \cup C| = 25 + 20 + 18 - (10 + 8 + 7) + 4 = 63 - 25 + 4 = 42\text{ (học sinh)}.
+    \]
+    \item Số học sinh không thích môn thể thao nào trong ba môn trên là:
+    \[
+    N - |A \cup B \cup C| = 45 - 42 = 3\text{ (học sinh)}.
+    \]
+    \item Số học sinh chỉ thích đúng một môn thể thao:
+    - Số học sinh chỉ thích Bóng đá là:
+    \[
+    |A| - (|A \cap B| + |A \cap C| - |A \cap B \cap C|) = 25 - (10 + 8 - 4) = 25 - 14 = 11\text{ (học sinh)}.
+    \]
+    - Số học sinh chỉ thích Cầu lông là:
+    \[
+    |B| - (|A \cap B| + |B \cap C| - |A \cap B \cap C|) = 20 - (10 + 7 - 4) = 20 - 13 = 7\text{ (học sinh)}.
+    \]
+    - Số học sinh chỉ thích Bóng rổ là:
+    \[
+    |C| - (|A \cap C| + |B \cap C| - |A \cap B \cap C|) = 18 - (8 + 7 - 4) = 18 - 11 = 7\text{ (học sinh)}.
+    \]
+    Vậy tổng số học sinh chỉ thích đúng một môn thể thao là:
+    \[
+    11 + 7 + 7 = 25\text{ (học sinh)}.
+    \]
+\end{enumerate}
+\end{enumerate}
+
+\end{document}
