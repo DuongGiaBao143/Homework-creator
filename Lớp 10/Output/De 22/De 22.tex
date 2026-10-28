@@ -177,58 +177,53 @@ Miền không bị gạch chéo (kể cả bờ $d$) trong hình vẽ bên là b
     \item Tính diện tích tam giác $ABC$ và bán kính đường tròn ngoại tiếp $R$ của tam giác $ABC$.
 \end{enumerate}
 
-\item \textit{(0,75 điểm)}\par\vspace{1pt}
-\begin{minipage}[t]{0.60\linewidth}
-Để đo chiều cao $CD$ của một ngọn hải đăng dựng thẳng đứng bên bờ biển, hai người quan sát đứng tại hai vị trí $A$ và $B$ trên mặt đất nằm trên cùng một đường thẳng đi qua chân ngọn tháp $D$. Khoảng cách giữa hai điểm quan sát là $AB = 30\text{ m}$. Bằng thiết bị ngắm chuyên dụng, người ta đo được các góc nâng nhìn lên đỉnh $C$ của ngọn hải đăng lần lượt là $\widehat{CAD} = 30^\circ$ và $\widehat{CBD} = 45^\circ$ (điểm $B$ nằm giữa $A$ và chân tháp $D$).
+\item \textit{(0,75 điểm)} Để đo chiều cao $CD$ của một ngọn hải đăng dựng thẳng đứng bên bờ biển, hai người quan sát đứng tại hai vị trí $A$ và $B$ trên mặt đất nằm trên cùng một đường thẳng đi qua chân ngọn tháp $D$. Khoảng cách giữa hai điểm quan sát là $AB = 30\text{ m}$. Bằng thiết bị ngắm chuyên dụng, người ta đo được các góc nâng nhìn lên đỉnh $C$ của ngọn hải đăng lần lượt là $\widehat{CAD} = 30^\circ$ và $\widehat{CBD} = 45^\circ$ (điểm $B$ nằm giữa $A$ và chân tháp $D$, như hình vẽ bên dưới).
+
+\begin{center}
+\begin{tikzpicture}[scale=1.05, >=Stealth, every node/.style={scale=1.0}]
+    \coordinate (D) at (5.2, 0);
+    \coordinate (C) at (5.2, 2.7);
+    \coordinate (B) at (2.2, 0);
+    \coordinate (A) at (0, 0);
+
+    % Mặt đất
+    \draw[line width=1.2pt, brown!60!black] (-0.8, 0) -- (6.0, 0) node[right, font=\normalsize\bfseries] {Mặt đất};
+
+    % Ngọn hải đăng CD
+    \draw[line width=4.5pt, ink] (D) -- (C);
+    \draw[fill=yellow!80!orange, draw=black, thin] (4.95, 2.7) rectangle (5.45, 3.05);
+    \filldraw[yellow!90!red] (5.2, 3.05) -- (5.0, 3.28) -- (5.4, 3.28) -- cycle;
+    \node[right=2pt, ink, font=\normalsize\bfseries] at (C) {$C\text{ (đỉnh)}$};
+    \node[below=2pt, font=\normalsize\bfseries] at (D) {$D\text{ (chân)}$};
+
+    % Các tia ngắm AC, BC
+    \draw[line width=1.2pt, ink] (A) node[below=2pt, font=\normalsize\bfseries] {$A$} -- (C);
+    \draw[line width=1.2pt, ink] (B) node[below=2pt, font=\normalsize\bfseries] {$B$} -- (C);
+
+    % Đánh dấu góc vuông tại D
+    \draw (4.8, 0) -- (4.8, 0.4) -- (5.2, 0.4);
+
+    % Cung góc
+    \draw[line width=1.0pt] (0.8, 0) arc (0:30:0.8);
+    \node at (1.3, 0.32) [font=\normalsize\bfseries] {$30^\circ$};
+
+    \draw[line width=1.0pt] (2.9, 0) arc (0:45:0.7);
+    \node at (3.4, 0.42) [font=\normalsize\bfseries] {$45^\circ$};
+
+    % Đoạn AB = 30m
+    \draw[<->, >=Stealth, blue!80!black, line width=1.2pt] (0, -0.45) -- (2.2, -0.45) node[midway, below, font=\normalsize\bfseries] {$30\text{ m}$};
+    \node[left=4pt, red!85!black, font=\normalsize\bfseries] at (5.2, 1.35) {$h = CD = ?$};
+
+    \filldraw[black] (A) circle (2.5pt);
+    \filldraw[black] (B) circle (2.5pt);
+    \filldraw[black] (D) circle (2.5pt);
+\end{tikzpicture}
+\end{center}
+
 \begin{enumerate}
     \item Tính độ dài khoảng cách $AC$ từ vị trí quan sát $A$ đến đỉnh hải đăng $C$.
     \item Tính chiều cao $CD$ của ngọn hải đăng (kết quả làm tròn đến hàng phần mười).
 \end{enumerate}
-\end{minipage}%
-\hfill
-\begin{minipage}[t]{0.38\linewidth}
-\vspace{0pt}
-\centering
-\begin{tikzpicture}[baseline=(current bounding box.north), scale=0.75, every node/.style={scale=0.82}]
-    % Tọa độ các điểm: D chân hải đăng, C đỉnh hải đăng
-    \coordinate (D) at (4.2, 0);
-    \coordinate (C) at (4.2, 2.4);
-    \coordinate (B) at (1.8, 0);
-    \coordinate (A) at (0.04, 0);
-
-    % Mặt đất
-    \draw[thick, brown!60!black] (-0.5, 0) -- (4.8, 0);
-
-    % Ngọn hải đăng CD
-    \draw[line width=3.5pt, ink] (D) -- (C);
-    \draw[fill=yellow!80!orange, draw=black, thin] (4.05, 2.4) rectangle (4.35, 2.65);
-    \filldraw[yellow!90!red] (4.2, 2.65) -- (4.1, 2.8) -- (4.3, 2.8) -- cycle;
-    \node[right, ink, font=\bfseries] at (C) {$C$};
-    \node[below, font=\bfseries] at (D) {$D$};
-
-    % Các tia ngắm AC, BC
-    \draw[thick, ink] (A) node[below, font=\bfseries] {$A$} -- (C);
-    \draw[thick, ink] (B) node[below, font=\bfseries] {$B$} -- (C);
-
-    % Đánh dấu góc vuông tại D
-    \draw (3.9, 0) -- (3.9, 0.3) -- (4.2, 0.3);
-
-    % Cung góc tại A và B
-    \draw (0.64, 0) arc (0:30:0.6);
-    \node at (0.95, 0.22) {\footnotesize $30^\circ$};
-
-    \draw (2.3, 0) arc (0:45:0.5);
-    \node at (2.6, 0.28) {\footnotesize $45^\circ$};
-
-    % Đoạn AB = 30m
-    \draw[<->, >=Stealth, blue!70!black] (0.04, -0.4) -- (1.8, -0.4) node[midway, below, font=\scriptsize] {$30\text{ m}$};
-    \node[left, red!80!black, font=\bfseries] at (4.2, 1.2) {$h = ?$};
-
-    \filldraw[black] (A) circle (1.8pt);
-    \filldraw[black] (B) circle (1.8pt);
-    \filldraw[black] (D) circle (1.8pt);
-\end{tikzpicture}
-\end{minipage}
 
 \item \textit{(0,5 điểm)} Một cơ sở may mặc dự định sản xuất hai loại áo: áo sơ mi (loại I) và áo khoác (loại II).
 \begin{itemize}[leftmargin=0.5cm]
