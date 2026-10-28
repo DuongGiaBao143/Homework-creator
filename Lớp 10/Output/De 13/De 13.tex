@@ -1,0 +1,544 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[left=1.35cm,right=1.35cm,top=1.3cm,bottom=1.3cm]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or Math gives us hope that every problem has a solution% Trang 7
+    \or Math + You = Champion% Trang 8
+    \or Where Frustration Becomes Inspiration% Trang 9
+    \or Turning Confusion into Clarity% Trang 10
+    \or Don't be an X, be a Y of mathematics% Trang 11
+    \or Don't get mad. Learn to add% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{15pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.0pt}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.1}
+\newcommand{\parttitle}[1]{\par\vspace{1.5pt}{\large\bfseries\color{ink}#1}\par\vspace{1.0pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[1pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{10pt}\hspace{2.0cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.2cm,labelsep=.15cm,itemsep=1.0pt,topsep=0.8pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.5cm,itemsep=0.5pt,topsep=0.5pt,parsep=0pt}
+\setlist[itemize]{leftmargin=0.5cm,itemsep=0.5pt,topsep=0.5pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[4pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GK1}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 13}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.15cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0013}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.15cm}
+
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án đúng duy nhất.}
+\begin{enumerate}
+\item Cho tập hợp $A = \{x \in \mathbb{R} \mid x^2 - 5x + 6 = 0\}$. Viết tập hợp $A$ dưới dạng liệt kê các phần tử ta được
+\four{$A = \{2; 3\}$.}{$A = \{-2; -3\}$.}{$A = \{1; 6\}$.}{$A = \{-3; 2\}$.}
+
+\item Cho tập hợp $X = \{a; b; c\}$. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$\{a\} \in X$.}{$\{a; b\} \subset X$.}{$d \in X$.}{$\varnothing \in X$.}
+
+\item Cho mệnh đề: ``Nếu tứ giác $ABCD$ là hình bình hành thì hai đường chéo $AC$ và $BD$ cắt nhau tại trung điểm của mỗi đường''. Khẳng định nào sau đây là \textbf{đúng}?
+\two{Tứ giác $ABCD$ là hình bình hành là điều kiện cần để hai đường chéo cắt nhau tại trung điểm của mỗi đường.}{Hai đường chéo cắt nhau tại trung điểm của mỗi đường là điều kiện đủ để tứ giác $ABCD$ là hình bình hành.}{Tứ giác $ABCD$ là hình bình hành là điều kiện đủ để hai đường chéo cắt nhau tại trung điểm của mỗi đường.}{Tứ giác $ABCD$ là hình bình hành là điều kiện cần và đủ để hai đường chéo vuông góc với nhau.}
+
+\item Cho tập hợp $S = \{0; 1; 2; 3\}$. Số tập hợp con của tập hợp $S$ là
+\four{$4$.}{$8$.}{$12$.}{$16$.}
+
+\item Đường thẳng bờ của miền nghiệm của bất phương trình $2x - 3y + 6 \ge 0$ trên mặt phẳng tọa độ $Oxy$ có phương trình là
+\four{$2x - 3y + 6 = 0$.}{$2x + 3y + 6 = 0$.}{$3x - 2y + 6 = 0$.}{$2x - 3y - 6 = 0$.}
+
+\item Hệ bất phương trình nào sau đây là một \textbf{hệ bất phương trình bậc nhất hai ẩn}?
+\four{$\begin{cases} x^2 + 2y \le 3 \\ x - y > 1 \end{cases}$}{$\begin{cases} 3x - y \ge 2 \\ x + 4y \le 5 \end{cases}$}{$\begin{cases} 2x - y + z \le 0 \\ x + y > 1 \end{cases}$}{$\begin{cases} xy - 2 \le 0 \\ 2x - y \ge 3 \end{cases}$}
+
+\item Trong mặt phẳng tọa độ $Oxy$, điểm nào sau đây thuộc miền nghiệm của hệ bất phương trình $\begin{cases} x - 2y + 4 \ge 0 \\ 2x + y - 2 \le 0 \end{cases}$?
+\four{$M(2; 1)$.}{$N(1; 3)$.}{$P(0; 1)$.}{$Q(3; 0)$.}
+
+\item Cặp số $(x; y)$ nào sau đây là một nghiệm của bất phương trình $3x - 2y + 1 > 0$?
+\four{$(1; 3)$.}{$(0; 1)$.}{$(-1; 0)$.}{$(1; 1)$.}
+
+\item Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$. Gọi $m_a$ là độ dài đường trung tuyến kẻ từ đỉnh $A$ của tam giác. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$m_a^2 = \dfrac{2(b^2 + c^2) - a^2}{4}$.}{$m_a^2 = \dfrac{b^2 + c^2 - a^2}{2}$.}{$m_a^2 = \dfrac{2(b^2 + c^2) + a^2}{4}$.}{$m_a^2 = \dfrac{b^2 + c^2 - 2a^2}{4}$.}
+
+\item Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$a^2 = b^2 + c^2 + 2bc \cos A$.}{$\cos A = \dfrac{b^2 + c^2 - a^2}{2bc}$.}{$\cos A = \dfrac{a^2 + c^2 - b^2}{2ac}$.}{$a^2 = b^2 + c^2 - bc \cos A$.}
+
+\item Cho tam giác $ABC$ có $AB = 3$, $AC = 6$ và góc $\widehat{BAC} = 60^\circ$. Độ dài cạnh $BC$ bằng
+\four{$3\sqrt{5}$.}{$3\sqrt{2}$.}{$3\sqrt{3}$.}{$9$.}
+
+\item Cho tam giác $ABC$ có cạnh $BC = a$, góc $\widehat{BAC} = A$ và bán kính đường tròn ngoại tiếp bằng $R$. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$a = R \sin A$.}{$a = \dfrac{R}{2} \sin A$.}{$\sin A = \dfrac{a}{R}$.}{$a = 2R \sin A$.}
+\end{enumerate}
+
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Thí sinh trả lời từ câu 13 đến câu 14. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}[resume]
+\item Cho hai tập hợp $A = \{x \in \mathbb{R} \mid (x - 1)(x^2 - 4) = 0\}$ và $B = \{x \in \mathbb{Z} \mid -2 \le x \le 2\}$.
+\begin{enumerate}
+    \item Tập hợp $A$ có đúng $3$ phần tử, cụ thể là $A = \{-2; 1; 2\}$.
+    \item Mọi phần tử của tập hợp $A$ đều thuộc tập hợp $B$, tức là $A \subset B$.
+    \item Giao của hai tập hợp là $A \cap B = \{-2; 1; 2\}$.
+    \item Hiệu của hai tập hợp là $B \setminus A = \{-1; 0; 2\}$.
+\end{enumerate}
+
+\item Để xác định khoảng cách giữa hai vị trí $A$ và $B$ ở hai bên bờ một khúc sông mà không thể qua sông trực tiếp, một người quan trắc đứng ở vị trí $C$ cùng bên bờ với vị trí $A$. Người đó đo được khoảng cách $CA = 60\text{ m}$, và dùng giác kế ngắm được góc $\widehat{ACB} = 45^\circ$, góc $\widehat{CAB} = 105^\circ$.
+\begin{enumerate}
+    \item Trong tam giác $ABC$, số đo của góc $\widehat{ABC}$ bằng $30^\circ$.
+    \item Định lý sin áp dụng cho tam giác $ABC$ là $\dfrac{AB}{\sin \widehat{ACB}} = \dfrac{CA}{\sin \widehat{ABC}}$.
+    \item Khoảng cách $AB$ giữa hai vị trí qua khúc sông bằng $60\sqrt{2}\text{ m}$.
+    \item Khoảng cách từ vị trí quan sát $C$ đến vị trí $B$ là $60(\sqrt{6} + \sqrt{2})\text{ m}$.
+\end{enumerate}
+\end{enumerate}
+
+\parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 15 đến câu 18. Viết kết quả vào ô quy định.}
+\begin{enumerate}[resume]
+\item Một trường THPT tổ chức khảo sát 100 học sinh khối 10 tham gia ba câu lạc bộ thể thao: Bóng đá ($B$), Bóng rổ ($R$) và Bơi lội ($L$). Kết quả ghi nhận: có 50 học sinh tham gia Bóng đá, 45 học sinh tham gia Bóng rổ, 40 học sinh tham gia Bơi lội. Có 20 học sinh tham gia cả Bóng đá và Bóng rổ, 15 học sinh tham gia cả Bóng đá và Bơi lội, 18 học sinh tham gia cả Bóng rổ và Bơi lội. Biết rằng có 8 học sinh tham gia cả ba câu lạc bộ trên. Hỏi có bao nhiêu học sinh \textbf{không tham gia} bất kỳ câu lạc bộ thể thao nào trong ba câu lạc bộ trên?
+\answerbox
+
+\item \begin{minipage}[t]{0.64\linewidth}
+Một bảng quảng cáo hình chữ nhật được gắn trên bức tường thẳng đứng, có mép dưới cách mặt đất $3{,}6\text{ m}$ và mép trên cách mặt đất $9{,}6\text{ m}$ (chiều cao của bảng là $6\text{ m}$). Tầm mắt của một người quan sát ở vị trí $O$ có độ cao $1{,}6\text{ m}$ so với mặt đất. Hỏi người đó phải đứng cách bức tường một khoảng cách $d$ bằng bao nhiêu mét để góc nhìn bảng quảng cáo ($\widehat{AOB}$) là lớn nhất?
+\vspace{4pt}
+
+\answerbox
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.33\linewidth}
+\centering
+\begin{tikzpicture}[baseline=(current bounding box.north), scale=0.50, every node/.style={scale=0.80}]
+    \draw[line width=1.1pt] (-0.4,0) -- (4.6,0);
+    \node[below, font=\scriptsize] at (2.0,0) {Mặt đất};
+    \draw[line width=1.4pt, gray!80!black] (3.8,0) -- (3.8,5.4);
+    \coordinate (O) at (0.3, 0.9);
+    \coordinate (H) at (3.8, 0.9);
+    \coordinate (A) at (3.8, 2.0);
+    \coordinate (B) at (3.8, 5.3);
+
+    \draw[dashed, ink] (O) -- (H) node[midway, below, font=\scriptsize] {$d$};
+    \draw[thick, blue!80!black] (O) -- (A);
+    \draw[thick, blue!80!black] (O) -- (B);
+    \draw[line width=2.8pt, red!70!black] (A) -- (B) node[midway, right, font=\scriptsize\bfseries] {Bảng};
+
+    \filldraw[black] (O) circle (2pt) node[left] {$O$};
+    \filldraw[black] (A) circle (2pt) node[right] {$A$};
+    \filldraw[black] (B) circle (2pt) node[right] {$B$};
+
+    \draw[<->, teal!80!black] (4.3, 2.0) -- (4.3, 5.3) node[midway, right, font=\scriptsize] {$6\text{ m}$};
+    \draw[<->, teal!80!black] (4.3, 0) -- (4.3, 2.0) node[midway, right, font=\scriptsize] {$3{,}6\text{ m}$};
+    \draw[<->, black] (0.3, 0) -- (0.3, 0.9) node[midway, left, font=\scriptsize] {$1{,}6\text{ m}$};
+\end{tikzpicture}
+\end{minipage}
+
+\item Một lớp học có 45 học sinh. Trong đợt kiểm tra chất lượng đầu năm học, có 30 học sinh đạt kết quả khá giỏi môn Toán và 25 học sinh đạt kết quả khá giỏi môn Ngữ văn. Biết rằng có đúng 5 học sinh không đạt kết quả khá giỏi ở cả hai môn học này. Hỏi có bao nhiêu học sinh đạt kết quả khá giỏi ở \textbf{cả hai môn} Toán và Ngữ văn?
+\answerbox
+
+\item Bác An có một khu đất để trồng hai loại cây ăn quả: cam và bưởi. Chi phí đầu tư cho mỗi héc-ta cam là 20 triệu đồng và cần 10 công chăm sóc; chi phí cho mỗi héc-ta bưởi là 30 triệu đồng và cần 15 công chăm sóc. Bác An có nguồn vốn tối đa là 180 triệu đồng và có thể huy động tối đa 100 công chăm sóc. Biết rằng bác An quyết định trồng $3$ héc-ta cam. Hỏi diện tích trồng bưởi tối đa của bác An là bao nhiêu héc-ta để không vượt quá cả nguồn vốn và số công chăm sóc hiện có?
+\answerbox
+\end{enumerate}
+
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày lời giải chi tiết từ câu 19 đến câu 22.}
+\begin{enumerate}[resume]
+\item \textit{(0,75 điểm)} Một cơ sở sản xuất bánh ngọt làm hai loại sản phẩm: Bánh bông lan (loại A) và Bánh trung thu (loại B).
+\begin{itemize}
+    \item Để làm một hộp bánh loại A cần $0{,}2\text{ kg}$ bột mì và $0{,}1\text{ kg}$ đường.
+    \item Để làm một hộp bánh loại B cần $0{,}1\text{ kg}$ bột mì và $0{,}2\text{ kg}$ đường.
+\end{itemize}
+Kho nguyên liệu của cơ sở hiện có sẵn tối đa $40\text{ kg}$ bột mì và $50\text{ kg}$ đường.
+\begin{enumerate}
+    \item Gọi $x, y$ lần lượt là số hộp bánh loại A và loại B cơ sở sản xuất ($x, y \ge 0$). Hãy thiết lập hệ bất phương trình bậc nhất hai ẩn biểu thị các điều kiện ràng buộc đối với $x$ và $y$.
+    \item Biểu diễn hình học miền nghiệm của hệ bất phương trình vừa tìm được trên mặt phẳng tọa độ $Oxy$.
+\end{enumerate}
+
+\item \textit{(0,75 điểm)} Cho các tập hợp số thực $A = [-4; 2)$, $B = (-1; 5]$ và $C = (0; +\infty)$.
+\begin{enumerate}
+    \item Xác định các tập hợp $A \cap B$, $A \cup B$ và $A \setminus B$.
+    \item Xác định tập hợp $(A \cap B) \setminus C$.
+\end{enumerate}
+
+\item \begin{minipage}[t]{0.63\linewidth}
+\textit{(0,75 điểm)} Để đo chiều cao ngọn tháp truyền hình $CH$ ($H$ là chân tháp trên mặt đất), hai kỹ sư đứng tại hai vị trí $A$ và $B$ trên mặt đất thẳng hàng với $H$ ($B$ nằm giữa $A$ và $H$). Khoảng cách $AB = 50\text{ m}$. Góc nâng từ $A$ lên đỉnh tháp $C$ là $\widehat{CAH} = 30^\circ$, từ $B$ lên đỉnh tháp $C$ là $\widehat{CBH} = 45^\circ$.
+\begin{enumerate}
+    \item Tính khoảng cách $BC$ từ điểm quan sát $B$ đến đỉnh tháp $C$.
+    \item Tính chiều cao $CH$ của ngọn tháp (\textit{làm tròn đến hàng phần mười của mét}).
+\end{enumerate}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.35\linewidth}
+\centering
+\begin{tikzpicture}[baseline=(current bounding box.north), scale=0.62, every node/.style={scale=0.80}]
+    \coordinate (H) at (3.8, 0);
+    \coordinate (C) at (3.8, 3.0);
+    \coordinate (B) at (1.6, 0);
+    \coordinate (A) at (-0.6, 0);
+
+    \draw[line width=1.1pt] (-1.0, 0) -- (4.4, 0);
+    \draw[line width=2.4pt, ink] (H) -- (C) node[above] {$C$};
+    \draw[thick, blue!80!black] (A) node[below] {$A$} -- (C);
+    \draw[thick, blue!80!black] (B) node[below] {$B$} -- (C);
+
+    \filldraw[black] (A) circle (2pt);
+    \filldraw[black] (B) circle (2pt);
+    \filldraw[black] (H) circle (2pt) node[below] {$H$};
+    \filldraw[red!80!black] (C) circle (2.2pt);
+
+    \draw (3.5, 0) -- (3.5, 0.3) -- (3.8, 0.3);
+    \draw (0.0, 0) arc (0:30:0.6);
+    \node at (0.3, 0.22) {\scriptsize $30^\circ$};
+    \draw (2.1, 0) arc (0:45:0.5);
+    \node at (2.4, 0.35) {\scriptsize $45^\circ$};
+
+    \draw[<->, teal!80!black] (-0.6, -0.4) -- (1.6, -0.4) node[midway, below, font=\scriptsize] {$50\text{ m}$};
+    \node[right, ink] at (3.8, 1.5) {$h = ?$};
+\end{tikzpicture}
+\end{minipage}
+
+\item \textit{(0,75 điểm)} Một câu lạc bộ ngoại ngữ của trường THPT có 60 thành viên tham gia ba lớp kỹ năng: Thuyết trình ($A$), Biên kịch ($B$), và Tranh biện ($C$). Thống kê như sau:
+\begin{itemize}
+    \item Có 28 thành viên tham gia lớp $A$; 30 thành viên tham gia lớp $B$; 26 thành viên tham gia lớp $C$.
+    \item Có 12 thành viên tham gia cả $A$ và $B$; 10 thành viên tham gia cả $B$ và $C$; 8 thành viên tham gia cả $A$ và $C$.
+    \item Có 4 thành viên tham gia cả ba lớp học kỹ năng $A, B$ và $C$.
+\end{itemize}
+\begin{enumerate}
+    \item Hỏi có bao nhiêu thành viên tham gia ít nhất một trong ba lớp kỹ năng trên?
+    \item Hỏi có bao nhiêu thành viên không tham gia bất kỳ lớp kỹ năng nào trong ba lớp nói trên?
+    \item Có bao nhiêu thành viên chỉ tham gia đúng một lớp học kỹ năng?
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+% =========================================================================
+% BẢNG ĐÁP ÁN VÀ LỜI GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\vspace{0.2cm}
+\textbf{1. Phần I: Trắc nghiệm nhiều lựa chọn}
+\begin{center}
+{\setlength{\tabcolsep}{2.5pt}\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} & \textbf{Câu 5} & \textbf{Câu 6} & \textbf{Câu 7} & \textbf{Câu 8} & \textbf{Câu 9} & \textbf{Câu 10} & \textbf{Câu 11} & \textbf{Câu 12} \\
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{2. Phần II: Trắc nghiệm đúng/sai}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu hỏi} & \textbf{Ý a)} & \textbf{Ý b)} & \textbf{Ý c)} & \textbf{Ý d)} \\
+\hline
+\textbf{Câu 13} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} \\
+\hline
+\textbf{Câu 14} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{3. Phần III: Trắc nghiệm trả lời ngắn}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Câu 15} & \textbf{Câu 16} & \textbf{Câu 17} & \textbf{Câu 18} \\
+\hline
+\textbf{10} & \textbf{4} & \textbf{15} & \textbf{4} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{4. Phần IV: Tự luận}
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Câu hỏi} & \textbf{Kết quả tóm tắt} \\
+\hline
+\textbf{Câu 19} & a) $\begin{cases} 2x + y \le 400 \\ x + 2y \le 500 \\ x \ge 0,\; y \ge 0 \end{cases}$;\quad b) Miền nghiệm là miền tứ giác $OABC$ với $O(0; 0), A(200; 0), B(100; 200), C(0; 250)$. \\
+\hline
+\textbf{Câu 20} & a) $A \cap B = (-1; 2),\; A \cup B = [-4; 5],\; A \setminus B = [-4; -1]$;\quad b) $(A \cap B) \setminus C = (-1; 0]$. \\
+\hline
+\textbf{Câu 21} & a) $BC = 25(\sqrt{6} + \sqrt{2})\text{ m} \approx 96{,}6\text{ m}$;\quad b) $CH = 25(\sqrt{3} + 1)\text{ m} \approx 68{,}3\text{ m}$. \\
+\hline
+\textbf{Câu 22} & a) $58$ thành viên tham gia ít nhất 1 lớp;\quad b) $2$ thành viên không tham gia lớp nào;\quad c) $36$ thành viên chỉ tham gia đúng 1 lớp. \\
+\hline
+\end{tabularx}
+\end{center}
+
+\vspace{0.3cm}
+% =========================================================================
+% HÌNH VẼ BIỂU DIỄN MIỀN NGHIỆM (HỆ BẤT PHƯƠNG TRÌNH)
+% =========================================================================
+\parttitle{HÌNH VẼ BIỂU DIỄN MIỀN NGHIỆM (HỆ BẤT PHƯƠNG TRÌNH)}
+
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\textbf{Hình 1: Miền nghiệm Câu 18 (Phần III)}\\[3pt]
+\begin{tikzpicture}[scale=0.36, >=Stealth]
+    \draw[line width=1.1pt, ->] (-0.8,0) -- (10.5,0) node[right, font=\small\bfseries] {$x$};
+    \draw[line width=1.1pt, ->] (0,-0.8) -- (0,7.5) node[above, font=\small\bfseries] {$y$};
+    \node[below left, font=\small\bfseries] at (0,0) {$O$};
+
+    \fill[fill=ink!18] (0,0) -- (9,0) -- (0,6) -- cycle;
+    \draw[line width=1.6pt, blue!70!black] (0,0) -- (9,0) -- (0,6) -- cycle;
+
+    \draw[line width=1.0pt, dashed, red!80!black] (-0.6, 6.4) -- (10.0, -0.7) node[above right, font=\scriptsize] {$2x+3y=18$};
+    \draw[line width=1.0pt, dashed, teal!80!black] (3,-0.6) -- (3, 4.8) node[above, font=\scriptsize] {$x=3$};
+
+    \filldraw[black] (0,0) circle (2.5pt);
+    \filldraw[black] (9,0) circle (2.8pt) node[below, font=\scriptsize\bfseries] {$(9;0)$};
+    \filldraw[black] (0,6) circle (2.8pt) node[left, font=\scriptsize\bfseries] {$(0;6)$};
+    \filldraw[red!80!black] (3,4) circle (3.0pt) node[above right, font=\scriptsize\bfseries] {$M(3;4)$};
+
+    \draw[dotted, thick] (3,0) node[below, font=\scriptsize] {$3$} -- (3,4) -- (0,4) node[left, font=\scriptsize] {$4$};
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\textbf{Hình 2: Miền nghiệm Câu 19 (Phần IV)}\\[3pt]
+\begin{tikzpicture}[x=0.016cm, y=0.016cm, >=Stealth]
+    \draw[line width=1.1pt, ->] (-25,0) -- (245,0) node[right, font=\small\bfseries] {$x$};
+    \draw[line width=1.1pt, ->] (0,-25) -- (0,290) node[above, font=\small\bfseries] {$y$};
+    \node[below left, font=\small\bfseries] at (0,0) {$O$};
+
+    \fill[fill=ink!18] (0,0) -- (200,0) -- (100,200) -- (0,250) -- cycle;
+    \draw[line width=1.6pt, blue!70!black] (0,0) -- (200,0) -- (100,200) -- (0,250) -- cycle;
+
+    \draw[line width=1.0pt, dashed, red!80!black] (-12, 424) -- (220, -40) node[above right, font=\scriptsize] {$2x+y=400$};
+    \draw[line width=1.0pt, dashed, teal!80!black] (-25, 262) -- (235, 132) node[above, font=\scriptsize] {$x+2y=500$};
+
+    \filldraw[black] (0,0) circle (2.5pt);
+    \filldraw[black] (200,0) circle (2.8pt) node[below, font=\scriptsize\bfseries] {$A(200;0)$};
+    \filldraw[black] (100,200) circle (2.8pt) node[above right, font=\scriptsize\bfseries] {$B(100;200)$};
+    \filldraw[black] (0,250) circle (2.8pt) node[left, font=\scriptsize\bfseries] {$C(0;250)$};
+
+    \draw[dotted, thick] (100,0) node[below, font=\scriptsize] {$100$} -- (100,200) -- (0,200) node[left, font=\scriptsize] {$200$};
+\end{tikzpicture}
+\end{minipage}
+
+\newpage
+% =========================================================================
+% HƯỚNG DẪN GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{HƯỚNG DẪN GIẢI CHI TIẾT}
+
+\textbf{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\begin{itemize}[leftmargin=0.6cm, itemsep=2.5pt]
+    \item \textbf{Câu 1:} Phương trình $x^2 - 5x + 6 = 0 \iff (x - 2)(x - 3) = 0 \iff x = 2$ hoặc $x = 3$. Do đó tập hợp $A = \{2; 3\}$. Chọn \textbf{A}.
+    \item \textbf{Câu 2:} Vì $a \in X$ và $b \in X$ nên tập hợp $\{a; b\}$ là tập con của $X$, viết là $\{a; b\} \subset X$. Chọn \textbf{B}.
+    \item \textbf{Câu 3:} Với mệnh đề dạng $P \implies Q$, $P$ là điều kiện đủ để có $Q$, và $Q$ là điều kiện cần để có $P$. Vì vậy, ``Tứ giác $ABCD$ là hình bình hành'' là điều kiện đủ để hai đường chéo cắt nhau tại trung điểm của mỗi đường. Chọn \textbf{C}.
+    \item \textbf{Câu 4:} Một tập hợp có $n$ phần tử thì có tất cả $2^n$ tập hợp con. Tập $S = \{0; 1; 2; 3\}$ có $4$ phần tử nên số tập hợp con là $2^4 = 16$. Chọn \textbf{D}.
+    \item \textbf{Câu 5:} Đường thẳng bờ của miền nghiệm của bất phương trình $2x - 3y + 6 \ge 0$ là đường thẳng có phương trình $2x - 3y + 6 = 0$. Chọn \textbf{A}.
+    \item \textbf{Câu 6:} Hệ $\begin{cases} 3x - y \ge 2 \\ x + 4y \le 5 \end{cases}$ gồm hai bất phương trình bậc nhất hai ẩn $x$ và $y$. Các hệ khác chứa $x^2$, 3 ẩn $x, y, z$, hoặc chứa tích bậc hai $xy$. Chọn \textbf{B}.
+    \item \textbf{Câu 7:} Thay tọa độ điểm $P(0; 1)$ vào hệ bất phương trình:
+    $\begin{cases} 0 - 2(1) + 4 = 2 \ge 0 \\ 2(0) + 1 - 2 = -1 \le 0 \end{cases}$ (thỏa mãn cả hai bất phương trình). Chọn \textbf{C}.
+    \item \textbf{Câu 8:} Thay cặp số $(1; 1)$ vào vế trái bất phương trình: $3(1) - 2(1) + 1 = 2 > 0$ (thỏa mãn). Chọn \textbf{D}.
+    \item \textbf{Câu 9:} Theo công thức tính độ dài đường trung tuyến trong tam giác: $m_a^2 = \dfrac{2(b^2 + c^2) - a^2}{4}$. Chọn \textbf{A}.
+    \item \textbf{Câu 10:} Theo hệ quả của định lý côsin trong tam giác: $\cos A = \dfrac{b^2 + c^2 - a^2}{2bc}$. Chọn \textbf{B}.
+    \item \textbf{Câu 11:} Áp dụng định lý côsin trong $\triangle ABC$:
+    $BC^2 = AB^2 + AC^2 - 2 AB \cdot AC \cdot \cos A = 3^2 + 6^2 - 2 \cdot 3 \cdot 6 \cdot \cos 60^\circ = 9 + 36 - 36 \cdot \dfrac{1}{2} = 27$.
+    Suy ra $BC = \sqrt{27} = 3\sqrt{3}$. Chọn \textbf{C}.
+    \item \textbf{Câu 12:} Theo định lý sin trong tam giác: $\dfrac{a}{\sin A} = 2R \iff a = 2R \sin A$. Chọn \textbf{D}.
+\end{itemize}
+
+\vspace{0.15cm}
+\textbf{PHẦN II. Trắc nghiệm đúng/sai}
+\begin{itemize}[leftmargin=0.6cm, itemsep=1.5pt, topsep=1pt]
+    \item \textbf{Câu 13:}
+    \begin{itemize}[itemsep=1pt]
+        \item a) Giải phương trình $(x - 1)(x^2 - 4) = 0 \iff x \in \{1; -2; 2\}$. Do đó $A = \{-2; 1; 2\}$ có đúng $3$ phần tử $\implies$ \textbf{Đúng}.
+        \item b) Tập $B = \{-2; -1; 0; 1; 2\}$. Tất cả các phần tử của $A$ đều thuộc $B$, do đó $A \subset B \implies$ \textbf{Đúng}.
+        \item c) Giao của hai tập hợp là $A \cap B = \{-2; 1; 2\} \cap \{-2; -1; 0; 1; 2\} = \{-2; 1; 2\} \implies$ \textbf{Đúng}.
+        \item d) Hiệu của hai tập hợp là $B \setminus A = \{-2; -1; 0; 1; 2\} \setminus \{-2; 1; 2\} = \{-1; 0\}$. Ý d ghi $B \setminus A = \{-1; 0; 2\}$ là $\implies$ \textbf{Sai}.
+    \end{itemize}
+
+    \item \textbf{Câu 14:}
+    \begin{itemize}[itemsep=1pt]
+        \item a) Trong tam giác $ABC$, tổng ba góc bằng $180^\circ$, do đó: $\widehat{ABC} = 180^\circ - (105^\circ + 45^\circ) = 30^\circ \implies$ \textbf{Đúng}.
+        \item b) Theo định lý sin trong tam giác $ABC$: $\dfrac{AB}{\sin C} = \dfrac{CA}{\sin B} \iff \dfrac{AB}{\sin \widehat{ACB}} = \dfrac{CA}{\sin \widehat{ABC}} \implies$ \textbf{Đúng}.
+        \item c) Từ định lý sin suy ra: $AB = \dfrac{CA \cdot \sin 45^\circ}{\sin 30^\circ} = \dfrac{60 \cdot \frac{\sqrt{2}}{2}}{\frac{1}{2}} = 60\sqrt{2}\text{ m} \implies$ \textbf{Đúng}.
+        \item d) Khoảng cách $CB$: $\dfrac{CB}{\sin 105^\circ} = \dfrac{CA}{\sin 30^\circ} \implies CB = \dfrac{60 \cdot \sin 105^\circ}{\frac{1}{2}} = 120 \cdot \dfrac{\sqrt{6} + \sqrt{2}}{4} = 30(\sqrt{6} + \sqrt{2})\text{ m}$. Ý d ghi $60(\sqrt{6} + \sqrt{2})\text{ m}$ là $\implies$ \textbf{Sai}.
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.15cm}
+\textbf{PHẦN III. Trắc nghiệm trả lời ngắn}
+\begin{itemize}[leftmargin=0.6cm, itemsep=1.5pt, topsep=1pt]
+    \item \textbf{Câu 15:} Áp dụng công thức cộng số phần tử cho ba tập hợp $B, R, L$:
+    \[
+    |B \cup R \cup L| = |B| + |R| + |L| - (|B \cap R| + |B \cap L| + |R \cap L|) + |B \cap R \cap L|.
+    \]
+    Thay số: $|B \cup R \cup L| = 50 + 45 + 40 - (20 + 15 + 18) + 8 = 135 - 53 + 8 = 90$ học sinh.
+    Số học sinh không tham gia câu lạc bộ nào là: $100 - 90 = 10$.
+    \item \textbf{Câu 16:} Đặt hệ trục tọa độ với gốc trên mặt đất, tầm mắt của người ở độ cao $1{,}6\text{ m}$.
+    Khi đó mép dưới bảng ở độ cao $a = 3{,}6 - 1{,}6 = 2\text{ m}$ so với tầm mắt, và mép trên bảng ở độ cao $b = 9{,}6 - 1{,}6 = 8\text{ m}$ so với tầm mắt.
+    Gọi khoảng cách từ người đến tường là $d > 0$. Ta có:
+    $\tan \widehat{BOH} = \dfrac{b}{d} = \dfrac{8}{d}$ và $\tan \widehat{AOH} = \dfrac{a}{d} = \dfrac{2}{d}$.
+    Góc nhìn $\theta = \widehat{AOB} = \widehat{BOH} - \widehat{AOH}$.
+    Do đó:
+    \[
+    \tan \theta = \dfrac{\tan \widehat{BOH} - \tan \widehat{AOH}}{1 + \tan \widehat{BOH} \cdot \tan \widehat{AOH}} = \dfrac{\frac{8}{d} - \frac{2}{d}}{1 + \frac{16}{d^2}} = \dfrac{6}{d + \frac{16}{d}}.
+    \]
+    Theo bất đẳng thức Cô-si: $d + \dfrac{16}{d} \ge 2\sqrt{d \cdot \dfrac{16}{d}} = 8$.
+    Suy ra $\tan \theta \le \dfrac{6}{8} = \dfrac{3}{4}$.
+    Dấu bằng xảy ra khi $d = \dfrac{16}{d} \iff d^2 = 16 \iff d = 4\text{ m}$.
+    Vậy góc nhìn lớn nhất khi người đó đứng cách tường $4\text{ m}$.
+    \item \textbf{Câu 17:} Số học sinh đạt điểm khá giỏi ít nhất một môn Toán hoặc Ngữ văn là: $45 - 5 = 40$ học sinh.
+    Áp dụng công thức cộng hai tập hợp:
+    $n(T \cup V) = n(T) + n(V) - n(T \cap V) \iff 40 = 30 + 25 - n(T \cap V) \iff n(T \cap V) = 55 - 40 = 15$.
+    Vậy có 15 học sinh đạt khá giỏi cả hai môn.
+    \item \textbf{Câu 18:} Gọi $x$ (héc-ta) là diện tích trồng cam, $y$ (héc-ta) là diện tích trồng bưởi ($x \ge 0, y \ge 0$).
+    Điều kiện về vốn đầu tư: $20x + 30y \le 180 \iff 2x + 3y \le 18$.
+    Điều kiện về số công chăm sóc: $10x + 15y \le 100 \iff 2x + 3y \le 20$.
+    Khi bác An trồng $x = 3$ héc-ta cam, thay vào điều kiện vốn ta có:
+    $2(3) + 3y \le 18 \iff 6 + 3y \le 18 \iff 3y \le 12 \iff y \le 4$.
+    Với $y = 4$, ta có $2(3) + 3(4) = 18 \le 20$ (thỏa mãn cả điều kiện công chăm sóc).
+    Vậy diện tích trồng bưởi tối đa là $4$ héc-ta.
+\end{itemize}
+
+\vspace{0.15cm}
+\textbf{PHẦN IV. Tự luận}
+\begin{itemize}[leftmargin=0.6cm, itemsep=2.5pt]
+    \item \textbf{Câu 19:}
+    \begin{enumerate}
+        \item Số bột mì cần dùng để sản xuất $x$ hộp bánh loại A và $y$ hộp bánh loại B là: $0{,}2x + 0{,}1y$ (kg). Vì kho có tối đa $40\text{ kg}$ bột mì nên ta có bất phương trình:
+        \[
+        0{,}2x + 0{,}1y \le 40 \iff 2x + y \le 400.
+        \]
+        Số đường cần dùng là: $0{,}1x + 0{,}2y$ (kg). Vì kho có tối đa $50\text{ kg}$ đường nên ta có bất phương trình:
+        \[
+        0{,}1x + 0{,}2y \le 50 \iff x + 2y \le 500.
+        \]
+        Số hộp bánh sản xuất không âm, tức là $x \ge 0,\; y \ge 0$.
+        Vậy hệ bất phương trình ràng buộc là:
+        \[
+        \begin{cases}
+        2x + y \le 400 \\
+        x + 2y \le 500 \\
+        x \ge 0 \\
+        y \ge 0
+        \end{cases}
+        \]
+        \item Trên mặt phẳng tọa độ $Oxy$:
+        \begin{itemize}
+            \item Đường thẳng $d_1: 2x + y = 400$ đi qua hai điểm $(200; 0)$ và $(0; 400)$.
+            \item Đường thẳng $d_2: x + 2y = 500$ đi qua hai điểm $(500; 0)$ và $(0; 250)$.
+            \item Tọa độ giao điểm $B$ của $d_1$ và $d_2$ là nghiệm của hệ $\begin{cases} 2x + y = 400 \\ x + 2y = 500 \end{cases} \iff \begin{cases} x = 100 \\ y = 200 \end{cases}$.
+        \end{itemize}
+        Miền nghiệm của hệ bất phương trình là miền tứ giác $OABC$ (kể cả biên) với tọa độ các đỉnh: $O(0; 0)$, $A(200; 0)$, $B(100; 200)$, $C(0; 250)$.
+    \end{enumerate}
+
+    \item \textbf{Câu 20:}
+    \begin{enumerate}
+        \item Biểu diễn trên trục số ta có:
+        \begin{itemize}
+            \item $A \cap B = [-4; 2) \cap (-1; 5] = (-1; 2)$.
+            \item $A \cup B = [-4; 2) \cup (-1; 5] = [-4; 5]$.
+            \item $A \setminus B = [-4; 2) \setminus (-1; 5] = [-4; -1]$.
+        \end{itemize}
+        \item Xét phép toán $(A \cap B) \setminus C$:
+        Vì $A \cap B = (-1; 2)$ và $C = (0; +\infty)$, ta có:
+        \[
+        (A \cap B) \setminus C = (-1; 2) \setminus (0; +\infty) = (-1; 0].
+        \]
+    \end{enumerate}
+
+    \item \textbf{Câu 21:}
+    \begin{enumerate}
+        \item Xét tam giác $ABC$:
+        Ta có $\widehat{CAB} = 30^\circ$, góc kề bù với góc $\widehat{CBH} = 45^\circ$ là $\widehat{CBA} = 180^\circ - 45^\circ = 135^\circ$.
+        Suy ra $\widehat{ACB} = 180^\circ - (135^\circ + 30^\circ) = 15^\circ$.
+        Áp dụng định lý sin trong tam giác $ABC$:
+        \[
+        \dfrac{BC}{\sin \widehat{CAB}} = \dfrac{AB}{\sin \widehat{ACB}} \iff \dfrac{BC}{\sin 30^\circ} = \dfrac{50}{\sin 15^\circ}.
+        \]
+        Ta có $\sin 15^\circ = \sin(45^\circ - 30^\circ) = \dfrac{\sqrt{6} - \sqrt{2}}{4}$. Do đó:
+        \[
+        BC = \dfrac{50 \cdot \sin 30^\circ}{\sin 15^\circ} = \dfrac{50 \cdot \frac{1}{2}}{\frac{\sqrt{6} - \sqrt{2}}{4}} = \dfrac{100}{\sqrt{6} - \sqrt{2}} = 25(\sqrt{6} + \sqrt{2})\text{ m} \approx 96{,}6\text{ m}.
+        \]
+        \item Xét tam giác $CBH$ vuông tại $H$, ta có:
+        \[
+        CH = BC \cdot \sin \widehat{CBH} = 25(\sqrt{6} + \sqrt{2}) \cdot \sin 45^\circ = 25(\sqrt{6} + \sqrt{2}) \cdot \dfrac{\sqrt{2}}{2} = 25(\sqrt{3} + 1)\text{ m}.
+        \]
+        Tính giá trị xấp xỉ: $CH \approx 25(1{,}732 + 1) = 68{,}3\text{ m}$.
+        Vậy chiều cao của ngọn tháp truyền hình là khoảng $68{,}3\text{ m}$.
+    \end{enumerate}
+
+    \item \textbf{Câu 22:}
+    \begin{enumerate}
+        \item Áp dụng công thức cộng số phần tử cho ba tập hợp hữu hạn $A, B, C$:
+        \[
+        |A \cup B \cup C| = |A| + |B| + |C| - (|A \cap B| + |B \cap C| + |C \cap A|) + |A \cap B \cap C|.
+        \]
+        Thay các dữ kiện đã cho vào công thức:
+        \[
+        |A \cup B \cup C| = 28 + 30 + 26 - (12 + 10 + 8) + 4 = 84 - 30 + 4 = 58\text{ (thành viên)}.
+        \]
+        Vậy có $58$ thành viên tham gia ít nhất một trong ba lớp kỹ năng.
+        \item Số thành viên không tham gia bất kỳ lớp kỹ năng nào là:
+        \[
+        60 - 58 = 2\text{ (thành viên)}.
+        \]
+        \item Số thành viên chỉ tham gia đúng một lớp kỹ năng:
+        \begin{itemize}
+            \item Số thành viên chỉ học lớp $A$: $|A| - (|A \cap B| + |A \cap C|) + |A \cap B \cap C| = 28 - (12 + 8) + 4 = 12$.
+            \item Số thành viên chỉ học lớp $B$: $|B| - (|A \cap B| + |B \cap C|) + |A \cap B \cap C| = 30 - (12 + 10) + 4 = 12$.
+            \item Số thành viên chỉ học lớp $C$: $|C| - (|A \cap C| + |B \cap C|) + |A \cap B \cap C| = 26 - (8 + 10) + 4 = 12$.
+        \end{itemize}
+        Tổng số thành viên chỉ tham gia đúng một lớp kỹ năng là:
+        \[
+        12 + 12 + 12 = 36\text{ (thành viên)}.
+        \]
+    \end{enumerate}
+\end{itemize}
+
+\end{document}
