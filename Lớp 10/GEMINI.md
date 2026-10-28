@@ -172,8 +172,12 @@ Thực hiện trọn **Pha 0–4**, không dừng ở file lấy mẫu và khôn
 
 ### Pha 3 — Hình minh họa và biên dịch
 7. **Hình và PDF:**
-   - **Quy định về hình minh họa trong đề bài và đáp án:**
-     + *Bài toán đo đạc hình học / tam giác thực tế (ở Phần III Trả lời ngắn và Phần IV Tự luận):* **KHÔNG dùng minipage ép hình sang bên phải đề bài** (tránh làm hình bị thu nhỏ, co cụm). Bắt buộc **đặt hình vẽ NẰM Ở DƯỚI ĐỀ BÀI** (căn giữa trong môi trường `\begin{center}\begin{tikzpicture}...\end{tikzpicture}\end{center}`), và **PHÓNG TO HÌNH RA** (`scale=1.0` đến `1.1`, chữ số và nhãn to rõ nét `font=\normalsize\bfseries`, nét vẽ đậm rõ). Các ý câu hỏi a), b) hoặc ô điền kết quả `\answerbox` đặt ngay bên dưới hình vẽ.
+   - **Quy định về hình minh họa trong đề bài và đáp án (ÁP DỤNG ĐỒNG BỘ CHO TẤT CẢ CÁC PHẦN I, II, III, IV):**
+     + *Vị trí hình vẽ:* **TUYỆT ĐỐI KHÔNG dùng minipage ép hình sang bên phải đề bài** (tránh làm hình bị thu nhỏ, co cụm, chữ khó đọc). Bắt buộc **đặt hình vẽ NẰM Ở DƯỚI ĐỀ BÀI** (căn giữa trong môi trường `\begin{center}\begin{tikzpicture}...\end{tikzpicture}\end{center}`).
+       * **Phần I (Trắc nghiệm):** Câu hỏi $\to$ Hình vẽ căn giữa phóng to $\to$ Các phương án A, B, C, D (`\two` hoặc `\four`) đặt ở ngay dưới hình.
+       * **Phần II (Đúng/Sai):** Lời dẫn câu hỏi $\to$ Hình vẽ căn giữa phóng to $\to$ Các ý mệnh đề a), b), c), d) đặt ở ngay dưới hình.
+       * **Phần III (Trả lời ngắn) & Phần IV (Tự luận):** Lời dẫn bài toán $\to$ Hình vẽ căn giữa phóng to $\to$ Các câu hỏi nhỏ a), b) hoặc ô kết quả `\answerbox` đặt ở ngay dưới hình.
+     + *Kích thước & Độ rõ nét (PHÓNG TO HÌNH RA):* Phóng to hình trực quan, thoáng đãng (`scale=0.8` đến `1.1` tùy nội dung), chữ số và nhãn to rõ nét (`font=\normalsize\bfseries` hoặc tối thiểu `\small\bfseries`), tuyệt đối cấm dùng font bé như `\tiny` hay `\scriptsize`. Nét vẽ phải đậm rõ (`line width=1.1pt` đến `1.4pt`), các điểm mút toạ độ / đỉnh vẽ rõ (`circle(2.2pt)` đến `3.5pt`).
      + *Bài toán tối ưu tuyến tính / hệ BPT thực tế (IV.4):* Bắt buộc vẽ/plot đồ thị hệ trục tọa độ $Oxy$ biểu diễn miền nghiệm của hệ bất phương trình (các đường biên, miền đa giác nghiệm, tọa độ các đỉnh $O, A, B, C...$) trong lời giải chi tiết / bảng kết quả cần đạt.
    - **BẮT BUỘC vẽ miền nghiệm ở phần đáp án cho các câu có dạng hệ bất phương trình ở Phần III và Phần IV:**
      + **Phạm vi áp dụng:** Chỉ các phần liên quan tới hệ bất phương trình ở **Phần III (Trả lời ngắn)** hoặc **Phần IV (Tự luận)** mới cần vẽ miền nghiệm ra ở phần đáp án. Phần I và Phần II giữ nguyên bảng đáp án, không cần vẽ hình.
