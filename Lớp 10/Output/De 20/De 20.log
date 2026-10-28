@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.29)  28 OCT 2026 09:31
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.29)  28 OCT 2026 09:40
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -842,8 +842,10 @@ File: pgflibrarypatterns.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 (D:\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count324
+) (De 20.aux
+Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
+(babel)             Reported on input line 5.
 )
-No file "De 20".aux.
 \openout1 = `"De 20.aux"'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 44.
@@ -862,8 +864,7 @@ LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
 LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 44.
 LaTeX Font Info:    ... okay on input line 44.
-Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
-(babel)             Reported on input line 44.
+
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
@@ -932,18 +933,9 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 [1{C:/Users/Crink/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
-]
-Overfull \hbox (3.01363pt too wide) in paragraph at lines 200--201
- [][] 
- []
-
-
-Overfull \hbox (41.67857pt too wide) in paragraph at lines 157--202
-[]\T5/cmr/m/it/12 (1,0 ^^_iºm) [] [] 
- []
-
-[2] [3]
-Overfull \hbox (40.84055pt too wide) in paragraph at lines 317--318
+] [2]
+[3]
+Overfull \hbox (40.84055pt too wide) in paragraph at lines 314--315
  [][] 
  []
 
@@ -954,13 +946,13 @@ L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 16901 strings out of 467871
- 326761 string characters out of 5435211
+ 16906 strings out of 467871
+ 326890 string characters out of 5435211
  752625 words of memory out of 5000000
- 45480 multiletter control sequences out of 15000+600000
+ 45483 multiletter control sequences out of 15000+600000
  643698 words of font info for 75 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,16n,107p,579b,908s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,16n,107p,579b,914s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Crink\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmmi10.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cm
@@ -972,7 +964,7 @@ msbm10.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><D:/MiKTeX/fonts/type1/v
 ntex/vnr/vnbx12.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><D:/MiKTeX/fonts
 /type1/vntex/vnr/vnr12.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><D:/MiKT
 eX/fonts/type1/vntex/vnr/vnti12.pfb>
-Output written on "De 20.pdf" (8 pages, 237717 bytes).
+Output written on "De 20.pdf" (8 pages, 237716 bytes).
 PDF statistics:
  112 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

@@ -154,49 +154,46 @@ Tính giá trị của biểu thức $P = 26\sin \alpha - 5\tan \alpha$.
 \parttitle{PHẦN IV. Tự luận}
 \textit{Thí sinh trình bày lời giải chi tiết từ câu 19 đến câu 22.}
 \begin{enumerate}[resume]
-\item \textit{(1,0 điểm)} \begin{minipage}[t]{0.60\linewidth}
-Một bức tranh phong cảnh có chiều cao $AB = 1{,}6\text{ m}$ được treo thẳng đứng trên một bức tường phẳng. Một người quan sát đứng ngắm bức tranh sao cho tầm mắt ở vị trí điểm $O$, cách mặt đất một khoảng cố định và thẳng hàng với chân tường tại điểm $H$ ($OH \perp HB$). Biết mép dưới $A$ của bức tranh cách tầm mắt người xem một khoảng $AH = 0{,}9\text{ m}$ (như hình vẽ bên).
+\item \begin{minipage}[t]{0.56\linewidth}
+\vspace{0pt}
+\textit{(1,0 điểm)} Một bức tranh phong cảnh có chiều cao $AB = 1{,}6\text{ m}$ được treo thẳng đứng trên một bức tường phẳng. Một người quan sát đứng ngắm bức tranh sao cho tầm mắt ở vị trí điểm $O$, cách mặt đất một khoảng cố định và thẳng hàng với chân tường tại điểm $H$ ($OH \perp HB$). Biết mép dưới $A$ của bức tranh cách tầm mắt người xem một khoảng $AH = 0{,}9\text{ m}$ (như hình vẽ bên).
 \begin{enumerate}
     \item Gọi $x$ (mét, $x > 0$) là khoảng cách $OH$ từ người quan sát đến tường. Biểu diễn $\tan \widehat{AOB}$ theo $x$.
     \item Người quan sát cần đứng cách bức tường một khoảng $x$ bằng bao nhiêu mét để góc nhìn bức tranh $\widehat{AOB}$ đạt giá trị lớn nhất?
 \end{enumerate}
-\end{minipage}\hfill
-\begin{minipage}[t]{0.37\linewidth}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.40\linewidth}
+\vspace{0pt}
 \centering
-\begin{tikzpicture}[scale=0.9, every node/.style={scale=0.85}]
-    % Tường thẳng đứng
-    \draw[line width=1.4pt, gray!60!black] (3.0,-0.4) -- (3.0,3.6) node[above, font=\bfseries] {Tường};
-    % Nền phương ngang
-    \draw[dashed, gray] (-0.2,0) -- (3.0,0);
+\begin{tikzpicture}[scale=0.75, baseline=(current bounding box.north), every node/.style={scale=0.75}]
+    % Tuong
+    \draw[line width=1.3pt, gray!60!black] (2.4,-0.3) -- (2.4,3.2) node[above, font=\bfseries] {Tường};
+    \draw[dashed, gray] (-0.2,0) -- (2.4,0);
     
-    % Các điểm
     \coordinate (O) at (0,0);
-    \coordinate (H) at (3.0,0);
-    \coordinate (A) at (3.0,0.9);
-    \coordinate (B) at (3.0,2.5);
+    \coordinate (H) at (2.4,0);
+    \coordinate (A) at (2.4,0.9);
+    \coordinate (B) at (2.4,2.5);
 
-    % Bức tranh AB
-    \draw[line width=3.5pt, orange!90!black] (A) -- (B);
-    \node[right, font=\bfseries, orange!90!black] at (3.0,1.7) {Bức tranh};
+    % Buc tranh AB
+    \draw[line width=3.2pt, orange!90!black] (A) -- (B);
+    \node[right, font=\bfseries, orange!90!black] at (2.4,1.7) {Bức tranh};
 
-    % Tia ngắm
-    \draw[thick, ink] (O) node[left] {$O\text{ (mắt)}$} -- (H) node[below right] {$H$};
+    \draw[thick, ink] (O) node[left] {$O$} -- (H) node[below right] {$H$};
     \draw[thick, blue!80!black] (O) -- (A) node[above right] {$A$};
     \draw[thick, teal!80!black] (O) -- (B) node[above right] {$B$};
 
-    % Ký hiệu góc vuông tại H
-    \draw (2.7,0) -- (2.7,0.3) -- (3.0,0.3);
+    \draw (2.15,0) -- (2.15,0.25) -- (2.4,0.25);
 
-    % Chấm điểm
     \filldraw[black] (O) circle (2pt);
     \filldraw[black] (H) circle (2pt);
     \filldraw[blue!80!black] (A) circle (2pt);
     \filldraw[teal!80!black] (B) circle (2pt);
 
-    % Nhãn kích thước
-    \node[below] at (1.5,0) {$x = OH$};
-    \draw[<->, >=Stealth, red!80!black] (3.5,0) -- (3.5,0.9) node[midway, right] {$0{,}9\text{ m}$};
-    \draw[<->, >=Stealth, red!80!black] (3.5,0.9) -- (3.5,2.5) node[midway, right] {$1{,}6\text{ m}$};
+    \node[below] at (1.2,0) {$x = OH$};
+    \draw[<->, >=Stealth, red!80!black] (2.8,0) -- (2.8,0.9) node[midway, right] {$0{,}9\text{ m}$};
+    \draw[<->, >=Stealth, red!80!black] (2.8,0.9) -- (2.8,2.5) node[midway, right] {$1{,}6\text{ m}$};
 \end{tikzpicture}
 \end{minipage}
 
