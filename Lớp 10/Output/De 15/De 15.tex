@@ -1,0 +1,452 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.5cm,top=1.4cm,bottom=1.4cm]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or Math gives us hope that every problem has a solution% Trang 7
+    \or Math + You = Champion% Trang 8
+    \or Where Frustration Becomes Inspiration% Trang 9
+    \or Turning Confusion into Clarity% Trang 10
+    \or Don't be an X, be a Y of mathematics% Trang 11
+    \or Don't get mad. Learn to add% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.2pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\newcommand{\parttitle}[1]{\par\vspace{2pt}{\large\bfseries\color{ink}#1}\par\vspace{1pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[2pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{12pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.4cm,labelsep=.15cm,itemsep=1.5pt,topsep=1.0pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.6cm,itemsep=1.0pt,topsep=1.0pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[4pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GK1}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 15}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.2cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0015}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.2cm}
+
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án đúng duy nhất.}
+\begin{enumerate}
+\item Cho tập hợp $X = \{x \in \mathbb{Z} \mid (x^2 - 4)(x + 1) = 0\}$. Viết tập hợp $X$ bằng cách liệt kê các phần tử ta được
+\four{$X = \{-2; -1; 2\}$.}{$X = \{-2; 2\}$.}{$X = \{-1; 2\}$.}{$X = \{-2; 1; 2\}$.}
+
+\item Trong các mệnh đề sau đây, mệnh đề nào là mệnh đề \textbf{đúng}?
+\four{Số $15$ là một số nguyên tố.}{Tổng của hai số lẻ luôn là một số chẵn.}{Tam giác có ba cạnh bằng nhau không phải là tam giác đều.}{Số $1$ là số nguyên tố nhỏ nhất.}
+
+\item Cho tập hợp $S = \{a; b; c; d\}$ có $4$ phần tử. Số tập hợp con của tập hợp $S$ là
+\four{$8$.}{$12$.}{$16$.}{$4$.}
+
+\item Cho hai tập hợp $A = \{1; 2; 3; 4; 5\}$ và $B = \{2; 4; 6; 8\}$. Hiệu của hai tập hợp $A \setminus B$ bằng
+\four{$\{2; 4\}$.}{$\{6; 8\}$.}{$\{1; 2; 3; 4; 5; 6; 8\}$.}{$\{1; 3; 5\}$.}
+
+\item Bất phương trình nào sau đây là một bất phương trình bậc nhất hai ẩn?
+\four{$2x - 3y + 5 > 0$.}{$x^2 + 2y \le 4$.}{$xy - 3 \ge 0$.}{$2x + y^2 - 1 < 0$.}
+
+\item Hệ bất phương trình nào sau đây là một hệ bất phương trình bậc nhất hai ẩn?
+\four{$\begin{cases} x^2 + y \le 2 \\ x - 3y > 1 \end{cases}$}{$\begin{cases} 3x - y + 2 \ge 0 \\ x + 4y - 1 < 0 \end{cases}$}{$\begin{cases} x - 2y + z \le 3 \\ 2x + y > 0 \end{cases}$}{$\begin{cases} x + 2xy \le 5 \\ y - 1 \ge 0 \end{cases}$}
+
+\item Cặp số $(x; y)$ nào sau đây là một nghiệm của bất phương trình $2x - 3y + 6 \le 0$?
+\four{$(0; 0)$.}{$(2; 1)$.}{$(-1; 2)$.}{$(3; 0)$.}
+
+\item Đường thẳng bờ của nửa mặt phẳng biểu diễn miền nghiệm của bất phương trình $4x - 5y + 10 \ge 0$ có phương trình là
+\four{$4x + 5y + 10 = 0$.}{$5x - 4y + 10 = 0$.}{$4x - 5y - 10 = 0$.}{$4x - 5y + 10 = 0$.}
+
+\item Với mọi góc $\alpha$ thỏa mãn $0^\circ \le \alpha \le 180^\circ$, khẳng định nào sau đây là \textbf{đúng}?
+\four{$\sin(180^\circ - \alpha) = \sin \alpha$.}{$\cos(180^\circ - \alpha) = \cos \alpha$.}{$\tan(180^\circ - \alpha) = \tan \alpha$.}{$\cot(180^\circ - \alpha) = \cot \alpha$.}
+
+\item Cho tam giác $ABC$ có cạnh $AB = 5$, $AC = 8$ và góc $\widehat{A} = 60^\circ$. Độ dài cạnh $BC$ bằng
+\four{$BC = \sqrt{129}$.}{$BC = 7$.}{$BC = \sqrt{65}$.}{$BC = 8$.}
+
+\item Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$. Gọi $m_a$ là độ dài đường trung tuyến kẻ từ đỉnh $A$. Công thức nào sau đây là \textbf{đúng}?
+\four{$m_a^2 = \dfrac{b^2 + c^2 - a^2}{2}$.}{$m_a^2 = \dfrac{2(b^2 + c^2) + a^2}{4}$.}{$m_a^2 = \dfrac{2(b^2 + c^2) - a^2}{4}$.}{$m_a^2 = \dfrac{b^2 + c^2 - 2a^2}{4}$.}
+
+\item Cho tam giác $ABC$ có cạnh $BC = 6$ và góc $\widehat{A} = 30^\circ$. Bán kính $R$ của đường tròn ngoại tiếp tam giác $ABC$ bằng
+\four{$R = 3$.}{$R = 3\sqrt{3}$.}{$R = 12$.}{$R = 6$.}
+\end{enumerate}
+
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Thí sinh trả lời từ câu 13 đến câu 14. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}[resume]
+\item Cho mệnh đề $P$: ``$\forall x \in \mathbb{R}, x^2 + 1 > 0$'' và mệnh đề $Q$: ``$\exists n \in \mathbb{N}, n^2 + 3n + 2 = 0$''. Xét tính đúng sai của các phát biểu sau:
+\begin{enumerate}
+    \item Phát biểu ``Hà Nội là thủ đô của Việt Nam'' là một mệnh đề.
+    \item Mệnh đề phủ định của mệnh đề $P$ là $\overline{P}$: ``$\exists x \in \mathbb{R}, x^2 + 1 \le 0$''.
+    \item Mệnh đề $P$ là một mệnh đề đúng.
+    \item Mệnh đề $Q$ là một mệnh đề đúng.
+\end{enumerate}
+
+\item Cho hệ bất phương trình bậc nhất hai ẩn $\begin{cases} x \ge 0,\; y \ge 0 \\ x + y \le 6 \\ 2x + y \le 8 \end{cases}$. Biết miền nghiệm của hệ là miền tứ giác $OABC$ (kể cả biên) trên mặt phẳng tọa độ $Oxy$.
+\begin{enumerate}
+    \item Gốc tọa độ $O(0; 0)$ thuộc miền nghiệm của hệ bất phương trình đã cho.
+    \item Cặp số $(1; 2)$ là một nghiệm của hệ bất phương trình đã cho.
+    \item Miền nghiệm của hệ có một đỉnh là giao điểm của hai đường thẳng $x + y = 6$ và $2x + y = 8$ có tọa độ là $B(2; 4)$.
+    \item Biểu thức $F(x, y) = 3x + y$ đạt giá trị lớn nhất trên miền nghiệm bằng $15$.
+\end{enumerate}
+\end{enumerate}
+
+\parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 15 đến câu 18. Viết kết quả vào ô quy định.}
+\begin{enumerate}[resume]
+\item \begin{minipage}[t]{0.58\linewidth}
+Để đo chiều cao $CD = h$ của một ngọn tháp truyền hình nằm bên kia bờ sông (chân tháp $C$ nằm trên mặt đất bằng phẳng), hai quan sát viên đứng tại hai vị trí $A$ và $B$ trên mặt đất, cùng phía và thẳng hàng với chân tháp $C$. Khoảng cách giữa hai vị trí quan sát là $AB = 50\text{ m}$. Từ $A$ và $B$, người ta dùng giác kế đo được góc nâng tới đỉnh tháp $D$ lần lượt là $\widehat{CAD} = 30^\circ$ và $\widehat{CBD} = 45^\circ$ ($B$ nằm giữa $A$ và $C$). Hỏi chiều cao $h$ của ngọn tháp là bao nhiêu mét? (\textit{Làm tròn kết quả đến hàng phần mười}).
+\vspace{6pt}
+
+\answerbox
+\end{minipage}\hfill
+\begin{minipage}[t]{0.38\linewidth}
+\centering
+\begin{tikzpicture}[scale=0.78, every node/.style={scale=0.85}]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (1.8,0);
+    \coordinate (C) at (4.0,0);
+    \coordinate (D) at (4.0,2.2);
+
+    % Mặt đất
+    \draw[line width=1.2pt, ink] (-0.3,0) -- (4.5,0);
+    \node[below, font=\scriptsize\itshape] at (0.9,-0.35) {Mặt đất};
+
+    % Ngọn tháp CD
+    \draw[line width=2.2pt, teal!80!black] (C) node[below, font=\bfseries] {$C$} -- (D) node[above, font=\bfseries] {$D$};
+    \node[right, teal!80!black, font=\bfseries] at (4.0,1.1) {$h = ?$};
+
+    % Các tia ngắm
+    \draw[thick, ink] (A) node[below, font=\bfseries] {$A$} -- (D);
+    \draw[thick, ink] (B) node[below, font=\bfseries] {$B$} -- (D);
+
+    % Chân vuông góc tại C
+    \draw (3.75,0) -- (3.75,0.25) -- (4.0,0.25);
+
+    % Điểm đỉnh
+    \filldraw[black] (A) circle (2.0pt);
+    \filldraw[black] (B) circle (2.0pt);
+    \filldraw[black] (C) circle (2.0pt);
+    \filldraw[red!80!black] (D) circle (2.4pt);
+
+    % Cung đo góc A (30 độ)
+    \draw (0.6,0) arc (0:30:0.6);
+    \node at (0.95,0.22) {\footnotesize $30^\circ$};
+
+    % Cung đo góc B (45 độ)
+    \draw (2.3,0) arc (0:45:0.5);
+    \node at (2.55,0.35) {\footnotesize $45^\circ$};
+
+    % Khoảng cách AB
+    \draw[<->, >=Stealth, thick] (0,-0.2) -- (1.8,-0.2);
+    \node[below, font=\footnotesize] at (0.9,-0.2) {$50\text{ m}$};
+\end{tikzpicture}
+\end{minipage}
+
+\item Cho hai tập hợp số $A = [-4; 5)$ và $B = (-2; 8]$. Tìm số phần tử nguyên thuộc tập hợp giao $A \cap B$.
+\answerbox
+
+\item Một cơ sở sản xuất thủ công làm hai loại sản phẩm $A$ và $B$. Mỗi sản phẩm loại $A$ cần 2 giờ làm việc của máy và 1 giờ làm việc của nhân công, đem lại lợi nhuận $500\,000$ đồng. Mỗi sản phẩm loại $B$ cần 1 giờ làm việc của máy và 2 giờ làm việc của nhân công, đem lại lợi nhuận $400\,000$ đồng. Mỗi ngày cơ sở có tối đa 10 giờ làm việc của máy và 8 giờ làm việc của nhân công. Hỏi lợi nhuận lớn nhất mà cơ sở có thể đạt được trong một ngày là bao nhiêu triệu đồng? (\textit{Viết kết quả dưới dạng số thập phân, ví dụ: 2,8}).
+\answerbox
+
+\item Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$ và $\sin \alpha = \dfrac{5}{13}$. Tính giá trị của biểu thức $P = 13\cos \alpha + 12\tan \alpha$.
+\answerbox
+\end{enumerate}
+
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày lời giải chi tiết từ câu 19 đến câu 22.}
+\begin{enumerate}[resume]
+\item \textit{(1,0 điểm)} Cho tam giác $ABC$ có độ dài ba cạnh là $a = BC = 13$, $b = CA = 14$ và $c = AB = 15$.
+\begin{enumerate}
+    \item Tính nửa chu vi $p$ và diện tích $S$ của tam giác $ABC$.
+    \item Tính bán kính đường tròn nội tiếp $r$ và độ dài đường cao $h_a$ kẻ từ đỉnh $A$ của tam giác $ABC$.
+\end{enumerate}
+
+\item \textit{(0,75 điểm)} Cho hai tập hợp số $A = [m - 1; m + 3]$ và $B = (-2; 4)$ với $m$ là tham số thực.
+\begin{enumerate}
+    \item Với $m = 2$, xác định tập hợp $A$ và tìm tập hợp giao $A \cap B$.
+    \item Tìm tất cả các giá trị của tham số $m$ để tập hợp $A$ là tập con của tập hợp $B$ ($A \subset B$).
+\end{enumerate}
+
+\item \textit{(0,75 điểm)} Một bác nông dân dự định trồng hai loại cây trên một mảnh đất rộng $12\text{ ha}$: ngô và khoai lang. Để trồng $1\text{ ha}$ ngô cần $20$ ngày công và chi phí $4$ triệu đồng. Để trồng $1\text{ ha}$ khoai lang cần $30$ ngày công và chi phí $3$ triệu đồng. Bác nông dân có tổng cộng không quá $300$ ngày công và số vốn đầu tư không vượt quá $42$ triệu đồng. Gọi $x, y$ (đơn vị: ha) lần lượt là diện tích trồng ngô và diện tích trồng khoai lang.
+\begin{enumerate}
+    \item Hãy thiết lập hệ bất phương trình bậc nhất hai ẩn biểu thị các điều kiện ràng buộc đối với diện tích trồng ngô $x$ và diện tích trồng khoai lang $y$.
+    \item Bác nông dân có thể trồng $6\text{ ha}$ ngô và $5\text{ ha}$ khoai lang được hay không? Vì sao?
+\end{enumerate}
+
+\item \textit{(0,5 điểm)} Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$.
+\begin{enumerate}
+    \item Chứng minh đẳng thức: $b^2 - c^2 = a(b \cos C - c \cos B)$.
+    \item Chứng minh rằng nếu các góc của tam giác $ABC$ thỏa mãn hệ thức $\sin A = \dfrac{\sin B + \sin C}{\cos B + \cos C}$ thì tam giác $ABC$ là tam giác vuông tại đỉnh $A$.
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+% =========================================================================
+% BẢNG ĐÁP ÁN VÀ LỜI GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\vspace{0.2cm}
+\textbf{1. Phần I: Trắc nghiệm nhiều lựa chọn}
+\begin{center}
+{\setlength{\tabcolsep}{2.5pt}\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} & \textbf{Câu 5} & \textbf{Câu 6} & \textbf{Câu 7} & \textbf{Câu 8} & \textbf{Câu 9} & \textbf{Câu 10} & \textbf{Câu 11} & \textbf{Câu 12} \\
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{2. Phần II: Trắc nghiệm đúng/sai}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu hỏi} & \textbf{Ý a)} & \textbf{Ý b)} & \textbf{Ý c)} & \textbf{Ý d)} \\
+\hline
+\textbf{Câu 13} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} \\
+\hline
+\textbf{Câu 14} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{3. Phần III: Trắc nghiệm trả lời ngắn}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Câu 15} & \textbf{Câu 16} & \textbf{Câu 17} & \textbf{Câu 18} \\
+\hline
+\textbf{68,3} & \textbf{6} & \textbf{2,8} & \textbf{-17} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+\textbf{4. Biểu diễn hình học miền nghiệm hệ bất phương trình (Câu 17 - Tối ưu tuyến tính)}
+
+\begin{center}
+\begin{tikzpicture}[scale=0.9, >=Stealth]
+    % Trục toạ độ nét đậm
+    \draw[line width=1.2pt, ->] (-0.8,0) -- (6.8,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-0.8) -- (0,5.8) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left, font=\normalsize\bfseries] at (0,0) {$O$};
+
+    % Tô miền nghiệm tứ giác OABC
+    \fill[fill=ink!18] (0,0) -- (5,0) -- (4,2) -- (0,4) -- cycle;
+    \draw[line width=2.0pt, blue!70!black] (0,0) -- (5,0) -- (4,2) -- (0,4) -- cycle;
+
+    % d1: 2x + y = 10 (đi qua (5;0) và (4;2))
+    \draw[line width=1.3pt, red!80!black] (3.4, 3.2) -- (5.6, -1.2) node[below right, font=\normalsize\bfseries] {$d_1: 2x + y = 10$};
+
+    % d2: x + 2y = 8 (đi qua (0;4) và (4;2))
+    \draw[line width=1.3pt, teal!80!black] (-0.6, 4.3) -- (5.8, 1.1) node[above right, font=\normalsize\bfseries] {$d_2: x + 2y = 8$};
+
+    % Đỉnh miền nghiệm chấm to rõ
+    \filldraw[black] (0,0) circle (3.5pt);
+    \filldraw[black] (5,0) circle (3.8pt) node[below, font=\normalsize\bfseries] {$A(5; 0)$};
+    \filldraw[black] (4,2) circle (4.0pt) node[above right, font=\normalsize\bfseries] {$B(4; 2)$};
+    \filldraw[black] (0,4) circle (3.8pt) node[left, font=\normalsize\bfseries] {$C(0; 4)$};
+
+    % Dóng toạ độ đỉnh B(4;2)
+    \draw[dotted, line width=1.2pt] (4,0) node[below, font=\normalsize\bfseries] {$4$} -- (4,2) -- (0,2) node[left, font=\normalsize\bfseries] {$2$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.2cm}
+\parttitle{HƯỚNG DẪN GIẢI CHI TIẾT}
+
+\textbf{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\begin{itemize}[leftmargin=0.6cm, itemsep=1.5pt, topsep=1pt]
+    \item \textbf{Câu 1:} $(x^2 - 4)(x + 1) = 0 \iff x^2 = 4$ hoặc $x + 1 = 0 \iff x \in \{-2; 2; -1\}$. Vì $x \in \mathbb{Z}$ nên tất cả các nghiệm đều thỏa mãn. Vậy $X = \{-2; -1; 2\}$. \textbf{Chọn A.}
+    \item \textbf{Câu 2:} Mọi số lẻ đều có dạng $2k + 1$ ($k \in \mathbb{Z}$). Tổng hai số lẻ: $(2k + 1) + (2m + 1) = 2(k + m + 1)$ chia hết cho $2$ nên luôn là một số chẵn. \textbf{Chọn B.}
+    \item \textbf{Câu 3:} Tập hợp có $n$ phần tử thì có tất cả $2^n$ tập hợp con. Với $n = 4$, số tập hợp con là $2^4 = 16$. \textbf{Chọn C.}
+    \item \textbf{Câu 4:} Tập hợp hiệu $A \setminus B$ gồm các phần tử thuộc $A$ nhưng không thuộc $B$. Ta có $A \setminus B = \{1; 3; 5\}$. \textbf{Chọn D.}
+    \item \textbf{Câu 5:} Bất phương trình bậc nhất hai ẩn có dạng tổng quát $ax + by + c > 0$ (hoặc $\ge 0, < 0, \le 0$) với $a^2 + b^2 \ne 0$. Trong các phương án, chỉ có $2x - 3y + 5 > 0$ là bất phương trình bậc nhất hai ẩn. \textbf{Chọn A.}
+    \item \textbf{Câu 6:} Hệ $\begin{cases} 3x - y + 2 \ge 0 \\ x + 4y - 1 < 0 \end{cases}$ gồm hai bất phương trình bậc nhất hai ẩn nên là hệ bất phương trình bậc nhất hai ẩn. \textbf{Chọn B.}
+    \item \textbf{Câu 7:} Thay cặp số $(-1; 2)$ vào vế trái bất phương trình: $2(-1) - 3(2) + 6 = -2 \le 0$ (thỏa mãn). Vậy $(-1; 2)$ là một nghiệm. \textbf{Chọn C.}
+    \item \textbf{Câu 8:} Bất phương trình $ax + by + c \ge 0$ có đường thẳng bờ là đường thẳng có phương trình $ax + by + c = 0$. Vậy đường thẳng bờ là $4x - 5y + 10 = 0$. \textbf{Chọn D.}
+    \item \textbf{Câu 9:} Theo tính chất lượng giác của hai góc bù nhau: $\sin(180^\circ - \alpha) = \sin \alpha$. \textbf{Chọn A.}
+    \item \textbf{Câu 10:} Áp dụng định lý côsin trong $\triangle ABC$:
+    \[
+    BC^2 = AB^2 + AC^2 - 2 AB \cdot AC \cdot \cos \widehat{A} = 5^2 + 8^2 - 2 \cdot 5 \cdot 8 \cdot \cos 60^\circ = 25 + 64 - 80 \cdot \dfrac{1}{2} = 49.
+    \]
+    Suy ra $BC = \sqrt{49} = 7$. \textbf{Chọn B.}
+    \item \textbf{Câu 11:} Công thức tính độ dài đường trung tuyến kẻ từ đỉnh $A$ là $m_a^2 = \dfrac{2(b^2 + c^2) - a^2}{4}$. \textbf{Chọn C.}
+    \item \textbf{Câu 12:} Áp dụng định lý sin trong $\triangle ABC$: $\dfrac{BC}{\sin A} = 2R \implies R = \dfrac{BC}{2\sin A} = \dfrac{6}{2 \sin 30^\circ} = \dfrac{6}{2 \cdot 0{,}5} = 6$. \textbf{Chọn D.}
+\end{itemize}
+
+\vspace{0.15cm}
+\textbf{PHẦN II. Trắc nghiệm đúng/sai}
+\begin{itemize}[leftmargin=0.6cm, itemsep=2pt, topsep=1pt]
+    \item \textbf{Câu 13:}
+    \begin{enumerate}[label=\alph*), itemsep=1pt]
+        \item ``Hà Nội là thủ đô của Việt Nam'' là một câu khẳng định có tính đúng sai rõ ràng (và là khẳng định đúng), nên là một mệnh đề. $\to$ \textbf{Đúng.}
+        \item Phủ định của mệnh đề chứa ký hiệu $\forall$ là mệnh đề chứa ký hiệu $\exists$ và đổi dấu $>0$ thành $\le 0$. Vậy $\overline{P}$: ``$\exists x \in \mathbb{R}, x^2 + 1 \le 0$''. $\to$ \textbf{Đúng.}
+        \item Với mọi số thực $x$, ta luôn có $x^2 \ge 0 \implies x^2 + 1 \ge 1 > 0$. Do đó mệnh đề $P$ là mệnh đề đúng. $\to$ \textbf{Đúng.}
+        \item Giải phương trình $n^2 + 3n + 2 = 0 \iff (n + 1)(n + 2) = 0 \iff n = -1$ hoặc $n = -2$. Cả hai giá trị này đều không thuộc tập số tự nhiên $\mathbb{N}$. Do đó không tồn tại số tự nhiên $n$ nào thỏa mãn phương trình. Mệnh đề $Q$ là mệnh đề sai. $\to$ \textbf{Sai.}
+    \end{enumerate}
+
+    \item \textbf{Câu 14:}
+    \begin{enumerate}[label=\alph*), itemsep=1pt]
+        \item Thay $(0; 0)$ vào hệ: $0 \ge 0, 0 \ge 0, 0 + 0 = 0 \le 6, 2(0) + 0 = 0 \le 8$ (đều thỏa mãn). Điểm $O(0; 0)$ thuộc miền nghiệm. $\to$ \textbf{Đúng.}
+        \item Thay $(1; 2)$ vào hệ: $1 \ge 0, 2 \ge 0, 1 + 2 = 3 \le 6, 2(1) + 2 = 4 \le 8$ (đều thỏa mãn). Cặp $(1; 2)$ là nghiệm. $\to$ \textbf{Đúng.}
+        \item Giải hệ phương trình tọa độ giao điểm: $\begin{cases} x + y = 6 \\ 2x + y = 8 \end{cases} \iff \begin{cases} x = 2 \\ y = 4 \end{cases}$. Điểm $B(2; 4)$ thỏa mãn $x \ge 0, y \ge 0$ nên là một đỉnh của miền nghiệm. $\to$ \textbf{Đúng.}
+        \item Miền nghiệm là miền tứ giác $OABC$ với các đỉnh: $O(0; 0)$, $A(4; 0)$ (giao điểm của $2x + y = 8$ với $Ox$), $B(2; 4)$ và $C(0; 6)$ (giao điểm của $x + y = 6$ với $Oy$). Giá trị của $F(x, y) = 3x + y$ tại các đỉnh:
+        $F(O) = 0$; $F(A) = 3(4) + 0 = 12$; $F(B) = 3(2) + 4 = 10$; $F(C) = 3(0) + 6 = 6$.
+        Giá trị lớn nhất của $F(x, y)$ trên miền nghiệm bằng $12$ (đạt tại đỉnh $A(4; 0)$). Khẳng định bằng $15$ là sai. $\to$ \textbf{Sai.}
+    \end{enumerate}
+\end{itemize}
+
+\vspace{0.15cm}
+\textbf{PHẦN III. Trắc nghiệm trả lời ngắn}
+\begin{itemize}[leftmargin=0.6cm, itemsep=1.5pt, topsep=1pt]
+    \item \textbf{Câu 15:} Trong tam giác $BCD$ vuông tại $C$, ta có $\widehat{CBD} = 45^\circ \implies \triangle BCD$ vuông cân tại $C$, do đó $BC = CD = h$.\\
+    Trong tam giác $ACD$ vuông tại $C$, ta có $AC = AB + BC = 50 + h$.\\
+    Mặt khác $\tan \widehat{CAD} = \tan 30^\circ = \dfrac{CD}{AC} \iff \dfrac{1}{\sqrt{3}} = \dfrac{h}{50 + h}$.\\
+    Suy ra $50 + h = h\sqrt{3} \iff h(\sqrt{3} - 1) = 50 \iff h = \dfrac{50}{\sqrt{3} - 1} = 25(\sqrt{3} + 1) \approx 68{,}301\text{ m}$.\\
+    Làm tròn kết quả đến hàng phần mười là \textbf{68,3}.
+    \item \textbf{Câu 16:} Giao của hai tập hợp: $A \cap B = [-4; 5) \cap (-2; 8] = (-2; 5)$.\\
+    Các số nguyên thuộc khoảng $(-2; 5)$ là $\{-1; 0; 1; 2; 3; 4\}$. Có tất cả $6$ số nguyên. Đáp số là \textbf{6}.
+    \item \textbf{Câu 17:} Gọi $x \ge 0, y \ge 0$ lần lượt là số sản phẩm loại $A$ và loại $B$ sản xuất trong một ngày.\\
+    Điều kiện thời gian làm việc của máy: $2x + y \le 10$.\\
+    Điều kiện thời gian làm việc của nhân công: $x + 2y \le 8$.\\
+    Lợi nhuận thu được trong một ngày là: $F(x, y) = 0{,}5x + 0{,}4y$ (triệu đồng).\\
+    Miền nghiệm của hệ bất phương trình là miền tứ giác $OABC$ với các đỉnh: $O(0; 0)$, $A(5; 0)$, $B(4; 2)$, $C(0; 4)$.\\
+    Tính giá trị $F(x, y)$ tại các đỉnh:\\
+    $F(O) = 0$; $F(A) = 0{,}5(5) + 0 = 2{,}5$; $F(B) = 0{,}5(4) + 0{,}4(2) = 2{,}8$; $F(C) = 0{,}5(0) + 0{,}4(4) = 1{,}6$.\\
+    Giá trị lớn nhất của lợi nhuận là $2{,}8$ triệu đồng (đạt khi sản xuất $4$ sản phẩm loại $A$ và $2$ sản phẩm loại $B$). Đáp số là \textbf{2,8}.
+    \item \textbf{Câu 18:} Vì $90^\circ < \alpha < 180^\circ$ nên $\cos \alpha < 0$ và $\tan \alpha < 0$.\\
+    Ta có: $\cos \alpha = -\sqrt{1 - \sin^2 \alpha} = -\sqrt{1 - \left(\dfrac{5}{13}\right)^2} = -\dfrac{12}{13}$.\\
+    Suy ra: $\tan \alpha = \dfrac{\sin \alpha}{\cos \alpha} = \dfrac{5/13}{-12/13} = -\dfrac{5}{12}$.\\
+    Do đó: $P = 13\cos \alpha + 12\tan \alpha = 13 \cdot \left(-\dfrac{12}{13}\right) + 12 \cdot \left(-\dfrac{5}{12}\right) = -12 - 5 = -17$. Đáp số là \textbf{-17}.
+\end{itemize}
+
+\vspace{0.15cm}
+\textbf{PHẦN IV. Tự luận}
+\begin{itemize}[leftmargin=0.6cm, itemsep=2pt, topsep=1pt]
+    \item \textbf{Câu 19:}
+    \begin{enumerate}[label=\alph*), itemsep=1pt]
+        \item Nửa chu vi tam giác $ABC$: $p = \dfrac{a + b + c}{2} = \dfrac{13 + 14 + 15}{2} = 21$.\\
+        Áp dụng công thức Heron, diện tích tam giác $ABC$ là:
+        \[
+        \begin{aligned}
+        S &= \sqrt{p(p - a)(p - b)(p - c)} = \sqrt{21 \cdot (21 - 13) \cdot (21 - 14) \cdot (21 - 15)} \\
+        &= \sqrt{21 \cdot 8 \cdot 7 \cdot 6} = \sqrt{7056} = 84.
+        \end{aligned}
+        \]
+        \item Bán kính đường tròn nội tiếp tam giác $ABC$: $r = \dfrac{S}{p} = \dfrac{84}{21} = 4$.\\
+        Độ dài đường cao $h_a$ hạ từ đỉnh $A$: $S = \dfrac{1}{2} a \cdot h_a \implies h_a = \dfrac{2S}{a} = \dfrac{2 \cdot 84}{13} = \dfrac{168}{13}$.
+    \end{enumerate}
+
+    \item \textbf{Câu 20:}
+    \begin{enumerate}[label=\alph*), itemsep=1pt]
+        \item Với $m = 2$, ta có tập hợp $A = [2 - 1; 2 + 3] = [1; 5]$.\\
+        Khi đó giao của hai tập hợp là: $A \cap B = [1; 5] \cap (-2; 4) = [1; 4)$.
+        \item Để $A \subset B$, tức $[m - 1; m + 3] \subset (-2; 4)$, điều kiện cần và đủ là:
+        \[
+        \begin{cases} -2 < m - 1 \\ m + 3 < 4 \end{cases} \iff \begin{cases} m > -1 \\ m < 1 \end{cases} \iff -1 < m < 1.
+        \]
+        Vậy các giá trị $m$ cần tìm là $-1 < m < 1$ (hay $m \in (-1; 1)$).
+    \end{enumerate}
+
+    \item \textbf{Câu 21:}
+    \begin{enumerate}[label=\alph*), itemsep=1pt]
+        \item Gọi $x, y$ lần lượt là diện tích trồng ngô và khoai lang ($x \ge 0, y \ge 0$, đơn vị: ha).\\
+        Tổng diện tích đất không quá $12\text{ ha}$: $x + y \le 12$.\\
+        Tổng số ngày công không quá $300$: $20x + 30y \le 300 \iff 2x + 3y \le 30$.\\
+        Tổng vốn đầu tư không quá $42$ triệu đồng: $4x + 3y \le 42$.\\
+        Vậy hệ bất phương trình bậc nhất hai ẩn ràng buộc là:
+        \[
+        \begin{cases} x \ge 0,\; y \ge 0 \\ x + y \le 12 \\ 2x + 3y \le 30 \\ 4x + 3y \le 42 \end{cases}
+        \]
+        \item Bác nông dân trồng $6\text{ ha}$ ngô và $5\text{ ha}$ khoai lang tương ứng với cặp số $(x; y) = (6; 5)$.\\
+        Kiểm tra cặp số $(6; 5)$ với các bất phương trình của hệ:
+        \begin{itemize}[itemsep=0.5pt]
+            \item $6 \ge 0$ và $5 \ge 0$ (thỏa mãn);
+            \item $6 + 5 = 11 \le 12$ (thỏa mãn diện tích đất);
+            \item $2(6) + 3(5) = 12 + 15 = 27 \le 30$ (thỏa mãn số ngày công);
+            \item $4(6) + 3(5) = 24 + 15 = 39 \le 42$ (thỏa mãn vốn đầu tư).
+        \end{itemize}
+        Vì cặp số $(6; 5)$ thỏa mãn tất cả các điều kiện ràng buộc của hệ, nên bác nông dân \textbf{hoàn toàn có thể} trồng $6\text{ ha}$ ngô và $5\text{ ha}$ khoai lang.
+    \end{enumerate}
+
+    \item \textbf{Câu 22:}
+    \begin{enumerate}[label=\alph*), itemsep=1pt]
+        \item Theo định lý côsin trong tam giác $ABC$:
+        \[
+        \cos C = \dfrac{a^2 + b^2 - c^2}{2ab} \implies b \cos C = \dfrac{a^2 + b^2 - c^2}{2a},
+        \]
+        \[
+        \cos B = \dfrac{a^2 + c^2 - b^2}{2ac} \implies c \cos B = \dfrac{a^2 + c^2 - b^2}{2a}.
+        \]
+        Trừ từng vế hai biểu thức:
+        \[
+        b \cos C - c \cos B = \dfrac{(a^2 + b^2 - c^2) - (a^2 + c^2 - b^2)}{2a} = \dfrac{2(b^2 - c^2)}{2a} = \dfrac{b^2 - c^2}{a}.
+        \]
+        Nhân cả hai vế với $a$, ta được đẳng thức cần chứng minh: $a(b \cos C - c \cos B) = b^2 - c^2$.
+        \item Từ giả thiết: $\sin A(\cos B + \cos C) = \sin B + \sin C$.\\
+        Theo định lý sin: $\sin A = \dfrac{a}{2R},\; \sin B = \dfrac{b}{2R},\; \sin C = \dfrac{c}{2R}$. Thay vào hệ thức:
+        \[
+        \dfrac{a}{2R}(\cos B + \cos C) = \dfrac{b + c}{2R} \iff a \cos B + a \cos C = b + c,
+        \]
+        tương đương với $(b - a \cos C) + (c - a \cos B) = 0$.
+        Mặt khác, theo công thức hình chiếu trong tam giác $ABC$: $b = a \cos C + c \cos A \implies b - a \cos C = c \cos A$, và $c = a \cos B + b \cos A \implies c - a \cos B = b \cos A$.\\
+        Do đó:
+        \[
+        c \cos A + b \cos A = 0 \iff (b + c) \cos A = 0.
+        \]
+        Vì $b, c$ là độ dài các cạnh của tam giác nên $b + c > 0$. Suy ra $\cos A = 0$.\\
+        Vì góc $A$ là một góc trong tam giác ($0^\circ < A < 180^\circ$) nên $\cos A = 0 \iff A = 90^\circ$.\\
+        Vậy tam giác $ABC$ vuông tại đỉnh $A$ (đpcm).
+    \end{enumerate}
+\end{itemize}
+
+\end{document}
