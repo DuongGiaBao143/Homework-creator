@@ -1,0 +1,537 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.5cm,top=1.4cm,bottom=1.4cm]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or Math gives us hope that every problem has a solution% Trang 7
+    \or Math + You = Champion% Trang 8
+    \or Where Frustration Becomes Inspiration% Trang 9
+    \or Turning Confusion into Clarity% Trang 10
+    \or Don't be an X, be a Y of mathematics% Trang 11
+    \or Don't get mad. Learn to add% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{1.5pt}
+\setlength{\tabcolsep}{4pt}
+\renewcommand{\arraystretch}{1.12}
+\newcommand{\parttitle}[1]{\par\vspace{2pt}{\large\bfseries\color{ink}#1}\par\vspace{1pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[2pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{12pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.4cm,labelsep=.15cm,itemsep=1.5pt,topsep=1.0pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.6cm,itemsep=1.0pt,topsep=1.0pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[4pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GK1}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 20}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.2cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0020}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.2cm}
+
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án đúng duy nhất.}
+\begin{enumerate}
+\item Cho mệnh đề $P: ``\forall x \in \mathbb{R},\; x^2 + 1 > 0"$. Mệnh đề phủ định của mệnh đề $P$ là
+\four{$\overline{P}: ``\exists x \in \mathbb{R},\; x^2 + 1 \le 0"$.}{$\overline{P}: ``\forall x \in \mathbb{R},\; x^2 + 1 \le 0"$.}{$\overline{P}: ``\exists x \in \mathbb{R},\; x^2 + 1 < 0"$.}{$\overline{P}: ``\forall x \in \mathbb{R},\; x^2 + 1 < 0"$.}
+
+\item Cho mệnh đề chứa biến $P(x): ``2x^2 - 5x + 2 = 0"$. Trong các giá trị sau, giá trị nào của $x$ làm cho $P(x)$ là mệnh đề \textbf{đúng}?
+\four{$x = 1$.}{$x = 2$.}{$x = 0$.}{$x = 3$.}
+
+\item Tập hợp các số thực $x$ thỏa mãn $-3 \le x < 4$ được biểu diễn dưới dạng khoảng, đoạn, nửa khoảng là
+\four{$(-3; 4]$.}{$[-3; 4]$.}{$[-3; 4)$.}{$(-3; 4)$.}
+
+\item Cho định lý: ``Nếu hai tam giác bằng nhau thì diện tích của chúng bằng nhau''. Phát biểu nào sau đây sử dụng thuật ngữ ``điều kiện đủ'' là \textbf{đúng}?
+\two{Diện tích hai tam giác bằng nhau là điều kiện đủ để hai tam giác đó bằng nhau.}{Hai tam giác có diện tích bằng nhau là điều kiện cần và đủ để hai tam giác đó bằng nhau.}{Hai tam giác bằng nhau là điều kiện cần để diện tích của chúng bằng nhau.}{Hai tam giác bằng nhau là điều kiện đủ để diện tích của chúng bằng nhau.}
+
+\item Đường thẳng bờ của miền nghiệm của bất phương trình $2x - 3y + 6 \le 0$ có phương trình là
+\four{$2x - 3y + 6 = 0$.}{$2x + 3y + 6 = 0$.}{$3x - 2y + 6 = 0$.}{$2x - 3y - 6 = 0$.}
+
+\item Cặp số $(x; y)$ nào sau đây là một nghiệm của hệ bất phương trình $\begin{cases} 2x - y + 1 > 0 \\ x + 3y - 6 \le 0 \end{cases}$?
+\four{$(2; 2)$.}{$(1; 1)$.}{$(0; 3)$.}{$(3; 2)$.}
+
+\item Hệ bất phương trình nào sau đây là một hệ bất phương trình bậc nhất hai ẩn?
+\four{$\begin{cases} x^2 + y \le 2 \\ x - y > 1 \end{cases}$}{$\begin{cases} x + y - z \ge 0 \\ 2x - y < 3 \end{cases}$}{$\begin{cases} 3x - y + 2 \ge 0 \\ x + 2y - 4 < 0 \end{cases}$}{$\begin{cases} xy + 1 > 0 \\ x - 2y \le 3 \end{cases}$}
+
+\item Bất phương trình nào sau đây là bất phương trình bậc nhất hai ẩn?
+\four{$2x^2 + 3y \le 0$.}{$x + y^2 > 1$.}{$2x - 3y + z \ge 4$.}{$3x - 5y + 1 \ge 0$.}
+
+\item Cho góc $\alpha$ thỏa mãn $\tan \alpha = 2$. Giá trị của biểu thức $P = \dfrac{3\sin \alpha - 2\cos \alpha}{\sin \alpha + \cos \alpha}$ bằng
+\four{$\dfrac{4}{3}$.}{$\dfrac{1}{3}$.}{$2$.}{$\dfrac{5}{3}$.}
+
+\item Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$ và bán kính đường tròn ngoại tiếp là $R$. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$\dfrac{a}{\sin A} = R$.}{$\dfrac{a}{\sin A} = 2R$.}{$\dfrac{a}{\sin A} = 4R$.}{$\dfrac{a}{\sin A} = \dfrac{R}{2}$.}
+
+\item Cho tam giác $ABC$ có cạnh $b = 5\text{ cm}$, $c = 8\text{ cm}$ và góc $\widehat{A} = 60^\circ$. Diện tích của tam giác $ABC$ bằng
+\four{$20\text{ cm}^2$.}{$20\sqrt{2}\text{ cm}^2$.}{$10\sqrt{3}\text{ cm}^2$.}{$10\text{ cm}^2$.}
+
+\item Giá trị của $\sin 150^\circ$ bằng
+\four{$-\dfrac{1}{2}$.}{$-\dfrac{\sqrt{3}}{2}$.}{$\dfrac{\sqrt{3}}{2}$.}{$\dfrac{1}{2}$.}
+\end{enumerate}
+
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Thí sinh trả lời từ câu 13 đến câu 14. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}[resume]
+\item Xét tính đúng sai của các khẳng định sau:
+\begin{enumerate}
+    \item Số $2026$ là một số chia hết cho $2$.
+    \item Tứ giác có hai đường chéo cắt nhau tại trung điểm của mỗi đường là hình bình hành.
+    \item Với mọi số thực $x$, ta luôn có $x^2 - 4x + 5 > 0$.
+    \item Tồn tại số nguyên $n$ để $n^2 + 3n + 1$ là một số chẵn.
+\end{enumerate}
+
+\item Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$ và $\sin \alpha = \dfrac{3}{5}$. Xét tính đúng sai của các khẳng định sau:
+\begin{enumerate}
+    \item Vì $90^\circ < \alpha < 180^\circ$ nên $\cos \alpha < 0$.
+    \item Giá trị của $\cos \alpha$ bằng $-\dfrac{4}{5}$.
+    \item Giá trị của $\tan \alpha$ bằng $\dfrac{3}{4}$.
+    \item Giá trị của biểu thức $P = \dfrac{\sin \alpha + 2\cos \alpha}{\tan \alpha - \cot \alpha}$ bằng $-\dfrac{12}{7}$.
+\end{enumerate}
+\end{enumerate}
+
+\parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 15 đến câu 18. Viết kết quả vào ô quy định.}
+\begin{enumerate}[resume]
+\item Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$ và $\cos \alpha = -\dfrac{5}{13}$.
+Tính giá trị của biểu thức $P = 26\sin \alpha - 5\tan \alpha$.
+\answerbox
+
+\item Một lớp học có $45$ học sinh. Qua khảo sát sở thích môn học, có $25$ học sinh thích môn Toán, $20$ học sinh thích môn Ngữ văn và $18$ học sinh thích môn Tiếng Anh. Trong đó có $12$ học sinh thích cả Toán và Ngữ văn, $8$ học sinh thích cả Ngữ văn và Tiếng Anh, $10$ học sinh thích cả Toán và Tiếng Anh; có $5$ học sinh thích cả ba môn trên. Hỏi lớp học đó có bao nhiêu học sinh không thích môn nào trong ba môn trên?
+\answerbox
+
+\item Cho hệ bất phương trình bậc nhất hai ẩn $\begin{cases} x \ge 0 \\ y \ge 0 \\ x + y \le 4 \\ 2x + y \le 6 \end{cases}$. Miền nghiệm của hệ bất phương trình chứa bao nhiêu điểm $M(x; y)$ có tọa độ là các số nguyên dương?
+\answerbox
+
+\item Bác Nam dự định trồng ngô và khoai lang trên diện tích đất $8\text{ ha}$. Mỗi ha trồng ngô cần $10$ ngày công và thu lãi $20$ triệu đồng; mỗi ha trồng khoai lang cần $15$ ngày công và thu lãi $25$ triệu đồng. Biết rằng tổng số ngày công gia đình có không quá $90$ ngày công. Tính số tiền lãi lớn nhất mà bác Nam có thể thu được (đơn vị: triệu đồng).
+\answerbox
+\end{enumerate}
+
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày lời giải chi tiết từ câu 19 đến câu 22.}
+\begin{enumerate}[resume]
+\item \textit{(1,0 điểm)} \begin{minipage}[t]{0.60\linewidth}
+Một bức tranh phong cảnh có chiều cao $AB = 1{,}6\text{ m}$ được treo thẳng đứng trên một bức tường phẳng. Một người quan sát đứng ngắm bức tranh sao cho tầm mắt ở vị trí điểm $O$, cách mặt đất một khoảng cố định và thẳng hàng với chân tường tại điểm $H$ ($OH \perp HB$). Biết mép dưới $A$ của bức tranh cách tầm mắt người xem một khoảng $AH = 0{,}9\text{ m}$ (như hình vẽ bên).
+\begin{enumerate}
+    \item Gọi $x$ (mét, $x > 0$) là khoảng cách $OH$ từ người quan sát đến tường. Biểu diễn $\tan \widehat{AOB}$ theo $x$.
+    \item Người quan sát cần đứng cách bức tường một khoảng $x$ bằng bao nhiêu mét để góc nhìn bức tranh $\widehat{AOB}$ đạt giá trị lớn nhất?
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.37\linewidth}
+\centering
+\begin{tikzpicture}[scale=0.9, every node/.style={scale=0.85}]
+    % Tường thẳng đứng
+    \draw[line width=1.4pt, gray!60!black] (3.0,-0.4) -- (3.0,3.6) node[above, font=\bfseries] {Tường};
+    % Nền phương ngang
+    \draw[dashed, gray] (-0.2,0) -- (3.0,0);
+    
+    % Các điểm
+    \coordinate (O) at (0,0);
+    \coordinate (H) at (3.0,0);
+    \coordinate (A) at (3.0,0.9);
+    \coordinate (B) at (3.0,2.5);
+
+    % Bức tranh AB
+    \draw[line width=3.5pt, orange!90!black] (A) -- (B);
+    \node[right, font=\bfseries, orange!90!black] at (3.0,1.7) {Bức tranh};
+
+    % Tia ngắm
+    \draw[thick, ink] (O) node[left] {$O\text{ (mắt)}$} -- (H) node[below right] {$H$};
+    \draw[thick, blue!80!black] (O) -- (A) node[above right] {$A$};
+    \draw[thick, teal!80!black] (O) -- (B) node[above right] {$B$};
+
+    % Ký hiệu góc vuông tại H
+    \draw (2.7,0) -- (2.7,0.3) -- (3.0,0.3);
+
+    % Chấm điểm
+    \filldraw[black] (O) circle (2pt);
+    \filldraw[black] (H) circle (2pt);
+    \filldraw[blue!80!black] (A) circle (2pt);
+    \filldraw[teal!80!black] (B) circle (2pt);
+
+    % Nhãn kích thước
+    \node[below] at (1.5,0) {$x = OH$};
+    \draw[<->, >=Stealth, red!80!black] (3.5,0) -- (3.5,0.9) node[midway, right] {$0{,}9\text{ m}$};
+    \draw[<->, >=Stealth, red!80!black] (3.5,0.9) -- (3.5,2.5) node[midway, right] {$1{,}6\text{ m}$};
+\end{tikzpicture}
+\end{minipage}
+
+\item \textit{(0,75 điểm)} Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$ và diện tích $S$.
+\begin{enumerate}
+    \item Chứng minh rằng: $S = \dfrac{1}{4}(a^2 + b^2 - c^2)\tan C$.
+    \item Chứng minh rằng nếu các góc của tam giác thỏa mãn hệ thức $\sin A = 2\sin B \cos C$ thì tam giác $ABC$ là một tam giác cân tại đỉnh $A$.
+\end{enumerate}
+
+\item \textit{(0,75 điểm)} Cho hai tập hợp số $A = [-3; 2)$ và $B = (0; 5]$.
+\begin{enumerate}
+    \item Xác định các tập hợp $A \cap B$, $A \cup B$, $A \setminus B$ và $B \setminus A$.
+    \item Biểu diễn tập hợp $A \cap B$ và $A \cup B$ trên trục số.
+\end{enumerate}
+
+\item \textit{(0,5 điểm)} Trong mặt phẳng tọa độ $Oxy$:
+\begin{enumerate}
+    \item Vẽ đường thẳng $d: 2x - y - 2 = 0$.
+    \item Biểu diễn hình học miền nghiệm của bất phương trình $2x - y - 2 \le 0$ trên mặt phẳng tọa độ $Oxy$ (gạch bỏ phần nửa mặt phẳng không thuộc miền nghiệm và nêu rõ kết luận).
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+% =========================================================================
+% BẢNG ĐÁP ÁN VÀ LỜI GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\vspace{0.2cm}
+\textbf{1. Phần I: Trắc nghiệm nhiều lựa chọn}
+\begin{center}
+{\setlength{\tabcolsep}{2.5pt}\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} & \textbf{Câu 5} & \textbf{Câu 6} & \textbf{Câu 7} & \textbf{Câu 8} & \textbf{Câu 9} & \textbf{Câu 10} & \textbf{Câu 11} & \textbf{Câu 12} \\
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{2. Phần II: Trắc nghiệm đúng/sai}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu hỏi} & \textbf{Ý a)} & \textbf{Ý b)} & \textbf{Ý c)} & \textbf{Ý d)} \\
+\hline
+\textbf{Câu 13} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} \\
+\hline
+\textbf{Câu 14} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} & \textbf{Đúng} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{3. Phần III: Trắc nghiệm trả lời ngắn}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Câu 15} & \textbf{Câu 16} & \textbf{Câu 17} & \textbf{Câu 18} \\
+\hline
+\textbf{36} & \textbf{7} & \textbf{5} & \textbf{170} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{4. Phần IV: Tự luận}
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Câu hỏi} & \textbf{Kết quả tóm tắt} \\
+\hline
+\textbf{Câu 19} & a) $\tan \widehat{AOB} = \dfrac{1{,}6x}{x^2 + 2{,}25}$;\quad b) Góc nhìn lớn nhất khi $x = 1{,}5\text{ m}$ (với $\tan \widehat{AOB} = \dfrac{8}{15}$). \\
+\hline
+\textbf{Câu 20} & a) Dùng định lý côsin $a^2 + b^2 - c^2 = 2ab\cos C \implies S = \dfrac{1}{4}(a^2+b^2-c^2)\tan C$;\newline b) $\sin A = 2\sin B \cos C \iff a = \dfrac{a^2+b^2-c^2}{a} \iff b = c \implies \Delta ABC$ cân tại $A$. \\
+\hline
+\textbf{Câu 21} & a) $A \cap B = (0; 2)$, $A \cup B = [-3; 5]$, $A \setminus B = [-3; 0]$, $B \setminus A = [2; 5]$;\newline b) Biểu diễn chính xác các khoảng, đoạn trên hai trục số. \\
+\hline
+\textbf{Câu 22} & a) $d$ qua $(0; -2)$ và $(1; 0)$;\quad b) Miền nghiệm là nửa mặt phẳng bờ $d$ chứa gốc tọa độ $O(0; 0)$ (kể cả bờ $d$). \\
+\hline
+\end{tabularx}
+\end{center}
+
+\vspace{0.4cm}
+% =========================================================================
+% HÌNH VẼ BIỂU DIỄN MIỀN NGHIỆM (HỆ BẤT PHƯƠNG TRÌNH)
+% =========================================================================
+\parttitle{HÌNH VẼ BIỂU DIỄN MIỀN NGHIỆM (HỆ BẤT PHƯƠNG TRÌNH)}
+
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\textbf{Hình 1: Miền nghiệm Câu 18 (Quy hoạch tuyến tính)}\\[6pt]
+\begin{tikzpicture}[scale=0.55, >=Stealth]
+    % Trục toạ độ
+    \draw[line width=1.2pt, ->] (-1.0,0) -- (10.0,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-1.0) -- (0,8.5) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left, font=\normalsize\bfseries] at (0,0) {$O$};
+
+    % Đa giác nghiệm O(0;0), A(8;0), B(6;2), C(0;6)
+    \fill[fill=ink!18] (0,0) -- (8,0) -- (6,2) -- (0,6) -- cycle;
+    \draw[line width=1.8pt, blue!70!black] (0,0) -- (8,0) -- (6,2) -- (0,6) -- cycle;
+
+    % d1: x + y = 8 (cắt (8;0) và (0;8))
+    \draw[line width=1.1pt, dashed, red!80!black] (4.5, 3.5) -- (8.8, -0.8) node[below right, font=\small] {$d_1: x+y=8$};
+    % d2: 2x + 3y = 18 (cắt (9;0) và (0;6))
+    \draw[line width=1.1pt, dashed, teal!80!black] (-0.8, 6.53) -- (9.8, -0.53) node[above right, font=\small] {$d_2: 2x+3y=18$};
+
+    % Đỉnh
+    \filldraw[black] (0,0) circle (3pt);
+    \filldraw[black] (8,0) circle (3.5pt) node[below, font=\normalsize\bfseries] {$A(8;0)$};
+    \filldraw[black] (6,2) circle (3.5pt) node[above right, font=\normalsize\bfseries] {$B(6;2)$};
+    \filldraw[black] (0,6) circle (3.5pt) node[left, font=\normalsize\bfseries] {$C(0;6)$};
+
+    % Dóng tọa độ B
+    \draw[dotted, thick] (6,0) node[below, font=\small] {$6$} -- (6,2) -- (0,2) node[left, font=\small] {$2$};
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.48\textwidth}
+\centering
+\textbf{Hình 2: Miền nghiệm Câu 22 ($2x - y - 2 \le 0$)}\\[6pt]
+\begin{tikzpicture}[scale=0.75, >=Stealth]
+    % Trục toạ độ
+    \draw[line width=1.2pt, ->] (-2.5,0) -- (4.0,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-3.5) -- (0,3.5) node[above, font=\normalsize\bfseries] {$y$};
+    \node[above left, font=\normalsize\bfseries] at (0,0) {$O$};
+
+    % Miền nghiệm nửa mặt phẳng chứa O(0;0)
+    % Cắt miền [-2.2, 3.5] x [-3.2, 3.2]
+    \fill[fill=ink!18] (-2.2, 3.2) -- (2.6, 3.2) -- (-0.6, -3.2) -- (-2.2, -3.2) -- cycle;
+
+    % Đường thẳng bờ d: 2x - y - 2 = 0 <=> y = 2x - 2
+    \draw[line width=1.8pt, teal!80!black] (-0.6, -3.2) -- (2.6, 3.2) node[above right, font=\normalsize\bfseries] {$d: 2x - y - 2 = 0$};
+
+    % Điểm A(0; -2) và B(1; 0)
+    \filldraw[black] (0,-2) circle (3.5pt) node[right, font=\normalsize\bfseries] {$A(0;-2)$};
+    \filldraw[black] (1,0) circle (3.5pt) node[below right, font=\normalsize\bfseries] {$B(1;0)$};
+    \filldraw[black] (0,0) circle (3pt);
+\end{tikzpicture}
+\end{minipage}
+
+\newpage
+% =========================================================================
+% HƯỚNG DẪN GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{HƯỚNG DẪN GIẢI CHI TIẾT}
+
+\textbf{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\begin{itemize}[leftmargin=0.6cm, itemsep=3pt]
+    \item \textbf{Câu 1:} Phủ định của mệnh đề chứa ký hiệu với mọi ``$\forall x \in X,\; P(x)$'' là mệnh đề ``$\exists x \in X,\; \overline{P(x)}$''. Phủ định của $x^2 + 1 > 0$ là $x^2 + 1 \le 0$. Do đó $\overline{P}: ``\exists x \in \mathbb{R},\; x^2 + 1 \le 0"$. Chọn \textbf{A}.
+    \item \textbf{Câu 2:} Thay $x = 2$ vào phương trình ta được $2(2)^2 - 5(2) + 2 = 8 - 10 + 2 = 0$ (mệnh đề đúng). Chọn \textbf{B}.
+    \item \textbf{Câu 3:} Tập hợp các số thực $x$ thỏa mãn $-3 \le x < 4$ lấy đầu mút $-3$ (ngoặc vuông) và không lấy đầu mút $4$ (ngoặc tròn), được ký hiệu là nửa khoảng $[-3; 4)$. Chọn \textbf{C}.
+    \item \textbf{Câu 4:} Mệnh đề có dạng $P \Rightarrow Q$: ``Nếu hai tam giác bằng nhau ($P$) thì diện tích của chúng bằng nhau ($Q$)''. Khi đó $P$ là điều kiện đủ để có $Q$, tức ``Hai tam giác bằng nhau là điều kiện đủ để diện tích của chúng bằng nhau''. Chọn \textbf{D}.
+    \item \textbf{Câu 5:} Đường thẳng bờ của miền nghiệm của bất phương trình $2x - 3y + 6 \le 0$ là đường thẳng $2x - 3y + 6 = 0$. Chọn \textbf{A}.
+    \item \textbf{Câu 6:} Thay tọa độ $(1; 1)$ vào hệ bất phương trình:
+    $\begin{cases} 2(1) - 1 + 1 = 2 > 0 \\ 1 + 3(1) - 6 = -2 \le 0 \end{cases}$ (thỏa mãn cả hai bất phương trình). Chọn \textbf{B}.
+    \item \textbf{Câu 7:} Hệ bất phương trình bậc nhất hai ẩn chỉ chứa các ẩn $x, y$ với bậc cao nhất là bậc 1 và không có tích các ẩn. Hệ $\begin{cases} 3x - y + 2 \ge 0 \\ x + 2y - 4 < 0 \end{cases}$ thỏa mãn định nghĩa. Chọn \textbf{C}.
+    \item \textbf{Câu 8:} Bất phương trình $3x - 5y + 1 \ge 0$ là bất phương trình bậc nhất hai ẩn $x, y$. Các phương án khác chứa $x^2, y^2$ hoặc ẩn thứ ba $z$. Chọn \textbf{D}.
+    \item \textbf{Câu 9:} Do $\tan \alpha = 2 \implies \cos \alpha \ne 0$. Chia cả tử và mẫu của biểu thức $P$ cho $\cos \alpha$:
+    \[
+    P = \dfrac{3\dfrac{\sin \alpha}{\cos \alpha} - 2}{\dfrac{\sin \alpha}{\cos \alpha} + 1} = \dfrac{3\tan \alpha - 2}{\tan \alpha + 1} = \dfrac{3(2) - 2}{2 + 1} = \dfrac{4}{3}.
+    \]
+    Chọn \textbf{A}.
+    \item \textbf{Câu 10:} Theo định lý sin trong tam giác $ABC$, ta có $\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2R$. Chọn \textbf{B}.
+    \item \textbf{Câu 11:} Diện tích tam giác $ABC$ tính theo công thức:
+    \[
+    S = \dfrac{1}{2}bc\sin A = \dfrac{1}{2} \cdot 5 \cdot 8 \cdot \sin 60^\circ = 20 \cdot \dfrac{\sqrt{3}}{2} = 10\sqrt{3}\text{ cm}^2.
+    \]
+    Chọn \textbf{C}.
+    \item \textbf{Câu 12:} Sử dụng mối liên hệ giữa hai góc bù nhau: $\sin 150^\circ = \sin(180^\circ - 30^\circ) = \sin 30^\circ = \dfrac{1}{2}$. Chọn \textbf{D}.
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{PHẦN II. Trắc nghiệm đúng/sai}
+\begin{itemize}[leftmargin=0.6cm, itemsep=3pt]
+    \item \textbf{Câu 13:}
+    \begin{enumerate}
+        \item \textbf{Đúng:} Số $2026$ có chữ số tận cùng là $6$ nên chia hết cho $2$.
+        \item \textbf{Đúng:} Đây là dấu hiệu nhận biết hình bình hành đã học trong hình học THCS.
+        \item \textbf{Đúng:} Ta có $x^2 - 4x + 5 = (x - 2)^2 + 1$. Vì $(x - 2)^2 \ge 0$ với mọi $x \in \mathbb{R}$ nên $(x - 2)^2 + 1 \ge 1 > 0,\; \forall x \in \mathbb{R}$.
+        \item \textbf{Sai:} Với mọi số nguyên $n$, hai số $n$ và $n + 3$ luôn khác tính chẵn lẻ, do đó tích $n(n + 3) = n^2 + 3n$ luôn là một số chẵn. Suy ra $n^2 + 3n + 1$ luôn là một số lẻ với mọi $n \in \mathbb{Z}$. Vậy không tồn tại số nguyên $n$ nào để biểu thức nhận giá trị chẵn.
+    \end{enumerate}
+
+    \item \textbf{Câu 14:}
+    \begin{enumerate}
+        \item \textbf{Đúng:} Với góc tù $90^\circ < \alpha < 180^\circ$, điểm biểu diễn trên nửa đường tròn đơn vị có hoành độ âm nên $\cos \alpha < 0$.
+        \item \textbf{Đúng:} $\cos^2 \alpha = 1 - \sin^2 \alpha = 1 - \left(\dfrac{3}{5}\right)^2 = \dfrac{16}{25}$. Vì $\cos \alpha < 0$ nên $\cos \alpha = -\sqrt{\dfrac{16}{25}} = -\dfrac{4}{5}$.
+        \item \textbf{Sai:} $\tan \alpha = \dfrac{\sin \alpha}{\cos \alpha} = \dfrac{3/5}{-4/5} = -\dfrac{3}{4} \ne \dfrac{3}{4}$.
+        \item \textbf{Đúng:} Ta có $\cot \alpha = \dfrac{1}{\tan \alpha} = -\dfrac{4}{3}$. Khi đó:
+        \[
+        \text{Tử} = \sin \alpha + 2\cos \alpha = \dfrac{3}{5} + 2\left(-\dfrac{4}{5}\right) = -1.
+        \]
+        \[
+        \text{Mẫu} = \tan \alpha - \cot \alpha = -\dfrac{3}{4} - \left(-\dfrac{4}{3}\right) = -\dfrac{3}{4} + \dfrac{4}{3} = \dfrac{7}{12}.
+        \]
+        Suy ra $P = \dfrac{-1}{7/12} = -\dfrac{12}{7}$.
+    \end{enumerate}
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{PHẦN III. Trắc nghiệm trả lời ngắn}
+\begin{itemize}[leftmargin=0.6cm, itemsep=3pt]
+    \item \textbf{Câu 15:} Vì $90^\circ < \alpha < 180^\circ$ nên $\sin \alpha > 0$.
+    Ta có $\sin \alpha = \sqrt{1 - \cos^2 \alpha} = \sqrt{1 - \left(-\dfrac{5}{13}\right)^2} = \sqrt{\dfrac{144}{169}} = \dfrac{12}{13}$.
+    Suy ra $\tan \alpha = \dfrac{\sin \alpha}{\cos \alpha} = \dfrac{12/13}{-5/13} = -\dfrac{12}{5}$.
+    Giá trị của $P$:
+    \[
+    P = 26\left(\dfrac{12}{13}\right) - 5\left(-\dfrac{12}{5}\right) = 24 - (-12) = 24 + 12 = 36.
+    \]
+    \textbf{Đáp số:} $36$.
+
+    \item \textbf{Câu 16:} Gọi $T, V, A$ lần lượt là tập hợp các học sinh thích môn Toán, Ngữ văn và Tiếng Anh.
+    Áp dụng công thức số phần tử của hợp ba tập hợp hữu hạn:
+    \[
+    |T \cup V \cup A| = |T| + |V| + |A| - (|T \cap V| + |V \cap A| + |T \cap A|) + |T \cap V \cap A|
+    \]
+    \[
+    |T \cup V \cup A| = 25 + 20 + 18 - (12 + 8 + 10) + 5 = 63 - 30 + 5 = 38\text{ (học sinh)}.
+    \]
+    Số học sinh không thích môn nào trong ba môn là: $45 - 38 = 7$ (học sinh).
+    \textbf{Đáp số:} $7$.
+
+    \item \textbf{Câu 17:} Điểm $M(x; y)$ có tọa độ là các số nguyên dương nên $x, y \in \mathbb{Z}^+$ ($x \ge 1, y \ge 1$).
+    Từ hệ bất phương trình:
+    \begin{itemize}
+        \item Với $x = 1$: $\begin{cases} y \le 4 - 1 = 3 \\ y \le 6 - 2 = 4 \end{cases} \iff 1 \le y \le 3 \implies y \in \{1; 2; 3\}$ (có $3$ điểm).
+        \item Với $x = 2$: $\begin{cases} y \le 4 - 2 = 2 \\ y \le 6 - 4 = 2 \end{cases} \iff 1 \le y \le 2 \implies y \in \{1; 2\}$ (có $2$ điểm).
+        \item Với $x = 3$: $\begin{cases} y \le 4 - 3 = 1 \\ y \le 6 - 6 = 0 \end{cases} \implies y \le 0$ (không có $y$ nguyên dương thỏa mãn).
+        \item Với $x \ge 4$: $2x + y \ge 2(4) + 1 = 9 > 6$ (không có điểm thỏa mãn).
+    \end{itemize}
+    Vậy có tất cả $3 + 2 = 5$ điểm nguyên dương thuộc miền nghiệm.
+    \textbf{Đáp số:} $5$.
+
+    \item \textbf{Câu 18:} Gọi $x, y$ (ha) lần lượt là diện tích đất dùng để trồng ngô và khoai lang ($x \ge 0, y \ge 0$).
+    Theo bài ra ta có hệ ràng buộc:
+    \[
+    \begin{cases} x \ge 0 \\ y \ge 0 \\ x + y \le 8 \\ 10x + 15y \le 90 \iff 2x + 3y \le 18 \end{cases}
+    \]
+    Hàm lợi nhuận thu được: $F(x, y) = 20x + 25y$ (triệu đồng).
+    Miền nghiệm của hệ là miền tứ giác $OABC$ với tọa độ các đỉnh:
+    - $O(0; 0) \implies F(0, 0) = 0$.
+    - $A(8; 0) \implies F(8, 0) = 20(8) = 160$ triệu đồng.
+    - $B(6; 2)$ (giao điểm của $x + y = 8$ và $2x + 3y = 18$) $\implies F(6, 2) = 20(6) + 25(2) = 170$ triệu đồng.
+    - $C(0; 6)$ (giao điểm của $2x + 3y = 18$ với trục $Oy$) $\implies F(0, 6) = 25(6) = 150$ triệu đồng.
+    Vậy số tiền lãi lớn nhất thu được là $170$ triệu đồng.
+    \textbf{Đáp số:} $170$.
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{PHẦN IV. Tự luận}
+\begin{itemize}[leftmargin=0.6cm, itemsep=4pt]
+    \item \textbf{Câu 19:}
+    \begin{enumerate}
+        \item Trong tam giác vuông $OHA$ vuông tại $H$: $\tan \widehat{AOH} = \dfrac{AH}{OH} = \dfrac{0{,}9}{x}$.\\
+        Độ dài đoạn thẳng $HB = HA + AB = 0{,}9 + 1{,}6 = 2{,}5\text{ m}$.\\
+        Trong tam giác vuông $OHB$ vuông tại $H$: $\tan \widehat{BOH} = \dfrac{HB}{OH} = \dfrac{2{,}5}{x}$.\\
+        Vì tia $OA$ nằm giữa hai tia $OH$ và $OB$ nên $\widehat{AOB} = \widehat{BOH} - \widehat{AOH}$.\\
+        Áp dụng công thức biến đổi tang của một hiệu:
+        \[
+        \tan \widehat{AOB} = \dfrac{\tan \widehat{BOH} - \tan \widehat{AOH}}{1 + \tan \widehat{BOH} \cdot \tan \widehat{AOH}} = \dfrac{\dfrac{2{,}5}{x} - \dfrac{0{,}9}{x}}{1 + \dfrac{2{,}5}{x} \cdot \dfrac{0{,}9}{x}} = \dfrac{\dfrac{1{,}6}{x}}{\dfrac{x^2 + 2{,}25}{x^2}} = \dfrac{1{,}6x}{x^2 + 2{,}25}.
+        \]
+        \item Chia cả tử và mẫu cho $x > 0$, ta có:
+        \[
+        \tan \widehat{AOB} = \dfrac{1{,}6}{x + \dfrac{2{,}25}{x}}.
+        \]
+        Áp dụng bất đẳng thức Cauchy cho hai số dương $x$ và $\dfrac{2{,}25}{x}$:
+        \[
+        x + \dfrac{2{,}25}{x} \ge 2\sqrt{x \cdot \dfrac{2{,}25}{x}} = 2\sqrt{2{,}25} = 2 \cdot 1{,}5 = 3.
+        \]
+        Do đó $\tan \widehat{AOB} \le \dfrac{1{,}6}{3} = \dfrac{8}{15}$.\\
+        Vì hàm số tang đồng biến trên khoảng nhọn $(0^\circ; 90^\circ)$ nên góc $\widehat{AOB}$ đạt giá trị lớn nhất khi và chỉ khi $\tan \widehat{AOB}$ lớn nhất, tức bằng $\dfrac{8}{15}$.\\
+        Dấu đẳng thức xảy ra khi:
+        \[
+        x = \dfrac{2{,}25}{x} \iff x^2 = 2{,}25 \iff x = 1{,}5\text{ (m) (do } x > 0\text{)}.
+        \]
+        Vậy người quan sát cần đứng cách bức tường $1{,}5\text{ m}$ để góc nhìn bức tranh là lớn nhất.
+    \end{enumerate}
+
+    \item \textbf{Câu 20:}
+    \begin{enumerate}
+        \item Theo định lý côsin trong tam giác $ABC$:
+        \[
+        c^2 = a^2 + b^2 - 2ab\cos C \implies a^2 + b^2 - c^2 = 2ab\cos C.
+        \]
+        Thay vào vế phải ta được:
+        \[
+        \text{VP} = \dfrac{1}{4}(a^2 + b^2 - c^2)\tan C = \dfrac{1}{4}(2ab\cos C) \cdot \dfrac{\sin C}{\cos C} = \dfrac{1}{2}ab\sin C = S = \text{VT (đpcm)}.
+        \]
+        \item Theo định lý sin: $\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = 2R \implies \sin A = \dfrac{a}{2R},\; \sin B = \dfrac{b}{2R}$.\\
+        Theo định lý côsin: $\cos C = \dfrac{a^2 + b^2 - c^2}{2ab}$.\\
+        Thay vào hệ thức $\sin A = 2\sin B \cos C$, ta được:
+        \[
+        \dfrac{a}{2R} = 2 \cdot \dfrac{b}{2R} \cdot \dfrac{a^2 + b^2 - c^2}{2ab} \iff a = \dfrac{a^2 + b^2 - c^2}{a} \iff a^2 = a^2 + b^2 - c^2
+        \]
+        \[
+        \iff b^2 - c^2 = 0 \iff b^2 = c^2 \iff b = c\text{ (do } b, c > 0\text{)}.
+        \]
+        Vì $b = c$ nên tam giác $ABC$ cân tại đỉnh $A$ (đpcm).
+    \end{enumerate}
+
+    \item \textbf{Câu 21:}
+    \begin{enumerate}
+        \item Với $A = [-3; 2)$ và $B = (0; 5]$:
+        \begin{itemize}
+            \item $A \cap B = (0; 2)$.
+            \item $A \cup B = [-3; 5]$.
+            \item $A \setminus B = [-3; 0]$.
+            \item $B \setminus A = [2; 5]$.
+        \end{itemize}
+        \item Biểu diễn trên trục số:
+        \begin{itemize}
+            \item Biểu diễn tập hợp $A \cap B = (0; 2)$: Vẽ trục số $Ox$, xác định hai mốc $0$ và $2$. Dùng dấu ngoặc tròn $($ tại điểm $0$ và dấu ngoặc tròn $)$ tại điểm $2$; gạch bỏ phần bên ngoài khoảng $(0; 2)$.
+            \item Biểu diễn tập hợp $A \cup B = [-3; 5]$: Vẽ trục số $Ox$, xác định hai mốc $-3$ và $5$. Dùng dấu ngoặc vuông $[$ tại điểm $-3$ và dấu ngoặc vuông $]$ tại điểm $5$; gạch bỏ phần bên ngoài đoạn $[-3; 5]$.
+        \end{itemize}
+    \end{enumerate}
+
+    \item \textbf{Câu 22:}
+    \begin{enumerate}
+        \item Vẽ đường thẳng $d: 2x - y - 2 = 0$:
+        \begin{itemize}
+            \item Cho $x = 0 \implies y = -2$, ta được điểm $A(0; -2)$.
+            \item Cho $y = 0 \implies x = 1$, ta được điểm $B(1; 0)$.
+        \end{itemize}
+        Vẽ đường thẳng $d$ đi qua hai điểm $A(0; -2)$ và $B(1; 0)$.
+        \item Biểu diễn hình học miền nghiệm:
+        \begin{itemize}
+            \item Lấy điểm gốc tọa độ $O(0; 0) \notin d$. Thay tọa độ điểm $O$ vào vế trái của bất phương trình:
+            \[
+            2(0) - 0 - 2 = -2 \le 0\text{ (khẳng định đúng)}.
+            \]
+            \item Vậy miền nghiệm của bất phương trình $2x - y - 2 \le 0$ là nửa mặt phẳng có bờ là đường thẳng $d$, chứa gốc tọa độ $O(0; 0)$ (kể cả bờ $d$).
+            \item Trên hình vẽ (như Hình 2 ở phần trên), ta gạch bỏ phần nửa mặt phẳng bờ $d$ không chứa gốc tọa độ $O(0; 0)$.
+        \end{itemize}
+    \end{enumerate}
+\end{itemize}
+
+\end{document}

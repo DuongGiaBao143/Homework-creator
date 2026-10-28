@@ -1,0 +1,310 @@
+{
+  "exam": 20,
+  "duration_minutes": 90,
+  "matrix_id": "giua_ki_1_ba_mach",
+  "sample_seed": 565050991,
+  "authoring": "Biên soạn theo Khung phân bổ Blueprint Quota và Ngân hàng dạng bài Skill Pool GDPT 2018.",
+  "answer_output": "Bảng đáp án tổng hợp, hướng dẫn giải chi tiết và hình vẽ miền nghiệm hệ BPT riêng biệt.",
+  "questions": [
+    {
+      "section": "I",
+      "number": 1,
+      "topic": "menh_de_tap_hop",
+      "level": "NB",
+      "skill_id": "MD_NB_04",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-menh-de-va-tap-hop.pdf",
+      "dataset_page": 7,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 6,
+      "scope_reason": "Phát biểu và nhận biết mệnh đề phủ định của mệnh đề chứa ký hiệu với mọi."
+    },
+    {
+      "section": "I",
+      "number": 2,
+      "topic": "menh_de_tap_hop",
+      "level": "NB",
+      "skill_id": "MD_NB_03",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/Ngân hàng câu hỏi ôn tập chương mệnh đề và tập hợp Toán 10 – Lê Minh Kha.pdf",
+      "dataset_page": 114,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 6,
+      "scope_reason": "Nhận biết mệnh đề chứa biến và tìm giá trị của biến để mệnh đề trở thành khẳng định đúng."
+    },
+    {
+      "section": "I",
+      "number": 3,
+      "topic": "menh_de_tap_hop",
+      "level": "NB",
+      "skill_id": "TH_NB_04",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/dai-cuong-ve-cac-phep-dem-va-bai-toan-xac-suat-mai-tran-nhat-khoa.pdf",
+      "dataset_page": 6,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 6,
+      "scope_reason": "Nhận biết các tập con của tập số thực dưới dạng khoảng, đoạn, nửa khoảng."
+    },
+    {
+      "section": "I",
+      "number": 4,
+      "topic": "menh_de_tap_hop",
+      "level": "NB",
+      "skill_id": "MD_NB_05",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-menh-de-va-tap-hop.pdf",
+      "dataset_page": 5,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 6,
+      "scope_reason": "Nhận biết mệnh đề kéo theo và phát biểu định lý dưới dạng điều kiện cần, điều kiện đủ."
+    },
+    {
+      "section": "I",
+      "number": 5,
+      "topic": "bpt_hai_an",
+      "level": "NB",
+      "skill_id": "BPT_NB_05",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-bpt-va-he-bpt-bac-nhat-hai-an.pdf",
+      "dataset_page": 58,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 23,
+      "scope_reason": "Xác định phương trình đường thẳng bờ của nửa mặt phẳng miền nghiệm."
+    },
+    {
+      "section": "I",
+      "number": 6,
+      "topic": "bpt_hai_an",
+      "level": "NB",
+      "skill_id": "BPT_NB_04",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/chuyen-de-bpt-va-he-bpt-bac-nhat-hai-an-toan-10-dinh-huong-cau-truc-moi.pdf",
+      "dataset_page": 99,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 23,
+      "scope_reason": "Kiểm tra cặp số điểm có là nghiệm của hệ bất phương trình bậc nhất hai ẩn."
+    },
+    {
+      "section": "I",
+      "number": 7,
+      "topic": "bpt_hai_an",
+      "level": "NB",
+      "skill_id": "BPT_NB_02",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-bpt-va-he-bpt-bac-nhat-hai-an.pdf",
+      "dataset_page": 3,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 23,
+      "scope_reason": "Nhận dạng hệ bất phương trình bậc nhất hai ẩn."
+    },
+    {
+      "section": "I",
+      "number": 8,
+      "topic": "bpt_hai_an",
+      "level": "NB",
+      "skill_id": "BPT_NB_01",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-bpt-va-he-bpt-bac-nhat-hai-an.pdf",
+      "dataset_page": 6,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 23,
+      "scope_reason": "Nhận dạng bất phương trình bậc nhất hai ẩn."
+    },
+    {
+      "section": "I",
+      "number": 9,
+      "topic": "he_thuc_luong",
+      "level": "TH",
+      "skill_id": "LG_TH_02",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/chuyen-de-he-thuc-luong-trong-tam-giac-mon-toan-10-chuong-trinh-moi.pdf",
+      "dataset_page": 5,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 34,
+      "scope_reason": "Tính giá trị của biểu thức phân thức lượng giác đồng bậc khi biết giá trị tan alpha."
+    },
+    {
+      "section": "I",
+      "number": 10,
+      "topic": "he_thuc_luong",
+      "level": "NB",
+      "skill_id": "HTL_NB_02",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/chuyen-de-toan-10-chuong-he-thuc-luong-trong-tam-giac-va-ung-dung.pdf",
+      "dataset_page": 82,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 34,
+      "scope_reason": "Nhận dạng công thức định lý sin trong tam giác và bán kính ngoại tiếp R."
+    },
+    {
+      "section": "I",
+      "number": 11,
+      "topic": "he_thuc_luong",
+      "level": "TH",
+      "skill_id": "HTL_TH_02",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-he-thuc-luong-trong-tam-giac.pdf",
+      "dataset_page": 25,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 34,
+      "scope_reason": "Tính diện tích tam giác theo hai cạnh và sin của góc xen giữa."
+    },
+    {
+      "section": "I",
+      "number": 12,
+      "topic": "he_thuc_luong",
+      "level": "NB",
+      "skill_id": "LG_NB_01",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/chuyen-de-he-thuc-luong-trong-tam-giac-mon-toan-10-chuong-trinh-moi.pdf",
+      "dataset_page": 59,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 34,
+      "scope_reason": "Nhận dạng giá trị lượng giác của góc tù đặc biệt 150 độ."
+    },
+    {
+      "section": "II",
+      "number": 1,
+      "topic": "menh_de_tap_hop",
+      "level": "mixed",
+      "skill_id": "MD_NB_02",
+      "statements": [
+        {
+          "id": "a",
+          "level": "NB"
+        },
+        {
+          "id": "b",
+          "level": "NB"
+        },
+        {
+          "id": "c",
+          "level": "TH"
+        },
+        {
+          "id": "d",
+          "level": "TH"
+        }
+      ],
+      "dataset_source": "Nguon_Tai_Lieu/dataset/phuong-phap-giai-toan-va-bai-tap-chuyen-de-menh-de-va-tap-hop-toan-10.pdf",
+      "dataset_page": 7,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 6,
+      "scope_reason": "Xét tính đúng sai của các khẳng định mệnh đề số học, hình học và mệnh đề chứa ký hiệu với mọi, tồn tại."
+    },
+    {
+      "section": "II",
+      "number": 2,
+      "topic": "he_thuc_luong",
+      "level": "mixed",
+      "skill_id": "LG_TH_01",
+      "statements": [
+        {
+          "id": "a",
+          "level": "NB"
+        },
+        {
+          "id": "b",
+          "level": "NB"
+        },
+        {
+          "id": "c",
+          "level": "TH"
+        },
+        {
+          "id": "d",
+          "level": "TH"
+        }
+      ],
+      "dataset_source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-he-thuc-luong-trong-tam-giac.pdf",
+      "dataset_page": 17,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 34,
+      "scope_reason": "Xác định dấu giá trị lượng giác của góc tù, tính cosin, tan và giá trị biểu thức lượng giác cơ bản."
+    },
+    {
+      "section": "III",
+      "number": 1,
+      "topic": "he_thuc_luong",
+      "level": "TH",
+      "skill_id": "LG_TH_01",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/chuyen-de-he-thuc-luong-trong-tam-giac-mon-toan-10-chuong-trinh-moi.pdf",
+      "dataset_page": 62,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 34,
+      "scope_reason": "Tính các giá trị lượng giác sin, tan của góc tù khi biết cosin và tính giá trị biểu thức bậc nhất lượng giác."
+    },
+    {
+      "section": "III",
+      "number": 2,
+      "topic": "menh_de_tap_hop",
+      "level": "VD",
+      "skill_id": "TH_VD_02",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/chuyen-de-phuong-phap-toa-do-trong-mat-phang-toan-10-chuong-trinh-moi.pdf",
+      "dataset_page": 67,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 6,
+      "scope_reason": "Vận dụng nguyên lý bù trừ ba tập hợp giải bài toán khảo sát số học sinh trong thực tiễn."
+    },
+    {
+      "section": "III",
+      "number": 3,
+      "topic": "bpt_hai_an",
+      "level": "TH",
+      "skill_id": "BPT_TH_01",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/chuyen-de-bpt-va-he-bpt-bac-nhat-hai-an-toan-10-dinh-huong-cau-truc-moi.pdf",
+      "dataset_page": 112,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 23,
+      "scope_reason": "Xác định miền nghiệm của hệ bất phương trình bậc nhất hai ẩn và đếm số điểm nghiệm nguyên dương."
+    },
+    {
+      "section": "III",
+      "number": 4,
+      "topic": "bpt_hai_an",
+      "level": "VD",
+      "skill_id": "BPT_VD_03",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/toan-thuc-te-he-bat-phuong-trinh-bac-nhat-hai-an-dang-viet-dong.pdf",
+      "dataset_page": 39,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 23,
+      "scope_reason": "Mô hình hóa bài toán kinh tế trồng trọt thực tế, tìm giá trị lớn nhất của hàm lợi nhuận trên miền đa giác nghiệm."
+    },
+    {
+      "section": "IV",
+      "number": 1,
+      "topic": "he_thuc_luong",
+      "level": "VD",
+      "skill_id": "HTL_VD_03",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/chuyen-de-he-thuc-luong-trong-tam-giac-mon-toan-10-chuong-trinh-moi.pdf",
+      "dataset_page": 147,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 34,
+      "scope_reason": "Mô hình hóa bài toán cực trị góc nhìn bức tranh thực tế, sử dụng công thức lượng giác và bất đẳng thức Cauchy tìm khoảng cách tối ưu."
+    },
+    {
+      "section": "IV",
+      "number": 2,
+      "topic": "he_thuc_luong",
+      "level": "VD",
+      "skill_id": "HTL_VD_02",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/chuyen-de-he-thuc-luong-trong-tam-giac-mon-toan-10-chuong-trinh-moi.pdf",
+      "dataset_page": 145,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 34,
+      "scope_reason": "Chứng minh hệ thức diện tích tam giác và nhận dạng tam giác cân bằng cách phối hợp định lý sin và định lý côsin."
+    },
+    {
+      "section": "IV",
+      "number": 3,
+      "topic": "menh_de_tap_hop",
+      "level": "TH",
+      "skill_id": "TH_TH_03",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-bpt-va-he-bpt-bac-nhat-hai-an.pdf",
+      "dataset_page": 13,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 6,
+      "scope_reason": "Thực hiện các phép toán giao, hợp, hiệu giữa các khoảng nửa khoảng và biểu diễn tập hợp trên trục số."
+    },
+    {
+      "section": "IV",
+      "number": 4,
+      "topic": "bpt_hai_an",
+      "level": "TH",
+      "skill_id": "BPT_TH_02",
+      "dataset_source": "Nguon_Tai_Lieu/dataset/de-kiem-tra-theo-bai-hoc-chu-de-bpt-va-he-bpt-bac-nhat-hai-an.pdf",
+      "dataset_page": 7,
+      "sgk_source": "Nguon_Tai_Lieu/sgk/sach-giao-khoa-toan-10-tap-1-ket-noi-tri-thuc-voi-cuoc-song.pdf",
+      "sgk_page": 23,
+      "scope_reason": "Biểu diễn hình học miền nghiệm của bất phương trình bậc nhất hai ẩn trên mặt phẳng tọa độ Oxy."
+    }
+  ]
+}
