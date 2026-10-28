@@ -142,10 +142,11 @@
 \vspace{6pt}
 
 \answerbox
-\end{minipage}\hfill
+\end{minipage}%
+\hfill
 \begin{minipage}[t]{0.38\linewidth}
 \centering
-\begin{tikzpicture}[scale=0.78, every node/.style={scale=0.85}]
+\begin{tikzpicture}[baseline=(current bounding box.north), scale=0.78, every node/.style={scale=0.85}]
     \coordinate (A) at (0,0);
     \coordinate (B) at (1.8,0);
     \coordinate (C) at (4.0,0);
