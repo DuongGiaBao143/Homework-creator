@@ -10,10 +10,14 @@ from index_tai_lieu import BASE_DIR, connect, load_matrix
 
 def validate_exam(root, exam):
     structure = json.loads((root / "config/exam_structure.json").read_text(encoding="utf-8-sig"))
-    matrix = load_matrix(root, structure)
     curriculum = json.loads((root / "config/curriculum.json").read_text(encoding="utf-8-sig"))
     path = root / "Output" / f"De {exam}" / f"nguon_de{exam}.json"
     data = json.loads(path.read_text(encoding="utf-8-sig"))
+    matrix_id = data.get("matrix_id")
+    if matrix_id == "giua_ki_1_chuong2_3":
+        matrix = json.loads((root / "config/giua_ki_1_chuong2_3.json").read_text(encoding="utf-8-sig"))
+    else:
+        matrix = load_matrix(root, structure)
     if data.get("exam") != exam or data.get("duration_minutes") != structure["duration_minutes"]:
         raise ValueError("Sai số đề hoặc thời lượng.")
     questions = data.get("questions", [])

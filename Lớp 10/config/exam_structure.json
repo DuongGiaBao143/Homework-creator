@@ -1,7 +1,7 @@
 {
   "grade": 10,
   "duration_minutes": 90,
-  "matrix": "config/giua_ki_1.json",
+  "matrix": "config/giua_ki_1_chuong2_3.json",
   "sections": [
     {"id": "I", "type": "multiple_choice", "title": "Trắc nghiệm nhiều lựa chọn", "count": 12, "choices": 4},
     {"id": "II", "type": "true_false", "title": "Trắc nghiệm đúng/sai", "count": 2, "statements_per_question": 4},

@@ -292,14 +292,16 @@ def generate_exam_slots(matrix, rng):
 
     slots = []
 
-    # Section I: 12 multiple choice questions (4 for each topic, NB/TH)
+    # Section I: 12 multiple choice questions (balanced across allowed_topics)
     sec1_num = 1
+    num_topics = len(matrix["allowed_topics"])
+    count_per_topic = 12 // num_topics
     for topic_key in matrix["allowed_topics"]:
         candidates = [s for s in pool_by_topic.get(topic_key, [])
                       if "I" in s.get("applicable_sections", []) and s.get("level") in {"NB", "TH"}]
         shuffled = list(candidates)
         rng.shuffle(shuffled)
-        selected_skills = [shuffled[i % len(shuffled)] for i in range(4)]
+        selected_skills = [shuffled[i % len(shuffled)] for i in range(count_per_topic)]
         for skill in selected_skills:
             slots.append({
                 "section": "I",
@@ -313,10 +315,15 @@ def generate_exam_slots(matrix, rng):
             sec1_num += 1
 
     # Section II: 2 true/false questions (choose 2 distinct topics)
-    topic_pairs = (matrix.get("blueprint", {}).get("section_rules", {}).get("II", {}).get("allowed_topic_pairs")
-                   or [["menh_de_tap_hop", "bpt_hai_an"],
-                       ["menh_de_tap_hop", "he_thuc_luong"],
-                       ["bpt_hai_an", "he_thuc_luong"]])
+    topic_pairs = matrix.get("blueprint", {}).get("section_rules", {}).get("II", {}).get("allowed_topic_pairs")
+    if not topic_pairs:
+        if num_topics == 2:
+            topic_pairs = [[matrix["allowed_topics"][0], matrix["allowed_topics"][1]],
+                           [matrix["allowed_topics"][1], matrix["allowed_topics"][0]]]
+        else:
+            topic_pairs = [["menh_de_tap_hop", "bpt_hai_an"],
+                           ["menh_de_tap_hop", "he_thuc_luong"],
+                           ["bpt_hai_an", "he_thuc_luong"]]
     chosen_pair = rng.choice(topic_pairs)
     for sec2_num, topic_key in enumerate(chosen_pair, 1):
         candidates = [s for s in pool_by_topic.get(topic_key, [])
@@ -343,11 +350,15 @@ def generate_exam_slots(matrix, rng):
         })
 
     # Dynamic sampling for Section III (short answer: 4 questions, 2 TH + 2 VD)
-    # and Section IV (written: 4 questions, 2 TH + 2 VD) across all 3 allowed topics
+    # and Section IV (written: 4 questions, 2 TH + 2 VD)
     def _sample_dynamic_section(section_name):
-        double_topic = rng.choice(matrix["allowed_topics"])
-        other_topics = [t for t in matrix["allowed_topics"] if t != double_topic]
-        topic_assignment = [double_topic, double_topic, other_topics[0], other_topics[1]]
+        if num_topics == 2:
+            topic_assignment = [matrix["allowed_topics"][0], matrix["allowed_topics"][0],
+                                matrix["allowed_topics"][1], matrix["allowed_topics"][1]]
+        else:
+            double_topic = rng.choice(matrix["allowed_topics"])
+            other_topics = [t for t in matrix["allowed_topics"] if t != double_topic]
+            topic_assignment = [double_topic, double_topic, other_topics[0], other_topics[1]]
         levels = ["TH", "TH", "VD", "VD"]
         rng.shuffle(levels)
         pairs = list(zip(topic_assignment, levels))
