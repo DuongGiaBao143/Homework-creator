@@ -172,8 +172,8 @@ Thực hiện trọn **Pha 0–4**, không dừng ở file lấy mẫu và khôn
 
 ### Pha 3 — Hình minh họa và biên dịch
 7. **Hình và PDF:**
-   - **BẮT BUỘC vẽ hình minh họa hoặc plot đồ thị cho tất cả các câu thực tế ở Phần III (Trả lời ngắn) và Phần IV (Tự luận):**
-     + *Bài toán đo đạc hình học / tam giác thực tế (III.4, IV.3):* Bắt buộc có hình vẽ TikZ mô phỏng ngữ cảnh đo đạc (mặt đất, chân/đỉnh vật thể, phương nằm ngang, tia ngắm, góc nâng/hạ, độ dài đã biết). Đặt bên phải đề bài bằng `minipage` (`0.60\linewidth` cho đề, `0.38\linewidth` cho hình) hoặc căn giữa dưới đề bài.
+   - **Quy định về hình minh họa trong đề bài và đáp án:**
+     + *Bài toán đo đạc hình học / tam giác thực tế (đo chiều cao, khoảng cách, góc nhìn bức tranh...):* Đặt hình vẽ TikZ mô phỏng ngữ cảnh đo đạc bên phải đề bài bằng `minipage` (`0.60\linewidth` cho đề, `0.38\linewidth` cho hình). **Quy tắc căn chỉnh chống lỗi vị trí:** Cả 2 `minipage[t]` phải nối bằng `\end{minipage}%\n\hfill\n\begin{minipage}[t]{...}`, và `tikzpicture` bắt buộc có thuộc tính `[baseline=(current bounding box.north)]` để hình nằm chuẩn xác song song bên phải đề bài, tuyệt đối không bị trôi lên đè vào câu hỏi phía trên hoặc rớt xuống dưới.
      + *Bài toán tối ưu tuyến tính / hệ BPT thực tế (IV.4):* Bắt buộc vẽ/plot đồ thị hệ trục tọa độ $Oxy$ biểu diễn miền nghiệm của hệ bất phương trình (các đường biên, miền đa giác nghiệm, tọa độ các đỉnh $O, A, B, C...$) trong lời giải chi tiết / bảng kết quả cần đạt.
    - **BẮT BUỘC vẽ miền nghiệm ở phần đáp án cho các câu có dạng hệ bất phương trình ở Phần III và Phần IV:**
      + **Phạm vi áp dụng:** Chỉ các phần liên quan tới hệ bất phương trình ở **Phần III (Trả lời ngắn)** hoặc **Phần IV (Tự luận)** mới cần vẽ miền nghiệm ra ở phần đáp án. Phần I và Phần II giữ nguyên bảng đáp án, không cần vẽ hình.
