@@ -1,0 +1,539 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.4cm,top=1.2cm,bottom=1.2cm]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or Math gives us hope that every problem has a solution% Trang 7
+    \or Math + You = Champion% Trang 8
+    \or Where Frustration Becomes Inspiration% Trang 9
+    \or Turning Confusion into Clarity% Trang 10
+    \or Don't be an X, be a Y of mathematics% Trang 11
+    \or Don't get mad. Learn to add% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0.8pt}
+\setlength{\tabcolsep}{3pt}
+\renewcommand{\arraystretch}{1.08}
+\newcommand{\parttitle}[1]{\par\vspace{2pt}{\large\bfseries\color{ink}#1}\par\vspace{1pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[2pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{11pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.3cm,labelsep=.12cm,itemsep=0.8pt,topsep=0.8pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.6cm,itemsep=0.8pt,topsep=0.8pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[4pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GK1}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 21}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.15cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0021}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.15cm}
+
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án đúng duy nhất.}
+\begin{enumerate}
+\item Cho tập hợp $S = \{x \in \mathbb{R} \mid -3 \le x < 2\}$. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$S = [-3; 2)$.}{$S = (-3; 2]$.}{$S = [-3; 2]$.}{$S = (-3; 2)$.}
+
+\item Mệnh đề phủ định của mệnh đề $P: ``\forall x \in \mathbb{R},\; x^2 + 1 > 0''$ là
+\four{$\overline{P}: ``\forall x \in \mathbb{R},\; x^2 + 1 \le 0''$.}{$\overline{P}: ``\exists x \in \mathbb{R},\; x^2 + 1 \le 0''$.}{$\overline{P}: ``\exists x \in \mathbb{R},\; x^2 + 1 < 0''$.}{$\overline{P}: ``\forall x \in \mathbb{R},\; x^2 + 1 < 0''$.}
+
+\item Cho mệnh đề chứa biến $P(n): ``n^2 + 1 \text{ chia hết cho } 5''$ với $n$ là số tự nhiên. Trong các giá trị sau của $n$, giá trị nào làm cho $P(n)$ trở thành mệnh đề \textbf{đúng}?
+\four{$n = 1$.}{$n = 4$.}{$n = 3$.}{$n = 5$.}
+
+\item Trong các phát biểu sau đây, câu nào là một \textbf{mệnh đề toán học}?
+\four{Bạn có thích học môn Toán không?}{Thời tiết hôm nay thật đẹp!}{Hãy làm bài tập cẩn thận nhé!}{Tổng ba góc trong một tam giác bằng $180^\circ$.}
+
+\item Hệ bất phương trình nào sau đây là một hệ bất phương trình bậc nhất hai ẩn?
+\four{$\begin{cases} 2x - 3y + 1 \ge 0 \\ x + 4y - 5 < 0 \end{cases}$}{$\begin{cases} x^2 + y \le 2 \\ x - y > 1 \end{cases}$}{$\begin{cases} x - 2y + z \le 0 \\ 3x + y > 2 \end{cases}$}{$\begin{cases} xy + 2 \ge 0 \\ x - 3y < 1 \end{cases}$}
+
+\item Bất phương trình nào sau đây là một bất phương trình bậc nhất hai ẩn?
+\four{$2x^2 + 3y \le 5$.}{$3x - 5y + 7 \ge 0$.}{$x + 2y - z > 0$.}{$xy - 4 \le 0$.}
+
+\item Cho hệ bất phương trình $\begin{cases} 2x + y - 3 \le 0 \\ x - y + 1 \ge 0 \end{cases}$. Cặp số $(x; y)$ nào sau đây là một nghiệm của hệ đã cho?
+\four{$(2; 1)$.}{$(1; 3)$.}{$(0; 1)$.}{$(3; -1)$.}
+
+\item Đường thẳng bờ của nửa mặt phẳng miền nghiệm của bất phương trình $4x - 3y + 12 \le 0$ có phương trình là
+\four{$4x + 3y + 12 = 0$.}{$3x - 4y + 12 = 0$.}{$4x - 3y - 12 = 0$.}{$4x - 3y + 12 = 0$.}
+
+\item Giá trị của $\sin 150^\circ$ bằng
+\four{$\dfrac{1}{2}$.}{$-\dfrac{1}{2}$.}{$\dfrac{\sqrt{3}}{2}$.}{$-\dfrac{\sqrt{3}}{2}$.}
+
+\item Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$ và bán kính đường tròn ngoại tiếp là $R$. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$\dfrac{a}{\sin A} = R$.}{$\dfrac{b}{\sin B} = 2R$.}{$\dfrac{c}{\sin C} = 4R$.}{$\dfrac{a}{\sin A} = \dfrac{R}{2}$.}
+
+\item Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$ và $\sin \alpha = \dfrac{4}{5}$. Giá trị của $\cos \alpha$ bằng
+\four{$\dfrac{3}{5}$.}{$\dfrac{16}{25}$.}{$-\dfrac{3}{5}$.}{$-\dfrac{4}{3}$.}
+
+\item Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$. Khẳng định nào sau đây là \textbf{đúng}?
+\four{$a^2 = b^2 + c^2 + 2bc \cos A$.}{$a^2 = b^2 + c^2 - bc \cos A$.}{$a^2 = b^2 + c^2 - 2bc \sin A$.}{$a^2 = b^2 + c^2 - 2bc \cos A$.}
+\end{enumerate}
+
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Thí sinh trả lời từ câu 13 đến câu 14. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}[resume]
+\item Cho hệ bất phương trình bậc nhất hai ẩn $\begin{cases} x \ge 0,\; y \ge 0 \\ x + y \le 5 \\ 3x + y \le 9 \end{cases}$. Biết miền nghiệm của hệ là miền tứ giác $OABC$ trên mặt phẳng tọa độ $Oxy$ (kể cả bờ).
+\begin{enumerate}
+    \item Điểm gốc tọa độ $O(0; 0)$ thuộc miền nghiệm của hệ bất phương trình đã cho.
+    \item Tọa độ điểm $A$ là giao điểm của đường thẳng $3x + y = 9$ với trục hoành $Ox$ là $A(3; 0)$.
+    \item Tọa độ đỉnh $B$ là giao điểm của hai đường thẳng $x + y = 5$ và $3x + y = 9$ là $B(2; 3)$.
+    \item Biểu thức $F(x, y) = 3x + 2y$ đạt giá trị lớn nhất trên miền nghiệm của hệ bằng $15$.
+\end{enumerate}
+
+\item Cho tam giác $ABC$ có độ dài hai cạnh $AB = 6,\; AC = 8$ và góc kẹp giữa $\widehat{A} = 60^\circ$.
+\begin{enumerate}
+    \item Diện tích tam giác $ABC$ được tính theo công thức $S = \dfrac{1}{2}AB \cdot AC \cdot \sin A$.
+    \item Độ dài cạnh $BC$ thỏa mãn hệ thức định lý côsin: $BC^2 = AB^2 + AC^2 - 2 AB \cdot AC \cdot \cos A$.
+    \item Độ dài cạnh $BC$ bằng $2\sqrt{13}$.
+    \item Bán kính đường tròn ngoại tiếp của tam giác $ABC$ bằng $\sqrt{13}$.
+\end{enumerate}
+\end{enumerate}
+
+\parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 15 đến câu 18. Viết kết quả vào ô quy định.}
+\begin{enumerate}[resume]
+\item Cho tam giác $ABC$ có độ dài ba cạnh lần lượt là $a = 13,\; b = 14,\; c = 15$. Tính bán kính đường tròn nội tiếp $r$ của tam giác $ABC$.
+\answerbox
+
+\item Cho tam giác $ABC$ thỏa mãn hệ thức $\sin^2 A + \sin^2 B = \sin^2 C$ và độ dài hai cạnh $a = 6,\; b = 8$. Tính bán kính đường tròn ngoại tiếp $R$ của tam giác $ABC$.
+\answerbox
+
+\item Cho hệ bất phương trình bậc nhất hai ẩn $\begin{cases} x \ge 0,\; y \ge 0 \\ x + y \le 6 \\ 2x + y \le 8 \end{cases}$. Tìm giá trị lớn nhất của biểu thức $F(x, y) = 3x + 2y$ trên miền nghiệm của hệ bất phương trình đã cho.
+\answerbox
+
+\item Cho hai tập hợp số $A = [m; m + 2]$ và $B = [-1; 3]$ (với $m$ là tham số thực). Có bao nhiêu giá trị nguyên của $m$ để tập hợp $A$ là tập con của tập hợp $B$?
+\answerbox
+\end{enumerate}
+
+\needspace{10\baselineskip}
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày lời giải chi tiết từ câu 19 đến câu 22.}
+\begin{enumerate}[resume]
+\item \textit{(1,0 điểm)} Cho hai tập hợp số thực $A = [-4; 3)$ và $B = (1; 6]$.
+\begin{enumerate}
+    \item Xác định các tập hợp $A \cap B$, $A \cup B$ và $A \setminus B$.
+    \item Xác định phần bù của tập hợp $A$ trong tập số thực $\mathbb{R}$, ký hiệu là $C_\mathbb{R} A$.
+\end{enumerate}
+
+\item \textit{(0,75 điểm)}\par\vspace{1pt}
+\begin{minipage}[t]{0.58\linewidth}
+Một người đứng tại vị trí quan sát $A$ bên bờ sông muốn đo khoảng cách giữa hai cột mốc $B$ và $C$ ở bờ bên kia sông. Bằng các thiết bị đo đạc chuyên dụng, người đó xác định được khoảng cách từ vị trí quan sát $A$ đến mốc $B$ là $AB = 60\text{ m}$, khoảng cách từ $A$ đến mốc $C$ là $AC = 80\text{ m}$, và góc quan sát $\widehat{BAC} = 60^\circ$.
+\begin{enumerate}
+    \item Tính khoảng cách giữa hai cột mốc $B$ và $C$ (tính chính xác theo đơn vị mét).
+    \item Tính diện tích tam giác $ABC$ tạo bởi điểm quan sát $A$ và hai cột mốc $B, C$.
+\end{enumerate}
+\end{minipage}%
+\hfill
+\begin{minipage}[t]{0.38\linewidth}
+\centering
+\begin{tikzpicture}[baseline=(current bounding box.north), scale=0.72, every node/.style={scale=0.82}]
+    % Observer A
+    \coordinate (A) at (0,0);
+    % Polar: B angle 75 deg, length 2.6
+    \coordinate (B) at (0.67, 2.51);
+    % C angle 15 deg, length 3.4
+    \coordinate (C) at (3.28, 0.88);
+
+    % Wavy river representation
+    \draw[teal!40!blue, line width=1.5pt, smooth] (-0.5, 1.3) .. controls (1.0, 1.8) and (2.0, 0.2) .. (3.8, 0.4);
+    \draw[teal!40!blue, line width=1.5pt, smooth] (-0.5, 1.7) .. controls (1.0, 2.2) and (2.0, 0.6) .. (3.8, 0.8);
+    \node[teal!60!black, font=\scriptsize\itshape] at (1.6, 1.35) {dòng sông};
+
+    % Triangle lines
+    \draw[thick, ink] (A) node[below left, font=\bfseries] {$A$} -- (B) node[above left, font=\bfseries] {$B$};
+    \draw[thick, ink] (A) -- (C) node[above right, font=\bfseries] {$C$};
+    \draw[dashed, red!80!black, line width=1.2pt] (B) -- (C);
+
+    \filldraw[black] (A) circle (2.0pt);
+    \filldraw[blue!80!black] (B) circle (2.2pt);
+    \filldraw[blue!80!black] (C) circle (2.2pt);
+
+    % Angle arc
+    \draw (0.45, 0.12) arc (15:75:0.45);
+    \node at (0.55, 0.52) {\small $60^\circ$};
+    \node[left] at (0.35, 1.4) {\small $60\text{ m}$};
+    \node[below right] at (1.6, 0.45) {\small $80\text{ m}$};
+    \node[red!80!black, font=\bfseries] at (2.2, 1.9) {$d = ?$};
+\end{tikzpicture}
+\end{minipage}
+
+\item \textit{(0,75 điểm)} Một xưởng sản xuất bánh thủ công chuẩn bị cho dịp Tết Trung thu cần làm hai loại bánh: bánh nướng (loại I) và bánh dẻo (loại II).
+\begin{itemize}[leftmargin=0.5cm]
+    \item Để sản xuất 1 chiếc bánh nướng cần $120\text{ g}$ bột và $40\text{ g}$ đường.
+    \item Để sản xuất 1 chiếc bánh dẻo cần $80\text{ g}$ bột và $80\text{ g}$ đường.
+\end{itemize}
+Xưởng có sẵn $48\text{ kg} = 48\,000\text{ g}$ bột và $32\text{ kg} = 32\,000\text{ g}$ đường. Biết rằng mỗi chiếc bánh nướng đem lại lợi nhuận $15\,000$ đồng, mỗi chiếc bánh dẻo đem lại lợi nhuận $20\,000$ đồng và toàn bộ số bánh sản xuất đều được tiêu thụ hết. Hỏi xưởng cần sản xuất bao nhiêu chiếc bánh nướng và bao nhiêu chiếc bánh dẻo để đạt tổng lợi nhuận lớn nhất?
+
+\item \textit{(0,5 điểm)} Một hộ nông dân có $8$ sào đất dự định trồng hai loại cây hoa màu: đậu xanh và ngô.
+\begin{itemize}[leftmargin=0.5cm]
+    \item Trồng $1$ sào đậu xanh cần $20$ ngày công lao động và đem lại lợi nhuận $3$ triệu đồng.
+    \item Trồng $1$ sào ngô cần $30$ ngày công lao động và đem lại lợi nhuận $4$ triệu đồng.
+\end{itemize}
+Tổng số ngày công lao động dành cho việc trồng trọt của gia đình không vượt quá $180$ ngày công. Hỏi hộ nông dân cần trồng bao nhiêu sào đậu xanh và bao nhiêu sào ngô để tổng lợi nhuận thu được là lớn nhất?
+\end{enumerate}
+
+\newpage
+% =========================================================================
+% BẢNG ĐÁP ÁN VÀ LỜI GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\vspace{0.2cm}
+\textbf{1. Phần I: Trắc nghiệm nhiều lựa chọn}
+\begin{center}
+{\setlength{\tabcolsep}{2.5pt}\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} & \textbf{Câu 5} & \textbf{Câu 6} & \textbf{Câu 7} & \textbf{Câu 8} & \textbf{Câu 9} & \textbf{Câu 10} & \textbf{Câu 11} & \textbf{Câu 12} \\
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{2. Phần II: Trắc nghiệm đúng/sai}
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu hỏi} & \textbf{Ý a)} & \textbf{Ý b)} & \textbf{Ý c)} & \textbf{Ý d)} \\
+\hline
+\textbf{Câu 13} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} \\
+\hline
+\textbf{Câu 14} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{3. Phần III: Trắc nghiệm trả lời ngắn}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Câu 15} & \textbf{Câu 16} & \textbf{Câu 17} & \textbf{Câu 18} \\
+\hline
+\textbf{4} & \textbf{5} & \textbf{14} & \textbf{3} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{4. Phần IV: Tự luận}
+\begin{center}
+\begin{tabularx}{\linewidth}{|c|>{\raggedright\arraybackslash}X|}
+\hline
+\textbf{Câu hỏi} & \textbf{Kết quả tóm tắt} \\
+\hline
+\textbf{Câu 19} & a) $A \cap B = (1; 3),\; A \cup B = [-4; 6],\; A \setminus B = [-4; 1]$;\quad b) $C_\mathbb{R} A = (-\infty; -4) \cup [3; +\infty)$. \\
+\hline
+\textbf{Câu 20} & a) $BC = 20\sqrt{13}\text{ m}$;\quad b) $S_{ABC} = 1200\sqrt{3}\text{ m}^2$. \\
+\hline
+\textbf{Câu 21} & Sản xuất \textbf{200 chiếc bánh nướng} và \textbf{300 chiếc bánh dẻo}; lợi nhuận lớn nhất là $9\,000\,000$ đồng. \\
+\hline
+\textbf{Câu 22} & Trồng \textbf{6 sào đậu xanh} và \textbf{2 sào ngô}; lợi nhuận lớn nhất là $26\,000\,000$ đồng ($26$ triệu đồng). \\
+\hline
+\end{tabularx}
+\end{center}
+
+\newpage
+% =========================================================================
+% HÌNH VẼ BIỂU DIỄN MIỀN NGHIỆM (HỆ BẤT PHƯƠNG TRÌNH)
+% =========================================================================
+\parttitle{HÌNH VẼ BIỂU DIỄN MIỀN NGHIỆM (HỆ BẤT PHƯƠNG TRÌNH)}
+\textit{(Các miền đa giác nghiệm được tô màu xám xanh nhạt; toạ độ các đỉnh và đường thẳng bờ thể hiện đầy đủ, trực quan).}
+
+\vspace{0.4cm}
+\noindent
+\begin{minipage}[t]{0.47\textwidth}
+\centering
+\textbf{Hình 1: Miền nghiệm Câu 17}\\[6pt]
+\begin{tikzpicture}[scale=0.67, >=Stealth]
+    % Trục toạ độ
+    \draw[line width=1.2pt, ->] (-0.8,0) -- (6.2,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-0.8) -- (0,7.5) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left, font=\normalsize\bfseries] at (0,0) {$O$};
+
+    % Đa giác nghiệm O(0;0), A(4;0), B(2;4), C(0;6)
+    \fill[fill=ink!18] (0,0) -- (4,0) -- (2,4) -- (0,6) -- cycle;
+    \draw[line width=1.8pt, blue!70!black] (0,0) -- (4,0) -- (2,4) -- (0,6) -- cycle;
+
+    % d1: x + y = 6
+    \draw[line width=1.1pt, dashed, red!80!black] (-0.4, 6.4) -- (6.4, -0.4) node[above right, font=\small] {$d_1: x+y=6$};
+    % d2: 2x + y = 8
+    \draw[line width=1.1pt, dashed, teal!80!black] (-0.2, 7.6) node[above right, font=\small] {$d_2: 2x+y=8$} -- (4.2, -0.4);
+
+    % Đỉnh
+    \filldraw[black] (0,0) circle (3pt);
+    \filldraw[black] (4,0) circle (3.5pt) node[below, font=\normalsize\bfseries] {$A(4;0)$};
+    \filldraw[black] (2,4) circle (3.5pt) node[above right, font=\normalsize\bfseries] {$B(2;4)$};
+    \filldraw[black] (0,6) circle (3.5pt) node[left, font=\normalsize\bfseries] {$C(0;6)$};
+
+    % Dóng B
+    \draw[dotted, thick] (2,0) node[below, font=\small] {$2$} -- (2,4) -- (0,4) node[left, font=\small] {$4$};
+\end{tikzpicture}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.47\textwidth}
+\centering
+\textbf{Hình 2: Miền nghiệm Câu 22}\\[6pt]
+\begin{tikzpicture}[scale=0.55, >=Stealth]
+    % Trục toạ độ
+    \draw[line width=1.2pt, ->] (-0.8,0) -- (9.8,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-0.8) -- (0,8.2) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left, font=\normalsize\bfseries] at (0,0) {$O$};
+
+    % Đa giác nghiệm O(0;0), A(8;0), B(6;2), C(0;6)
+    \fill[fill=ink!18] (0,0) -- (8,0) -- (6,2) -- (0,6) -- cycle;
+    \draw[line width=1.8pt, blue!70!black] (0,0) -- (8,0) -- (6,2) -- (0,6) -- cycle;
+
+    % d1: x + y = 8
+    \draw[line width=1.1pt, dashed, red!80!black] (4.0, 4.0) node[above right, font=\small] {$d_1: x+y=8$} -- (8.6, -0.6);
+    % d2: 2x + 3y = 18
+    \draw[line width=1.1pt, dashed, teal!80!black] (-0.3, 6.2) node[above right, font=\small] {$d_2: 2x+3y=18$} -- (9.4, -0.27);
+
+    % Đỉnh
+    \filldraw[black] (0,0) circle (3pt);
+    \filldraw[black] (8,0) circle (3.5pt) node[below, font=\normalsize\bfseries] {$A(8;0)$};
+    \filldraw[black] (6,2) circle (3.5pt) node[above right, font=\normalsize\bfseries] {$B(6;2)$};
+    \filldraw[black] (0,6) circle (3.5pt) node[left, font=\normalsize\bfseries] {$C(0;6)$};
+
+    % Dóng B
+    \draw[dotted, thick] (6,0) node[below, font=\small] {$6$} -- (6,2) -- (0,2) node[left, font=\small] {$2$};
+\end{tikzpicture}
+\end{minipage}
+
+\vspace{0.4cm}
+\begin{center}
+\textbf{Hình 3: Miền nghiệm Câu 21 (Quy hoạch tuyến tính bánh Trung thu)}\\[6pt]
+\begin{tikzpicture}[x=0.010cm, y=0.010cm, >=Stealth]
+    % Trục toạ độ
+    \draw[line width=1.2pt, ->] (-30,0) -- (480,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-30) -- (0,500) node[above, font=\normalsize\bfseries] {$y$};
+    \node[below left, font=\normalsize\bfseries] at (0,0) {$O$};
+
+    % Đa giác nghiệm O(0;0), A(400;0), B(200;300), C(0;400)
+    \fill[fill=ink!18] (0,0) -- (400,0) -- (200,300) -- (0,400) -- cycle;
+    \draw[line width=1.8pt, blue!70!black] (0,0) -- (400,0) -- (200,300) -- (0,400) -- cycle;
+
+    % d1: 3x + 2y = 1200
+    \draw[line width=1.1pt, dashed, red!80!black] (100, 450) -- (430, -45) node[below right, font=\small] {$d_1: 3x+2y=1200$};
+    % d2: x + 2y = 800
+    \draw[line width=1.1pt, dashed, teal!80!black] (-20, 410) -- (440, 180) node[above, font=\small] {$d_2: x+2y=800$};
+
+    % Đỉnh
+    \filldraw[black] (0,0) circle (3pt);
+    \filldraw[black] (400,0) circle (3.5pt) node[below, font=\normalsize\bfseries] {$A(400;0)$};
+    \filldraw[black] (200,300) circle (3.5pt) node[above right, font=\normalsize\bfseries] {$B(200;300)$};
+    \filldraw[black] (0,400) circle (3.5pt) node[left, font=\normalsize\bfseries] {$C(0;400)$};
+
+    % Dóng B
+    \draw[dotted, thick] (200,0) node[below, font=\small] {$200$} -- (200,300) -- (0,300) node[left, font=\small] {$300$};
+\end{tikzpicture}
+\end{center}
+
+\newpage
+% =========================================================================
+% HƯỚNG DẪN GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{HƯỚNG DẪN GIẢI CHI TIẾT}
+
+\textbf{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\begin{itemize}[leftmargin=0.6cm, itemsep=3pt]
+    \item \textbf{Câu 1:} Tập hợp các số thực thỏa mãn $-3 \le x < 2$ gồm các số lớn hơn hoặc bằng $-3$ và nhỏ hơn $2$, được biểu diễn dưới dạng nửa khoảng là $[-3; 2)$. Chọn \textbf{A}.
+    \item \textbf{Câu 2:} Phủ định của mệnh đề ``$\forall x \in \mathbb{R},\; P(x)$'' là mệnh đề ``$\exists x \in \mathbb{R},\; \overline{P(x)}$''. Do đó phủ định của $\forall x \in \mathbb{R},\; x^2 + 1 > 0$ là $\exists x \in \mathbb{R},\; x^2 + 1 \le 0$. Chọn \textbf{B}.
+    \item \textbf{Câu 3:} Với $n = 3$, ta có $n^2 + 1 = 3^2 + 1 = 10$, chia hết cho $5$. Với $n \in \{1; 4; 5\}$, biểu thức lần lượt nhận giá trị $2, 17, 26$ đều không chia hết cho $5$. Chọn \textbf{C}.
+    \item \textbf{Câu 4:} Câu ``Tổng ba góc trong một tam giác bằng $180^\circ$'' là một khẳng định có tính đúng sai xác định trong toán học (cụ thể là mệnh đề đúng). Các câu còn lại là câu hỏi hoặc câu cảm thán. Chọn \textbf{D}.
+    \item \textbf{Câu 5:} Hệ $\begin{cases} 2x - 3y + 1 \ge 0 \\ x + 4y - 5 < 0 \end{cases}$ gồm các bất phương trình bậc nhất hai ẩn $x, y$. Các phương án khác chứa $x^2$, 3 ẩn $x, y, z$, hoặc chứa tích $xy$. Chọn \textbf{A}.
+    \item \textbf{Câu 6:} Bất phương trình $3x - 5y + 7 \ge 0$ có dạng $ax + by + c \ge 0$ với $a = 3, b = -5$ không đồng thời bằng $0$, là bất phương trình bậc nhất hai ẩn. Chọn \textbf{B}.
+    \item \textbf{Câu 7:} Thay tọa độ điểm $(0; 1)$ vào hệ: $\begin{cases} 2(0) + 1 - 3 = -2 \le 0 \\ 0 - 1 + 1 = 0 \ge 0 \end{cases}$ (thỏa mãn cả hai bất phương trình). Chọn \textbf{C}.
+    \item \textbf{Câu 8:} Đường thẳng bờ của nửa mặt phẳng miền nghiệm của bất phương trình $4x - 3y + 12 \le 0$ có phương trình là $4x - 3y + 12 = 0$. Chọn \textbf{D}.
+    \item \textbf{Câu 9:} Ta có $\sin 150^\circ = \sin(180^\circ - 30^\circ) = \sin 30^\circ = \dfrac{1}{2}$. Chọn \textbf{A}.
+    \item \textbf{Câu 10:} Theo định lý sin trong tam giác: $\dfrac{a}{\sin A} = \dfrac{b}{\sin B} = \dfrac{c}{\sin C} = 2R$. Do đó khẳng định đúng là $\dfrac{b}{\sin B} = 2R$. Chọn \textbf{B}.
+    \item \textbf{Câu 11:} Vì $90^\circ < \alpha < 180^\circ$ nên $\cos \alpha < 0$. Suy ra $\cos \alpha = -\sqrt{1 - \sin^2 \alpha} = -\sqrt{1 - \left(\dfrac{4}{5}\right)^2} = -\dfrac{3}{5}$. Chọn \textbf{C}.
+    \item \textbf{Câu 12:} Theo định lý côsin trong tam giác, bình phương độ dài một cạnh bằng tổng bình phương hai cạnh còn lại trừ hai lần tích của chúng với côsin của góc xen giữa: $a^2 = b^2 + c^2 - 2bc \cos A$. Chọn \textbf{D}.
+\end{itemize}
+
+\vspace{0.15cm}
+\textbf{PHẦN II. Trắc nghiệm đúng/sai}
+\begin{itemize}[leftmargin=0.6cm, itemsep=1.5pt, topsep=1pt]
+    \item \textbf{Câu 13:}
+    \begin{itemize}[itemsep=1pt]
+        \item a) Thay tọa độ gốc $O(0; 0)$ vào hệ: $0 \ge 0,\; 0 \ge 0,\; 0 + 0 \le 5,\; 3(0) + 0 \le 9$ đều thỏa mãn $\implies$ \textbf{Đúng}.
+        \item b) Giao điểm của đường thẳng $3x + y = 9$ với trục hoành ($y = 0$): $3x = 9 \implies x = 3$. Điểm $A(3; 0)$ thỏa mãn $3 + 0 = 3 \le 5$, nên là đỉnh thuộc miền nghiệm $\implies$ \textbf{Đúng}.
+        \item c) Tọa độ giao điểm $B$ là nghiệm của hệ $\begin{cases} x + y = 5 \\ 3x + y = 9 \end{cases} \iff \begin{cases} 2x = 4 \\ x + y = 5 \end{cases} \iff \begin{cases} x = 2 \\ y = 3 \end{cases}$. Vậy $B(2; 3) \implies$ \textbf{Đúng}.
+        \item d) Miền nghiệm là tứ giác $OABC$ với các đỉnh $O(0; 0),\; A(3; 0),\; B(2; 3),\; C(0; 5)$.\\
+        Tính giá trị biểu thức $F(x, y) = 3x + 2y$ tại các đỉnh:\\
+        $F(O) = 0$; $F(A) = 3(3) + 2(0) = 9$; $F(B) = 3(2) + 2(3) = 12$; $F(C) = 3(0) + 2(5) = 10$.\\
+        Giá trị lớn nhất của $F(x, y)$ trên miền nghiệm bằng $12$ (đạt tại $B(2; 3)$). Phát biểu ghi bằng $15$ là $\implies$ \textbf{Sai}.
+    \end{itemize}
+
+    \item \textbf{Câu 14:}
+    \begin{itemize}[itemsep=1pt]
+        \item a) Theo công thức tính diện tích tam giác trong SGK: $S = \dfrac{1}{2}AB \cdot AC \cdot \sin A \implies$ \textbf{Đúng}.
+        \item b) Theo định lý côsin trong tam giác: $BC^2 = AB^2 + AC^2 - 2 AB \cdot AC \cdot \cos A \implies$ \textbf{Đúng}.
+        \item c) Thay số: $BC^2 = 6^2 + 8^2 - 2 \cdot 6 \cdot 8 \cdot \cos 60^\circ = 36 + 64 - 96 \cdot \dfrac{1}{2} = 52$.\\
+        Suy ra $BC = \sqrt{52} = 2\sqrt{13} \implies$ \textbf{Đúng}.
+        \item d) Theo định lý sin: $2R = \dfrac{BC}{\sin A} = \dfrac{2\sqrt{13}}{\sin 60^\circ} = \dfrac{2\sqrt{13}}{\frac{\sqrt{3}}{2}} = \dfrac{4\sqrt{13}}{\sqrt{3}} = \dfrac{4\sqrt{39}}{3}$.\\
+        Suy ra bán kính ngoại tiếp $R = \dfrac{2\sqrt{39}}{3} \ne \sqrt{13}$. Phát biểu ghi $R = \sqrt{13}$ là $\implies$ \textbf{Sai}.
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.15cm}
+\textbf{PHẦN III. Trắc nghiệm trả lời ngắn}
+\begin{itemize}[leftmargin=0.6cm, itemsep=1.5pt, topsep=1pt]
+    \item \textbf{Câu 15:} Nửa chu vi tam giác là: $p = \dfrac{a + b + c}{2} = \dfrac{13 + 14 + 15}{2} = 21$.\\
+    Theo công thức Heron, diện tích tam giác là:
+    \[
+    S = \sqrt{p(p - a)(p - b)(p - c)} = \sqrt{21 \cdot (21 - 13) \cdot (21 - 14) \cdot (21 - 15)} = \sqrt{21 \cdot 8 \cdot 7 \cdot 6} = 84.
+    \]
+    Bán kính đường tròn nội tiếp tam giác: $r = \dfrac{S}{p} = \dfrac{84}{21} = 4$.
+    \item \textbf{Câu 16:} Theo định lý sin, ta có $\sin A = \dfrac{a}{2R},\; \sin B = \dfrac{b}{2R},\; \sin C = \dfrac{c}{2R}$.\\
+    Thay vào hệ thức đã cho:
+    \[
+    \sin^2 A + \sin^2 B = \sin^2 C \iff \left(\dfrac{a}{2R}\right)^2 + \left(\dfrac{b}{2R}\right)^2 = \left(\dfrac{c}{2R}\right)^2 \iff a^2 + b^2 = c^2.
+    \]
+    Theo định lý Pythagore đảo, tam giác $ABC$ vuông tại $C$.\\
+    Độ dài cạnh huyền $c = \sqrt{a^2 + b^2} = \sqrt{6^2 + 8^2} = 10$.\\
+    Bán kính đường tròn ngoại tiếp tam giác vuông bằng nửa cạnh huyền: $R = \dfrac{c}{2} = 5$.
+    \item \textbf{Câu 17:} Miền nghiệm của hệ là miền tứ giác $OABC$ với các đỉnh:
+    $O(0; 0)$;\quad $A(4; 0)$ (giao điểm của $2x + y = 8$ với $Ox$);\quad $B(2; 4)$ (giao điểm của $x + y = 6$ và $2x + y = 8$);\quad $C(0; 6)$ (giao điểm của $x + y = 6$ với $Oy$).\\
+    Tính giá trị $F(x, y) = 3x + 2y$ tại các đỉnh:
+    $F(O) = 0$; $F(A) = 3(4) + 2(0) = 12$; $F(B) = 3(2) + 2(4) = 14$; $F(C) = 3(0) + 2(6) = 12$.\\
+    Vậy giá trị lớn nhất của $F(x, y)$ trên miền nghiệm bằng $14$ (đạt tại đỉnh $B(2; 4)$).
+    \item \textbf{Câu 18:} Ta có $A \subset B \iff [m; m + 2] \subset [-1; 3] \iff \begin{cases} m \ge -1 \\ m + 2 \le 3 \end{cases} \iff -1 \le m \le 1$.\\
+    Các giá trị nguyên của $m$ thỏa mãn là $m \in \{-1; 0; 1\}$. Có tất cả $3$ giá trị nguyên.
+\end{itemize}
+
+\vspace{0.15cm}
+\textbf{PHẦN IV. Tự luận}
+\begin{itemize}[leftmargin=0.6cm, itemsep=2pt, topsep=1pt]
+    \item \textbf{Câu 19:}
+    \begin{enumerate}[label=\alph*), itemsep=1pt]
+        \item Thực hiện các phép toán trên các tập hợp số:
+        \begin{itemize}[itemsep=1pt]
+            \item Giao: $A \cap B = [-4; 3) \cap (1; 6] = (1; 3)$.
+            \item Hợp: $A \cup B = [-4; 3) \cup (1; 6] = [-4; 6]$.
+            \item Hiệu: $A \setminus B = [-4; 3) \setminus (1; 6] = [-4; 1]$.
+        \end{itemize}
+        \item Phần bù của tập hợp $A$ trong $\mathbb{R}$:
+        \[
+        C_\mathbb{R} A = \mathbb{R} \setminus [-4; 3) = (-\infty; -4) \cup [3; +\infty).
+        \]
+    \end{enumerate}
+
+    \item \textbf{Câu 20:}
+    \begin{enumerate}[label=\alph*), itemsep=1pt]
+        \item Áp dụng định lý côsin trong tam giác $ABC$:
+        \[
+        BC^2 = AB^2 + AC^2 - 2 AB \cdot AC \cdot \cos \widehat{BAC}
+        \]
+        Thay số ta được:
+        \[
+        BC^2 = 60^2 + 80^2 - 2 \cdot 60 \cdot 80 \cdot \cos 60^\circ = 3600 + 6400 - 9600 \cdot \dfrac{1}{2} = 5200.
+        \]
+        Suy ra khoảng cách giữa hai cột mốc $B$ và $C$ là:
+        \[
+        BC = \sqrt{5200} = 20\sqrt{13}\text{ m} \approx 72{,}11\text{ m}.
+        \]
+        \item Diện tích tam giác $ABC$ tạo bởi vị trí quan sát và hai cột mốc là:
+        \[
+        S = \dfrac{1}{2} AB \cdot AC \cdot \sin \widehat{BAC} = \dfrac{1}{2} \cdot 60 \cdot 80 \cdot \sin 60^\circ = 2400 \cdot \dfrac{\sqrt{3}}{2} = 1200\sqrt{3}\text{ m}^2 \approx 2078{,}46\text{ m}^2.
+        \]
+    \end{enumerate}
+
+    \item \textbf{Câu 21:}
+    Gọi $x, y$ lần lượt là số chiếc bánh nướng và bánh dẻo xưởng cần sản xuất ($x, y \in \mathbb{N}$).\\
+    Theo bài ra ta có các điều kiện ràng buộc:
+    \begin{itemize}[itemsep=1pt]
+        \item Lượng bột sử dụng không quá $48\,000\text{ g}$: $120x + 80y \le 48\,000 \iff 3x + 2y \le 1200$.
+        \item Lượng đường sử dụng không quá $32\,000\text{ g}$: $40x + 80y \le 32\,000 \iff x + 2y \le 800$.
+        \item Điều kiện không âm: $x \ge 0,\; y \ge 0$.
+    \end{itemize}
+    Ta có hệ bất phương trình mô tả miền nghiệm:
+    \[
+    \begin{cases} x \ge 0,\; y \ge 0 \\ 3x + 2y \le 1200 \\ x + 2y \le 800 \end{cases}
+    \]
+    Miền nghiệm của hệ là miền tứ giác $OABC$ với tọa độ các đỉnh:
+    $O(0; 0)$;\quad $A(400; 0)$;\quad $B(200; 300)$;\quad $C(0; 400)$.\\
+    Tổng lợi nhuận thu được là biểu thức: $F(x, y) = 15x + 20y$ (nghìn đồng).\\
+    Tính giá trị của $F(x, y)$ tại các đỉnh của miền nghiệm:
+    \begin{itemize}[itemsep=1pt]
+        \item $F(O) = 0$;
+        \item $F(A) = 15(400) + 20(0) = 6\,000$ (nghìn đồng) = $6$ triệu đồng;
+        \item $F(B) = 15(200) + 20(300) = 3\,000 + 6\,000 = 9\,000$ (nghìn đồng) = $9$ triệu đồng;
+        \item $F(C) = 15(0) + 20(400) = 8\,000$ (nghìn đồng) = $8$ triệu đồng.
+    \end{itemize}
+    Giá trị lớn nhất của $F(x, y)$ là $9\,000$ nghìn đồng, đạt được khi $x = 200$ và $y = 300$.\\
+    Vậy xưởng cần sản xuất \textbf{200 chiếc bánh nướng} và \textbf{300 chiếc bánh dẻo} để đạt lợi nhuận lớn nhất là \textbf{9.000.000 đồng}.
+
+    \item \textbf{Câu 22:}
+    Gọi $x, y$ lần lượt là số sào đất trồng đậu xanh và số sào đất trồng ngô ($x \ge 0,\; y \ge 0$).\\
+    Theo đề bài ta có các điều kiện ràng buộc:
+    \begin{itemize}[itemsep=1pt]
+        \item Tổng diện tích đất không quá $8$ sào: $x + y \le 8$.
+        \item Tổng số ngày công lao động không quá $180$ công: $20x + 30y \le 180 \iff 2x + 3y \le 18$.
+        \item Điều kiện không âm: $x \ge 0,\; y \ge 0$.
+    \end{itemize}
+    Ta có hệ bất phương trình ràng buộc:
+    \[
+    \begin{cases} x \ge 0,\; y \ge 0 \\ x + y \le 8 \\ 2x + 3y \le 18 \end{cases}
+    \]
+    Miền nghiệm của hệ là miền tứ giác $OABC$ với tọa độ các đỉnh:
+    $O(0; 0)$;\quad $A(8; 0)$;\quad $B(6; 2)$;\quad $C(0; 6)$.\\
+    Tổng lợi nhuận thu được là biểu thức: $F(x, y) = 3x + 4y$ (triệu đồng).\\
+    Tính giá trị của $F(x, y)$ tại các đỉnh của miền nghiệm:
+    \begin{itemize}[itemsep=1pt]
+        \item $F(O) = 0$;
+        \item $F(A) = 3(8) + 4(0) = 24$ (triệu đồng);
+        \item $F(B) = 3(6) + 4(2) = 18 + 8 = 26$ (triệu đồng);
+        \item $F(C) = 3(0) + 4(6) = 24$ (triệu đồng).
+    \end{itemize}
+    Giá trị lớn nhất của $F(x, y)$ là $26$ triệu đồng, đạt được khi $x = 6$ và $y = 2$.\\
+    Vậy hộ nông dân cần trồng \textbf{6 sào đậu xanh} và \textbf{2 sào ngô} để đạt tổng lợi nhuận lớn nhất là \textbf{26.000.000 đồng}.
+\end{itemize}
+
+\end{document}
