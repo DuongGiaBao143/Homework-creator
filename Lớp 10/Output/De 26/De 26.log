@@ -1,9 +1,9 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.29)  30 OCT 2026 21:47
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.29)  30 OCT 2026 22:11
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
-**"./De 26.tex"
-(De 26.tex
+**"d:/Tao_De/Lớp 10/Output/De 26/De 26.tex"
+(d:/Tao_De/Lớp 10/Output/De 26/De 26.tex
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
 (D:\MiKTeX\tex/latex/base\article.cls
@@ -874,18 +874,18 @@ LaTeX Font Info:    ... okay on input line 44.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(34.14322pt, 529.22144pt, 34.14322pt)
-* v-part:(T,H,B)=(29.87547pt, 783.87317pt, 31.2982pt)
+* modes: includehead 
+* h-part:(L,W,R)=(36.98866pt, 523.53055pt, 36.98866pt)
+* v-part:(T,H,B)=(28.45274pt, 786.71863pt, 29.87547pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
-* \textwidth=529.22144pt
-* \textheight=783.87317pt
-* \oddsidemargin=-38.12677pt
-* \evensidemargin=-38.12677pt
-* \topmargin=-79.39452pt
-* \headheight=16.0pt
-* \headsep=25.0pt
+* \textwidth=523.53055pt
+* \textheight=760.71863pt
+* \oddsidemargin=-35.28133pt
+* \evensidemargin=-35.28133pt
+* \topmargin=-43.81725pt
+* \headheight=18.0pt
+* \headsep=8.0pt
 * \topskip=12.0pt
 * \footskip=30.0pt
 * \marginparwidth=35.0pt
@@ -943,27 +943,29 @@ L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 17017 strings out of 467871
- 329441 string characters out of 5435211
- 753950 words of memory out of 5000000
- 45588 multiletter control sequences out of 15000+600000
+ 17028 strings out of 467871
+ 329870 string characters out of 5435211
+ 752068 words of memory out of 5000000
+ 45596 multiletter control sequences out of 15000+600000
  648262 words of font info for 88 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,13n,107p,570b,909s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,13n,107p,600b,913s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Crink\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmex10.pfb><D:/MiKTeX/fonts/t
-ype1/public/amsfonts/cm/cmmi12.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cm
-mi8.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.pfb><D:/MiKTeX/fonts/ty
-pe1/public/amsfonts/cm/cmr12.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr8
-.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.pfb><D:/MiKTeX/fonts/type
-1/public/amsfonts/cm/cmsy8.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/symbols/m
-sbm10.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><D:/MiKTeX/fonts/type1/vn
-tex/vnr/vnbx12.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><D:/MiKTeX/fonts/
-type1/vntex/vnr/vnr12.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnti10.pfb><D:/MiKTe
-X/fonts/type1/vntex/vnr/vnti12.pfb>
-Output written on "De 26.pdf" (8 pages, 232546 bytes).
+ype1/public/amsfonts/cm/cmmi10.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cm
+mi12.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi8.pfb><D:/MiKTeX/fonts/t
+ype1/public/amsfonts/cm/cmr10.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr
+12.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr6.pfb><D:/MiKTeX/fonts/type
+1/public/amsfonts/cm/cmr8.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy8.pfb><D:/MiKTeX/fonts/type1/
+public/amsfonts/symbols/msbm10.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb>
+<D:/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vn
+r10.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><D:/MiKTeX/fonts/type1/vntex
+/vnr/vnti10.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb>
+Output written on "d:\Tao_De\Lớp 10\Output\De 26\De 26.pdf" (8 pages, 254922 
+bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
+ 123 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  17 words of extra memory for PDF output out of 10000 (max. 10000000)
 

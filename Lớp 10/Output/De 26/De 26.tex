@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
-\usepackage[margin=1.2cm,top=1.05cm,bottom=1.1cm]{geometry}
+\usepackage[margin=1.3cm,top=1.0cm,bottom=1.05cm,includehead,headheight=18pt,headsep=8pt]{geometry}
 \usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace}
 \usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
 \definecolor{ink}{RGB}{30,55,70}
@@ -29,17 +29,17 @@
 \rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
 \rfoot{\small Trang \thepage}
 \renewcommand{\headrulewidth}{0.4pt}
-\setlength{\headheight}{16pt}
+\setlength{\headheight}{18pt}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{0.4pt}
-\setlength{\tabcolsep}{2pt}
-\renewcommand{\arraystretch}{1.04}
-\newcommand{\parttitle}[1]{\par\vspace{2pt}\needspace{4\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{1.5pt}
+\renewcommand{\arraystretch}{1.0}
+\newcommand{\parttitle}[1]{\par\vspace{1.5pt}\needspace{2\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
 \newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
-\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[1.5pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
-\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{10pt}\hspace{2.2cm}}}
-\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.2cm,labelsep=.1cm,itemsep=0.4pt,topsep=0.4pt,parsep=0pt}
-\setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=0.4pt,topsep=0.4pt,parsep=0pt}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[1pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{9pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.1cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
 
 \begin{document}
 \noindent
@@ -55,10 +55,10 @@
     \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
     \textbf{ĐỀ SỐ 26}\\
     \textbf{Môn: TOÁN -- Khối lớp 10}\\
-    \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
+    \textit{\small Thời gian làm bài: 90 phút (không kể thời gian phát đề)}
 \end{minipage}
 
-\vspace{0.08cm}
+\vspace{0.03cm}
 \noindent
 \begin{minipage}[b]{0.78\textwidth}
     \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
@@ -72,7 +72,7 @@
         \textbf{0026}
     \end{minipage}}
 \end{minipage}
-\vspace{0.08cm}
+\vspace{0.03cm}
 
 \parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
 \textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án đúng duy nhất.}
@@ -86,20 +86,20 @@
 \item Cho tập hợp $S = \{x \in \mathbb{R} \mid -2 \le x < 5\}$. Tập hợp $S$ được viết dưới dạng khoảng, đoạn hoặc nửa khoảng là
 \four{$(-2; 5)$.}{$[-2; 5]$.}{$[-2; 5)$.}{$(-2; 5]$.}
 
-\item Cho định lý: ``Nếu tứ giác $ABCD$ là hình vuông thì tứ giác $ABCD$ có hai đường chéo vuông góc với nhau''. Phát biểu nào sau đây sử dụng khái niệm ``điều kiện đủ'' là đúng?
-\two{Tứ giác $ABCD$ có hai đường chéo vuông góc là điều kiện đủ để $ABCD$ là hình vuông.}{Tứ giác $ABCD$ là hình vuông là điều kiện cần để $ABCD$ có hai đường chéo vuông góc.}{Tứ giác $ABCD$ có hai đường chéo vuông góc là điều kiện cần và đủ để $ABCD$ là hình vuông.}{Tứ giác $ABCD$ là hình vuông là điều kiện đủ để tứ giác $ABCD$ có hai đường chéo vuông góc.}
+\item Cho định lý: ``Nếu tứ giác $ABCD$ là hình vuông thì $ABCD$ có hai đường chéo vuông góc''. Khẳng định nào sau đây là đúng?
+\two{$ABCD$ có hai đường chéo vuông góc là điều kiện đủ để $ABCD$ là hình vuông.}{$ABCD$ là hình vuông là điều kiện cần để $ABCD$ có hai đường chéo vuông góc.}{$ABCD$ có hai đường chéo vuông góc là điều kiện cần và đủ để $ABCD$ là hình vuông.}{$ABCD$ là hình vuông là điều kiện đủ để $ABCD$ có hai đường chéo vuông góc.}
 
-\item Cho hệ bất phương trình $\begin{cases} x + y - 2 \le 0 \\ 2x - 3y + 2 > 0 \end{cases}$. Điểm nào sau đây thuộc miền nghiệm của hệ bất phương trình đã cho?
+\item Cho hệ bất phương trình $\begin{cases} x + y - 2 \le 0 \\ 2x - 3y + 2 > 0 \end{cases}$. Điểm nào sau đây thuộc miền nghiệm của hệ?
 \four{$O(0; 0)$.}{$M(2; 1)$.}{$N(1; 2)$.}{$P(0; 2)$.}
 
-\item Đường thẳng bờ của miền nghiệm bất phương trình $3x - 2y + 6 \ge 0$ là đường thẳng có phương trình
+\item Đường thẳng bờ của miền nghiệm $3x - 2y + 6 \ge 0$ có phương trình là
 \four{$3x + 2y + 6 = 0$.}{$3x - 2y + 6 = 0$.}{$2x - 3y + 6 = 0$.}{$3x - 2y - 6 = 0$.}
 
 \item Cặp số $(x; y) = (2; -1)$ là nghiệm của bất phương trình nào sau đây?
 \four{$x + y - 3 > 0$.}{$2x + y - 4 > 0$.}{$x - 2y - 3 > 0$.}{$3x + y - 6 > 0$.}
 
-\item Trong các bất phương trình sau, bất phương trình nào là bất phương trình bậc nhất hai ẩn?
-\four{$2x^2 + 3y \le 5$.}{$x - 3xy + 2y > 0$.}{$x + \dfrac{1}{y} \ge 1$.}{$3x - 4y + 5 \le 0$.}
+\item Bất phương trình nào sau đây là bất phương trình bậc nhất hai ẩn?
+\four{$2x^2 + 3y \le 5$.}{$x - 3xy + 2y > 0$.}{$x + 1/y \ge 1$.}{$3x - 4y + 5 \le 0$.}
 
 \item Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$ (góc tù). Khẳng định nào sau đây là đúng?
 \four{$\sin \alpha > 0$.}{$\cos \alpha > 0$.}{$\tan \alpha > 0$.}{$\cot \alpha > 0$.}
@@ -107,12 +107,13 @@
 \item Cho tam giác $ABC$ có $AB = 5$, $AC = 8$ và $\widehat{A} = 60^\circ$. Độ dài cạnh $BC$ bằng
 \four{$\sqrt{129}$.}{$7$.}{$\sqrt{41}$.}{$8$.}
 
-\item Cho tam giác $ABC$ có độ dài ba cạnh là $a, b, c$. Công thức tính độ dài đường trung tuyến $m_a$ kẻ từ đỉnh $A$ là
-\two{$m_a^2 = \dfrac{b^2 + c^2 - a^2}{2}$.}{$m_a^2 = \dfrac{2(b^2 + c^2) + a^2}{4}$.}{$m_a^2 = \dfrac{2(b^2 + c^2) - a^2}{4}$.}{$m_a^2 = \dfrac{b^2 + c^2 - 2a^2}{4}$.}
+\item Cho tam giác $ABC$ có ba cạnh $a, b, c$. Công thức tính độ dài đường trung tuyến $m_a$ là
+\two{$m_a^2 = \frac{b^2 + c^2 - a^2}{2}$.}{$m_a^2 = \frac{2(b^2 + c^2) + a^2}{4}$.}{$m_a^2 = \frac{2(b^2 + c^2) - a^2}{4}$.}{$m_a^2 = \frac{b^2 + c^2 - 2a^2}{4}$.}
 
 \item Trong tam giác $ABC$ có $BC = a, CA = b, AB = c$, khẳng định nào sau đây là đúng?
 \two{$a^2 = b^2 + c^2 + 2bc \cos A$.}{$a^2 = b^2 + c^2 - 2bc \sin A$.}{$a^2 = b^2 + c^2 - bc \cos A$.}{$a^2 = b^2 + c^2 - 2bc \cos A$.}
 \end{enumerate}
+\newpage
 
 \parttitle{PHẦN II. Trắc nghiệm đúng/sai}
 \textit{Thí sinh trả lời từ câu 1 đến câu 2. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
@@ -137,48 +138,57 @@
 \parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
 \textit{Thí sinh trả lời từ câu 1 đến câu 4. Điền kết quả vào ô tương ứng.}
 \begin{enumerate}
-\item Hai tàu đánh cá cùng rời bến cảng $A$ vào lúc $6$ giờ sáng và di chuyển thẳng đều theo hai hướng tạo với nhau một góc $120^\circ$. Tàu thứ nhất chạy với tốc độ $15\text{ km/h}$, tàu thứ hai chạy với tốc độ $25\text{ km/h}$. Hỏi sau $2$ giờ kể từ lúc rời bến, khoảng cách giữa hai tàu là bao nhiêu kilômét?
+\item Hai tàu đánh cá cùng rời bến $A$ lúc $6$ giờ sáng, đi thẳng đều theo hai hướng tạo với nhau góc $120^\circ$. Tàu một chạy $15\text{ km/h}$, tàu hai chạy $25\text{ km/h}$. Sau $2$ giờ rời bến, khoảng cách giữa hai tàu là bao nhiêu kilômét?
 
 \begin{center}
+\vspace{-3pt}
 \begin{tikzpicture}[scale=0.8, >=Stealth]
     \coordinate (A) at (0,0);
-    \coordinate (B) at (3.2,0);
-    \coordinate (C) at (-1.6, 2.77);
+    \coordinate (B) at (3.8,0);
+    \coordinate (C) at (-1.9, 3.29);
     
-    \draw[line width=1.3pt, ink] (A) -- (B) node[midway, below=2pt, font=\normalsize\bfseries] {$30\text{ km}$};
-    \draw[line width=1.3pt, ink] (A) -- (C) node[midway, left=2pt, font=\normalsize\bfseries] {$50\text{ km}$};
-    \draw[line width=1.2pt, dashed, red!85!black] (B) -- (C) node[midway, above right=1pt, font=\normalsize\bfseries] {$d = ?$};
+    % Các đoạn thẳng
+    \draw[line width=1.3pt, ink] (A) -- (B) node[midway, below=3pt, font=\small\bfseries] {$30\text{ km}$};
+    \draw[line width=1.3pt, ink] (A) -- (C) node[midway, above left=1pt, font=\small\bfseries] {$50\text{ km}$};
+    \draw[line width=1.2pt, dashed, red!85!black] (B) -- (C) node[midway, above right=1pt, font=\small\bfseries] {$d = BC = ?$};
     
-    \filldraw[black] (A) circle (2.6pt) node[below=3pt, font=\normalsize\bfseries] {$A\text{ (Bến)}$};
-    \filldraw[black] (B) circle (2.6pt) node[below=3pt, font=\normalsize\bfseries] {$B\text{ (Tàu 1)}$};
-    \filldraw[black] (C) circle (2.6pt) node[above left=1pt, font=\normalsize\bfseries] {$C\text{ (Tàu 2)}$};
+    % Các điểm đỉnh tách biệt
+    \filldraw[black] (A) circle (2.5pt) node[below left=2pt, font=\small\bfseries] {$A\text{ (Bến)}$};
+    \filldraw[black] (B) circle (2.5pt) node[right=3pt, font=\small\bfseries] {$B\text{ (Tàu 1)}$};
+    \filldraw[black] (C) circle (2.5pt) node[above left=2pt, font=\small\bfseries] {$C\text{ (Tàu 2)}$};
     
-    \draw[line width=1.0pt] (0.6,0) arc (0:120:0.6);
-    \node[font=\small\bfseries] at (0.2, 0.65) {$120^\circ$};
+    % Cung góc 120 độ
+    \draw[line width=1.0pt] (0.7,0) arc (0:120:0.7);
+    \node[font=\small\bfseries] at (0.32, 0.9) {$120^\circ$};
 \end{tikzpicture}
+\vspace{-6pt}
 \end{center}
 \answerbox
 
 \item Cho nửa mặt phẳng (không bị gạch sọc, kể cả đường thẳng bờ $d$) trong hình vẽ bên dưới là miền nghiệm của bất phương trình $ax + by \le 6$ (với $a, b \in \mathbb{Z}$).
 
 \begin{center}
-\begin{tikzpicture}[scale=0.9, >=Stealth]
-    \draw[line width=1.1pt, ->] (-1.5,0) -- (4.8,0) node[right, font=\normalsize\bfseries] {$x$};
-    \draw[line width=1.1pt, ->] (0,-1.0) -- (0,3.2) node[above, font=\normalsize\bfseries] {$y$};
-    \node[below left=2pt, font=\normalsize\bfseries] at (0,0) {$O$};
+\vspace{-3pt}
+\begin{tikzpicture}[scale=0.72, >=Stealth]
+    \draw[line width=1.1pt, ->] (-1.3,0) -- (4.2,0) node[right, font=\small\bfseries] {$x$};
+    \draw[line width=1.1pt, ->] (0,-0.7) -- (0,2.8) node[above, font=\small\bfseries] {$y$};
+    \node[below left=2pt, font=\small\bfseries] at (0,0) {$O$};
     
-    \fill[pattern=north east lines, pattern color=gray!60] (-1.2,2.8) -- (4.4,2.8) -- (4.4,-0.93) -- cycle;
-    \draw[line width=1.4pt, ink] (-1.2,2.8) -- (4.4,-0.93) node[above right, font=\normalsize\bfseries] {$d$};
+    \fill[pattern=north east lines, pattern color=gray!60] (-1.0,2.67) -- (3.8,2.67) -- (3.8,-0.7) -- cycle;
+    \draw[line width=1.3pt, ink] (-1.0,2.67) -- (3.8,-0.7);
+    \node[above left=2pt, font=\small\bfseries] at (-1.0,2.67) {$d$};
     
-    \filldraw[black] (3,0) circle (2.5pt) node[below=2pt, font=\normalsize\bfseries] {$3$};
-    \filldraw[black] (0,2) circle (2.5pt) node[left=2pt, font=\normalsize\bfseries] {$2$};
+    \filldraw[black] (3,0) circle (2.4pt) node[below=2pt, font=\small\bfseries] {$3$};
+    \filldraw[black] (0,2) circle (2.4pt) node[left=2pt, font=\small\bfseries] {$2$};
 \end{tikzpicture}
+\vspace{-6pt}
 \end{center}
 
 Tính giá trị của biểu thức $T = 2a + 5b$.
 \answerbox
+\newpage
 
-\needspace{6\baselineskip}
+
 \item Cho hệ bất phương trình bậc nhất hai ẩn:
 \[
 \begin{cases}
@@ -220,10 +230,10 @@ Biết rằng miền nghiệm của hệ bất phương trình trên là một m
 Kho dự trữ nguyên liệu của xưởng hiện có tối đa $80\text{ kg}$ nguyên liệu $I$ và $120\text{ kg}$ nguyên liệu $II$. Mỗi kilôgam sản phẩm loại $A$ mang lại lợi nhuận $40$ nghìn đồng, mỗi kilôgam sản phẩm loại $B$ mang lại lợi nhuận $30$ nghìn đồng. Hãy lập kế hoạch sản xuất số lượng sản phẩm mỗi loại sao cho phân xưởng đạt tổng lợi nhuận cao nhất (vẽ hình biểu diễn miền nghiệm và tính lợi nhuận lớn nhất đó).
 \end{enumerate}
 
-\newpage
 % =========================================================================
 % BẢNG ĐÁP ÁN VÀ LỜI GIẢI CHI TIẾT
 % =========================================================================
+\newpage
 \parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
 
 \vspace{0.1cm}
@@ -518,9 +528,10 @@ y \ge 0.
 Miền nghiệm của hệ là miền tứ giác $OABC$ (kể cả biên) trên mặt phẳng tọa độ $Oxy$:
 
 \begin{center}
-\begin{tikzpicture}[scale=0.85, >=Stealth]
-    \draw[line width=1.1pt, ->] (-0.8,0) -- (6.8,0) node[right, font=\normalsize\bfseries] {$x$};
-    \draw[line width=1.1pt, ->] (0,-0.8) -- (0,8.8) node[above, font=\normalsize\bfseries] {$y$};
+\begin{tikzpicture}[scale=0.88, >=Stealth]
+    % Trục tọa độ
+    \draw[line width=1.2pt, ->] (-0.8,0) -- (7.5,0) node[right, font=\normalsize\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-0.8) -- (0,9.2) node[above, font=\normalsize\bfseries] {$y$};
     \node[below left=2pt, font=\normalsize\bfseries] at (0,0) {$O$};
     
     \coordinate (O) at (0,0);
@@ -530,26 +541,34 @@ Miền nghiệm của hệ là miền tứ giác $OABC$ (kể cả biên) trên 
     
     % Miền nghiệm tứ giác OABC
     \fill[ink!20] (O) -- (A) -- (B) -- (C) -- cycle;
-    \draw[line width=1.6pt, ink] (O) -- (A) -- (B) -- (C) -- cycle;
+    \draw[line width=1.8pt, ink] (O) -- (A) -- (B) -- (C) -- cycle;
     
-    % Đường 2x + y = 80
-    \draw[line width=1.2pt, red!85!black] (-0.3, 8.6) -- (4.3, -0.6) node[above right, font=\normalsize\bfseries] {$2x+y=80$};
+    % Đường thẳng d1: 2x + y = 80 (đi qua (0, 8) và (4, 0))
+    \draw[line width=1.3pt, red!85!black] (-0.4, 8.8) -- (4.4, -0.8);
+    \node[above right=1pt, red!85!black, font=\normalsize\bfseries] at (0.8, 7.5) {$d_1\colon 2x + y = 80$};
     
-    % Đường 2x + 3y = 120
-    \draw[line width=1.2pt, blue!85!black] (-0.8, 4.53) -- (6.5, -0.33) node[above right, font=\normalsize\bfseries] {$2x+3y=120$};
+    % Đường thẳng d2: 2x + 3y = 120 (đi qua (0, 4) và (6, 0))
+    \draw[line width=1.3pt, blue!85!black] (-0.8, 4.53) -- (6.8, -0.53);
+    \node[above right=1pt, blue!85!black, font=\normalsize\bfseries] at (5.0, 0.7) {$d_2\colon 2x + 3y = 120$};
     
-    % Gióng tọa độ B(30; 20)
-    \draw[dashed, line width=0.9pt] (3,0) -- (3,2) -- (0,2);
+    % Gióng tọa độ đỉnh B(30; 20)
+    \draw[dashed, line width=1.0pt, gray!80!black] (3,0) -- (3,2) -- (0,2);
     
-    % Chấm điểm to rõ
-    \filldraw[black] (O) circle (2.8pt);
-    \filldraw[black] (A) circle (2.8pt) node[below=3pt, font=\normalsize\bfseries] {$A(40;0)$};
-    \filldraw[black] (B) circle (3.2pt) node[above right=2pt, font=\normalsize\bfseries] {$B(30;20)$};
-    \filldraw[black] (C) circle (2.8pt) node[left=3pt, font=\normalsize\bfseries] {$C(0;40)$};
+    % Các vạch số trên trục Ox (đặt phía dưới trục)
     \node[below=3pt, font=\normalsize\bfseries] at (3,0) {$30$};
-    \node[left=3pt, font=\normalsize\bfseries] at (0,2) {$20$};
+    \node[below=3pt, font=\normalsize\bfseries] at (4,0) {$40$};
     \node[below=3pt, font=\normalsize\bfseries] at (6,0) {$60$};
+    
+    % Các vạch số trên trục Oy (đặt bên trái trục)
+    \node[left=3pt, font=\normalsize\bfseries] at (0,2) {$20$};
+    \node[left=3pt, font=\normalsize\bfseries] at (0,4) {$40$};
     \node[left=3pt, font=\normalsize\bfseries] at (0,8) {$80$};
+    
+    % Tọa độ các đỉnh
+    \filldraw[black] (O) circle (2.8pt);
+    \filldraw[black] (A) circle (2.8pt) node[above right=1pt, font=\normalsize\bfseries] {$A$};
+    \filldraw[black] (B) circle (3.2pt) node[above right=2pt, font=\normalsize\bfseries] {$B(30; 20)$};
+    \filldraw[black] (C) circle (2.8pt) node[above right=1pt, font=\normalsize\bfseries] {$C$};
 \end{tikzpicture}
 \end{center}
 
