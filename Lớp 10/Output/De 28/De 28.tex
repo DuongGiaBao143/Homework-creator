@@ -1,0 +1,602 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.3cm,top=1.0cm,bottom=1.05cm,includehead,headheight=18pt,headsep=8pt]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or The only way to learn mathematics is to do mathematics% Trang 7
+    \or Small steps every day lead to big results% Trang 8
+    \or Every expert was once a beginner% Trang 9
+    \or Success is the sum of small efforts repeated daily% Trang 10
+    \or Mathematics is the music of reason% Trang 11
+    \or Believe you can and you're halfway there% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{1.5pt}
+\renewcommand{\arraystretch}{1.0}
+\newcommand{\parttitle}[1]{\par\vspace{1.5pt}\needspace{2\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[1pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{9pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.1cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[3pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GIỮA KÌ I}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 28}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút (không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.03cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0028}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.03cm}
+
+% =========================================================================
+% TRANG 1: PHẦN I (12 CÂU TRẮC NGHIỆM NHIỀU LỰA CHỌN)
+% Cân bằng đáp án đúng: 3A - 3B - 3C - 3D.
+% =========================================================================
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án đúng duy nhất.}
+\begin{enumerate}
+\item Cho tập hợp $A = \{1; 2; 3\}$. Số tập hợp con của tập hợp $A$ là
+\four{$8$.}{$6$.}{$3$.}{$7$.}
+
+\item Trong các mệnh đề sau, mệnh đề nào là mệnh đề đúng?
+\four{Số $17$ là hợp số.}{Tổng hai số lẻ là một số chẵn.}{Số $\pi$ là số hữu tỉ.}{Hình bình hành có hai đường chéo vuông góc.}
+
+\item Cho mệnh đề $P\colon \text{``}\forall x \in \mathbb{R},\, x^2 - x + 7 > 0\text{''}$. Mệnh đề phủ định $\overline{P}$ của mệnh đề $P$ là
+\two{$\overline{P}\colon \text{``}\forall x \in \mathbb{R},\, x^2 - x + 7 \le 0\text{''}$.}{$\overline{P}\colon \text{``}\exists x \in \mathbb{R},\, x^2 - x + 7 < 0\text{''}$.}{$\overline{P}\colon \text{``}\exists x \in \mathbb{R},\, x^2 - x + 7 \le 0\text{''}$.}{$\overline{P}\colon \text{``}\forall x \in \mathbb{R},\, x^2 - x + 7 < 0\text{''}$.}
+
+\item Cho hai tập hợp $A = \{x \in \mathbb{N} \mid x \le 4\}$ và $B = \{1; 3; 5; 7\}$. Tập hợp $A \cap B$ là
+\four{$\{0; 1; 2; 3; 4; 5; 7\}$.}{$\{1; 2; 3\}$.}{$\{0; 2; 4\}$.}{$\{1; 3\}$.}
+
+\item Cho hệ bất phương trình $\begin{cases} 2x + y - 4 \le 0 \\ x - 2y + 2 \ge 0 \end{cases}$. Điểm nào sau đây thuộc miền nghiệm của hệ?
+\four{$O(0; 0)$.}{$M(3; 1)$.}{$N(1; 3)$.}{$P(2; 3)$.}
+
+\item Hệ bất phương trình nào sau đây là hệ bất phương trình bậc nhất hai ẩn?
+\four{$\begin{cases} x^2 + y \le 1 \\ x - y > 0 \end{cases}$}{$\begin{cases} 2x - 3y \ge 1 \\ x + y - 5 < 0 \end{cases}$}{$\begin{cases} x + 2y - z \le 0 \\ 3x - y > 1 \end{cases}$}{$\begin{cases} xy - 1 \le 0 \\ x + y > 2 \end{cases}$}
+
+\item Đường thẳng bờ của miền nghiệm bất phương trình $4x - 5y + 10 \le 0$ có phương trình là
+\four{$4x + 5y - 10 = 0$.}{$5x - 4y + 10 = 0$.}{$4x - 5y + 10 = 0$.}{$4x - 5y - 10 = 0$.}
+
+\item Miền nghiệm của bất phương trình nào sau đây là nửa mặt phẳng chứa gốc tọa độ $O(0; 0)$ có bờ là đường thẳng đi qua hai điểm $(2; 0)$ và $(0; 3)$?
+\four{$3x + 2y - 6 \ge 0$.}{$2x + 3y - 6 \le 0$.}{$3x - 2y - 6 \le 0$.}{$3x + 2y - 6 \le 0$.}
+
+\item Cho tam giác $ABC$ có ba cạnh $a, b, c$ tương ứng với các góc $A, B, C$. Khẳng định nào sau đây là đúng?
+\two{$a^2 = b^2 + c^2 - 2bc \cos A$.}{$a^2 = b^2 + c^2 + 2bc \cos A$.}{$a^2 = b^2 + c^2 - 2bc \sin A$.}{$a^2 = b^2 + c^2 - bc \cos A$.}
+
+\item Cho tam giác $ABC$ có ba cạnh $BC = a, CA = b, AB = c$. Độ dài đường trung tuyến $m_b$ xuất phát từ đỉnh $B$ được tính theo công thức nào sau đây?
+\two{$m_b^2 = \frac{2(a^2 + c^2) + b^2}{4}$.}{$m_b^2 = \frac{2(a^2 + c^2) - b^2}{4}$.}{$m_b^2 = \frac{a^2 + c^2 - 2b^2}{4}$.}{$m_b^2 = \frac{a^2 + c^2 - b^2}{2}$.}
+
+\item Với mọi góc $\alpha$ thỏa mãn $0^\circ < \alpha < 90^\circ$, biểu thức $P = \sin(180^\circ - \alpha) + \cos(90^\circ - \alpha) - 2\sin \alpha$ có giá trị bằng
+\four{$2\sin \alpha$.}{$2\cos \alpha$.}{$0$.}{$1$.}
+
+\item Cho tam giác $ABC$ có nửa chu vi $p$, bán kính đường tròn nội tiếp $r$ và bán kính đường tròn ngoại tiếp $R$. Công thức nào sau đây dùng để tính diện tích $S$ của tam giác $ABC$?
+\four{$S = p R$.}{$S = \frac{abc}{2R}$.}{$S = \frac{1}{2} p r$.}{$S = p r$.}
+\end{enumerate}
+\newpage
+
+% =========================================================================
+% TRANG 2: PHẦN II (2 CÂU ĐÚNG/SAI) + PHẦN III (CÂU 1 & CÂU 2 KÈM HÌNH TIKZ)
+% =========================================================================
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Thí sinh trả lời từ câu 1 đến câu 2. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}
+\item Cho hai tập hợp $A = \{x \in \mathbb{R} \mid -2 \le x < 4\}$ và $B = \{x \in \mathbb{Z} \mid x^2 - 4x + 3 \le 0\}$.
+\begin{enumerate}
+    \item Tập hợp $B$ có đúng $3$ phần tử.
+    \item Tập hợp $A$ được viết dưới dạng nửa khoảng là $[-2; 4)$.
+    \item Tập hợp $A \cap B = B$.
+    \item Số phần tử của tập hợp $C = \{x \in \mathbb{Z} \mid x \in A \setminus B\}$ bằng $5$.
+\end{enumerate}
+
+\item Một người quan sát đứng tại chân một hải đăng tại điểm $A$ nhìn thấy một chiếc thuyền tại vị trí $B$ cách hải đăng $6\text{ km}$, và nhìn thấy một hòn đảo nhỏ tại vị trí $C$ cách hải đăng $10\text{ km}$. Góc nhìn giữa thuyền và đảo tại vị trí $A$ là $\widehat{BAC} = 60^\circ$.
+\begin{enumerate}
+    \item Tam giác $ABC$ có độ dài hai cạnh $AB = 6\text{ km}$ và $AC = 10\text{ km}$.
+    \item Định lý côsin áp dụng trong tam giác $ABC$ cho cạnh $BC$ là $BC^2 = AB^2 + AC^2 - 2 AB \cdot AC \cos \widehat{BAC}$.
+    \item Khoảng cách giữa chiếc thuyền tại $B$ và hòn đảo tại $C$ bằng $2\sqrt{19}\text{ km}$.
+    \item Diện tích vùng biển hình tam giác $ABC$ giới hạn bởi hải đăng, thuyền và đảo bằng $30\sqrt{3}\text{ km}^2$.
+\end{enumerate}
+\end{enumerate}
+
+\parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 4. Điền kết quả vào ô tương ứng.}
+\begin{enumerate}
+\item Một trạm phát sóng đặt tại vị trí $C$. Hai trạm thu phát tín hiệu di động đặt tại hai vị trí $A$ và $B$. Biết khoảng cách $CA = 30\text{ km}$, $CB = 50\text{ km}$ và góc $\widehat{ACB} = 120^\circ$. Tính khoảng cách giữa hai trạm $A$ và $B$ (đơn vị: kilômét).
+
+\begin{center}
+\vspace{-3pt}
+\begin{tikzpicture}[scale=0.75, >=Stealth]
+    \coordinate (C) at (0,0);
+    \coordinate (B) at (4.5,0);
+    \coordinate (A) at (-1.35, 2.34);
+    
+    % Các đoạn thẳng
+    \draw[line width=1.3pt, ink] (C) -- (B) node[midway, below=3pt, font=\small\bfseries] {$50\text{ km}$};
+    \draw[line width=1.3pt, ink] (C) -- (A) node[midway, above left=1pt, font=\small\bfseries] {$30\text{ km}$};
+    \draw[line width=1.2pt, dashed, red!85!black] (A) -- (B) node[midway, above right=1pt, font=\small\bfseries] {$d = AB = ?$};
+    
+    % Các điểm đỉnh
+    \filldraw[black] (C) circle (2.5pt) node[below left=2pt, font=\small\bfseries] {$C\text{ (Trạm phát)}$};
+    \filldraw[black] (B) circle (2.5pt) node[right=3pt, font=\small\bfseries] {$B\text{ (Trạm thu 2)}$};
+    \filldraw[black] (A) circle (2.5pt) node[above left=2pt, font=\small\bfseries] {$A\text{ (Trạm thu 1)}$};
+    
+    % Cung góc 120 độ
+    \draw[line width=1.0pt] (0.8,0) arc (0:120:0.8);
+    \node[font=\small\bfseries] at (0.35, 1.0) {$120^\circ$};
+\end{tikzpicture}
+\vspace{-6pt}
+\end{center}
+\answerbox
+
+\item Cho nửa mặt phẳng (không bị gạch sọc, kể cả đường thẳng bờ $d$) trong hình vẽ bên dưới là miền nghiệm của bất phương trình $ax + by \le 12$ (với $a, b \in \mathbb{Z}$).
+
+\begin{center}
+\vspace{-3pt}
+\begin{tikzpicture}[scale=0.72, >=Stealth]
+    \draw[line width=1.1pt, ->] (-1.5,0) -- (5.2,0) node[right, font=\small\bfseries] {$x$};
+    \draw[line width=1.1pt, ->] (0,-0.8) -- (0,4.0) node[above, font=\small\bfseries] {$y$};
+    \node[below left=2pt, font=\small\bfseries] at (0,0) {$O$};
+    
+    % Miền bị gạch sọc (không thuộc miền nghiệm)
+    \fill[pattern=north east lines, pattern color=gray!60] (-1.0, 3.75) -- (5.0, 3.75) -- (5.0, -0.75) -- cycle;
+    \draw[line width=1.3pt, ink] (-1.0, 3.75) -- (5.0, -0.75);
+    \node[above left=2pt, font=\small\bfseries] at (-1.0, 3.75) {$d$};
+    
+    \filldraw[black] (4,0) circle (2.4pt) node[below=2pt, font=\small\bfseries] {$4$};
+    \filldraw[black] (0,3) circle (2.4pt) node[left=2pt, font=\small\bfseries] {$3$};
+\end{tikzpicture}
+\vspace{-6pt}
+\end{center}
+Tính giá trị của biểu thức $T = 3a + 2b$.
+\answerbox
+\newpage
+
+% =========================================================================
+% TRANG 3: PHẦN III (CÂU 3 & CÂU 4) + PHẦN IV (4 CÂU TỰ LUẬN)
+% =========================================================================
+\item Cho hệ bất phương trình bậc nhất hai ẩn:
+\[
+\begin{cases}
+x \ge 0 \\
+y \ge 0 \\
+x + y \le 6 \\
+x + 2y \le 8.
+\end{cases}
+\]
+Biết rằng miền nghiệm của hệ bất phương trình trên là một miền tứ giác $OABC$ trên mặt phẳng toạ độ $Oxy$. Tính diện tích của miền tứ giác đó.
+\answerbox
+
+\item Cho hai tập hợp $A = [m - 2; m + 3]$ và $B = (-1; 5]$. Có bao nhiêu giá trị nguyên của tham số $m$ để $A \cap B \ne \emptyset$?
+\answerbox
+\end{enumerate}
+
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày chi tiết lời giải từ câu 1 đến câu 4.}
+\begin{enumerate}
+\item \textit{(0,75 điểm)} Cho hai tập hợp số $A = (-4; 3]$ và $B = [1; 7)$.
+\begin{enumerate}
+    \item Xác định các tập hợp $A \cup B$, $A \cap B$, $A \setminus B$ và $B \setminus A$.
+    \item Biểu diễn tập hợp $A \cup B$ trên trục số.
+\end{enumerate}
+
+\item \textit{(0,75 điểm)} Cho hai tập hợp $A = [m - 1; m + 4]$ và $B = [-2; 6]$. Tìm tất cả các giá trị của tham số $m$ để $A \subset B$.
+
+\item \textit{(0,75 điểm)} Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$ và $\sin \alpha = \dfrac{4}{5}$.
+\begin{enumerate}
+    \item Tính giá trị của $\cos \alpha, \tan \alpha$ và $\cot \alpha$.
+    \item Tính giá trị của biểu thức $E = \dfrac{2\sin \alpha + 3\cos \alpha}{4\tan \alpha - \cot \alpha}$.
+\end{enumerate}
+
+\item \textit{(0,75 điểm)} Một hộ gia đình dự định trồng hai loại cây ăn quả là cam và xoài trên diện tích đất tối đa $8\text{ ha}$.
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Chi phí đầu tư cho $1\text{ ha}$ cam là $20$ triệu đồng, cần $30$ công lao động.
+    \item Chi phí đầu tư cho $1\text{ ha}$ xoài là $30$ triệu đồng, cần $15$ công lao động.
+\end{itemize}
+Hộ gia đình có nguồn vốn đầu tư tối đa là $180$ triệu đồng và có thể sử dụng tối đa $180$ công lao động. Mỗi hecta cam sau khi thu hoạch mang lại lợi nhuận $40$ triệu đồng, mỗi hecta xoài mang lại lợi nhuận $30$ triệu đồng. Hãy lập kế hoạch sản xuất số lượng hecta cam và hecta xoài sao cho hộ gia đình đạt tổng lợi nhuận cao nhất (vẽ hình biểu diễn miền nghiệm và tính lợi nhuận lớn nhất đó).
+\end{enumerate}
+\newpage
+
+% =========================================================================
+% TRANG 4 TRỞ ĐI: BẢNG ĐÁP ÁN TỔNG HỢP VÀ LỜI GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\vspace{0.1cm}
+\textbf{1. Phần I: Trắc nghiệm nhiều lựa chọn}
+\begin{center}
+{\setlength{\tabcolsep}{2.5pt}\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} & \textbf{Câu 5} & \textbf{Câu 6} & \textbf{Câu 7} & \textbf{Câu 8} & \textbf{Câu 9} & \textbf{Câu 10} & \textbf{Câu 11} & \textbf{Câu 12} \\
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{2. Phần II: Trắc nghiệm đúng/sai}
+\begin{center}
+{\small
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu} & \textbf{Lệnh hỏi a)} & \textbf{Lệnh hỏi b)} & \textbf{Lệnh hỏi c)} & \textbf{Lệnh hỏi d)} \\
+\hline
+\textbf{1} & Đ & Đ & Đ & S \\
+\hline
+\textbf{2} & Đ & Đ & Đ & S \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.2cm}
+\textbf{3. Phần III: Trắc nghiệm trả lời ngắn}
+\begin{center}
+{\small
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu} & \textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} \\
+\hline
+\textbf{Đáp số} & $70$ & $17$ & $14$ & $11$ \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.2cm}
+\parttitle{LỜI GIẢI CHI TIẾT}
+
+\textbf{\large PHẦN I. Trắc nghiệm nhiều lựa chọn}
+
+\textbf{Câu 1.} Tập hợp $A = \{1; 2; 3\}$ có $n = 3$ phần tử. Số tập hợp con của $A$ là $2^n = 2^3 = 8$. \textbf{Chọn A.}
+
+\textbf{Câu 2.}
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Phương án A: $17$ chỉ chia hết cho $1$ và chính nó nên $17$ là số nguyên tố $\Rightarrow$ A sai.
+    \item Phương án B: Giả sử hai số lẻ có dạng $2k+1$ và $2m+1$ ($k, m \in \mathbb{Z}$). Khi đó tổng bằng $(2k+1) + (2m+1) = 2(k+m+1)$ là một số chẵn $\Rightarrow$ B đúng.
+    \item Phương án C: $\pi$ là số vô tỉ $\Rightarrow$ C sai.
+    \item Phương án D: Hình thoi mới có hai đường chéo vuông góc, hình bình hành tổng quát không có $\Rightarrow$ D sai.
+\end{itemize}
+\textbf{Chọn B.}
+
+\textbf{Câu 3.} Phủ định của mệnh đề có chứa lượng từ $\forall$ là lượng từ $\exists$, và phủ định của bất đẳng thức ``$>$'' là ``$\le$''. Do đó phủ định của mệnh đề $P\colon \text{``}\forall x \in \mathbb{R},\, x^2 - x + 7 > 0\text{''}$ là $\overline{P}\colon \text{``}\exists x \in \mathbb{R},\, x^2 - x + 7 \le 0\text{''}$. \textbf{Chọn C.}
+
+\textbf{Câu 4.} Ta có $A = \{x \in \mathbb{N} \mid x \le 4\} = \{0; 1; 2; 3; 4\}$ và $B = \{1; 3; 5; 7\}$. Giao của hai tập hợp gồm các phần tử chung là $A \cap B = \{1; 3\}$. \textbf{Chọn D.}
+
+\textbf{Câu 5.} Thay toạ độ các điểm vào hệ bất phương trình:
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Với $O(0; 0)$: $\begin{cases} 2(0) + 0 - 4 = -4 \le 0 \\ 0 - 2(0) + 2 = 2 \ge 0 \end{cases}$ (thỏa mãn cả hai bất phương trình).
+    \item Với $M(3; 1)$: $2(3) + 1 - 4 = 3 > 0$ (không thỏa mãn bất phương trình thứ nhất).
+    \item Với $N(1; 3)$: $1 - 2(3) + 2 = -3 < 0$ (không thỏa mãn bất phương trình thứ hai).
+    \item Với $P(2; 3)$: $2(2) + 3 - 4 = 3 > 0$ (không thỏa mãn bất phương trình thứ nhất).
+\end{itemize}
+\textbf{Chọn A.}
+
+\textbf{Câu 6.} Hệ bất phương trình bậc nhất hai ẩn có tất cả các bất phương trình đều là bậc nhất đối với hai ẩn $x$ và $y$.
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Hệ ở phương án A chứa $x^2$ là bậc hai $\Rightarrow$ loại A.
+    \item Hệ ở phương án B: $\begin{cases} 2x - 3y \ge 1 \\ x + y - 5 < 0 \end{cases}$ là hệ bất phương trình bậc nhất hai ẩn $x, y \Rightarrow$ B đúng.
+    \item Hệ ở phương án C chứa ba ẩn $x, y, z \Rightarrow$ loại C.
+    \item Hệ ở phương án D chứa tích $xy$ là bậc hai $\Rightarrow$ loại D.
+\end{itemize}
+\textbf{Chọn B.}
+
+\textbf{Câu 7.} Đường thẳng bờ của miền nghiệm bất phương trình $4x - 5y + 10 \le 0$ là đường thẳng có phương trình thu được khi thay dấu bất đẳng thức bằng dấu đẳng thức: $4x - 5y + 10 = 0$. \textbf{Chọn C.}
+
+\textbf{Câu 8.} Đường thẳng đi qua hai điểm $(2; 0)$ và $(0; 3)$ có phương trình đoạn chắn là $\dfrac{x}{2} + \dfrac{y}{3} = 1 \iff 3x + 2y - 6 = 0$. Thay toạ độ gốc tọa độ $O(0; 0)$ vào biểu thức $3x + 2y - 6$, ta được $3(0) + 2(0) - 6 = -6 < 0$. Do miền nghiệm chứa điểm $O(0; 0)$ và kể cả bờ, nên bất phương trình tương ứng là $3x + 2y - 6 \le 0$. \textbf{Chọn D.}
+
+\textbf{Câu 9.} Theo định lý côsin trong tam giác $ABC$, ta có $a^2 = b^2 + c^2 - 2bc \cos A$. \textbf{Chọn A.}
+
+\textbf{Câu 10.} Công thức độ dài đường trung tuyến $m_b$ xuất phát từ đỉnh $B$ là $m_b^2 = \dfrac{2(a^2 + c^2) - b^2}{4}$. \textbf{Chọn B.}
+
+\textbf{Câu 11.} Áp dụng các công thức lượng giác của hai góc bù nhau và phụ nhau:
+$\sin(180^\circ - \alpha) = \sin \alpha$, $\cos(90^\circ - \alpha) = \sin \alpha$.
+Do đó:
+\[
+P = \sin \alpha + \sin \alpha - 2\sin \alpha = 0.
+\]
+\textbf{Chọn C.}
+
+\textbf{Câu 12.} Công thức diện tích tam giác liên hệ với bán kính đường tròn nội tiếp $r$ và nửa chu vi $p$ là $S = pr$. \textbf{Chọn D.}
+
+\vspace{0.2cm}
+\textbf{\large PHẦN II. Trắc nghiệm đúng/sai}
+
+\textbf{Câu 1.} Cho hai tập hợp $A = [-2; 4)$ và $B = \{x \in \mathbb{Z} \mid x^2 - 4x + 3 \le 0\}$.
+\begin{enumerate}
+    \item Giải bất phương trình $x^2 - 4x + 3 \le 0 \iff 1 \le x \le 3$. Vì $x \in \mathbb{Z}$ nên $B = \{1; 2; 3\}$. Tập hợp $B$ có đúng $3$ phần tử. \textbf{Mệnh đề a) ĐÚNG.}
+    \item Tập hợp $A = \{x \in \mathbb{R} \mid -2 \le x < 4\}$ được viết dưới dạng nửa khoảng là $[-2; 4)$. \textbf{Mệnh đề b) ĐÚNG.}
+    \item Do mọi phần tử $1, 2, 3$ của $B$ đều thỏa mãn $-2 \le x < 4$ nên $B \subset A$, suy ra $A \cap B = B$. \textbf{Mệnh đề c) ĐÚNG.}
+    \item Tập các số nguyên thuộc $A$ là $\{-2; -1; 0; 1; 2; 3\}$. Bỏ đi các phần tử của $B = \{1; 2; 3\}$, ta được các số nguyên thuộc $A \setminus B$ là $\{-2; -1; 0\}$. Do đó tập hợp $C$ có đúng $3$ phần tử, mệnh đề khẳng định có $5$ phần tử là sai. \textbf{Mệnh đề d) SAI.}
+\end{enumerate}
+
+\textbf{Câu 2.} Xét tam giác $ABC$ với $AB = 6\text{ km}$, $AC = 10\text{ km}$ và $\widehat{BAC} = 60^\circ$.
+\begin{enumerate}
+    \item Từ giả thiết, khoảng cách từ hải đăng đến thuyền là $AB = 6\text{ km}$, khoảng cách từ hải đăng đến đảo là $AC = 10\text{ km}$. \textbf{Mệnh đề a) ĐÚNG.}
+    \item Định lý côsin cho cạnh $BC$ trong tam giác $ABC$ là $BC^2 = AB^2 + AC^2 - 2 AB \cdot AC \cos \widehat{BAC}$. \textbf{Mệnh đề b) ĐÚNG.}
+    \item Áp dụng định lý côsin:
+    \[
+    BC^2 = 6^2 + 10^2 - 2 \cdot 6 \cdot 10 \cdot \cos 60^\circ = 36 + 100 - 120 \cdot \frac{1}{2} = 136 - 60 = 76.
+    \]
+    Suy ra $BC = \sqrt{76} = 2\sqrt{19}\text{ km}$. \textbf{Mệnh đề c) ĐÚNG.}
+    \item Diện tích tam giác $ABC$ là:
+    \[
+    S = \frac{1}{2} AB \cdot AC \cdot \sin \widehat{BAC} = \frac{1}{2} \cdot 6 \cdot 10 \cdot \sin 60^\circ = 30 \cdot \frac{\sqrt{3}}{2} = 15\sqrt{3}\text{ km}^2.
+    \]
+    Mệnh đề khẳng định diện tích bằng $30\sqrt{3}\text{ km}^2$ là sai. \textbf{Mệnh đề d) SAI.}
+\end{enumerate}
+
+\vspace{0.2cm}
+\textbf{\large PHẦN III. Trắc nghiệm trả lời ngắn}
+
+\textbf{Câu 1.} Áp dụng định lý côsin trong tam giác $ABC$ có $CA = 30\text{ km}$, $CB = 50\text{ km}$ và góc $\widehat{ACB} = 120^\circ$:
+\[
+AB^2 = CA^2 + CB^2 - 2 \cdot CA \cdot CB \cdot \cos \widehat{ACB} = 30^2 + 50^2 - 2 \cdot 30 \cdot 50 \cdot \cos 120^\circ.
+\]
+Do $\cos 120^\circ = -\dfrac{1}{2}$ nên:
+\[
+AB^2 = 900 + 2500 - 3000 \cdot \left(-\frac{1}{2}\right) = 3400 + 1500 = 4900.
+\]
+Suy ra $AB = \sqrt{4900} = 70\text{ km}$. \textbf{Đáp số: 70.}
+
+\textbf{Câu 2.} Đường thẳng $d$ cắt trục hoành tại điểm có toạ độ $(4; 0)$ và cắt trục tung tại điểm $(0; 3)$.
+Phương trình đường thẳng $d$ theo đoạn chắn là:
+\[
+\frac{x}{4} + \frac{y}{3} = 1 \iff 3x + 4y = 12.
+\]
+Điểm $O(0; 0)$ thuộc miền nghiệm (không bị gạch sọc), thay vào biểu thức ta có $3(0) + 4(0) = 0 \le 12$ (thỏa mãn).
+Do đó bất phương trình biểu diễn miền nghiệm là $3x + 4y \le 12$.
+So sánh với dạng $ax + by \le 12$, ta có $a = 3$ và $b = 4$.
+Giá trị của biểu thức $T$ là:
+\[
+T = 3a + 2b = 3 \cdot 3 + 2 \cdot 4 = 9 + 8 = 17.
+\]
+\textbf{Đáp số: 17.}
+
+\textbf{Câu 3.} Vẽ các đường thẳng trên mặt phẳng toạ độ $Oxy$:
+$d_1\colon x + y = 6$, $d_2\colon x + 2y = 8$, và các trục toạ độ $x = 0$, $y = 0$.
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Gốc toạ độ $O(0; 0)$.
+    \item Đỉnh $A$ trên trục hoành ($y = 0$): $x + y \le 6 \implies x \le 6$, $x + 2y \le 8 \implies x \le 8$. Suy ra $A(6; 0)$.
+    \item Đỉnh $C$ trên trục tung ($x = 0$): $y \le 6$ và $2y \le 8 \implies y \le 4$. Suy ra $C(0; 4)$.
+    \item Đỉnh $B$ là giao điểm của hai đường thẳng $x + y = 6$ và $x + 2y = 8$. Giải hệ phương trình:
+    \[
+    \begin{cases} x + y = 6 \\ x + 2y = 8 \end{cases} \iff \begin{cases} y = 2 \\ x = 4 \end{cases} \implies B(4; 2).
+    \]
+\end{itemize}
+Miền nghiệm là tứ giác $OABC$ với $O(0; 0), A(6; 0), B(4; 2), C(0; 4)$.
+Chia tứ giác thành hai miền: hình thang vuông $OAB'B$ và tam giác vuông $CB'B$ (với $B'(0; 2)$ là hình chiếu của $B$ lên trục tung $Oy$):
+- Hình thang vuông $OAB'B$ có hai đáy $OA = 6$, $B'B = 4$ và chiều cao $OB' = 2$:
+  \[
+  S_{OAB'B} = \frac{(6 + 4) \cdot 2}{2} = 10.
+  \]
+- Tam giác vuông $CB'B$ tại $B'$ có cạnh đáy $B'B = 4$ và chiều cao $B'C = 4 - 2 = 2$:
+  \[
+  S_{CB'B} = \frac{1}{2} \cdot 4 \cdot 2 = 4.
+  \]
+Tổng diện tích miền tứ giác $OABC$ là:
+\[
+S = S_{OAB'B} + S_{CB'B} = 10 + 4 = 14.
+\]
+\textbf{Đáp số: 14.}
+
+\textbf{Câu 4.} Cho $A = [m - 2; m + 3]$ và $B = (-1; 5]$.
+Hai tập hợp $A$ và $B$ không có điểm chung ($A \cap B = \emptyset$) khi và chỉ khi $A$ nằm hoàn toàn bên trái $B$ hoặc $A$ nằm hoàn toàn bên phải $B$:
+\[
+A \cap B = \emptyset \iff \left[\begin{array}{l} m + 3 \le -1 \\ m - 2 > 5 \end{array}\right. \iff \left[\begin{array}{l} m \le -4 \\ m > 7. \end{array}\right.
+\]
+Do đó, điều kiện để $A \cap B \ne \emptyset$ là:
+\[
+-4 < m \le 7.
+\]
+Vì $m \in \mathbb{Z}$ nên $m \in \{-3; -2; -1; 0; 1; 2; 3; 4; 5; 6; 7\}$.
+Số giá trị nguyên thỏa mãn là $7 - (-3) + 1 = 11$. \textbf{Đáp số: 11.}
+
+\vspace{0.2cm}
+\textbf{\large PHẦN IV. Tự luận}
+
+\textbf{Câu 1.} Cho $A = (-4; 3]$ và $B = [1; 7)$.
+\begin{enumerate}
+    \item Xác định các phép toán tập hợp:
+    \begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+        \item Hợp của hai tập hợp: $A \cup B = (-4; 7)$.
+        \item Giao của hai tập hợp: $A \cap B = [1; 3]$.
+        \item Hiệu $A \setminus B$: gồm các phần tử thuộc $A$ nhưng không thuộc $B$, do đó $A \setminus B = (-4; 1)$.
+        \item Hiệu $B \setminus A$: gồm các phần tử thuộc $B$ nhưng không thuộc $A$, do đó $B \setminus A = (3; 7)$.
+    \end{itemize}
+    \item Biểu diễn tập hợp $A \cup B = (-4; 7)$ trên trục số:
+    \begin{center}
+    \begin{tikzpicture}[scale=0.9, >=Stealth]
+        \draw[line width=1.1pt, ->] (-6,0) -- (9,0);
+        
+        % Vạch gạch bỏ phần ngoài (-4; 7)
+        \fill[pattern=north east lines, pattern color=gray!70] (-6,-0.15) rectangle (-4,0.15);
+        \fill[pattern=north east lines, pattern color=gray!70] (7,-0.15) rectangle (8.8,0.15);
+        
+        % Dấu ngoặc tròn
+        \node[font=\large\bfseries, color=ink] at (-4,0) {$($};
+        \node[below=4pt, font=\small\bfseries] at (-4,0) {$-4$};
+        
+        \node[font=\large\bfseries, color=ink] at (7,0) {$)$};
+        \node[below=4pt, font=\small\bfseries] at (7,0) {$7$};
+        
+        \filldraw[black] (0,0) circle (1.8pt) node[below=4pt, font=\small\bfseries] {$0$};
+    \end{tikzpicture}
+    \end{center}
+\end{enumerate}
+
+\textbf{Câu 2.} Cho $A = [m - 1; m + 4]$ và $B = [-2; 6]$.
+Đoạn $A$ luôn có độ dài $(m + 4) - (m - 1) = 5 > 0$ với mọi $m \in \mathbb{R}$.
+Để $A \subset B$, mọi phần tử của $A$ phải thuộc $B$, tức là mút trái của $A$ phải lớn hơn hoặc bằng mút trái của $B$, và mút phải của $A$ phải nhỏ hơn hoặc bằng mút phải của $B$:
+\[
+\begin{cases}
+m - 1 \ge -2 \\
+m + 4 \le 6
+\end{cases}
+\iff
+\begin{cases}
+m \ge -1 \\
+m \le 2
+\end{cases}
+\iff -1 \le m \le 2.
+\]
+Vậy tất cả các giá trị của tham số $m$ cần tìm là $m \in [-1; 2]$.
+
+\textbf{Câu 3.} Cho góc $\alpha$ thỏa mãn $90^\circ < \alpha < 180^\circ$ và $\sin \alpha = \dfrac{4}{5}$.
+\begin{enumerate}
+    \item Do $90^\circ < \alpha < 180^\circ$ (góc tù) nên $\cos \alpha < 0$.
+    Áp dụng công thức $\sin^2 \alpha + \cos^2 \alpha = 1$, ta có:
+    \[
+    \cos^2 \alpha = 1 - \sin^2 \alpha = 1 - \left(\frac{4}{5}\right)^2 = 1 - \frac{16}{25} = \frac{9}{25}.
+    \]
+    Do $\cos \alpha < 0$ nên $\cos \alpha = -\sqrt{\dfrac{9}{25}} = -\dfrac{3}{5}$.
+    
+    Khi đó:
+    \[
+    \tan \alpha = \frac{\sin \alpha}{\cos \alpha} = \frac{\frac{4}{5}}{-\frac{3}{5}} = -\frac{4}{3}; \quad \cot \alpha = \frac{1}{\tan \alpha} = -\frac{3}{4}.
+    \]
+    \item Thay các giá trị vào biểu thức $E$:
+    \begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+        \item Tử số: $2\sin \alpha + 3\cos \alpha = 2 \cdot \dfrac{4}{5} + 3 \cdot \left(-\dfrac{3}{5}\right) = \dfrac{8}{5} - \dfrac{9}{5} = -\dfrac{1}{5}$.
+        \item Mẫu số: $4\tan \alpha - \cot \alpha = 4 \cdot \left(-\dfrac{4}{3}\right) - \left(-\dfrac{3}{4}\right) = -\dfrac{16}{3} + \dfrac{3}{4} = \dfrac{-64 + 9}{12} = -\dfrac{55}{12}$.
+    \end{itemize}
+    Vậy:
+    \[
+    E = \frac{-\frac{1}{5}}{-\frac{55}{12}} = \frac{1}{5} \cdot \frac{12}{55} = \frac{12}{275}.
+    \]
+\end{enumerate}
+
+\textbf{Câu 4.}
+Gọi $x$ là số hecta đất trồng cam và $y$ là số hecta đất trồng xoài ($x \ge 0, y \ge 0$).
+Theo giả thiết của bài toán, các điều kiện ràng buộc gồm:
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Tổng diện tích đất trồng không vượt quá $8\text{ ha}$:
+    \[
+    x + y \le 8.
+    \]
+    \item Tổng số vốn đầu tư không vượt quá $180$ triệu đồng:
+    \[
+    20x + 30y \le 180 \iff 2x + 3y \le 18.
+    \]
+    \item Tổng số công lao động sử dụng không vượt quá $180$ công:
+    \[
+    30x + 15y \le 180 \iff 2x + y \le 12.
+    \]
+\end{itemize}
+Như vậy, bài toán trở thành tìm giá trị lớn nhất của hàm lợi nhuận:
+\[
+F(x, y) = 40x + 30y \quad (\text{triệu đồng})
+\]
+trên miền nghiệm của hệ bất phương trình:
+\[
+\begin{cases}
+x \ge 0 \\
+y \ge 0 \\
+x + y \le 8 \\
+2x + 3y \le 18 \\
+2x + y \le 12.
+\end{cases}
+\]
+
+\textbf{Biểu diễn hình học miền nghiệm trên mặt phẳng toạ độ $Oxy$:}
+
+\begin{center}
+\vspace{-2pt}
+\begin{tikzpicture}[scale=0.85, >=Stealth]
+    % Trục toạ độ
+    \draw[line width=1.2pt, ->] (-1.0,0) -- (9.0,0) node[right, font=\small\bfseries] {$x$};
+    \draw[line width=1.2pt, ->] (0,-0.8) -- (0,8.5) node[above, font=\small\bfseries] {$y$};
+    \node[below left=2pt, font=\small\bfseries] at (0,0) {$O$};
+    
+    % Miền nghiệm tứ giác OABC
+    \fill[fill=ink!15] (0,0) -- (0,6) -- (4.5,3) -- (6,0) -- cycle;
+    \draw[line width=1.6pt, color=ink] (0,0) -- (0,6) -- (4.5,3) -- (6,0) -- cycle;
+    
+    % Vẽ các đường thẳng biên
+    % d1: 2x + 3y = 18 <=> y = 6 - (2/3)x
+    \draw[line width=1.2pt, color=blue!80!black] (-0.8, 6.53) -- (9.5, -0.33);
+    \node[above right=1pt, font=\small\bfseries, color=blue!80!black] at (8.0, 0.6) {$d_1\colon 2x + 3y = 18$};
+    
+    % d2: 2x + y = 12 <=> y = 12 - 2x
+    \draw[line width=1.2pt, color=red!80!black] (2.2, 7.6) -- (6.8, -1.6);
+    \node[above right=1pt, font=\small\bfseries, color=red!80!black] at (2.4, 7.3) {$d_2\colon 2x + y = 12$};
+    
+    % d3: x + y = 8 <=> y = 8 - x
+    \draw[line width=1.0pt, dashed, color=teal!70!black] (0.5, 7.5) -- (8.5, -0.5);
+    \node[above right=1pt, font=\small\bfseries, color=teal!70!black] at (6.8, 1.3) {$d_3\colon x + y = 8$};
+    
+    % Đỉnh và toạ độ
+    \filldraw[black] (0,0) circle (2.6pt);
+    \filldraw[black] (0,6) circle (2.6pt) node[left=3pt, font=\small\bfseries] {$A(0; 6)$};
+    \filldraw[black] (4.5,3) circle (2.8pt) node[above right=2pt, font=\small\bfseries] {$B(4{,}5; 3)$};
+    \filldraw[black] (6,0) circle (2.6pt) node[below=3pt, font=\small\bfseries] {$C(6; 0)$};
+    
+    % Nét dóng toạ độ đỉnh B
+    \draw[line width=0.8pt, dashed] (4.5,0) -- (4.5,3) -- (0,3);
+    \node[below=2pt, font=\small\bfseries] at (4.5,0) {$4{,}5$};
+    \node[left=2pt, font=\small\bfseries] at (0,3) {$3$};
+\end{tikzpicture}
+\vspace{-4pt}
+\end{center}
+
+Miền nghiệm của hệ bất phương trình là miền tứ giác $OABC$ (kể cả bờ), với toạ độ các đỉnh:
+\[
+O(0; 0), \quad A(0; 6), \quad B(4{,}5; 3), \quad C(6; 0).
+\]
+(Đường thẳng $d_3\colon x + y = 8$ không đi qua miền nghiệm tứ giác vì tại $B(4{,}5; 3)$ ta có $4{,}5 + 3 = 7{,}5 < 8$).
+
+Tính giá trị của biểu thức mục tiêu $F(x, y) = 40x + 30y$ tại các đỉnh:
+\begin{itemize}[leftmargin=0.5cm, itemsep=1pt, topsep=1pt]
+    \item Tại $O(0; 0)$: $F(0; 0) = 40 \cdot 0 + 30 \cdot 0 = 0$ (triệu đồng).
+    \item Tại $A(0; 6)$: $F(0; 6) = 40 \cdot 0 + 30 \cdot 6 = 180$ (triệu đồng).
+    \item Tại $B(4{,}5; 3)$: $F(4{,}5; 3) = 40 \cdot 4{,}5 + 30 \cdot 3 = 180 + 90 = 270$ (triệu đồng).
+    \item Tại $C(6; 0)$: $F(6; 0) = 40 \cdot 6 + 30 \cdot 0 = 240$ (triệu đồng).
+\end{itemize}
+So sánh các giá trị trên, ta thấy $F(x, y)$ đạt giá trị lớn nhất bằng $270$ triệu đồng tại điểm $B(4{,}5; 3)$.
+
+\textbf{Kết luận:} Hộ gia đình nên lập kế hoạch trồng $4{,}5\text{ ha}$ cam và $3\text{ ha}$ xoài để thu được tổng lợi nhuận cao nhất là $270$ triệu đồng.
+
+\end{document}
