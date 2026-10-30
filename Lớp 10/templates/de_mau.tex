@@ -2,9 +2,11 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
-\usepackage[margin=1.5cm,top=2cm,bottom=2cm,headheight=17pt]{geometry}
-\usepackage{amsmath,amssymb,amsfonts,graphicx,enumitem,fancyhdr,tikz,needspace}
-\usetikzlibrary{calc,arrows.meta,patterns}
+\usepackage[margin=1.3cm,top=1.0cm,bottom=1.05cm,includehead,headheight=18pt,headsep=8pt]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
 \newcommand{\headerQuote}{%
   \ifcase\value{page}\relax
     \or Math gives us hope that every problem has a solution% Trang 1
@@ -13,42 +15,52 @@
     \or Turning Confusion into Clarity% Trang 4
     \or Don't be an X, be a Y of mathematics% Trang 5
     \or Don't get mad. Learn to add% Trang 6
-    \or Math gives us hope that every problem has a solution% Trang 7
-    \or Math + You = Champion% Trang 8
-    \or Where Frustration Becomes Inspiration% Trang 9
-    \or Turning Confusion into Clarity% Trang 10
-    \or Don't be an X, be a Y of mathematics% Trang 11
-    \or Don't get mad. Learn to add% Trang 12
+    \or The only way to learn mathematics is to do mathematics% Trang 7
+    \or Small steps every day lead to big results% Trang 8
+    \or Every expert was once a beginner% Trang 9
+    \or Success is the sum of small efforts repeated daily% Trang 10
+    \or Mathematics is the music of reason% Trang 11
+    \or Believe you can and you're halfway there% Trang 12
     \else Math gives us hope that every problem has a solution%
   \fi
 }
-\pagestyle{fancy}
-\fancyhf{}
+\pagestyle{fancy}\fancyhf{}
 \lhead{\small\textit{\headerQuote}}
 \rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
 \rfoot{\small Trang \thepage}
 \renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{18pt}
 \setlength{\parindent}{0pt}
-\setlength{\parskip}{3pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{1.5pt}
+\renewcommand{\arraystretch}{1.0}
+\newcommand{\parttitle}[1]{\par\vspace{1.5pt}\needspace{2\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[1pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{9pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.1cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
+
 \newcommand{\soDe}{N}
+
 \begin{document}
 \noindent
 \begin{minipage}[c]{0.38\textwidth}
     \centering
     \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
-    \rule{3.2cm}{0.6pt}\\[4pt]
+    \rule{3.2cm}{0.6pt}\\[2pt]
     \textbf{ĐỀ CHÍNH THỨC}
 \end{minipage}\hfill
 \begin{minipage}[c]{0.35\textwidth}
     \centering
-    \textbf{ĐỀ ÔN THI GK1}\\
-    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ ÔN THI GIỮA KÌ I}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[1pt]
     \textbf{ĐỀ SỐ \soDe}\\
     \textbf{Môn: TOÁN -- Khối lớp 10}\\
     \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
 \end{minipage}
 
-\vspace{0.2cm}
+\vspace{0.04cm}
 \noindent
 \begin{minipage}[b]{0.78\textwidth}
     \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
@@ -59,39 +71,145 @@
     \fbox{\begin{minipage}{2.3cm}
         \centering
         \textbf{\small Mã đề thi}\\
-        \textbf{000\soDe}
+        \textbf{00\soDe}
     \end{minipage}}
 \end{minipage}
+\vspace{0.04cm}
+
+% =========================================================================
+% TRANG 1: PHẦN I (12 CÂU TRẮC NGHIỆM NHIỀU LỰA CHỌN)
+% Quy chuẩn: 12 câu nằm gọn 100% trong Trang 1, kết thúc bằng \newpage.
+% Cân bằng đáp án: 3A - 3B - 3C - 3D.
+% =========================================================================
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án đúng duy nhất.}
+\begin{enumerate}
+% [Điền 12 câu trắc nghiệm nhiều lựa chọn tại đây]
+\item Câu 1...
+\four{A.}{B.}{C.}{D.}
+% ...
+\item Câu 12...
+\two{A.}{B.}{C.}{D.}
+\end{enumerate}
+\newpage
+
+% =========================================================================
+% TRANG 2: PHẦN II (2 CÂU ĐÚNG/SAI) + PHẦN III (CÂU 1 & CÂU 2 CÓ HÌNH TIKZ)
+% Quy chuẩn: Nằm trọn vẹn trong Trang 2, kết thúc bằng \newpage.
+% Hình TikZ đặt căn giữa dưới đề bài (\begin{center}\begin{tikzpicture}...\end{tikzpicture}\end{center}).
+% Chống đè chữ: Trục Ox số đo below, đỉnh above; Trục Oy số đo left, đỉnh above right;
+% Nhãn đường thẳng đặt ở đầu mút xa thoáng (above left/above right).
+% =========================================================================
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Thí sinh trả lời từ câu 1 đến câu 2. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}
+\item Câu 1 đúng/sai...
+\begin{enumerate}
+    \item Ý a...
+    \item Ý b...
+    \item Ý c...
+    \item Ý d...
+\end{enumerate}
+\item Câu 2 đúng/sai...
+\begin{enumerate}
+    \item Ý a...
+    \item Ý b...
+    \item Ý c...
+    \item Ý d...
+\end{enumerate}
+\end{enumerate}
+
+\parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 4. Điền kết quả vào ô tương ứng.}
+\begin{enumerate}
+\item Câu 1 trả lời ngắn (bài toán có hình vẽ TikZ căn giữa bên dưới)...
+\begin{center}
+\vspace{-3pt}
+% \begin{tikzpicture}[scale=0.8, >=Stealth] ... \end{tikzpicture}
+\vspace{-6pt}
+\end{center}
+\answerbox
+
+\item Câu 2 trả lời ngắn (bài toán nửa mặt phẳng bờ d hoặc hình vẽ TikZ)...
+\begin{center}
+\vspace{-3pt}
+% \begin{tikzpicture}[scale=0.72, >=Stealth] ... \end{tikzpicture}
+\vspace{-6pt}
+\end{center}
+\answerbox
+\newpage
+
+% =========================================================================
+% TRANG 3: PHẦN III (CÂU 3 & CÂU 4) + PHẦN IV (4 CÂU TỰ LUẬN)
+% Quy chuẩn: Nằm trọn vẹn trong Trang 3, kết thúc bằng \newpage.
+% =========================================================================
+\item Câu 3 trả lời ngắn...
+\answerbox
+
+\item Câu 4 trả lời ngắn...
+\answerbox
+\end{enumerate}
+
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày chi tiết lời giải từ câu 1 đến câu 4.}
+\begin{enumerate}
+\item \textit{(0,75 điểm)} Câu 1 tự luận...
+\item \textit{(0,75 điểm)} Câu 2 tự luận...
+\item \textit{(0,75 điểm)} Câu 3 tự luận...
+\item \textit{(0,75 điểm)} Câu 4 tự luận (bài toán thực tế tối ưu hóa tuyến tính)...
+\end{enumerate}
+\newpage
+
+% =========================================================================
+% TRANG 4 TRỞ ĐI: BẢNG ĐÁP ÁN TỔNG HỢP VÀ LỜI GIẢI CHI TIẾT
+% =========================================================================
+\parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\vspace{0.1cm}
+\textbf{1. Phần I: Trắc nghiệm nhiều lựa chọn}
+\begin{center}
+{\setlength{\tabcolsep}{2.5pt}\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} & \textbf{Câu 5} & \textbf{Câu 6} & \textbf{Câu 7} & \textbf{Câu 8} & \textbf{Câu 9} & \textbf{Câu 10} & \textbf{Câu 11} & \textbf{Câu 12} \\
+\hline
+... & ... & ... & ... & ... & ... & ... & ... & ... & ... & ... & ... \\
+\hline
+\end{tabular}}
+\end{center}
+
 \vspace{0.2cm}
+\textbf{2. Phần II: Trắc nghiệm đúng/sai}
+\begin{center}
+{\small
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu} & \textbf{Lệnh hỏi a)} & \textbf{Lệnh hỏi b)} & \textbf{Lệnh hỏi c)} & \textbf{Lệnh hỏi d)} \\
+\hline
+\textbf{1} & Đ/S & Đ/S & Đ/S & Đ/S \\
+\hline
+\textbf{2} & Đ/S & Đ/S & Đ/S & Đ/S \\
+\hline
+\end{tabular}}
+\end{center}
 
-% Đây là khung soạn thảo, không phải đề đã hoàn thành.
-\section*{PHẦN I. Trắc nghiệm nhiều lựa chọn (12 câu)}
-\begin{enumerate}[label=\textbf{Câu \arabic*.}]
-% Điền đủ 12 câu, mỗi câu 4 phương án, cân bằng 3A-3B-3C-3D.
-\item \textit{[Điền nội dung 12 câu trắc nghiệm.]}
-\end{enumerate}
+\vspace{0.2cm}
+\textbf{3. Phần III: Trắc nghiệm trả lời ngắn}
+\begin{center}
+{\small
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu} & \textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} \\
+\hline
+\textbf{Đáp số} & ... & ... & ... & ... \\
+\hline
+\end{tabular}}
+\end{center}
 
-\section*{PHẦN II. Trắc nghiệm đúng/sai (2 câu)}
-\begin{enumerate}[label=\textbf{Câu \arabic*.}]
-% Điền đủ 2 câu, mỗi câu 4 ý a), b), c), d).
-\item \textit{[Điền nội dung 2 câu đúng/sai, mỗi câu 4 ý.]}
-\end{enumerate}
+\vspace{0.2cm}
+\parttitle{LỜI GIẢI CHI TIẾT}
+% [Điền lời giải chi tiết từng câu tại đây]
+% Với bài toán hệ BPT / tối ưu thực tế (Câu 4 Tự luận): Bắt buộc vẽ đồ thị miền nghiệm TikZ to rõ,
+% áp dụng triệt để quy tắc chống đè chữ (Anti-collision TikZ Rule).
 
-\section*{PHẦN III. Trả lời ngắn (4 câu)}
-\begin{enumerate}[label=\textbf{Câu \arabic*.}]
-% Điền đủ 4 câu; nêu đơn vị và quy tắc làm tròn nếu có.
-\item \textit{[Điền nội dung 4 câu trả lời ngắn.]}
-\end{enumerate}
-
-\section*{PHẦN IV. Tự luận (4 câu)}
-\begin{enumerate}[label=\textbf{Câu \arabic*.}]
-% Điền đủ 4 câu yêu cầu trình bày lập luận.
-\item \textit{[Điền nội dung 4 câu tự luận.]}
-\end{enumerate}
-\newpage
-\section*{BẢNG ĐÁP ÁN TỔNG HỢP}
-% Bảng đáp án cho cả 4 phần (Phần I, II, III, IV tóm tắt kết quả). Không nhét hình vẽ vào trong ô table.
-\newpage
-\section*{HÌNH VẼ MIỀN NGHIỆM HỆ BẤT PHƯƠNG TRÌNH}
-% Vẽ miền nghiệm cho các câu hệ BPT ở Phần III và Phần IV, vẽ ở ngoài table cho to, tô màu miền nghiệm rõ ràng, không cần giải thích.
 \end{document}

@@ -5,8 +5,8 @@ Chỉ áp dụng trong `Lớp 10/`. Đây là bộ riêng; không dùng chương
 ### QUY CHUẨN HEADLINE & HEADNOTE BẮT BUỘC TRONG TẤT CẢ CÁC ĐỀ:
 1. **Headline (Khối tiêu đề đầu trang):**
    - Cột trái: `LÀM TOÁN ĐỂ HẠNH PHÚC` / `ĐỀ CHÍNH THỨC`.
-   - Cột phải: `ĐỀ ÔN THI GK1 -- NĂM HỌC 2026 -- 2027` / `ĐỀ SỐ <số_đề>` / `Môn: TOÁN -- Khối lớp 10` / `Thời gian làm bài: 90 phút, không kể thời gian phát đề`.
-   - Dòng dưới: `Họ và tên:... SBD:...` kèm khung `Mã đề thi 000<số_đề>`.
+   - Cột phải: `ĐỀ ÔN THI GIỮA KÌ I -- NĂM HỌC 2026 -- 2027` / `ĐỀ SỐ <số_đề>` / `Môn: TOÁN -- Khối lớp 10` / `Thời gian làm bài: 90 phút, không kể thời gian phát đề`.
+   - Dòng dưới: `Họ và tên:... SBD:...` kèm khung `Mã đề thi 00<số_đề>`.
 2. **Headnote / Thông tin tác giả:** `Người biên soạn: Dương Gia Bảo` (`\rhead`).
 3. **Header trang (`fancyhdr`):**
    - `\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}`
@@ -19,9 +19,18 @@ Chỉ áp dụng trong `Lớp 10/`. Đây là bộ riêng; không dùng chương
      4. Trang 4: `Turning Confusion into Clarity`
      5. Trang 5: `Don't be an X, be a Y of mathematics`
      6. Trang 6: `Don't get mad. Learn to add`
-     *(Nếu vượt quá 6 trang thì tự động lặp lại vòng tuần hoàn)*
-4. **Cấu hình chuẩn LaTeX (`fancyhdr` & Tiêu đề):**
+     7. Trang 7: `The only way to learn mathematics is to do mathematics`
+     8. Trang 8: `Small steps every day lead to big results`
+     9. Trang 9: `Every expert was once a beginner`
+     10. Trang 10: `Success is the sum of small efforts repeated daily`
+     11. Trang 11: `Mathematics is the music of reason`
+     12. Trang 12: `Believe you can and you're halfway there`
+     *(Nếu vượt quá 12 trang thì tự động lặp lại vòng tuần hoàn)*
+4. **Cấu hình chuẩn LaTeX (`geometry`, `fancyhdr` & Tiêu đề):**
    ```latex
+   \usepackage[margin=1.3cm,top=1.0cm,bottom=1.05cm,includehead,headheight=18pt,headsep=8pt]{geometry}
+   % BẮT BUỘC có includehead để header không bị đẩy sát mép giấy gây cắt chữ khi in hoặc xem PDF.
+
    \newcommand{\headerQuote}{%
      \ifcase\value{page}\relax
        \or Math gives us hope that every problem has a solution% Trang 1
@@ -30,12 +39,12 @@ Chỉ áp dụng trong `Lớp 10/`. Đây là bộ riêng; không dùng chương
        \or Turning Confusion into Clarity% Trang 4
        \or Don't be an X, be a Y of mathematics% Trang 5
        \or Don't get mad. Learn to add% Trang 6
-       \or Math gives us hope that every problem has a solution% Trang 7
-       \or Math + You = Champion% Trang 8
-       \or Where Frustration Becomes Inspiration% Trang 9
-       \or Turning Confusion into Clarity% Trang 10
-       \or Don't be an X, be a Y of mathematics% Trang 11
-       \or Don't get mad. Learn to add% Trang 12
+       \or The only way to learn mathematics is to do mathematics% Trang 7
+       \or Small steps every day lead to big results% Trang 8
+       \or Every expert was once a beginner% Trang 9
+       \or Success is the sum of small efforts repeated daily% Trang 10
+       \or Mathematics is the music of reason% Trang 11
+       \or Believe you can and you're halfway there% Trang 12
        \else Math gives us hope that every problem has a solution%
      \fi
    }
@@ -45,6 +54,17 @@ Chỉ áp dụng trong `Lớp 10/`. Đây là bộ riêng; không dùng chương
    \rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
    \rfoot{\small Trang \thepage}
    \renewcommand{\headrulewidth}{0.4pt}
+   \setlength{\headheight}{18pt}
+   \setlength{\parindent}{0pt}
+   \setlength{\parskip}{0pt}
+   \setlength{\tabcolsep}{1.5pt}
+   \renewcommand{\arraystretch}{1.0}
+   \newcommand{\parttitle}[1]{\par\vspace{1.5pt}\needspace{2\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
+   \newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+   \newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[1pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+   \newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{9pt}\hspace{2.2cm}}}
+   \setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.1cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
+   \setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
    ```
    Khối tiêu đề đầu trang:
    ```latex
@@ -52,19 +72,19 @@ Chỉ áp dụng trong `Lớp 10/`. Đây là bộ riêng; không dùng chương
    \begin{minipage}[c]{0.38\textwidth}
        \centering
        \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
-       \rule{3.2cm}{0.6pt}\\[4pt]
+       \rule{3.2cm}{0.6pt}\\[2pt]
        \textbf{ĐỀ CHÍNH THỨC}
    \end{minipage}\hfill
    \begin{minipage}[c]{0.35\textwidth}
        \centering
-       \textbf{ĐỀ ÔN THI GK1}\\
-       \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+       \textbf{ĐỀ ÔN THI GIỮA KÌ I}\\
+       \textbf{NĂM HỌC 2026 -- 2027}\\[1pt]
        \textbf{ĐỀ SỐ <số_đề>}\\
        \textbf{Môn: TOÁN -- Khối lớp 10}\\
        \textit{\small Thời gian làm bài: 90 phút\\(không kể thời gian phát đề)}
    \end{minipage}
 
-   \vspace{0.2cm}
+   \vspace{0.04cm}
    \noindent
    \begin{minipage}[b]{0.78\textwidth}
        \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
@@ -75,10 +95,10 @@ Chỉ áp dụng trong `Lớp 10/`. Đây là bộ riêng; không dùng chương
        \fbox{\begin{minipage}{2.3cm}
            \centering
            \textbf{\small Mã đề thi}\\
-           \textbf{000<số_đề>}
+           \textbf{00<số_đề>}
        \end{minipage}}
    \end{minipage}
-   \vspace{0.2cm}
+   \vspace{0.04cm}
    ```
 
 ## Cấu trúc đã chốt
@@ -170,33 +190,42 @@ Thực hiện trọn **Pha 0–4**, không dừng ở file lấy mẫu và khôn
    Mỗi câu dùng `matrix_slot` (ví dụ `"III.4"`) để chỉ dạng bài gốc trong bảng; `number` vẫn là số câu thực tế trên đề. Nếu không có `matrix_slot`, bộ kiểm dùng mã `section.number` để tương thích hồ sơ cũ giữ nguyên thứ tự. Khi hoán đổi phải cập nhật ánh xạ của tất cả câu liên quan, kèm nguồn và nội dung tương ứng.
 6. **Kiểm tra hồ sơ:** chạy `python scripts/check_exam.py --exam N`. Phải đúng mã ma trận, đủ 22 dạng tham chiếu không lặp, ánh xạ trong cùng phần, đúng chủ đề và mức độ theo dạng được ánh xạ/từng ý a–d, nguồn và trang hợp lệ. Hồ sơ đủ 22 câu nhưng cùng một chủ đề phải bị từ chối. Công cụ không tự xác nhận nội dung thực tế đúng kỹ năng, đạt độ khó hay lời giải đúng; agent vẫn phải đọc lại và giải độc lập. Không thêm bước tính/chấm điểm.
 
-### Pha 3 — Hình minh họa và biên dịch
+### Pha 3 — Hình minh họa, Bố cục & Biên dịch
 7. **Hình và PDF:**
+   - **Quy chuẩn bố cục đề 3 trang (Strict 3-Page Layout Budget):**
+     Đề thi 22 câu BẮT BUỘC phải nằm gọn gàng trong **đúng 3 trang** đề bài, không câu nào bị nhảy/cắt đôi trang:
+     * **Trang 1:** Khung tiêu đề đầu trang + Họ tên/SBD/Mã đề + Trọn vẹn **12 câu Phần I** (Trắc nghiệm nhiều lựa chọn). Cân bằng 3A-3B-3C-3D. Bắt buộc 12 câu nằm trọn vẹn trong Trang 1, kết thúc bằng `\newpage`. Cấm để Câu 12 bị ngắt đôi sang trang 2.
+     * **Trang 2:** **Phần II** (2 câu Đúng/Sai, 8 ý a–d) + **Phần III Câu 1, 2** (2 câu Trả lời ngắn có hình minh họa TikZ). Kết thúc bằng `\newpage`.
+     * **Trang 3:** **Phần III Câu 3, 4** (2 câu Trả lời ngắn còn lại) + **Phần IV** (Trọn vẹn 4 câu Tự luận). Kết thúc bằng `\newpage`.
+     * **Trang 4 trở đi:** **BẢNG ĐÁP ÁN TỔNG HỢP** và Lời giải chi tiết.
+     * **Nguyên tắc chống đứt đoạn (Anti-truncation rule):** Tuyệt đối không để bất kỳ câu hỏi nào (hoặc 4 phương án A, B, C, D / các ý a, b, c, d / ô Đáp số) bị ngắt đôi giữa hai trang giấy.
    - **Quy định về hình minh họa trong đề bài và đáp án (ÁP DỤNG ĐỒNG BỘ CHO TẤT CẢ CÁC PHẦN I, II, III, IV):**
      + *Vị trí hình vẽ:* **TUYỆT ĐỐI KHÔNG dùng minipage ép hình sang bên phải đề bài** (tránh làm hình bị thu nhỏ, co cụm, chữ khó đọc). Bắt buộc **đặt hình vẽ NẰM Ở DƯỚI ĐỀ BÀI** (căn giữa trong môi trường `\begin{center}\begin{tikzpicture}...\end{tikzpicture}\end{center}`).
        * **Phần I (Trắc nghiệm):** Câu hỏi $\to$ Hình vẽ căn giữa phóng to $\to$ Các phương án A, B, C, D (`\two` hoặc `\four`) đặt ở ngay dưới hình.
        * **Phần II (Đúng/Sai):** Lời dẫn câu hỏi $\to$ Hình vẽ căn giữa phóng to $\to$ Các ý mệnh đề a), b), c), d) đặt ở ngay dưới hình.
        * **Phần III (Trả lời ngắn) & Phần IV (Tự luận):** Lời dẫn bài toán $\to$ Hình vẽ căn giữa phóng to $\to$ Các câu hỏi nhỏ a), b) hoặc ô kết quả `\answerbox` đặt ở ngay dưới hình.
-     + *Kích thước & Độ rõ nét (PHÓNG TO HÌNH RA):* Phóng to hình trực quan, thoáng đãng (`scale=0.8` đến `1.1` tùy nội dung), chữ số và nhãn to rõ nét (`font=\normalsize\bfseries` hoặc tối thiểu `\small\bfseries`), tuyệt đối cấm dùng font bé như `\tiny` hay `\scriptsize`. Nét vẽ phải đậm rõ (`line width=1.1pt` đến `1.4pt`), các điểm mút toạ độ / đỉnh vẽ rõ (`circle(2.2pt)` đến `3.5pt`).
-     + *Bài toán tối ưu tuyến tính / hệ BPT thực tế (IV.4):* Bắt buộc vẽ/plot đồ thị hệ trục tọa độ $Oxy$ biểu diễn miền nghiệm của hệ bất phương trình (các đường biên, miền đa giác nghiệm, tọa độ các đỉnh $O, A, B, C...$) trong lời giải chi tiết / bảng kết quả cần đạt.
+     + *Kích thước TikZ đề bài:* `scale=0.72` đến `0.85` kết hợp `\vspace{-3pt}` và `\vspace{-6pt}` để hình to rõ nhưng vừa vặn hoàn hảo trong ngân sách trang.
+     + *Kích thước & Độ rõ nét:* Chữ số và nhãn to rõ nét (`font=\small\bfseries` hoặc `\normalsize\bfseries`), tuyệt đối cấm dùng font bé như `\tiny` hay `\scriptsize`. Nét vẽ phải đậm rõ (`line width=1.1pt` đến `1.4pt`), các điểm mút toạ độ / đỉnh vẽ rõ (`circle(2.2pt)` đến `3.5pt`).
+   - **Quy tắc chống đè chữ / chồng lấn nét vẽ đồ thị (Anti-collision TikZ Rule):**
+     * **Trục hoành $Ox$:** Toàn bộ vạch số / toạ độ đặt `below`; toàn bộ tên điểm/đỉnh ($A, B, C...$) đặt `above right` hoặc `above left`.
+     * **Trục tung $Oy$:** Toàn bộ vạch số / toạ độ đặt `left`; toàn bộ tên điểm/đỉnh đặt `above right`.
+     * **Tên đường thẳng ($d, d_1, d_2...$):** Đặt ở các đầu mút xa thoáng (ở đỉnh cao nhất hoặc rìa ngoài cùng bên trái/phải), TUYỆT ĐỐI KHÔNG gắn nhãn đường thẳng vào ngay sát giao điểm, trục tọa độ hay mũi tên $x, y$.
+     * **Các điểm đỉnh và số đo khoảng cách / góc (ví dụ bài tàu cá $30\text{ km}$, $50\text{ km}$, $120^\circ$):** Khoảng cách và tên đỉnh phải đặt ở các phía đối nghịch nhau của điểm mút để không bao giờ bị đè chữ.
    - **BẮT BUỘC vẽ miền nghiệm ở phần đáp án cho các câu có dạng hệ bất phương trình ở Phần III và Phần IV:**
      + **Phạm vi áp dụng:** Chỉ các phần liên quan tới hệ bất phương trình ở **Phần III (Trả lời ngắn)** hoặc **Phần IV (Tự luận)** mới cần vẽ miền nghiệm ra ở phần đáp án. Phần I và Phần II giữ nguyên bảng đáp án, không cần vẽ hình.
      + **Nội dung:** **Chỉ cần vẽ hình (tô màu miền nghiệm), không cần giải thích gì cả.** Thể hiện rõ hệ trục toạ độ $Ox, Oy$, các đường thẳng biên, toạ độ các đỉnh/giao điểm và **tô màu miền nghiệm rõ ràng** (`fill=ink!15`, `fill=blue!15`).
      + **Vị trí và kích thước:** **Vẽ ở ngoài table cho rộng rãi** (không nhét hình vào trong các ô table làm co dúm); bố trí ở trang đáp án tiếp theo hoặc bên ngoài bảng, vẽ kích thước lớn (hình to, trực quan), trục toạ độ và số rõ nét.
-     + **Chống đè chữ / chồng lấn nét vẽ (Anti-collision rule):** Các đường thẳng biên dừng đúng tại các trục tọa độ hoặc kéo dài rất nhẹ, tuyệt đối không kéo dài đâm xuyên qua nhãn tọa độ các đỉnh (như (x_0; 0)$ hay (0; y_0)$) hay vạch số trên trục; tên đường thẳng đặt tại các vùng trắng thoáng đãng; không dùng các mũi tên chú thích đâm xuyên qua các điểm đỉnh; nhãn đỉnh đặt ở góc phần tư thoáng (ví dụ above right, below, left).
    - Dùng TikZ vector trực tiếp trong LaTeX; màu sắc dịu nhẹ (`blue!70!black`, `teal!80`, `gray!20`, `ink`), kết hợp nét đứt cho đường ngắm gián tiếp, đảm bảo đẹp mắt khi chiếu màn hình và phân biệt 100% khi in đen trắng; không để hình giải hộ bài ở phần đề bài.
-     + **Quy chuẩn độ sắc nét khi in (Print-ready sharpness standard):** Hình plot và sơ đồ minh họa phải vẽ to, nét vẽ đậm (trục 1.2pt, biên 1.3pt, viền miền nghiệm 2.0pt), chấm toạ độ to rõ (circle 3.5pt - 4.2pt). Tuyệt đối không dùng font chữ nhỏ (scriptsize, footnotesize); toàn bộ số vạch chia trục, nhãn toạ độ các đỉnh và tên đường thẳng phải dùng font=\normalsize\bfseries và màu đen tuyền (black) để khi in trên máy in đen trắng không bị mờ hay đứt nét.
    - Áp dụng chuẩn tiêu đề đầu trang và header fancyhdr `LÀM TOÁN ĐỂ HẠNH PHÚC`, người biên soạn `Dương Gia Bảo`, thời gian `90 phút` theo mục Quy chuẩn Headline & Headnote ở trên.
-   - **Bố cục đề bài (Không newpage giữa các phần):** Giữa các phần I, II, III, IV không dùng `\newpage`, để các câu và các phần chảy liền mạch, tiết kiệm trang in. Chỉ ngắt `\newpage` khi bắt đầu phần **BẢNG ĐÁP ÁN TỔNG HỢP** (bản đáp án/lời giải).
-   - Biên dịch từ thư mục đề bằng `pdflatex -interaction=nonstopmode -halt-on-error "De N.tex"`, sửa lỗi và kiểm tra hình từng trang.
+   - Biên dịch từ thư mục đề bằng `pdflatex -output-directory="Output/De N" -interaction=nonstopmode -halt-on-error "Output/De N/De N.tex"`, kiểm tra log và render PNG xác thực trực quan từng trang trước khi tách PDF.
+
 ### Pha 4 — Tách PDF và nghiệm thu
 
-8. **Tách bản:** chạy `python scripts/split_pdf.py --exam N --answer-start P`, với P là trang PDF đầu của bảng đáp án đã kiểm tra.
+8. **Tách bản:** chạy `python scripts/split_pdf.py --exam N --answer-start 4 --force`.
    - Đầu ra cục bộ lưu tại: `Output/De N/N.pdf` và `Output/De N/N_Ans.pdf`.
    - Đồng thời tự động xuất bản đề và đáp án sang thư mục giảng dạy lớp 10:
-     + **Bản đề bài** (không đáp án): `D:\Document\Dạy học\Dạy lớp 10\Ôn tập\GK\<N>.pdf`
+     + **Bản đề bài** (3 trang, không đáp án): `D:\Document\Dạy học\Dạy lớp 10\Ôn tập\GK\<N>.pdf`
      + **Bản đáp án & lời giải**: `D:\Document\Dạy học\Dạy lớp 10\Ôn tập\GK\Ans\<N>.pdf`
    - Kiểm bản đề không lộ đáp án, lời giải đủ 4 phần; báo kết quả kiểm ma trận, kiểm toán và đường dẫn đầu ra. Tuyệt đối không xuất sang thư mục `PRIVATE` của lớp 12.
 
 Khi chưa đủ nguồn hoặc chưa kiểm toán xong, nói rõ phần còn thiếu; không công bố một mẫu ngữ liệu như một đề hoàn chỉnh. Không xóa/đổi nội dung dataset, SGK hoặc bộ lớp 12.
-
