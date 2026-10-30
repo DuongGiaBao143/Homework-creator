@@ -145,18 +145,18 @@
 \begin{tikzpicture}[scale=0.82, >=Stealth]
     \coordinate (B) at (0,0);
     \coordinate (A) at (-4.2,0);
-    \coordinate (C) at (60:3.2);
+    \coordinate (C) at (120:3.2);
     
     \draw[line width=1.3pt, ink] (A) -- (B) node[midway, below=3pt, font=\small\bfseries] {$40\text{ km}$};
-    \draw[line width=1.3pt, ink] (B) -- (C) node[midway, above left=1pt, font=\small\bfseries] {$30\text{ km}$};
-    \draw[line width=1.2pt, dashed, red!85!black] (A) -- (C) node[midway, above=4pt, font=\small\bfseries] {$AC = ?$};
+    \draw[line width=1.3pt, ink] (B) -- (C) node[midway, right=5pt, font=\small\bfseries] {$30\text{ km}$};
+    \draw[line width=1.2pt, dashed, red!85!black] (A) -- (C) node[midway, above left=4pt, font=\small\bfseries] {$AC = ?$};
     
     \filldraw[black] (A) circle (2.4pt) node[below left=2pt, font=\small\bfseries] {$A$};
     \filldraw[black] (B) circle (2.4pt) node[below right=2pt, font=\small\bfseries] {$B$};
     \filldraw[black] (C) circle (2.4pt) node[above right=2pt, font=\small\bfseries] {$C$};
     
-    \draw[line width=1.0pt] (0.7,0) arc (0:60:0.7);
-    \node[font=\small\bfseries] at (1.05,0.45) {$60^\circ$};
+    \draw[line width=1.0pt] (-0.7,0) arc (180:120:0.7);
+    \node[font=\small\bfseries] at (-1.1,0.45) {$60^\circ$};
 \end{tikzpicture}
 \vspace{-6pt}
 \end{center}
@@ -538,14 +538,14 @@ Miền nghiệm của hệ là miền tứ giác $OABC$ (kể cả biên) trên 
     \fill[ink!18] (0,0) -- (6,0) -- (5,3) -- (0,8) -- cycle;
     
     % Đường d1: 3x + y = 18 => qua (6,0) và (0,18), đoạn vẽ từ x=3.5 đến 6.5
-    \draw[line width=1.2pt, blue!80!black] (3.2, 8.4) -- (6.5,-1.5) node[above right=1pt, font=\small\bfseries] {$d_1\colon 3x + y = 18$};
+    \draw[line width=1.2pt, blue!80!black] (6.5,-1.5) -- (3.2, 8.4) node[above right=2pt, font=\small\bfseries] {$d_1\colon 3x + y = 18$};
     
     % Đường d2: x + y = 8 => qua (8,0) và (0,8)
-    \draw[line width=1.2pt, red!80!black] (-0.8, 8.8) -- (8.5,-0.5) node[above right=1pt, font=\small\bfseries] {$d_2\colon x + y = 8$};
+    \draw[line width=1.2pt, red!80!black] (8.5,-0.5) -- (-0.8, 8.8) node[above left=2pt, font=\small\bfseries] {$d_2\colon x + y = 8$};
     
     % Các đỉnh của tứ giác miền nghiệm
     \filldraw[black] (0,0) circle (2.5pt);
-    \filldraw[black] (6,0) circle (2.5pt) node[below=2pt, font=\small\bfseries] {$A(6; 0)$};
+    \filldraw[black] (6,0) circle (2.5pt) node[below right=5pt, font=\small\bfseries] {$A(6; 0)$};
     \filldraw[black] (5,3) circle (2.5pt) node[above right=2pt, font=\small\bfseries] {$B(5; 3)$};
     \filldraw[black] (0,8) circle (2.5pt) node[left=2pt, font=\small\bfseries] {$C(0; 8)$};
     
