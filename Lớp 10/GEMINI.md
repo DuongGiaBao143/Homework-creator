@@ -206,7 +206,8 @@ Thực hiện trọn **Pha 0–4**, không dừng ở file lấy mẫu và khôn
      * **Trang 1:** Khung tiêu đề đầu trang + Họ tên/SBD/Mã đề + Trọn vẹn **12 câu Phần I** (Trắc nghiệm nhiều lựa chọn). Cân bằng 3A-3B-3C-3D. Bắt buộc 12 câu nằm trọn vẹn trong Trang 1, kết thúc bằng `\newpage`. Cấm để Câu 12 bị ngắt đôi sang trang 2.
      * **Trang 2:** **Phần II** (2 câu Đúng/Sai, 8 ý a–d) + **Phần III Câu 1, 2** (2 câu Trả lời ngắn có hình minh họa TikZ). Kết thúc bằng `\newpage`.
      * **Trang 3:** **Phần III Câu 3, 4** (2 câu Trả lời ngắn còn lại) + **Phần IV** (Trọn vẹn 4 câu Tự luận). Kết thúc bằng `\newpage`.
-     * **Trang 4 trở đi:** **BẢNG ĐÁP ÁN TỔNG HỢP** và Lời giải chi tiết.
+     * **Trang 4:** **BẢNG ĐÁP ÁN TỔNG HỢP** (Phần I, II, III) và **ĐÁP SỐ TỰ LUẬN PHẦN IV** (chỉ đưa bảng đáp án và đáp số ngắn gọn, KHÔNG giải thích chi tiết bằng lời văn).
+     * **Trang 5 trở đi:** **HÌNH VẼ MIỀN NGHIỆM HỆ BẤT PHƯƠNG TRÌNH** (cho các câu có hệ BPT từ Phần II trở đi: Phần III, Phần IV). Vẽ to, rõ ràng, tô màu miền nghiệm, ghi toạ độ các đỉnh và giá trị tối ưu.
      * **Nguyên tắc chống đứt đoạn (Anti-truncation rule):** Tuyệt đối không để bất kỳ câu hỏi nào (hoặc 4 phương án A, B, C, D / các ý a, b, c, d / ô Đáp số) bị ngắt đôi giữa hai trang giấy.
    - **Quy định về hình minh họa trong đề bài và đáp án (ÁP DỤNG ĐỒNG BỘ CHO TẤT CẢ CÁC PHẦN I, II, III, IV):**
      + *Vị trí hình vẽ:* **TUYỆT ĐỐI KHÔNG dùng minipage ép hình sang bên phải đề bài** (tránh làm hình bị thu nhỏ, co cụm, chữ khó đọc). Bắt buộc **đặt hình vẽ NẰM Ở DƯỚI ĐỀ BÀI** (căn giữa trong môi trường `\begin{center}\begin{tikzpicture}...\end{tikzpicture}\end{center}`).
