@@ -1,0 +1,449 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.3cm,top=1.0cm,bottom=1.05cm,includehead,headheight=18pt,headsep=8pt]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or The only way to learn mathematics is to do mathematics% Trang 7
+    \or Small steps every day lead to big results% Trang 8
+    \or Every expert was once a beginner% Trang 9
+    \or Success is the sum of small efforts repeated daily% Trang 10
+    \or Mathematics is the music of reason% Trang 11
+    \or Believe you can and you're halfway there% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{1.5pt}
+\renewcommand{\arraystretch}{1.0}
+\newcommand{\parttitle}[1]{\par\vspace{1.5pt}\needspace{2\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[4.5pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\one}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{}}\textbf{A.} #1\\[4pt]\textbf{B.} #2\\[4pt]\textbf{C.} #3\\[4pt]\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{9pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.1cm,itemsep=0.1pt,topsep=0.1pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=1.5pt,topsep=0.2pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[2pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GIỮA KÌ I}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 34}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút (không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.01cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0034}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.01cm}
+
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}
+\begin{enumerate}
+\item Cho hai mệnh đề $P$ và $Q$. Phát biểu nào sau đây là đúng về mệnh đề kéo theo $P \Rightarrow Q$?
+\two{$P$ là điều kiện đủ để có $Q$.}{$P$ là điều kiện cần để có $Q$.}{$Q$ là điều kiện đủ để có $P$.}{$P \Rightarrow Q$ sai khi $P$ sai và $Q$ đúng.}
+
+\item Trong các mệnh đề sau, mệnh đề nào là mệnh đề \textbf{đúng}?
+\four{$\exists x \in \mathbb{R},\ x^2 < 0$.}{$\forall n \in \mathbb{N},\ n^2 + n + 1$ lẻ.}{$\exists x \in \mathbb{Q},\ x^2 = 2$.}{$\forall x \in \mathbb{R},\ x^2 > x$.}
+
+\item Cho hai tập hợp $A = (-3; 4]$ và $B = [1; 6)$. Tập hợp hiệu $A \setminus B$ là
+\four{$(-3; 1]$.}{$[4; 6)$.}{$(-3; 1)$.}{$[1; 4]$.}
+
+\item Cho hai tập hợp $A = [m - 1; m + 3]$ và $B = (-\infty; -2) \cup [5; +\infty)$ với $m$ là tham số thực. Có bao nhiêu số nguyên $m \in [-5; 10]$ để $A \cap B = \varnothing$?
+\four{$1$.}{$2$.}{$4$.}{$3$.}
+
+\item Hệ bất phương trình nào sau đây là hệ bất phương trình bậc nhất hai ẩn?
+\two{$\begin{cases} 2x - 3y > -5 \\ x + 4y \le 1 \end{cases}$}{$\begin{cases} 2x^2 + y \le 3 \\ x - y > 0 \end{cases}$}{$\begin{cases} x - 3y + 2z \le 0 \\ 2x + y > 1 \end{cases}$}{$\begin{cases} xy + 1 > 0 \\ 3x - 2y \le 4 \end{cases}$}
+
+\item Cho hệ bất phương trình $\begin{cases} 2x + y \le 4 \\ x - 2y \ge -2 \end{cases}$ ($y \ge 0$). Điểm nào sau đây thuộc miền nghiệm của hệ đã cho?
+\four{$P(2; 3)$.}{$M(1; 1)$.}{$Q(3; 0)$.}{$N(0; 2)$.}
+
+\item Nửa mặt phẳng (kể cả bờ $d: 3x - 2y = 6$) chứa điểm $M(1; -1)$ là miền nghiệm của bất phương trình nào sau đây?
+\four{$3x - 2y \ge 6$.}{$3x - 2y > 6$.}{$3x - 2y \le 6$.}{$3x - 2y < 6$.}
+
+\item Giá trị lớn nhất của biểu thức $F(x, y) = 2x + 3y$ trên miền $\begin{cases} x + y \le 8 \\ y \le 3x \end{cases}$ ($0 \le y \le 6, x \ge 0$) bằng
+\four{$16$.}{$18$.}{$20$.}{$22$.}
+
+\item Cho tam giác $ABC$ có bán kính đường tròn ngoại tiếp $R$. Khẳng định nào sau đây là đúng?
+\four{$\dfrac{a}{\sin A} = 2R$.}{$\dfrac{a}{\sin A} = R$.}{$\dfrac{a}{\sin A} = 4R$.}{$\dfrac{a}{\cos A} = 2R$.}
+
+\item Giá trị của biểu thức $M = \sin 150^\circ + \cos 120^\circ$ bằng
+\four{$1$.}{$0$.}{$-1$.}{$\dfrac{\sqrt{3}}{2}$.}
+
+\item Cho tam giác $ABC$ có độ dài hai cạnh $AB = 4, AC = 6$ và góc $\widehat{A} = 120^\circ$. Độ dài cạnh $BC$ bằng
+\four{$2\sqrt{7}$.}{$\sqrt{28}$.}{$2\sqrt{19}$.}{$2\sqrt{13}$.}
+
+\item Cho góc nhọn $\alpha$ thoả mãn $\sin \alpha = \dfrac{3}{5}$. Giá trị của biểu thức $P = \dfrac{2\cos \alpha - \tan \alpha}{1 + \sin \alpha}$ bằng
+\four{$\dfrac{7}{32}$.}{$\dfrac{15}{32}$.}{$\dfrac{19}{32}$.}{$\dfrac{17}{32}$.}
+\end{enumerate}
+\newpage
+
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Thí sinh trả lời từ câu 1 đến câu 2. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}
+\item Cho hai tập hợp $A = \{x \in \mathbb{N} \mid (2x^2 - 5x + 2)(x^2 - 9) = 0\}$, $B = \{x \in \mathbb{Z} \mid -2 \le x \le 3\}$ và tập hợp $C = [m - 2; m + 1]$ (với $m$ là tham số thực).
+\begin{enumerate}
+    \item Số phần tử của tập hợp $A$ bằng $2$.
+    \item Tập hợp $B$ có tất cả $64$ tập hợp con.
+    \item Tập hợp hiệu $A \setminus B = \{2; 3\}$.
+    \item Có đúng $5$ giá trị nguyên của tham số $m$ để $A \cap C \ne \varnothing$.
+\end{enumerate}
+
+\item Một doanh nghiệp kinh doanh hai loại mặt hàng $X$ và $Y$. Giả sử số tấn mặt hàng $X$ và $Y$ bán ra trong một tuần lần lượt là $x$ và $y$ ($x \ge 0, y \ge 0$). Cặp số $(x; y)$ phải thoả mãn hệ bất phương trình:
+\[
+\begin{cases}
+x + y \le 10 \\
+2x + y \le 14 \\
+x \ge 0,\ y \ge 0
+\end{cases}
+\]
+Lợi nhuận thu được khi bán $x$ tấn hàng $X$ và $y$ tấn hàng $Y$ được cho bởi hàm số $F(x, y) = 3x + 2y$ (triệu đồng).
+\begin{enumerate}
+    \item Cặp số $(x; y) = (2; 3)$ là một nghiệm của hệ bất phương trình đã cho.
+    \item Miền nghiệm của hệ bất phương trình là miền tứ giác có toạ độ các đỉnh là $(0; 0)$, $(7; 0)$, $(4; 6)$ và $(0; 10)$.
+    \item Diện tích miền nghiệm của hệ bất phương trình bằng $45$.
+    \item Doanh nghiệp có thể thu được lợi nhuận lớn nhất trong một tuần là $24$ triệu đồng.
+\end{enumerate}
+\end{enumerate}
+
+\parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 4. Điền kết quả vào ô tương ứng.}
+\begin{enumerate}
+\item Cho miền tứ giác $OABC$ (kể cả biên) với toạ độ các đỉnh là gốc toạ độ $O(0; 0)$, $A(5; 0)$, $B(3; 4)$ và $C(0; 3)$ như hình vẽ.
+
+\begin{center}
+\vspace{-3pt}
+\begin{tikzpicture}[scale=0.72, >=Stealth]
+    \draw[line width=1.1pt, ->] (-0.8,0) -- (6.2,0) node[below=2pt, font=\small\bfseries] {$x$};
+    \draw[line width=1.1pt, ->] (0,-0.8) -- (0,5.0) node[left=2pt, font=\small\bfseries] {$y$};
+    \node[below left=2pt, font=\small\bfseries] at (0,0) {$O$};
+    
+    \fill[pattern=north east lines, pattern color=blue!50] (0,0) -- (5,0) -- (3,4) -- (0,3) -- cycle;
+    \draw[line width=1.3pt, ink] (0,0) -- (5,0) -- (3,4) -- (0,3) -- cycle;
+    
+    \filldraw[black] (5,0) circle (2.4pt) node[below=2pt, font=\small\bfseries] {$A(5;0)$};
+    \filldraw[black] (3,4) circle (2.4pt) node[above right=1pt, font=\small\bfseries] {$B(3;4)$};
+    \filldraw[black] (0,3) circle (2.4pt) node[left=2pt, font=\small\bfseries] {$C(0;3)$};
+    
+    \draw[dashed, thin] (3,0) -- (3,4) -- (0,4);
+    \node[below=2pt, font=\small] at (3,0) {$3$};
+    \node[left=2pt, font=\small] at (0,4) {$4$};
+\end{tikzpicture}
+\vspace{-5pt}
+\end{center}
+
+Tìm giá trị lớn nhất của biểu thức $F(x, y) = 3x + 2y$ với $(x; y)$ thuộc miền tứ giác $OABC$.
+\answerbox
+
+\item Để đo chiều cao $CD$ của một ngọn tháp ven sông mà không thể đến chân tháp, người ta cắm hai cọc thẳng đứng tại hai điểm $A$ và $B$ trên mặt đất cách nhau một khoảng $AB = 40\text{ m}$ (sao cho $A, B, C$ thẳng hàng theo thứ tự đó). Bằng giác kế, người ta đo được góc nâng $\widehat{CAD} = 30^\circ$ và $\widehat{CBD} = 45^\circ$. Giả sử chiều cao của giác kế không đáng kể. Chiều cao $CD$ của ngọn tháp bằng bao nhiêu mét? (Làm tròn kết quả đến hàng đơn vị).
+\answerbox
+\end{enumerate}
+\newpage
+
+\begin{enumerate}[resume]
+\item Trong đợt khảo sát sở thích thể thao của một khối lớp 10 gồm $120$ học sinh, có $65$ học sinh thích bóng đá, $50$ học sinh thích bóng rổ, $42$ học sinh thích bơi lội; có $25$ học sinh thích cả bóng đá và bóng rổ, $18$ học sinh thích cả bóng đá và bơi lội, $15$ học sinh thích cả bóng rổ và bơi lội. Biết rằng có $8$ học sinh thích cả ba môn thể thao trên. Hỏi có bao nhiêu học sinh trong khối 10 không thích môn nào trong ba môn thể thao trên?
+\answerbox
+
+\item Cho hai tập hợp khác rỗng $A = [m - 2; 2m + 5)$ và $B = (-\infty; -3) \cup [7; +\infty)$ với $m$ là tham số thực. Có bao nhiêu giá trị nguyên của $m$ để tập hợp $A \setminus B$ chứa đúng $4$ số nguyên?
+\answerbox
+\end{enumerate}
+
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày chi tiết lời giải từ câu 1 đến câu 4.}
+\begin{enumerate}
+\item Để đo chiều cao $CD$ của một ngọn núi đá mà không thể đến chân núi, hai quan sát viên tại hai vị trí $A$ và $B$ trên mặt đất cách nhau $AB = 250\text{ m}$ cùng hướng ống ngắm về đỉnh núi $D$. Góc nâng nhìn từ $A$ lên $D$ là $32^\circ$, góc nâng nhìn từ $B$ lên $D$ là $40^\circ$. Biết rằng góc nhìn trên mặt đất $\widehat{ACB} = 75^\circ$ với $C$ là hình chiếu vuông góc của đỉnh $D$ lên mặt phẳng nằm ngang chứa $A$ và $B$.
+\begin{enumerate}
+    \item Biểu diễn khoảng cách $AC$ và $BC$ theo chiều cao $h = CD$ của ngọn núi.
+    \item Tính chiều cao $CD$ của ngọn núi (làm tròn kết quả đến hàng phần mười theo đơn vị mét).
+\end{enumerate}
+
+\item Cho hai tập hợp khác rỗng $A = (-3; 4]$ và $B = [m - 1; 2m + 3)$ với $m$ là tham số thực.
+\begin{enumerate}
+    \item Khi $m = 1$, hãy xác định các tập hợp $A \cap B$, $A \cup B$ và $A \setminus B$.
+    \item Tìm tất cả các giá trị thực của tham số $m$ để tập hợp $B$ là tập con của tập hợp $A$ ($B \subseteq A$).
+\end{enumerate}
+
+\item Một cơ sở sản xuất thủ công mỹ nghệ dự định sản xuất hai loại sản phẩm gốm: Bình hoa gốm (loại I) và Chậu cảnh gốm (loại II).
+\begin{itemize}[leftmargin=1.5em, itemsep=0.1pt]
+    \item Để sản xuất $1$ sản phẩm loại I cần $2\text{ kg}$ đất sét và $3$ giờ công lao động.
+    \item Để sản xuất $1$ sản phẩm loại II cần $4\text{ kg}$ đất sét và $2$ giờ công lao động.
+\end{itemize}
+Cơ sở hiện có tối đa $40\text{ kg}$ đất sét và quỹ thời gian tối đa là $36$ giờ làm việc. Sau khi bán, mỗi sản phẩm loại I mang lại tiền lãi $150$ nghìn đồng, mỗi sản phẩm loại II mang lại tiền lãi $180$ nghìn đồng.
+\begin{enumerate}
+    \item Gọi $x, y$ lần lượt là số sản phẩm loại I và loại II mà cơ sở sản xuất trong một đợt ($x \ge 0, y \ge 0$). Hãy lập hệ bất phương trình bậc nhất hai ẩn thể hiện các điều kiện ràng buộc trên và biểu diễn miền nghiệm của hệ trên mặt phẳng toạ độ $Oxy$.
+    \item Cơ sở nên sản xuất bao nhiêu sản phẩm mỗi loại để thu được tổng tiền lãi lớn nhất? Tổng số tiền lãi lớn nhất đó bằng bao nhiêu?
+\end{enumerate}
+
+\item Một bờ sông thẳng có hai ngôi làng $A$ và $B$ cùng nằm về một phía của bờ sông. Khoảng cách từ làng $A$ đến bờ sông là $AH = 3\text{ km}$, khoảng cách từ làng $B$ đến bờ sông là $BK = 5\text{ km}$. Khoảng cách giữa hai hình chiếu $H$ và $K$ trên bờ sông là $HK = 6\text{ km}$. Người ta muốn xây dựng một trạm bơm nước $M$ trên đoạn bờ sông $HK$ để dẫn nước về hai làng.
+\begin{enumerate}
+    \item Giả sử trạm bơm $M$ được đặt tại trung điểm của đoạn thẳng $HK$. Tính tổng độ dài đường ống dẫn nước $MA + MB$ (làm tròn kết quả đến hàng phần trăm theo đơn vị kilômét).
+    \item Xác định vị trí điểm $M$ trên đoạn thẳng $HK$ để tổng chiều dài đường ống dẫn nước $MA + MB$ là ngắn nhất. Chiều dài ngắn nhất đó bằng bao nhiêu kilômét?
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+
+% ==================== ĐÁP ÁN VÀ LỜI GIẢI CHI TIẾT ====================
+\parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\vspace{0.2cm}
+\noindent\textbf{PHẦN I. Trắc nghiệm nhiều lựa chọn (12 câu)}
+\vspace{0.15cm}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} \\
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+\noindent\textbf{PHẦN II. Trắc nghiệm đúng/sai (2 câu)}
+\vspace{0.15cm}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu} & \textbf{Lệnh hỏi a)} & \textbf{Lệnh hỏi b)} & \textbf{Lệnh hỏi c)} & \textbf{Lệnh hỏi d)} \\
+\hline
+\textbf{Câu 1} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} & \textbf{Đúng} \\
+\hline
+\textbf{Câu 2} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} & \textbf{Đúng} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+\noindent\textbf{PHẦN III. Trắc nghiệm trả lời ngắn (4 câu)}
+\vspace{0.15cm}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu} & \textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} \\
+\hline
+\textbf{Đáp số} & $17$ & $55$ & $13$ & $2$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\parttitle{PHẦN IV. ĐÁP SỐ TỰ LUẬN}
+\vspace{0.15cm}
+
+\begin{enumerate}[leftmargin=1.5em, itemsep=6pt]
+    \item[\textbf{Câu 1.}] 
+    \begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+        \item[a)] $AC = h \cot 32^\circ \approx 1{,}6003\, h$, \quad $BC = h \cot 40^\circ \approx 1{,}1918\, h$.
+        \item[b)] $CD \approx 144{,}5\text{ m}$.
+    \end{itemize}
+
+    \item[\textbf{Câu 2.}] 
+    \begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+        \item[a)] $A \cap B = [0; 4]$, \quad $A \cup B = (-3; 5)$, \quad $A \setminus B = (-3; 0)$.
+        \item[b)] $-2 < m \le \dfrac{1}{2}$.
+    \end{itemize}
+
+    \item[\textbf{Câu 3.}] 
+    \begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+        \item[a)] Hệ bất phương trình mô hình hóa nguyên liệu đất sét và công lao động:
+        \[
+        \begin{cases}
+        x \ge 0,\ y \ge 0 \\
+        x + 2y \le 20 \\
+        3x + 2y \le 36
+        \end{cases}
+        \]
+        \item[b)] Cơ sở nên sản xuất $8$ sản phẩm loại I và $6$ sản phẩm loại II để thu được tiền lãi lớn nhất là $2280$ nghìn đồng ($2{,}28$ triệu đồng).
+    \end{itemize}
+
+    \item[\textbf{Câu 4.}] 
+    \begin{itemize}[leftmargin=1.2em, itemsep=2pt]
+        \item[a)] $MA + MB = 3\sqrt{2} + \sqrt{34} \approx 10{,}07\text{ km}$.
+        \item[b)] $(MA + MB)_{\min} = 10\text{ km}$ khi trạm bơm $M$ cách $H$ một khoảng $HM = 2{,}25\text{ km}$.
+    \end{itemize}
+\end{enumerate}
+
+\newpage
+
+% ==================== HÌNH VẼ MIỀN NGHIỆM HỆ BẤT PHƯƠNG TRÌNH ====================
+\parttitle{HÌNH VẼ MIỀN NGHIỆM HỆ BẤT PHƯƠNG TRÌNH}
+
+\vspace{0.2cm}
+\noindent\textbf{1. Miền nghiệm Câu 1 -- Phần III (Tối ưu biểu thức $F(x, y) = 3x + 2y$ trên miền tứ giác $OABC$):}
+
+\begin{center}
+\begin{tikzpicture}[x=1.35cm, y=1.35cm]
+    % Lưới toạ độ
+    \draw[help lines, color=gray!25, step=1] (-1,-1) grid (7,6);
+    
+    % Trục toạ độ
+    \draw[-{Latex[length=3mm]}, line width=1.1pt] (-1.2,0) -- (7.2,0) node[below=2pt, font=\normalsize\bfseries] {$x$};
+    \draw[-{Latex[length=3mm]}, line width=1.1pt] (0,-1.2) -- (0,5.8) node[left=2pt, font=\normalsize\bfseries] {$y$};
+    \node[below left=2pt, font=\normalsize\bfseries] at (0,0) {$O$};
+    
+    % Tô màu miền nghiệm OABC
+    \fill[ink!20] (0,0) -- (5,0) -- (3,4) -- (0,3) -- cycle;
+    \draw[line width=1.4pt, ink] (0,0) -- (5,0) -- (3,4) -- (0,3) -- cycle;
+    
+    % Các đường thẳng biên
+    % d_AB qua A(5,0) và B(3,4): pt 2x + y = 10
+    \draw[line width=1.1pt, blue!80!black] (2.2,5.6) -- (5.6,-1.2) 
+        node[pos=0.08, above right, font=\small\bfseries] {$d_1: 2x + y = 10$};
+        
+    % d_BC qua B(3,4) và C(0,3): pt x - 3y = -9 <=> x - 3y + 9 = 0
+    \draw[line width=1.1pt, red!80!black] (-0.8,2.73) -- (6.5,5.17) 
+        node[pos=0.92, above left, font=\small\bfseries] {$d_2: x - 3y = -9$};
+
+    % Các đường gióng toạ độ
+    \draw[dashed, line width=0.8pt, gray!80] (3,0) node[below=2pt, font=\small\bfseries] {$3$} -- (3,4) -- (0,4) node[left=2pt, font=\small\bfseries] {$4$};
+    \node[below=2pt, font=\small\bfseries] at (5,0) {$5$};
+    \node[left=2pt, font=\small\bfseries] at (0,3) {$3$};
+
+    % Các điểm đỉnh
+    \fill[black] (0,0) circle (2.5pt);
+    \fill[black] (5,0) circle (2.5pt) node[above right=1pt, font=\normalsize\bfseries] {$A(5;0)$};
+    \fill[black] (3,4) circle (2.5pt) node[above right=1pt, font=\normalsize\bfseries] {$B(3;4)$};
+    \fill[black] (0,3) circle (2.5pt) node[above right=1pt, font=\normalsize\bfseries] {$C(0;3)$};
+
+    % Nhãn miền nghiệm
+    \node[font=\bfseries\color{ink}] at (2.0,1.8) {Miền tứ giác $OABC$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.2cm}
+\begin{itemize}[leftmargin=1.5em, itemsep=3pt]
+    \item Miền nghiệm là tứ giác $OABC$ (kể cả biên) với toạ độ các đỉnh:
+    \[
+    O(0;0), \quad A(5;0), \quad B(3;4), \quad C(0;3).
+    \]
+    \item Hàm mục tiêu: $F(x, y) = 3x + 2y$.
+    \item Giá trị hàm mục tiêu tại các đỉnh của tứ giác:
+    \[
+    F(O) = 3(0) + 2(0) = 0; \quad F(A) = 3(5) + 2(0) = 15;
+    \]
+    \[
+    F(B) = 3(3) + 2(4) = 17; \quad F(C) = 3(0) + 2(3) = 6.
+    \]
+    \item \textbf{Kết luận:} Giá trị lớn nhất của $F(x, y)$ trên miền tứ giác $OABC$ là $\mathbf{17}$ (đạt tại đỉnh $B(3;4)$).
+\end{itemize}
+
+\newpage
+
+% ==================== MIỀN NGHIỆM CÂU 3 PHẦN IV ====================
+\parttitle{HÌNH VẼ MIỀN NGHIỆM HỆ BẤT PHƯƠNG TRÌNH (Tiếp theo)}
+
+\vspace{0.2cm}
+\noindent\textbf{2. Miền nghiệm Câu 3 -- Phần IV (Bài toán quy hoạch sản xuất gốm sứ thủ công mỹ nghệ):}
+\[
+\text{Hệ bất phương trình ràng buộc: }
+\begin{cases}
+x \ge 0,\ y \ge 0 \\
+x + 2y \le 20 \\
+3x + 2y \le 36
+\end{cases}
+\]
+
+\begin{center}
+\begin{tikzpicture}[x=0.72cm, y=0.72cm]
+    % Lưới toạ độ
+    \draw[help lines, color=gray!25, step=2] (-1,-1) grid (16,13);
+    
+    % Trục tọa độ
+    \draw[-{Latex[length=3mm]}, line width=1.1pt] (-1.2,0) -- (16.5,0) node[below=2pt, font=\normalsize\bfseries] {$x$};
+    \draw[-{Latex[length=3mm]}, line width=1.1pt] (0,-1.2) -- (0,13.5) node[left=2pt, font=\normalsize\bfseries] {$y$};
+    \node[below left=2pt, font=\normalsize\bfseries] at (0,0) {$O$};
+
+    % Tô màu miền nghiệm OABC
+    \fill[ink!20] (0,0) -- (12,0) -- (8,6) -- (0,10) -- cycle;
+    \draw[line width=1.4pt, ink] (0,0) -- (12,0) -- (8,6) -- (0,10) -- cycle;
+
+    % d1: 3x + 2y = 36
+    \draw[line width=1.1pt, blue!80!black] (4,12) -- (13.33,-2) 
+        node[pos=0.08, above right, font=\small\bfseries] {$d_1: 3x + 2y = 36$};
+
+    % d2: x + 2y = 20
+    \draw[line width=1.1pt, red!80!black] (-1,10.5) -- (15.5,2.25) 
+        node[pos=0.92, above right, font=\small\bfseries] {$d_2: x + 2y = 20$};
+
+    % Đường gióng toạ độ
+    \draw[dashed, line width=0.8pt, gray!80] (8,0) node[below=2pt, font=\small\bfseries] {$8$} -- (8,6) -- (0,6) node[left=2pt, font=\small\bfseries] {$6$};
+    \node[below=2pt, font=\small\bfseries] at (12,0) {$12$};
+    \node[left=2pt, font=\small\bfseries] at (0,10) {$10$};
+
+    % Các đỉnh
+    \fill[black] (0,0) circle (2.5pt);
+    \fill[black] (12,0) circle (2.5pt) node[above right=1pt, font=\normalsize\bfseries] {$A(12;0)$};
+    \fill[black] (8,6) circle (2.5pt) node[above right=1pt, font=\normalsize\bfseries] {$B(8;6)$};
+    \fill[black] (0,10) circle (2.5pt) node[above right=1pt, font=\normalsize\bfseries] {$C(0;10)$};
+
+    % Nhãn miền nghiệm
+    \node[font=\bfseries\color{ink}] at (4.5,4.0) {Miền nghiệm $OABC$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.2cm}
+\begin{itemize}[leftmargin=1.5em, itemsep=3pt]
+    \item Miền nghiệm của hệ là tứ giác $OABC$ (kể cả biên) với toạ độ các đỉnh:
+    \[
+    O(0;0), \quad A(12;0), \quad B(8;6), \quad C(0;10).
+    \]
+    \item Hàm tiền lãi: $L(x, y) = 150x + 180y$ (nghìn đồng).
+    \item Giá trị hàm tiền lãi tại các đỉnh:
+    \[
+    L(O) = 150(0) + 180(0) = 0 \text{ (nghìn đồng)};
+    \]
+    \[
+    L(A) = 150(12) + 180(0) = 1800 \text{ (nghìn đồng)} = 1{,}8 \text{ triệu đồng};
+    \]
+    \[
+    L(B) = 150(8) + 180(6) = 1200 + 1080 = 2280 \text{ (nghìn đồng)} = 2{,}28 \text{ triệu đồng};
+    \]
+    \[
+    L(C) = 150(0) + 180(10) = 1800 \text{ (nghìn đồng)} = 1{,}8 \text{ triệu đồng}.
+    \]
+    \item \textbf{Kết luận:} Tiền lãi lớn nhất là $\mathbf{2280}$ nghìn đồng ($=\mathbf{2{,}28}$ triệu đồng), đạt được khi sản xuất $\mathbf{8}$ sản phẩm loại I và $\mathbf{6}$ sản phẩm loại II.
+\end{itemize}
+
+\end{document}
