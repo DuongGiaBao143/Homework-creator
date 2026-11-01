@@ -1,0 +1,483 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.3cm,top=1.0cm,bottom=1.05cm,includehead,headheight=18pt,headsep=8pt]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or The only way to learn mathematics is to do mathematics% Trang 7
+    \or Small steps every day lead to big results% Trang 8
+    \or Every expert was once a beginner% Trang 9
+    \or Success is the sum of small efforts repeated daily% Trang 10
+    \or Mathematics is the music of reason% Trang 11
+    \or Believe you can and you're halfway there% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{1.5pt}
+\renewcommand{\arraystretch}{1.0}
+\newcommand{\parttitle}[1]{\par\vspace{1.5pt}\needspace{2\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[1pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{9pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.1cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[3pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GIỮA KÌ I}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 31}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút (không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.03cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0031}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.03cm}
+
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}
+\begin{enumerate}
+\item Trong các câu sau, câu nào là một mệnh đề toán học?
+\four{Tổng ba góc trong một tam giác bằng $180^\circ$.}{Hôm nay trời đẹp quá!}{Bạn có thích học môn Toán không?}{Hãy làm bài tập về nhà!}
+
+\item Cho hai mệnh đề $P$ và $Q$. Phát biểu nào sau đây là đúng về mệnh đề kéo theo $P \Rightarrow Q$?
+\four{Mệnh đề $P \Rightarrow Q$ sai khi $P$ sai và $Q$ đúng.}{$P$ là điều kiện đủ để có $Q$.}{$P$ là điều kiện cần để có $Q$.}{Mệnh đề $P \Rightarrow Q$ sai khi cả $P$ và $Q$ cùng sai.}
+
+\item Cho hai tập hợp $A = \{1; 2; 3; 4; 5\}$ và $B = \{3; 4; 5; 6; 7\}$. Khẳng định nào sau đây đúng?
+\four{$A \cap B = \{1; 2\}$.}{$A \cup B = \{3; 4; 5\}$.}{$A \setminus B = \{1; 2\}$.}{$B \setminus A = \{1; 2\}$.}
+
+\item Cho hai tập hợp $A = (-\infty; m]$ và $B = [2m - 3; +\infty)$. Có bao nhiêu số nguyên dương $m \in [1; 10]$ để $A \cap B = \varnothing$?
+\four{$5$.}{$6$.}{$8$.}{$7$.}
+
+\item Hệ bất phương trình nào sau đây là hệ bất phương trình bậc nhất hai ẩn?
+\two{$\begin{cases} 2x - 3y + 1 > 0 \\ x + 4y \le 5 \end{cases}$}{$\begin{cases} x^2 + y \le 4 \\ 2x - y > 1 \end{cases}$}{$\begin{cases} x - 2y + z > 0 \\ y + 3 \le 0 \end{cases}$}{$\begin{cases} xy + 2 > 0 \\ x - y \le 3 \end{cases}$}
+
+\item Điểm nào sau đây thuộc miền nghiệm của bất phương trình bậc nhất hai ẩn $2x - 3y + 6 > 0$?
+\four{$M(0; 3)$.}{$N(1; 1)$.}{$P(-4; 0)$.}{$Q(2; 5)$.}
+
+\item Nửa mặt phẳng không bị gạch chéo (kể cả bờ $d$) đi qua hai điểm $(4; 0)$ và $(0; 2)$ chứa gốc toạ độ $O(0; 0)$ là miền nghiệm của bất phương trình nào sau đây?
+\four{$x + 2y > 4$.}{$2x + y \le 4$.}{$x + 2y \le 4$.}{$x + 2y \ge 4$.}
+
+\item Diện tích của hình phẳng giới hạn bởi hai trục toạ độ $Ox, Oy$ và miền nghiệm của bất phương trình $3x + 4y \le 12$ ($x \ge 0, y \ge 0$) bằng bao nhiêu?
+\four{$12$.}{$8$.}{$7$.}{$6$.}
+
+\item Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$. Khẳng định nào sau đây đúng?
+\four{$a^2 = b^2 + c^2 - 2bc \cos A$.}{$a^2 = b^2 + c^2 + 2bc \cos A$.}{$a^2 = b^2 + c^2 - 2bc \sin A$.}{$a^2 = b^2 + c^2 + 2bc \sin A$.}
+
+\item Cho tam giác $ABC$ có các cạnh $a, b, c$ và bán kính đường tròn ngoại tiếp $R$. Công thức nào sau đây dùng để tính diện tích $S$ của tam giác $ABC$?
+\four{$S = \dfrac{abc}{2R}$.}{$S = \dfrac{abc}{4R}$.}{$S = \dfrac{abc}{R}$.}{$S = 4R \cdot abc$.}
+
+\item Cho góc tù $\alpha$ thoả mãn $\cos \alpha = -\dfrac{3}{5}$. Giá trị của biểu thức $P = \dfrac{\sin \alpha + \tan \alpha}{1 + \cos \alpha}$ bằng
+\four{$\dfrac{4}{3}$.}{$-\dfrac{2}{3}$.}{$-\dfrac{4}{3}$.}{$\dfrac{2}{3}$.}
+
+\item Tam giác $ABC$ có độ dài hai cạnh $b = 7, c = 5$ và góc $\widehat{A} = 60^\circ$. Bán kính đường tròn ngoại tiếp $R$ của tam giác $ABC$ bằng
+\four{$\sqrt{39}$.}{$2\sqrt{13}$.}{$\dfrac{\sqrt{13}}{2}$.}{$\sqrt{13}$.}
+\end{enumerate}
+\newpage
+
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Thí sinh trả lời từ câu 1 đến câu 2. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}
+\item Cho hai tập hợp $A = \{x \in \mathbb{R} \mid x^2 - 5x + 6 = 0\}$, $B = \{x \in \mathbb{Z} \mid -2 \le x < 3\}$ và tập hợp $C = [m; m + 3]$ (với $m$ là tham số thực).
+\begin{enumerate}
+    \item Số phần tử của tập hợp $A$ bằng $2$.
+    \item Tập hợp $B$ có tất cả $32$ tập hợp con.
+    \item Tập hợp hiệu $A \setminus B = \{3\}$.
+    \item Có đúng $3$ giá trị nguyên của tham số $m$ để $A \cap C \ne \varnothing$.
+\end{enumerate}
+
+\item Để xác định vị trí của một trạm phát sóng $A$ và hai tàu đánh cá $B, C$ trên biển, các kiểm ngư viên đo được khoảng cách $AB = 60\text{ m}$, $AC = 100\text{ m}$ và góc nhìn giữa hai tàu từ trạm phát sóng là $\widehat{BAC} = 120^\circ$.
+\begin{enumerate}
+    \item Trong tam giác $ABC$, giá trị $\cos \widehat{BAC} = -\dfrac{1}{2}$.
+    \item Khoảng cách giữa hai tàu đánh cá $B$ và $C$ bằng $150\text{ m}$.
+    \item Diện tích tam giác $ABC$ bằng $1500\sqrt{3}\text{ m}^2$.
+    \item Một ca nô tuần tra đi từ trạm $A$ đến một vị trí $M$ trên đoạn thẳng $BC$ sao cho khoảng cách $AM$ ngắn nhất. Khi đó độ dài đoạn thẳng $AM = \dfrac{150\sqrt{3}}{7}\text{ m}$.
+\end{enumerate}
+\end{enumerate}
+
+\parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 4. Điền kết quả vào ô tương ứng.}
+\begin{enumerate}
+\item Cho miền tam giác $OAB$ (kể cả biên) với toạ độ các đỉnh là gốc toạ độ $O(0; 0)$, $A(4; 0)$ và $B(1; 3)$ như hình vẽ.
+
+\begin{center}
+\vspace{-4pt}
+\begin{tikzpicture}[scale=0.75, >=Stealth]
+    \draw[line width=1.1pt, ->] (-0.8,0) -- (5.2,0) node[right, font=\small\bfseries] {$x$};
+    \draw[line width=1.1pt, ->] (0,-0.8) -- (0,4.2) node[above, font=\small\bfseries] {$y$};
+    \node[below left=2pt, font=\small\bfseries] at (0,0) {$O$};
+    
+    \fill[pattern=north east lines, pattern color=blue!50] (0,0) -- (4,0) -- (1,3) -- cycle;
+    \draw[line width=1.3pt, ink] (0,0) -- (4,0) -- (1,3) -- cycle;
+    
+    \filldraw[black] (4,0) circle (2.4pt) node[below=2pt, font=\small\bfseries] {$A(4;0)$};
+    \filldraw[black] (1,3) circle (2.4pt) node[above=2pt, font=\small\bfseries] {$B(1;3)$};
+    \draw[dashed, thin] (1,0) -- (1,3) -- (0,3);
+    \node[below=2pt, font=\small] at (1,0) {$1$};
+    \node[left=2pt, font=\small] at (0,3) {$3$};
+\end{tikzpicture}
+\vspace{-6pt}
+\end{center}
+
+Tìm giá trị nhỏ nhất của tham số $m$ để bất phương trình $2x + y \le m$ nghiệm đúng với mọi điểm $(x; y)$ thuộc miền tam giác $OAB$.
+\answerbox
+
+\item Cho tam giác $ABC$ có độ dài ba cạnh lần lượt là $a = 13$, $b = 14$, $c = 15$. Tính bán kính đường tròn nội tiếp $r$ của tam giác $ABC$.
+\answerbox
+\end{enumerate}
+\newpage
+
+\begin{enumerate}[resume]
+\item Một xưởng cơ khí sản xuất hai loại chi tiết máy $X$ và $Y$. Mỗi chi tiết $X$ cần $2$ giờ tiện và $1$ giờ phay, đem lại tiền lãi $40$ nghìn đồng. Mỗi chi tiết $Y$ cần $1$ giờ tiện và $3$ giờ phay, đem lại tiền lãi $50$ nghìn đồng. Thời gian tối đa của máy tiện là $180$ giờ/tháng, máy phay là $240$ giờ/tháng. Ngoài ra do nhu cầu thị trường, số lượng chi tiết $Y$ sản xuất không vượt quá $2$ lần số chi tiết $X$. Tìm số tiền lãi lớn nhất mà xưởng có thể đạt được trong một tháng (đơn vị tính: triệu đồng, viết số thập phân).
+\answerbox
+
+\item Một trường THPT có $100$ học sinh khối 10 tham gia câu lạc bộ năng khiếu: có $45$ học sinh tham gia CLB Bóng rổ, $53$ học sinh tham gia CLB Cầu lông, và $18$ học sinh không tham gia cả hai câu lạc bộ trên. Hỏi có bao nhiêu học sinh tham gia cả hai CLB Bóng rổ và Cầu lông?
+\answerbox
+\end{enumerate}
+
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày chi tiết lời giải từ câu 1 đến câu 4.}
+\begin{enumerate}
+\item Để đo khoảng cách giữa hai vị trí $A$ và $B$ bị ngăn cách bởi một hồ nước sâu mà không thể đo trực tiếp, người ta chọn một điểm mốc $C$ quan sát được cả $A$ và $B$. Bằng giác kế, người ta đo được khoảng cách $CA = 120\text{ m}$, $CB = 150\text{ m}$ và góc nhìn $\widehat{ACB} = 60^\circ$.
+\begin{enumerate}
+    \item Tính khoảng cách $AB$ giữa hai vị trí (làm tròn kết quả đến hàng phần mười theo đơn vị mét).
+    \item Tính diện tích tam giác $ABC$.
+\end{enumerate}
+
+\item Cho hai tập hợp $A = (-4; 5]$ và $B = [m - 1; 2m + 3)$ (với $m$ là tham số thực).
+\begin{enumerate}
+    \item Khi $m = 2$, hãy xác định các tập hợp $A \cap B$, $A \cup B$ và $A \setminus B$.
+    \item Tìm tất cả các giá trị thực của tham số $m$ để tập hợp $B$ là tập con khác rỗng của tập hợp $A$.
+\end{enumerate}
+
+\item Một trang trại dự định trồng hai loại cây ăn quả: Cây cam và Cây bưởi trên tổng diện tích đất tối đa là $12\text{ ha}$.
+\begin{itemize}[leftmargin=1.5em, itemsep=0.1pt]
+    \item Để trồng $1\text{ ha}$ cam cần $20$ triệu đồng vốn đầu tư và $30$ công lao động.
+    \item Để trồng $1\text{ ha}$ bưởi cần $30$ triệu đồng vốn đầu tư và $20$ công lao động.
+\end{itemize}
+Trang trại hiện có số vốn đầu tư tối đa là $270$ triệu đồng và tổng số công lao động tối đa có thể huy động là $300$ công. Sau khi thu hoạch, mỗi héc-ta cam mang lại lợi nhuận $40$ triệu đồng, mỗi héc-ta bưởi mang lại lợi nhuận $50$ triệu đồng.
+\begin{enumerate}
+    \item Gọi $x, y$ (héc-ta) lần lượt là diện tích trồng cam và bưởi ($x \ge 0, y \ge 0$). Hãy lập hệ bất phương trình bậc nhất hai ẩn thể hiện các điều kiện ràng buộc trên và biểu diễn miền nghiệm của hệ trên mặt phẳng toạ độ $Oxy$.
+    \item Xác định diện tích trồng mỗi loại cây để trang trại thu được lợi nhuận lớn nhất. Số tiền lợi nhuận lớn nhất đó bằng bao nhiêu?
+\end{enumerate}
+
+\item Cho hai tập hợp khác rỗng $A = [m - 1; m + 2)$ và $B = (-\infty; -2) \cup [4; +\infty)$ với $m$ là tham số thực.
+\begin{enumerate}
+    \item Tìm điều kiện của tham số $m$ để $A \cap B = \varnothing$.
+    \item Tìm tất cả các giá trị nguyên của $m$ để tập hợp $C = A \setminus B$ có đúng $3$ phần tử là số nguyên.
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+
+% ==================== ĐÁP ÁN VÀ LỜI GIẢI CHI TIẾT ====================
+\parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\vspace{0.2cm}
+\noindent\textbf{PHẦN I. Trắc nghiệm nhiều lựa chọn (12 câu)}
+\vspace{0.15cm}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} & \textbf{11} & \textbf{12} \\
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+\noindent\textbf{PHẦN II. Trắc nghiệm đúng/sai (2 câu)}
+\vspace{0.15cm}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu} & \textbf{Lệnh hỏi a)} & \textbf{Lệnh hỏi b)} & \textbf{Lệnh hỏi c)} & \textbf{Lệnh hỏi d)} \\
+\hline
+\textbf{Câu 1} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} \\
+\hline
+\textbf{Câu 2} & \textbf{Đúng} & \textbf{Sai} & \textbf{Đúng} & \textbf{Đúng} \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+\noindent\textbf{PHẦN III. Trắc nghiệm trả lời ngắn (4 câu)}
+\vspace{0.15cm}
+
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu} & \textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} \\
+\hline
+\textbf{Đáp số} & $8$ & $4$ & $5{,}4$ & $16$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.4cm}
+\parttitle{HƯỚNG DẪN GIẢI CHI TIẾT VÀ BẢNG ĐIỂM}
+
+\textbf{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\begin{itemize}[leftmargin=1.5em, itemsep=3pt]
+    \item \textbf{Câu 1 (A):} Câu ``Tổng ba góc trong một tam giác bằng $180^\circ$'' là một khẳng định đúng về mặt toán học nên là mệnh đề toán học. Các câu còn lại là câu cảm thán, câu hỏi, câu cầu khiến.
+    \item \textbf{Câu 2 (B):} Trong mệnh đề kéo theo $P \Rightarrow Q$, mệnh đề $P$ được gọi là điều kiện đủ để có $Q$, và $Q$ là điều kiện cần để có $P$.
+    \item \textbf{Câu 3 (C):} Phép hiệu $A \setminus B$ gồm các phần tử thuộc $A$ nhưng không thuộc $B$. Vì $A = \{1; 2; 3; 4; 5\}$ và $B = \{3; 4; 5; 6; 7\}$, các phần tử thuộc $A$ mà không thuộc $B$ là $\{1; 2\}$.
+    \item \textbf{Câu 4 (D):} Ta có $A \cap B = \varnothing \iff m < 2m - 3 \iff m > 3$. Vì $m$ là số nguyên dương và $m \in [1; 10]$, nên $m \in \{4; 5; 6; 7; 8; 9; 10\}$. Có tất cả $7$ giá trị thoả mãn.
+    \item \textbf{Câu 5 (A):} Hệ $\begin{cases} 2x - 3y + 1 > 0 \\ x + 4y \le 5 \end{cases}$ gồm các bất phương trình bậc nhất hai ẩn $x, y$. Các hệ còn lại chứa $x^2, z, xy$ không phải bậc nhất hai ẩn.
+    \item \textbf{Câu 6 (B):} Thay toạ độ điểm $N(1; 1)$ vào vế trái bất phương trình: $2(1) - 3(1) + 6 = 5 > 0$ (thoả mãn). Các điểm còn lại đều cho giá trị không dương.
+    \item \textbf{Câu 7 (C):} Đường thẳng $d$ cắt hai trục toạ độ tại $(4; 0)$ và $(0; 2)$ có phương trình là $\dfrac{x}{4} + \dfrac{y}{2} = 1 \iff x + 2y = 4$. Thay $O(0; 0)$ vào biểu thức $x + 2y$ ta được $0 \le 4$, do đó miền nghiệm chứa $O(0; 0)$ là $x + 2y \le 4$.
+    \item \textbf{Câu 8 (D):} Đường thẳng $3x + 4y = 12$ cắt trục $Ox$ tại $A(4; 0)$ và cắt trục $Oy$ tại $B(0; 3)$. Miền nghiệm cùng với hai trục toạ độ tạo thành tam giác vuông $OAB$ tại gốc $O$. Diện tích $S = \dfrac{1}{2} \cdot OA \cdot OB = \dfrac{1}{2} \cdot 4 \cdot 3 = 6$.
+    \item \textbf{Câu 9 (A):} Theo định lý côsin trong tam giác: $a^2 = b^2 + c^2 - 2bc \cos A$.
+    \item \textbf{Câu 10 (B):} Công thức tính diện tích tam giác theo bán kính đường tròn ngoại tiếp là $S = \dfrac{abc}{4R}$.
+    \item \textbf{Câu 11 (C):} Vì $90^\circ < \alpha < 180^\circ$ nên $\sin \alpha > 0$. Do đó $\sin \alpha = \sqrt{1 - \cos^2 \alpha} = \sqrt{1 - \left(-\dfrac{3}{5}\right)^2} = \dfrac{4}{5}$. Suy ra $\tan \alpha = \dfrac{\sin \alpha}{\cos \alpha} = \dfrac{4/5}{-3/5} = -\dfrac{4}{3}$. Khi đó:
+    \[
+    P = \frac{\sin \alpha + \tan \alpha}{1 + \cos \alpha} = \frac{\frac{4}{5} - \frac{4}{3}}{1 - \frac{3}{5}} = \frac{-\frac{8}{15}}{\frac{2}{5}} = -\frac{4}{3}.
+    \]
+    \item \textbf{Câu 12 (D):} Áp dụng định lý côsin: $a^2 = b^2 + c^2 - 2bc \cos A = 7^2 + 5^2 - 2 \cdot 7 \cdot 5 \cdot \cos 60^\circ = 49 + 25 - 35 = 39 \implies a = \sqrt{39}$. Áp dụng định lý sin: $R = \dfrac{a}{2\sin A} = \dfrac{\sqrt{39}}{2\sin 60^\circ} = \dfrac{\sqrt{39}}{\sqrt{3}} = \sqrt{13}$.
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{PHẦN II. Trắc nghiệm đúng/sai}
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item \textbf{Câu 1:}
+    \begin{itemize}
+        \item a) \textbf{Đúng.} Giải phương trình $x^2 - 5x + 6 = 0 \iff x = 2$ hoặc $x = 3$. Vậy $A = \{2; 3\}$ có đúng $2$ phần tử.
+        \item b) \textbf{Đúng.} $B = \{x \in \mathbb{Z} \mid -2 \le x < 3\} = \{-2; -1; 0; 1; 2\}$. Tập $B$ có $5$ phần tử nên số tập con là $2^5 = 32$.
+        \item c) \textbf{Đúng.} $A \setminus B = \{2; 3\} \setminus \{-2; -1; 0; 1; 2\} = \{3\}$.
+        \item d) \textbf{Sai.} Để $A \cap C \ne \varnothing$ thì $2 \in C$ hoặc $3 \in C$.
+        Ta có $2 \in [m; m + 3] \iff m \le 2 \le m + 3 \iff -1 \le m \le 2$.
+        Và $3 \in [m; m + 3] \iff m \le 3 \le m + 3 \iff 0 \le m \le 3$.
+        Hợp hai điều kiện lại ta được $-1 \le m \le 3$. Các giá trị nguyên của $m$ là $\{-1; 0; 1; 2; 3\}$, có đúng $5$ giá trị nguyên (không phải $3$).
+    \end{itemize}
+
+    \item \textbf{Câu 2:}
+    \begin{itemize}
+        \item a) \textbf{Đúng.} Góc $\widehat{BAC} = 120^\circ \implies \cos 120^\circ = -\dfrac{1}{2}$.
+        \item b) \textbf{Sai.} Áp dụng định lý côsin trong tam giác $ABC$:
+        \[
+        BC^2 = AB^2 + AC^2 - 2AB \cdot AC \cos \widehat{BAC}
+        \]
+        \[
+        = 60^2 + 100^2 - 2 \cdot 60 \cdot 100 \cdot \left(-\frac{1}{2}\right) = 3600 + 10000 + 6000 = 19600.
+        \]
+        Suy ra $BC = \sqrt{19600} = 140\text{ m} \ne 150\text{ m}$.
+        \item c) \textbf{Đúng.} Diện tích tam giác $ABC$ là:
+        \[
+        S_{ABC} = \frac{1}{2} AB \cdot AC \sin \widehat{BAC} = \frac{1}{2} \cdot 60 \cdot 100 \cdot \sin 120^\circ = 3000 \cdot \frac{\sqrt{3}}{2} = 1500\sqrt{3}\text{ m}^2.
+        \]
+        \item d) \textbf{Đúng.} Khoảng cách $AM$ ngắn nhất khi $AM \perp BC$, tức $AM$ là đường cao kẻ từ đỉnh $A$. Khi đó:
+        \[
+        AM = \frac{2S_{ABC}}{BC} = \frac{2 \cdot 1500\sqrt{3}}{140} = \frac{3000\sqrt{3}}{140} = \frac{150\sqrt{3}}{7}\text{ m}.
+        \]
+    \end{itemize}
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{PHẦN III. Trắc nghiệm trả lời ngắn}
+\begin{itemize}[leftmargin=1.5em, itemsep=4pt]
+    \item \textbf{Câu 1:} Biểu thức $f(x, y) = 2x + y$ đạt giá trị lớn nhất tại một trong các đỉnh của miền tam giác $OAB$:
+    $f(O) = 2(0) + 0 = 0$; $f(A) = 2(4) + 0 = 8$; $f(B) = 2(1) + 3 = 5$.
+    Do đó $\max_{(x;y) \in OAB} (2x + y) = 8$. Để $2x + y \le m$ nghiệm đúng với mọi điểm thuộc miền tam giác $OAB$ thì $m \ge \max (2x + y) = 8$. Vậy giá trị nhỏ nhất của $m$ là $8$.
+    \item \textbf{Câu 2:} Nửa chu vi tam giác $p = \dfrac{13 + 14 + 15}{2} = 21$.
+    Theo công thức Heron:
+    \[
+    S = \sqrt{p(p - a)(p - b)(p - c)} = \sqrt{21 \cdot 8 \cdot 7 \cdot 6} = \sqrt{7056} = 84.
+    \]
+    Bán kính đường tròn nội tiếp là $r = \dfrac{S}{p} = \dfrac{84}{21} = 4$.
+    \item \textbf{Câu 3:} Gọi $x, y$ lần lượt là số chi tiết $X$ và $Y$ được sản xuất trong một tháng ($x, y \ge 0$).
+    Hệ điều kiện ràng buộc:
+    \[
+    \begin{cases}
+    2x + y \le 180 \quad (\text{máy tiện})\\
+    x + 3y \le 240 \quad (\text{máy phay})\\
+    y \le 2x \quad (\text{nhu cầu})\\
+    x \ge 0, y \ge 0
+    \end{cases}
+    \]
+    Hàm lợi nhuận: $L(x, y) = 40x + 50y$ (nghìn đồng).
+    Miền nghiệm là đa giác có các đỉnh: $O(0; 0)$, $A(90; 0)$, điểm giao giữa $2x + y = 180$ và $x + 3y = 240$ là $B(60; 60)$ (thoả mãn $y \le 2x$), và điểm giao giữa $x + 3y = 240$ và $y = 2x$ là $C\left(\dfrac{240}{7}; \dfrac{480}{7}\right)$.
+    Tính giá trị $L$ tại các đỉnh:
+    $L(O) = 0$; $L(A) = 40(90) = 3600$ nghìn đồng;
+    $L(B) = 40(60) + 50(60) = 5400$ nghìn đồng $= 5{,}4$ triệu đồng;
+    $L(C) = 40\left(\dfrac{240}{7}\right) + 50\left(\dfrac{480}{7}\right) = \dfrac{33600}{7} = 4800$ nghìn đồng.
+    Vậy tiền lãi lớn nhất là $5400$ nghìn đồng $= 5{,}4$ triệu đồng.
+    \item \textbf{Câu 4:} Gọi $A$ là tập hợp học sinh tham gia CLB Bóng rổ, $B$ là tập hợp học sinh tham gia CLB Cầu lông.
+    Số học sinh tham gia ít nhất một trong hai câu lạc bộ là:
+    \[
+    n(A \cup B) = 100 - 18 = 82.
+    \]
+    Theo công thức cộng số phần tử:
+    \[
+    n(A \cup B) = n(A) + n(B) - n(A \cap B) \implies 82 = 45 + 53 - n(A \cap B) = 98 - n(A \cap B).
+    \]
+    Suy ra số học sinh tham gia cả hai câu lạc bộ là:
+    \[
+    n(A \cap B) = 98 - 82 = 16.
+    \]
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{PHẦN IV. Tự luận}
+\begin{itemize}[leftmargin=1.5em, itemsep=5pt]
+    \item \textbf{Câu 1 (0,75 điểm):}
+    \begin{enumerate}
+        \item Áp dụng định lý côsin trong tam giác $ABC$:
+        \[
+        AB^2 = CA^2 + CB^2 - 2CA \cdot CB \cos \widehat{ACB} = 120^2 + 150^2 - 2 \cdot 120 \cdot 150 \cdot \cos 60^\circ.
+        \]
+        \[
+        AB^2 = 14400 + 22500 - 36000 \cdot 0{,}5 = 36900 - 18000 = 18900.
+        \]
+        Suy ra $AB = \sqrt{18900} = 30\sqrt{21} \approx 137{,}5\text{ m}$.
+        \item Diện tích tam giác $ABC$ là:
+        \[
+        S_{ABC} = \frac{1}{2} CA \cdot CB \sin \widehat{ACB} = \frac{1}{2} \cdot 120 \cdot 150 \cdot \sin 60^\circ = 9000 \cdot \frac{\sqrt{3}}{2} = 4500\sqrt{3} \approx 7794{,}2\text{ m}^2.
+        \]
+    \end{enumerate}
+
+    \item \textbf{Câu 2 (0,75 điểm):}
+    \begin{enumerate}
+        \item Với $m = 2$, tập hợp $B = [2 - 1; 2 \cdot 2 + 3) = [1; 7)$.
+        Khi đó với $A = (-4; 5]$:
+        \begin{itemize}
+            \item $A \cap B = [1; 5]$.
+            \item $A \cup B = (-4; 7)$.
+            \item $A \setminus B = (-4; 1)$.
+        \end{itemize}
+        \item Để tập hợp $B$ khác rỗng thì $m - 1 < 2m + 3 \iff m > -4$.
+        Để $B = [m - 1; 2m + 3) \subset A = (-4; 5]$ thì:
+        \[
+        \begin{cases}
+        m - 1 > -4 \\
+        2m + 3 \le 5
+        \end{cases}
+        \iff
+        \begin{cases}
+        m > -3 \\
+        2m \le 2
+        \end{cases}
+        \iff
+        \begin{cases}
+        m > -3 \\
+        m \le 1
+        \end{cases}
+        \iff -3 < m \le 1.
+        \]
+        Kết hợp điều kiện $m > -4$, ta được $-3 < m \le 1$ thoả mãn yêu cầu bài toán.
+    \end{enumerate}
+
+    \item \textbf{Câu 3 (0,75 điểm):}
+    \begin{enumerate}
+        \item Gọi $x, y$ lần lượt là diện tích đất trồng cam và bưởi ($x \ge 0, y \ge 0$, đơn vị: héc-ta).
+        Tổng diện tích đất: $x + y \le 12$.
+        Vốn đầu tư: $20x + 30y \le 270 \iff 2x + 3y \le 27$.
+        Công lao động: $30x + 20y \le 300 \iff 3x + 2y \le 30$.
+        Ta có hệ bất phương trình:
+        \[
+        \begin{cases}
+        x \ge 0,\ y \ge 0 \\
+        x + y \le 12 \\
+        2x + 3y \le 27 \\
+        3x + 2y \le 30
+        \end{cases}
+        \]
+        Miền nghiệm của hệ là ngũ giác (hoặc tứ giác) $OABC$ với các đỉnh:
+        $O(0; 0)$; $A(10; 0)$ (giao điểm của $3x + 2y = 30$ với $Ox$);
+        $B(7{,}2; 4{,}2)$ (giao điểm của $3x + 2y = 30$ và $2x + 3y = 27$);
+        $C(0; 9)$ (giao điểm của $2x + 3y = 27$ với $Oy$).
+        (Điểm $B$ thoả mãn $7{,}2 + 4{,}2 = 11{,}4 \le 12$, do đó đường thẳng $x + y = 12$ nằm ngoài miền nghiệm).
+        \item Hàm lợi nhuận thu được là $F(x, y) = 40x + 50y$ (triệu đồng).
+        Tính giá trị của $F$ tại các đỉnh:
+        \begin{itemize}
+            \item $F(O) = 0$.
+            \item $F(A) = 40(10) + 50(0) = 400$ triệu đồng.
+            \item $F(B) = 40(7{,}2) + 50(4{,}2) = 288 + 210 = 498$ triệu đồng.
+            \item $F(C) = 40(0) + 50(9) = 450$ triệu đồng.
+        \end{itemize}
+        Vậy trang trại nên trồng $7{,}2\text{ ha}$ cam và $4{,}2\text{ ha}$ bưởi để thu được lợi nhuận lớn nhất là $498$ triệu đồng.
+    \end{enumerate}
+
+    \item \textbf{Câu 4 (0,75 điểm):}
+    \begin{enumerate}
+        \item Tập hợp $B = (-\infty; -2) \cup [4; +\infty)$. Phần bù của $B$ trong $\mathbb{R}$ là $C_{\mathbb{R}}(B) = [-2; 4)$.
+        Để $A \cap B = \varnothing$ thì tập hợp $A$ phải là tập con của phần bù $C_{\mathbb{R}}(B)$:
+        \[
+        [m - 1; m + 2) \subset [-2; 4) \iff
+        \begin{cases}
+        m - 1 \ge -2 \\
+        m + 2 \le 4
+        \end{cases}
+        \iff
+        \begin{cases}
+        m \ge -1 \\
+        m \le 2
+        \end{cases}
+        \iff -1 \le m \le 2.
+        \]
+        Vậy $-1 \le m \le 2$ là điều kiện cần tìm.
+        \item Ta có $C = A \setminus B = A \cap C_{\mathbb{R}}(B) = [m - 1; m + 2) \cap [-2; 4)$.
+        Khoảng nửa khoảng $A = [m - 1; m + 2)$ có độ dài bằng $(m + 2) - (m - 1) = 3$, do đó $A$ luôn chứa đúng $3$ số nguyên liên tiếp là $m - 1, m, m + 1$.
+        Tập $[-2; 4)$ chứa các số nguyên $\{-2; -1; 0; 1; 2; 3\}$.
+        Để tập hợp $C = A \cap [-2; 4)$ chứa đúng $3$ số nguyên thì cả $3$ số nguyên $\{m - 1; m; m + 1\}$ phải cùng thuộc $[-2; 4)$.
+        Điều này tương đương với:
+        \[
+        \begin{cases}
+        m - 1 \ge -2 \\
+        m + 1 \le 3
+        \end{cases}
+        \iff
+        \begin{cases}
+        m \ge -1 \\
+        m \le 2
+        \end{cases}
+        \iff -1 \le m \le 2.
+        \]
+        Vì $m$ là số nguyên nên $m \in \{-1; 0; 1; 2\}$.
+        Vậy có đúng $4$ giá trị nguyên của $m$ thoả mãn yêu cầu bài toán.
+    \end{enumerate}
+\end{itemize}
+
+\end{document}

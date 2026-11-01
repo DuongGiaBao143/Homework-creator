@@ -1,0 +1,535 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.3cm,top=1.0cm,bottom=1.05cm,includehead,headheight=18pt,headsep=8pt]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or The only way to learn mathematics is to do mathematics% Trang 7
+    \or Small steps every day lead to big results% Trang 8
+    \or Every expert was once a beginner% Trang 9
+    \or Success is the sum of small efforts repeated daily% Trang 10
+    \or Mathematics is the music of reason% Trang 11
+    \or Believe you can and you're halfway there% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\setlength{\headheight}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{1.5pt}
+\renewcommand{\arraystretch}{1.0}
+\newcommand{\parttitle}[1]{\par\vspace{1.5pt}\needspace{2\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[1pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{9pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.1cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
+
+\begin{document}
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[3pt]
+    \textbf{ĐỀ CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.35\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN THI GIỮA KÌ I}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[2pt]
+    \textbf{ĐỀ SỐ 30}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút (không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.03cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề thi}\\
+        \textbf{0030}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.03cm}
+
+\parttitle{PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi chỉ chọn một phương án đúng duy nhất.}
+\begin{enumerate}
+\item Cho tập hợp $A = \{x \in \mathbb{N} \mid (2x - 1)(x^2 - 9) = 0\}$. Viết tập hợp $A$ bằng cách liệt kê các phần tử.
+\four{$A = \{3\}$.}{$A = \{-3; 3\}$.}{$A = \left\{-3; \frac{1}{2}; 3\right\}$.}{$A = \{0; 3\}$.}
+
+\item Cho hai tập hợp $A = \{1; 2; 3; 4; 5\}$ và $B = \{2; 4; 6; 8\}$. Tập hợp $A \cap B$ bằng
+\four{$\{1; 3; 5\}$.}{$\{2; 4\}$.}{$\{6; 8\}$.}{$\{1; 2; 3; 4; 5; 6; 8\}$.}
+
+\item Cho tập hợp $X$ gồm $4$ phần tử. Số tập hợp con của tập hợp $X$ là
+\four{$4$.}{$8$.}{$16$.}{$32$.}
+
+\item Cho mệnh đề chứa biến $P(x)\colon \text{``}2x - 3 > 5\text{''}$ với $x \in \mathbb{R}$. Giá trị nào của $x$ sau đây làm cho $P(x)$ trở thành mệnh đề đúng?
+\four{$x = 2$.}{$x = 3$.}{$x = 4$.}{$x = 5$.}
+
+\item Đường thẳng $d\colon 3x + 2y - 6 = 0$ chia mặt phẳng toạ độ thành hai nửa mặt phẳng. Miền nghiệm của bất phương trình $3x + 2y - 6 \le 0$ chứa điểm nào sau đây?
+\four{$O(0; 0)$.}{$M(2; 3)$.}{$N(1; 4)$.}{$P(3; 1)$.}
+
+\item Cặp số $(x; y) = (2; -1)$ là nghiệm của bất phương trình nào sau đây?
+\four{$x + 2y - 1 > 0$.}{$2x - y - 1 > 0$.}{$x - 3y + 1 \le 0$.}{$3x + y + 2 \le 0$.}
+
+\item Bất phương trình nào sau đây là bất phương trình bậc nhất hai ẩn?
+\four{$2x^2 + 3y \le 1$.}{$xy - 2 \ge 0$.}{$3x - 5y + 7 \le 0$.}{$x + \dfrac{2}{y} > 3$.}
+
+\item Hệ bất phương trình nào sau đây là hệ bất phương trình bậc nhất hai ẩn?
+\two{$\begin{cases} x + y \ge 2 \\ x^2 - y \le 1 \end{cases}$}{$\begin{cases} 2x - 3y \le 0 \\ xy + 1 > 0 \end{cases}$}{$\begin{cases} x + \dfrac{1}{y} \ge 1 \\ 3x - y < 4 \end{cases}$}{$\begin{cases} 2x - y + 1 \ge 0 \\ x + 3y - 5 < 0 \end{cases}$}
+
+\item Cho tam giác $ABC$ có cạnh $BC = 8$ và góc $\widehat{A} = 30^\circ$. Bán kính $R$ của đường tròn ngoại tiếp tam giác $ABC$ bằng
+\four{$8$.}{$16$.}{$4$.}{$4\sqrt{3}$.}
+
+\item Cho tam giác $ABC$ có độ dài hai cạnh $b = AC = 5$, $c = AB = 8$ và góc $\widehat{A} = 60^\circ$. Độ dài cạnh $a = BC$ bằng
+\four{$\sqrt{129}$.}{$7$.}{$49$.}{$\sqrt{39}$.}
+
+\item Cho góc $\alpha$ thoả mãn $90^\circ < \alpha < 180^\circ$ và $\sin \alpha = \dfrac{4}{5}$. Giá trị của $\cos \alpha$ bằng
+\four{$\dfrac{3}{5}$.}{$-\dfrac{1}{5}$.}{$-\dfrac{3}{5}$.}{$\pm \dfrac{3}{5}$.}
+
+\item Giá trị của $\cos 120^\circ$ bằng
+\four{$\dfrac{1}{2}$.}{$\dfrac{\sqrt{3}}{2}$.}{$-\dfrac{\sqrt{3}}{2}$.}{$-\dfrac{1}{2}$.}
+\end{enumerate}
+\newpage
+
+\parttitle{PHẦN II. Trắc nghiệm đúng/sai}
+\textit{Thí sinh trả lời từ câu 1 đến câu 2. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}
+\item Cho bất phương trình bậc nhất hai ẩn $2x - y + 4 \ge 0$.
+\begin{enumerate}
+    \item Cặp số $(x; y) = (0; 0)$ là một nghiệm của bất phương trình đã cho.
+    \item Đường thẳng bờ $d\colon 2x - y + 4 = 0$ đi qua điểm $M(-2; 0)$.
+    \item Điểm $N(1; 7)$ thuộc miền nghiệm của bất phương trình đã cho.
+    \item Miền nghiệm của bất phương trình là nửa mặt phẳng bờ $d\colon 2x - y + 4 = 0$ không chứa gốc toạ độ $O(0; 0)$.
+\end{enumerate}
+
+\item Cho tam giác $ABC$ có độ dài ba cạnh là $a = BC = 6$, $b = CA = 8$, $c = AB = 10$.
+\begin{enumerate}
+    \item Nửa chu vi của tam giác $ABC$ bằng $p = 12$.
+    \item Tam giác $ABC$ là tam giác vuông tại đỉnh $C$.
+    \item Diện tích của tam giác $ABC$ bằng $S = 48$.
+    \item Bán kính đường tròn nội tiếp của tam giác $ABC$ bằng $r = 2$.
+\end{enumerate}
+\end{enumerate}
+
+\parttitle{PHẦN III. Trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 4. Điền kết quả vào ô tương ứng.}
+\begin{enumerate}
+\item Nửa mặt phẳng không bị gạch sọc (kể cả đường thẳng bờ $d$) trong hình vẽ bên dưới là miền nghiệm của bất phương trình $ax + by \le 12$ (với $a, b \in \mathbb{Z}$).
+
+\begin{center}
+\vspace{-4pt}
+\begin{tikzpicture}[scale=0.75, >=Stealth]
+    \draw[line width=1.1pt, ->] (-1.2,0) -- (4.8,0) node[right, font=\small\bfseries] {$x$};
+    \draw[line width=1.1pt, ->] (0,-1.0) -- (0,5.2) node[above, font=\small\bfseries] {$y$};
+    \node[below left=2pt, font=\small\bfseries] at (0,0) {$O$};
+    
+    \fill[pattern=north east lines, pattern color=gray!60] (-0.8,5.067) -- (4.5,5.067) -- (4.5,-2.0) -- cycle;
+    \draw[line width=1.3pt, ink] (-0.8,5.067) -- (4.5,-2.0);
+    \node[above left=3pt, font=\small\bfseries] at (-0.8,5.067) {$d$};
+    
+    \filldraw[black] (3,0) circle (2.4pt) node[below=2pt, font=\small\bfseries] {$3$};
+    \filldraw[black] (0,4) circle (2.4pt) node[left=2pt, font=\small\bfseries] {$4$};
+\end{tikzpicture}
+\vspace{-6pt}
+\end{center}
+
+Tính giá trị của biểu thức $T = 2a + 5b$.
+\answerbox
+
+\item Hai chiếc tàu thuỷ cùng xuất phát từ một vị trí bến cảng $A$ và chạy thẳng theo hai hướng tạo với nhau một góc $120^\circ$. Tàu thứ nhất chạy với vận tốc $20\text{ km/h}$, tàu thứ hai chạy với vận tốc $30\text{ km/h}$. Sau $2$ giờ chạy thẳng, tàu thứ nhất đến vị trí $B$ và tàu thứ hai đến vị trí $C$. Tính khoảng cách giữa hai tàu $BC$ (làm tròn kết quả đến hàng phần mười theo đơn vị kilômét).
+
+\begin{center}
+\vspace{-4pt}
+\begin{tikzpicture}[scale=0.82, >=Stealth]
+    \coordinate (A) at (0,0);
+    \coordinate (B) at (3.5,0);
+    \coordinate (C) at (120:4.5);
+    
+    \draw[line width=1.3pt, ink] (A) -- (B) node[midway, below=3pt, font=\small\bfseries] {$40\text{ km}$};
+    \draw[line width=1.3pt, ink] (A) -- (C) node[midway, above left=3pt, font=\small\bfseries] {$60\text{ km}$};
+    \draw[line width=1.2pt, dashed, red!85!black] (B) -- (C) node[midway, above right=3pt, font=\small\bfseries] {$BC = ?$};
+    
+    \filldraw[black] (A) circle (2.4pt) node[below left=2pt, font=\small\bfseries] {$A$};
+    \filldraw[black] (B) circle (2.4pt) node[below right=2pt, font=\small\bfseries] {$B$};
+    \filldraw[black] (C) circle (2.4pt) node[above left=2pt, font=\small\bfseries] {$C$};
+    
+    \draw[line width=1.0pt] (0.7,0) arc (0:120:0.7);
+    \node[font=\small\bfseries] at (60:1.05) {$120^\circ$};
+\end{tikzpicture}
+\vspace{-6pt}
+\end{center}
+\answerbox
+\end{enumerate}
+\newpage
+
+\begin{enumerate}[resume]
+\item Cho hai tập hợp khác rỗng $A = (m - 1; m + 4]$ và $B = [-2; 5)$. Có bao nhiêu giá trị nguyên của tham số $m$ để $A \cap B \ne \emptyset$?
+\answerbox
+
+\item Một xưởng cơ khí dự định sản xuất hai loại sản phẩm $A$ và $B$. Mỗi sản phẩm loại $A$ cần $2$ giờ gia công máy và $1$ giờ hoàn thiện, đem lại tiền lãi $40$ nghìn đồng. Mỗi sản phẩm loại $B$ cần $1$ giờ gia công máy và $1$ giờ hoàn thiện, đem lại tiền lãi $30$ nghìn đồng. Trong một ngày, xưởng có tối đa $8$ giờ gia công máy và $5$ giờ hoàn thiện. Hỏi số tiền lãi lớn nhất mà xưởng có thể thu được trong một ngày là bao nhiêu nghìn đồng?
+\answerbox
+\end{enumerate}
+
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày chi tiết lời giải từ câu 1 đến câu 4.}
+\begin{enumerate}
+\item Cho góc $\alpha$ thoả mãn $0^\circ < \alpha < 90^\circ$ và $\tan \alpha = 3$.
+\begin{enumerate}
+    \item Tính giá trị của biểu thức $P = \dfrac{4\sin \alpha - 3\cos \alpha}{2\sin \alpha + \cos \alpha}$.
+    \item Tính giá trị của biểu thức $Q = \dfrac{2\sin^2 \alpha + 3\sin \alpha \cos \alpha - \cos^2 \alpha}{\sin^2 \alpha + 2\cos^2 \alpha}$.
+\end{enumerate}
+
+\item Cho hai tập hợp khác rỗng $A = [m - 2; m + 3]$ và $B = (-1; 6]$.
+\begin{enumerate}
+    \item Tìm tất cả các giá trị thực của tham số $m$ để $A \subset B$.
+    \item Tìm tất cả các số nguyên $m$ thuộc đoạn $[-8; 12]$ để $A \cap B = \emptyset$.
+\end{enumerate}
+
+\item Cho hệ bất phương trình bậc nhất hai ẩn $\begin{cases} x + 2y \le 6 \\ 2x - y \le 2 \\ x \ge 0 \\ y \ge 0 \end{cases}$.
+\begin{enumerate}
+    \item Biểu diễn hình học miền nghiệm của hệ bất phương trình trên mặt phẳng toạ độ $Oxy$.
+    \item Xác định toạ độ các đỉnh của miền đa giác nghiệm.
+\end{enumerate}
+
+\item Để đo khoảng cách giữa hai vị trí $A$ và $B$ nằm ở hai bên bờ của một khúc sông mà không thể đo trực tiếp qua sông, người ta chọn hai điểm mốc $C$ và $D$ cùng nằm ở bờ sông bên này với khoảng cách $CD = 60\text{ m}$. Người ta dùng giác kế đo được các góc: $\widehat{ACB} = 30^\circ$, $\widehat{BCD} = 45^\circ$, $\widehat{ADC} = 60^\circ$, $\widehat{ADB} = 30^\circ$ (hai điểm $A$ và $B$ nằm cùng phía so với đường thẳng $CD$; tia $CB$ nằm trong góc $\widehat{ACD}$ và tia $DB$ nằm trong góc $\widehat{ADC}$). Tính khoảng cách $AB$ giữa hai vị trí (làm tròn kết quả đến hàng phần mười theo đơn vị mét).
+\end{enumerate}
+
+% =========================================================================
+% BẢNG ĐÁP ÁN VÀ LỜI GIẢI CHI TIẾT
+% =========================================================================
+\newpage
+\parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
+
+\vspace{0.1cm}
+\textbf{1. Phần I: Trắc nghiệm nhiều lựa chọn}
+\begin{center}
+{\setlength{\tabcolsep}{2.5pt}\small
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} & \textbf{Câu 5} & \textbf{Câu 6} & \textbf{Câu 7} & \textbf{Câu 8} & \textbf{Câu 9} & \textbf{Câu 10} & \textbf{Câu 11} & \textbf{Câu 12} \\
+\hline
+\textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.1cm}
+\textbf{2. Phần II: Trắc nghiệm đúng/sai}
+\begin{center}
+{\setlength{\tabcolsep}{6pt}\small
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Câu hỏi} & \textbf{Ý a)} & \textbf{Ý b)} & \textbf{Ý c)} & \textbf{Ý d)} \\
+\hline
+\textbf{Câu 1} & \textbf{Đ} & \textbf{Đ} & \textbf{S} & \textbf{S} \\
+\hline
+\textbf{Câu 2} & \textbf{Đ} & \textbf{Đ} & \textbf{S} & \textbf{Đ} \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.1cm}
+\textbf{3. Phần III: Trắc nghiệm trả lời ngắn}
+\begin{center}
+{\setlength{\tabcolsep}{6pt}\small
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Câu 1} & \textbf{Câu 2} & \textbf{Câu 3} & \textbf{Câu 4} \\
+\hline
+\textbf{23} & \textbf{87,2} & \textbf{12} & \textbf{180} \\
+\hline
+\end{tabular}}
+\end{center}
+
+\vspace{0.2cm}
+\parttitle{HƯỚNG DẪN GIẢI CHI TIẾT}
+
+\textbf{\large PHẦN I. Trắc nghiệm nhiều lựa chọn}
+\begin{itemize}[leftmargin=0.6cm, itemsep=3pt]
+    \item \textbf{Câu 1.} Ta có $(2x - 1)(x^2 - 9) = 0 \Leftrightarrow \left[\begin{array}{l} 2x - 1 = 0 \Leftrightarrow x = \dfrac{1}{2} \notin \mathbb{N} \\ x^2 - 9 = 0 \Leftrightarrow x = \pm 3 \end{array}\right.$. Vì $x \in \mathbb{N}$ nên chỉ có $x = 3$. Vậy $A = \{3\}$. \textbf{Chọn A.}
+    \item \textbf{Câu 2.} Giao của hai tập hợp $A$ và $B$ gồm các phần tử vừa thuộc $A$ vừa thuộc $B$: $A \cap B = \{2; 4\}$. \textbf{Chọn B.}
+    \item \textbf{Câu 3.} Số tập con của một tập hợp có $n$ phần tử là $2^n$. Với $n = 4$, số tập con là $2^4 = 16$. \textbf{Chọn C.}
+    \item \textbf{Câu 4.} Ta có $2x - 3 > 5 \Leftrightarrow 2x > 8 \Leftrightarrow x > 4$. Trong các phương án, chỉ có $x = 5 > 4$ làm cho mệnh đề đúng. \textbf{Chọn D.}
+    \item \textbf{Câu 5.} Thay $O(0; 0)$ vào bất phương trình, ta được $-6 \le 0$; ba điểm còn lại không thoả mãn. \textbf{Chọn A.}
+    \item \textbf{Câu 6.} Thay toạ độ $(2; -1)$ vào phương án B: $2(2) - (-1) - 1 = 4 + 1 - 1 = 4 > 0$ (thoả mãn). \textbf{Chọn B.}
+    \item \textbf{Câu 7.} Bất phương trình bậc nhất hai ẩn có dạng $ax + by + c \le 0$ (hoặc $\ge, <, >$) với $a, b$ không đồng thời bằng 0. Do đó $3x - 5y + 7 \le 0$ là bất phương trình bậc nhất hai ẩn. \textbf{Chọn C.}
+    \item \textbf{Câu 8.} Hệ bất phương trình ở phương án D gồm hai bất phương trình bậc nhất hai ẩn: $2x - y + 1 \ge 0$ và $x + 3y - 5 < 0$. \textbf{Chọn D.}
+    \item \textbf{Câu 9.} Theo định lý sin: $\dfrac{a}{\sin A} = 2R \Rightarrow R = \dfrac{a}{2\sin A} = \dfrac{8}{2 \sin 30^\circ} = \dfrac{8}{2 \cdot \frac{1}{2}} = 8$. \textbf{Chọn A.}
+    \item \textbf{Câu 10.} Theo định lý côsin: $a^2 = b^2 + c^2 - 2bc \cos A = 5^2 + 8^2 - 2 \cdot 5 \cdot 8 \cdot \cos 60^\circ = 25 + 64 - 40 = 49 \Rightarrow a = 7$. \textbf{Chọn B.}
+    \item \textbf{Câu 11.} Ta có $\cos^2 \alpha = 1 - \sin^2 \alpha = 1 - \left(\dfrac{4}{5}\right)^2 = \dfrac{9}{25}$. Vì $90^\circ < \alpha < 180^\circ$ nên $\cos \alpha < 0$, suy ra $\cos \alpha = -\dfrac{3}{5}$. \textbf{Chọn C.}
+    \item \textbf{Câu 12.} Ta có $\cos 120^\circ = -\cos(180^\circ - 120^\circ) = -\cos 60^\circ = -\dfrac{1}{2}$. \textbf{Chọn D.}
+\end{itemize}
+
+\vspace{0.2cm}
+\textbf{\large PHẦN II. Trắc nghiệm đúng/sai}
+\begin{itemize}[leftmargin=0.6cm, itemsep=4pt]
+    \item \textbf{Câu 1.}
+    \begin{itemize}
+        \item a) \textbf{Đúng.} Thay $(0; 0)$ vào bất phương trình: $2(0) - 0 + 4 = 4 \ge 0$ (mệnh đề đúng).
+        \item b) \textbf{Đúng.} Thay toạ độ điểm $M(-2; 0)$ vào phương trình đường thẳng $d$: $2(-2) - 0 + 4 = 0$ (điểm $M$ thuộc $d$).
+        \item c) \textbf{Sai.} Thay toạ độ điểm $N(1; 7)$: $2(1) - 7 + 4 = -1 < 0$, do đó điểm $N$ không thuộc miền nghiệm.
+        \item d) \textbf{Sai.} Vì $(0; 0)$ là một nghiệm của bất phương trình nên miền nghiệm là nửa mặt phẳng bờ $d$ có chứa gốc toạ độ $O(0; 0)$.
+    \end{itemize}
+    \item \textbf{Câu 2.}
+    \begin{itemize}
+        \item a) \textbf{Đúng.} Nửa chu vi tam giác: $p = \dfrac{a + b + c}{2} = \dfrac{6 + 8 + 10}{2} = 12$.
+        \item b) \textbf{Đúng.} Ta có $a^2 + b^2 = 6^2 + 8^2 = 36 + 64 = 100 = 10^2 = c^2$. Theo định lý Pytago đảo, tam giác $ABC$ vuông tại đỉnh $C$.
+        \item c) \textbf{Sai.} Diện tích tam giác vuông tại $C$ là $S = \dfrac{1}{2} a b = \dfrac{1}{2} \cdot 6 \cdot 8 = 24 \ne 48$.
+        \item d) \textbf{Đúng.} Bán kính đường tròn nội tiếp: $r = \dfrac{S}{p} = \dfrac{24}{12} = 2$.
+    \end{itemize}
+\end{itemize}
+
+\newpage
+\textbf{\large PHẦN III. Trắc nghiệm trả lời ngắn}
+\begin{enumerate}[leftmargin=0.6cm, itemsep=4pt]
+    \item Đường thẳng bờ $d$ cắt trục hoành tại điểm $(3; 0)$ và cắt trục tung tại điểm $(0; 4)$ nên có phương trình theo đoạn chắn là:
+    \[\dfrac{x}{3} + \dfrac{y}{4} = 1 \iff 4x + 3y = 12.\]
+    Miền nghiệm không bị gạch sọc chứa gốc toạ độ $O(0; 0)$ và $4(0) + 3(0) = 0 \le 12$, do đó bất phương trình là $4x + 3y \le 12$.
+    Suy ra $a = 4$ và $b = 3$.
+    Giá trị của biểu thức: $T = 2a + 5b = 2 \cdot 4 + 5 \cdot 3 = 8 + 15 = 23$. \textbf{Đáp số: 23.}
+
+    \item Sau $2$ giờ di chuyển, quãng đường mỗi tàu đi được là:
+    \[AB = 20 \times 2 = 40\text{ km}, \quad AC = 30 \times 2 = 60\text{ km}.\]
+    Trong tam giác $ABC$, góc xen giữa hai cạnh là $\widehat{BAC} = 120^\circ$. Áp dụng định lý côsin:
+    \[BC^2 = AB^2 + AC^2 - 2 \cdot AB \cdot AC \cdot \cos \widehat{BAC} = 40^2 + 60^2 - 2 \cdot 40 \cdot 60 \cdot \cos 120^\circ.\]
+    Vì $\cos 120^\circ = -\dfrac{1}{2}$ nên:
+    \[BC^2 = 1600 + 3600 - 2 \cdot 2400 \cdot \left(-\dfrac{1}{2}\right) = 5200 + 2400 = 7600.\]
+    Suy ra $BC = \sqrt{7600} \approx 87,177978\text{ km} \approx 87,2\text{ km}$. \textbf{Đáp số: 87,2.}
+
+    \item Để $A \cap B = \emptyset$, xét hai trường hợp:
+    \begin{itemize}
+        \item Trường hợp 1: Tập $A$ nằm hoàn toàn về bên trái tập $B$, tức là $m + 4 < -2 \iff m < -6$.
+        \item Trường hợp 2: Tập $A$ nằm hoàn toàn về bên phải tập $B$, tức là $m - 1 \ge 5 \iff m \ge 6$.
+    \end{itemize}
+    Do đó, $A \cap B = \emptyset \iff m < -6$ hoặc $m \ge 6$.
+    Suy ra $A \cap B \ne \emptyset \iff -6 \le m < 6$.
+    Vì $m \in \mathbb{Z}$ nên $m \in \{-6; -5; -4; -3; -2; -1; 0; 1; 2; 3; 4; 5\}$.
+    Số giá trị nguyên thoả mãn là $5 - (-6) + 1 = 12$. \textbf{Đáp số: 12.}
+
+    \item Gọi $x, y$ lần lượt là số lượng sản phẩm loại $A$ và loại $B$ sản xuất trong một ngày ($x \ge 0, y \ge 0$).
+    Theo giả thiết, hệ điều kiện ràng buộc là:
+    \[\begin{cases} 2x + y \le 8 \\ x + y \le 5 \\ x \ge 0 \\ y \ge 0. \end{cases}\]
+    Hàm số tổng tiền lãi thu được (đơn vị nghìn đồng) là: $F(x; y) = 40x + 30y$.
+    
+    Miền nghiệm của hệ là miền tứ giác $OABC$ kể cả biên, với toạ độ các đỉnh:
+    \begin{itemize}
+        \item $O(0; 0)$;
+        \item $A(4; 0)$ là giao của đường thẳng $2x + y = 8$ với trục hoành;
+        \item $B(3; 2)$ là giao điểm của hai đường thẳng $2x + y = 8$ và $x + y = 5$;
+        \item $C(0; 5)$ là giao của đường thẳng $x + y = 5$ với trục tung.
+    \end{itemize}
+
+    \begin{center}
+    \begin{tikzpicture}[scale=0.82, >=Stealth]
+        \draw[line width=1.1pt, ->] (-0.8,0) -- (6.0,0) node[right, font=\small\bfseries] {$x$};
+        \draw[line width=1.1pt, ->] (0,-0.8) -- (0,6.5) node[above, font=\small\bfseries] {$y$};
+        \node[below left=2pt, font=\small\bfseries] at (0,0) {$O$};
+        
+        % Miền nghiệm tứ giác OABC
+        \fill[blue!15] (0,0) -- (4,0) -- (3,2) -- (0,5) -- cycle;
+        \draw[line width=1.2pt, blue!70!black] (0,0) -- (4,0) -- (3,2) -- (0,5) -- cycle;
+        
+        % Đường thẳng 2x + y = 8
+        \draw[line width=1.1pt, ink] (-0.5,9) -- (4.5,-1);
+        \node[above right=1pt, font=\small\bfseries] at (1,6) {$2x+y=8$};
+        
+        % Đường thẳng x + y = 5
+        \draw[line width=1.1pt, teal!80!black] (-0.5,5.5) -- (5.5,-0.5);
+        \node[above right=1pt, font=\small\bfseries] at (2,3.2) {$x+y=5$};
+        
+        \filldraw[black] (0,0) circle (2.2pt);
+        \filldraw[black] (4,0) circle (2.2pt) node[below right=5pt, xshift=10pt, font=\small\bfseries] {$A(4;0)$};
+        \filldraw[black] (3,2) circle (2.2pt) node[above right=2pt, font=\small\bfseries] {$B(3;2)$};
+        \filldraw[black] (0,5) circle (2.2pt) node[left=2pt, font=\small\bfseries] {$C(0;5)$};
+    \end{tikzpicture}
+    \end{center}
+
+    Tính giá trị của biểu thức $F(x; y)$ tại các đỉnh:
+    \begin{itemize}
+        \item Tại $O(0; 0)$: $F(0; 0) = 40(0) + 30(0) = 0$;
+        \item Tại $A(4; 0)$: $F(4; 0) = 40(4) + 30(0) = 160$;
+        \item Tại $B(3; 2)$: $F(3; 2) = 40(3) + 30(2) = 120 + 60 = 180$;
+        \item Tại $C(0; 5)$: $F(0; 5) = 40(0) + 30(5) = 150$.
+    \end{itemize}
+    Vậy tiền lãi lớn nhất mà xưởng có thể thu được là $180$ nghìn đồng (khi sản xuất 3 sản phẩm $A$ và 2 sản phẩm $B$). \textbf{Đáp số: 180.}
+\end{enumerate}
+
+\newpage
+\textbf{\large PHẦN IV. Tự luận}
+\begin{enumerate}[leftmargin=0.6cm, itemsep=6pt]
+    \item \textbf{Câu 1.}
+    \begin{enumerate}
+        \item Vì $0^\circ < \alpha < 90^\circ$ nên $\cos \alpha > 0$. Chia cả tử và mẫu của biểu thức $P$ cho $\cos \alpha$:
+        \[P = \dfrac{\dfrac{4\sin \alpha}{\cos \alpha} - 3}{\dfrac{2\sin \alpha}{\cos \alpha} + 1} = \dfrac{4\tan \alpha - 3}{2\tan \alpha + 1}.\]
+        Thay $\tan \alpha = 3$ vào ta được:
+        \[P = \dfrac{4(3) - 3}{2(3) + 1} = \dfrac{12 - 3}{6 + 1} = \dfrac{9}{7}.\]
+        
+        \item Chia cả tử và mẫu của biểu thức $Q$ cho $\cos^2 \alpha \ne 0$:
+        \[Q = \dfrac{2\dfrac{\sin^2 \alpha}{\cos^2 \alpha} + 3\dfrac{\sin \alpha \cos \alpha}{\cos^2 \alpha} - 1}{\dfrac{\sin^2 \alpha}{\cos^2 \alpha} + 2} = \dfrac{2\tan^2 \alpha + 3\tan \alpha - 1}{\tan^2 \alpha + 2}.\]
+        Thay $\tan \alpha = 3$ vào ta được:
+        \[Q = \dfrac{2(3^2) + 3(3) - 1}{3^2 + 2} = \dfrac{2 \cdot 9 + 9 - 1}{9 + 2} = \dfrac{26}{11}.\]
+    \end{enumerate}
+
+    \item \textbf{Câu 2.}
+    \begin{enumerate}
+        \item Để $A \subset B$, ta cần điều kiện:
+        \[\begin{cases} -1 < m - 2 \\ m + 3 \le 6 \end{cases} \iff \begin{cases} m > 1 \\ m \le 3 \end{cases} \iff 1 < m \le 3.\]
+        Vậy các giá trị của tham số $m$ cần tìm là $m \in (1; 3]$.
+        
+        \item Để $A \cap B = \emptyset$, xét hai trường hợp:
+        \begin{itemize}
+            \item Trường hợp 1: Tập $A$ nằm hoàn toàn về phía bên trái của tập $B$, tức là $m + 3 \le -1 \iff m \le -4$.
+            \item Trường hợp 2: Tập $A$ nằm hoàn toàn về phía bên phải của tập $B$, tức là $m - 2 > 6 \iff m > 8$.
+        \end{itemize}
+        Do đó $A \cap B = \emptyset \iff m \le -4$ hoặc $m > 8$.
+        Vì $m$ là số nguyên thuộc đoạn $[-8; 12]$ nên:
+        \[m \in \{-8; -7; -6; -5; -4; 9; 10; 11; 12\}.\]
+        Vậy tập hợp các số nguyên $m$ cần tìm là $S = \{-8; -7; -6; -5; -4; 9; 10; 11; 12\}$.
+    \end{enumerate}
+
+    \item \textbf{Câu 3.}
+    \begin{enumerate}
+        \item Biểu diễn hình học miền nghiệm:
+        \begin{itemize}
+            \item Vẽ đường thẳng $d_1\colon x + 2y = 6$ đi qua $(6; 0)$ và $(0; 3)$. Điểm $O(0; 0)$ thoả mãn $0 + 2(0) \le 6$, do đó miền nghiệm của $x + 2y \le 6$ chứa $O(0; 0)$.
+            \item Vẽ đường thẳng $d_2\colon 2x - y = 2$ đi qua $(1; 0)$ và $(0; -2)$. Điểm $O(0; 0)$ thoả mãn $2(0) - 0 \le 2$, do đó miền nghiệm của $2x - y \le 2$ chứa $O(0; 0)$.
+            \item Miền nghiệm thoả mãn $x \ge 0$ và $y \ge 0$ là góc phần tư thứ nhất.
+        \end{itemize}
+        Miền nghiệm của hệ là phần mặt phẳng tứ giác $OABC$ kể cả biên được tô màu như hình vẽ bên dưới:
+
+        \begin{center}
+        \begin{tikzpicture}[scale=0.85, >=Stealth]
+            \draw[line width=1.1pt, ->] (-0.8,0) -- (6.5,0) node[right, font=\small\bfseries] {$x$};
+            \draw[line width=1.1pt, ->] (0,-2.5) -- (0,4.2) node[above, font=\small\bfseries] {$y$};
+            \node[below left=2pt, font=\small\bfseries] at (0,0) {$O$};
+            
+            % Tô màu miền nghiệm tứ giác OABC
+            \fill[blue!15] (0,0) -- (1,0) -- (2,2) -- (0,3) -- cycle;
+            \draw[line width=1.3pt, blue!70!black] (0,0) -- (1,0) -- (2,2) -- (0,3) -- cycle;
+            
+            % Đường thẳng d1: x + 2y = 6
+            \draw[line width=1.1pt, ink] (-0.6,3.3) -- (6.2,-0.1);
+            \node[above right=1pt, font=\small\bfseries] at (4.5,0.8) {$d_1\colon x+2y=6$};
+            
+            % Đường thẳng d2: 2x - y = 2
+            \draw[line width=1.1pt, teal!80!black] (-0.2,-2.4) -- (2.6,3.2);
+            \node[above right=3pt, font=\small\bfseries] at (2.6,3.2) {$d_2\colon 2x-y=2$};
+            
+            \filldraw[black] (0,0) circle (2.4pt);
+            \filldraw[black] (1,0) circle (2.4pt) node[below=2pt, font=\small\bfseries] {$A(1;0)$};
+            \filldraw[black] (2,2) circle (2.4pt) node[above right=2pt, font=\small\bfseries] {$B(2;2)$};
+            \filldraw[black] (0,3) circle (2.4pt) node[left=2pt, font=\small\bfseries] {$C(0;3)$};
+            \filldraw[black] (0,-2) circle (2.0pt) node[left=2pt, font=\small\bfseries] {$-2$};
+            \filldraw[black] (6,0) circle (2.0pt) node[below=2pt, font=\small\bfseries] {$6$};
+        \end{tikzpicture}
+        \end{center}
+
+        \item Toạ độ các đỉnh của tứ giác nghiệm $OABC$:
+        \begin{itemize}
+            \item Đỉnh $O(0; 0)$.
+            \item Đỉnh $A$ là giao điểm của đường thẳng $d_2$ với trục hoành ($y = 0$): $2x - 0 = 2 \Rightarrow x = 1$. Vậy $A(1; 0)$.
+            \item Đỉnh $B$ là giao điểm của $d_1$ và $d_2$:
+            \[\begin{cases} x + 2y = 6 \\ 2x - y = 2 \end{cases} \iff \begin{cases} x = 2 \\ y = 2 \end{cases} \implies B(2; 2).\]
+            \item Đỉnh $C$ là giao điểm của đường thẳng $d_1$ với trục tung ($x = 0$): $0 + 2y = 6 \Rightarrow y = 3$. Vậy $C(0; 3)$.
+        \end{itemize}
+    \end{enumerate}
+
+    \item \textbf{Câu 4.}
+    Mô hình hoá bài toán bằng hình vẽ hình học với các góc đo thực tế:
+
+    \begin{center}
+    \begin{tikzpicture}[scale=0.85, >=Stealth]
+        % Tọa độ dựng hình chính xác: C(0,0), D(5,0)
+        % A: góc ACD = 75, góc ADC = 60 => A = (1.58, 5.91)
+        % B: góc BCD = 45, góc BDC = 30 => B = (1.83, 1.83)
+        \coordinate (C) at (0,0);
+        \coordinate (D) at (5,0);
+        \coordinate (A) at (1.58, 5.91);
+        \coordinate (B) at (1.83, 1.83);
+        
+        \draw[line width=1.4pt, ink] (C) -- (D) node[midway, below=3pt, font=\small\bfseries] {$CD = 60\text{ m}$};
+        \draw[line width=1.2pt, ink] (C) -- (A);
+        \draw[line width=1.2pt, ink] (C) -- (B);
+        \draw[line width=1.2pt, ink] (D) -- (A);
+        \draw[line width=1.2pt, ink] (D) -- (B);
+        \draw[line width=1.3pt, dashed, red!85!black] (A) -- (B) node[midway, left=3pt, font=\small\bfseries] {$AB = ?$};
+        
+        \filldraw[black] (C) circle (2.4pt) node[below left=2pt, font=\small\bfseries] {$C$};
+        \filldraw[black] (D) circle (2.4pt) node[below right=2pt, font=\small\bfseries] {$D$};
+        \filldraw[black] (A) circle (2.4pt) node[above left=2pt, font=\small\bfseries] {$A$};
+        \filldraw[black] (B) circle (2.4pt) node[right=3pt, font=\small\bfseries] {$B$};
+        
+        % Cung góc tại C
+        \draw[line width=0.8pt] (0.8,0) arc (0:45:0.8);
+        \node[font=\footnotesize\bfseries] at (22:1.15) {$45^\circ$};
+        \draw[line width=0.8pt] (45:1.4) arc (45:75:1.4);
+        \node[font=\footnotesize\bfseries] at (60:1.75) {$30^\circ$};
+        
+        % Cung góc tại D
+        \draw[line width=0.8pt] ($(D) + (-0.9,0)$) arc (180:150:0.9);
+        \node[font=\footnotesize\bfseries] at ($(D) + (165:1.25)$) {$30^\circ$};
+        \draw[line width=0.8pt] ($(D) + (150:1.5)$) arc (150:120:1.5);
+        \node[font=\footnotesize\bfseries] at ($(D) + (135:1.85)$) {$30^\circ$};
+    \end{tikzpicture}
+    \end{center}
+
+    \begin{itemize}
+        \item \textbf{Bước 1: Tính độ dài đoạn $AC$ trong tam giác $ACD$:}
+        Do tia $CB$ nằm trong góc $\widehat{ACD}$ nên:
+        \[\widehat{ACD} = \widehat{ACB} + \widehat{BCD} = 30^\circ + 45^\circ = 75^\circ.\]
+        Trong tam giác $ACD$, ta có $\widehat{ADC} = 60^\circ$. Suy ra:
+        \[\widehat{CAD} = 180^\circ - (\widehat{ACD} + \widehat{ADC}) = 180^\circ - (75^\circ + 60^\circ) = 45^\circ.\]
+        Áp dụng định lý sin trong tam giác $ACD$:
+        \[\dfrac{AC}{\sin \widehat{ADC}} = \dfrac{CD}{\sin \widehat{CAD}} \implies AC = \dfrac{CD \cdot \sin 60^\circ}{\sin 45^\circ} = \dfrac{60 \cdot \dfrac{\sqrt{3}}{2}}{\dfrac{\sqrt{2}}{2}} = 30\sqrt{6}\text{ m} \approx 73,48\text{ m}.\]
+
+        \item \textbf{Bước 2: Tính độ dài đoạn $BC$ trong tam giác $BCD$:}
+        Vì tia $DB$ nằm trong góc $\widehat{ADC}$ nên:
+        \[\widehat{BDC} = \widehat{ADC} - \widehat{ADB} = 60^\circ - 30^\circ = 30^\circ.\]
+        Trong tam giác $BCD$, ta có $\widehat{BCD} = 45^\circ$. Suy ra:
+        \[\widehat{CBD} = 180^\circ - (\widehat{BCD} + \widehat{BDC}) = 180^\circ - (45^\circ + 30^\circ) = 105^\circ.\]
+        Áp dụng định lý sin trong tam giác $BCD$:
+        \[\dfrac{BC}{\sin \widehat{BDC}} = \dfrac{CD}{\sin \widehat{CBD}} \implies BC = \dfrac{CD \cdot \sin 30^\circ}{\sin 105^\circ} = \dfrac{60 \cdot 0,5}{\sin 105^\circ} = \dfrac{30}{\sin 105^\circ}.\]
+        Sử dụng máy tính cầm tay tính giá trị lượng giác của góc bù $\sin 105^\circ = \sin 75^\circ \approx 0,9659$, ta được:
+        \[BC \approx \dfrac{30}{0,9659} \approx 31,06\text{ m}.\]
+
+        \item \textbf{Bước 3: Tính khoảng cách $AB$ trong tam giác $ABC$:}
+        Tam giác $ABC$ có $AC = 30\sqrt{6}\text{ m} \approx 73,48\text{ m}$, $BC \approx 31,06\text{ m}$ và góc xen giữa $\widehat{ACB} = 30^\circ$.
+        Áp dụng định lý côsin trong tam giác $ABC$:
+        \[AB^2 = AC^2 + BC^2 - 2 \cdot AC \cdot BC \cdot \cos \widehat{ACB}.\]
+        Thay các giá trị vào ta được:
+        \begin{align*}
+            AB^2 &\approx (73,48)^2 + (31,06)^2 - 2 \cdot 73,48 \cdot 31,06 \cdot \cos 30^\circ \\
+            &\approx 5400 + 964,72 - 2 \cdot 73,48 \cdot 31,06 \cdot 0,8660 \\
+            &\approx 6364,72 - 3953,50 = 2411,22.
+        \end{align*}
+        Suy ra:
+        \[AB = \sqrt{2411,22} \approx 49,1\text{ m}.\]
+        Vậy khoảng cách giữa hai vị trí $A$ và $B$ xấp xỉ $49,1\text{ m}$.
+    \end{itemize}
+\end{enumerate}
+
+\end{document}
