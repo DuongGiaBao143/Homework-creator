@@ -274,10 +274,10 @@ def load_matrix(root, structure):
             raise ValueError("Vị trí câu hỏi nằm ngoài phạm vi ma trận.")
         if q["section"] == "II":
             items = q.get("statements", [])
-            if q["level"] != "mixed" or len(items) != 4 or {s["id"] for s in items} != set("abcd") or any(s["level"] not in {"NB", "TH", "VD"} for s in items):
+            if q["level"] != "mixed" or len(items) != 4 or {s["id"] for s in items} != set("abcd") or any(s["level"] not in {"NB", "TH", "VD", "VDC"} for s in items):
                 raise ValueError("Ma trận đúng/sai phải có đủ a–d và mức độ từng ý.")
-        elif q["level"] not in {"NB", "TH", "VD"}:
-            raise ValueError("Mức độ trong ma trận phải là NB, TH hoặc VD.")
+        elif q["level"] not in {"NB", "TH", "VD", "VDC"}:
+            raise ValueError("Mức độ trong ma trận phải là NB, TH, VD hoặc VDC.")
     return matrix
 
 
@@ -292,25 +292,33 @@ def generate_exam_slots(matrix, rng):
 
     slots = []
 
-    # Section I: 12 multiple choice questions (balanced across allowed_topics)
+    # Section I: 12 multiple choice questions (balanced: 6 NB, 4 TH, 2 VD)
     sec1_num = 1
     num_topics = len(matrix["allowed_topics"])
     count_per_topic = 12 // num_topics
+    vd_topics = set(rng.sample(matrix["allowed_topics"], 2)) if num_topics >= 2 else set()
     for topic_key in matrix["allowed_topics"]:
-        candidates = [s for s in pool_by_topic.get(topic_key, [])
-                      if "I" in s.get("applicable_sections", []) and s.get("level") in {"NB", "TH"}]
-        shuffled = list(candidates)
-        rng.shuffle(shuffled)
-        selected_skills = [shuffled[i % len(shuffled)] for i in range(count_per_topic)]
-        for skill in selected_skills:
+        topic_levels = ["NB", "NB", "TH", "VD"] if topic_key in vd_topics else ["NB", "NB", "TH", "TH"]
+        topic_skills = pool_by_topic.get(topic_key, [])
+        for lvl in topic_levels:
+            candidates = [s for s in topic_skills
+                          if "I" in s.get("applicable_sections", []) and s.get("level") == lvl]
+            if not candidates:
+                candidates = [s for s in topic_skills if s.get("level") == lvl]
+            chosen_skill = rng.choice(candidates) if candidates else {
+                "id": f"P1_{sec1_num}",
+                "level": lvl,
+                "skill": f"Kỹ năng {topic_key} {lvl}",
+                "search_query": topic_key
+            }
             slots.append({
                 "section": "I",
                 "number": sec1_num,
                 "topic": topic_key,
-                "level": skill["level"],
-                "skill_id": skill["id"],
-                "skill": skill["skill"],
-                "search_query": skill.get("search_query", skill["skill"])
+                "level": chosen_skill["level"],
+                "skill_id": chosen_skill["id"],
+                "skill": chosen_skill["skill"],
+                "search_query": chosen_skill.get("search_query", chosen_skill["skill"])
             })
             sec1_num += 1
 
@@ -343,9 +351,9 @@ def generate_exam_slots(matrix, rng):
             "search_query": chosen_skill.get("search_query", chosen_skill["skill"]),
             "statements": [
                 {"id": "a", "level": "NB"},
-                {"id": "b", "level": "NB"},
+                {"id": "b", "level": "TH"},
                 {"id": "c", "level": "TH"},
-                {"id": "d", "level": "TH"}
+                {"id": "d", "level": "VD"}
             ]
         })
 
@@ -359,7 +367,7 @@ def generate_exam_slots(matrix, rng):
             double_topic = rng.choice(matrix["allowed_topics"])
             other_topics = [t for t in matrix["allowed_topics"] if t != double_topic]
             topic_assignment = [double_topic, double_topic, other_topics[0], other_topics[1]]
-        levels = ["TH", "TH", "VD", "VD"]
+        levels = ["TH", "VD", "VD", "VDC"]
         rng.shuffle(levels)
         pairs = list(zip(topic_assignment, levels))
         rng.shuffle(pairs)

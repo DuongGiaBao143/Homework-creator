@@ -118,19 +118,20 @@ Nguồn cấu trúc là `config/exam_structure.json`; trường `matrix` chọn 
 
 SGK tập 1, bài 1–6: trang in 5–45, tương ứng trang PDF 6–46 trong bản scan hiện có. NB = Biết, TH = Hiểu, VD = Vận dụng.
 
-### 1. Khung phân bổ ma trận (Blueprint Quota)
+### 1. Khung phân bổ ma trận (Blueprint Quota) — Chuẩn phân hóa 30% NB - 30% TH - 30% VD - 10% VDC
 
 | Mạch kiến thức | Mã trong hồ sơ | Phần I (TN) | Phần II (Đ/S) | Phần III (TLN) | Phần IV (TL) |
 |---|---|---:|---:|---:|---:|
-| Mệnh đề – tập hợp | `menh_de_tap_hop` | 4 câu (NB/TH) | 0–1 câu (4 ý) | 1–2 câu (TH/VD) | 1–2 câu (TH/VD) |
-| BPT/hệ BPT bậc nhất hai ẩn | `bpt_hai_an` | 4 câu (NB/TH) | 0–1 câu (4 ý) | 1–2 câu (TH/VD) | 1–2 câu (TH/VD) |
-| Hệ thức lượng trong tam giác | `he_thuc_luong` | 4 câu (NB/TH) | 0–1 câu (4 ý) | 1–2 câu (TH/VD) | 1–2 câu (TH/VD) |
+| Mệnh đề – tập hợp | `menh_de_tap_hop` | 4 câu (NB/TH/VD) | 0–1 câu (4 ý) | 1–2 câu (TH/VD/VDC) | 1–2 câu (TH/VD/VDC) |
+| BPT/hệ BPT bậc nhất hai ẩn | `bpt_hai_an` | 4 câu (NB/TH/VD) | 0–1 câu (4 ý) | 1–2 câu (TH/VD/VDC) | 1–2 câu (TH/VD/VDC) |
+| Hệ thức lượng trong tam giác | `he_thuc_luong` | 4 câu (NB/TH/VD) | 0–1 câu (4 ý) | 1–2 câu (TH/VD/VDC) | 1–2 câu (TH/VD/VDC) |
 | **Tổng số câu** | | **12 câu** | **2 câu (8 ý)** | **4 câu** | **4 câu** |
 
-- **Phần I (12 câu trắc nghiệm nhiều lựa chọn):** Phân bổ đều mỗi mạch kiến thức 4 câu; mức độ Nhận biết (NB) hoặc Thông hiểu (TH). Cân bằng đáp án 3A–3B–3C–3D.
-- **Phần II (2 câu trắc nghiệm Đúng/Sai, mỗi câu 4 ý a–d):** Chọn linh hoạt 2 trong 3 mạch kiến thức (cho phép cả Hệ thức lượng trong tam giác). Hai câu chọn 2 mạch khác nhau để đảm bảo độ bao quát. Mức độ từng ý: a, b là NB; c, d là TH.
-- **Phần III (4 câu trả lời ngắn):** Phân bổ 2 câu Thông hiểu (TH) và 2 câu Vận dụng (VD) trên 3 mạch kiến thức.
-- **Phần IV (4 câu tự luận):** Phân bổ 2 câu Thông hiểu (TH) và 2 câu Vận dụng (VD) trên 3 mạch kiến thức (ưu tiên bài toán hình học tam giác thực tế và tối ưu hóa tuyến tính thực tế).
+- **Phần I (12 câu trắc nghiệm nhiều lựa chọn):** Phân bổ đều mỗi mạch kiến thức 4 câu; mức độ phân hóa gồm **6 Nhận biết (NB), 4 Thông hiểu (TH) và 2 Vận dụng (VD)** (mỗi mạch có câu VD ngẫu nhiên). Cân bằng đáp án 3A–3B–3C–3D.
+- **Phần II (2 câu trắc nghiệm Đúng/Sai, mỗi câu 4 ý a–d):** Chọn linh hoạt 2 trong 3 mạch kiến thức. Hai câu chọn 2 mạch khác nhau để đảm bảo độ bao quát. Mức độ từng ý phân hóa chuẩn: **ý a là NB; ý b, c là TH; ý d là VD**.
+- **Phần III (4 câu trả lời ngắn):** Phân bổ trên 3 mạch kiến thức, gồm **1 câu Thông hiểu (TH), 2 câu Vận dụng (VD) và 1 câu Vận dụng cao (VDC)**.
+- **Phần IV (4 câu tự luận):** Phân bổ trên 3 mạch kiến thức, gồm **1 câu Thông hiểu (TH), 2 câu Vận dụng (VD) và 1 câu Vận dụng cao (VDC)** (tối ưu hóa quy hoạch tuyến tính nâng cao, bài toán cực trị tam giác thực tế, bài toán tập hợp có tham số nâng cao).
+- **Tỷ trọng điểm theo mức độ:** NB (2,0đ) + TH (3,25đ) + VD (3,5đ) + VDC (1,25đ) = 10,0 điểm. Tổng câu hỏi mức độ khó **VD + VDC chiếm 4,75 điểm (~47,5%)**, tạo độ phân hóa mạnh mẽ cho học sinh khá, giỏi.
 
 ### 2. Ngân hàng Dạng bài (Skill Pool) & Yêu cầu cần đạt GDPT 2018
 
@@ -139,26 +140,29 @@ SGK tập 1, bài 1–6: trang in 5–45, tương ứng trang PDF 6–46 trong b
 - **Mạch Mệnh đề – Tập hợp (`menh_de_tap_hop`):**
   - *NB:* Nhận biết mệnh đề toán học (`MD_NB_01`); xét tính đúng sai đơn giản (`MD_NB_02`); mệnh đề chứa biến (`MD_NB_03`); mệnh đề phủ định kể cả mọi, tồn tại (`MD_NB_04`); mệnh đề kéo theo/đảo/tương đương, điều kiện cần/đủ (`MD_NB_05`); ký hiệu thuộc, con, tập rỗng (`TH_NB_01`); liệt kê phần tử, tính chất đặc trưng (`TH_NB_02`); số phần tử, số tập con (`TH_NB_03`); các tập số N, Z, Q, R và khoảng, đoạn (`TH_NB_04`).
   - *TH:* Giao, hợp, hiệu, phần bù tập hữu hạn (`TH_TH_01`); giao, hợp, hiệu khoảng, đoạn, nửa khoảng (`TH_TH_02`); biểu diễn trục số (`TH_TH_03`); đếm số phần tử, số nguyên thỏa mãn điều kiện (`TH_TH_04`); bài toán thực tế sơ đồ Venn / công thức cộng phần tử (`TH_TH_05`).
-  - *VD:* Tìm tham số m để tập hợp rỗng, khác rỗng, là tập con (`TH_VD_01`); bài toán logic thực tế nhiều tập hợp (`TH_VD_02`).
+  - *VD:* Tìm tham số m để tập hợp rỗng, khác rỗng, là tập con (`TH_VD_01`); bài toán logic thực tế nhiều tập hợp (`TH_VD_02`); bài toán tìm m để giao/hợp hai tập hợp là khoảng/đoạn có độ dài cho trước (`TH_VD_03`).
+  - *VDC:* Bài toán tham số nâng cao kết hợp nhiều tập hợp số, điều kiện nghiệm nguyên hoặc tập con lồng nhau (`TH_VDC_01`); bài toán logic tổ hợp tập hợp thực tế phức tạp (`TH_VDC_02`).
 
 - **Mạch Bất phương trình & Hệ BPT bậc nhất hai ẩn (`bpt_hai_an`):**
   - *NB:* Nhận dạng BPT bậc nhất hai ẩn (`BPT_NB_01`); nhận dạng hệ BPT hai ẩn (`BPT_NB_02`); kiểm tra nghiệm của BPT (`BPT_NB_03`); kiểm tra nghiệm của hệ BPT (`BPT_NB_04`); xác định đường thẳng bờ miền nghiệm (`BPT_NB_05`).
   - *TH:* Xác định miền nghiệm từ hình vẽ đồ thị cho trước (`BPT_TH_01`); biểu diễn hình học miền nghiệm BPT trên Oxy (`BPT_TH_02`); biểu diễn miền nghiệm hệ BPT và tìm tọa độ đỉnh miền đa giác (`BPT_TH_03`); mô hình hóa thiết lập BPT/hệ BPT thực tế đơn giản (`BPT_TH_04`).
-  - *VD:* Tối ưu tuyến tính thực tế (Quy hoạch tuyến tính): lập hệ ràng buộc, vẽ đa giác nghiệm, tìm GTLN/GTNN của F(x,y), kết luận thực tế (`BPT_VD_01`); tìm tham số m để BPT đúng trên miền đa giác (`BPT_VD_02`); tìm GTLN/GTNN thực tế dạng câu ngắn (`BPT_VD_03`).
+  - *VD:* Tối ưu tuyến tính thực tế (Quy hoạch tuyến tính): lập hệ ràng buộc, vẽ đa giác nghiệm, tìm GTLN/GTNN của F(x,y), kết luận thực tế (`BPT_VD_01`); tìm tham số m để BPT đúng trên miền đa giác (`BPT_VD_02`); tìm GTLN/GTNN thực tế dạng câu ngắn (`BPT_VD_03`); xác định miền nghiệm đa giác và đếm số điểm nguyên thuộc miền nghiệm (`BPT_VD_04`).
+  - *VDC:* Bài toán quy hoạch tuyến tính thực tế nâng cao nhiều ràng buộc hoặc mục tiêu phi tuyến đơn giản (`BPT_VDC_01`); tìm tham số m để hệ BPT bậc nhất hai ẩn có nghiệm/vô nghiệm trên miền xác định (`BPT_VDC_02`).
 
 - **Mạch Hệ thức lượng trong tam giác & Giá trị lượng giác (`he_thuc_luong`):**
   - *NB:* Giá trị lượng giác góc 0–180 độ, góc đặc biệt (`LG_NB_01`); dấu giá trị lượng giác theo góc nhọn/tù (`LG_NB_02`); hai góc bù nhau, phụ nhau (`LG_NB_03`); công thức định lý côsin (`HTL_NB_01`); công thức định lý sin (`HTL_NB_02`); công thức diện tích tam giác Heron, abc/4R, pr (`HTL_NB_03`); công thức độ dài đường trung tuyến (`HTL_NB_04`).
   - *TH:* Tính giá trị lượng giác còn lại khi biết 1 giá trị và khoảng góc (`LG_TH_01`); rút gọn, tính giá trị biểu thức lượng giác có điều kiện (`LG_TH_02`); giải tam giác cơ bản (`HTL_TH_01`); tính bán kính ngoại tiếp R, nội tiếp r, chiều cao, diện tích tam giác (`HTL_TH_02`); bài toán đo đạc thực tế đơn giản 1 tam giác (`HTL_TH_03`).
-  - *VD:* Mô hình hóa đo đạc gián tiếp phối hợp nhiều tam giác (`HTL_VD_01`); chứng minh hệ thức lượng giác, nhận dạng tam giác vuông/cân/đều (`HTL_VD_02`); bài toán cực trị hình học, góc nhìn lớn nhất, khoảng cách ngắn nhất (`HTL_VD_03`).
+  - *VD:* Mô hình hóa đo đạc gián tiếp phối hợp nhiều tam giác (`HTL_VD_01`); chứng minh hệ thức lượng giác, nhận dạng tam giác vuông/cân/đều (`HTL_VD_02`); bài toán cực trị hình học, góc nhìn lớn nhất, khoảng cách ngắn nhất (`HTL_VD_03`); tính các yếu tố tam giác kết hợp tính chất phân giác, trung tuyến, đường cao nâng cao (`HTL_VD_04`).
+  - *VDC:* Bài toán cực trị hình học tam giác nâng cao: góc nhìn lớn nhất, khoảng cách nhỏ nhất, tối ưu vị trí (`HTL_VDC_01`); mô hình hóa đo đạc không gian phẳng thực tế nhiều bước suy luận và xử lý sai số (`HTL_VDC_02`).
 
 ### 3. Quy tắc ghi nhận hồ sơ và kiểm tra ma trận
 
 - Trong hồ sơ nguồn `nguon_de<N>.json`:
-  - Đề mới ghi mã dạng bài bằng trường `skill_id` (ví dụ `"MD_NB_04"`, `"BPT_TH_01"`, `"HTL_VD_01"`).
+  - Đề mới ghi mã dạng bài bằng trường `skill_id` (ví dụ `"MD_NB_04"`, `"BPT_TH_01"`, `"HTL_VD_01"`, `"HTL_VDC_01"`).
   - Để tương thích ngược, các đề cũ dùng `matrix_slot` (như `"I.1"`..`"IV.4"`) vẫn được bộ kiểm `check_exam.py` hỗ trợ đầy đủ.
 - Bộ kiểm tra `python scripts/check_exam.py --exam N` sẽ xác thực:
   - Đủ 22 câu theo đúng cấu trúc: I=12, II=2 (8 ý a–d), III=4, IV=4.
-  - Mức độ nhận thức phù hợp (Phần I: NB/TH; Phần II: mixed 2 NB + 2 TH; Phần III & IV: TH/VD).
+  - Mức độ nhận thức phù hợp (Phần I: 6 NB + 4 TH + 2 VD; Phần II: mixed ý a-NB, b-TH, c-TH, d-VD; Phần III & IV: 1 TH + 2 VD + 1 VDC).
   - Đủ cả 3 mạch kiến thức; Phần II chọn 2 mạch khác nhau.
   - Dạng bài thuộc `skill_pool` hợp lệ, có nguồn bài tập dataset và căn cứ bài học SGK chuẩn xác.
 

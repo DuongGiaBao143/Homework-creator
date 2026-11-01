@@ -53,7 +53,7 @@ def validate_exam(root, exam):
                 items = question.get("statements", [])
                 if len(items) != 4 or {s.get("id") for s in items} != set("abcd"):
                     raise ValueError(f"{label}: a–d hoặc mức độ từng ý không khớp ma trận.")
-                if any(s.get("level") not in {"NB", "TH", "VD"} for s in items):
+                if any(s.get("level") not in {"NB", "TH", "VD", "VDC"} for s in items):
                     raise ValueError(f"{label}: mức độ từng ý đúng/sai không khớp ma trận.")
             elif level != skill_def["level"]:
                 raise ValueError(f"{label}: mức độ không khớp dạng bài trong ma trận ({skill_def['level']}).")
