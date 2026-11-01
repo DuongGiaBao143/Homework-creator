@@ -61,11 +61,16 @@ Chỉ áp dụng trong `Lớp 10/`. Đây là bộ riêng; không dùng chương
    \renewcommand{\arraystretch}{1.0}
    \newcommand{\parttitle}[1]{\par\vspace{1.5pt}\needspace{2\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
    \newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
-   \newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[1pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+   \newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[4.5pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+   \newcommand{\one}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{}}\textbf{A.} #1\\[4pt]\textbf{B.} #2\\[4pt]\textbf{C.} #3\\[4pt]\textbf{D.} #4\end{tabularx}}
    \newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{9pt}\hspace{2.2cm}}}
    \setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.1cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
-   \setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
+   \setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=1.5pt,topsep=0.2pt,parsep=0pt}
    ```
+   > [!TIP]
+   > **Quy chuẩn giãn cách phương án trắc nghiệm:**
+   > - Khi các phương án xếp trên 2 dòng (`\two`) hoặc 4 dòng (`\one`), luôn dùng `\\[4.5pt]` (hoặc `\\[4pt]`) giữa các dòng để tạo khoảng cách rõ ràng, dễ nhìn, chống dính chữ/chồng công thức toán học (đặc biệt là phân thức và hệ phương trình `\begin{cases}`).
+   > - Trong Phần II (Đúng/Sai), đặt `itemsep=1.5pt` cho `enumerate,2` để 4 ý a), b), c), d) thoáng đãng, dễ đọc.
    Khối tiêu đề đầu trang:
    ```latex
    \noindent

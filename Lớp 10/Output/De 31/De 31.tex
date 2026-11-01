@@ -36,10 +36,11 @@
 \renewcommand{\arraystretch}{1.0}
 \newcommand{\parttitle}[1]{\par\vspace{1.5pt}\needspace{2\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
 \newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
-\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[1pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[4.5pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\one}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{}}\textbf{A.} #1\\[4pt]\textbf{B.} #2\\[4pt]\textbf{C.} #3\\[4pt]\textbf{D.} #4\end{tabularx}}
 \newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{9pt}\hspace{2.2cm}}}
 \setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.1cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
-\setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=1.5pt,topsep=0.2pt,parsep=0pt}
 
 \begin{document}
 \noindent
@@ -78,10 +79,10 @@
 \textit{Thí sinh trả lời từ câu 1 đến câu 12. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}
 \begin{enumerate}
 \item Trong các câu sau, câu nào là một mệnh đề toán học?
-\four{Tổng ba góc trong một tam giác bằng $180^\circ$.}{Hôm nay trời đẹp quá!}{Bạn có thích học môn Toán không?}{Hãy làm bài tập về nhà!}
+\two{Tổng ba góc trong một tam giác bằng $180^\circ$.}{Hôm nay trời đẹp quá!}{Bạn có thích học môn Toán không?}{Hãy làm bài tập về nhà!}
 
 \item Cho hai mệnh đề $P$ và $Q$. Phát biểu nào sau đây là đúng về mệnh đề kéo theo $P \Rightarrow Q$?
-\four{Mệnh đề $P \Rightarrow Q$ sai khi $P$ sai và $Q$ đúng.}{$P$ là điều kiện đủ để có $Q$.}{$P$ là điều kiện cần để có $Q$.}{Mệnh đề $P \Rightarrow Q$ sai khi cả $P$ và $Q$ cùng sai.}
+\two{Mệnh đề $P \Rightarrow Q$ sai khi $P$ sai và $Q$ đúng.}{$P$ là điều kiện đủ để có $Q$.}{$P$ là điều kiện cần để có $Q$.}{Mệnh đề $P \Rightarrow Q$ sai khi cả $P$ và $Q$ cùng sai.}
 
 \item Cho hai tập hợp $A = \{1; 2; 3; 4; 5\}$ và $B = \{3; 4; 5; 6; 7\}$. Khẳng định nào sau đây đúng?
 \four{$A \cap B = \{1; 2\}$.}{$A \cup B = \{3; 4; 5\}$.}{$A \setminus B = \{1; 2\}$.}{$B \setminus A = \{1; 2\}$.}
@@ -102,7 +103,7 @@
 \four{$12$.}{$8$.}{$7$.}{$6$.}
 
 \item Cho tam giác $ABC$ có các cạnh $BC = a, CA = b, AB = c$. Khẳng định nào sau đây đúng?
-\four{$a^2 = b^2 + c^2 - 2bc \cos A$.}{$a^2 = b^2 + c^2 + 2bc \cos A$.}{$a^2 = b^2 + c^2 - 2bc \sin A$.}{$a^2 = b^2 + c^2 + 2bc \sin A$.}
+\two{$a^2 = b^2 + c^2 - 2bc \cos A$.}{$a^2 = b^2 + c^2 + 2bc \cos A$.}{$a^2 = b^2 + c^2 - 2bc \sin A$.}{$a^2 = b^2 + c^2 + 2bc \sin A$.}
 
 \item Cho tam giác $ABC$ có các cạnh $a, b, c$ và bán kính đường tròn ngoại tiếp $R$. Công thức nào sau đây dùng để tính diện tích $S$ của tam giác $ABC$?
 \four{$S = \dfrac{abc}{2R}$.}{$S = \dfrac{abc}{4R}$.}{$S = \dfrac{abc}{R}$.}{$S = 4R \cdot abc$.}
