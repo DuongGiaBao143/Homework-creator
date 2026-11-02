@@ -1,0 +1,50 @@
+{
+  "I": [
+    "A",
+    "C",
+    "B",
+    "D",
+    "C",
+    "A",
+    "B",
+    "D",
+    "A",
+    "C",
+    "B",
+    "D"
+  ],
+  "II": [
+    [
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false
+    ],
+    [
+      true,
+      true,
+      true,
+      false
+    ],
+    [
+      true,
+      true,
+      true,
+      false
+    ]
+  ],
+  "III": [
+    "6",
+    "11",
+    "9",
+    "6",
+    "48",
+    "460"
+  ]
+}
