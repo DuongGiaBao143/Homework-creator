@@ -8,9 +8,12 @@ Chỉ áp dụng trong `Lớp 10/`. Đây là bộ riêng; không dùng chương
    - Cột phải: `ĐỀ ÔN THI GIỮA KÌ I -- NĂM HỌC 2026 -- 2027` / `ĐỀ SỐ <số_đề>` / `Môn: TOÁN -- Khối lớp 10` / `Thời gian làm bài: 90 phút, không kể thời gian phát đề`.
    - Dòng dưới: `Họ và tên:... SBD:...` kèm khung `Mã đề thi 00<số_đề>`.
 2. **Headnote / Thông tin tác giả:** `Người biên soạn: Dương Gia Bảo` (`\rhead`).
-3. **Header trang (`fancyhdr`):**
+3. **Header trang (`fancyhdr`) & Quy chuẩn đánh số trang / Footer:**
    - `\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}`
-   - `\rfoot{\small Trang \thepage}`
+   - `\rfoot{\small Trang \thepage/3}`: Phần đề thi (Trang 1-3) BẮT BUỘC ghi rõ tổng số trang theo dạng `Trang \thepage/3` (Trang 1/3, Trang 2/3, Trang 3/3).
+   - Phần Đáp án (Trang 4 trở đi): Sử dụng style `\fancypagestyle{dapan}` để reset hiển thị số trang về dạng `Trang 1/3`, `Trang 2/3`, `Trang 3/3` bằng lệnh:
+     `\rfoot{\small Trang \the\numexpr\value{page}-3\relax/3}`
+     (Tuyệt đối không để bản đáp án bị đánh số tiếp nối thành Trang 4, 5, 6).
    - `\renewcommand{\headrulewidth}{0.4pt}`
    - `\lhead`: Hiển thị slogan truyền cảm hứng toán học tương ứng từng trang theo đúng thứ tự quy định:
      1. Trang 1: `Math gives us hope that every problem has a solution`
@@ -28,8 +31,9 @@ Chỉ áp dụng trong `Lớp 10/`. Đây là bộ riêng; không dùng chương
      *(Nếu vượt quá 12 trang thì tự động lặp lại vòng tuần hoàn)*
 4. **Cấu hình chuẩn LaTeX (`geometry`, `fancyhdr` & Tiêu đề):**
    ```latex
-   \usepackage[margin=1.3cm,top=1.0cm,bottom=1.05cm,includehead,headheight=18pt,headsep=8pt]{geometry}
-   % BẮT BUỘC có includehead để header không bị đẩy sát mép giấy gây cắt chữ khi in hoặc xem PDF.
+   \usepackage[margin=1.3cm,top=0.8cm,bottom=1.0cm,includehead,includefoot,headheight=18pt,headsep=6pt,footskip=16pt]{geometry}
+   % BẮT BUỘC có includehead và includefoot với footskip=16pt, bottom=1.0cm để nâng footer cách mép dưới giấy ~9-10mm,
+   % chống hiện tượng số trang bị tụt ra ngoài mép giấy hoặc bị cắt chữ khi in/xem PDF.
 
    \newcommand{\headerQuote}{%
      \ifcase\value{page}\relax
@@ -52,8 +56,15 @@ Chỉ áp dụng trong `Lớp 10/`. Đây là bộ riêng; không dùng chương
    \fancyhf{}
    \lhead{\small\textit{\headerQuote}}
    \rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
-   \rfoot{\small Trang \thepage}
+   \rfoot{\small Trang \thepage/3}
    \renewcommand{\headrulewidth}{0.4pt}
+   \fancypagestyle{dapan}{%
+     \fancyhf{}%
+     \lhead{\small\textit{\headerQuote}}%
+     \rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}%
+     \rfoot{\small Trang \the\numexpr\value{page}-3\relax/3}%
+     \renewcommand{\headrulewidth}{0.4pt}%
+   }
    \setlength{\headheight}{18pt}
    \setlength{\parindent}{0pt}
    \setlength{\parskip}{0pt}

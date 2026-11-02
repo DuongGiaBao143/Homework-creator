@@ -2,7 +2,7 @@
 \usepackage[utf8]{inputenc}
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
-\usepackage[margin=1.3cm,top=1.0cm,bottom=1.05cm,includehead,headheight=18pt,headsep=8pt]{geometry}
+\usepackage[margin=1.3cm,top=0.8cm,bottom=1.0cm,includehead,includefoot,headheight=18pt,headsep=6pt,footskip=16pt]{geometry}
 \usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace}
 \usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
 \definecolor{ink}{RGB}{30,55,70}
@@ -27,8 +27,15 @@
 \pagestyle{fancy}\fancyhf{}
 \lhead{\small\textit{\headerQuote}}
 \rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
-\rfoot{\small Trang \thepage}
+\rfoot{\small Trang \thepage/3}
 \renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{dapan}{%
+  \fancyhf{}%
+  \lhead{\small\textit{\headerQuote}}%
+  \rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}%
+  \rfoot{\small Trang \the\numexpr\value{page}-3\relax/3}%
+  \renewcommand{\headrulewidth}{0.4pt}%
+}
 \setlength{\headheight}{18pt}
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
@@ -36,10 +43,10 @@
 \renewcommand{\arraystretch}{1.0}
 \newcommand{\parttitle}[1]{\par\vspace{1.5pt}\needspace{2\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
 \newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
-\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[4.5pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[3.8pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
 \newcommand{\one}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{}}\textbf{A.} #1\\[4pt]\textbf{B.} #2\\[4pt]\textbf{C.} #3\\[4pt]\textbf{D.} #4\end{tabularx}}
 \newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{9pt}\hspace{2.2cm}}}
-\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.1cm,itemsep=0.2pt,topsep=0.2pt,parsep=0pt}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.1cm,itemsep=0pt,topsep=0pt,parsep=0pt}
 \setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=1.5pt,topsep=0.2pt,parsep=0pt}
 
 \begin{document}
@@ -200,6 +207,7 @@ Tổng diện tích chuồng trại có thể sử dụng tối đa là $48\text
 \newpage
 
 % ==================== ĐÁP ÁN VÀ LỜI GIẢI CHI TIẾT ====================
+\pagestyle{dapan}
 \parttitle{BẢNG ĐÁP ÁN TỔNG HỢP}
 
 \vspace{0.2cm}
