@@ -1,0 +1,58 @@
+{
+  "status": "passed",
+  "multiple_choice": [
+    "B",
+    "D",
+    "A",
+    "C",
+    "A",
+    "C",
+    "D",
+    "B",
+    "D",
+    "A",
+    "B",
+    "C"
+  ],
+  "multiple_choice_distribution": {
+    "B": 3,
+    "D": 3,
+    "A": 3,
+    "C": 3
+  },
+  "true_false": [
+    [
+      true,
+      true,
+      false,
+      true
+    ],
+    [
+      true,
+      true,
+      true,
+      false
+    ],
+    [
+      true,
+      true,
+      true,
+      false
+    ],
+    [
+      true,
+      true,
+      false,
+      true
+    ]
+  ],
+  "short_answer": [
+    "5",
+    "11",
+    "8",
+    "9",
+    "10",
+    "70"
+  ],
+  "all_questions_verified": true
+}
