@@ -1,0 +1,396 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.3cm,top=0.8cm,bottom=1.0cm,includehead,includefoot,headheight=18pt,headsep=6pt,footskip=16pt]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+\definecolor{ink}{RGB}{30,55,70}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution% Trang 1
+    \or Math + You = Champion% Trang 2
+    \or Where Frustration Becomes Inspiration% Trang 3
+    \or Turning Confusion into Clarity% Trang 4
+    \or Don't be an X, be a Y of mathematics% Trang 5
+    \or Don't get mad. Learn to add% Trang 6
+    \or The only way to learn mathematics is to do mathematics% Trang 7
+    \or Small steps every day lead to big results% Trang 8
+    \or Every expert was once a beginner% Trang 9
+    \or Success is the sum of small efforts repeated daily% Trang 10
+    \or Mathematics is the music of reason% Trang 11
+    \or Believe you can and you're halfway there% Trang 12
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+\pagestyle{fancy}\fancyhf{}
+\lhead{\small\textit{\headerQuote}}
+\rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage/5}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{dapan}{%
+  \fancyhf{}%
+  \lhead{\small\textit{\headerQuote}}%
+  \rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}%
+  \rfoot{\small Trang \the\numexpr\value{page}-5\relax/2}%
+  \renewcommand{\headrulewidth}{0.4pt}%
+}
+\setlength{\headheight}{18pt}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{2pt}
+\renewcommand{\arraystretch}{1.05}
+\newcommand{\parttitle}[1]{\par\vspace{2.5pt}\needspace{2\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1.5pt}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{9pt}\hspace{2.2cm}}}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.15cm,itemsep=2.5pt,topsep=1pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=1.5pt,topsep=0.2pt,parsep=0pt}
+
+\begin{document}
+% ==========================================
+% TRANG 1: TIÊU ĐỀ + CHỦ ĐỀ 1 (CÂU 1 - 8)
+% ==========================================
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[2pt]
+    \textbf{ĐỀ CƯƠNG ÔN TẬP}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{ĐỀ CƯƠNG ÔN TẬP GIỮA KÌ I}\\
+    \textbf{NĂM HỌC 2026 -- 2027}\\[1pt]
+    \textbf{CHUYÊN ĐỀ: 40 CÂU TRẢ LỜI NGẮN}\\
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small (Mức độ: Vận dụng -- Vận dụng cao)}
+\end{minipage}
+
+\vspace{0.1cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Tài liệu}\\
+        \textbf{LƯU HÀNH}
+    \end{minipage}}
+\end{minipage}
+
+\vspace{0.12cm}
+\textit{\textbf{Lưu ý:} Học sinh trả lời từ Câu 1 đến Câu 40. Điền kết quả (dưới dạng số nguyên, phân số tối giản hoặc số thập phân theo yêu cầu) vào ô đáp số tương ứng.}
+
+\parttitle{CHỦ ĐỀ 1. MỆNH ĐỀ VÀ TẬP HỢP (CÂU 1 -- 13)}
+
+\begin{enumerate}
+\item Cho hai tập hợp $A = (-2; 5)$ và $B = (m - 1; m + 3]$ (với $m$ là tham số thực). Có bao nhiêu giá trị nguyên của $m$ để tập hợp giao $A \cap B$ là một khoảng (hoặc nửa khoảng) có độ dài bằng $3$?
+\answerbox
+
+\item Cho hai tập hợp $A = [m - 1; m + 4]$ và $B = (-3; 6)$ (với $m$ là tham số thực). Có bao nhiêu giá trị nguyên của tham số $m$ để $A \subset B$?
+\answerbox
+
+\item Cho hai tập hợp $A = (-\infty; m + 2]$ và $B = [2m - 1; +\infty)$ (với $m$ là tham số thực). Tìm giá trị nguyên nhỏ nhất của tham số $m$ để $A \cap B = \varnothing$.
+\answerbox
+
+\item Cho tập hợp $A = \{x \in \mathbb{R} \mid x^2 - (2m + 1)x + m^2 + m = 0\}$ và tập hợp $B = (1; 5)$ (với $m$ là tham số thực). Có bao nhiêu giá trị nguyên của $m$ để $A \subset B$?
+\answerbox
+
+\item Trong đợt khảo sát $100$ học sinh khối 10 tham gia ba câu lạc bộ Toán học, Tin học và Tiếng Anh, kết quả thu được: có $45$ học sinh tham gia câu lạc bộ Toán học, $40$ học sinh tham gia Tin học, $50$ học sinh tham gia Tiếng Anh; có $20$ học sinh tham gia cả Toán và Tin, $18$ học sinh tham gia cả Tin và Tiếng Anh, $22$ học sinh tham gia cả Toán và Tiếng Anh; có đúng $10$ học sinh tham gia cả ba câu lạc bộ. Hỏi có bao nhiêu học sinh không tham gia bất kỳ câu lạc bộ nào trong ba câu lạc bộ trên?
+\answerbox
+
+\item Một trường THPT tổ chức khảo sát năng khiếu thể thao của $120$ học sinh. Kết quả cho thấy: có $70$ học sinh giỏi môn Bóng đá, $65$ học sinh giỏi Bóng chuyền và $60$ học sinh giỏi Cầu lông. Biết rằng mỗi học sinh đều giỏi ít nhất một môn thể thao và có đúng $15$ học sinh giỏi cả ba môn. Hỏi có tất cả bao nhiêu học sinh chỉ giỏi đúng hai môn thể thao?
+\answerbox
+
+\item Cho hai tập hợp $A = [m; m + 2]$ và $B = [1; 3] \cup [5; 8]$ (với $m$ là tham số thực). Tính tổng tất cả các giá trị nguyên của tham số $m$ để $A \subset B$.
+\answerbox
+
+\item Cho mệnh đề chứa biến $P(m)$: ``$\forall x \in \mathbb{R},\ x^2 - 2(m - 1)x + 2m + 1 > 0$''. Có bao nhiêu giá trị nguyên của tham số $m$ thuộc đoạn $[-10; 10]$ để mệnh đề $P(m)$ là một mệnh đề đúng?
+\answerbox
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TRANG 2: CÂU 9 - 13 + CHỦ ĐỀ 2 (CÂU 14 - 16)
+% ==========================================
+\begin{enumerate}[resume]
+\item Cho hai tập hợp $A = (-4; 1]$ và $B = (m - 2; m + 5)$ (với $m$ là tham số thực). Có bao nhiêu giá trị nguyên của tham số $m$ để $A \cap B \ne \varnothing$?
+\answerbox
+
+\item Cho hai tập hợp $A = (-3; 4]$ và $B = (-\infty; m) \cup (m + 3; +\infty)$ (với $m$ là tham số thực). Có bao nhiêu giá trị nguyên của tham số $m$ thuộc đoạn $[-10; 10]$ để $A \subset B$?
+\answerbox
+
+\item Trong một lớp học có $40$ học sinh, có $30$ học sinh thích môn Toán và $25$ học sinh thích môn Ngữ văn. Gọi $x$ là số học sinh thích cả hai môn Toán và Ngữ văn. Giá trị nhỏ nhất của $x$ bằng bao nhiêu?
+\answerbox
+
+\item Cho tập hợp $X = \{1; 2; 3; 4; 5; 6; 7\}$. Có tất cả bao nhiêu tập hợp con $A$ của tập hợp $X$ thoả mãn điều kiện $A$ chứa cả hai phần tử $1, 2$ và không chứa phần tử $7$?
+\answerbox
+
+\item Cho hai tập hợp $A = (-\infty; 2m - 3)$ và $B = [m + 1; +\infty)$ (với $m$ là tham số thực). Có bao nhiêu giá trị nguyên của tham số $m$ thuộc đoạn $[-5; 10]$ để $A \cup B = \mathbb{R}$?
+\answerbox
+\end{enumerate}
+
+\parttitle{CHỦ ĐỀ 2. BẤT PHƯƠNG TRÌNH VÀ HỆ BPT BẬC NHẤT HAI ẨN (CÂU 14 -- 26)}
+
+\begin{enumerate}[resume]
+\item Cho miền tứ giác $OABC$ (kể cả biên) có toạ độ các đỉnh là gốc toạ độ $O(0; 0)$, $A(4; 0)$, $B(3; 3)$ và $C(0; 4)$. Tìm giá trị lớn nhất của biểu thức $F(x, y) = 4x + 3y$ với cặp số $(x; y)$ thuộc miền tứ giác $OABC$.
+\answerbox
+
+\item Cho cặp số $(x; y)$ thoả mãn hệ bất phương trình:
+\[
+\begin{cases}
+x + 2y \ge 6 \\
+2x + y \ge 6 \\
+x \ge 0,\ y \ge 0
+\end{cases}
+\]
+Tìm giá trị nhỏ nhất của biểu thức $F(x, y) = 3x + 4y$.
+\answerbox
+
+\item Tính diện tích của miền nghiệm xác định bởi hệ bất phương trình bậc nhất hai ẩn:
+\[
+\begin{cases}
+3x + y \le 12 \\
+x + 3y \le 12 \\
+x \ge 0,\ y \ge 0
+\end{cases}
+\]
+\answerbox
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TRANG 3: CÂU 17 - 24
+% ==========================================
+\begin{enumerate}[resume]
+\item Một xưởng mộc mỹ nghệ sản xuất hai loại sản phẩm: Bàn trà và Ghế tựa. Để sản xuất một bàn trà cần $3$ giờ tiện gỗ và $2$ giờ sơn phủ; để sản xuất một ghế tựa cần $1$ giờ tiện gỗ và $2$ giờ sơn phủ. Mỗi ngày xưởng có tối đa $18$ giờ làm việc của máy tiện và $16$ giờ của máy sơn. Biết mỗi bàn trà mang lại lợi nhuận $400$ nghìn đồng, mỗi ghế tựa mang lại lợi nhuận $200$ nghìn đồng. Hỏi lợi nhuận tối đa trong một ngày của xưởng bằng bao nhiêu nghìn đồng?
+\answerbox
+
+\item Một doanh nghiệp cần thuê xe để vận chuyển $140$ công nhân và $9$ tấn hàng. Nơi cho thuê có hai loại xe: loại $A$ (chở được tối đa $20$ người và $0{,}6$ tấn hàng, giá thuê $4$ triệu đồng/xe, có tối đa $8$ xe) và loại $B$ (chở được tối đa $10$ người và $1{,}5$ tấn hàng, giá thuê $3$ triệu đồng/xe, có tối đa $9$ xe). Hỏi chi phí thuê xe nhỏ nhất là bao nhiêu triệu đồng?
+\answerbox
+
+\item Có bao nhiêu cặp số nguyên $(x; y)$ thoả mãn hệ bất phương trình:
+\[
+\begin{cases}
+x \ge 0,\ y \ge 0 \\
+x + y \le 4 \\
+2x - y \ge 0
+\end{cases}
+\]
+\answerbox
+
+\item Một bác sĩ dinh dưỡng tư vấn cho một bệnh nhân cần mua thịt bò và thịt lợn sao cho tổng lượng dinh dưỡng nạp vào đạt ít nhất $2400$ đơn vị protein và ít nhất $1600$ đơn vị chất béo. Mỗi kilôgam thịt bò chứa $600$ đơn vị protein và $200$ đơn vị chất béo, giá $220$ nghìn đồng/kg (khuyến nghị mua không quá $5\text{ kg}$). Mỗi kilôgam thịt lợn chứa $400$ đơn vị protein và $400$ đơn vị chất béo, giá $180$ nghìn đồng/kg (mua không quá $5\text{ kg}$). Hỏi số tiền ít nhất bệnh nhân đó phải chi là bao nhiêu nghìn đồng?
+\answerbox
+
+\item Cho miền tam giác $ABC$ (kể cả biên) có toạ độ các đỉnh là $A(1; 1)$, $B(4; 1)$, $C(1; 4)$. Tìm giá trị nhỏ nhất của tham số $m$ để bất phương trình $2x + 3y \le m$ nghiệm đúng với mọi điểm $(x; y)$ thuộc miền tam giác $ABC$.
+\answerbox
+
+\item Một hợp tác xã nông nghiệp dự định dùng $10\text{ ha}$ đất để trồng hai loại cây trồng là Lúa và Ngô. Chi phí công lao động để chăm sóc $1\text{ ha}$ lúa là $10$ công, lợi nhuận thu được là $30$ triệu đồng. Chi phí công lao động chăm sóc $1\text{ ha}$ ngô là $15$ công, lợi nhuận thu được là $40$ triệu đồng. Biết rằng hợp tác xã chỉ huy động được tối đa $120$ công lao động. Lợi nhuận lớn nhất hợp tác xã có thể thu được là bao nhiêu triệu đồng?
+\answerbox
+
+\item Cho hệ bất phương trình bậc nhất hai ẩn có chứa tham số $m > 0$:
+\[
+\begin{cases}
+x \ge 0,\ y \ge 0 \\
+x + y \le 6 \\
+y \le mx
+\end{cases}
+\]
+Biết rằng miền nghiệm của hệ là một miền tam giác có diện tích bằng $9$. Tìm giá trị của tham số $m$.
+\answerbox
+
+\item Cho cặp số $(x; y)$ thoả mãn hệ bất phương trình:
+\[
+\begin{cases}
+0 \le x \le 5 \\
+0 \le y \le 4 \\
+x + y \ge 3 \\
+2x - y \le 4
+\end{cases}
+\]
+Tìm giá trị lớn nhất của biểu thức $T = 5x - 2y$.
+\answerbox
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TRANG 4: CÂU 25 - 26 + CHỦ ĐỀ 3 (CÂU 27 - 32)
+% ==========================================
+\begin{enumerate}[resume]
+\item Một quán giải khát pha chế hai loại đồ uống $A$ và $B$. Mỗi ly loại $A$ cần $200\text{ ml}$ sữa tươi và $50\text{ ml}$ siro hoa quả, mang lại tiền lãi $15$ nghìn đồng. Mỗi ly loại $B$ cần $100\text{ ml}$ sữa tươi và $100\text{ ml}$ siro hoa quả, mang lại tiền lãi $20$ nghìn đồng. Cửa hàng có sẵn $4\text{ lít}$ sữa tươi và $2{,}5\text{ lít}$ siro hoa quả. Hỏi số tiền lãi lớn nhất cửa hàng có thể thu được là bao nhiêu nghìn đồng?
+\answerbox
+
+\item Trong mặt phẳng toạ độ $Oxy$, cho đường thẳng bờ $d\colon 3x - 4y + 12 = 0$. Tính khoảng cách từ gốc toạ độ $O(0; 0)$ đến đường thẳng $d$.
+\answerbox
+\end{enumerate}
+
+\parttitle{CHỦ ĐỀ 3. HỆ THỨC LƯỢNG TRONG TAM GIÁC VÀ ỨNG DỤNG THỰC TẾ (CÂU 27 -- 40)}
+
+\begin{enumerate}[resume]
+\item Cho tam giác $ABC$ có $AB = 5$, $AC = 8$ và góc $\widehat{BAC} = 60^\circ$. Tính độ dài cạnh $BC$.
+\answerbox
+
+\item Cho tam giác $ABC$ có cạnh $BC = 6\sqrt{3}$ và góc $\widehat{BAC} = 60^\circ$. Tính bán kính $R$ của đường tròn ngoại tiếp tam giác $ABC$.
+\answerbox
+
+\item Cho tam giác $ABC$ có độ dài ba cạnh lần lượt là $a = 13$, $b = 14$, $c = 15$. Tính bán kính $r$ của đường tròn nội tiếp tam giác $ABC$.
+\answerbox
+
+\item Cho tam giác $ABC$ vuông tại $A$ có $AB = 6$, $AC = 8$ và $BC = 10$. Tính độ dài đường trung tuyến $m_a$ kẻ từ đỉnh $A$ của tam giác $ABC$.
+\answerbox
+
+\item Để đo chiều cao của một ngọn núi đá thẳng đứng, từ hai điểm quan sát $A$ và $B$ trên mặt đất cách nhau $500\text{ m}$ cùng thẳng hàng với chân núi, người ta ngắm đỉnh núi với các góc nâng lần lượt là $30^\circ$ và $45^\circ$. Tính chiều cao ngọn núi theo đơn vị mét (làm tròn kết quả đến hàng đơn vị).
+\answerbox
+
+\item Để xác định khoảng cách giữa hai vị trí $A$ và $B$ bị ngăn cách bởi một hồ nước sâu, người ta chọn một vị trí quan sát $C$ trên bờ sao cho khoảng cách $CA = 80\text{ m}$, $CB = 120\text{ m}$ và góc nhìn $\widehat{ACB} = 120^\circ$. Tính khoảng cách $AB$ theo đơn vị mét (làm tròn kết quả đến hàng phần mười).
+\answerbox
+\end{enumerate}
+
+\newpage
+
+% ==========================================
+% TRANG 5: CÂU 33 - 40
+% ==========================================
+\begin{enumerate}[resume]
+\item Hai chiếc tàu thuỷ cùng xuất phát từ một bến cảng $O$ vào lúc $7$ giờ sáng, chạy theo hai hướng thẳng tạo với nhau một góc $60^\circ$. Tàu thứ nhất chạy với vận tốc không đổi $30\text{ km/h}$, tàu thứ hai chạy với vận tốc không đổi $40\text{ km/h}$. Hỏi sau đúng $2$ giờ kể từ lúc khởi hành, khoảng cách giữa hai tàu bằng bao nhiêu kilômét? (Làm tròn kết quả đến hàng phần mười).
+\answerbox
+
+\item Cho tam giác $ABC$ có tỉ lệ độ dài ba cạnh thoả mãn $a : b : c = 3 : 5 : 7$. Tính số đo góc lớn nhất của tam giác $ABC$ theo đơn vị độ.
+\answerbox
+
+\item Hai thôn $A$ và $B$ nằm cùng một phía của một con kênh thẳng $d$. Khoảng cách từ thôn $A$ đến bờ kênh là $AH = 3\text{ km}$, khoảng cách từ thôn $B$ đến bờ kênh là $BK = 5\text{ km}$, và khoảng cách giữa hai hình chiếu $HK = 6\text{ km}$. Người ta cần xây dựng một trạm cấp nước sạch $M$ trên bờ kênh $d$ để dẫn nước về hai thôn. Xác định chiều dài ngắn nhất của tổng đường ống dẫn nước $MA + MB$ theo đơn vị kilômét.
+\answerbox
+
+\item Cho tứ giác lồi $ABCD$ có độ dài hai đường chéo là $AC = 12$ và $BD = 16$. Biết rằng góc tạo bởi hai đường chéo bằng $30^\circ$. Tính diện tích của tứ giác $ABCD$.
+\answerbox
+
+\item Cho tam giác $ABC$ có độ dài ba cạnh lần lượt là $a = 13$, $b = 14$, $c = 15$ và bán kính đường tròn ngoại tiếp là $R$. Tính giá trị của biểu thức $P = \dfrac{a \cdot b \cdot c}{4R}$.
+\answerbox
+
+\item Một bức tranh nghệ thuật có chiều cao $3\text{ m}$ được treo trên một bức tường thẳng đứng sao cho mép dưới của bức tranh cao hơn tầm mắt của người ngắm tranh là $1\text{ m}$. Hỏi người ngắm tranh phải đứng cách bức tường một khoảng bằng bao nhiêu mét để góc nhìn bức tranh theo phương thẳng đứng đạt giá trị lớn nhất?
+\answerbox
+
+\item Cho tam giác $ABC$ có $AB = 3$, $AC = 6$ và góc $\widehat{BAC} = 120^\circ$. Tính độ dài đường phân giác trong $AD$ kẻ từ đỉnh $A$ của tam giác $ABC$.
+\answerbox
+
+\item Cho tam giác $ABC$ có độ dài ba cạnh là $a = 5$, $b = 6$ và $c = 7$. Tính bán kính $R$ của đường tròn ngoại tiếp tam giác $ABC$ (làm tròn kết quả đến hàng phần trăm).
+\answerbox
+\end{enumerate}
+
+\newpage
+
+% =========================================================================
+% TRANG 6: BẢNG ĐÁP SỐ TỔNG HỢP VÀ TÓM TẮT ĐÁP SỐ CHI TIẾT
+% =========================================================================
+\pagestyle{dapan}
+\parttitle{BẢNG ĐÁP SỐ TỔNG HỢP 40 CÂU}
+
+\vspace{0.2cm}
+\begin{center}
+\begin{tabular}{|c|c||c|c||c|c||c|c|}
+\hline
+\textbf{Câu} & \textbf{Đáp số} & \textbf{Câu} & \textbf{Đáp số} & \textbf{Câu} & \textbf{Đáp số} & \textbf{Câu} & \textbf{Đáp số} \\
+\hline
+\textbf{1} & $2$ & \textbf{11} & $15$ & \textbf{21} & $14$ & \textbf{31} & $683$ \\
+\hline
+\textbf{2} & $3$ & \textbf{12} & $16$ & \textbf{22} & $340$ & \textbf{32} & $174{,}4$ \\
+\hline
+\textbf{3} & $4$ & \textbf{13} & $7$ & \textbf{23} & $1$ & \textbf{33} & $72{,}1$ \\
+\hline
+\textbf{4} & $2$ & \textbf{14} & $21$ & \textbf{24} & $12$ & \textbf{34} & $120^\circ$ \\
+\hline
+\textbf{5} & $15$ & \textbf{15} & $14$ & \textbf{25} & $550$ & \textbf{35} & $10$ \\
+\hline
+\textbf{6} & $45$ & \textbf{16} & $12$ & \textbf{26} & $2{,}4$ & \textbf{36} & $48$ \\
+\hline
+\textbf{7} & $12$ & \textbf{17} & $2600$ & \textbf{27} & $7$ & \textbf{37} & $84$ \\
+\hline
+\textbf{8} & $3$ & \textbf{18} & $32$ & \textbf{28} & $6$ & \textbf{38} & $2$ \\
+\hline
+\textbf{9} & $11$ & \textbf{19} & $10$ & \textbf{29} & $4$ & \textbf{39} & $2$ \\
+\hline
+\textbf{10} & $11$ & \textbf{20} & $980$ & \textbf{30} & $5$ & \textbf{40} & $3{,}57$ \\
+\hline
+\end{tabular}
+\end{center}
+
+\vspace{0.3cm}
+\parttitle{TÓM TẮT ĐÁP SỐ CHI TIẾT CÁC BÀI TOÁN TỐI ƯU HÓA KINH TẾ}
+\begin{itemize}[leftmargin=1.5em, itemsep=3.5pt]
+    \item \textbf{Câu 17 (Xưởng mộc):} Sản xuất $5$ bàn trà và $3$ ghế tựa, lợi nhuận tối đa là $2600$ nghìn đồng ($2{,}6$ triệu đồng).
+    \item \textbf{Câu 18 (Thuê xe):} Thuê $5$ xe loại $A$ và $4$ xe loại $B$, chi phí nhỏ nhất là $32$ triệu đồng.
+    \item \textbf{Câu 20 (Dinh dưỡng):} Mua $2\text{ kg}$ thịt bò và $3\text{ kg}$ thịt lợn, số tiền ít nhất phải chi là $980$ nghìn đồng.
+    \item \textbf{Câu 22 (Nông nghiệp):} Trồng $6\text{ ha}$ lúa và $4\text{ ha}$ ngô, lợi nhuận lớn nhất thu được là $340$ triệu đồng.
+    \item \textbf{Câu 25 (Pha chế):} Pha chế $10$ ly loại $A$ và $20$ ly loại $B$, tiền lãi lớn nhất thu được là $550$ nghìn đồng.
+    \item \textbf{Câu 35 (Trạm bơm bờ kênh):} Trạm bơm $M$ đặt tại vị trí cách hình chiếu $H$ một khoảng $HM = 2{,}25\text{ km}$, tổng chiều dài ngắn nhất là $MA + MB = 10\text{ km}$.
+    \item \textbf{Câu 38 (Góc nhìn bức tranh):} Người ngắm đứng cách chân tường $2\text{ m}$ thì góc nhìn bức tranh đạt cực đại $\approx 36^\circ 52'$.
+\end{itemize}
+
+\newpage
+
+% =========================================================================
+% TRANG 7: HÌNH VẼ MINH HOẠ MIỀN NGHIỆM TIKZ TIÊU BIỂU
+% =========================================================================
+\parttitle{HÌNH VẼ MINH HOẠ MIỀN NGHIỆM TIKZ TIÊU BIỂU}
+
+\vspace{0.15cm}
+\noindent\textbf{1. Miền nghiệm Câu 16 -- Tứ giác diện tích $S = 12$:}
+\begin{center}
+\begin{tikzpicture}[scale=0.48]
+    \draw[help lines, color=gray!25, step=1] (-1,-1) grid (13,13);
+    \draw[-{Latex[length=2.5mm]}, line width=1.1pt] (-1.2,0) -- (13.5,0) node[below=2pt, font=\small\bfseries] {$x$};
+    \draw[-{Latex[length=2.5mm]}, line width=1.1pt] (0,-1.2) -- (0,13.5) node[left=2pt, font=\small\bfseries] {$y$};
+    \node[below left=2pt, font=\small\bfseries] at (0,0) {$O$};
+
+    % Miền nghiệm tứ giác OABC
+    \fill[ink!20] (0,0) -- (4,0) -- (3,3) -- (0,4) -- cycle;
+    \draw[line width=1.4pt, ink] (0,0) -- (4,0) -- (3,3) -- (0,4) -- cycle;
+
+    % Đường d1: 3x + y = 12
+    \draw[line width=1.1pt, blue!80!black] (-0.3,12.9) -- (4.3,-0.9) node[pos=0.08, above right, font=\footnotesize\bfseries] {$3x + y = 12$};
+    % Đường d2: x + 3y = 12
+    \draw[line width=1.1pt, red!80!black] (-0.9,4.3) -- (12.9,-0.3) node[pos=0.9, above right, font=\footnotesize\bfseries] {$x + 3y = 12$};
+
+    \fill[black] (0,0) circle (3pt);
+    \fill[black] (4,0) circle (3pt) node[below=2pt, font=\footnotesize\bfseries] {$A(4;0)$};
+    \fill[black] (3,3) circle (3pt) node[above right=1pt, font=\footnotesize\bfseries] {$B(3;3)$};
+    \fill[black] (0,4) circle (3pt) node[left=2pt, font=\footnotesize\bfseries] {$C(0;4)$};
+    \draw[dashed, gray] (3,0) node[below=2pt, font=\footnotesize] {$3$} -- (3,3) -- (0,3) node[left=2pt, font=\footnotesize] {$3$};
+    \node[font=\bfseries\color{ink}] at (1.5,1.5) {$S = 12$};
+\end{tikzpicture}
+\end{center}
+
+\vspace{0.25cm}
+\noindent\textbf{2. Miền nghiệm Câu 17 -- Bài toán xưởng mộc (Bàn trà và ghế tựa):}
+\begin{center}
+\begin{tikzpicture}[scale=0.52]
+    \draw[help lines, color=gray!25, step=2] (-1,-1) grid (10,19);
+    \draw[-{Latex[length=2.5mm]}, line width=1.1pt] (-1.2,0) -- (10.5,0) node[below=2pt, font=\small\bfseries] {$x$};
+    \draw[-{Latex[length=2.5mm]}, line width=1.1pt] (0,-1.2) -- (0,19.5) node[left=2pt, font=\small\bfseries] {$y$};
+    \node[below left=2pt, font=\small\bfseries] at (0,0) {$O$};
+
+    % Miền nghiệm OABC
+    \fill[ink!20] (0,0) -- (6,0) -- (5,3) -- (0,8) -- cycle;
+    \draw[line width=1.4pt, ink] (0,0) -- (6,0) -- (5,3) -- (0,8) -- cycle;
+
+    % d1: 3x + y = 18
+    \draw[line width=1.1pt, blue!80!black] (0.2,17.4) -- (6.3,-0.9) node[pos=0.08, above right, font=\footnotesize\bfseries] {$3x + y = 18$};
+    % d2: x + y = 8
+    \draw[line width=1.1pt, red!80!black] (-0.8,8.8) -- (8.8,-0.8) node[pos=0.9, above right, font=\footnotesize\bfseries] {$x + y = 8$};
+
+    \fill[black] (0,0) circle (3pt);
+    \fill[black] (6,0) circle (3pt) node[below=2pt, font=\footnotesize\bfseries] {$A(6;0)$};
+    \fill[black] (5,3) circle (3pt) node[above right=1pt, font=\footnotesize\bfseries] {$B(5;3)$};
+    \fill[black] (0,8) circle (3pt) node[left=2pt, font=\footnotesize\bfseries] {$C(0;8)$};
+    \draw[dashed, gray] (5,0) node[below=2pt, font=\footnotesize] {$5$} -- (5,3) -- (0,3) node[left=2pt, font=\footnotesize] {$3$};
+    \node[font=\bfseries\color{ink}] at (2.2,2.5) {Lợi nhuận max tại $B(5;3)$};
+\end{tikzpicture}
+\end{center}
+
+\end{document}
