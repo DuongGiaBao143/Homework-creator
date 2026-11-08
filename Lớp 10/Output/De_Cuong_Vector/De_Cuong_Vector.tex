@@ -8,32 +8,37 @@
 \definecolor{ink}{RGB}{30,55,70}
 
 \newcommand{\headerQuote}{%
-  \ifcase\value{page}\relax
-    \or Math gives us hope that every problem has a solution% Trang 1
-    \or Math + You = Champion% Trang 2
-    \or Where Frustration Becomes Inspiration% Trang 3
-    \or Turning Confusion into Clarity% Trang 4
-    \or Don't be an X, be a Y of mathematics% Trang 5
-    \or Don't get mad. Learn to add% Trang 6
-    \or The only way to learn mathematics is to do mathematics% Trang 7
-    \or Small steps every day lead to big results% Trang 8
-    \or Every expert was once a beginner% Trang 9
-    \or Success is the sum of small efforts repeated daily% Trang 10
-    \or Mathematics is the music of reason% Trang 11
-    \or Believe you can and you're halfway there% Trang 12
-    \else Math gives us hope that every problem has a solution%
+  \ifcase\numexpr\value{page}-1\relax
+    Math gives us hope that every problem has a solution% Trang 1
+  \or Math + You = Champion% Trang 2
+  \or Where Frustration Becomes Inspiration% Trang 3
+  \or Turning Confusion into Clarity% Trang 4
+  \or Don't be an X, be a Y of mathematics% Trang 5
+  \or Don't get mad. Learn to add% Trang 6
+  \or The only way to learn mathematics is to do mathematics% Trang 7
+  \or Small steps every day lead to big results% Trang 8
+  \or Every expert was once a beginner% Trang 9
+  \or Success is the sum of small efforts repeated daily% Trang 10
+  \or Mathematics is the music of reason% Trang 11
+  \or Believe you can and you're halfway there% Trang 12
+  \or Mathematics reveals its secrets only to those who approach it with pure love% Trang 13
+  \or Turning Confusion into Clarity% Trang 14
+  \or Don't be an X, be a Y of mathematics% Trang 15
+  \or Don't get mad. Learn to add% Trang 16
+  \or The only way to learn mathematics is to do mathematics% Trang 17
+  \else Math gives us hope that every problem has a solution%
   \fi
 }
 \pagestyle{fancy}\fancyhf{}
 \lhead{\small\textit{\headerQuote}}
 \rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}
-\rfoot{\small Trang \thepage/4}
+\rfoot{\small Trang \thepage/13}
 \renewcommand{\headrulewidth}{0.4pt}
 \fancypagestyle{dapan}{%
   \fancyhf{}%
   \lhead{\small\textit{\headerQuote}}%
   \rhead{\small\textit{Người biên soạn: Dương Gia Bảo}}%
-  \rfoot{\small Trang \the\numexpr\value{page}-4\relax/4}%
+  \rfoot{\small Trang \the\numexpr\value{page}-13\relax/4}%
   \renewcommand{\headrulewidth}{0.4pt}%
 }
 \setlength{\headheight}{18pt}
@@ -41,14 +46,23 @@
 \setlength{\parskip}{0pt}
 \setlength{\tabcolsep}{2pt}
 \renewcommand{\arraystretch}{1.05}
-\newcommand{\parttitle}[1]{\par\vspace{2pt}\needspace{2\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1pt}}
+\newcommand{\parttitle}[1]{\par\vspace{2pt}\needspace{2\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{1.5pt}}
 \newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{8.5pt}\hspace{2.2cm}}}
-\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.15cm,itemsep=1.8pt,topsep=1pt,parsep=0pt}
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.15cm,itemsep=1.5pt,topsep=1pt,parsep=0pt}
 \setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=1.5pt,topsep=0.2pt,parsep=0pt}
+
+\newcommand{\oli}[1]{%
+  \par\vspace{2.5pt}\noindent
+  \begin{tikzpicture}
+    \draw[step=0.5cm, color=cyan!25!gray!25, line width=0.25pt] (0,0) grid (\linewidth, #1);
+    \draw[color=cyan!50!gray!45, line width=0.4pt, rounded corners=2pt] (0,0) rectangle (\linewidth, #1);
+    \node[anchor=north west, font=\scriptsize\itshape\color{gray!75}, inner sep=3pt] at (0, #1) {Bài làm:};
+  \end{tikzpicture}\par\vspace{3.5pt}
+}
 
 \begin{document}
 % =========================================================================
-% TRANG 1: TIÊU ĐỀ + CHỦ ĐỀ 1 (CÂU 1 - 6) + CHỦ ĐỀ 2 (CÂU 7 - 12)
+% TRANG 1: TIÊU ĐỀ + CHỦ ĐỀ 1 (CÂU 1 - 3)
 % =========================================================================
 \noindent
 \begin{minipage}[c]{0.38\textwidth}
@@ -82,197 +96,306 @@
 \end{minipage}
 
 \vspace{0.1cm}
-\textit{\textbf{Lưu ý:} Học sinh trả lời từ Câu 1 đến Câu 50. Điền kết quả (dưới dạng số nguyên, phân số tối giản hoặc số thập phân theo yêu cầu) vào ô đáp số tương ứng.}
+\textit{\textbf{Lưu ý:} Học sinh trình bày tóm tắt các bước giải vào khung ô li và điền kết quả cuối cùng vào ô đáp số tương ứng.}
 
 \parttitle{CHỦ ĐỀ 1. CÁC KHÁI NIỆM MỞ ĐẦU (CÂU 1 -- 6)}
 
 \begin{enumerate}
 \item Cho ngũ giác đều $ABCDE$ tâm $O$. Có bao nhiêu vectơ khác vectơ $\vec{0}$ có điểm đầu và điểm cuối là hai đỉnh phân biệt của ngũ giác $ABCDE$?
 \answerbox
+\oli{4.5cm}
 
 \item Cho hình lục giác đều $ABCDEF$ có tâm $O$. Có tất cả bao nhiêu vectơ khác vectơ $\vec{0}$ có điểm đầu và điểm cuối là các điểm thuộc tập hợp $\{A, B, C, D, E, F, O\}$?
 \answerbox
+\oli{4.5cm}
 
 \item Cho hình lục giác đều $ABCDEF$ tâm $O$. Có bao nhiêu vectơ khác $\vec{AB}$ có điểm đầu và điểm cuối lấy từ tập hợp $\{A, B, C, D, E, F, O\}$ mà bằng với vectơ $\vec{AB}$?
 \answerbox
+\oli{4.5cm}
+\end{enumerate}
 
+\newpage
+
+% =========================================================================
+% TRANG 2: CÂU 4, 5, 6 + CHỦ ĐỀ 2 (CÂU 7)
+% =========================================================================
+\begin{enumerate}[resume]
 \item Cho tam giác đều $ABC$ có cạnh bằng $6\text{ cm}$. Gọi $M$ và $N$ lần lượt là trung điểm của các cạnh $AB$ và $AC$. Tính độ dài của vectơ $\vec{MN}$ (theo đơn vị xentimét).
 \answerbox
+\oli{3.8cm}
 
 \item Cho hình vuông $ABCD$ có cạnh bằng $4\sqrt{2}\text{ cm}$. Gọi $O$ là giao điểm của hai đường chéo $AC$ và $BD$. Tính độ dài của vectơ $\vec{OA}$ (theo đơn vị xentimét).
 \answerbox
+\oli{3.8cm}
 
 \item Cho hình chữ nhật $ABCD$. Gọi $M, N, P, Q$ lần lượt là trung điểm của các cạnh $AB, BC, CD, DA$. Có bao nhiêu vectơ khác vectơ $\vec{0}$ có điểm đầu và điểm cuối thuộc tập hợp $\{A, B, C, D, M, N, P, Q\}$ cùng phương với vectơ $\vec{AB}$?
 \answerbox
+\oli{3.8cm}
 
 \parttitle{CHỦ ĐỀ 2. TỔNG VÀ HIỆU CỦA HAI VECTƠ (CÂU 7 -- 16)}
 
 \item Cho hình chữ nhật $ABCD$ có $AB = 6$ và $AD = 8$. Tính độ dài của vectơ $\vec{u} = \vec{AB} + \vec{AD}$.
 \answerbox
-
-\item Cho hình thoi $ABCD$ có cạnh bằng $5$ và góc $\widehat{BAD} = 60^\circ$. Tính độ dài của vectơ $\vec{v} = \vec{AB} - \vec{AD}$.
-\answerbox
-
-\item Cho tam giác đều $ABC$ có cạnh bằng $2\sqrt{3}$. Gọi $H$ là trung điểm của cạnh $BC$. Tính độ dài của vectơ $\vec{w} = \vec{AB} + \vec{AC}$.
-\answerbox
-
-\item Cho tam giác đều $ABC$ có độ dài cạnh bằng $8$. Tính độ dài của vectơ hiệu $\vec{AB} - \vec{AC}$.
-\answerbox
-
-\item Cho hình vuông $ABCD$ có cạnh bằng $6$. Tính giá trị của $|\vec{AB} + \vec{AC} + \vec{AD}|^2$.
-\answerbox
-
-\item Cho tam giác $ABC$ vuông tại $A$ có $AB = 3$ và $AC = 4$. Tính độ dài của vectơ $\vec{u} = \vec{AB} - \vec{CA}$.
-\answerbox
-
+\oli{3.8cm}
 \end{enumerate}
 
 \newpage
 
 % =========================================================================
-% TRANG 2: TIẾP CHỦ ĐỀ 2 (CÂU 13 - 16) + CHỦ ĐỀ 3 (CÂU 17 - 25)
+% TRANG 3: CÂU 8, 9, 10, 11
 % =========================================================================
 \begin{enumerate}[resume]
+\item Cho hình thoi $ABCD$ có cạnh bằng $5$ và góc $\widehat{BAD} = 60^\circ$. Tính độ dài của vectơ $\vec{v} = \vec{AB} - \vec{AD}$.
+\answerbox
+\oli{4.2cm}
+
+\item Cho tam giác đều $ABC$ có cạnh bằng $2\sqrt{3}$. Gọi $H$ là trung điểm của cạnh $BC$. Tính độ dài của vectơ $\vec{w} = \vec{AB} + \vec{AC}$.
+\answerbox
+\oli{4.2cm}
+
+\item Cho tam giác đều $ABC$ có độ dài cạnh bằng $8$. Tính độ dài của vectơ hiệu $\vec{AB} - \vec{AC}$.
+\answerbox
+\oli{4.2cm}
+
+\item Cho hình vuông $ABCD$ có cạnh bằng $6$. Tính giá trị của $|\vec{AB} + \vec{AC} + \vec{AD}|^2$.
+\answerbox
+\oli{4.2cm}
+\end{enumerate}
+
+\newpage
+
+% =========================================================================
+% TRANG 4: CÂU 12, 13, 14, 15
+% =========================================================================
+\begin{enumerate}[resume]
+\item Cho tam giác $ABC$ vuông tại $A$ có $AB = 3$ và $AC = 4$. Tính độ dài của vectơ $\vec{u} = \vec{AB} - \vec{CA}$.
+\answerbox
+\oli{4.2cm}
+
 \item Hai lực $\vec{F}_1$ và $\vec{F}_2$ cùng tác dụng vào một chất điểm tại điểm $O$, có phương vuông góc với nhau. Biết độ lớn của các lực lần lượt là $|\vec{F}_1| = 30\text{ N}$ và $|\vec{F}_2| = 40\text{ N}$. Tính độ lớn của hợp lực $\vec{F} = \vec{F}_1 + \vec{F}_2$ tác dụng lên chất điểm (theo đơn vị Niutơn).
 \answerbox
+\oli{4.2cm}
 
 \item Hai lực $\vec{F}_1$ và $\vec{F}_2$ có cùng độ lớn bằng $50\text{ N}$, cùng tác dụng vào một vật tại điểm $O$ và tạo với nhau một góc bằng $120^\circ$. Tính độ lớn của hợp lực tác dụng lên vật (theo đơn vị Niutơn).
 \answerbox
+\oli{4.2cm}
 
 \item Một chiếc ca nô chuyển động thẳng đều trên sông từ bến $A$ sang bờ đối diện. Vận tốc riêng của ca nô đối với dòng nước là $v_1 = 20\text{ km/h}$ hướng vuông góc với dòng chảy, vận tốc dòng nước chảy xuôi dòng dọc theo bờ là $v_2 = 15\text{ km/h}$. Tính độ lớn vận tốc thực tế của ca nô so với bờ sông (theo đơn vị km/h).
 \answerbox
+\oli{4.2cm}
+\end{enumerate}
 
+\newpage
+
+% =========================================================================
+% TRANG 5: CÂU 16 + CHỦ ĐỀ 3 (CÂU 17, 18, 19)
+% =========================================================================
+\begin{enumerate}[resume]
 \item Cho bốn điểm phân biệt $A, B, C, D$. Rút gọn biểu thức vectơ $\vec{u} = \vec{AB} - \vec{CB} + \vec{CD} - \vec{AD}$. Hỏi độ dài của vectơ $\vec{u}$ bằng bao nhiêu?
 \answerbox
+\oli{3.8cm}
 
 \parttitle{CHỦ ĐỀ 3. TÍCH CỦA MỘT VECTƠ VỚI MỘT SỐ (CÂU 17 -- 28)}
 
 \item Cho đoạn thẳng $AB$ có độ dài bằng $12\text{ cm}$. Điểm $M$ thuộc đoạn thẳng $AB$ sao cho $AM = 3MB$. Đặt $\vec{AM} = k \vec{AB}$. Tìm giá trị của số thực $k$ (viết dưới dạng số thập phân).
 \answerbox
+\oli{3.8cm}
 
 \item Cho tam giác $ABC$ có trọng tâm $G$. Biết rằng $\vec{AB} + \vec{AC} = k \vec{AG}$. Tìm giá trị của số thực $k$.
 \answerbox
+\oli{3.8cm}
 
 \item Cho tam giác $ABC$. Gọi $M$ là điểm trên cạnh $BC$ sao cho $BM = 2MC$. Phân tích vectơ $\vec{AM}$ theo hai vectơ $\vec{AB}$ và $\vec{AC}$ dưới dạng $\vec{AM} = x \vec{AB} + y \vec{AC}$. Tính giá trị của biểu thức $P = 3x + 6y$.
 \answerbox
-
-\item Cho hình bình hành $ABCD$. Gọi $I$ là trung điểm của cạnh $CD$. Phân tích vectơ $\vec{AI}$ theo hai vectơ $\vec{a} = \vec{AB}$ và $\vec{b} = \vec{AD}$ dưới dạng $\vec{AI} = m\vec{a} + n\vec{b}$. Tính giá trị biểu thức $T = 2m + 4n$.
-\answerbox
-
-\item Cho tam giác $ABC$ có trọng tâm $G$. Lấy điểm $M$ thỏa mãn $\vec{AM} = \frac{2}{3}\vec{AB}$ và điểm $N$ trên cạnh $AC$ thỏa mãn $\vec{AN} = k \vec{AC}$. Biết ba điểm $M, G, N$ thẳng hàng và $k$ được viết dưới dạng phân số tối giản $\frac{a}{b}$ ($a, b \in \mathbb{N}^*$). Tính giá trị của $a + b$.
-\answerbox
-
-\item Cho tam giác $ABC$. Gọi $I$ là điểm thỏa mãn hệ thức vectơ $\vec{IA} + 3\vec{IB} = \vec{0}$. Tính tỉ số độ dài $\dfrac{IA}{IB}$.
-\answerbox
-
-\item Cho tam giác $ABC$ đều có cạnh bằng $6\text{ cm}$. Tập hợp các điểm $M$ thỏa mãn đẳng thức $|2\vec{MA} + \vec{MB} + \vec{MC}| = 12$ là một đường tròn có bán kính $R$ bằng bao nhiêu xentimét?
-\answerbox
-
-\item Cho đoạn thẳng $AB$ có độ dài bằng $8\text{ cm}$. Gọi $I$ là trung điểm của đoạn thẳng $AB$. Tập hợp các điểm $M$ thỏa mãn đẳng thức $|\vec{MA} + \vec{MB}| = 10$ là một đường tròn có đường kính bằng bao nhiêu xentimét?
-\answerbox
-
-\item Cho tam giác $ABC$ có trọng tâm $G$. Với điểm $O$ bất kì, ta luôn có hệ thức $\vec{OA} + \vec{OB} + \vec{OC} = k \vec{OG}$. Tìm giá trị của hằng số $k$.
-\answerbox
-
+\oli{3.8cm}
 \end{enumerate}
 
 \newpage
 
 % =========================================================================
-% TRANG 3: TIẾP CHỦ ĐỀ 3 (CÂU 26 - 28) + CHỦ ĐỀ 4 (CÂU 29 - 38)
+% TRANG 6: CÂU 20, 21, 22, 23
 % =========================================================================
 \begin{enumerate}[resume]
+\item Cho hình bình hành $ABCD$. Gọi $I$ là trung điểm của cạnh $CD$. Phân tích vectơ $\vec{AI}$ theo hai vectơ $\vec{a} = \vec{AB}$ và $\vec{b} = \vec{AD}$ dưới dạng $\vec{AI} = m\vec{a} + n\vec{b}$. Tính giá trị biểu thức $T = 2m + 4n$.
+\answerbox
+\oli{4.2cm}
+
+\item Cho tam giác $ABC$ có trọng tâm $G$. Lấy điểm $M$ thỏa mãn $\vec{AM} = \frac{2}{3}\vec{AB}$ và điểm $N$ trên cạnh $AC$ thỏa mãn $\vec{AN} = k \vec{AC}$. Biết ba điểm $M, G, N$ thẳng hàng và $k$ được viết dưới dạng phân số tối giản $\frac{a}{b}$ ($a, b \in \mathbb{N}^*$). Tính giá trị của $a + b$.
+\answerbox
+\oli{4.2cm}
+
+\item Cho tam giác $ABC$. Gọi $I$ là điểm thỏa mãn hệ thức vectơ $\vec{IA} + 3\vec{IB} = \vec{0}$. Tính tỉ số độ dài $\dfrac{IA}{IB}$.
+\answerbox
+\oli{4.2cm}
+
+\item Cho tam giác $ABC$ đều có cạnh bằng $6\text{ cm}$. Tập hợp các điểm $M$ thỏa mãn đẳng thức $|2\vec{MA} + \vec{MB} + \vec{MC}| = 12$ là một đường tròn có bán kính $R$ bằng bao nhiêu xentimét?
+\answerbox
+\oli{4.2cm}
+\end{enumerate}
+
+\newpage
+
+% =========================================================================
+% TRANG 7: CÂU 24, 25, 26, 27
+% =========================================================================
+\begin{enumerate}[resume]
+\item Cho đoạn thẳng $AB$ có độ dài bằng $8\text{ cm}$. Gọi $I$ là trung điểm của đoạn thẳng $AB$. Tập hợp các điểm $M$ thỏa mãn đẳng thức $|\vec{MA} + \vec{MB}| = 10$ là một đường tròn có đường kính bằng bao nhiêu xentimét?
+\answerbox
+\oli{4.2cm}
+
+\item Cho tam giác $ABC$ có trọng tâm $G$. Với điểm $O$ bất kì, ta luôn có hệ thức $\vec{OA} + \vec{OB} + \vec{OC} = k \vec{OG}$. Tìm giá trị của hằng số $k$.
+\answerbox
+\oli{4.2cm}
+
 \item Một chiếc đèn trang trí có trọng lượng $P = 60\text{ N}$ được treo cân bằng vào trần nhà nhờ hai sợi dây cáp đối xứng $OA$ và $OB$. Biết hai sợi dây cáp hợp với nhau một góc bằng $120^\circ$ và độ lớn lực căng của hai sợi dây là như nhau ($|\vec{T}_1| = |\vec{T}_2|$). Tính độ lớn lực căng $T_1$ của mỗi sợi dây (theo đơn vị Niutơn).
 \answerbox
+\oli{4.2cm}
 
 \item Ba lực $\vec{F}_1, \vec{F}_2, \vec{F}_3$ cùng tác dụng vào một chất điểm tại điểm $O$ và vật ở trạng thái cân bằng ($\vec{F}_1 + \vec{F}_2 + \vec{F}_3 = \vec{0}$). Biết rằng hai lực $\vec{F}_1, \vec{F}_2$ vuông góc với nhau và có độ lớn lần lượt là $|\vec{F}_1| = 12\text{ N}$, $|\vec{F}_2| = 16\text{ N}$. Tính độ lớn của lực $\vec{F}_3$ (theo đơn vị Niutơn).
 \answerbox
+\oli{4.2cm}
+\end{enumerate}
 
+\newpage
+
+% =========================================================================
+% TRANG 8: CÂU 28 + CHỦ ĐỀ 4 (CÂU 29, 30, 31)
+% =========================================================================
+\begin{enumerate}[resume]
 \item Cho tam giác $ABC$ vuông tại $A$ có $AB = 3$ và $AC = 4$. Tính giá trị của $|\vec{AB} + 2\vec{AC}|^2$.
 \answerbox
+\oli{3.8cm}
 
 \parttitle{CHỦ ĐỀ 4. VECTƠ TRONG MẶT PHẲNG TOẠ ĐỘ (CÂU 29 -- 38)}
 
 \item Trong mặt phẳng toạ độ $Oxy$, cho vectơ $\vec{u} = 3\vec{i} - 5\vec{j}$ (với $\vec{i}, \vec{j}$ là hai vectơ đơn vị trên các trục $Ox, Oy$). Gọi $(x_0; y_0)$ là toạ độ của vectơ $\vec{u}$. Tính giá trị của biểu thức $T = 2x_0 + 3y_0$.
 \answerbox
+\oli{3.8cm}
 
 \item Trong mặt phẳng toạ độ $Oxy$, cho hai điểm $A(-2; 5)$ và $B(4; -3)$. Tính độ dài của vectơ $\vec{AB}$.
 \answerbox
+\oli{3.8cm}
 
 \item Trong mặt phẳng toạ độ $Oxy$, cho hai vectơ $\vec{a} = (2; -4)$ và $\vec{b} = (-3; 1)$. Gọi $\vec{u} = 3\vec{a} - 2\vec{b}$. Tính tổng hoành độ và tung độ của vectơ $\vec{u}$.
 \answerbox
-
-\item Trong mặt phẳng toạ độ $Oxy$, cho tam giác $ABC$ có $A(1; 3)$, $B(-2; 4)$ và trọng tâm $G(2; 1)$. Tìm toạ độ đỉnh $C(x_C; y_C)$ và tính giá trị của $x_C + y_C$.
-\answerbox
-
-\item Trong mặt phẳng toạ độ $Oxy$, cho ba điểm $A(-1; 2)$, $B(3; 5)$ và $C(5; 1)$. Tìm toạ độ đỉnh $D(x_D; y_D)$ để tứ giác $ABCD$ là một hình bình hành. Tính giá trị của tích $x_D \cdot y_D$.
-\answerbox
-
-\item Trong mặt phẳng toạ độ $Oxy$, cho hai vectơ $\vec{u} = (m - 1; 2)$ và $\vec{v} = (3; m)$ (với $m$ là tham số thực). Tìm giá trị nguyên dương của $m$ để hai vectơ $\vec{u}$ và $\vec{v}$ cùng phương.
-\answerbox
-
-\item Trong mặt phẳng toạ độ $Oxy$, cho ba điểm $A(1; 2)$, $B(3; 6)$ và $C(m; 10)$ (với $m$ là tham số thực). Tìm giá trị của $m$ để ba điểm $A, B, C$ thẳng hàng.
-\answerbox
-
-\item Trong mặt phẳng toạ độ $Oxy$, cho hai điểm $A(2; 4)$ và $B(-1; 1)$. Điểm $M(x_0; 0)$ thuộc trục hoành $Ox$ sao cho ba điểm $A, B, M$ thẳng hàng. Tìm giá trị của hoành độ $x_0$.
-\answerbox
-
-\item Trong mặt phẳng toạ độ $Oxy$, cho hai điểm $A(1; -2)$ và $B(7; 4)$. Điểm $M(x_M; y_M)$ thuộc đoạn thẳng $AB$ thỏa mãn $AM = 2 MB$. Tính giá trị của $x_M + y_M$.
-\answerbox
-
-\item Trong bản đồ quy hoạch một khu đô thị gắn với hệ trục toạ độ $Oxy$ (đơn vị trên các trục tính bằng kilômét), ba công trình công cộng lần lượt đặt tại $A(1; 3)$, $B(5; 2)$ và $C(3; 7)$. Người ta xây dựng một trung tâm điều hành dịch vụ tại trọng tâm $G$ của tam giác $ABC$. Tính khoảng cách từ trung tâm $G$ đến gốc toạ độ $O$ (theo đơn vị kilômét).
-\answerbox
-
+\oli{3.8cm}
 \end{enumerate}
 
 \newpage
 
 % =========================================================================
-% TRANG 4: CHỦ ĐỀ 5 (CÂU 39 - 50)
+% TRANG 9: CÂU 32, 33, 34, 35
 % =========================================================================
+\begin{enumerate}[resume]
+\item Trong mặt phẳng toạ độ $Oxy$, cho tam giác $ABC$ có $A(1; 3)$, $B(-2; 4)$ và trọng tâm $G(2; 1)$. Tìm toạ độ đỉnh $C(x_C; y_C)$ và tính giá trị của $x_C + y_C$.
+\answerbox
+\oli{4.2cm}
+
+\item Trong mặt phẳng toạ độ $Oxy$, cho ba điểm $A(-1; 2)$, $B(3; 5)$ và $C(5; 1)$. Tìm toạ độ đỉnh $D(x_D; y_D)$ để tứ giác $ABCD$ là một hình bình hành. Tính giá trị của tích $x_D \cdot y_D$.
+\answerbox
+\oli{4.2cm}
+
+\item Trong mặt phẳng toạ độ $Oxy$, cho hai vectơ $\vec{u} = (m - 1; 2)$ và $\vec{v} = (3; m)$ (với $m$ là tham số thực). Tìm giá trị nguyên dương của $m$ để hai vectơ $\vec{u}$ và $\vec{v}$ cùng phương.
+\answerbox
+\oli{4.2cm}
+
+\item Trong mặt phẳng toạ độ $Oxy$, cho ba điểm $A(1; 2)$, $B(3; 6)$ và $C(m; 10)$ (với $m$ là tham số thực). Tìm giá trị của $m$ để ba điểm $A, B, C$ thẳng hàng.
+\answerbox
+\oli{4.2cm}
+\end{enumerate}
+
+\newpage
+
+% =========================================================================
+% TRANG 10: CÂU 36, 37, 38 + CHỦ ĐỀ 5 (CÂU 39)
+% =========================================================================
+\begin{enumerate}[resume]
+\item Trong mặt phẳng toạ độ $Oxy$, cho hai điểm $A(2; 4)$ và $B(-1; 1)$. Điểm $M(x_0; 0)$ thuộc trục hoành $Ox$ sao cho ba điểm $A, B, M$ thẳng hàng. Tìm giá trị của hoành độ $x_0$.
+\answerbox
+\oli{3.8cm}
+
+\item Trong mặt phẳng toạ độ $Oxy$, cho hai điểm $A(1; -2)$ và $B(7; 4)$. Điểm $M(x_M; y_M)$ thuộc đoạn thẳng $AB$ thỏa mãn $AM = 2 MB$. Tính giá trị của $x_M + y_M$.
+\answerbox
+\oli{3.8cm}
+
+\item Trong bản đồ quy hoạch một khu đô thị gắn với hệ trục toạ độ $Oxy$ (đơn vị trên các trục tính bằng kilômét), ba công trình công cộng lần lượt đặt tại $A(1; 3)$, $B(5; 2)$ và $C(3; 7)$. Người ta xây dựng một trung tâm điều hành dịch vụ tại trọng tâm $G$ của tam giác $ABC$. Tính khoảng cách từ trung tâm $G$ đến gốc toạ độ $O$ (theo đơn vị kilômét).
+\answerbox
+\oli{3.8cm}
+
 \parttitle{CHỦ ĐỀ 5. TÍCH VÔ HƯỚNG CỦA HAI VECTƠ VÀ BÀI TẬP CUỐI CHƯƠNG (CÂU 39 -- 50)}
 
-\begin{enumerate}[resume]
 \item Cho tam giác đều $ABC$ có độ dài cạnh bằng $6$. Tính giá trị của tích vô hướng $\vec{AB} \cdot \vec{AC}$.
 \answerbox
+\oli{3.8cm}
+\end{enumerate}
 
+\newpage
+
+% =========================================================================
+% TRANG 11: CÂU 40, 41, 42, 43
+% =========================================================================
+\begin{enumerate}[resume]
 \item Cho hình thoi $ABCD$ có cạnh bằng $4$ và góc $\widehat{BAD} = 120^\circ$. Tính giá trị của tích vô hướng $\vec{AB} \cdot \vec{AD}$.
 \answerbox
+\oli{4.2cm}
 
 \item Trong mặt phẳng toạ độ $Oxy$, cho hai vectơ $\vec{a} = (3; -2)$ và $\vec{b} = (4; 5)$. Tính giá trị của tích vô hướng $\vec{a} \cdot \vec{b}$.
 \answerbox
+\oli{4.2cm}
 
 \item Trong mặt phẳng toạ độ $Oxy$, cho hai vectơ $\vec{u} = (2; 1)$ và $\vec{v} = (3; -1)$. Tính góc giữa hai vectơ $\vec{u}$ và $\vec{v}$ (theo đơn vị độ).
 \answerbox
+\oli{4.2cm}
 
 \item Trong mặt phẳng toạ độ $Oxy$, cho hai vectơ $\vec{a} = (m - 1; 3)$ và $\vec{b} = (2; -4)$ (với $m$ là tham số thực). Tìm giá trị của $m$ để hai vectơ $\vec{a}$ và $\vec{b}$ vuông góc với nhau.
 \answerbox
+\oli{4.2cm}
+\end{enumerate}
 
+\newpage
+
+% =========================================================================
+% TRANG 12: CÂU 44, 45, 46, 47
+% =========================================================================
+\begin{enumerate}[resume]
 \item Trong mặt phẳng toạ độ $Oxy$, cho ba điểm $A(1; 2)$, $B(-2; 1)$ và $C(m; 5)$ (với $m$ là tham số thực). Tìm giá trị của $m$ để tam giác $ABC$ vuông tại $A$.
 \answerbox
+\oli{4.2cm}
 
 \item Một công nhân kéo một xe hàng trên quãng đường thẳng dài $s = 20\text{ m}$ trên mặt sàn phẳng nằm ngang bằng một lực $\vec{F}$ có độ lớn $150\text{ N}$. Hướng của lực kéo hợp với phương chuyển động một góc $\alpha = 60^\circ$. Tính công sinh bởi lực kéo $\vec{F}$ (theo đơn vị Jun - $\text{J}$).
 \answerbox
+\oli{4.2cm}
 
 \item Một kiện hàng có khối lượng $m = 5\text{ kg}$ trượt từ đỉnh xuống chân một dốc trượt dài $l = 10\text{ m}$ nghiêng một góc $30^\circ$ so với mặt đất nằm ngang. Lấy gia tốc trọng trường $g = 10\text{ m/s}^2$. Tính công của trọng lực tác dụng lên kiện hàng trong suốt quá trình trượt từ đỉnh xuống chân dốc (theo đơn vị Jun - $\text{J}$).
 \answerbox
+\oli{4.2cm}
 
 \item Trong mặt phẳng toạ độ $Oxy$, cho tam giác $ABC$ có $A(1; 3)$, $B(-1; 1)$ và $C(4; 1)$. Gọi $H(x_H; y_H)$ là trực tâm của tam giác $ABC$. Tính giá trị của $x_H + y_H$.
 \answerbox
+\oli{4.2cm}
+\end{enumerate}
 
+\newpage
+
+% =========================================================================
+% TRANG 13: CÂU 48, 49, 50
+% =========================================================================
+\begin{enumerate}[resume]
 \item Trong mặt phẳng toạ độ $Oxy$, cho tam giác $ABC$ có ba đỉnh $A(1; 7)$, $B(5; 5)$ và $C(-2; -2)$. Gọi $I(x_I; y_I)$ là tâm đường tròn ngoại tiếp của tam giác $ABC$. Tính giá trị của biểu thức $P = x_I + 2y_I$.
 \answerbox
+\oli{4.5cm}
 
 \item Cho hình thang vuông $ABCD$ vuông tại $A$ và $D$ có đáy nhỏ $AB = 3$, đáy lớn $CD = 6$, chiều cao $AD = 4$. Tính giá trị của tích vô hướng $\vec{AC} \cdot \vec{BD}$.
 \answerbox
+\oli{4.5cm}
 
 \item Trong mặt phẳng toạ độ $Oxy$, cho hai điểm $A(1; 3)$ và $B(4; 2)$. Điểm $M(x_0; 0)$ di động trên trục hoành $Ox$. Tìm giá trị của hoành độ $x_0$ để biểu thức $T = |\vec{MA} + 2\vec{MB}|$ đạt giá trị nhỏ nhất.
 \answerbox
-
+\oli{4.5cm}
 \end{enumerate}
 
 % =========================================================================
-% TRANG 5 (ĐÁP ÁN TRANG 1/4): BẢNG ĐÁP ÁN 50 CÂU + LỜI GIẢI CHỦ ĐỀ 1
+% TRANG 14 (ĐÁP ÁN TRANG 1/4): BẢNG ĐÁP ÁN 50 CÂU + LỜI GIẢI CHỦ ĐỀ 1
 % =========================================================================
 \newpage
 \pagestyle{dapan}
@@ -349,7 +472,7 @@
 \newpage
 
 % =========================================================================
-% TRANG 6 (ĐÁP ÁN TRANG 2/4): LỜI GIẢI CHỦ ĐỀ 2 (CÂU 7 - 16)
+% TRANG 15 (ĐÁP ÁN TRANG 2/4): LỜI GIẢI CHỦ ĐỀ 2 (CÂU 7 - 16)
 % =========================================================================
 \noindent\textbf{\large Chủ đề 2. Tổng và hiệu của hai vectơ}
 \begin{itemize}[leftmargin=1.5em, itemsep=2.5pt]
@@ -394,7 +517,7 @@
 \newpage
 
 % =========================================================================
-% TRANG 7 (ĐÁP ÁN TRANG 3/4): LỜI GIẢI CHỦ ĐỀ 3 (CÂU 17 - 28)
+% TRANG 16 (ĐÁP ÁN TRANG 3/4): LỜI GIẢI CHỦ ĐỀ 3 (CÂU 17 - 28)
 % =========================================================================
 \noindent\textbf{\large Chủ đề 3. Tích của một vectơ với một số}
 \begin{itemize}[leftmargin=1.5em, itemsep=2.5pt]
@@ -435,7 +558,7 @@
 \newpage
 
 % =========================================================================
-% TRANG 8 (ĐÁP ÁN TRANG 4/4): LỜI GIẢI CHỦ ĐỀ 4 (CÂU 29 - 38) & CHỦ ĐỀ 5 (CÂU 39 - 50)
+% TRANG 17 (ĐÁP ÁN TRANG 4/4): LỜI GIẢI CHỦ ĐỀ 4 (CÂU 29 - 38) & CHỦ ĐỀ 5 (CÂU 39 - 50)
 % =========================================================================
 \noindent\textbf{\large Chủ đề 4. Vectơ trong mặt phẳng toạ độ}
 \begin{itemize}[leftmargin=1.5em, itemsep=1.8pt]

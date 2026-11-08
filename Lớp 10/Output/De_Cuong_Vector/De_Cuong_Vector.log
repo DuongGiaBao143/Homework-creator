@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.29)  8 NOV 2026 08:13
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.29)  8 NOV 2026 08:24
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -850,22 +850,22 @@ Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 )
 \openout1 = `De_Cuong_Vector.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 49.
-LaTeX Font Info:    ... okay on input line 49.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 63.
+LaTeX Font Info:    ... okay on input line 63.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -922,22 +922,270 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (D:\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 73.
 
 
 (D:\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 59.
+LaTeX Font Info:    Trying to load font information for U+msb on input line 73.
 
  (D:\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
+Overfull \hbox (0.4pt too wide) in paragraph at lines 106--106
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 110--110
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 114--114
+[] 
+ []
+
 [1{C:/Users/Crink/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
-] [2]
-[3] [4] [5] [6] [7]
-Overfull \hbox (64.51167pt too wide) in paragraph at lines 465--466
+]
+Overfull \hbox (0.4pt too wide) in paragraph at lines 125--125
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 129--129
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 133--133
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 139--139
+[] 
+ []
+
+[2]
+Overfull \hbox (0.4pt too wide) in paragraph at lines 150--150
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 154--154
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 158--158
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 162--162
+[] 
+ []
+
+[3]
+Overfull \hbox (0.4pt too wide) in paragraph at lines 173--173
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 177--177
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 181--181
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 185--185
+[] 
+ []
+
+[4]
+Overfull \hbox (0.4pt too wide) in paragraph at lines 196--196
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 202--202
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 206--206
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 210--210
+[] 
+ []
+
+[5]
+Overfull \hbox (0.4pt too wide) in paragraph at lines 221--221
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 225--225
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 229--229
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 233--233
+[] 
+ []
+
+[6]
+Overfull \hbox (0.4pt too wide) in paragraph at lines 244--244
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 248--248
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 252--252
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 256--256
+[] 
+ []
+
+[7]
+Overfull \hbox (0.4pt too wide) in paragraph at lines 267--267
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 273--273
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 277--277
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 281--281
+[] 
+ []
+
+[8]
+Overfull \hbox (0.4pt too wide) in paragraph at lines 292--292
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 296--296
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 300--300
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 304--304
+[] 
+ []
+
+[9]
+Overfull \hbox (0.4pt too wide) in paragraph at lines 315--315
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 319--319
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 323--323
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 329--329
+[] 
+ []
+
+[10]
+Overfull \hbox (0.4pt too wide) in paragraph at lines 340--340
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 344--344
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 348--348
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 352--352
+[] 
+ []
+
+[11]
+Overfull \hbox (0.4pt too wide) in paragraph at lines 363--363
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 367--367
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 371--371
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 375--375
+[] 
+ []
+
+[12]
+Overfull \hbox (0.4pt too wide) in paragraph at lines 386--386
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 390--390
+[] 
+ []
+
+
+Overfull \hbox (0.4pt too wide) in paragraph at lines 394--394
+[] 
+ []
+
+[13] [14] [15] [16]
+Overfull \hbox (64.51167pt too wide) in paragraph at lines 588--589
 []\T5/cmr/bx/n/12 C¥u 47: $[] \OT1/cmr/m/n/12 = (5; 0)$\T5/cmr/m/n/12 , $[] \OT
 1/cmr/m/n/12 = (3; \OMS/cmsy/m/n/12 ^^@\OT1/cmr/m/n/12 2)$\T5/cmr/m/n/12 . $\OM
 L/cmm/m/it/12 H\OT1/cmr/m/n/12 (\OML/cmm/m/it/12 x\OT1/cmr/m/n/12 ; \OML/cmm/m/
@@ -945,18 +1193,18 @@ it/12 y\OT1/cmr/m/n/12 )$ \T5/cmr/m/n/12 l  trüc t¥m $\OMS/cmsy/m/n/12 ) [] , [
 ] )
  []
 
-[8] (De_Cuong_Vector.aux)
+[17] (De_Cuong_Vector.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 17021 strings out of 467871
- 329408 string characters out of 5435211
- 753691 words of memory out of 5000000
- 45589 multiletter control sequences out of 15000+600000
- 649425 words of font info for 83 fonts, out of 8000000 for 9000
+ 17043 strings out of 467871
+ 329916 string characters out of 5435211
+ 754286 words of memory out of 5000000
+ 45610 multiletter control sequences out of 15000+600000
+ 650248 words of font info for 84 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  102i,12n,107p,544b,832s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Crink\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
@@ -973,10 +1221,11 @@ lic/amsfonts/cm/cmsy8.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10
 .pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><D:/MiKTeX/fonts/type1/vntex/v
 nr/vnbx12.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnbxti10.pfb><D:/MiKTeX/fonts/ty
 pe1/vntex/vnr/vnr10.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnr12.pfb><D:/MiKTeX/f
-onts/type1/vntex/vnr/vnti10.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb>
-Output written on De_Cuong_Vector.pdf (8 pages, 305308 bytes).
+onts/type1/vntex/vnr/vnti10.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb><D:
+/MiKTeX/fonts/type1/vntex/vnr/vnti8.pfb>
+Output written on De_Cuong_Vector.pdf (17 pages, 333049 bytes).
 PDF statistics:
- 148 PDF objects out of 1000 (max. 8388607)
+ 181 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  17 words of extra memory for PDF output out of 10000 (max. 10000000)
 
