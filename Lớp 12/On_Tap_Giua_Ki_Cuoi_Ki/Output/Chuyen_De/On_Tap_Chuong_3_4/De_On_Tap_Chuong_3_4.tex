@@ -1,0 +1,325 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}[Path=C:/Windows/Fonts/,UprightFont=times.ttf,BoldFont=timesbd.ttf,ItalicFont=timesi.ttf,BoldItalicFont=timesbi.ttf]
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.7cm,headheight=17pt]{geometry}
+\usepackage{enumitem,array,graphicx,tikz,fancyhdr,needspace,booktabs}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\textbf{BÀI TẬP VỀ NHÀ TOÁN 12}}
+\rhead{\small\textit{Biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{firstpage}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{1em}
+
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*:},leftmargin=*,itemsep=6pt,topsep=4pt}
+
+% Macro trắc nghiệm 4 phương án
+\newcommand{\bonpa}[4]{\par\nobreak\smallskip\nobreak\noindent
+\begin{tabular}{@{}p{0.48\linewidth}p{0.48\linewidth}@{}}
+\textbf{A.} #1 & \textbf{B.} #2\\[7pt]
+\textbf{C.} #3 & \textbf{D.} #4\end{tabular}}
+
+% Macro khung ô li viết bài làm trực tiếp
+\newcommand{\khungOli}[1][4.5cm]{%
+  \needspace{2.2cm}%
+  \par\nobreak\vspace{4pt}\noindent
+  \begin{tikzpicture}
+    \pgfmathsetmacro{\gridw}{\linewidth - 1.5pt}
+    \draw[step=0.5cm, line width=0.2pt, gray!32] (0,0) grid (\gridw pt, #1);
+    \draw[line width=0.6pt, gray!60] (0,0) rectangle (\gridw pt, #1);
+    \node[anchor=north east, font=\footnotesize\itshape\color{gray!60}, inner sep=4pt] at (\gridw pt, #1) {Bài làm của học sinh};
+  \end{tikzpicture}
+  \par\vspace{6pt}
+}
+
+\begin{document}
+\thispagestyle{firstpage}
+
+\noindent
+\begin{minipage}[t]{0.36\textwidth}
+    \centering
+    {\fontsize{12}{14}\selectfont\textbf{BÀI TẬP VỀ NHÀ}}\\[4pt]
+    \textit{Biên soạn: Dương Gia Bảo}\\[6pt]
+    \setlength{\fboxrule}{0.8pt}
+    \setlength{\fboxsep}{5pt}
+    \fbox{\begin{minipage}{0.88\linewidth}
+        \centering
+        {\fontsize{12}{14}\selectfont\textbf{ÔN TẬP TOÁN 12}}
+    \end{minipage}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.62\textwidth}
+    \centering
+    {\fontsize{13}{15}\selectfont\textbf{CHUYÊN ĐỀ ÔN TẬP SAU THI GIỮA KÌ I}}\\[3pt]
+    {\fontsize{12}{14}\selectfont\textbf{THỐNG KÊ GHÉP NHÓM \& NGUYÊN HÀM -- TÍCH PHÂN}}\\[3pt]
+    {\fontsize{11}{13}\selectfont\textit{(Chương trình GDPT 2018 -- Gồm 50 câu)}}
+\end{minipage}
+
+\par\vspace{4pt}
+\hrule height 0.6pt
+\vspace{4pt}
+\noindent\textit{Họ và tên học sinh:}\dotfill\hspace{0.8cm}\textit{Lớp:}\makebox[3.2cm]{\dotfill}
+\par\vspace{3pt}
+\hrule height 0.6pt
+\vspace{6pt}
+
+%% ==============================================================
+%% PHẦN 1: CHƯƠNG III
+%% ==============================================================
+\begin{center}
+    {\fontsize{13}{15}\selectfont\textbf{PHẦN 1. CHƯƠNG III: CÁC SỐ ĐẶC TRƯNG ĐO MỨC ĐỘ PHÂN TÁN}}\\[2pt]
+    {\fontsize{13}{15}\selectfont\textbf{CỦA MẪU SỐ LIỆU GHÉP NHÓM (CÂU 1 -- 15)}}
+\end{center}
+
+\subsubsection*{I. TRẮC NGHIỆM NHIỀU LỰA CHỌN (5 CÂU)}
+
+\begin{enumerate}
+\item Cho mẫu số liệu ghép nhóm gồm $k$ nhóm $[a_1; a_2), [a_2; a_3), \dots, [a_k; a_{k+1})$. Khoảng biến thiên $R$ của mẫu số liệu ghép nhóm đó được tính bằng công thức nào sau đây?
+\bonpa{$R = a_{k+1} - a_1$}{$R = a_k - a_2$}{$R = a_{k+1} - a_k$}{$R = a_2 - a_1$}
+
+\item Thời gian chạy cự ly $100\text{ m}$ (đơn vị: giây) của các học sinh trong một câu lạc bộ điền kinh được ghi lại ở bảng số liệu ghép nhóm sau:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Thời gian (giây)} & $[12; 14)$ & $[14; 16)$ & $[16; 18)$ & $[18; 20)$ \\ \hline
+\textbf{Số học sinh} & $5$ & $12$ & $18$ & $5$ \\ \hline
+\end{tabular}
+\end{center}
+Khoảng biến thiên của mẫu số liệu ghép nhóm này bằng bao nhiêu?
+\bonpa{$6$}{$8$}{$10$}{$4$}
+
+\item Kí hiệu $Q_1, Q_2, Q_3$ lần lượt là tứ phân vị thứ nhất, thứ hai, thứ ba của một mẫu số liệu ghép nhóm. Khoảng tứ phân vị $\Delta_Q$ của mẫu số liệu ghép nhóm đó là
+\bonpa{$\Delta_Q = Q_3 - Q_1$}{$\Delta_Q = Q_3 - Q_2$}{$\Delta_Q = Q_2 - Q_1$}{$\Delta_Q = \dfrac{Q_3 + Q_1}{2}$}
+
+\item Cho mẫu số liệu ghép nhóm gồm $k$ nhóm có số trung bình là $\bar{x}$, cỡ mẫu là $n$. Gọi $c_i$ và $n_i$ lần lượt là giá trị đại diện và tần số của nhóm thứ $i$ ($i = 1, 2, \dots, k$). Phương sai $s^2$ của mẫu số liệu ghép nhóm được xác định bởi công thức nào dưới đây?
+\bonpa{$s^2 = \dfrac{1}{n}\sum\limits_{i=1}^k n_i (c_i - \bar{x})^2$}{$s^2 = \dfrac{1}{n}\sum\limits_{i=1}^k (c_i - \bar{x})^2$}{$s^2 = \sum\limits_{i=1}^k n_i (c_i - \bar{x})$}{$s^2 = \sqrt{\dfrac{1}{n}\sum\limits_{i=1}^k n_i (c_i - \bar{x})^2}$}
+
+\item Thống kê điểm số các bài kiểm tra thường xuyên môn Toán của hai bạn An và Bình có cùng điểm trung bình là $8{,}0$. Bạn An có độ lệch chuẩn $s_A = 0{,}65$, bạn Bình có độ lệch chuẩn $s_B = 1{,}20$. Khẳng định nào sau đây là đúng?
+\bonpa{Điểm số của An có độ phân tán nhỏ hơn và đồng đều hơn Bình.}{Điểm số của Bình đồng đều hơn điểm số của An.}{Điểm số của Bình có độ phân tán nhỏ hơn điểm số của An.}{Không thể kết luận về độ đồng đều khi chưa biết cỡ mẫu.}
+\end{enumerate}
+
+\subsubsection*{II. TRẢ LỜI NGẮN (10 CÂU) -- HỌC SINH TRÌNH BÀY LỜI GIẢI VÀO KHUNG Ô LI}
+
+\begin{enumerate}[start=6]
+\item Thời gian (tính bằng phút) hoàn thành bài kiểm tra giữa kì môn Toán của $40$ học sinh được ghi lại ở bảng số liệu ghép nhóm sau:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Thời gian (phút)} & $[20; 25)$ & $[25; 30)$ & $[30; 35)$ & $[35; 40)$ & $[40; 45)$ \\ \hline
+\textbf{Số học sinh} & $4$ & $10$ & $16$ & $7$ & $3$ \\ \hline
+\end{tabular}
+\end{center}
+Tính khoảng biến thiên $R$ của mẫu số liệu ghép nhóm trên.
+\khungOli[4.0cm]
+
+\item Khối lượng (tính bằng kilôgam) của $30$ quả bưởi da xanh thu hoạch tại một nông trường được cho bởi bảng ghép nhóm:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Khối lượng (kg)} & $[1{,}0; 1{,}2)$ & $[1{,}2; 1{,}4)$ & $[1{,}4; 1{,}6)$ & $[1{,}6; 1{,}8)$ & $[1{,}8; 2{,}0)$ \\ \hline
+\textbf{Số quả bưởi} & $3$ & $7$ & $12$ & $6$ & $2$ \\ \hline
+\end{tabular}
+\end{center}
+Tính khoảng tứ phân vị $\Delta_Q = Q_3 - Q_1$ của mẫu số liệu ghép nhóm (làm tròn kết quả đến hàng phần trăm).
+\khungOli[5.2cm]
+
+\item Thống kê thời gian tự học ở nhà mỗi ngày (tính theo giờ) của $50$ học sinh lớp 12 thu được kết quả:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Thời gian (giờ)} & $[1; 2)$ & $[2; 3)$ & $[3; 4)$ & $[4; 5)$ \\ \hline
+\textbf{Số học sinh} & $8$ & $15$ & $18$ & $9$ \\ \hline
+\end{tabular}
+\end{center}
+Tính số trung bình $\bar{x}$ của mẫu số liệu ghép nhóm trên.
+\khungOli[4.2cm]
+
+\item Dựa vào bảng số liệu về thời gian tự học ở \textbf{Câu 8}, hãy tính phương sai $s^2$ của mẫu số liệu ghép nhóm (làm tròn kết quả đến hàng phần trăm).
+\khungOli[4.5cm]
+
+\item Dựa vào kết quả ở \textbf{Câu 9}, hãy tính độ lệch chuẩn $s$ của mẫu số liệu ghép nhóm về thời gian tự học (làm tròn kết quả đến hàng phần trăm).
+\khungOli[4.0cm]
+
+\item Điểm thi khảo sát của $40$ học sinh được chia thành $5$ nhóm với cỡ mẫu $n = 40$ như sau:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Điểm số} & $[4; 5)$ & $[5; 6)$ & $[6; 7)$ & $[7; 8)$ & $[8; 9)$ \\ \hline
+\textbf{Tần số} & $4$ & $10$ & $x$ & $12$ & $4$ \\ \hline
+\end{tabular}
+\end{center}
+Tìm giá trị của tần số $x$ và tính điểm số trung bình $\bar{x}$ của mẫu số liệu.
+\khungOli[4.5cm]
+
+\item Doanh thu bán hàng mỗi ngày (đơn vị: triệu đồng) tại một siêu thị mini trong $30$ ngày được thống kê ở bảng sau:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Doanh thu (triệu đồng)} & $[10; 20)$ & $[20; 30)$ & $[30; 40)$ & $[40; 50)$ \\ \hline
+\textbf{Số ngày} & $5$ & $9$ & $10$ & $6$ \\ \hline
+\end{tabular}
+\end{center}
+Tính tứ phân vị thứ ba $Q_3$ của mẫu số liệu ghép nhóm trên.
+\khungOli[4.8cm]
+
+\item Bảng số liệu thống kê cân nặng (đơn vị: kg) của $40$ vận động viên một câu lạc bộ thể thao:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Cân nặng (kg)} & $[50; 55)$ & $[55; 60)$ & $[60; 65)$ & $[65; 70)$ \\ \hline
+\textbf{Số vận động viên} & $6$ & $14$ & $12$ & $8$ \\ \hline
+\end{tabular}
+\end{center}
+Tính tứ phân vị thứ nhất $Q_1$ của mẫu số liệu ghép nhóm trên (kết quả làm tròn đến hàng phần trăm).
+\khungOli[4.8cm]
+
+\item Một nhà máy đóng gói sản phẩm có hai dây chuyền sản xuất A và B. Khối lượng mẫu sản phẩm của dây chuyền A có phương sai $s_A^2 = 36$. Khối lượng của $50$ gói sản phẩm được kiểm tra ngẫu nhiên từ dây chuyền B được cho trong bảng sau:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Khối lượng (gam)} & $[480; 490)$ & $[490; 500)$ & $[500; 510)$ & $[510; 520)$ \\ \hline
+\textbf{Số gói sản phẩm} & $5$ & $15$ & $20$ & $10$ \\ \hline
+\end{tabular}
+\end{center}
+Tính hiệu giữa độ lệch chuẩn của dây chuyền B và dây chuyền A ($s_B - s_A$).
+\khungOli[5.2cm]
+
+\item Bảng số liệu sau đây thống kê thời gian xem video ngắn trên mạng xã hội (đơn vị: phút/ngày) của $40$ bạn trẻ:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Thời gian (phút)} & $[0; 10)$ & $[10; 20)$ & $[20; 30)$ & $[30; 40)$ \\ \hline
+\textbf{Số người} & $6$ & $14$ & $16$ & $4$ \\ \hline
+\end{tabular}
+\end{center}
+Tính khoảng tứ phân vị $\Delta_Q = Q_3 - Q_1$ của mẫu số liệu ghép nhóm trên (làm tròn kết quả đến hàng phần trăm).
+\khungOli[5.0cm]
+\end{enumerate}
+
+\newpage
+%% ==============================================================
+%% PHẦN 2: CHƯƠNG IV
+%% ==============================================================
+\begin{center}
+    {\fontsize{13}{15}\selectfont\textbf{PHẦN 2. CHƯƠNG IV: NGUYÊN HÀM VÀ TÍCH PHÂN (CÂU 16 -- 50)}}
+\end{center}
+
+\subsubsection*{I. TRẮC NGHIỆM NHIỀU LỰA CHỌN (15 CÂU)}
+
+\begin{enumerate}[start=16]
+\item Tìm họ nguyên hàm của hàm số $f(x) = 3x^2 - 2x + 5$.
+\bonpa{$\int f(x)\,\mathrm{d}x = x^3 - x^2 + 5x + C$}{$\int f(x)\,\mathrm{d}x = 6x - 2 + C$}{$\int f(x)\,\mathrm{d}x = x^3 - 2x^2 + 5x + C$}{$\int f(x)\,\mathrm{d}x = 3x^3 - x^2 + 5x + C$}
+
+\item Họ nguyên hàm của hàm số $f(x) = \sin x + 2\cos x$ là
+\bonpa{$\cos x - 2\sin x + C$}{$-\cos x + 2\sin x + C$}{$-\cos x - 2\sin x + C$}{$\cos x + 2\sin x + C$}
+
+\item Họ nguyên hàm của hàm số $f(x) = \mathrm{e}^{2x} - 3^x$ là
+\bonpa{$2\mathrm{e}^{2x} - 3^x\ln 3 + C$}{$\mathrm{e}^{2x} - \dfrac{3^x}{\ln 3} + C$}{$\dfrac{1}{2}\mathrm{e}^{2x} - \dfrac{3^x}{\ln 3} + C$}{$\dfrac{1}{2}\mathrm{e}^{2x} - 3^x\ln 3 + C$}
+
+\item Họ nguyên hàm của hàm số $f(x) = \dfrac{1}{2x+3}$ trên khoảng $\left(-\dfrac{3}{2}; +\infty\right)$ là
+\bonpa{$\dfrac{1}{2}\ln(2x+3) + C$}{$\ln(2x+3) + C$}{$2\ln(2x+3) + C$}{$-\dfrac{2}{(2x+3)^2} + C$}
+
+\item Cho hàm số $f(x) = 4x^3 - 2x$. Biết $F(x)$ là một nguyên hàm của $f(x)$ thỏa mãn $F(1) = 5$. Tính giá trị của $F(2)$.
+\bonpa{$F(2) = 12$}{$F(2) = 15$}{$F(2) = 19$}{$F(2) = 17$}
+
+\item Giả sử $\int f(x)\,\mathrm{d}x = F(x) + C$. Khi đó $\int f(3x-1)\,\mathrm{d}x$ bằng
+\bonpa{$F(3x-1) + C$}{$\dfrac{1}{3}F(3x-1) + C$}{$3F(3x-1) + C$}{$\dfrac{1}{3}F(x) + C$}
+
+\item Sử dụng phương pháp nguyên hàm từng phần để tính $\int (2x+1)\cos x\,\mathrm{d}x$, ta đặt $u = 2x+1$ và $\mathrm{d}v = \cos x\,\mathrm{d}x$. Khi đó khẳng định nào sau đây đúng?
+\bonpa{$\int (2x+1)\cos x\,\mathrm{d}x = (2x+1)\sin x - 2\int \sin x\,\mathrm{d}x$}{$\int (2x+1)\cos x\,\mathrm{d}x = (2x+1)\sin x + 2\int \sin x\,\mathrm{d}x$}{$\int (2x+1)\cos x\,\mathrm{d}x = -(2x+1)\sin x - 2\int \sin x\,\mathrm{d}x$}{$\int (2x+1)\cos x\,\mathrm{d}x = (2x+1)\cos x - 2\int \cos x\,\mathrm{d}x$}
+
+\item Cho các tích phân $\int_1^3 f(x)\,\mathrm{d}x = 4$ và $\int_3^5 f(x)\,\mathrm{d}x = -2$. Tính $\int_1^5 f(x)\,\mathrm{d}x$.
+\bonpa{$6$}{$-6$}{$2$}{$-8$}
+
+\item Cho $\int_0^2 f(x)\,\mathrm{d}x = 3$. Tính giá trị của tích phân $I = \int_0^2 [2f(x) - 3x^2]\,\mathrm{d}x$.
+\bonpa{$I = -2$}{$I = 2$}{$I = 6$}{$I = -8$}
+
+\item Tính tích phân $I = \int_0^1 (3x^2 + 2\mathrm{e}^x)\,\mathrm{d}x$.
+\bonpa{$I = 2\mathrm{e} + 1$}{$I = 2\mathrm{e} - 1$}{$I = 2\mathrm{e} + 3$}{$I = 2\mathrm{e}$}
+
+\item Tính tích phân $I = \int_0^1 2x(x^2+1)^3\,\mathrm{d}x$.
+\bonpa{$I = 15$}{$I = \dfrac{15}{2}$}{$I = \dfrac{15}{4}$}{$I = 4$}
+
+\item Tính tích phân từng phần $I = \int_0^{\frac{\pi}{2}} x\cos x\,\mathrm{d}x$.
+\bonpa{$I = \dfrac{\pi}{2}$}{$I = 1$}{$I = \dfrac{\pi}{2} + 1$}{$I = \dfrac{\pi}{2} - 1$}
+
+\item Diện tích $S$ của hình phẳng giới hạn bởi đồ thị hàm số liên tục $y = f(x)$, trục hoành và hai đường thẳng $x = a$, $x = b$ ($a < b$) được tính bởi công thức nào?
+\bonpa{$S = \int_a^b |f(x)|\,\mathrm{d}x$}{$S = \int_a^b f(x)\,\mathrm{d}x$}{$S = \pi\int_a^b [f(x)]^2\,\mathrm{d}x$}{$S = \left|\int_a^b f(x)\,\mathrm{d}x\right|$}
+
+\item Thể tích $V$ của khối tròn xoay thu được khi quay hình phẳng giới hạn bởi đồ thị hàm số $y = \sqrt{x}$, trục hoành và hai đường thẳng $x = 1, x = 4$ quanh trục hoành $Ox$ là
+\bonpa{$V = \dfrac{15}{2}$}{$V = \dfrac{15\pi}{2}$}{$V = 7\pi$}{$V = \dfrac{7\pi}{2}$}
+
+\item Một chất điểm chuyển động theo phương ngang với vận tốc $v(t) = 3t^2 + 2t$ (m/s), trong đó $t$ là thời gian tính bằng giây. Quãng đường vật đi được từ thời điểm $t = 0$ đến $t = 3$ giây là
+\bonpa{$30\text{ m}$}{$33\text{ m}$}{$36\text{ m}$}{$27\text{ m}$}
+\end{enumerate}
+
+\subsubsection*{II. TRẢ LỜI NGẮN (20 CÂU) -- HỌC SINH TRÌNH BÀY LỜI GIẢI VÀO KHUNG Ô LI}
+
+\begin{enumerate}[start=31]
+\item Cho hàm số $f(x)$ có đạo hàm liên tục trên $\mathbb{R}$ thỏa mãn $f'(x) = 6x^2 - 4x + 1$ và $f(1) = 4$. Tính giá trị của $f(3)$.
+\khungOli[4.5cm]
+
+\item Cho hàm số $f(x) = \dfrac{2x+3}{x+1}$. Gọi $F(x)$ là một nguyên hàm của $f(x)$ trên khoảng $(-1; +\infty)$ thỏa mãn $F(0) = 2$. Biết rằng $F(1) = a + b\ln 2$ với $a, b \in \mathbb{Z}$. Tính giá trị của biểu thức $T = a + b$.
+\khungOli[4.8cm]
+
+\item Cho hàm số $f(x) = \dfrac{x}{\sqrt{x^2+9}}$. Biết $F(x)$ là một nguyên hàm của $f(x)$ thỏa mãn $F(0) = 5$. Tính giá trị của $F(4)$.
+\khungOli[4.5cm]
+
+\item Cho biết $\int (2x - 1)\mathrm{e}^x\,\mathrm{d}x = (ax + b)\mathrm{e}^x + C$ với $a, b \in \mathbb{Z}$. Tính giá trị của biểu thức $T = a + b$.
+\khungOli[4.5cm]
+
+\item Biết $\int_0^1 (2x+1)\mathrm{e}^x\,\mathrm{d}x = a \cdot \mathrm{e} + b$ với $a, b \in \mathbb{Z}$. Tính giá trị của biểu thức $P = a^2 + b^2$.
+\khungOli[4.8cm]
+
+\item Cho tích phân $I = \int_2^3 \dfrac{1}{x^2-1}\,\mathrm{d}x = \dfrac{1}{2}\ln\left(\dfrac{a}{b}\right)$, trong đó $a, b$ là các số nguyên dương nguyên tố cùng nhau. Tính giá trị của $a + b$.
+\khungOli[4.8cm]
+
+\item Tính tích phân $I = \int_0^3 \dfrac{x}{\sqrt{x+1}}\,\mathrm{d}x$. Biết kết quả có dạng phân số tối giản $\dfrac{a}{b}$ với $a, b$ là các số nguyên dương. Tính giá trị của $a + b$.
+\khungOli[5.2cm]
+
+\item Cho biết tích phân $\int_1^2 \dfrac{2x+1}{x^2+x}\,\mathrm{d}x = \ln k$, trong đó $k$ là một số nguyên dương. Tìm giá trị của $k$.
+\khungOli[4.2cm]
+
+\item Biết tích phân $\int_1^{\mathrm{e}} x^2 \ln x\,\mathrm{d}x = \dfrac{a \cdot \mathrm{e}^3 + b}{c}$, với $a, b, c$ là các số nguyên dương và $\dfrac{a}{c}$ là phân số tối giản. Tính giá trị của biểu thức $S = a + b + c$.
+\khungOli[5.2cm]
+
+\item Tính tích phân lượng giác $I = \int_0^{\frac{\pi}{2}} \sin^3 x \cos x\,\mathrm{d}x$.
+\khungOli[4.2cm]
+
+\item Tìm số thực dương $m$ thỏa mãn đẳng thức tích phân $\int_0^m (2x - 3)\,\mathrm{d}x = 4$.
+\khungOli[4.5cm]
+
+\item Cho hàm số $f(x)$ liên tục trên $\mathbb{R}$ thỏa mãn $\int_0^6 f(x)\,\mathrm{d}x = 12$. Tính giá trị của tích phân $J = \int_0^2 f(3x)\,\mathrm{d}x$.
+\khungOli[4.2cm]
+
+\item Một ô tô đang chuyển động thẳng đều với vận tốc $20\text{ m/s}$ thì người lái xe đạp phanh. Kể từ thời điểm đó, ô tô chuyển động chậm dần đều với vận tốc $v(t) = 20 - 4t$ (m/s), trong đó $t$ là thời gian tính bằng giây kể từ khi đạp phanh. Tính quãng đường (đơn vị: mét) mà ô tô di chuyển được từ lúc bắt đầu đạp phanh cho đến khi dừng lại hẳn.
+\khungOli[4.8cm]
+
+\item Tính diện tích hình phẳng giới hạn bởi parabol $y = -x^2 + 4x$ và trục hoành $Ox$. Biết kết quả có dạng phân số tối giản $\dfrac{a}{b}$ với $a, b \in \mathbb{Z}^+$. Tính $a + b$.
+\khungOli[4.8cm]
+
+\item Tính diện tích hình phẳng giới hạn bởi parabol $y = x^2 - 2x$ và đường thẳng $y = x$.
+\khungOli[4.8cm]
+
+\item Một khuôn viên vườn hoa hình chữ nhật có kích thước $6\text{ m} \times 4\text{ m}$. Người ta thiết kế một khu vực trồng hoa hồng giới hạn bởi một đường parabol có đỉnh tại trung điểm của cạnh dài phía trên và đi qua hai góc phía dưới của mảnh đất hình chữ nhật (tham khảo hình vẽ mô phỏng). Hãy tính diện tích khu vực trồng hoa hồng (theo đơn vị $\text{m}^2$).
+\khungOli[5.5cm]
+
+\item Cho hình phẳng giới hạn bởi đường cong $y = \sqrt{2x}$, trục hoành và đường thẳng $x = 3$. Tính thể tích $V$ của khối tròn xoay thu được khi quay hình phẳng này quanh trục hoành $Ox$. (Ghi kết quả dưới dạng số thực của $\dfrac{V}{\pi}$).
+\khungOli[4.5cm]
+
+\item Cho hình phẳng $(H)$ giới hạn bởi đồ thị hàm số $y = x^2$, trục hoành $Ox$ và hai đường thẳng $x = 0, x = 2$. Khối tròn xoay tạo thành khi quay $(H)$ quanh trục $Ox$ có thể tích bằng $\dfrac{a\pi}{b}$ với $\dfrac{a}{b}$ là phân số tối giản. Tính giá trị của $a + b$.
+\khungOli[4.8cm]
+
+\item Một chiếc bình gốm mỹ nghệ có mặt trong là một mặt tròn xoay thu được khi cho đường cong $y = \sqrt{x+1}$ với $0 \le x \le 8$ (đơn vị trên các trục tọa độ là đề-xi-mét, $\text{dm}$) quay xung quanh trục $Ox$. Tính dung tích chứa nước của chiếc bình đó theo đơn vị lít (biết $1\text{ dm}^3 = 1\text{ lít}$). Hãy điền giá trị của $\dfrac{V}{\pi}$.
+\khungOli[4.8cm]
+
+\item Một vật thể có đáy nằm trên trục $Ox$ từ điểm $x = 0$ đến điểm $x = 4$. Cắt vật thể bởi mặt phẳng vuông góc với trục $Ox$ tại điểm có hoành độ $x$ ($0 \le x \le 4$), thiết diện nhận được là một hình vuông có độ dài cạnh bằng $\sqrt{4x - x^2}$. Tính thể tích $V$ của vật thể đó. Biết $V$ viết dưới dạng phân số tối giản $\dfrac{a}{b}$ với $a, b \in \mathbb{Z}^+$. Tính giá trị của $a + b$.
+\khungOli[5.2cm]
+\end{enumerate}
+
+\end{document}
