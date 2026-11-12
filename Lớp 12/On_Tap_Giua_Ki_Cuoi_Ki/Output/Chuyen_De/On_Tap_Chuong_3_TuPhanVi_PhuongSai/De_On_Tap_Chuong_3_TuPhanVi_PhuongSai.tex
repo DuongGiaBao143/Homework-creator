@@ -1,0 +1,364 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}[Path=C:/Windows/Fonts/,UprightFont=times.ttf,BoldFont=timesbd.ttf,ItalicFont=timesi.ttf,BoldItalicFont=timesbi.ttf]
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.7cm,headheight=17pt]{geometry}
+\usepackage{enumitem,array,graphicx,tikz,fancyhdr,needspace,booktabs}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\textbf{ÔN TẬP CHƯƠNG III TOÁN 12: TỨ PHÂN VỊ \& PHƯƠNG SAI}}
+\rhead{\small\textit{Biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{firstpage}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{1em}
+
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*:},leftmargin=*,itemsep=6pt,topsep=4pt}
+
+% Macro trắc nghiệm 4 phương án
+\newcommand{\bonpa}[4]{\par\nobreak\smallskip\nobreak\noindent
+\begin{tabular}{@{}p{0.48\linewidth}p{0.48\linewidth}@{}}
+\textbf{A.} #1 & \textbf{B.} #2\\[7pt]
+\textbf{C.} #3 & \textbf{D.} #4\end{tabular}}
+
+% Macro khung ô li viết bài làm trực tiếp (kích thước rộng rãi)
+\newcommand{\khungOli}[1][5.5cm]{%
+  \needspace{2.5cm}%
+  \par\nobreak\vspace{4pt}\noindent
+  \begin{tikzpicture}
+    \pgfmathsetmacro{\gridw}{\linewidth - 1.5pt}
+    \draw[step=0.5cm, line width=0.2pt, gray!32] (0,0) grid (\gridw pt, #1);
+    \draw[line width=0.6pt, gray!60] (0,0) rectangle (\gridw pt, #1);
+    \node[anchor=north east, font=\footnotesize\itshape\color{gray!60}, inner sep=4pt] at (\gridw pt, #1) {Bài làm của học sinh};
+  \end{tikzpicture}
+  \par\vspace{7pt}
+}
+
+\begin{document}
+\thispagestyle{firstpage}
+
+\noindent
+\begin{minipage}[t]{0.36\textwidth}
+    \centering
+    {\fontsize{12}{14}\selectfont\textbf{BÀI TẬP CHUYÊN ĐỀ}}\\[4pt]
+    \textit{Biên soạn: Dương Gia Bảo}\\[6pt]
+    \setlength{\fboxrule}{0.8pt}
+    \setlength{\fboxsep}{5pt}
+    \fbox{\begin{minipage}{0.88\linewidth}
+        \centering
+        {\fontsize{12}{14}\selectfont\textbf{CHƯƠNG III -- TOÁN 12}}
+    \end{minipage}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.62\textwidth}
+    \centering
+    {\fontsize{13}{15}\selectfont\textbf{CHUYÊN ĐỀ ÔN TẬP CHƯƠNG III}}\\[3pt]
+    {\fontsize{12}{14}\selectfont\textbf{TỨ PHÂN VỊ VÀ PHƯƠNG SAI MẪU SỐ LIỆU GHÉP NHÓM}}\\[3pt]
+    {\fontsize{11}{13}\selectfont\textit{(Chương trình GDPT 2018 -- Gồm 30 câu trọng tâm)}}
+\end{minipage}
+
+\par\vspace{4pt}
+\hrule height 0.6pt
+\vspace{4pt}
+\noindent\textit{Họ và tên học sinh:}\dotfill\hspace{0.8cm}\textit{Lớp:}\makebox[3.2cm]{\dotfill}
+\par\vspace{3pt}
+\hrule height 0.6pt
+\vspace{6pt}
+
+%% ==============================================================
+%% PHẦN I: TRẮC NGHIỆM (10 CÂU)
+%% ==============================================================
+\begin{center}
+    {\fontsize{13}{15}\selectfont\textbf{PHẦN I. TRẮC NGHIỆM NHIỀU LỰA CHỌN (10 CÂU)}}
+\end{center}
+
+\begin{enumerate}
+\item Cho các tứ phân vị $Q_1, Q_2, Q_3$ và trung vị $M_e$ của cùng một mẫu số liệu ghép nhóm. Khẳng định nào sau đây luôn đúng?
+\bonpa{$Q_1 = M_e$}{$Q_2 = M_e$}{$Q_3 = M_e$}{$\dfrac{Q_1 + Q_3}{2} = M_e$}
+
+\item Trong thống kê, giá trị $x_0$ của mẫu số liệu ghép nhóm được coi là giá trị ngoại lệ (giá trị bất thường) theo quy tắc khoảng tứ phân vị $\Delta_Q = Q_3 - Q_1$ khi nào?
+\bonpa{$x_0 > Q_3 + \Delta_Q$ hoặc $x_0 < Q_1 - \Delta_Q$}{$x_0 > Q_2 + 1{,}5\Delta_Q$ hoặc $x_0 < Q_2 - 1{,}5\Delta_Q$}{$x_0 > Q_3 + 1{,}5\Delta_Q$ hoặc $x_0 < Q_1 - 1{,}5\Delta_Q$}{$Q_1 - 1{,}5\Delta_Q \le x_0 \le Q_3 + 1{,}5\Delta_Q$}
+
+\item Cho mẫu số liệu ghép nhóm gồm $40$ số liệu như bảng sau:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Nhóm} & $[0; 10)$ & $[10; 20)$ & $[20; 30)$ & $[30; 40)$ \\ \hline
+\textbf{Tần số} & $5$ & $15$ & $12$ & $8$ \\ \hline
+\end{tabular}
+\end{center}
+Nhóm chứa tứ phân vị thứ ba $Q_3$ của mẫu số liệu ghép nhóm trên là
+\bonpa{$[0; 10)$}{$[10; 20)$}{$[20; 30)$}{$[30; 40)$}
+
+\item Khoảng tứ phân vị $\Delta_Q$ của mẫu số liệu ghép nhóm được cho ở bảng dưới đây bằng bao nhiêu?
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Nhóm} & $[2; 4)$ & $[4; 6)$ & $[6; 8)$ \\ \hline
+\textbf{Tần số} & $4$ & $12$ & $4$ \\ \hline
+\end{tabular}
+\end{center}
+\bonpa{$\dfrac{5}{3}$}{$\dfrac{10}{3}$}{$2$}{$\dfrac{7}{3}$}
+
+\item Ý nghĩa chính của khoảng tứ phân vị $\Delta_Q$ của một mẫu số liệu ghép nhóm là gì?
+\bonpa{Đo độ chênh lệch giữa giá trị lớn nhất và nhỏ nhất của toàn bộ mẫu.}{Đo giá trị trung bình của tất cả các phần tử trong mẫu.}{Luôn bằng độ lệch chuẩn $s$ nếu mẫu phân bố đối xứng.}{Đo mức độ phân tán của $50\%$ số liệu nằm ở chính giữa mẫu và không bị ảnh hưởng bởi các giá trị ngoại lệ.}
+
+\item Cho mẫu số liệu ghép nhóm có $k$ nhóm với giá trị đại diện $c_i$, tần số $n_i$ ($i = 1, \dots, k$), cỡ mẫu $n$ và số trung bình $\bar{x}$. Công thức tính nhanh phương sai $s^2$ là
+\bonpa{$s^2 = \dfrac{1}{n}\sum\limits_{i=1}^k n_i c_i^2 - \bar{x}^2$}{$s^2 = \dfrac{1}{n}\sum\limits_{i=1}^k n_i c_i^2 + \bar{x}^2$}{$s^2 = \dfrac{1}{n}\sum\limits_{i=1}^k (n_i c_i)^2 - \bar{x}^2$}{$s^2 = \sqrt{\dfrac{1}{n}\sum\limits_{i=1}^k n_i c_i^2 - \bar{x}^2}$}
+
+\item Một mẫu số liệu ghép nhóm có độ lệch chuẩn bằng $0{,}8$. Phương sai của mẫu số liệu ghép nhóm đó bằng
+\bonpa{$0{,}4$}{$0{,}64$}{$1{,}6$}{$\sqrt{0{,}8}$}
+
+\item Phương sai $s^2$ của mẫu số liệu ghép nhóm dưới đây bằng bao nhiêu?
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Nhóm} & $[1; 3)$ & $[3; 5)$ & $[5; 7)$ \\ \hline
+\textbf{Tần số} & $5$ & $10$ & $5$ \\ \hline
+\end{tabular}
+\end{center}
+\bonpa{$4$}{$1$}{$\sqrt{2}$}{$2$}
+
+\item Hai mẫu số liệu ghép nhóm $A$ và $B$ có cùng cỡ mẫu và cùng số trung bình. Biết mẫu $A$ có phương sai $s_A^2 = 4{,}5$ và mẫu $B$ có độ lệch chuẩn $s_B = 2{,}4$. Khẳng định nào sau đây đúng?
+\bonpa{Mẫu $A$ có mức độ phân tán nhỏ hơn (đồng đều hơn) mẫu $B$.}{Mẫu $B$ có mức độ phân tán nhỏ hơn (đồng đều hơn) mẫu $A$.}{Hai mẫu có mức độ phân tán như nhau.}{Không thể so sánh vì $s_A^2$ và $s_B$ khác đơn vị.}
+
+\item Cho một mẫu số liệu ghép nhóm $X$ có phương sai bằng $s^2$. Nếu cộng thêm cùng một hằng số $c$ vào tất cả các đầu mút của từng nhóm (giữ nguyên tần số), ta thu được mẫu số liệu ghép nhóm mới $Y$. Phương sai của mẫu $Y$ bằng
+\bonpa{$s^2 + c$}{$s^2 + c^2$}{$s^2$}{$c \cdot s^2$}
+\end{enumerate}
+
+\newpage
+%% ==============================================================
+%% PHẦN II: TRẢ LỜI NGẮN KÈM Ô LI (20 CÂU)
+%% ==============================================================
+\begin{center}
+    {\fontsize{13}{15}\selectfont\textbf{PHẦN II. BÀI TẬP TRẢ LỜI NGẮN (20 CÂU)}} \\[2pt]
+    {\small\textit{(Học sinh trình bày bảng tính và lời giải trực tiếp vào các khung ô li)}}
+\end{center}
+
+\subsubsection*{A. TỨ PHÂN VỊ VÀ KHOẢNG TỨ PHÂN VỊ (CÂU 11 -- 20)}
+
+\begin{enumerate}[start=11]
+\item Khảo sát thời gian tập thể dục mỗi ngày (đơn vị: phút) của $43$ học sinh thu được bảng ghép nhóm sau:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Thời gian (phút)} & $[0; 20)$ & $[20; 40)$ & $[40; 60)$ & $[60; 80)$ & $[80; 100)$ \\ \hline
+\textbf{Số học sinh} & $5$ & $9$ & $13$ & $10$ & $6$ \\ \hline
+\end{tabular}
+\end{center}
+Tính tứ phân vị thứ nhất $Q_1$ của mẫu số liệu ghép nhóm trên (làm tròn kết quả đến hàng phần trăm).
+\khungOli[5.2cm]
+
+\item Bảng dưới đây thống kê mức học phí $4$ năm đại học (đơn vị: triệu đồng) của $100$ sinh viên đã ra trường:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Học phí (triệu đồng)} & $[50; 60)$ & $[60; 70)$ & $[70; 80)$ & $[80; 90)$ & $[90; 100)$ \\ \hline
+\textbf{Số sinh viên} & $15$ & $25$ & $30$ & $15$ & $15$ \\ \hline
+\end{tabular}
+\end{center}
+Tính hiệu giữa tứ phân vị thứ ba và tứ phân vị thứ hai ($Q_3 - Q_2$).
+\khungOli[5.8cm]
+
+\item Kết quả khảo sát mức tiêu thụ điện (đơn vị: kWh) trong một tháng của $210$ hộ dân ở khu phố X được thống kê theo bảng sau:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Mức tiêu thụ điện (kWh)} & $[100; 200)$ & $[200; 300)$ & $[300; 400)$ & $[400; 500)$ \\ \hline
+\textbf{Số hộ dân} & $60$ & $70$ & $50$ & $30$ \\ \hline
+\end{tabular}
+\end{center}
+Tính khoảng tứ phân vị $\Delta_Q$ của mẫu số liệu ghép nhóm trên.
+\khungOli[5.5cm]
+
+\item Bạn Trang thống kê chiều cao (đơn vị: cm) của các học sinh nữ lớp 12C và lớp 12D ở bảng dưới đây:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Chiều cao (cm)} & $[155; 160)$ & $[160; 165)$ & $[165; 170)$ & $[170; 175)$ & $[175; 180)$ \\ \hline
+\textbf{Lớp 12C} & $2$ & $7$ & $12$ & $4$ & $1$ \\ \hline
+\textbf{Lớp 12D} & $5$ & $9$ & $8$ & $2$ & $2$ \\ \hline
+\end{tabular}
+\end{center}
+Tính hiệu khoảng tứ phân vị $\Delta_{Q}(12\text{D}) - \Delta_{Q}(12\text{C})$ (làm tròn kết quả đến hàng phần trăm).
+\khungOli[6.2cm]
+
+\item Thống kê thời gian chờ khám bệnh (đơn vị: phút) của $40$ bệnh nhân tại một phòng khám thu được bảng ghép nhóm có độ dài các khoảng không đều nhau:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Thời gian chờ (phút)} & $[0; 5)$ & $[5; 15)$ & $[15; 30)$ & $[30; 60)$ \\ \hline
+\textbf{Số bệnh nhân} & $8$ & $16$ & $12$ & $4$ \\ \hline
+\end{tabular}
+\end{center}
+Tính khoảng tứ phân vị $\Delta_Q$ của mẫu số liệu ghép nhóm trên.
+\khungOli[5.5cm]
+
+\item Đo chiều cao (đơn vị: cm) của $40$ cây tràm giống trong vườn ươm thu được bảng số liệu:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Chiều cao (cm)} & $[40; 45)$ & $[45; 50)$ & $[50; 55)$ & $[55; 60)$ \\ \hline
+\textbf{Số cây} & $4$ & $16$ & $16$ & $4$ \\ \hline
+\end{tabular}
+\end{center}
+Theo quy tắc phát hiện giá trị ngoại lệ, những cây có chiều cao lớn hơn ngưỡng $M = Q_3 + 1{,}5\Delta_Q$ được coi là phát triển vượt trội bất thường. Tính giá trị ngưỡng $M$ đó.
+\khungOli[5.8cm]
+
+\item Cho mẫu số liệu ghép nhóm có tổng cỡ mẫu $n = 40$ được cho ở bảng sau (với $x, y \in \mathbb{N}$):
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Nhóm} & $[10; 20)$ & $[20; 30)$ & $[30; 40)$ & $[40; 50)$ \\ \hline
+\textbf{Tần số} & $6$ & $x$ & $y$ & $8$ \\ \hline
+\end{tabular}
+\end{center}
+Biết rằng tứ phân vị thứ nhất của mẫu số liệu là $Q_1 = 24$. Tìm $x, y$ và tính giá trị của biểu thức $2x - y$.
+\khungOli[5.2cm]
+
+\item Bảng dưới đây thống kê tỉ lệ phần trăm (\%) số nhân viên của một tập đoàn phân theo số năm công tác:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Số năm công tác} & $[0; 3)$ & $[3; 6)$ & $[6; 9)$ & $[9; 12)$ & $[12; 15)$ \\ \hline
+\textbf{Tỉ lệ (\%)} & $15\%$ & $35\%$ & $30\%$ & $15\%$ & $5\%$ \\ \hline
+\end{tabular}
+\end{center}
+Tính khoảng tứ phân vị $\Delta_Q$ của mẫu số liệu ghép nhóm trên (làm tròn kết quả đến hàng phần trăm).
+\khungOli[5.5cm]
+
+\item Khảo sát doanh thu mỗi ngày (đơn vị: triệu đồng) của $50$ cửa hàng tiện lợi trong cùng hệ thống:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Doanh thu (triệu đồng)} & $[20; 30)$ & $[30; 40)$ & $[40; 50)$ & $[50; 60)$ \\ \hline
+\textbf{Số cửa hàng} & $6$ & $14$ & $20$ & $10$ \\ \hline
+\end{tabular}
+\end{center}
+Tính khoảng tứ phân vị $\Delta_Q$ để biết độ chênh lệch doanh thu của nhóm $50\%$ cửa hàng ở mức trung bình (làm tròn kết quả đến hàng phần trăm).
+\khungOli[5.5cm]
+
+\item Thống kê tốc độ gõ bàn phím (đơn vị: từ/phút) của $60$ thí sinh dự thi tin học văn phòng:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Tốc độ (từ/phút)} & $[30; 40)$ & $[40; 50)$ & $[50; 60)$ & $[60; 70)$ & $[70; 80)$ \\ \hline
+\textbf{Số thí sinh} & $9$ & $15$ & $18$ & $12$ & $6$ \\ \hline
+\end{tabular}
+\end{center}
+Tính tổng của ba tứ phân vị $Q_1 + Q_2 + Q_3$ (làm tròn kết quả đến hàng phần trăm).
+\khungOli[6.0cm]
+\end{enumerate}
+
+\subsubsection*{B. PHƯƠNG SAI VÀ ĐỘ LỆCH CHUẨN (CÂU 21 -- 30)}
+
+\begin{enumerate}[start=21]
+\item Một trung tâm mắt kính khám sàng lọc miễn phí cho $100$ học sinh để kiểm tra mức độ cận thị (đơn vị: độ đi-ốp) và thu được mẫu số liệu sau:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Mức độ cận thị} & $[0{,}0; 0{,}5)$ & $[0{,}5; 1{,}0)$ & $[1{,}0; 1{,}5)$ & $[1{,}5; 2{,}0)$ & $[2{,}0; 2{,}5)$ \\ \hline
+\textbf{Số học sinh} & $20$ & $15$ & $30$ & $20$ & $15$ \\ \hline
+\end{tabular}
+\end{center}
+Tính phương sai $s^2$ của mẫu số liệu ghép nhóm trên (làm tròn kết quả đến hàng phần trăm).
+\khungOli[5.8cm]
+
+\item Bảng dưới đây thống kê cự li ném tạ (đơn vị: mét) qua $100$ lần tập luyện của một vận động viên:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Cự li (m)} & $[19{,}0; 19{,}5)$ & $[19{,}5; 20{,}0)$ & $[20{,}0; 20{,}5)$ & $[20{,}5; 21{,}0)$ & $[21{,}0; 21{,}5)$ \\ \hline
+\textbf{Tần số} & $13$ & $45$ & $24$ & $12$ & $6$ \\ \hline
+\end{tabular}
+\end{center}
+Tính độ lệch chuẩn $s$ của mẫu số liệu ghép nhóm trên (làm tròn kết quả đến hàng phần trăm).
+\khungOli[5.8cm]
+
+\item Cho mẫu số liệu ghép nhóm thống kê mức lương tháng (đơn vị: triệu đồng) của $60$ nhân viên ở mỗi công ty A và B như sau:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\textbf{Mức lương (triệu)} & $[10; 15)$ & $[15; 20)$ & $[20; 25)$ & $[25; 30)$ & $[30; 35)$ & $[35; 40)$ \\ \hline
+\textbf{Công ty A} & $15$ & $18$ & $10$ & $10$ & $5$ & $2$ \\ \hline
+\textbf{Công ty B} & $25$ & $15$ & $7$ & $5$ & $4$ & $4$ \\ \hline
+\end{tabular}
+\end{center}
+Tính hiệu phương sai $s_B^2 - s_A^2$ (làm tròn kết quả đến hàng phần trăm).
+\khungOli[6.5cm]
+
+\item Bảng dưới đây biểu diễn mẫu số liệu ghép nhóm về chiều cao (đơn vị: cm) của $43$ học sinh trong một lớp:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|c|}
+\hline
+\textbf{Chiều cao (cm)} & $[150; 155)$ & $[155; 160)$ & $[160; 165)$ & $[165; 170)$ & $[170; 175)$ & $[175; 180)$ \\ \hline
+\textbf{Tần số} & $5$ & $10$ & $12$ & $9$ & $4$ & $3$ \\ \hline
+\end{tabular}
+\end{center}
+Tính phương sai $s^2$ của mẫu số liệu ghép nhóm trên (làm tròn kết quả đến hàng phần trăm).
+\khungOli[6.0cm]
+
+\item Thống kê mức tiền thưởng cuối năm (đơn vị: triệu đồng) của $40$ nhân viên thu được bảng số liệu sau:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|c|}
+\hline
+\textbf{Tiền thưởng (triệu)} & $[2; 4)$ & $[4; 6)$ & $[6; 8)$ & $[8; 10)$ & $[10; 12)$ \\ \hline
+\textbf{Số nhân viên} & $2$ & $x$ & $16$ & $y$ & $6$ \\ \hline
+\end{tabular}
+\end{center}
+Biết rằng mức tiền thưởng trung bình của $40$ nhân viên là $\bar{x} = 7{,}2$ triệu đồng. Tìm $x, y$ và tính phương sai $s^2$ của mẫu số liệu ghép nhóm trên.
+\khungOli[6.0cm]
+
+\item Cho mẫu số liệu ghép nhóm $X$ gồm $20$ số liệu: $[1; 3): 5$, $[3; 5): 10$, $[5; 7): 5$. Nhân mỗi giá trị trong mẫu lên $2$ lần rồi cộng thêm $10$, ta được mẫu số liệu ghép nhóm $Y$: $[12; 16): 5$, $[16; 20): 10$, $[20; 24): 5$. Tính tỉ số phương sai $\dfrac{s_Y^2}{s_X^2}$.
+\khungOli[5.0cm]
+
+\item Thống kê chi phí khám chữa bệnh (đơn vị: nghìn đồng) của $50$ lượt bệnh nhân thu được bảng ghép nhóm có độ dài nhóm không đều nhau:
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Chi phí (nghìn đồng)} & $[100; 200)$ & $[200; 400)$ & $[400; 600)$ & $[600; 1000)$ \\ \hline
+\textbf{Số lượt bệnh nhân} & $10$ & $20$ & $15$ & $5$ \\ \hline
+\end{tabular}
+\end{center}
+Tính phương sai $s^2$ của mẫu số liệu ghép nhóm trên.
+\khungOli[5.8cm]
+
+\item Khảo sát tỉ lệ dung lượng pin còn lại sau $8$ giờ sử dụng liên tục của một lô điện thoại mới cho kết quả dưới dạng bảng tần suất (\%):
+\begin{center}
+\begin{tabular}{|l|c|c|c|c|}
+\hline
+\textbf{Dung lượng pin còn lại (\%)} & $[10; 30)$ & $[30; 50)$ & $[50; 70)$ & $[70; 90)$ \\ \hline
+\textbf{Tỉ lệ (\%)} & $10\%$ & $30\%$ & $40\%$ & $20\%$ \\ \hline
+\end{tabular}
+\end{center}
+Tính phương sai $s^2$ của mẫu số liệu ghép nhóm trên.
+\khungOli[5.5cm]
+
+\item Cho mẫu số liệu ghép nhóm đối xứng phụ thuộc vào tần số nguyên dương $x$:
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Nhóm} & $[10; 20)$ & $[20; 30)$ & $[30; 40)$ \\ \hline
+\textbf{Tần số} & $x$ & $20$ & $x$ \\ \hline
+\end{tabular}
+\end{center}
+Biết rằng phương sai của mẫu số liệu ghép nhóm trên bằng $s^2 = 50$. Tìm giá trị của $x$.
+\khungOli[5.0cm]
+
+\item Tại một siêu thị, doanh thu bán hàng trong ngày (đơn vị: triệu đồng) của $20$ nhân viên Tổ 1 và $30$ nhân viên Tổ 2 được ghi nhận như sau:
+\begin{center}
+\begin{tabular}{|l|c|c|c|}
+\hline
+\textbf{Doanh thu (triệu đồng)} & $[10; 20)$ & $[20; 30)$ & $[30; 40)$ \\ \hline
+\textbf{Tổ 1 ($20$ người)} & $4$ & $10$ & $6$ \\ \hline
+\textbf{Tổ 2 ($30$ người)} & $6$ & $10$ & $14$ \\ \hline
+\end{tabular}
+\end{center}
+Gộp số liệu của cả hai tổ thành một mẫu số liệu ghép nhóm chung gồm $50$ nhân viên, hãy tính phương sai $s^2$ của mẫu số liệu chung đó.
+\khungOli[6.0cm]
+\end{enumerate}
+
+\end{document}
