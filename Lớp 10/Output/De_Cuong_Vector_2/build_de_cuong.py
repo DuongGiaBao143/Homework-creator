@@ -1,0 +1,652 @@
+import re
+import shutil
+import subprocess
+from pathlib import Path
+import pymupdf
+
+OUT_DIR = Path(r"d:\Tao_De\Lớp 10\Output\De_Cuong_Vector_2")
+TEX_PATH = OUT_DIR / "De_Cuong_Vector_2.tex"
+FULL_PDF = OUT_DIR / "De_Cuong_Vector_2.pdf"
+EXAM_PDF = OUT_DIR / "De_Cuong.pdf"
+ANS_PDF = OUT_DIR / "De_Cuong_Ans.pdf"
+
+EXPORT_TARGETS = [
+    (Path(r"D:\Document\Dạy học\Dạy lớp 10\BTVN\Chương IV\Đề cương ôn tập Chương 4 - Vectơ (Số 2).pdf"), "exam"),
+    (Path(r"D:\Document\Dạy học\Dạy lớp 10\BTVN\Chương IV\Ans\Đề cương ôn tập Chương 4 - Vectơ (Số 2) - Đáp án.pdf"), "ans"),
+    (Path(r"D:\Document\Dạy học\Dạy lớp 10\BTVN\Chương IV\Ans\Đề cương ôn tập Chương 4 - Vectơ (Số 2) có đáp án.pdf"), "full"),
+    (Path(r"D:\Document\Dạy học\Dạy lớp 10\Ôn tập\Vector\De_Cuong_Vector_2.pdf"), "exam"),
+    (Path(r"D:\Document\Dạy học\Dạy lớp 10\Ôn tập\Vector\Ans\De_Cuong_Vector_2_Ans.pdf"), "ans"),
+]
+
+QUOTES = [
+    r"Math gives us hope that every problem has a solution",
+    r"Mathematics is about understanding, not just numbers",
+    r"The essence of mathematics lies in its freedom",
+    r"Pure mathematics is the poetry of logical ideas",
+    r"In mathematics, asking good questions matters most",
+    r"Everything around you is built on mathematics",
+    r"Mathematics is the queen of the sciences",
+    r"Stay with tough problems a little bit longer",
+    r"Success is the sum of small daily efforts",
+    r"Think deeply, check carefully, solve cleanly",
+    r"Genius is 1\% inspiration and 99\% perspiration",
+    r"Practice makes perfect — keep solving!",
+]
+
+
+def build_header_quote_macro(max_pages: int = 30) -> str:
+    lines = [r"\newcommand{\headerQuote}{%", r"  \ifcase\numexpr\value{page}-1\relax"]
+    lines.append(f"    {QUOTES[0]}%")
+    for i in range(1, max_pages):
+        q = QUOTES[i % len(QUOTES)]
+        lines.append(f"  \\or {q}%")
+    lines.append(r"  \else Practice makes perfect — keep solving!%")
+    lines.append(r"  \fi")
+    lines.append(r"}")
+    return "\n".join(lines)
+
+
+PREAMBLE = r"""\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.3cm,top=0.8cm,bottom=1.0cm,includehead,includefoot,headheight=18pt,headsep=6pt,footskip=16pt]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace,multicol}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+
+\definecolor{ink}{RGB}{30,55,70}
+\definecolor{accent}{RGB}{18,82,112}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+
+__HEADER_QUOTE__
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\textit{\color{gray!70!black}\headerQuote}}
+\rhead{\small\textbf{\color{ink}Người biên soạn: Dương Gia Bảo}}
+\lfoot{}
+\rfoot{\small Trang \thepage/__EXAM_PAGES__}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancypagestyle{dapan}{
+  \fancyhf{}
+  \lhead{\footnotesize\textit{\color{gray!70!black}\headerQuote}}
+  \rhead{\small\textbf{\color{ink}Người biên soạn: Dương Gia Bảo}}
+  \lfoot{\small\textit{\color{gray!60!black}Đáp án Đề cương Ôn tập Chương IV — Vectơ (Số 2) — Toán 10 KNTT}}
+  \rfoot{\small Trang \thepage/__ANS_PAGES__}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\newcommand{\chapterbanner}[2]{%
+  \par\vspace{4pt}\noindent
+  \begin{tikzpicture}
+    \node[draw=accent, fill=accent!6, rounded corners=4pt, inner xsep=10pt, inner ysep=6pt, text width=\dimexpr\linewidth-20.8pt\relax, line width=0.8pt] {%
+      {\large\bfseries\color{ink}#1}\\[2pt]
+      {\small\color{gray!75!black}#2}%
+    };
+  \end{tikzpicture}\par\nopagebreak\vspace{5pt}
+}
+
+\newcommand{\parttitle}[1]{\par\vspace{3pt}\needspace{3\baselineskip}{\normalsize\bfseries\color{accent}#1}\par\nopagebreak\vspace{2pt}}
+\newcommand{\answerbox}{%
+  {\unskip\nobreak\hfil\penalty50\hskip1.2em\hbox{}\nobreak\hfil
+  \mbox{\textit{Đáp số:}\ \fbox{\rule{0pt}{8.5pt}\hspace{2.2cm}}}%
+  \parfillskip=0pt\finalhyphendemerits=0\par}%
+}
+
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.15cm,labelsep=.15cm,itemsep=2pt,topsep=2pt,parsep=0pt}
+
+\newcommand{\oli}[1]{%
+  \par\nopagebreak\vspace{2.5pt}\noindent
+  \begin{tikzpicture}
+    \draw[step=0.5cm, color=cyan!25!gray!25, line width=0.25pt] (0,0) grid (\linewidth, #1);
+    \draw[color=cyan!50!gray!45, line width=0.45pt, rounded corners=2pt] (0,0) rectangle (\linewidth, #1);
+    \node[anchor=north west, font=\scriptsize\itshape\color{gray!75}, inner sep=3pt] at (0, #1) {Bài làm:};
+  \end{tikzpicture}\par\vspace{3.5pt}
+}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+"""
+
+TIKZ_Q4 = r"""\begin{tikzpicture}[scale=0.52, >=Stealth]
+  \draw[step=1, color=gray!35, line width=0.35pt] (0,0) grid (9,4);
+  \draw[->, accent, line width=1.25pt] (1,1) -- (4,3);
+  \draw[->, red!75!black, line width=1.25pt] (4,2) -- (8,1);
+  \fill[accent] (1,1) circle (2.4pt) node[below left, font=\scriptsize] {$A$};
+  \fill[accent] (4,3) circle (2.4pt) node[above right, font=\scriptsize] {$B$};
+  \fill[red!75!black] (4,2) circle (2.4pt) node[below left, font=\scriptsize] {$C$};
+  \fill[red!75!black] (8,1) circle (2.4pt) node[below right, font=\scriptsize] {$D$};
+  \node[above left, font=\scriptsize, accent] at (2.4,2.1) {$\vec{u}$};
+  \node[above right, font=\scriptsize, red!75!black] at (6.0,1.5) {$\vec{v}$};
+  \draw[<->, gray!80!black, line width=0.5pt] (0,-0.45) -- (1,-0.45) node[midway, below, font=\scriptsize] {$1$};
+\end{tikzpicture}"""
+
+TIKZ_Q15 = r"""\begin{tikzpicture}[scale=0.60, >=Stealth]
+  \fill[cyan!8] (-0.4,0) rectangle (5.4,2.6);
+  \draw[line width=1.0pt, accent] (-0.4,0) -- (5.4,0);
+  \draw[line width=1.0pt, accent] (-0.4,2.6) -- (5.4,2.6);
+  \draw[->, orange!85!black, line width=1.1pt] (0.5,2.6) -- (0.5,0) node[midway, left, font=\scriptsize] {$\vec{v}_x$};
+  \draw[->, blue!75!black, line width=1.1pt] (0.5,2.6) -- (2.7,2.6) node[midway, above, font=\scriptsize] {$\vec{v}_n$};
+  \draw[->, red!75!black, line width=1.2pt, dashed] (0.5,2.6) -- (2.7,0);
+  \fill (0.5,2.6) circle (2.2pt);
+  \fill (2.7,0) circle (2.2pt);
+  \node[right, font=\scriptsize, red!75!black] at (1.7,1.3) {$\vec{v}$};
+  \draw[<->, gray!80!black] (4.7,0) -- (4.7,2.6) node[midway, right, font=\scriptsize] {$240\text{ m}$};
+\end{tikzpicture}"""
+
+TIKZ_Q25 = r"""\begin{tikzpicture}[scale=0.60, >=Stealth]
+  \draw[line width=1.2pt] (-2.8,2.2) -- (2.8,2.2);
+  \draw[dashed, gray!70] (-1.8,0.4) -- (1.8,0.4);
+  \coordinate (A) at (-1.2,2.2);
+  \coordinate (B) at (2.1,2.2);
+  \coordinate (O) at (0,0.4);
+  \draw[line width=1.0pt, accent] (O) -- (A);
+  \draw[line width=1.0pt, accent] (O) -- (B);
+  \draw[line width=0.9pt] (O) -- (0,-0.4);
+  \filldraw[fill=orange!20, draw=orange!80!black, line width=0.8pt] (-0.45,-0.9) rectangle (0.45,-0.4);
+  \node[font=\scriptsize] at (0,-0.65) {$P$};
+  \node[above, font=\scriptsize] at (A) {$A$};
+  \node[above, font=\scriptsize] at (B) {$B$};
+  \node[below left, font=\scriptsize] at (O) {$O$};
+  \node[font=\scriptsize, accent] at (-1.1,0.7) {$60^\circ$};
+  \node[font=\scriptsize, accent] at (1.3,0.68) {$30^\circ$};
+\end{tikzpicture}"""
+
+TIKZ_Q27 = r"""\begin{tikzpicture}[scale=0.45, >=Stealth]
+  \draw[step=1, color=gray!25, line width=0.2pt] (-3,-1) grid (5,6);
+  \draw[->, line width=0.6pt] (-3.2,0) -- (5.3,0) node[below, font=\scriptsize] {$x$};
+  \draw[->, line width=0.6pt] (0,-1.2) -- (0,6.2) node[right, font=\scriptsize] {$y$};
+  \node[below left, font=\scriptsize] at (0,0) {$O$};
+  \draw[dashed, gray!65] (-2,0) -- (-2,3) -- (0,3);
+  \draw[dashed, gray!65] (4,0) -- (4,1) -- (0,1);
+  \draw[dashed, gray!65] (1,0) -- (1,5) -- (0,5);
+  \draw[->, accent, line width=1.25pt] (0,0) -- (-2,3);
+  \draw[->, red!75!black, line width=1.25pt] (4,1) -- (1,5);
+  \fill[accent] (-2,3) circle (3pt) node[above left, font=\scriptsize] {$A$};
+  \fill[red!75!black] (4,1) circle (3pt) node[right, font=\scriptsize] {$B$};
+  \fill[red!75!black] (1,5) circle (3pt) node[above right, font=\scriptsize] {$C$};
+  \node[below, font=\scriptsize] at (-2,0) {$-2$};
+  \node[below, font=\scriptsize] at (1,0) {$1$};
+  \node[below, font=\scriptsize] at (4,0) {$4$};
+  \node[below right, font=\scriptsize] at (0,1) {$1$};
+  \node[right, font=\scriptsize] at (0,3) {$3$};
+  \node[left, font=\scriptsize] at (0,5) {$5$};
+\end{tikzpicture}"""
+
+TIKZ_ANS_Q3 = r"""\begin{tikzpicture}[scale=0.72, >=Stealth]
+  \draw[line width=0.8pt] (0,0) rectangle (2.6,2.6);
+  \draw[gray!60, dashed] (0,2.6) -- (2.6,0);
+  \draw[gray!60, dashed] (0,0) -- (2.6,2.6);
+  \draw[->, accent, line width=1.1pt] (1.3,2.6) -- (2.6,1.3);
+  \draw[->, red!75!black, line width=1.0pt] (0,2.6) -- (1.3,1.3);
+  \draw[->, red!75!black, line width=1.0pt] (1.3,1.3) -- (2.6,0);
+  \draw[->, red!75!black, line width=1.0pt] (0,1.3) -- (1.3,0);
+  \foreach \x/\y/\lbl/\pos in {0/2.6/A/above left, 2.6/2.6/B/above right, 2.6/0/C/below right, 0/0/D/below left, 1.3/1.3/O/right, 1.3/2.6/M/above, 2.6/1.3/N/right, 1.3/0/P/below, 0/1.3/Q/left} {
+    \fill (\x,\y) circle (1.8pt) node[\pos, font=\scriptsize] {$\lbl$};
+  }
+\end{tikzpicture}"""
+
+
+def side_by_side(text_tex: str, tikz_tex: str, text_ratio: float = 0.62) -> str:
+    fig_ratio = round(0.97 - text_ratio, 2)
+    return (
+        f"\\begin{{minipage}}[t]{{{text_ratio}\\linewidth}}\n"
+        f"{text_tex}\n"
+        f"\\end{{minipage}}\\hfill\n"
+        f"\\begin{{minipage}}[t]{{{fig_ratio}\\linewidth}}\n"
+        f"\\vspace{{-6pt}}\\centering\n"
+        f"{tikz_tex}\n"
+        f"\\end{{minipage}}"
+    )
+
+
+def get_questions():
+    # Tuple: (section_header_or_None, text_tex, oli_height, break_before_bool)
+    qs = [
+        # ==================== TRANG 1: CHỦ ĐỀ 1 (CÂU 1 - 3) ====================
+        (r"\parttitle{CHỦ ĐỀ 1. CÁC KHÁI NIỆM MỞ ĐẦU (Bài 7 — Câu 1 đến Câu 6)}",
+         r"Cho bát giác đều $ABCDEFGH$. Có bao nhiêu vectơ khác vectơ $\vec{0}$ có điểm đầu và điểm cuối là các đỉnh phân biệt của bát giác đều đó?\answerbox",
+         "4.5cm", False),
+        (None,
+         r"Cho hình thoi $ABCD$ có tâm $O$. Có bao nhiêu vectơ khác vectơ $\vec{0}$ có điểm đầu và điểm cuối lấy từ tập hợp $\{A, B, C, D, O\}$ và cùng hướng với vectơ $\vec{AO}$?\answerbox",
+         "4.5cm", False),
+        (None,
+         r"Cho hình vuông $ABCD$ tâm $O$. Gọi $M, N, P, Q$ lần lượt là trung điểm của các cạnh $AB, BC, CD, DA$. Có bao nhiêu vectơ khác $\vec{MN}$ và bằng vectơ $\vec{MN}$ có điểm đầu và điểm cuối thuộc tập hợp $\{A, B, C, D, O, M, N, P, Q\}$?\answerbox",
+         "4.5cm", False),
+
+        # ==================== TRANG 2: CÂU 4 - 6 ====================
+        (None,
+         side_by_side(
+             r"Cho lưới ô vuông gồm các hình vuông đơn vị có cạnh bằng $1$ (như hình vẽ bên) với hai vectơ $\vec{u} = \vec{AB}$ và $\vec{v} = \vec{CD}$. Tính giá trị biểu thức $K = |\vec{u}|^2 + |\vec{v}|^2$.\answerbox",
+             TIKZ_Q4, text_ratio=0.56),
+         "5.5cm", True),
+        (None,
+         r"Cho tam giác $ABC$ cân tại $A$ có $\widehat{BAC} = 120^\circ$ và $AB = 6\text{ cm}$. Gọi $M$ là trung điểm của cạnh $BC$. Tính độ dài của vectơ $\vec{AM}$ (theo đơn vị cm).\answerbox",
+         "5.5cm", False),
+        (None,
+         r"Cho hình thang cân $ABCD$ có hai đáy $AB = 4$, $CD = 10$ và cạnh bên $AD = 5$. Gọi $H$ là hình chiếu vuông góc của đỉnh $A$ lên đường thẳng $CD$. Tính độ dài của vectơ $\vec{AH}$.\answerbox",
+         "5.5cm", False),
+
+        # ==================== TRANG 3: CHỦ ĐỀ 2 (CÂU 7 - 10) ====================
+        (r"\parttitle{CHỦ ĐỀ 2. TỔNG VÀ HIỆU CỦA HAI VECTƠ (Bài 8 — Câu 7 đến Câu 15)}",
+         r"Cho hình thang cân $ABCD$ có hai đáy $AB = 6$ và $CD = 14$. Gọi $M, N$ lần lượt là trung điểm của hai đường chéo $AC$ và $BD$. Tính độ dài của vectơ $\vec{u} = \vec{MN}$.\answerbox",
+         "4.0cm", True),
+        (None,
+         r"Cho lục giác đều $ABCDEF$ tâm $O$ có cạnh bằng $4$. Tính độ dài của vectơ $\vec{v} = \vec{AB} + \vec{AF} + \vec{AO}$.\answerbox",
+         "4.0cm", False),
+        (None,
+         r"Cho hình thoi $ABCD$ có cạnh bằng $5$ và góc $\widehat{BAD} = 120^\circ$. Tính độ dài của vectơ $\vec{w} = \vec{AB} + \vec{AD}$.\answerbox",
+         "4.0cm", False),
+        (None,
+         r"Cho tam giác $ABC$ vuông tại $B$ có $BA = 5$ và $BC = 12$. Tính giá trị của $|\vec{BA} + \vec{BC}|$.\answerbox",
+         "4.0cm", False),
+
+        # ==================== TRANG 4: CÂU 11 - 14 ====================
+        (None,
+         r"Cho hình chữ nhật $ABCD$ có $AB = 9$ và $AD = 12$. Tính độ dài của vectơ $\vec{u} = \vec{BA} + \vec{BC} + \vec{BD}$.\answerbox",
+         "4.5cm", True),
+        (None,
+         r"Cho năm điểm $A, B, C, D, E$ trong đó độ dài đoạn thẳng $AE = 7$. Đặt $\vec{u} = \vec{AB} - \vec{CB} + \vec{CD} - \vec{ED}$. Tính độ dài của vectơ $\vec{u}$.\answerbox",
+         "4.5cm", False),
+        (None,
+         r"Hai lực $\vec{F}_1$ và $\vec{F}_2$ cùng tác dụng vào một chất điểm tại $O$, hợp với nhau góc $60^\circ$ và có độ lớn lần lượt là $|\vec{F}_1| = 6\text{ N}$, $|\vec{F}_2| = 10\text{ N}$. Tính độ lớn của hợp lực $\vec{F} = \vec{F}_1 + \vec{F}_2$ (đơn vị: Niutơn).\answerbox",
+         "4.5cm", False),
+        (None,
+         r"Một máy bay bay theo hướng Bắc với vận tốc riêng $400\text{ km/h}$ gặp luồng gió thổi theo hướng Tây với vận tốc $300\text{ km/h}$. Tính tốc độ thực tế của máy bay so với mặt đất (đơn vị: km/h).\answerbox",
+         "4.5cm", False),
+
+        # ==================== TRANG 5: CÂU 15 + CHỦ ĐỀ 3 (CÂU 16 - 17) ====================
+        (None,
+         side_by_side(
+             r"Một người lái đò chèo xuồng qua một khúc sông có hai bờ song song, bề rộng dòng sông là $240\text{ m}$. Người đó luôn hướng mũi xuồng vuông góc với bờ sông với vận tốc riêng $v_x = 4\text{ m/s}$, trong khi nước sông chảy xuôi dòng với vận tốc $v_n = 3\text{ m/s}$. Tính độ dài quãng đường thực tế mà chiếc xuồng đã đi được khi sang tới bờ bên kia (đơn vị: mét).\answerbox",
+             TIKZ_Q15, text_ratio=0.62),
+         "5.0cm", True),
+        (r"\parttitle{CHỦ ĐỀ 3. TÍCH CỦA MỘT VECTƠ VỚI MỘT SỐ (Bài 9 — Câu 16 đến Câu 26)}",
+         r"Cho đoạn thẳng $AB = 15\text{ cm}$. Lấy điểm $M$ nằm trên tia đối của tia $AB$ sao cho $MA = 6\text{ cm}$. Biết $\vec{AM} = k\vec{AB}$, tìm giá trị của số thực $k$ (viết dưới dạng số thập phân).\answerbox",
+         "5.0cm", False),
+        (None,
+         r"Cho hình bình hành $ABCD$ tâm $O$. Gọi $G$ là trọng tâm của tam giác $BCD$. Biết $\vec{AG} = m\vec{AB} + n\vec{AD}$. Tính giá trị của biểu thức $P = 3m + 6n$.\answerbox",
+         "5.0cm", False),
+
+        # ==================== TRANG 6: CÂU 18 - 21 ====================
+        (None,
+         r"Cho tam giác $ABC$. Lấy điểm $D$ thỏa mãn $\vec{BD} = \dfrac{1}{3}\vec{BC}$ và $E$ là trung điểm của $AC$. Gọi $M$ là trung điểm của đoạn $DE$. Khi phân tích $\vec{AM} = x\vec{AB} + y\vec{AC}$, tính giá trị của $T = 12x + 12y$.\answerbox",
+         "4.0cm", True),
+        (None,
+         r"Cho tam giác $ABC$. Gọi $M$ là trung điểm cạnh $AB$ và điểm $N$ thỏa mãn $\vec{NC} + 2\vec{NA} = \vec{0}$. Đường thẳng $MN$ cắt đường thẳng $BC$ tại $P$. Biết $\vec{BP} = k\vec{BC}$, tìm giá trị của $k$.\answerbox",
+         "4.5cm", False),
+        (None,
+         r"Cho hình vuông $ABCD$ có cạnh bằng $4$. Gọi $M$ là trung điểm của cạnh $CD$. Tính giá trị của $|\vec{AB} + 2\vec{AM}|^2$.\answerbox",
+         "4.0cm", False),
+        (None,
+         r"Cho tam giác đều $ABC$ cạnh $6\text{ cm}$ có trọng tâm $G$. Tập hợp các điểm $M$ thỏa mãn đẳng thức $|\vec{MA} + \vec{MB} + \vec{MC}| = |\vec{AB} - \vec{AC}|$ là một đường tròn có bán kính $R$ bằng bao nhiêu cm?\answerbox",
+         "4.0cm", False),
+
+        # ==================== TRANG 7: CÂU 22 - 25 ====================
+        (None,
+         r"Cho hình chữ nhật $ABCD$ có $AB = 6\text{ cm}$ và $AD = 8\text{ cm}$. Tập hợp các điểm $M$ thỏa mãn đẳng thức $|\vec{MA} + \vec{MB} + \vec{MC} + \vec{MD}| = |\vec{AB} + \vec{AD}|$ là một đường tròn có bán kính $R$ bằng bao nhiêu cm?\answerbox",
+         "3.5cm", True),
+        (None,
+         r"Cho tứ giác $ABCD$. Gọi $I, J$ lần lượt là trung điểm của các cạnh $AB, CD$ và gọi $G$ là trung điểm của đoạn $IJ$. Với điểm $O$ bất kì ta luôn có hệ thức $\vec{OA} + \vec{OB} + \vec{OC} + \vec{OD} = k\vec{OG}$. Tìm giá trị của hằng số $k$.\answerbox",
+         "3.5cm", False),
+        (None,
+         r"Cho tam giác $ABC$ có độ dài cạnh $AC = 10\text{ cm}$. Điểm $M$ thỏa mãn đẳng thức $\vec{MA} + 2\vec{MB} - \vec{MC} = \vec{0}$. Tính độ dài đoạn thẳng $BM$ (đơn vị: cm).\answerbox",
+         "3.5cm", False),
+        (None,
+         side_by_side(
+             r"Một vật nặng có trọng lượng $P = 100\text{ N}$ được treo đứng yên vào trần nhà bằng hai sợi dây nhẹ $OA$ và $OB$ sao cho dây $OA$ hợp với phương ngang một góc $60^\circ$, dây $OB$ hợp với phương ngang một góc $30^\circ$ (như hình vẽ bên, $\widehat{AOB} = 90^\circ$). Tính độ lớn lực căng của sợi dây $OB$ (đơn vị: Niutơn).\answerbox",
+             TIKZ_Q25, text_ratio=0.62),
+         "4.0cm", False),
+
+        # ==================== TRANG 8: CÂU 26 + CHỦ ĐỀ 4 (CÂU 27 - 28) ====================
+        (None,
+         r"Cho tam giác $ABC$ có hai trung tuyến $BM$ và $CN$ cắt nhau tại trọng tâm $G$. Đặt $\vec{u} = \vec{BM}$ và $\vec{v} = \vec{CN}$. Khi phân tích $\vec{BC} = a\vec{u} + b\vec{v}$, tính giá trị biểu thức $S = 3a - 3b$.\answerbox",
+         "5.0cm", True),
+        (r"\parttitle{CHỦ ĐỀ 4. VECTƠ TRONG MẶT PHẲNG TỌA ĐỘ (Bài 10 — Câu 27 đến Câu 37)}",
+         side_by_side(
+             r"Trong mặt phẳng tọa độ $Oxy$, cho hai vectơ $\vec{u} = \vec{OA}$ và $\vec{v} = \vec{BC}$ với các điểm $A(-2; 3)$, $B(4; 1)$, $C(1; 5)$ như hình vẽ bên. Gọi $\vec{w} = 2\vec{u} - \vec{v} = (x_0; y_0)$. Tính $x_0 + y_0$.\answerbox",
+             TIKZ_Q27, text_ratio=0.60),
+         "5.0cm", False),
+        (None,
+         r"Trong mặt phẳng tọa độ $Oxy$, cho hai vectơ $\vec{a} = (3; -1)$ và $\vec{b} = (-2; 5)$. Biết vectơ $\vec{c} = (5; 7)$ được biểu diễn dưới dạng $\vec{c} = m\vec{a} + n\vec{b}$. Tính giá trị biểu thức $m^2 + n^2$.\answerbox",
+         "5.0cm", False),
+
+        # ==================== TRANG 9: CÂU 29 - 32 ====================
+        (None,
+         r"Trong mặt phẳng tọa độ $Oxy$, cho tam giác $ABC$ có $A(1; -2)$, $B(4; 5)$ và $C(9; 4)$. Gọi $M, N$ lần lượt là trung điểm của các cạnh $AB$ và $BC$. Tính độ dài của vectơ $\vec{MN}$.\answerbox",
+         "4.5cm", True),
+        (None,
+         r"Trong mặt phẳng tọa độ $Oxy$, cho hình bình hành $ABCD$ có $A(-2; 1)$, $B(3; 5)$ và tâm $I(1; 2)$. Gọi $C(x_C; y_C)$ và $D(x_D; y_D)$. Tính giá trị của tổng $x_C + y_C + x_D + y_D$.\answerbox",
+         "4.5cm", False),
+        (None,
+         r"Trong mặt phẳng tọa độ $Oxy$, cho hai điểm $A(2; -3)$ và $B(-4; 6)$. Điểm $M(x_M; y_M)$ thuộc đường thẳng $AB$ thỏa mãn $\vec{MA} = -2\vec{MB}$. Tính giá trị biểu thức $x_M + 2y_M$.\answerbox",
+         "4.5cm", False),
+        (None,
+         r"Trong mặt phẳng tọa độ $Oxy$, cho ba điểm $A(-1; 4)$, $B(2; -2)$ và $C(5; m)$ với $m$ là tham số thực. Tìm giá trị của $m$ để ba điểm $A, B, C$ thẳng hàng.\answerbox",
+         "4.5cm", False),
+
+        # ==================== TRANG 10: CÂU 33 - 36 ====================
+        (None,
+         r"Trong mặt phẳng tọa độ $Oxy$, cho hai điểm $A(-2; 3)$ và $B(4; 6)$. Đường thẳng $AB$ cắt trục tung $Oy$ tại điểm $N(0; y_N)$. Tính giá trị của $y_N$.\answerbox",
+         "4.0cm", True),
+        (None,
+         r"Trong mặt phẳng tọa độ $Oxy$, cho ba điểm $A(1; 2)$, $B(3; 4)$ và $C(m^2 - 1; 2m + 2)$. Tính tổng tất cả các giá trị thực của tham số $m$ sao cho hai vectơ $\vec{AB}$ và $\vec{AC}$ cùng phương.\answerbox",
+         "4.0cm", False),
+        (None,
+         r"Trong mặt phẳng tọa độ $Oxy$, cho tam giác $ABC$ có $M(2; 1)$, $N(-1; 4)$, $P(3; 5)$ lần lượt là trung điểm của các cạnh $BC, CA, AB$. Gọi $G(x_G; y_G)$ là trọng tâm của tam giác $ABC$. Tính $3x_G + 3y_G$.\answerbox",
+         "4.0cm", False),
+        (None,
+         r"Một con tàu tuần tra chuyển động thẳng đều trên vùng biển gắn hệ trục $Oxy$ (đơn vị trên mỗi trục là hải lí). Lúc $8$ giờ sáng tàu ở vị trí $A(2; 5)$, đến $10$ giờ sáng tàu ở vị trí $B(10; 11)$. Nếu giữ nguyên vận tốc và hướng đi, lúc $11$ giờ $30$ phút cùng ngày tàu ở vị trí $C(x_C; y_C)$. Tính tổng $x_C + y_C$.\answerbox",
+         "4.0cm", False),
+
+        # ==================== TRANG 11: CÂU 37 + CHỦ ĐỀ 5 (CÂU 38 - 40) ====================
+        (None,
+         r"Trong mặt phẳng tọa độ $Oxy$, cho ba điểm $A(1; 1)$, $B(4; 4)$ và $C(3; 5)$. Điểm $I$ thỏa mãn đẳng thức $\vec{IA} + 2\vec{IB} + 3\vec{IC} = \vec{0}$. Tính khoảng cách $OI$ từ điểm $I$ đến gốc tọa độ $O$.\answerbox",
+         "3.5cm", True),
+        (r"\parttitle{CHỦ ĐỀ 5. TÍCH VÔ HƯỚNG CỦA HAI VECTƠ \& TỔNG HỢP (Bài 11 — Câu 38 đến Câu 50)}",
+         r"Cho tam giác $ABC$ có $AB = 5$, $AC = 8$ và góc $\widehat{BAC} = 60^\circ$. Tính giá trị của tích vô hướng $\vec{AB} \cdot \vec{AC}$.\answerbox",
+         "3.5cm", False),
+        (None,
+         r"Cho hai vectơ $\vec{a}$ và $\vec{b}$ khác $\vec{0}$ thỏa mãn $|\vec{a}| = 4$, $|\vec{b}| = 6$ và góc $(\vec{a}, \vec{b}) = 120^\circ$. Tính giá trị biểu thức $|\vec{a} + \vec{b}|^2$.\answerbox",
+         "3.5cm", False),
+        (None,
+         r"Cho hai vectơ $\vec{u}$ và $\vec{v}$ thỏa mãn $|\vec{u}| = 3$, $|\vec{v}| = 5$ và $|\vec{u} - \vec{v}| = 7$. Tính số đo góc giữa hai vectơ $\vec{u}$ và $\vec{v}$ (theo đơn vị độ).\answerbox",
+         "3.5cm", False),
+
+        # ==================== TRANG 12: CÂU 41 - 44 ====================
+        (None,
+         r"Cho hình chữ nhật $ABCD$ có $AB = 6$ và $AD = 8$. Gọi $M$ là trung điểm của cạnh $BC$. Tính giá trị của tích vô hướng $\vec{AM} \cdot \vec{BD}$.\answerbox",
+         "4.5cm", True),
+        (None,
+         r"Cho hình thoi $ABCD$ có cạnh bằng $6$ và góc $\widehat{BAD} = 60^\circ$. Gọi $M$ là trung điểm của cạnh $CD$. Tính giá trị của tích vô hướng $\vec{AM} \cdot \vec{BC}$.\answerbox",
+         "4.5cm", False),
+        (None,
+         r"Trong mặt phẳng tọa độ $Oxy$, cho hai vectơ $\vec{a} = (1; 3)$ và $\vec{b} = (-2; m)$ ($m$ là tham số thực). Tìm giá trị của $m$ để góc giữa hai vectơ $\vec{a}$ và $\vec{b}$ bằng $45^\circ$.\answerbox",
+         "4.5cm", False),
+        (None,
+         r"Trong mặt phẳng tọa độ $Oxy$, cho tam giác $ABC$ có $A(1; 2)$, $B(5; 2)$ và $C(3; 4)$. Tính số đo góc giữa hai vectơ $\vec{AB}$ và $\vec{AC}$ (theo đơn vị độ).\answerbox",
+         "4.5cm", False),
+
+        # ==================== TRANG 13: CÂU 45 - 47 ====================
+        (None,
+         r"Trong mặt phẳng tọa độ $Oxy$, cho ba điểm $A(0; 1)$, $B(3; 5)$ và $C(m; 2)$ ($m$ là tham số thực). Tìm giá trị của $m$ để tam giác $ABC$ vuông tại $B$.\answerbox",
+         "6.0cm", True),
+        (None,
+         r"Cho tam giác đều $ABC$ có cạnh bằng $6$. Gọi $M$ là điểm nằm trên cạnh $BC$ thỏa mãn $BM = 2MC$. Tính giá trị của tích vô hướng $\vec{AM} \cdot \vec{BC}$.\answerbox",
+         "6.0cm", False),
+        (None,
+         r"Một chất điểm chuyển động thẳng từ điểm $A(1; 2)$ đến điểm $B(7; 10)$ (đơn vị tọa độ tính bằng mét) dưới tác dụng của lực không đổi $\vec{F} = (12; 15)$ (đơn vị Niutơn). Tính công sinh bởi lực $\vec{F}$ trong quá trình dịch chuyển đó (theo đơn vị Jun - $\text{J}$).\answerbox",
+         "6.0cm", False),
+
+        # ==================== TRANG 14: CÂU 48 - 50 ====================
+        (None,
+         r"Cho tam giác $ABC$ có hai đường trung tuyến $BM$ và $CN$ vuông góc với nhau. Biết $AB = 6$ và $AC = 8$, tính bình phương độ dài cạnh $BC$ (tức tính $BC^2$).\answerbox",
+         "6.0cm", True),
+        (None,
+         r"Cho tam giác đều $ABC$ có cạnh bằng $4$. Điểm $M$ di động trên cạnh $BC$. Tìm giá trị nhỏ nhất của biểu thức $P = \vec{MA}\cdot\vec{MB} + \vec{MB}\cdot\vec{MC} + \vec{MC}\cdot\vec{MA}$.\answerbox",
+         "6.0cm", False),
+        (None,
+         r"Trong mặt phẳng tọa độ $Oxy$, cho hai điểm $A(1; 3)$ và $B(4; 6)$. Điểm $M(x_0; 0)$ di động trên trục hoành $Ox$. Tìm giá trị nhỏ nhất của biểu thức $T = 2MA^2 + MB^2$.\answerbox",
+         "6.0cm", False),
+    ]
+    assert len(qs) == 50, f"Expected 50 questions, got {len(qs)}"
+    return qs
+
+
+def get_answer_table_and_solutions():
+    answers = [
+        (1, "56"), (2, "3"), (3, "3"), (4, "30"), (5, "3"),
+        (6, "4"), (7, "4"), (8, "8"), (9, "5"), (10, "13"),
+        (11, "30"), (12, "7"), (13, "14"), (14, "500"), (15, "300"),
+        (16, "-0,4"), (17, "6"), (18, "9"), (19, "-1"), (20, "128"),
+        (21, "2"), (22, "2,5"), (23, "4"), (24, "5"), (25, "50"),
+        (26, "4"), (27, "1"), (28, "13"), (29, "5"), (30, "5"),
+        (31, "4"), (32, "-8"), (33, "4"), (34, "2"), (35, "14"),
+        (36, "31,5"), (37, "5"), (38, "20"), (39, "28"), (40, "120"),
+        (41, "-4"), (42, "45"), (43, "4"), (44, "45"), (45, "7"),
+        (46, "6"), (47, "192"), (48, "20"), (49, "-4"), (50, "60"),
+    ]
+
+    rows = []
+    for r in range(10):
+        cells = []
+        for c in range(5):
+            idx = r + c * 10
+            num, val = answers[idx]
+            cells.append(f"\\textbf{{{num}}} & {val}")
+        rows.append(" & ".join(cells) + r" \\ \hline")
+
+    table_tex = (
+        r"\begin{center}" + "\n"
+        r"\renewcommand{\arraystretch}{1.28}" + "\n"
+        r"\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|}" + "\n"
+        r"\hline" + "\n"
+        r"\textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} & \textbf{Câu} & \textbf{Đáp án} \\ \hline" + "\n"
+        + "\n".join(rows) + "\n"
+        r"\end{tabular}" + "\n"
+        r"\end{center}"
+    )
+
+    sols = [
+        r"\textbf{Câu 1.} Mỗi cách chọn $2$ đỉnh phân biệt có kể thứ tự tạo thành một vectơ khác $\vec{0}$. Số vectơ bằng $8 \cdot 7 = \mathbf{56}$.",
+        r"\textbf{Câu 2.} Trên đường thẳng $AC$ có $3$ điểm xếp theo thứ tự $A, O, C$. Các vectơ khác $\vec{0}$ cùng hướng với $\vec{AO}$ gồm $\vec{AO}$, $\vec{OC}$, $\vec{AC}$. Vậy có $\mathbf{3}$ vectơ.",
+        r"\textbf{Câu 3.} Đường trung bình $MN$ của $\triangle ABC$ cho $\vec{MN} = \dfrac{1}{2}\vec{AC} = \vec{AO} = \vec{OC} = \vec{QP}$. Vậy có $\mathbf{3}$ vectơ khác $\vec{MN}$ bằng nó.\par\noindent\begin{minipage}{\linewidth}\centering\vspace{3pt}" + TIKZ_ANS_Q3 + r"\vspace{2pt}\end{minipage}",
+        r"\textbf{Câu 4.} Đếm ô vuông: $\vec{u}$ dịch ngang $3$, dọc $2 \Rightarrow |\vec{u}|^2 = 3^2 + 2^2 = 13$; $\vec{v}$ dịch ngang $4$, dọc $-1 \Rightarrow |\vec{v}|^2 = 4^2 + (-1)^2 = 17$. Vậy $K = 13 + 17 = \mathbf{30}$.",
+        r"\textbf{Câu 5.} Do $\triangle ABC$ cân tại $A$ nên trung tuyến $AM$ cũng là phân giác và đường cao: $\widehat{BAM} = 60^\circ$. Suy ra $|\vec{AM}| = AB\cos 60^\circ = 6 \cdot \dfrac{1}{2} = \mathbf{3}\text{ cm}$.",
+        r"\textbf{Câu 6.} Trong hình thang cân $ABCD$, hình chiếu vuông góc $H$ của $A$ lên $CD$ thỏa mãn $DH = \dfrac{CD - AB}{2} = \dfrac{10 - 4}{2} = 3$. Tam giác $AHD$ vuông tại $H$ cho $AH = \sqrt{AD^2 - DH^2} = \sqrt{5^2 - 3^2} = \mathbf{4}$.",
+        r"\textbf{Câu 7.} Ta có $\vec{MN} = \vec{MA} + \vec{AB} + \vec{BN}$ và $\vec{MN} = \vec{MC} + \vec{CD} + \vec{DN}$. Cộng theo vế (với $\vec{MA} + \vec{MC} = \vec{0}$ và $\vec{BN} + \vec{DN} = \vec{0}$) được $2\vec{MN} = \vec{AB} + \vec{CD}$. Vì $\vec{AB}$ và $\vec{CD}$ ngược hướng nên $2MN = |CD - AB| = 8 \Rightarrow MN = \mathbf{4}$.",
+        r"\textbf{Câu 8.} Quy tắc hình bình hành: $\vec{AB} + \vec{AF} = \vec{AO}$. Suy ra $\vec{v} = 2\vec{AO} \Rightarrow |\vec{v}| = 2AO = 2 \cdot 4 = \mathbf{8}$.",
+        r"\textbf{Câu 9.} $\vec{AB} + \vec{AD} = \vec{AC}$. Vì $\widehat{BAD} = 120^\circ \Rightarrow \widehat{ABC} = 60^\circ$ nên $\triangle ABC$ đều cạnh $5$. Vậy $|\vec{w}| = AC = \mathbf{5}$.",
+        r"\textbf{Câu 10.} Tam giác $ABC$ vuông tại $B$, gọi $I$ là trung điểm $AC$: $|\vec{BA} + \vec{BC}| = 2BI = AC = \sqrt{5^2 + 12^2} = \mathbf{13}$.",
+        r"\textbf{Câu 11.} Theo quy tắc hình bình hành: $\vec{BA} + \vec{BC} = \vec{BD} \Rightarrow \vec{u} = 2\vec{BD}$. Vì $BD = \sqrt{9^2 + 12^2} = 15$ nên $|\vec{u}| = 2 \cdot 15 = \mathbf{30}$.",
+        r"\textbf{Câu 12.} $\vec{u} = \vec{AB} + \vec{BC} + \vec{CD} + \vec{DE} = \vec{AE} \Rightarrow |\vec{u}| = AE = \mathbf{7}$.",
+        r"\textbf{Câu 13.} Vẽ hình bình hành hợp lực với góc $60^\circ$, theo định lí côsin: $|\vec{F}|^2 = 6^2 + 10^2 + 2\cdot 6\cdot 10\cdot \cos 60^\circ = 36 + 100 + 60 = 196 \Rightarrow |\vec{F}| = \mathbf{14}\text{ N}$.",
+        r"\textbf{Câu 14.} Hai vectơ vận tốc vuông góc nên tốc độ thực tế: $v = \sqrt{400^2 + 300^2} = \mathbf{500}\text{ km/h}$.",
+        r"\textbf{Câu 15.} Thời gian qua sông $t = \dfrac{240}{4} = 60\text{ s}$. Vận tốc thực tế $v = \sqrt{4^2 + 3^2} = 5\text{ m/s}$. Quãng đường thực tế $S = 5 \cdot 60 = \mathbf{300}\text{ m}$.",
+        r"\textbf{Câu 16.} Vì $M$ thuộc tia đối của tia $AB$ nên $\vec{AM}$ ngược hướng với $\vec{AB}$, do đó $k = -\dfrac{AM}{AB} = -\dfrac{6}{15} = \mathbf{-0{,}4}$.",
+        r"\textbf{Câu 17.} Vì $G$ là trọng tâm $\triangle BCD$: $\vec{AG} = \dfrac{1}{3}(\vec{AB} + \vec{AC} + \vec{AD}) = \dfrac{1}{3}(\vec{AB} + \vec{AB} + \vec{AD} + \vec{AD}) = \dfrac{2}{3}\vec{AB} + \dfrac{2}{3}\vec{AD}$. Vậy $m = n = \dfrac{2}{3} \Rightarrow P = 3\cdot\dfrac{2}{3} + 6\cdot\dfrac{2}{3} = \mathbf{6}$.",
+        r"\textbf{Câu 18.} Ta có $\vec{AD} = \vec{AB} + \dfrac{1}{3}\vec{BC} = \dfrac{2}{3}\vec{AB} + \dfrac{1}{3}\vec{AC}$ và $\vec{AE} = \dfrac{1}{2}\vec{AC}$. Trung điểm $M$ của $DE$ cho $\vec{AM} = \dfrac{1}{2}(\vec{AD} + \vec{AE}) = \dfrac{1}{3}\vec{AB} + \dfrac{5}{12}\vec{AC} \Rightarrow T = 12\left(\dfrac{1}{3}\right) + 12\left(\dfrac{5}{12}\right) = \mathbf{9}$.",
+        r"\textbf{Câu 19.} Vì $\vec{NC} + 2\vec{NA} = \vec{0} \Rightarrow \vec{AN} = \dfrac{1}{3}\vec{AC}$ và $\vec{AM} = \dfrac{1}{2}\vec{AB}$. Đặt $\vec{BP} = k\vec{BC} \Rightarrow \vec{AP} = (1-k)\vec{AB} + k\vec{AC}$. Từ $M, N, P$ thẳng hàng có $\vec{MN} = -\dfrac{1}{2}\vec{AB} + \dfrac{1}{3}\vec{AC}$ cùng phương với $\vec{MP} = \left(\dfrac{1}{2}-k\right)\vec{AB} + k\vec{AC} \Rightarrow \dfrac{\frac{1}{2}-k}{-\frac{1}{2}} = \dfrac{k}{\frac{1}{3}} \Leftrightarrow -1 + 2k = 3k \Rightarrow k = \mathbf{-1}$.",
+        r"\textbf{Câu 20.} Vì $M$ là trung điểm $CD$ nên $\vec{AM} = \vec{AD} + \dfrac{1}{2}\vec{AB} \Rightarrow \vec{AB} + 2\vec{AM} = 2\vec{AB} + 2\vec{AD} = 2\vec{AC}$. Với hình vuông cạnh $4$ có $AC^2 = 32 \Rightarrow |\vec{AB} + 2\vec{AM}|^2 = 4AC^2 = \mathbf{128}$.",
+        r"\textbf{Câu 21.} Ta có $\vec{MA} + \vec{MB} + \vec{MC} = 3\vec{MG}$ và $|\vec{AB} - \vec{AC}| = |\vec{CB}| = 6$. Đẳng thức $\Leftrightarrow 3MG = 6 \Leftrightarrow MG = 2 \Rightarrow R = \mathbf{2}\text{ cm}$.",
+        r"\textbf{Câu 22.} Gọi $O$ là tâm hình chữ nhật, khi đó $4MO = AC = \sqrt{6^2 + 8^2} = 10 \Rightarrow MO = \mathbf{2{,}5}\text{ cm}$.",
+        r"\textbf{Câu 23.} $\vec{OA} + \vec{OB} = 2\vec{OI}$ và $\vec{OC} + \vec{OD} = 2\vec{OJ} \Rightarrow \vec{OA}+\vec{OB}+\vec{OC}+\vec{OD} = 2(\vec{OI}+\vec{OJ}) = 4\vec{OG} \Rightarrow k = \mathbf{4}$.",
+        r"\textbf{Câu 24.} Viết lại: $(\vec{MA} - \vec{MC}) + 2\vec{MB} = \vec{0} \Leftrightarrow \vec{CA} = 2\vec{BM} \Rightarrow BM = \dfrac{1}{2}AC = \mathbf{5}\text{ cm}$.",
+        r"\textbf{Câu 25.} Cân bằng lực: $\vec{T}_A + \vec{T}_B = -\vec{P}$. Do $\widehat{AOB} = 90^\circ$ và dây $OB$ hợp phương ngang góc $30^\circ$ (nên hợp phương thẳng đứng góc $60^\circ$), trong tam giác vuông hợp lực ta có $T_B = P\cos 60^\circ = 100 \cdot \dfrac{1}{2} = \mathbf{50}\text{ N}$.",
+        r"\textbf{Câu 26.} Vì $G$ là trọng tâm nên $\vec{BG} = \dfrac{2}{3}\vec{BM} = \dfrac{2}{3}\vec{u}$ và $\vec{GC} = -\vec{CG} = -\dfrac{2}{3}\vec{CN} = -\dfrac{2}{3}\vec{v}$. Suy ra $\vec{BC} = \vec{BG} + \vec{GC} = \dfrac{2}{3}\vec{u} - \dfrac{2}{3}\vec{v} \Rightarrow a = \dfrac{2}{3};\; b = -\dfrac{2}{3} \Rightarrow S = 2 - (-2) = \mathbf{4}$.",
+        r"\textbf{Câu 27.} Từ hình vẽ: $\vec{u} = \vec{OA} = (-2; 3)$, $\vec{v} = \vec{BC} = (1-4; 5-1) = (-3; 4)$. Vậy $\vec{w} = 2(-2; 3) - (-3; 4) = (-1; 2) \Rightarrow x_0 + y_0 = \mathbf{1}$.",
+        r"\textbf{Câu 28.} Ta có hệ $3m - 2n = 5$ và $-m + 5n = 7 \Leftrightarrow m = 3;\; n = 2 \Rightarrow m^2 + n^2 = 9 + 4 = \mathbf{13}$.",
+        r"\textbf{Câu 29.} $MN$ là đường trung bình của $\triangle ABC$ nên $|\vec{MN}| = \dfrac{1}{2}|\vec{AC}| = \dfrac{1}{2}\sqrt{(9-1)^2 + (4+2)^2} = \dfrac{1}{2}\cdot 10 = \mathbf{5}$.",
+        r"\textbf{Câu 30.} $I$ là trung điểm $AC$ và $BD \Rightarrow C = 2I - A = (4; 3)$, $D = 2I - B = (-1; -1)$. Tổng bằng $4 + 3 - 1 - 1 = \mathbf{5}$.",
+        r"\textbf{Câu 31.} Từ $\vec{MA} = -2\vec{MB}$ suy ra $x_M = \dfrac{2 + 2(-4)}{3} = -2$ và $y_M = \dfrac{-3 + 2(6)}{3} = 3$. Vậy $x_M + 2y_M = -2 + 6 = \mathbf{4}$.",
+        r"\textbf{Câu 32.} $\vec{AB} = (3; -6)$, $\vec{AC} = (6; m - 4)$. Thẳng hàng $\Leftrightarrow 3(m - 4) - (-6)\cdot 6 = 0 \Leftrightarrow m - 4 = -12 \Leftrightarrow m = \mathbf{-8}$.",
+        r"\textbf{Câu 33.} $\vec{AB} = (6; 3)$, $\vec{AN} = (2; y_N - 3)$. Cùng phương $\Leftrightarrow \dfrac{2}{6} = \dfrac{y_N - 3}{3} \Rightarrow y_N = \mathbf{4}$.",
+        r"\textbf{Câu 34.} $\vec{AB} = (2; 2)$, $\vec{AC} = (m^2 - 2; 2m)$. Cùng phương $\Leftrightarrow 2(2m) - 2(m^2 - 2) = 0 \Leftrightarrow m^2 - 2m - 2 = 0$ (có $2$ nghiệm phân biệt, đều làm $\vec{AC} \ne \vec{0}$). Tổng các nghiệm theo Vi-ét là $\mathbf{2}$.",
+        r"\textbf{Câu 35.} Trọng tâm của $\triangle ABC$ trùng với trọng tâm của $\triangle MNP$: $x_G = \dfrac{2-1+3}{3} = \dfrac{4}{3}$, $y_G = \dfrac{1+4+5}{3} = \dfrac{10}{3} \Rightarrow 3x_G + 3y_G = \mathbf{14}$.",
+        r"\textbf{Câu 36.} Trong $2$ giờ ($8\text{h}\to 10\text{h}$) tàu đi vectơ $\vec{AB} = (8; 6) \Rightarrow$ vận tốc $\vec{v} = (4; 3)$. Từ $10\text{h}$ đến $11\text{h}30$ là $1{,}5\text{ h} \Rightarrow C = B + 1{,}5\vec{v} = (16; 15{,}5) \Rightarrow x_C + y_C = \mathbf{31{,}5}$.",
+        r"\textbf{Câu 37.} Từ $\vec{IA} + 2\vec{IB} + 3\vec{IC} = \vec{0}$ có $x_I = \dfrac{1 + 2\cdot 4 + 3\cdot 3}{6} = 3$, $y_I = \dfrac{1 + 2\cdot 4 + 3\cdot 5}{6} = 4$. Suy ra $OI = \sqrt{3^2 + 4^2} = \mathbf{5}$.",
+        r"\textbf{Câu 38.} $\vec{AB}\cdot\vec{AC} = AB\cdot AC\cdot \cos 60^\circ = 5\cdot 8\cdot \dfrac{1}{2} = \mathbf{20}$.",
+        r"\textbf{Câu 39.} $|\vec{a}+\vec{b}|^2 = |\vec{a}|^2 + |\vec{b}|^2 + 2\vec{a}\cdot\vec{b} = 16 + 36 + 2\cdot 4\cdot 6\cdot \cos 120^\circ = 52 - 24 = \mathbf{28}$.",
+        r"\textbf{Câu 40.} Bình phương $|\vec{u} - \vec{v}|^2 = 9 + 25 - 2\cdot 3\cdot 5\cos(\vec{u}, \vec{v}) = 49 \Rightarrow \cos(\vec{u}, \vec{v}) = -\dfrac{1}{2} \Rightarrow (\vec{u}, \vec{v}) = \mathbf{120}^\circ$.",
+        r"\textbf{Câu 41.} $\vec{AM} = \vec{AB} + \dfrac{1}{2}\vec{AD}$, $\vec{BD} = \vec{AD} - \vec{AB}$. Do $\vec{AB}\cdot\vec{AD} = 0$ nên $\vec{AM}\cdot\vec{BD} = -AB^2 + \dfrac{1}{2}AD^2 = -36 + 32 = \mathbf{-4}$.",
+        r"\textbf{Câu 42.} $\vec{AM} = \vec{AD} + \dfrac{1}{2}\vec{AB}$, $\vec{BC} = \vec{AD}$. Vậy $\vec{AM}\cdot\vec{BC} = AD^2 + \dfrac{1}{2}\vec{AB}\cdot\vec{AD} = 36 + \dfrac{1}{2}\cdot 6\cdot 6\cos 60^\circ = 36 + 9 = \mathbf{45}$.",
+        r"\textbf{Câu 43.} $\cos 45^\circ = \dfrac{\sqrt{2}}{2} = \dfrac{-2 + 3m}{\sqrt{10}\sqrt{4 + m^2}}$. Điều kiện $-2 + 3m > 0$ và $5(4 + m^2) = (3m - 2)^2 \Leftrightarrow m^2 - 3m - 4 = 0 \Rightarrow m = 4$ (nhận) hoặc $m = -1$ (loại vì $-2+3(-1)<0$). Vậy $m = \mathbf{4}$.",
+        r"\textbf{Câu 44.} $\vec{AB} = (4; 0)$, $\vec{AC} = (2; 2) \Rightarrow \cos(\vec{AB}, \vec{AC}) = \dfrac{4\cdot 2 + 0}{4\cdot 2\sqrt{2}} = \dfrac{\sqrt{2}}{2} \Rightarrow \varphi = \mathbf{45}^\circ$.",
+        r"\textbf{Câu 45.} $\vec{BA} = (-3; -4)$, $\vec{BC} = (m - 3; -3)$. Vuông tại $B \Leftrightarrow \vec{BA}\cdot\vec{BC} = 0 \Leftrightarrow -3(m - 3) + 12 = 0 \Leftrightarrow m = \mathbf{7}$.",
+        r"\textbf{Câu 46.} $\vec{AM} = \dfrac{1}{3}\vec{AB} + \dfrac{2}{3}\vec{AC}$, $\vec{BC} = \vec{AC} - \vec{AB}$. Do $\vec{AB}\cdot\vec{AC} = 6\cdot 6\cos 60^\circ = 18$, ta có $\vec{AM}\cdot\vec{BC} = \dfrac{1}{3}(18 - 36) + \dfrac{2}{3}(36 - 18) = -6 + 12 = \mathbf{6}$.",
+        r"\textbf{Câu 47.} Độ dời $\vec{AB} = (6; 8)$. Công của lực $\vec{F}$ là $A = \vec{F}\cdot\vec{AB} = 12\cdot 6 + 15\cdot 8 = 72 + 120 = \mathbf{192}\text{ J}$.",
+        r"\textbf{Câu 48.} Gọi $G$ là trọng tâm, $BM \perp CN \Leftrightarrow \vec{BG}\cdot\vec{CG} = 0 \Leftrightarrow BG^2 + CG^2 = BC^2 \Leftrightarrow \dfrac{4}{9}(m_b^2 + m_c^2) = a^2$. Dùng $\vec{BM} = \dfrac{1}{2}\vec{AC} - \vec{AB}$ và $\vec{CN} = \dfrac{1}{2}\vec{AB} - \vec{AC}$ khai triển $\vec{BM}\cdot\vec{CN} = 0$ được $AB^2 + AC^2 = 5BC^2 \Rightarrow BC^2 = \dfrac{36 + 64}{5} = \mathbf{20}$.",
+        r"\textbf{Câu 49.} Gọi $I$ là trung điểm $BC$. Có $\vec{MA}\cdot(\vec{MB} + \vec{MC}) = 2\vec{MA}\cdot\vec{MI} = 2(\vec{MI} + \vec{IA})\cdot\vec{MI} = 2MI^2$ (vì $IA \perp BC$), và $\vec{MB}\cdot\vec{MC} = (\vec{MI} + \vec{IB})\cdot(\vec{MI} - \vec{IB}) = MI^2 - 4$. Suy ra $P = 3MI^2 - 4 \ge \mathbf{-4}$ (đạt được khi $M \equiv I$).",
+        r"\textbf{Câu 50.} Cách 1: $T = 2[(x_0-1)^2 + 9] + [(x_0-4)^2 + 36] = 3x_0^2 - 12x_0 + 72 = 3(x_0 - 2)^2 + 60 \ge \mathbf{60}$. Cách 2: gọi $I(2; 4)$ thỏa $2\vec{IA} + \vec{IB} = \vec{0}$, $T = 3MI^2 + 2IA^2 + IB^2 \ge 3\cdot 4^2 + 2\cdot 2 + 8 = \mathbf{60}$.",
+    ]
+    assert len(sols) == 50, f"Expected 50 solutions, got {len(sols)}"
+    return table_tex, sols
+
+
+def generate_tex(exam_pages_str: str = "XX", ans_pages_str: str = "YY") -> str:
+    questions = get_questions()
+    table_tex, sols = get_answer_table_and_solutions()
+
+    preamble = PREAMBLE.replace("__HEADER_QUOTE__", build_header_quote_macro(30))
+    preamble = preamble.replace("__EXAM_PAGES__", exam_pages_str)
+    preamble = preamble.replace("__ANS_PAGES__", ans_pages_str)
+
+    parts = [preamble, r"\begin{document}"]
+
+    parts.append(r"""\begin{center}
+  {\Large\bfseries\color{ink} ĐỀ CƯƠNG ÔN TẬP CHƯƠNG IV — VECTƠ (ĐỀ SỐ 02)}\\[3pt]
+  {\small\color{gray!75!black} \textit{Hình thức: 50 câu trả lời ngắn (Bài 7, 8, 9, 10, 11 \& Bài tập cuối chương) — Sách Kết nối tri thức}}
+\end{center}
+\vspace{2pt}""")
+
+    parts.append(r"""\chapterbanner{ÔN TẬP TOÀN CHƯƠNG IV: VECTƠ TRONG MẶT PHẲNG \& TỌA ĐỘ}{(Học sinh trình bày tóm tắt các bước giải vào khung ô li và điền đáp số cuối cùng vào ô tương ứng)}""")
+
+    enum_started = False
+    for idx, (section_hdr, text_tex, oli_h, brk) in enumerate(questions, start=1):
+        if section_hdr:
+            if enum_started:
+                parts.append(r"\end{enumerate}")
+                if brk:
+                    parts.append(r"\newpage")
+                parts.append(section_hdr)
+                parts.append(r"\begin{enumerate}[resume*]")
+            else:
+                if brk:
+                    parts.append(r"\newpage")
+                parts.append(section_hdr)
+                parts.append(r"\begin{enumerate}")
+                enum_started = True
+        else:
+            if brk:
+                parts.append(r"\newpage")
+            if not enum_started:
+                parts.append(r"\begin{enumerate}")
+                enum_started = True
+        parts.append(f"\\item {text_tex}\n\\oli{{{oli_h}}}")
+    if enum_started:
+        parts.append(r"\end{enumerate}")
+
+    parts.append(r"""
+\newpage
+\pagestyle{dapan}
+\setcounter{page}{1}
+\begin{center}
+  {\Large\bfseries\color{ink} BẢNG ĐÁP ÁN \& HƯỚNG DẪN GIẢI CHI TIẾT}\\[3pt]
+  {\small\color{gray!75!black} Đề cương ôn tập Toán 10 — Chương IV: Vectơ (Đề số 02 — 50 câu trả lời ngắn)}
+\end{center}
+\vspace{2pt}
+""")
+    parts.append(table_tex)
+    parts.append(r"\vspace{4pt}")
+    parts.append(r"\setlength{\columnsep}{16pt}")
+    parts.append(r"\parttitle{HƯỚNG DẪN GIẢI CHI TIẾT (CÂU 1 – CÂU 50)}")
+    parts.append(r"\begin{multicols}{2}")
+    parts.append(r"\small\sloppy")
+    for s in sols:
+        parts.append(s + r"\par\vspace{3pt}")
+    parts.append(r"\end{multicols}")
+    parts.append(r"\end{document}")
+    return "\n\n".join(parts)
+
+
+def run_pdflatex():
+    cmd = ["pdflatex", "-interaction=nonstopmode", "-halt-on-error", TEX_PATH.name]
+    res = subprocess.run(cmd, cwd=OUT_DIR, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    if res.returncode != 0:
+        log_txt = res.stdout.decode("utf-8", errors="replace")
+        raise RuntimeError(f"pdflatex failed!\n{log_txt[-2500:]}")
+
+
+def find_ans_start_page(pdf_path: Path) -> int:
+    doc = pymupdf.open(pdf_path)
+    for i, page in enumerate(doc):
+        txt = page.get_text("text")
+        if "192" in txt and "31,5" in txt and "500" in txt and "-0,4" in txt:
+            doc.close()
+            return i
+    doc.close()
+    raise RuntimeError("Could not locate Answer Key start page in compiled PDF!")
+
+
+def audit_pagination(exam_pdf: Path):
+    doc = pymupdf.open(exam_pdf)
+    print(f"\n=== AUDIT EXAM PDF ({len(doc)} pages) ===")
+    all_ok = True
+    seen_qs = []
+    for pno, page in enumerate(doc, start=1):
+        txt = page.get_text("text")
+        qs = re.findall(r"Câu\s+(\d+)\.", txt)
+        bl_count = txt.count("Bài làm:")
+        rect = page.rect
+        max_y = 0
+        for d in page.get_drawings():
+            max_y = max(max_y, d["rect"].y1)
+        status = "OK" if len(qs) == bl_count else "MISMATCH!"
+        if len(qs) != bl_count:
+            all_ok = False
+        seen_qs.extend([int(q) for q in qs])
+        print(f"  Page {pno:2d}: Qs={qs} | grids={bl_count} | max_y={max_y:.1f}/{rect.height:.1f}pt [{status}]")
+    doc.close()
+    expected = list(range(1, 51))
+    if seen_qs != expected:
+        missing = set(expected) - set(seen_qs)
+        raise RuntimeError(f"Question numbering mismatch! Missing={missing}")
+    if not all_ok:
+        raise RuntimeError("Some question text was split across pages from its grid box!")
+    print("Pagination check PASSED: 50 questions, 0 split boxes!")
+
+
+def main():
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    TEX_PATH.write_text(generate_tex("XX", "YY"), encoding="utf-8")
+    print("[1/4] Pass 1 pdflatex...")
+    run_pdflatex()
+
+    ans_start = find_ans_start_page(FULL_PDF)
+    doc = pymupdf.open(FULL_PDF)
+    total_pages = len(doc)
+    doc.close()
+
+    exam_pages = ans_start
+    ans_pages = total_pages - exam_pages
+    print(f"[2/4] Detected exam_pages={exam_pages}, ans_pages={ans_pages} (total={total_pages}). Updating footers...")
+
+    TEX_PATH.write_text(generate_tex(str(exam_pages), str(ans_pages)), encoding="utf-8")
+    run_pdflatex()
+    run_pdflatex()
+
+    ans_start2 = find_ans_start_page(FULL_PDF)
+    doc = pymupdf.open(FULL_PDF)
+    total2 = len(doc)
+    assert ans_start2 == exam_pages and total2 == total_pages, f"Page counts shifted: {ans_start2}/{total2}"
+
+    print("[3/4] Splitting into De_Cuong.pdf and De_Cuong_Ans.pdf...")
+    exam_doc = pymupdf.open()
+    exam_doc.insert_pdf(doc, from_page=0, to_page=exam_pages - 1)
+    exam_doc.save(EXAM_PDF)
+    exam_doc.close()
+
+    ans_doc = pymupdf.open()
+    ans_doc.insert_pdf(doc, from_page=exam_pages, to_page=total_pages - 1)
+    ans_doc.save(ANS_PDF)
+    ans_doc.close()
+    doc.close()
+
+    audit_pagination(EXAM_PDF)
+
+    print("[4/4] Exporting PDFs to Grade 10 teaching folders...")
+    src_map = {"exam": EXAM_PDF, "ans": ANS_PDF, "full": FULL_PDF}
+    for dst, kind in EXPORT_TARGETS:
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src_map[kind], dst)
+        print(f"  Copied -> {dst}")
+
+    print("\nBUILD COMPLETE!")
+
+
+if __name__ == "__main__":
+    main()
