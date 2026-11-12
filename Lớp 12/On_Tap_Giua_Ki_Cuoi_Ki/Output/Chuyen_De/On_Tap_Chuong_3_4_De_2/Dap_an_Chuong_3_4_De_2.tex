@@ -1,0 +1,386 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}[Path=C:/Windows/Fonts/,UprightFont=times.ttf,BoldFont=timesbd.ttf,ItalicFont=timesi.ttf,BoldItalicFont=timesbi.ttf]
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.7cm,headheight=17pt]{geometry}
+\usepackage{enumitem,array,fancyhdr,booktabs}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\textbf{HƯỚNG DẪN GIẢI CHI TIẾT -- ÔN TẬP TOÁN 12 -- ĐỀ SỐ 2}}
+\rhead{\small\textit{Biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{firstpage}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{4pt}
+\setlength{\emergencystretch}{1em}
+
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*:},leftmargin=*,itemsep=8pt,topsep=5pt}
+
+\begin{document}
+\thispagestyle{firstpage}
+
+\noindent
+\begin{minipage}[t]{0.36\textwidth}
+    \centering
+    {\fontsize{12}{14}\selectfont\textbf{BÀI TẬP VỀ NHÀ}}\\[4pt]
+    \textit{Biên soạn: Dương Gia Bảo}\\[6pt]
+    \setlength{\fboxrule}{0.8pt}
+    \setlength{\fboxsep}{5pt}
+    \fbox{\begin{minipage}{0.88\linewidth}
+        \centering
+        {\fontsize{12}{14}\selectfont\textbf{ĐÁP ÁN ĐỀ SỐ 2}}
+    \end{minipage}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.62\textwidth}
+    \centering
+    {\fontsize{13}{15}\selectfont\textbf{CHUYÊN ĐỀ ÔN TẬP SAU THI GIỮA KÌ I}}\\[3pt]
+    {\fontsize{12}{14}\selectfont\textbf{THỐNG KÊ GHÉP NHÓM \& NGUYÊN HÀM -- TÍCH PHÂN}}\\[3pt]
+    {\fontsize{11}{13}\selectfont\textit{(Chương trình GDPT 2018 -- Gồm 50 câu)}}
+\end{minipage}
+
+\par\vspace{4pt}
+\hrule height 0.6pt
+\vspace{8pt}
+
+\begin{center}
+    {\fontsize{13}{15}\selectfont\textbf{BẢNG ĐÁP ÁN NHANH 50 CÂU -- ĐỀ SỐ 2}}
+\end{center}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.2}
+\begin{tabular}{|c|c||c|c||c|c||c|c||c|c|}
+\hline
+\textbf{Câu} & \textbf{Đ/A} & \textbf{Câu} & \textbf{Đ/A} & \textbf{Câu} & \textbf{Đ/A} & \textbf{Câu} & \textbf{Đ/A} & \textbf{Câu} & \textbf{Đ/A} \\ \hline
+\textbf{1} & \textbf{B} & \textbf{11} & $13{,}71$ & \textbf{21} & \textbf{B} & \textbf{31} & $23$ & \textbf{41} & $33$ \\ \hline
+\textbf{2} & \textbf{C} & \textbf{12} & $1{,}25$ & \textbf{22} & \textbf{A} & \textbf{32} & $10$ & \textbf{42} & $750$ \\ \hline
+\textbf{3} & \textbf{A} & \textbf{13} & $106{,}56$ & \textbf{23} & \textbf{C} & \textbf{33} & $6$ & \textbf{43} & $825$ \\ \hline
+\textbf{4} & \textbf{D} & \textbf{14} & $4{,}59$ & \textbf{24} & \textbf{A} & \textbf{34} & $0{,}2$ & \textbf{44} & $40$ \\ \hline
+\textbf{5} & \textbf{B} & \textbf{15} & $58{,}2$ & \textbf{25} & \textbf{D} & \textbf{35} & $7$ & \textbf{45} & $4{,}5$ \\ \hline
+\textbf{6} & $6{,}1$ & \textbf{16} & \textbf{B} & \textbf{26} & \textbf{B} & \textbf{36} & $23$ & \textbf{46} & $4{,}53$ \\ \hline
+\textbf{7} & $0{,}15$ & \textbf{17} & \textbf{A} & \textbf{27} & \textbf{C} & \textbf{37} & $5$ & \textbf{47} & $9$ \\ \hline
+\textbf{8} & $1{,}12$ & \textbf{18} & \textbf{C} & \textbf{28} & \textbf{A} & \textbf{38} & $3$ & \textbf{48} & $142{,}4$ \\ \hline
+\textbf{9} & $32$ & \textbf{19} & \textbf{D} & \textbf{29} & \textbf{D} & \textbf{39} & $5$ & \textbf{49} & $49$ \\ \hline
+\textbf{10} & $3{,}07$ & \textbf{20} & \textbf{B} & \textbf{30} & \textbf{C} & \textbf{40} & $2$ & \textbf{50} & $36$ \\ \hline
+\end{tabular}
+\end{center}
+
+\vspace{10pt}
+\hrule height 0.6pt
+\vspace{10pt}
+
+\begin{center}
+    {\fontsize{13}{15}\selectfont\textbf{HƯỚNG DẪN GIẢI CHI TIẾT}}
+\end{center}
+
+\subsection*{PHẦN 1. CHƯƠNG III: CÁC SỐ ĐẶC TRƯNG ĐO MỨC ĐỘ PHÂN TÁN}
+
+\begin{enumerate}
+\item \textbf{Đáp án B.}  
+Khoảng biến thiên $R = a_{k+1} - a_1$ chỉ phụ thuộc vào hai đầu mút nên dễ bị ảnh hưởng bởi các giá trị bất thường (ngoại lệ). Trong khi đó, khoảng tứ phân vị $\Delta_Q = Q_3 - Q_1$ đo độ phân tán của $50\%$ số liệu ở giữa nên không bị ảnh hưởng bởi các giá trị ngoại lệ ở hai đầu mút.
+
+\item \textbf{Đáp án C.}  
+Khoảng biến thiên là $R = 4{,}2 - 2{,}7 = 1{,}5$ (km).
+
+\item \textbf{Đáp án A.}  
+Độ lệch chuẩn $s = \sqrt{s^2} = \sqrt{16{,}81} = 4{,}1$.
+
+\item \textbf{Đáp án D.}  
+Trong công thức tìm tứ phân vị của mẫu số liệu ghép nhóm, $C$ là tổng tần số tích lũy của các nhóm đứng trước nhóm chứa $Q_k$.
+
+\item \textbf{Đáp án B.}  
+Cỡ mẫu $n = 40 \implies \dfrac{n}{4} = 10$.  
+Tần số tích lũy: $cf_1 = 4 < 10$; $cf_2 = 4 + 9 = 13 \ge 10$.  
+Vậy nhóm chứa $Q_1$ là $[155; 160)$.
+
+\item \textbf{Đáp số: $6{,}1$.}  
+Cỡ mẫu $n = 500$.  
+- Tìm $Q_1$: $\dfrac{n}{4} = 125$. Tần số tích lũy: $cf_1 = 75 < 125$; $cf_2 = 75 + 105 = 180 \ge 125$.  
+Nhóm chứa $Q_1$ là $[14; 18)$:  
+\[
+Q_1 = 14 + \dfrac{125 - 75}{105} \cdot 4 = 14 + \dfrac{200}{105} \approx 15{,}9048.
+\]
+- Tìm $Q_3$: $\dfrac{3n}{4} = 375$. Tần số tích lũy: $cf_2 = 180 < 375$; $cf_3 = 180 + 197 = 377 \ge 375$.  
+Nhóm chứa $Q_3$ là $[18; 22)$:  
+\[
+Q_3 = 18 + \dfrac{375 - 180}{197} \cdot 4 = 18 + \dfrac{780}{197} \approx 21{,}9594.
+\]
+Khoảng tứ phân vị: $\Delta_Q = Q_3 - Q_1 \approx 21{,}9594 - 15{,}9048 = 6{,}0546 \approx 6{,}1$.
+
+\item \textbf{Đáp số: $0{,}15$.}  
+Giá trị đại diện các nhóm: $2{,}85; 3{,}15; 3{,}45; 3{,}75; 4{,}05$. Cỡ mẫu $n = 20$.  
+\[
+\bar{x} = \dfrac{3(2{,}85) + 6(3{,}15) + 5(3{,}45) + 3(3{,}75) + 3(4{,}05)}{20} = \dfrac{68{,}1}{20} = 3{,}405.
+\]
+Phương sai:  
+\begin{align*}
+s^2 &= \dfrac{1}{20}\left[3(2{,}85)^2 + 6(3{,}15)^2 + 5(3{,}45)^2 + 3(3{,}75)^2 + 3(4{,}05)^2\right] - (3{,}405)^2 \\
+    &\approx 11{,}7428 - 11{,}5940 \approx 0{,}15.
+\end{align*}
+
+\item \textbf{Đáp số: $1{,}12$.}  
+Giá trị đại diện: $5{,}5; 6{,}5; 7{,}5; 8{,}5; 9{,}5$. Cỡ mẫu $n = 40$.  
+\[
+\bar{x} = \dfrac{4(5{,}5) + 10(6{,}5) + 14(7{,}5) + 8(8{,}5) + 4(9{,}5)}{40} = \dfrac{298}{40} = 7{,}45.
+\]
+Phương sai:  
+\begin{align*}
+s^2 &= \dfrac{4(5{,}5 - 7{,}45)^2 + 10(6{,}5 - 7{,}45)^2 + 14(7{,}5 - 7{,}45)^2}{40} \\
+    &\quad + \dfrac{8(8{,}5 - 7{,}45)^2 + 4(9{,}5 - 7{,}45)^2}{40} = 1{,}2475.
+\end{align*}
+Độ lệch chuẩn: $s = \sqrt{1{,}2475} \approx 1{,}12$.
+
+\item \textbf{Đáp số: $32$.}  
+Từ cỡ mẫu $n = 50 \implies 6 + x + 18 + y + 4 = 50 \iff x + y = 22$ (1).  
+Giá trị đại diện các nhóm: $7{,}5; 12{,}5; 17{,}5; 22{,}5; 27{,}5$.  
+Từ $\bar{x} = 17{,}3$:  
+\[
+\dfrac{6(7{,}5) + 12{,}5x + 18(17{,}5) + 22{,}5y + 4(27{,}5)}{50} = 17{,}3
+\]
+$\iff 45 + 12{,}5x + 315 + 22{,}5y + 110 = 865 \iff 12{,}5x + 22{,}5y = 395$ (2).  
+Giải hệ (1) và (2): Thay $y = 22 - x$ vào (2) $\implies 12{,}5x + 22{,}5(22 - x) = 395 \iff x = 10 \implies y = 12$.  
+Vậy $T = 2x + y = 2(10) + 12 = 32$.
+
+\item \textbf{Đáp số: $3{,}07$.}  
+Cỡ mẫu $n = 60$.  
+- Tìm $Q_1$: $\dfrac{n}{4} = 15$. Tần số tích lũy: $cf_1 = 8 < 15$; $cf_2 = 8 + 15 = 23 \ge 15$.  
+Nhóm chứa $Q_1$ là $[12; 14) \implies Q_1 = 12 + \dfrac{15 - 8}{15} \cdot 2 = 12 + \dfrac{14}{15} \approx 12{,}9333$.  
+- Tìm $Q_3$: $\dfrac{3n}{4} = 45$. Tần số tích lũy: $cf_3 = 8 + 15 + 22 = 45 \ge 45$.  
+Nhóm chứa $Q_3$ là $[14; 16) \implies Q_3 = 14 + \dfrac{45 - 23}{22} \cdot 2 = 14 + 2 = 16$.  
+Khoảng tứ phân vị: $\Delta_Q = 16 - \left(12 + \dfrac{14}{15}\right) = \dfrac{46}{15} \approx 3{,}07$.
+
+\item \textbf{Đáp số: $13{,}71$.}  
+Ngưỡng lương tối thiểu của nhóm $25\%$ sinh viên có mức lương cao nhất chính là tứ phân vị thứ ba $Q_3$.  
+Cỡ mẫu $n = 80 \implies \dfrac{3n}{4} = 60$.  
+Tần số tích lũy: $cf_1 = 12$, $cf_2 = 36 < 60$, $cf_3 = 36 + 28 = 64 \ge 60$.  
+Nhóm chứa $Q_3$ là $[12; 14)$:  
+\[
+Q_3 = 12 + \dfrac{60 - 36}{28} \cdot 2 = 12 + \dfrac{24}{14} = 12 + \dfrac{12}{7} \approx 13{,}71\text{ (triệu đồng)}.
+\]
+
+\item \textbf{Đáp số: $1{,}25$.}  
+Máy I có $n = 32$, các giá trị đại diện đối xứng qua $20{,}4$: $20{,}1; 20{,}3; 20{,}5; 20{,}7$.  
+Do tính đối xứng của bảng tần số, số trung bình $\bar{x}_{\text{I}} = 20{,}4$.  
+Phương sai của Máy I:  
+\[
+s_{\text{I}}^2 = \dfrac{6(-0{,}3)^2 + 10(-0{,}1)^2 + 10(0{,}1)^2 + 6(0{,}3)^2}{32} = \dfrac{2(0{,}54 + 0{,}1)}{32} = \dfrac{1{,}28}{32} = 0{,}04.
+\]
+Suy ra độ lệch chuẩn $s_{\text{I}} = \sqrt{0{,}04} = 0{,}2\text{ mm}$.  
+Tỉ số: $\dfrac{s_{\text{II}}}{s_{\text{I}}} = \dfrac{0{,}25}{0{,}2} = 1{,}25$.
+
+\item \textbf{Đáp số: $106{,}56$.}  
+Giá trị đại diện: $45; 55; 65; 75; 85$. Cỡ mẫu $n = 50$.  
+\[
+\bar{x} = \dfrac{5(45) + 12(55) + 20(65) + 10(75) + 3(85)}{50} = \dfrac{3190}{50} = 63{,}8.
+\]
+Phương sai:  
+\begin{align*}
+s^2 &= \dfrac{5(45)^2 + 12(55)^2 + 20(65)^2 + 10(75)^2 + 3(85)^2}{50} - (63{,}8)^2 \\
+    &= \dfrac{208850}{50} - 4070{,}44 = 4177 - 4070{,}44 = 106{,}56.
+\end{align*}
+
+\item \textbf{Đáp số: $4{,}59$.}  
+Cỡ mẫu $n = 40$.  
+- Tìm $Q_1$: $\dfrac{n}{4} = 10$. Tần số tích lũy: $cf_1 = 5 < 10$; $cf_2 = 5 + 11 = 16 \ge 10$.  
+Nhóm chứa $Q_1$ là $[2; 4)$ có độ dài $h_2 = 2$:  
+\[
+Q_1 = 2 + \dfrac{10 - 5}{11} \cdot 2 = 2 + \dfrac{10}{11} = \dfrac{32}{11} \approx 2{,}9091.
+\]
+- Tìm $Q_3$: $\dfrac{3n}{4} = 30$. Tần số tích lũy: $cf_2 = 16 < 30$; $cf_3 = 16 + 16 = 32 \ge 30$.  
+Nhóm chứa $Q_3$ là $[4; 8)$ có độ dài $h_3 = 4$:  
+\[
+Q_3 = 4 + \dfrac{30 - 16}{16} \cdot 4 = 4 + \dfrac{14}{4} = 7{,}5.
+\]
+Khoảng tứ phân vị: $\Delta_Q = 7{,}5 - \dfrac{32}{11} = \dfrac{101}{22} \approx 4{,}59$.
+
+\item \textbf{Đáp số: $58{,}2$.}  
+Giá trị đại diện: $75; 125; 175; 225; 275$. Cỡ mẫu $n = 24$.  
+\[
+\bar{x} = \dfrac{4(75) + 6(125) + 8(175) + 4(225) + 2(275)}{24} = \dfrac{3900}{24} = 162{,}5.
+\]
+Phương sai:  
+\[
+s^2 = \dfrac{4(-87{,}5)^2 + 6(-37{,}5)^2 + 8(12{,}5)^2 + 4(62{,}5)^2 + 2(112{,}5)^2}{24} = \dfrac{81250}{24} \approx 3385{,}4167.
+\]
+Độ lệch chuẩn: $s = \sqrt{\dfrac{81250}{24}} \approx 58{,}184 \approx 58{,}2\text{ mm}$.
+\end{enumerate}
+
+\subsection*{PHẦN 2. CHƯƠNG IV: NGUYÊN HÀM VÀ TÍCH PHÂN}
+
+\begin{enumerate}[start=16]
+\item \textbf{Đáp án B.}  
+$\int \left(x^3 - 2x^{-2} + 1\right)\mathrm{d}x = \dfrac{x^4}{4} - 2\left(\dfrac{x^{-1}}{-1}\right) + x + C = \dfrac{x^4}{4} + \dfrac{2}{x} + x + C$.
+
+\item \textbf{Đáp án A.}  
+$\int \left[\cos(3x - 1) + \dfrac{1}{\cos^2 x}\right]\mathrm{d}x = \dfrac{1}{3}\sin(3x - 1) + \tan x + C$.
+
+\item \textbf{Đáp án C.}  
+Sử dụng công thức hạ bậc $\sin^2 x = \dfrac{1 - \cos 2x}{2}$:  
+$\int \sin^2 x\,\mathrm{d}x = \dfrac{1}{2}\int (1 - \cos 2x)\,\mathrm{d}x = \dfrac{1}{2}\left(x - \dfrac{\sin 2x}{2}\right) + C = \dfrac{x}{2} - \dfrac{\sin 2x}{4} + C$.
+
+\item \textbf{Đáp án D.}  
+Lấy đạo hàm hai vế: $f(x) = (\mathrm{e}^{2x} + x^2 + C)' = 2\mathrm{e}^{2x} + 2x$.
+
+\item \textbf{Đáp án B.}  
+$F(x) = \int (\mathrm{e}^x + 2x)\,\mathrm{d}x = \mathrm{e}^x + x^2 + C$.  
+$F(0) = \mathrm{e}^0 + 0 + C = 1 + C = 3 \implies C = 2$.  
+Vậy $F(1) = \mathrm{e} + 1 + 2 = \mathrm{e} + 3$.
+
+\item \textbf{Đáp án B.}  
+$\int_1^2 f(x)\,\mathrm{d}x = F(2) - F(1) = 5 - 9 = -4$.
+
+\item \textbf{Đáp án A.}  
+$I = 3\int_0^3 f(x)\,\mathrm{d}x - 2\int_0^3 g(x)\,\mathrm{d}x = 3(6) - 2(-2) = 18 + 4 = 22$.
+
+\item \textbf{Đáp án C.}  
+$I = \int_0^1 (1 - x)\,\mathrm{d}x + \int_1^3 (x - 1)\,\mathrm{d}x = \left[x - \dfrac{x^2}{2}\right]_0^1 + \left[\dfrac{x^2}{2} - x\right]_1^3 = \dfrac{1}{2} + \left(\dfrac{3}{2} - \left(-\dfrac{1}{2}\right)\right) = \dfrac{5}{2}$.
+
+\item \textbf{Đáp án A.}  
+Đặt $t = x^2 \implies \mathrm{d}t = 2x\,\mathrm{d}x \implies x\,\mathrm{d}x = \dfrac{1}{2}\mathrm{d}t$.  
+Đổi cận: $x = 0 \implies t = 0$; $x = 1 \implies t = 1$.  
+$I = \dfrac{1}{2}\int_0^1 \mathrm{e}^t\,\mathrm{d}t = \dfrac{\mathrm{e} - 1}{2}$.
+
+\item \textbf{Đáp án D.}  
+Đặt $u = \ln x \implies \mathrm{d}u = \dfrac{\mathrm{d}x}{x}$; $\mathrm{d}v = \mathrm{d}x \implies v = x$.  
+$I = [x\ln x]_1^{\mathrm{e}} - \int_1^{\mathrm{e}} \mathrm{d}x = (\mathrm{e} - 0) - (\mathrm{e} - 1) = 1$.
+
+\item \textbf{Đáp án B.}  
+Phương trình hoành độ giao điểm: $x^2 = x + 2 \iff x^2 - x - 2 = 0 \iff x = -1$ hoặc $x = 2$.  
+$S = \int_{-1}^2 (x + 2 - x^2)\,\mathrm{d}x = \left[\dfrac{x^2}{2} + 2x - \dfrac{x^3}{3}\right]_{-1}^2 = \dfrac{10}{3} - \left(-\dfrac{7}{6}\right) = \dfrac{9}{2}$.
+
+\item \textbf{Đáp án C.}  
+Diện tích tam giác đều cạnh $x$ là $S(x) = \dfrac{x^2\sqrt{3}}{4}$.  
+Thể tích vật thể: $V = \int_0^2 \dfrac{\sqrt{3}}{4}x^2\,\mathrm{d}x = \dfrac{\sqrt{3}}{4}\left[\dfrac{x^3}{3}\right]_0^2 = \dfrac{2\sqrt{3}}{3}$.
+
+\item \textbf{Đáp án A.}  
+Phương trình hoành độ giao điểm: $x^2 = 2x \iff x = 0$ hoặc $x = 2$.  
+Trên $[0; 2]$, $2x \ge x^2 \ge 0$.  
+$V = \pi \int_0^2 \left[(2x)^2 - (x^2)^2\right]\mathrm{d}x = \pi \int_0^2 (4x^2 - x^4)\,\mathrm{d}x = \pi\left[\dfrac{4x^3}{3} - \dfrac{x^5}{5}\right]_0^2 = \pi\left(\dfrac{32}{3} - \dfrac{32}{5}\right) = \dfrac{64\pi}{15}$.
+
+\item \textbf{Đáp án D.}  
+$v(t) = v_0 + \int_0^t a(u)\,\mathrm{d}u = 2 + \int_0^t 6u\,\mathrm{d}u = 2 + 3t^2$.  
+Tại $t = 4$: $v(4) = 2 + 3(4^2) = 50\text{ m/s}$.
+
+\item \textbf{Đáp án C.}  
+Lượng nước được bơm vào trong $3$ phút đầu tiên:  
+$V = \int_0^3 (3t^2 + 4)\,\mathrm{d}t = [t^3 + 4t]_0^3 = 27 + 12 = 39\text{ m}^3$.
+
+\item \textbf{Đáp số: $23$.}  
+$f(x) = \int \left(\dfrac{3}{2\sqrt{x}} + 2x\right)\mathrm{d}x = 3\sqrt{x} + x^2 + C$.  
+Vì $f(1) = 5 \iff 3(1) + 1^2 + C = 5 \iff C = 1$.  
+Suy ra $f(x) = 3\sqrt{x} + x^2 + 1$.  
+Giá trị $f(4) = 3\sqrt{4} + 4^2 + 1 = 6 + 16 + 1 = 23$.
+
+\item \textbf{Đáp số: $10$.}  
+Chia đa thức: $f(x) = \dfrac{(x+1)^2 + 3}{x+1} = x + 1 + \dfrac{3}{x+1}$.  
+Nguyên hàm trên $(-1; +\infty)$: $F(x) = \dfrac{x^2}{2} + x + 3\ln(x+1) + C$.  
+Từ $F(0) = 1 \implies C = 1$.  
+Khi đó $F(1) = \dfrac{1}{2} + 1 + 3\ln 2 + 1 = \dfrac{5}{2} + 3\ln 2$.  
+Vậy $a = 5, b = 2, c = 3 \implies a + b + c = 10$.
+
+\item \textbf{Đáp số: $6$.}  
+Đặt $u = \ln x \implies \mathrm{d}u = \dfrac{\mathrm{d}x}{x}$; $\mathrm{d}v = (2x + 3)\,\mathrm{d}x \implies v = x^2 + 3x$.  
+$\int (2x + 3)\ln x\,\mathrm{d}x = (x^2 + 3x)\ln x - \int (x + 3)\,\mathrm{d}x = (x^2 + 3x)\ln x - \dfrac{1}{2}x^2 - 3x + C$.  
+Do đó $a = 1, b = 2, c = 3 \implies a + b + c = 1 + 2 + 3 = 6$.
+
+\item \textbf{Đáp số: $0{,}2$.}  
+Đặt $t = \sin x \implies \mathrm{d}t = \cos x\,\mathrm{d}x$.  
+$F(x) = \int \sin^4 x \cos x\,\mathrm{d}x = \dfrac{\sin^5 x}{5} + C$.  
+Do $F(0) = 0 \implies C = 0 \implies F(x) = \dfrac{\sin^5 x}{5}$.  
+Suy ra $F\!\left(\dfrac{\pi}{2}\right) = \dfrac{1}{5} = 0{,}2$.
+
+\item \textbf{Đáp số: $7$.}  
+$I = \int_0^1 f(x)\,\mathrm{d}x + \int_1^2 f(x)\,\mathrm{d}x = \int_0^1 2x\,\mathrm{d}x + \int_1^2 (3x^2 - 1)\,\mathrm{d}x$  
+$= [x^2]_0^1 + [x^3 - x]_1^2 = 1 + (6 - 0) = 7$.
+
+\item \textbf{Đáp số: $23$.}  
+Đặt $u = \sqrt{1 + 3\ln x} \implies u^2 = 1 + 3\ln x \implies 2u\,\mathrm{d}u = \dfrac{3}{x}\,\mathrm{d}x \implies \dfrac{\mathrm{d}x}{x} = \dfrac{2u}{3}\mathrm{d}u$.  
+Đổi cận: $x = 1 \implies u = 1$; $x = \mathrm{e} \implies u = 2$.  
+$I = \int_1^2 u \cdot \dfrac{2u}{3}\,\mathrm{d}u = \dfrac{2}{3}\left[\dfrac{u^3}{3}\right]_1^2 = \dfrac{2}{9}(8 - 1) = \dfrac{14}{9}$.  
+Vậy $a = 14, b = 9 \implies a + b = 23$.
+
+\item \textbf{Đáp số: $5$.}  
+Đặt $u = x + 1 \implies \mathrm{d}u = \mathrm{d}x$; $\mathrm{d}v = \sin x\,\mathrm{d}x \implies v = -\cos x$.  
+$I = [-(x + 1)\cos x]_0^{\pi} + \int_0^{\pi} \cos x\,\mathrm{d}x = (\pi + 1) - (-1) + [\sin x]_0^{\pi} = \pi + 2$.  
+Vậy $a = 1, b = 2 \implies P = a^2 + b^2 = 1^2 + 2^2 = 5$.
+
+\item \textbf{Đáp số: $3$.}  
+Phân tích phân thức: $\dfrac{3x + 5}{(x + 1)(x + 2)} = \dfrac{2}{x + 1} + \dfrac{1}{x + 2}$.  
+$I = [2\ln|x+1| + \ln|x+2|]_0^1 = (2\ln 2 + \ln 3) - (2\ln 1 + \ln 2) = \ln 2 + \ln 3$.  
+Vậy $a = 1, b = 1 \implies T = a + 2b = 1 + 2(1) = 3$.
+
+\item \textbf{Đáp số: $5$.}  
+Nhận xét $\mathrm{d}(\mathrm{e}^x + 1) = \mathrm{e}^x\,\mathrm{d}x$.  
+$I = [\ln(\mathrm{e}^x + 1)]_0^{\ln 2} = \ln 3 - \ln 2 = \ln\!\left(\dfrac{3}{2}\right)$.  
+Vậy $a = 3, b = 2 \implies a + b = 5$.
+
+\item \textbf{Đáp số: $2$.}  
+$\int_1^m \left(3x^2 - \dfrac{4}{x^2}\right)\mathrm{d}x = \left[x^3 + \dfrac{4}{x}\right]_1^m = m^3 + \dfrac{4}{m} - 5$.  
+Phương trình: $m^3 + \dfrac{4}{m} - 5 = 5 \iff m^4 - 10m + 4 = 0 \iff (m - 2)(m^3 + 2m^2 + 4m - 2) = 0$.  
+Với $m > 1$: $m^3 + 2m^2 + 4m - 2 > 1 + 2 + 4 - 2 = 5 > 0$, nên nghiệm duy nhất thỏa mãn $m > 1$ là $m = 2$.
+
+\item \textbf{Đáp số: $33$.}  
+Nhiệt độ trung bình:  
+$\overline{T} = \dfrac{1}{12}\int_0^{12} \left(25 + 4t - \dfrac{1}{3}t^2\right)\mathrm{d}t = \dfrac{1}{12}\left[25t + 2t^2 - \dfrac{1}{9}t^3\right]_0^{12} = 25 + 2(12) - \dfrac{144}{9} = 25 + 24 - 16 = 33^\circ\text{C}$.
+
+\item \textbf{Đáp số: $750$.}  
+Phần lợi nhuận tăng thêm:  
+$P(100) - P(50) = \int_{50}^{100} (18 - 0{,}04x)\,\mathrm{d}x = [18x - 0{,}02x^2]_{50}^{100} = (1800 - 200) - (900 - 50) = 1600 - 850 = 750$ (triệu đồng).
+
+\item \textbf{Đáp số: $825$.}  
+Lượng nước chảy ra khỏi bồn trong $15$ phút đầu tiên:  
+$V_{\text{chảy}} = \int_0^{15} (160 - 2t)\,\mathrm{d}t = [160t - t^2]_0^{15} = 2400 - 225 = 2175$ (lít).  
+Lượng nước còn lại trong bồn: $3000 - 2175 = 825$ (lít).
+
+\item \textbf{Đáp số: $40$.}  
+Tổng quãng đường đi được trong $6$ giây đầu tiên:  
+$s = \int_0^2 3t^2\,\mathrm{d}t + \int_2^6 (16 - 2t)\,\mathrm{d}t = [t^3]_0^2 + [16t - t^2]_2^6 = 8 + [(96 - 36) - (32 - 4)] = 8 + (60 - 28) = 40\text{ m}$.
+
+\item \textbf{Đáp số: $4{,}5$.}  
+Hoành độ giao điểm: $x^2 - 4x + 3 = x - 1 \iff x^2 - 5x + 4 = 0 \iff x = 1$ hoặc $x = 4$.  
+$S = \int_1^4 |x^2 - 5x + 4|\,\mathrm{d}x = \int_1^4 (-x^2 + 5x - 4)\,\mathrm{d}x = \left[-\dfrac{x^3}{3} + \dfrac{5x^2}{2} - 4x\right]_1^4 = \dfrac{9}{2} = 4{,}5$.
+
+\item \textbf{Đáp số: $4{,}53$.}  
+Đặt hệ trục tọa độ $Oxy$ với gốc $O \equiv H$ (trung điểm $AB$), trục $Ox$ chứa $AB$, trục $Oy$ hướng lên qua $G$. Khi đó $A(-2; 0)$, $B(2; 0)$, $G(0; 4)$.  
+Parabol có đỉnh $G(0; 4)$ và qua $(2; 0)$ nên có phương trình $y = 4 - x^2$.  
+Diện tích toàn bộ phần cổng parabol:  
+$S_{\text{cổng}} = \int_{-2}^2 (4 - x^2)\,\mathrm{d}x = \left[4x - \dfrac{x^3}{3}\right]_{-2}^2 = \dfrac{32}{3}\text{ m}^2$.  
+Do $AC = BD = 0{,}9\text{ m}$ nên $CD = 4 - 2(0{,}9) = 2{,}2\text{ m}$, hoành độ của $D$ là $x_D = 1{,}1$.  
+Chiều cao cánh cửa chữ nhật: $DF = y(1{,}1) = 4 - (1{,}1)^2 = 4 - 1{,}21 = 2{,}79\text{ m}$.  
+Diện tích cửa $CDEF$: $S_{\text{cửa}} = 2{,}2 \times 2{,}79 = 6{,}138\text{ m}^2$.  
+Diện tích hoa văn trang trí: $S_{\text{hoa văn}} = \dfrac{32}{3} - 6{,}138 \approx 10{,}6667 - 6{,}138 = 4{,}5287 \approx 4{,}53\text{ m}^2$.
+
+\item \textbf{Đáp số: $9$.}  
+Diện tích thiết diện tại điểm $x$: $S(x) = x\sqrt{9 - x^2}$.  
+Thể tích vật thể: $V = \int_0^3 x\sqrt{9 - x^2}\,\mathrm{d}x$.  
+Đặt $u = \sqrt{9 - x^2} \implies u^2 = 9 - x^2 \implies u\,\mathrm{d}u = -x\,\mathrm{d}x$.  
+Đổi cận: $x = 0 \implies u = 3$; $x = 3 \implies u = 0$.  
+$V = \int_3^0 u(-u\,\mathrm{d}u) = \int_0^3 u^2\,\mathrm{d}u = \left[\dfrac{u^3}{3}\right]_0^3 = 9$.
+
+\item \textbf{Đáp số: $142{,}4$.}  
+Thể tích chậu cây:  
+\begin{align*}
+V &= \pi \int_0^4 (\sqrt{x} + 2)^2\,\mathrm{d}x = \pi \int_0^4 \left(x + 4x^{\frac{1}{2}} + 4\right)\mathrm{d}x \\
+  &= \pi\left[\dfrac{x^2}{2} + \dfrac{8}{3}x^{\frac{3}{2}} + 4x\right]_0^4 = \pi\left(8 + \dfrac{64}{3} + 16\right) = \dfrac{136\pi}{3}\text{ dm}^3.
+\end{align*}
+Với $\pi \approx 3{,}1416$, ta được $V \approx 142{,}419 \approx 142{,}4\text{ dm}^3$.
+
+\item \textbf{Đáp số: $49$.}  
+Ta có $y = x^2 - 4x + 5 = (x - 2)^2 + 1$. Thể tích chi tiết máy:  
+\begin{align*}
+V &= \pi \int_1^4 \left[(x - 2)^2 + 1\right]^2\mathrm{d}x = \pi \int_1^4 \left[(x - 2)^4 + 2(x - 2)^2 + 1\right]\mathrm{d}x \\
+  &= \pi \left[\dfrac{(x - 2)^5}{5} + \dfrac{2(x - 2)^3}{3} + x\right]_1^4 = \pi\left[\left(\dfrac{32}{5} + \dfrac{16}{3} + 4\right) - \left(-\dfrac{1}{5} - \dfrac{2}{3} + 1\right)\right] = \dfrac{78\pi}{5}\text{ cm}^3.
+\end{align*}
+Với $\pi \approx 3{,}1416 \implies V \approx 49{,}009 \approx 49\text{ cm}^3$.
+
+\item \textbf{Đáp số: $36$.}  
+Thể tích khối tròn xoay là:  
+\[
+V = \pi \int_2^5 \left(\sqrt{25 - x^2}\right)^2\mathrm{d}x = \pi \int_2^5 (25 - x^2)\,\mathrm{d}x = \pi \left[25x - \dfrac{x^3}{3}\right]_2^5 = \pi(75 - 39) = 36\pi.
+\]
+Vậy $\dfrac{V}{\pi} = 36$.
+\end{enumerate}
+
+\end{document}
