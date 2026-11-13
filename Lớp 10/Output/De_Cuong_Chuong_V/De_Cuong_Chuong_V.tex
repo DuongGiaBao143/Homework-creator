@@ -1,0 +1,146 @@
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.45cm,includeheadfoot,headheight=18pt,headsep=7pt,footskip=18pt]{geometry}
+\usepackage{amsmath,amssymb,array,fancyhdr,tikz,xcolor}
+\definecolor{ink}{RGB}{30,55,70}
+\definecolor{gridline}{RGB}{218,228,233}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\bfseries LÀM TOÁN ĐỂ HẠNH PHÚC}
+\rhead{\small\itshape Người biên soạn: Dương Gia Bảo}
+\rfoot{\small Trang \thepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\newcommand{\banner}[1]{\par\medskip{\large\bfseries\color{ink}#1}\par\smallskip}
+\newcommand{\grid}[1]{%
+  \begin{tikzpicture}
+    \draw[step=5mm,gridline,line width=.25pt] (0,0) grid (\linewidth,#1);
+    \draw[gridline,line width=.5pt] (0,0) rectangle (\linewidth,#1);
+  \end{tikzpicture}}
+\newcommand{\question}[2]{%
+  \begin{minipage}{\linewidth}
+    \textbf{Câu #1.} #2\par\smallskip
+    \grid{2.5cm}\par\nobreak\smallskip
+    \hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{10pt}\hspace{2.75cm}}\par
+  \end{minipage}\par}
+\newcommand{\solution}[3]{%
+  \begin{minipage}{\linewidth}
+    \textbf{Câu #1.}\ \textbf{Đáp số} \(\boxed{#2}\).\quad #3
+  \end{minipage}\par\medskip}
+\begin{document}
+\begin{center}{\LARGE\bfseries\color{ink}ĐỀ CƯƠNG ÔN TẬP}\\[4pt]{\large\bfseries TOÁN 10 \enspace|\enspace CHƯƠNG V}\\[4pt]Các số đặc trưng của mẫu số liệu không ghép nhóm\end{center}
+\textbf{Họ và tên:} \dotfill\quad \textbf{Lớp:} \makebox[2.8cm]{\dotfill}
+\par\smallskip 50 câu trả lời ngắn. Ghi một đáp số cho mỗi câu. Phương sai chia cho $n$. Khi $n$ lẻ, bỏ trung vị chung trước khi lấy trung vị hai nửa.
+\banner{Bài 12. Số gần đúng và sai số}
+\question{1}{Chiều dài chính xác của một đoạn dây là $18{,}762$ m. Người đo ghi $18{,}8$ m. Tính sai số tuyệt đối của số ghi được (m).}
+\vfill
+\question{2}{Một phép đo cho kết quả $24{,}36\pm0{,}04$ cm. Tìm cận dưới của chiều dài thật (cm).}
+\vfill
+\question{3}{Một thùng hàng có khối lượng $8{,}25\pm0{,}06$ kg. Tìm cận trên của khối lượng thật (kg).}
+\vfill
+\question{4}{Quy tròn số $56{,}7856$ đến hàng phần trăm.}
+\vfill
+\question{5}{Quy tròn số $48\,746$ đến hàng trăm.}
+\newpage
+\banner{Bài 12. Số gần đúng và sai số}
+\question{6}{Khi quy tròn một độ dài đến hàng phần mười của mét, sai số tuyệt đối không vượt quá bao nhiêu mét?}
+\vfill
+\question{7}{Giá trị chính xác là $201$ m, số gần đúng là $200$ m. Tính sai số tương đối theo phần trăm, lấy sai số tuyệt đối chia cho độ lớn của số gần đúng.}
+\vfill
+\question{8}{Biết khối lượng $12{,}5$ kg có độ chính xác $0{,}05$ kg. Tính cận trên của sai số tương đối theo phần trăm bằng tỉ số giữa độ chính xác và số gần đúng.}
+\vfill
+\question{9}{Số $a=347\,562$ có độ chính xác $d=240$. Viết số quy tròn của $a$ theo quy tắc chọn hàng thấp nhất có đơn vị lớn hơn $d$.}
+\vfill
+\question{10}{Một sân hình chữ nhật có chiều dài $20\pm0{,}2$ m và chiều rộng $12\pm0{,}1$ m. Tính cận trên của diện tích sân (m$^2$).}
+\newpage
+\banner{Bài 13. Các số đặc trưng đo xu thế trung tâm}
+\question{11}{Tính số trung bình của mẫu $7;\ 12;\ 9;\ 8;\ 14$.}
+\vfill
+\question{12}{Tính trung vị của mẫu $18;\ 11;\ 14;\ 22;\ 12$.}
+\vfill
+\question{13}{Tính trung vị của mẫu $14;\ 7;\ 9;\ 21;\ 15;\ 10$.}
+\vfill
+\question{14}{Tìm mốt của mẫu $3;\ 7;\ 3;\ 4;\ 7;\ 3;\ 9;\ 4$.}
+\vfill
+\question{15}{Tính số trung bình của mẫu cho bởi bảng tần số sau. \(\begin{array}{c|cccc}\text{Giá trị}&1&2&3&4\\\hline\text{Tần số}&2&3&4&1\end{array}\)}
+\newpage
+\banner{Bài 13. Các số đặc trưng đo xu thế trung tâm}
+\question{16}{Tính trung vị của mẫu cho bởi bảng tần số sau. \(\begin{array}{c|cccc}\text{Giá trị}&2&4&6&9\\\hline\text{Tần số}&3&2&4&1\end{array}\)}
+\vfill
+\question{17}{Tìm mốt của mẫu cho bởi bảng tần số sau. \(\begin{array}{c|cccc}\text{Giá trị}&10&15&20&25\\\hline\text{Tần số}&4&6&3&2\end{array}\)}
+\vfill
+\question{18}{Tìm tứ phân vị thứ nhất $Q_1$ của mẫu $3;\ 5;\ 6;\ 8;\ 10;\ 11;\ 15$.}
+\vfill
+\question{19}{Tìm tứ phân vị thứ ba $Q_3$ của mẫu $2;\ 4;\ 7;\ 9;\ 10;\ 13;\ 17;\ 21$.}
+\vfill
+\question{20}{Mẫu số liệu gồm $6;8;10;x;14$ có số trung bình bằng $10$. Tìm $x$.}
+\newpage
+\banner{Bài 13. Các số đặc trưng đo xu thế trung tâm}
+\question{21}{Một lớp có $40$ học sinh. Điểm trung bình cả lớp là $7{,}6$. Trong đó, $25$ học sinh nam có điểm trung bình là $7{,}36$. Tính điểm trung bình của $15$ học sinh nữ.}
+\vfill
+\question{22}{Một mẫu có $10$ giá trị, số trung bình đang ghi là $18$. Kiểm tra thấy một giá trị $26$ bị nhập nhầm thành $16$. Tính số trung bình sau khi sửa.}
+\vfill
+\question{23}{Chín thời gian đi học (phút) đã sắp theo thứ tự không giảm là $12;15;15;18;x;22;24;25;28$, có trung vị $20$. Thêm một quan sát $21$ phút. Tính trung vị của mẫu mới (phút).}
+\vfill
+\question{24}{Mẫu đã sắp tăng dần $2;5;7;9;12;14;x;20;25$ có $Q_3=18$. Tìm $x$.}
+\vfill
+\question{25}{Một cửa hàng bán áo cỡ S, M, L lần lượt được $14$, $23$, $17$ chiếc trong tuần. Cỡ nào là mốt của mẫu dữ liệu về cỡ áo?}
+\newpage
+\banner{Bài 14. Các số đặc trưng đo độ phân tán}
+\question{26}{Tính khoảng biến thiên của mẫu $14;\ 26;\ 11;\ 18;\ 23;\ 19$.}
+\vfill
+\question{27}{Tính khoảng tứ phân vị của mẫu $2;\ 5;\ 6;\ 8;\ 11;\ 12;\ 15$.}
+\vfill
+\question{28}{Tính phương sai $s^2$ của mẫu $2;\ 4;\ 6;\ 8;\ 10$.}
+\vfill
+\question{29}{Tính độ lệch chuẩn $s$ của mẫu $9;\ 9;\ 13;\ 13$.}
+\vfill
+\question{30}{Tính độ lệch chuẩn $s$ của mẫu $12;\ 14;\ 16;\ 16;\ 17$. Làm tròn đến hàng phần trăm.}
+\newpage
+\banner{Bài 14. Các số đặc trưng đo độ phân tán}
+\question{31}{Tính phương sai của mẫu cho bởi bảng tần số sau. \(\begin{array}{c|cccc}\text{Giá trị}&0&1&2&3\\\hline\text{Tần số}&1&3&3&1\end{array}\)}
+\vfill
+\question{32}{Mẫu $2;\ 5;\ 6;\ 7;\ 8;\ 8;\ 9;\ 10;\ 30$ có đúng một giá trị ngoại lệ theo quy tắc $1{,}5\Delta_Q$. Tìm giá trị đó.}
+\vfill
+\question{33}{Mẫu $2;\ 3;\ 10;\ 11;\ 12;\ 13;\ 13;\ 14;\ 15;\ 25;\ 28$ có bao nhiêu quan sát ngoại lệ theo quy tắc $1{,}5\Delta_Q$?}
+\vfill
+\question{34}{Một mẫu có $Q_1=20$ và $Q_3=28$. Tính cận trên dùng để phát hiện giá trị ngoại lệ.}
+\vfill
+\question{35}{Một mẫu có $Q_1=12$ và $Q_3=18$. Tính cận dưới dùng để phát hiện giá trị ngoại lệ.}
+\newpage
+\banner{Bài 14. Các số đặc trưng đo độ phân tán}
+\question{36}{Mẫu đã sắp tăng dần $7;9;11;14;x$ có khoảng biến thiên $13$. Tìm $x$.}
+\vfill
+\question{37}{Mẫu đã sắp tăng dần $3;5;6;9;11;x;17;20$ có khoảng tứ phân vị $9$. Tìm $x$.}
+\vfill
+\question{38}{Một mẫu gồm $4;4;4;4;4$. Tính độ lệch chuẩn của mẫu.}
+\vfill
+\question{39}{Hai máy đóng gói có cùng khối lượng trung bình mỗi gói. Độ lệch chuẩn của máy 1 là $1{,}6$ g, của máy 2 là $2{,}1$ g. Theo độ lệch chuẩn, máy số mấy đóng gói đồng đều hơn?}
+\vfill
+\question{40}{Điểm kiểm tra của năm học sinh là $6;7;8;9;x$. Biết điểm trung bình bằng $8$. Tính phương sai của mẫu.}
+\newpage
+\banner{Bài tập tổng hợp Chương V}
+\question{41}{Điểm của $8$ học sinh có trung bình $7{,}5$. Sau khi thêm một học sinh, trung bình của $9$ em là $7{,}6$. Tính điểm của học sinh được thêm.}
+\vfill
+\question{42}{Mẫu đã sắp tăng dần $3;7;9;13;15;18;x$ có số trung bình bằng trung vị. Tìm $x$.}
+\vfill
+\question{43}{Từ mẫu $5;\ 6;\ 7;\ 7;\ 8;\ 9;\ 30$, bỏ quan sát ngoại lệ theo quy tắc $1{,}5\Delta_Q$. Tính số trung bình của mẫu còn lại.}
+\vfill
+\question{44}{Khối lượng của bốn mẫu vật (gam) là $10;14;x;y$ với $x<y$. Mẫu số liệu có số trung bình $15$ và phương sai $13$. Tìm $y$.}
+\vfill
+\question{45}{Một mẫu thời gian tính bằng phút có phương sai $0{,}04$ phút$^2$. Tính độ lệch chuẩn của mẫu theo đơn vị giây.}
+\newpage
+\banner{Bài tập tổng hợp Chương V}
+\question{46}{Mẫu thời gian chờ ban đầu là $8;\ 9;\ 10;\ 10;\ 11;\ 12$ phút. Mỗi thời gian tăng thêm $3$ phút. Tính phương sai của mẫu mới, làm tròn đến hàng phần trăm.}
+\vfill
+\question{47}{Điểm của hai nhóm là $5;7;7;9$ và $6;6;8;8$. Tính phương sai của nhóm thứ nhất trừ phương sai của nhóm thứ hai.}
+\vfill
+\question{48}{Mẫu $8;9;11;14;18$ có một giá trị bị nhập sai. Sau khi sửa giá trị $18$, số trung bình tăng đúng $0{,}8$. Tính khoảng biến thiên của mẫu đã sửa.}
+\vfill
+\question{49}{Số ca làm trong tuần của $20$ nhân viên được cho bởi bảng tần số sau. Tính khoảng tứ phân vị của mẫu (ca). \(\begin{array}{c|ccccc}\text{Giá trị}&2&3&4&5&6\\\hline\text{Tần số}&4&6&m&3&2\end{array}\)}
+\vfill
+\question{50}{Mẫu $10;12;14;16$ có số trung bình $\bar x$. Thêm một quan sát bằng $\bar x$ vào mẫu. Tính phương sai của mẫu mới.}
+\end{document}

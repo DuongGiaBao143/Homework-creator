@@ -1,0 +1,89 @@
+
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.45cm,includeheadfoot,headheight=18pt,headsep=7pt,footskip=18pt]{geometry}
+\usepackage{amsmath,amssymb,array,fancyhdr,tikz,xcolor}
+\definecolor{ink}{RGB}{30,55,70}
+\definecolor{gridline}{RGB}{218,228,233}
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\bfseries LÀM TOÁN ĐỂ HẠNH PHÚC}
+\rhead{\small\itshape Người biên soạn: Dương Gia Bảo}
+\rfoot{\small Trang \thepage}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\newcommand{\banner}[1]{\par\medskip{\large\bfseries\color{ink}#1}\par\smallskip}
+\newcommand{\grid}[1]{%
+  \begin{tikzpicture}
+    \draw[step=5mm,gridline,line width=.25pt] (0,0) grid (\linewidth,#1);
+    \draw[gridline,line width=.5pt] (0,0) rectangle (\linewidth,#1);
+  \end{tikzpicture}}
+\newcommand{\question}[2]{%
+  \begin{minipage}{\linewidth}
+    \textbf{Câu #1.} #2\par\smallskip
+    \grid{2.5cm}\par\nobreak\smallskip
+    \hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{10pt}\hspace{2.75cm}}\par
+  \end{minipage}\par}
+\newcommand{\solution}[3]{%
+  \begin{minipage}{\linewidth}
+    \textbf{Câu #1.}\ \textbf{Đáp số} \(\boxed{#2}\).\quad #3
+  \end{minipage}\par\medskip}
+\begin{document}
+\begin{center}{\LARGE\bfseries\color{ink}ĐÁP ÁN VÀ HƯỚNG DẪN}\\[4pt]{\large\bfseries TOÁN 10 \enspace|\enspace CHƯƠNG V}\\[4pt]Các số đặc trưng của mẫu số liệu không ghép nhóm\end{center}
+\banner{Bài 12. Số gần đúng và sai số}
+\solution{1}{0{,}038}{$|18{,}762-18{,}8|=0{,}038$.}
+\solution{2}{24{,}32}{$24{,}36-0{,}04=24{,}32$.}
+\solution{3}{8{,}31}{$8{,}25+0{,}06=8{,}31$.}
+\solution{4}{56{,}79}{Chữ số hàng phần nghìn là $5$ nên tăng chữ số hàng phần trăm từ $8$ lên $9$.}
+\solution{5}{48700}{Chữ số hàng chục là $4$ nên giữ nguyên chữ số hàng trăm.}
+\solution{6}{0{,}05}{Nửa đơn vị của hàng làm tròn là $0{,}1/2=0{,}05$.}
+\solution{7}{0{,}5}{$\dfrac{|201-200|}{200}\cdot100=0{,}5$.}
+\solution{8}{0{,}4}{$\dfrac{0{,}05}{12{,}5}\cdot100=0{,}4$.}
+\solution{9}{348000}{$100<240<1000$, nên quy tròn đến hàng nghìn.}
+\solution{10}{244{,}42}{Hai độ dài đều dương. Cận trên là $20{,}2\cdot12{,}1=244{,}42$.}
+\banner{Bài 13. Các số đặc trưng đo xu thế trung tâm}
+\solution{11}{10}{$50/5=10$.}
+\solution{12}{14}{Thứ tự tăng dần là $11;12;14;18;22$, giá trị giữa bằng $14$.}
+\solution{13}{12}{Hai giá trị giữa là $10$ và $14$, lấy trung bình được $12$.}
+\solution{14}{3}{Giá trị $3$ xuất hiện $3$ lần, nhiều nhất.}
+\solution{15}{2{,}4}{$\dfrac{1\cdot2+2\cdot3+3\cdot4+4\cdot1}{10}=2{,}4$.}
+\solution{16}{5}{Các vị trí thứ $5$ và $6$ lần lượt là $4$ và $6$, nên trung vị bằng $5$.}
+\solution{17}{15}{Tần số lớn nhất là $6$, ứng với giá trị $15$.}
+\solution{18}{5}{Bỏ trung vị $8$, nửa dưới là $3;5;6$ nên $Q_1=5$.}
+\solution{19}{15}{Nửa trên là $10;13;17;21$ nên $Q_3=(13+17)/2=15$.}
+\solution{20}{12}{Tổng mẫu bằng $50$, tổng bốn giá trị đã biết bằng $38$.}
+\solution{21}{8}{Tổng điểm của các bạn nữ là $40\cdot7{,}6-25\cdot7{,}36=120$, chia $15$ được $8$.}
+\solution{22}{19}{Tổng đúng là $180-16+26=190$.}
+\solution{23}{20{,}5}{$x=20$. Sau khi thêm $21$, hai giá trị giữa là $20$ và $21$, trung vị bằng $20{,}5$.}
+\solution{24}{16}{Nửa trên là $14;x;20;25$ nên $(x+20)/2=18$, suy ra $x=16$.}
+\solution{25}{\text{M}}{Cỡ M có tần số $23$, lớn nhất trong ba cỡ.}
+\banner{Bài 14. Các số đặc trưng đo độ phân tán}
+\solution{26}{15}{$26-11=15$.}
+\solution{27}{7}{$Q_1=5$, $Q_3=12$, hiệu bằng $7$.}
+\solution{28}{8}{$\bar x=6$, tổng bình phương độ lệch là $40$, chia $5$ được $8$.}
+\solution{29}{2}{$\bar x=11$, mỗi bình phương độ lệch bằng $4$, nên $s=\sqrt4=2$.}
+\solution{30}{1{,}79}{$\bar x=15$, $s^2=(9+1+1+1+4)/5=3{,}2$, nên $s\approx1{,}79$.}
+\solution{31}{0{,}75}{$\bar x=1{,}5$, tổng bình phương độ lệch có tính tần số bằng $6$, chia $8$ được $0{,}75$.}
+\solution{32}{30}{$Q_1=5{,}5$, $Q_3=9{,}5$, cận trên bằng $15{,}5$. Chỉ $30$ nằm ngoài hai cận.}
+\solution{33}{3}{$Q_1=10$, $Q_3=15$, hai cận là $2{,}5$ và $22{,}5$. Ngoại lệ là $2;25;28$.}
+\solution{34}{40}{$28+1{,}5(28-20)=40$.}
+\solution{35}{3}{$12-1{,}5(18-12)=3$.}
+\solution{36}{20}{$x-7=13$, nên $x=20$.}
+\solution{37}{12}{$Q_1=5{,}5$, $Q_3=14{,}5$, nên $(x+17)/2=14{,}5$ và $x=12$.}
+\solution{38}{0}{Mọi giá trị bằng số trung bình nên $s^2=0$ và $s=0$.}
+\solution{39}{1}{Máy 1 có độ lệch chuẩn nhỏ hơn.}
+\solution{40}{2}{$x=10$. Tổng bình phương độ lệch là $4+1+0+1+4=10$, chia $5$ được $2$.}
+\banner{Bài tập tổng hợp Chương V}
+\solution{41}{8{,}4}{$9\cdot7{,}6-8\cdot7{,}5=8{,}4$.}
+\solution{42}{26}{Trung vị là $13$. Tổng mẫu bằng $91$, tổng sáu số đã biết bằng $65$, suy ra $x=26$.}
+\solution{43}{7}{$Q_1=6$, $Q_3=9$, cận trên $13{,}5$. Bỏ $30$, trung bình còn lại là $42/6=7$.}
+\solution{44}{20}{$x+y=36$ và $(x-15)^2+(y-15)^2=26$. Do đó $(y-x)^2=2\cdot26-(36-30)^2=16$. Từ $y-x=4$ suy ra $y=20$.}
+\solution{45}{12}{$s=\sqrt{0{,}04}=0{,}2$ phút, tức $12$ giây.}
+\solution{46}{1{,}67}{Cộng cùng một số vào mọi giá trị giữ nguyên độ lệch quanh trung bình. $s^2=10/6\approx1{,}67$.}
+\solution{47}{1}{Cả hai trung bình đều bằng $7$. Phương sai lần lượt là $2$ và $1$.}
+\solution{48}{14}{Giá trị đúng là $18+5\cdot0{,}8=22$. Khoảng biến thiên là $22-8=14$.}
+\solution{49}{1{,}5}{$m=5$. Trong mẫu đã sắp xếp, $Q_1=(3+3)/2=3$ và $Q_3=(4+5)/2=4{,}5$.}
+\solution{50}{4}{$\bar x=13$ giữ nguyên. Tổng bình phương độ lệch bằng $20$, chia $5$ được $4$.}
+\end{document}
