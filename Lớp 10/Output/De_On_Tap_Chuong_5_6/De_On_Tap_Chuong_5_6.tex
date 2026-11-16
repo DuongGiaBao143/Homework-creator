@@ -1,0 +1,468 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.3cm,top=0.75cm,bottom=1.0cm,includehead,includefoot,headheight=18pt,headsep=5pt,footskip=16pt]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace,multicol}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel,patterns}
+
+\definecolor{ink}{RGB}{30,55,70}
+\definecolor{accent}{RGB}{18,82,112}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+\newcommand{\headerQuote}{%
+  \ifcase\numexpr\value{page}-1\relax
+    Math gives us hope that every problem has a solution%
+  \or Math + You = Champion%
+  \or Where Frustration Becomes Inspiration%
+  \or Turning Confusion into Clarity%
+  \or Don't be an X, be a Y of mathematics%
+  \or Don't get mad. Learn to add%
+  \or The only way to learn mathematics is to do mathematics%
+  \or Small steps every day lead to big results%
+  \or Every expert was once a beginner%
+  \or Success is the sum of small efforts repeated daily%
+  \or Mathematics is the music of reason%
+  \or Believe you can and you're halfway there%
+  \or Math gives us hope that every problem has a solution%
+  \or Math + You = Champion%
+  \or Where Frustration Becomes Inspiration%
+  \or Turning Confusion into Clarity%
+  \or Don't be an X, be a Y of mathematics%
+  \or Don't get mad. Learn to add%
+  \or The only way to learn mathematics is to do mathematics%
+  \or Small steps every day lead to big results%
+  \or Every expert was once a beginner%
+  \or Success is the sum of small efforts repeated daily%
+  \or Mathematics is the music of reason%
+  \or Believe you can and you're halfway there%
+  \or Math gives us hope that every problem has a solution%
+  \or Math + You = Champion%
+  \or Where Frustration Becomes Inspiration%
+  \or Turning Confusion into Clarity%
+  \or Don't be an X, be a Y of mathematics%
+  \or Don't get mad. Learn to add%
+  \else Practice makes perfect — keep solving!%
+  \fi
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\textit{\color{gray!70!black}\headerQuote}}
+\rhead{\small\textbf{\color{ink}Người biên soạn: Dương Gia Bảo}}
+\lfoot{}
+\rfoot{\small Trang \thepage/4}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancypagestyle{dapan}{
+  \fancyhf{}
+  \lhead{\footnotesize\textit{\color{gray!70!black}\headerQuote}}
+  \rhead{\small\textbf{\color{ink}Người biên soạn: Dương Gia Bảo}}
+  \lfoot{\small\textit{\color{gray!60!black}Đáp án Đề ôn tập Chương V \& VI — Toán 10 KNTT}}
+  \rfoot{\small Trang \thepage/2}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\newcommand{\parttitle}[1]{\par\vspace{3.5pt}\needspace{3\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{2pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[3.8pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\one}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{}}\textbf{A.} #1\\[4pt]\textbf{B.} #2\\[4pt]\textbf{C.} #3\\[4pt]\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\textit{Đáp số:}\ \fbox{\rule{0pt}{9pt}\hspace{2.2cm}}}
+
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.1cm,itemsep=1.2pt,topsep=1.2pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=1.5pt,topsep=0.2pt,parsep=0pt}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+
+\begin{document}
+
+\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[2pt]
+    \textbf{ĐỀ ÔN TẬP CHÍNH THỨC}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.52\textwidth}
+    \centering
+    \textbf{ĐỀ ÔN TẬP TOÁN 10 — CHƯƠNG V \& CHƯƠNG VI}\\[1pt]
+    \textbf{NĂM HỌC 2026 -- 2027}\\[1pt]
+    \textbf{Môn: TOÁN -- Khối lớp 10}\\
+    \textit{\small Thời gian làm bài: 90 phút (không kể thời gian phát đề)}
+\end{minipage}
+
+\vspace{0.05cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Mã đề}\\
+        \textbf{1056}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.05cm}
+
+\parttitle{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 20. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}
+\begin{enumerate}
+\item Cho số gần đúng $a = 354{,}67$ với độ chính xác $d = 0{,}2$. Hãy viết số quy tròn của số $a$.
+\four{$355$.}{$354{,}7$.}{$354$.}{$350$.}
+
+\item Điểm kiểm tra môn Toán của một nhóm $8$ học sinh lần lượt là: $6;\ 7;\ 7;\ 8;\ 8;\ 8;\ 9;\ 10$. Số trung bình cộng của mẫu số liệu trên là
+\four{$7{,}75$.}{$7{,}875$.}{$8{,}0$.}{$7{,}5$.}
+
+\item Thời gian (phút) làm một bài tập của $9$ học sinh được ghi lại như sau: $15;\ 18;\ 12;\ 20;\ 25;\ 16;\ 14;\ 22;\ 19$. Trung vị của mẫu số liệu trên bằng
+\four{$16$.}{$19$.}{$18$.}{$20$.}
+
+\item Mẫu số liệu về số cây xanh trồng được của $10$ lớp học khối 10 là:
+$$18;\ 20;\ 22;\ 25;\ 28;\ 30;\ 32;\ 35;\ 38;\ 42.$$
+Tứ phân vị thứ nhất $Q_1$ của mẫu số liệu là
+\four{$20$.}{$25$.}{$28$.}{$22$.}
+
+\item Một cửa hàng giày thể thao thống kê số lượng đôi giày bán được theo kích cỡ (size) trong một tuần:
+$$\text{Size 38: } 12 \text{ đôi;}\quad \text{Size 39: } 25 \text{ đôi;}\quad \text{Size 40: } 38 \text{ đôi;}\quad \text{Size 41: } 30 \text{ đôi;}\quad \text{Size 42: } 15 \text{ đôi.}$$
+Mốt của mẫu số liệu về kích cỡ giày bán được là
+\four{$40$.}{$38$.}{$41$.}{$39$.}
+
+\item Cho mẫu số liệu đã sắp xếp thứ tự: $4;\ 6;\ 7;\ 9;\ 11;\ 14;\ 18;\ 20$. Khoảng tứ phân vị $\Delta_Q$ của mẫu số liệu trên bằng
+\four{$9{,}0$.}{$9{,}5$.}{$10{,}0$.}{$16{,}0$.}
+
+\item Cho mẫu số liệu gồm $5$ giá trị: $2;\ 4;\ 6;\ 8;\ 10$. Phương sai của mẫu số liệu trên là
+\four{$4$.}{$2\sqrt{2}$.}{$8$.}{$16$.}
+
+\item Một mẫu số liệu có tứ phân vị thứ nhất $Q_1 = 15$ và tứ phân vị thứ ba $Q_3 = 25$. Trong các giá trị sau, giá trị nào là một giá trị ngoại lệ của mẫu số liệu?
+\four{$5$.}{$20$.}{$38$.}{$42$.}
+
+\item Tập xác định $D$ của hàm số $y = \dfrac{\sqrt{x - 2}}{x - 5}$ là
+\four{$[2; +\infty) \setminus \{5\}$.}{$(2; +\infty) \setminus \{5\}$.}{$[2; 5)$.}{$(5; +\infty)$.}
+
+\item Cho hàm số $f(x) = \begin{cases} 2x - 1 & \text{khi } x \ge 1 \\ -x^2 + 3 & \text{khi } x < 1 \end{cases}$. Giá trị của biểu thức $P = f(2) + f(-1)$ bằng
+\four{$3$.}{$5$.}{$7$.}{$4$.}
+
+\item Hàm số nào sau đây đồng biến trên khoảng $(-\infty; +\infty)$?
+\four{$y = -2x + 3$.}{$y = x^2 - 2x$.}{$y = 3x - 1$.}{$y = \dfrac{1}{x}$.}
+
+\item Tọa độ đỉnh $I$ của parabol $(P): y = 2x^2 - 4x + 1$ là
+\four{$I(-1; 7)$.}{$I(2; 1)$.}{$I(-2; 17)$.}{$I(1; -1)$.}
+\end{enumerate}
+
+\newpage
+\begin{enumerate}[resume*]
+\item Trục đối xứng của parabol $y = -x^2 + 6x - 5$ là đường thẳng có phương trình
+\four{$x = 3$.}{$x = -3$.}{$y = 3$.}{$x = 6$.}
+
+\item Biết parabol $(P): y = ax^2 + bx + 3$ đi qua điểm $A(1; 0)$ và có trục đối xứng là đường thẳng $x = 2$. Giá trị của tổng $a + b$ bằng
+\four{$3$.}{$-3$.}{$-4$.}{$1$.}
+
+\item Giá trị lớn nhất của hàm số $y = -x^2 + 2x + 5$ trên đoạn $[0; 3]$ bằng
+\four{$5$.}{$2$.}{$6$.}{$8$.}
+
+\item Tam thức bậc hai $f(x) = x^2 - 6x + 9$ nhận giá trị dương khi và chỉ khi
+\four{$x > 3$.}{$x < 3$.}{$x \in \mathbb{R}$.}{$x \ne 3$.}
+
+\item Tập nghiệm $S$ của bất phương trình $-x^2 + 5x - 6 > 0$ là
+\four{$(2; 3)$.}{$(-\infty; 2) \cup (3; +\infty)$.}{$[2; 3]$.}{$(-\infty; 2] \cup [3; +\infty)$.}
+
+\item Số nghiệm nguyên của bất phương trình $x^2 - 3x - 10 \le 0$ là
+\four{$7$.}{$8$.}{$6$.}{$9$.}
+
+\item Tập nghiệm của phương trình $\sqrt{x^2 - 3x + 2} = \sqrt{x + 7}$ là
+\four{$\{-1\}$.}{$\{5\}$.}{$\{-1; 5\}$.}{$\varnothing$.}
+
+\item Số nghiệm thực của phương trình $\sqrt{2x^2 - 5x + 1} = x - 1$ là
+\four{$2$.}{$0$.}{$3$.}{$1$.}
+\end{enumerate}
+
+\vspace{3pt}
+\parttitle{PHẦN II. Câu trắc nghiệm đúng sai}
+\textit{Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}
+\item Để chuẩn bị tham gia hội khỏe Phù Đổng, thầy giáo thể dục ghi lại thời gian chạy $100\text{ m}$ (đơn vị: giây) của $10$ học sinh nam lớp 10A như sau:
+$$13{,}2;\quad 13{,}5;\quad 13{,}6;\quad 13{,}8;\quad 14{,}0;\quad 14{,}2;\quad 14{,}5;\quad 14{,}8;\quad 15{,}2;\quad 17{,}2.$$
+\begin{enumerate}
+    \item Khoảng biến thiên của mẫu số liệu trên bằng $4{,}0\text{ giây}$.
+    \item Trung vị của mẫu số liệu thời gian chạy là $14{,}1\text{ giây}$.
+    \item Tứ phân vị thứ nhất và thứ ba lần lượt là $Q_1 = 13{,}6$ và $Q_3 = 14{,}5$.
+    \item Giá trị $17{,}2$ là một giá trị ngoại lệ của mẫu số liệu.
+\end{enumerate}
+
+\item Cho hàm số bậc hai $y = f(x) = x^2 - 4x + 3$ có đồ thị là parabol $(P)$ như hình vẽ bên.
+\par\noindent\begin{minipage}[t]{0.70\linewidth}
+\begin{enumerate}
+    \item Trục đối xứng của parabol $(P)$ là đường thẳng $x = 2$.
+    \item Đỉnh của parabol $(P)$ có tọa độ là $I(2; 1)$.
+    \item Hàm số đồng biến trên khoảng $(2; +\infty)$ và nghịch biến trên khoảng $(-\infty; 2)$.
+    \item Giá trị lớn nhất của hàm số trên đoạn $[0; 5]$ bằng $8$.
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.28\linewidth}\raggedleft\vspace{-4pt}
+\begin{tikzpicture}[scale=0.52, >=Stealth]
+  \draw[step=1, color=gray!25, line width=0.25pt] (-1,-2) grid (5,4);
+  \draw[->, line width=0.6pt] (-1.2,0) -- (5.2,0) node[below, font=\scriptsize] {$x$};
+  \draw[->, line width=0.6pt] (0,-2.2) -- (0,4.2) node[right, font=\scriptsize] {$y$};
+  \node[below left, font=\scriptsize] at (0,0) {$O$};
+  \draw[dashed, gray!70] (2,0) -- (2,-1) -- (0,-1);
+  \draw[dashed, gray!70] (2,-2) -- (2,4);
+  \draw[thick, accent, domain=-0.2:4.2, samples=100] plot (\x, {(\x)^2 - 4*(\x) + 3});
+  \fill[accent] (2,-1) circle (2.2pt) node[below, font=\scriptsize] {$I(2;-1)$};
+  \fill[ink] (1,0) circle (2pt) node[above left, font=\scriptsize] {$1$};
+  \fill[ink] (3,0) circle (2pt) node[above right, font=\scriptsize] {$3$};
+  \fill[ink] (0,3) circle (2pt) node[left, font=\scriptsize] {$3$};
+  \node[left, font=\scriptsize] at (0,-1) {$-1$};
+\end{tikzpicture}
+\end{minipage}
+\end{enumerate}
+
+\newpage
+\begin{enumerate}[resume*]
+\item Cho tam thức bậc hai $f(x) = x^2 - 2(m + 1)x + m^2 + 3$ với $m$ là tham số thực.
+\begin{enumerate}
+    \item Khi $m = 1$, tam thức trở thành $f(x) = x^2 - 4x + 4$ và có nghiệm kép $x = 2$.
+    \item Khi $m = 1$, bất phương trình $f(x) \le 0$ có vô số nghiệm thực.
+    \item Biệt thức $\Delta'$ của tam thức bậc hai $f(x)$ là $\Delta' = 2m - 2$.
+    \item Tam thức $f(x) > 0$ với mọi $x \in \mathbb{R}$ khi và chỉ khi $m > 1$.
+\end{enumerate}
+
+\item Cho phương trình chứa căn bậc hai: $\sqrt{2x^2 - 6x + 5} = x - 1$.
+\begin{enumerate}
+    \item Bình phương hai vế của phương trình ta thu được phương trình bậc hai $x^2 - 4x + 4 = 0$.
+    \item Phương trình bậc hai $x^2 - 4x + 4 = 0$ có nghiệm kép $x = 2$.
+    \item Giá trị $x = 2$ không thỏa mãn phương trình ban đầu.
+    \item Phương trình ban đầu đã cho có tập nghiệm là $S = \{2\}$.
+\end{enumerate}
+\end{enumerate}
+
+\vspace{3pt}
+\parttitle{PHẦN III. Câu trắc nghiệm trả lời ngắn}
+\textit{Thí sinh trả lời từ câu 1 đến câu 6. Mỗi câu thí sinh điền kết quả vào ô tương ứng.}
+\begin{enumerate}
+\item Điểm số kiểm tra môn Toán của một nhóm gồm $5$ học sinh là: $5;\ 6;\ 7;\ 8;\ 9$. Hãy tính phương sai của mẫu số liệu trên.\answerbox
+
+\item Cho mẫu số liệu gồm $10$ giá trị: $3;\ 12;\ 14;\ 15;\ 16;\ 18;\ 19;\ 20;\ 22;\ 35$. Biết tứ phân vị thứ nhất $Q_1 = 14$ và tứ phân vị thứ ba $Q_3 = 20$. Hãy tìm giá trị ngoại lệ lớn nhất trong mẫu số liệu trên.\answerbox
+
+\item Tìm giá trị nhỏ nhất của hàm số bậc hai $y = x^2 - 6x + 14$ trên đoạn $[1; 5]$.\answerbox
+
+\item Có bao nhiêu giá trị nguyên của tham số $m$ thuộc đoạn $[-5; 5]$ để bất phương trình $x^2 - 2(m - 1)x + 9 > 0$ nghiệm đúng với mọi $x \in \mathbb{R}$?\answerbox
+
+\item Tính tổng tất cả các nghiệm thực của phương trình $\sqrt{2x^2 - 3x - 5} = \sqrt{x^2 + 2x + 1}$.\answerbox
+
+\item \begin{minipage}[t]{0.70\linewidth}
+Một cổng chào hình parabol có bề rộng ở mặt đất là $AB = 6\text{ m}$ và chiều cao từ đỉnh cổng xuống mặt đất là $h = 4{,}5\text{ m}$ (như hình vẽ bên). Một chiếc xe tải chở hàng có chiều rộng $2\text{ m}$ muốn đi lọt qua chính giữa cổng. Chiều cao lớn nhất của xe tải (tính theo mét) để xe có thể đi qua cổng là bao nhiêu mét?\answerbox
+\end{minipage}\hfill
+\begin{minipage}[t]{0.28\linewidth}\raggedleft\vspace{-6pt}
+\begin{tikzpicture}[scale=0.42, >=Stealth]
+  \draw[->, line width=0.5pt] (-3.6,0) -- (3.6,0) node[below, font=\tiny] {$x$};
+  \draw[->, line width=0.5pt] (0,-0.3) -- (0,5.0) node[right, font=\tiny] {$y$};
+  \node[below left, font=\tiny] at (0,0) {$O$};
+  \draw[thick, domain=-3:3, samples=80, accent] plot (\x, {-0.5*(\x)^2 + 4.5});
+  \draw[line width=0.8pt, fill=gray!20] (-1,0) rectangle (1,4);
+  \node[font=\tiny] at (0,2) {Xe};
+  \draw[<->, gray!80!black] (-1,-0.25) -- (1,-0.25) node[midway, below, font=\tiny] {$2\text{m}$};
+  \draw[<->, gray!80!black] (-3,-0.55) -- (3,-0.55) node[midway, below, font=\tiny] {$6\text{m}$};
+  \node[left, font=\tiny, accent] at (0,4.5) {$4{,}5\text{m}$};
+\end{tikzpicture}
+\end{minipage}
+\end{enumerate}
+
+\newpage
+\parttitle{PHẦN IV. Tự luận}
+\textit{Thí sinh trình bày bài làm và các bước suy luận cho các bài toán sau:}
+
+\vspace{4pt}
+\textbf{Bài 1 (1,0 điểm).} Để đánh giá hiệu quả của hai phương pháp ôn tập môn Toán, nhà trường khảo sát điểm kiểm tra của hai nhóm học sinh gồm $6$ học sinh mỗi nhóm:
+\begin{itemize}[leftmargin=1.5em, itemsep=1.5pt]
+    \item Nhóm A: $6;\ 7;\ 8;\ 8;\ 9;\ 10$.
+    \item Nhóm B: $4;\ 6;\ 8;\ 8;\ 10;\ 12$.
+\end{itemize}
+\begin{enumerate}[label=\alph*), itemsep=2pt]
+    \item (0,5 điểm) Tính số trung bình cộng và độ lệch chuẩn của mẫu số liệu ở mỗi nhóm (làm tròn độ lệch chuẩn đến hàng phần trăm).
+    \item (0,5 điểm) Dựa vào các số đặc trưng đo độ phân tán, hãy nhận xét xem điểm thi của nhóm học sinh nào có mức độ phân tán ít hơn (tức kết quả học tập đồng đều hơn).
+\end{enumerate}
+
+\vspace{6pt}
+\textbf{Bài 2 (1,0 điểm).} Giải phương trình chứa căn bậc hai sau:
+$$\sqrt{2x^2 + 5x + 2} = x + 2.$$
+
+\vspace{6pt}
+\textbf{Bài 3 (1,0 điểm).} Một công ty du lịch dự định tổ chức một tour du lịch sinh thái cuối tuần. Nếu giá vé tour là $400$ nghìn đồng một người thì có $150$ khách đăng ký tham gia. Qua khảo sát thị trường, công ty nhận thấy cứ mỗi lần giảm giá vé $20$ nghìn đồng thì số khách đăng ký tham gia lại tăng thêm $15$ người. Biết rằng chi phí tổ chức cố định cùng chi phí phục vụ cho mỗi khách là $100$ nghìn đồng/người.
+\begin{enumerate}[label=\alph*), itemsep=2pt]
+    \item (0,5 điểm) Gọi $x$ là số lần giảm giá vé $20$ nghìn đồng ($x \in \mathbb{N}, 0 \le x \le 15$). Hãy lập hàm số $L(x)$ biểu diễn tổng lợi nhuận thu được của công ty theo $x$.
+    \item (0,5 điểm) Công ty nên đặt giá vé là bao nhiêu nghìn đồng để thu được tổng lợi nhuận cao nhất? Tổng lợi nhuận cao nhất đó bằng bao nhiêu triệu đồng?
+\end{enumerate}
+
+
+\newpage
+\pagestyle{dapan}
+\setcounter{page}{1}
+
+\begin{center}
+  {\Large\bfseries\color{ink} BẢNG ĐÁP ÁN TỔNG HỢP}\\[2pt]
+  {\small\color{gray!75!black} Đề ôn tập Toán 10 — Chương V \& Chương VI (Mã đề 1056)}
+\end{center}
+\vspace{1pt}
+
+\noindent\textbf{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn (20 câu)}
+\vspace{1.5pt}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|}
+\hline
+\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \\ \hline
+\textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} \\ \hline
+\hline
+\textbf{11} & \textbf{12} & \textbf{13} & \textbf{14} & \textbf{15} & \textbf{16} & \textbf{17} & \textbf{18} & \textbf{19} & \textbf{20} \\ \hline
+\textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{D} \\ \hline
+\end{tabular}
+\end{center}
+
+\vspace{1pt}
+\noindent\begin{minipage}[t]{0.58\linewidth}
+\textbf{PHẦN II. Câu trắc nghiệm đúng/sai}\\[1.5pt]
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{|C{1.1cm}|C{1.3cm}|C{1.3cm}|C{1.3cm}|C{1.3cm}|}
+\hline
+\textbf{Câu} & \textbf{a)} & \textbf{b)} & \textbf{c)} & \textbf{d)} \\ \hline
+\textbf{Câu 1} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} & \textbf{Đúng} \\ \hline
+\textbf{Câu 2} & \textbf{Đúng} & \textbf{Sai} & \textbf{Đúng} & \textbf{Đúng} \\ \hline
+\textbf{Câu 3} & \textbf{Đúng} & \textbf{Sai} & \textbf{Đúng} & \textbf{Sai} \\ \hline
+\textbf{Câu 4} & \textbf{Đúng} & \textbf{Đúng} & \textbf{Sai} & \textbf{Đúng} \\ \hline
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.40\linewidth}
+\textbf{PHẦN III. Trả lời ngắn}\\[1.5pt]
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{|C{0.82cm}|C{0.82cm}|C{0.82cm}|C{0.82cm}|C{0.82cm}|C{0.82cm}|}
+\hline
+\textbf{C.1} & \textbf{C.2} & \textbf{C.3} & \textbf{C.4} & \textbf{C.5} & \textbf{C.6} \\ \hline
+$\mathbf{2}$ & $\mathbf{35}$ & $\mathbf{5}$ & $\mathbf{5}$ & $\mathbf{5}$ & $\mathbf{4}$ \\ \hline
+\end{tabular}
+\end{minipage}
+
+\vspace{3pt}
+\parttitle{HƯỚNG DẪN GIẢI CHI TIẾT}
+\setlength{\columnsep}{16pt}
+\begin{multicols}{2}
+\small\sloppy
+
+\textbf{\color{accent}I. PHẦN TRẮC NGHIỆM}
+
+\textbf{Câu 1.} $d = 0{,}2$ có hàng phần mười, quy tròn đến hàng đơn vị. Vì $6 \ge 5$ nên số quy tròn là $\mathbf{355}$. Chọn \textbf{A}.
+
+\textbf{Câu 2.} Số trung bình: $\bar{x} = \dfrac{63}{8} = \mathbf{7{,}875}$. Chọn \textbf{B}.
+
+\textbf{Câu 3.} Sắp xếp dãy số: $12;\ 14;\ 15;\ 16;\ 18;\ 19;\ 20;\ 22;\ 25$. Trung vị là số thứ 5: $M_e = \mathbf{18}$. Chọn \textbf{C}.
+
+\textbf{Câu 4.} $n = 10$. Nửa dưới: $18;\ 20;\ 22;\ 25;\ 28 \Rightarrow Q_1 = \mathbf{22}$. Chọn \textbf{D}.
+
+\textbf{Câu 5.} Cỡ $40$ có tần số lớn nhất ($38$ đôi) $\Rightarrow M_o = \mathbf{40}$. Chọn \textbf{A}.
+
+\textbf{Câu 6.} $Q_1 = 6{,}5;\ Q_3 = 16 \Rightarrow \Delta_Q = 16 - 6{,}5 = \mathbf{9{,}5}$. Chọn \textbf{B}.
+
+\textbf{Câu 7.} $\bar{x} = 6$. Phương sai $s^2 = \dfrac{16+4+0+4+16}{5} = \mathbf{8}$. Chọn \textbf{C}.
+
+\textbf{Câu 8.} $\Delta_Q = 10 \Rightarrow Q_3 + 1{,}5\Delta_Q = 40$. Vì $42 > 40$ nên $42$ là giá trị ngoại lệ. Chọn \textbf{D}.
+
+\textbf{Câu 9.} Điều kiện: $x \ge 2$ và $x \ne 5 \Rightarrow D = [2; +\infty) \setminus \{5\}$. Chọn \textbf{A}.
+
+\textbf{Câu 10.} $f(2) = 3;\ f(-1) = 2 \Rightarrow P = 3 + 2 = \mathbf{5}$. Chọn \textbf{B}.
+
+\textbf{Câu 11.} Hàm $y = 3x - 1$ có $a = 3 > 0$ nên đồng biến trên $\mathbb{R}$. Chọn \textbf{C}.
+
+\textbf{Câu 12.} Đỉnh $x_I = 1;\ y_I = -1 \Rightarrow I(1; -1)$. Chọn \textbf{D}.
+
+\textbf{Câu 13.} Trục đối xứng $x = -\dfrac{6}{2(-1)} = \mathbf{3}$. Chọn \textbf{A}.
+
+\textbf{Câu 14.} Trục $x = 2 \Rightarrow b = -4a$. Qua $A(1; 0) \Rightarrow a + b + 3 = 0 \Rightarrow a + b = \mathbf{-3}$. Chọn \textbf{B}.
+
+\textbf{Câu 15.} Đỉnh $x = 1 \in [0; 3]$, $a = -1 < 0 \Rightarrow \max_{[0; 3]} y = y(1) = \mathbf{6}$. Chọn \textbf{C}.
+
+\textbf{Câu 16.} $f(x) = (x - 3)^2 > 0 \Leftrightarrow x \ne \mathbf{3}$. Chọn \textbf{D}.
+
+\textbf{Câu 17.} $-x^2 + 5x - 6 > 0 \Leftrightarrow x \in \mathbf{(2; 3)}$. Chọn \textbf{A}.
+
+\textbf{Câu 18.} $x^2 - 3x - 10 \le 0 \Leftrightarrow -2 \le x \le 5 \Rightarrow$ có $\mathbf{8}$ nghiệm nguyên. Chọn \textbf{B}.
+
+\textbf{Câu 19.} $x^2 - 3x + 2 = x + 7 \Leftrightarrow x^2 - 4x - 5 = 0 \Leftrightarrow x \in \mathbf{\{-1; 5\}}$. Chọn \textbf{C}.
+
+\textbf{Câu 20.} $x \ge 1$, bình phương: $x^2 - 3x = 0 \Rightarrow x = 3$ (nhận, $x=0$ loại). Có $\mathbf{1}$ nghiệm. Chọn \textbf{D}.
+
+\vspace{3pt}
+\textbf{\color{accent}II. PHẦN ĐÚNG/SAI}
+
+\textbf{Câu 1.}
+a) $R = 17{,}2 - 13{,}2 = 4{,}0\text{ s}$. $\Rightarrow$ \textbf{Đúng}.\\
+b) $M_e = \dfrac{14{,}0 + 14{,}2}{2} = 14{,}1\text{ s}$. $\Rightarrow$ \textbf{Đúng}.\\
+c) Nửa dưới $\Rightarrow Q_1 = 13{,}6$; nửa trên $\Rightarrow Q_3 = 14{,}8 \ne 14{,}5$. $\Rightarrow$ \textbf{Sai}.\\
+d) $\Delta_Q = 1{,}2 \Rightarrow Q_3 + 1{,}5\Delta_Q = 16{,}6 < 17{,}2$. $\Rightarrow$ \textbf{Đúng}.
+
+\textbf{Câu 2.}
+a) Trục đối xứng $x = 2$. $\Rightarrow$ \textbf{Đúng}.\\
+b) Tọa độ đỉnh là $I(2; -1) \ne I(2; 1)$. $\Rightarrow$ \textbf{Sai}.\\
+c) $a = 1 > 0$ nên nghịch biến trên $(-\infty; 2)$ và đồng biến trên $(2; +\infty)$. $\Rightarrow$ \textbf{Đúng}.\\
+d) Trên $[0; 5]$, $\max y = f(5) = 8$. $\Rightarrow$ \textbf{Đúng}.
+
+\textbf{Câu 3.}
+a) $m = 1 \Rightarrow (x - 2)^2 = 0 \Leftrightarrow x = 2$ (nghiệm kép). $\Rightarrow$ \textbf{Đúng}.\\
+b) $(x - 2)^2 \le 0 \Leftrightarrow x = 2$ ($1$ nghiệm). $\Rightarrow$ \textbf{Sai}.\\
+c) $\Delta' = (m + 1)^2 - (m^2 + 3) = 2m - 2$. $\Rightarrow$ \textbf{Đúng}.\\
+d) $f(x) > 0, \forall x \Leftrightarrow \Delta' < 0 \Leftrightarrow m < 1$. $\Rightarrow$ \textbf{Sai}.
+
+\textbf{Câu 4.}
+a) $2x^2 - 6x + 5 = x^2 - 2x + 1 \Leftrightarrow x^2 - 4x + 4 = 0$. $\Rightarrow$ \textbf{Đúng}.\\
+b) $(x - 2)^2 = 0 \Leftrightarrow x = 2$. $\Rightarrow$ \textbf{Đúng}.\\
+c) Thay $x = 2$ thỏa mãn phương trình ban đầu. $\Rightarrow$ \textbf{Sai}.\\
+d) Tập nghiệm duy nhất $S = \{2\}$. $\Rightarrow$ \textbf{Đúng}.
+
+\vspace{3pt}
+\textbf{\color{accent}III. PHẦN TRẢ LỜI NGẮN}
+
+\textbf{Câu 1.} $\bar{x} = 7$. Phương sai $s^2 = \dfrac{4 + 1 + 0 + 1 + 4}{5} = \mathbf{2}$.
+
+\textbf{Câu 2.} $\Delta_Q = 6 \Rightarrow Q_3 + 1{,}5\Delta_Q = 29$. Vì $35 > 29$ nên giá trị ngoại lệ lớn nhất là $\mathbf{35}$.
+
+\textbf{Câu 3.} Parabol có $a > 0$, đỉnh $x_I = 3 \in [1; 5]$. Giá trị nhỏ nhất $y(3) = \mathbf{5}$.
+
+\textbf{Câu 4.} $\Delta' = (m - 1)^2 - 9 < 0 \Leftrightarrow -2 < m < 4$. Các số nguyên $m \in \{-1; 0; 1; 2; 3\}$: có $\mathbf{5}$ giá trị.
+
+\textbf{Câu 5.} $2x^2 - 3x - 5 = x^2 + 2x + 1 \Leftrightarrow x^2 - 5x - 6 = 0 \Leftrightarrow x = -1$ hoặc $x = 6$. Tổng hai nghiệm là $\mathbf{5}$.
+
+\textbf{Câu 6.} Chọn hệ trục $Oxy$ với đỉnh $I(0; 4{,}5)$, qua $B(3; 0) \Rightarrow y = -0{,}5x^2 + 4{,}5$. Xe rộng $2\text{ m}$ đi chính giữa $\Rightarrow$ chiều cao tối đa tại $x = 1$ là $y(1) = -0{,}5(1)^2 + 4{,}5 = \mathbf{4}\text{ m}$.
+
+\vspace{4pt}
+\needspace{6\baselineskip}
+\textbf{\color{accent}IV. PHẦN TỰ LUẬN}
+
+\textbf{Bài 1.}
+a) Nhóm A: $\bar{x}_A = \dfrac{48}{6} = \mathbf{8}$; $s_A = \sqrt{\dfrac{10}{6}} \approx \mathbf{1{,}29}$.\\
+Nhóm B: $\bar{x}_B = \dfrac{48}{6} = \mathbf{8}$; $s_B = \sqrt{\dfrac{40}{6}} \approx \mathbf{2{,}58}$.\\
+b) Hai nhóm cùng có điểm trung bình bằng $8$, nhưng $s_A \approx 1{,}29 < s_B \approx 2{,}58$ nên điểm thi nhóm A ít phân tán hơn, tức kết quả nhóm A đồng đều hơn nhóm B.
+
+\textbf{Bài 2.}
+Điều kiện: $x + 2 \ge 0 \Leftrightarrow x \ge -2$.\\
+Bình phương: $2x^2 + 5x + 2 = (x + 2)^2 \Leftrightarrow x^2 + x - 2 = 0 \Leftrightarrow x = 1$ hoặc $x = -2$.\\
+Cả hai nghiệm đều thỏa $x \ge -2$. Vậy $S = \{-2; 1\}$.
+
+\textbf{Bài 3.}
+a) Giá vé: $P(x) = 400 - 20x$ (nghìn đồng).\\
+Khách: $N(x) = 150 + 15x$ (người).\\
+Lợi nhuận trên mỗi khách: $300 - 20x$ (nghìn đồng).\\
+Tổng lợi nhuận: $L(x) = (300 - 20x)(150 + 15x) = \mathbf{-300x^2 + 1500x + 45000}$ (nghìn đồng).\\
+b) Đỉnh parabol: $x = -\dfrac{1500}{2(-300)} = 2{,}5$.\\
+Vì $x \in \mathbb{N}$, xét $x = 2$ và $x = 3$:\\
+$L(2) = L(3) = 46\,800$ nghìn đồng ($46{,}8$ triệu đồng).\\
+- $x = 2$: Giá vé $400 - 20(2) = \mathbf{360}$ nghìn đồng.\\
+- $x = 3$: Giá vé $400 - 20(3) = \mathbf{340}$ nghìn đồng.\\
+Vậy công ty nên đặt giá vé $360$ hoặc $340$ nghìn đồng để đạt lợi nhuận lớn nhất $46{,}8$ triệu đồng.
+
+\end{multicols}
+\end{document}
