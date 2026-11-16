@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.29)  16 NOV 2026 18:41
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.29)  16 NOV 2026 18:52
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1012,13 +1012,13 @@ mr/m/n/12 håc sinh ^^_÷ñc ghi l¤i nh÷ sau: $\OT1/cmr/m/n/12 15;  18;  12;  20;
 [1{C:/Users/Crink/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
 
 ] [2]
-[3] [4]
-Overfull \hbox (5.37975pt too wide) in paragraph at lines 342--349
+[3]
+Overfull \hbox (5.37975pt too wide) in paragraph at lines 336--343
 [] 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 363--364
+Underfull \hbox (badness 10000) in paragraph at lines 357--358
 []\T5/cmr/bx/n/10.95 C¥u 3. \T5/cmr/m/n/10.95 S­p x¸p d¢y sè:
  []
 
@@ -1031,11 +1031,11 @@ L3 programming layer <2025-12-24>
 Here is how much of TeX's memory you used:
  17398 strings out of 467871
  337124 string characters out of 5435211
- 767192 words of memory out of 5000000
+ 767197 words of memory out of 5000000
  45960 multiletter control sequences out of 15000+600000
  650303 words of font info for 87 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,13n,107p,593b,913s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 102i,13n,107p,593b,911s stack positions out of 10000i,1000n,20000p,200000b,200000s
  <C:\Users\Crink\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
 1200.pk><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx10.pfb><D:/MiKTeX/fonts/t
 ype1/public/amsfonts/cm/cmbx12.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cm
@@ -1051,9 +1051,9 @@ m10.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnbx10.pfb><D:/MiKTeX/fonts/type1/vnte
 x/vnr/vnbx12.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><D:/MiKTeX/fonts/ty
 pe1/vntex/vnr/vnr12.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnr6.pfb><D:/MiKTeX/fo
 nts/type1/vntex/vnr/vnti10.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnti12.pfb>
-Output written on De_On_Tap_Chuong_5_6.pdf (6 pages, 317817 bytes).
+Output written on De_On_Tap_Chuong_5_6.pdf (5 pages, 316227 bytes).
 PDF statistics:
- 139 PDF objects out of 1000 (max. 8388607)
+ 136 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
