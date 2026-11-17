@@ -1,0 +1,326 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{fontspec}
+\setmainfont{Times New Roman}[Path=C:/Windows/Fonts/,UprightFont=times.ttf,BoldFont=timesbd.ttf,ItalicFont=timesi.ttf,BoldItalicFont=timesbi.ttf]
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage[left=1.5cm,right=1.5cm,top=1.5cm,bottom=1.7cm,headheight=17pt]{geometry}
+\usepackage{enumitem,array,graphicx,tikz,fancyhdr,needspace,booktabs}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\small\textbf{ĐỀ CƯƠNG ÔN TẬP CHƯƠNG V -- PHƯƠNG PHÁP TỌA ĐỘ TRONG KHÔNG GIAN}}
+\rhead{\small\textit{Biên soạn: Dương Gia Bảo}}
+\rfoot{\small Trang \thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+\fancypagestyle{firstpage}{\fancyhead{}\renewcommand{\headrulewidth}{0pt}}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{3pt}
+\setlength{\emergencystretch}{1em}
+
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*:},leftmargin=*,itemsep=6pt,topsep=4pt}
+
+% Macro trắc nghiệm 4 phương án (giãn cách 8pt giữa hai hàng theo chuẩn nhánh)
+\newcommand{\bonpa}[4]{\par\nobreak\smallskip\nobreak\noindent
+\begin{tabular}{@{}p{0.48\linewidth}p{0.48\linewidth}@{}}
+\textbf{A.} #1 & \textbf{B.} #2\\[8pt]
+\textbf{C.} #3 & \textbf{D.} #4\end{tabular}}
+
+% Macro khung ô li viết bài làm trực tiếp (kích thước rộng rãi 5mm x 5mm)
+\newcommand{\khungOli}[1][5.2cm]{%
+  \needspace{2.5cm}%
+  \par\nobreak\vspace{4pt}\noindent
+  \begin{tikzpicture}
+    \pgfmathsetmacro{\gridw}{\linewidth - 1.5pt}
+    \draw[step=0.5cm, line width=0.2pt, gray!32] (0,0) grid (\gridw pt, #1);
+    \draw[line width=0.6pt, gray!60] (0,0) rectangle (\gridw pt, #1);
+    \node[anchor=north east, font=\footnotesize\itshape\color{gray!60}, inner sep=4pt] at (\gridw pt, #1) {Bài làm của học sinh};
+  \end{tikzpicture}
+  \par\vspace{7pt}
+}
+
+\begin{document}
+\thispagestyle{firstpage}
+
+\noindent
+\begin{minipage}[t]{0.36\textwidth}
+    \centering
+    {\fontsize{12}{14}\selectfont\textbf{ĐỀ CƯƠNG ÔN TẬP}}\\[4pt]
+    \textit{Biên soạn: Dương Gia Bảo}\\[6pt]
+    \setlength{\fboxrule}{0.8pt}
+    \setlength{\fboxsep}{5pt}
+    \fbox{\begin{minipage}{0.88\linewidth}
+        \centering
+        {\fontsize{12}{14}\selectfont\textbf{CHƯƠNG V -- TOÁN 12}}
+    \end{minipage}}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.62\textwidth}
+    \centering
+    {\fontsize{13}{15}\selectfont\textbf{ĐỀ CƯƠNG ÔN TẬP CHƯƠNG V}}\\[3pt]
+    {\fontsize{12}{14}\selectfont\textbf{PHƯƠNG PHÁP TỌA ĐỘ TRONG KHÔNG GIAN}}\\[3pt]
+    {\fontsize{11}{13}\selectfont\textit{(GDPT 2018 -- 20 Trắc nghiệm, 5 Đúng/Sai, 25 Trả lời ngắn)}}
+\end{minipage}
+
+\par\vspace{4pt}
+\hrule height 0.6pt
+\vspace{4pt}
+\noindent\textit{Họ và tên học sinh:}\dotfill\hspace{0.8cm}\textit{Lớp:}\makebox[3.2cm]{\dotfill}
+\par\vspace{3pt}
+\hrule height 0.6pt
+\vspace{6pt}
+
+%% ==============================================================
+%% PHẦN I: TRẮC NGHIỆM NHIỀU LỰA CHỌN (20 CÂU)
+%% ==============================================================
+\begin{center}
+    {\fontsize{13}{15}\selectfont\textbf{PHẦN I. CÂU TRẮC NGHIỆM NHIỀU LỰA CHỌN (20 CÂU)}}
+\end{center}
+\textit{Thí sinh trả lời từ Câu 1 đến Câu 20. Mỗi câu hỏi chỉ chọn một phương án.}
+
+\begin{enumerate}
+\item Trong không gian $Oxyz$, một vectơ pháp tuyến của mặt phẳng $(P): 2x - 3y + z - 5 = 0$ là
+\bonpa{$\vec{n}_1 = (2; -3; 1)$}{$\vec{n}_2 = (2; 3; 1)$}{$\vec{n}_3 = (-2; -3; 1)$}{$\vec{n}_4 = (2; -3; -5)$}
+
+\item Trong không gian $Oxyz$, phương trình mặt phẳng đi qua điểm $M(1; -2; 3)$ và nhận $\vec{n} = (3; 1; -2)$ làm một vectơ pháp tuyến là
+\bonpa{$3x + y - 2z - 5 = 0$}{$3x + y - 2z + 5 = 0$}{$3x - 2y + z + 5 = 0$}{$x - 2y + 3z + 5 = 0$}
+
+\item Trong không gian $Oxyz$, cho ba điểm $A(2; 0; 0)$, $B(0; -3; 0)$, $C(0; 0; 4)$. Phương trình theo đoạn chắn của mặt phẳng $(ABC)$ là
+\bonpa{$\dfrac{x}{2} + \dfrac{y}{3} + \dfrac{z}{4} = 1$}{$\dfrac{x}{2} + \dfrac{y}{-3} + \dfrac{z}{4} = 0$}{$\dfrac{x}{2} - \dfrac{y}{3} + \dfrac{z}{4} = 1$}{$\dfrac{x}{-3} + \dfrac{y}{2} + \dfrac{z}{4} = 1$}
+
+\item Trong không gian $Oxyz$, khoảng cách từ điểm $M(1; 2; -1)$ đến mặt phẳng $(P): 2x - 2y + z + 12 = 0$ bằng
+\bonpa{$1$}{$2$}{$\dfrac{11}{3}$}{$3$}
+
+\item Trong không gian $Oxyz$, cho hai mặt phẳng $(P): x - 2y + 3z - 1 = 0$ và $(Q): 2x - 4y + 6z + 5 = 0$. Khẳng định nào sau đây đúng?
+\bonpa{$(P)$ song song với $(Q)$}{$(P)$ cắt và vuông góc với $(Q)$}{$(P)$ trùng với $(Q)$}{$(P)$ cắt nhưng không vuông góc với $(Q)$}
+
+\item Trong không gian $Oxyz$, một vectơ chỉ phương của đường thẳng $d: \dfrac{x-1}{2} = \dfrac{y+2}{-3} = \dfrac{z-5}{4}$ là
+\bonpa{$\vec{u}_1 = (1; -2; 5)$}{$\vec{u}_2 = (2; -3; 4)$}{$\vec{u}_3 = (-1; 2; -5)$}{$\vec{u}_4 = (2; 3; 4)$}
+
+\item Trong không gian $Oxyz$, điểm nào dưới đây thuộc đường thẳng $d: \begin{cases} x = 1 + 2t \\ y = -1 - t \\ z = 3 + 4t \end{cases}$ ($t \in \mathbb{R}$)?
+\bonpa{$P(1; 1; 3)$}{$Q(2; -1; 4)$}{$M(3; -2; 7)$}{$N(-1; 0; -1)$}
+
+\item Trong không gian $Oxyz$, đường thẳng đi qua điểm $A(1; 0; -2)$ và vuông góc với mặt phẳng $(P): 3x - y + 2z - 1 = 0$ có phương trình chính tắc là
+\bonpa{$\dfrac{x+1}{3} = \dfrac{y}{-1} = \dfrac{z-2}{2}$}{$\dfrac{x-1}{3} = \dfrac{y}{1} = \dfrac{z+2}{2}$}{$\dfrac{x-3}{1} = \dfrac{y+1}{0} = \dfrac{z-2}{-2}$}{$\dfrac{x-1}{3} = \dfrac{y}{-1} = \dfrac{z+2}{2}$}
+
+\item Trong không gian $Oxyz$, cho đường thẳng $d: \dfrac{x-1}{1} = \dfrac{y-2}{2} = \dfrac{z-3}{-1}$ và mặt phẳng $(P): 2x + y + 4z - 16 = 0$. Vị trí tương đối của $d$ và $(P)$ là
+\bonpa{$d$ nằm trong $(P)$}{$d$ song song với $(P)$}{$d$ cắt và vuông góc với $(P)$}{$d$ cắt nhưng không vuông góc với $(P)$}
+
+\item Trong không gian $Oxyz$, hình chiếu vuông góc của điểm $M(2; -1; 3)$ lên mặt phẳng tọa độ $(Oxy)$ có tọa độ là
+\bonpa{$(0; 0; 3)$}{$(2; -1; 0)$}{$(2; 0; 3)$}{$(0; -1; 3)$}
+
+\item Trong không gian $Oxyz$, cho hai đường thẳng $d_1, d_2$ có vectơ chỉ phương lần lượt là $\vec{u}_1 = (1; 2; 2)$ và $\vec{u}_2 = (2; 1; -2)$. Góc giữa hai đường thẳng $d_1$ và $d_2$ bằng
+\bonpa{$30^\circ$}{$45^\circ$}{$90^\circ$}{$60^\circ$}
+
+\item Trong không gian $Oxyz$, góc giữa hai mặt phẳng $(P): x + y - 2 = 0$ và $(Q): y + z + 1 = 0$ bằng
+\bonpa{$30^\circ$}{$45^\circ$}{$90^\circ$}{$60^\circ$}
+
+\item Trong không gian $Oxyz$, góc giữa đường thẳng $d: \dfrac{x-1}{1} = \dfrac{y+1}{1} = \dfrac{z}{\sqrt{2}}$ và mặt phẳng tọa độ $(Oxy)$ bằng
+\bonpa{$45^\circ$}{$30^\circ$}{$60^\circ$}{$90^\circ$}
+
+\item Trong không gian $Oxyz$, côsin của góc giữa hai đường thẳng lần lượt nhận $\vec{u}_1 = (1; -1; 0)$ và $\vec{u}_2 = (1; 0; -1)$ làm vectơ chỉ phương bằng
+\bonpa{$\dfrac{\sqrt{3}}{2}$}{$\dfrac{1}{2}$}{$\dfrac{\sqrt{2}}{2}$}{$0$}
+
+\item Trong không gian $Oxyz$, giá trị của tham số $m$ để hai mặt phẳng $(P): 2x - y + 2z - 3 = 0$ và $(Q): x + 2y + mz + 1 = 0$ vuông góc với nhau là
+\bonpa{$m = 1$}{$m = 2$}{$m = 0$}{$m = -1$}
+
+\item Trong không gian $Oxyz$, tọa độ tâm $I$ và bán kính $R$ của mặt cầu $(S): (x-1)^2 + (y+2)^2 + (z-3)^2 = 16$ là
+\bonpa{$I(-1; 2; -3), R = 4$}{$I(1; -2; 3), R = 16$}{$I(-1; 2; -3), R = 16$}{$I(1; -2; 3), R = 4$}
+
+\item Trong không gian $Oxyz$, phương trình mặt cầu tâm $I(2; 1; -1)$ và tiếp xúc với mặt phẳng tọa độ $(Oxy)$ là
+\bonpa{$(x-2)^2 + (y-1)^2 + (z+1)^2 = 1$}{$(x+2)^2 + (y+1)^2 + (z-1)^2 = 1$}{$(x-2)^2 + (y-1)^2 + (z+1)^2 = 4$}{$(x-2)^2 + (y-1)^2 + (z+1)^2 = 2$}
+
+\item Trong không gian $Oxyz$, bán kính $R$ của mặt cầu $(S): x^2 + y^2 + z^2 - 2x + 4y - 6z - 2 = 0$ bằng
+\bonpa{$R = 2$}{$R = 4$}{$R = \sqrt{14}$}{$R = 16$}
+
+\item Trong không gian $Oxyz$, cho mặt cầu $(S): x^2 + y^2 + z^2 = 9$ và mặt phẳng $(P): 2x - y + 2z - 15 = 0$. Khẳng định nào sau đây đúng?
+\bonpa{$(P)$ cắt $(S)$ theo một đường tròn}{$(P)$ tiếp xúc với mặt cầu $(S)$}{$(P)$ và $(S)$ không có điểm chung}{$(P)$ đi qua tâm của mặt cầu $(S)$}
+
+\item Trong không gian $Oxyz$, một trạm kiểm soát không lưu đặt tại gốc tọa độ $O(0; 0; 0)$ phát sóng ra-đa quét không gian trong phạm vi bán kính tối đa $50\text{ km}$. Phương trình bề mặt giới hạn vùng không gian mà trạm ra-đa có thể kiểm soát là
+\bonpa{$x^2 + y^2 + z^2 = 50$}{$x + y + z = 50$}{$x^2 + y^2 + z^2 = 250$}{$x^2 + y^2 + z^2 = 2500$}
+\end{enumerate}
+
+\newpage
+%% ==============================================================
+%% PHẦN II: TRẮC NGHIỆM ĐÚNG SAI (5 CÂU)
+%% ==============================================================
+\begin{center}
+    {\fontsize{13}{15}\selectfont\textbf{PHẦN II. CÂU TRẮC NGHIỆM ĐÚNG SAI (5 CÂU)}}
+\end{center}
+\textit{Thí sinh trả lời từ Câu 1 đến Câu 5. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*:},leftmargin=*,itemsep=10pt,topsep=6pt}
+
+\begin{enumerate}
+\needspace{6cm}
+\item Trong không gian $Oxyz$, cho tứ diện $OABC$ có $OA, OB, OC$ đôi một vuông góc với nhau và có độ dài lần lượt là $OA = 2$, $OB = 3$, $OC = 6$. Điểm $A$ thuộc tia $Ox$, điểm $B$ thuộc tia $Oy$, điểm $C$ thuộc tia $Oz$.
+\begin{enumerate}[label=\alph*),leftmargin=*,itemsep=3pt]
+    \item Mặt phẳng $(ABC)$ có phương trình tổng quát là $3x + 2y + z - 6 = 0$.
+    \item Vectơ $\vec{n} = (3; 2; 1)$ là một vectơ pháp tuyến của mặt phẳng $(ABC)$.
+    \item Khoảng cách từ gốc tọa độ $O$ đến mặt phẳng $(ABC)$ bằng $\dfrac{3\sqrt{14}}{7}$.
+    \item Thể tích khối tứ diện $OABC$ bằng $12$.
+\end{enumerate}
+
+\needspace{6.5cm}
+\item Trong không gian $Oxyz$, cho điểm $A(1; 2; -1)$, đường thẳng $d: \dfrac{x-2}{1} = \dfrac{y+1}{2} = \dfrac{z}{-2}$ và mặt phẳng $(P): 2x - y + 2z - 5 = 0$.
+\begin{enumerate}[label=\alph*),leftmargin=*,itemsep=3pt]
+    \item Đường thẳng $d$ đi qua điểm $M(2; -1; 0)$ và nhận $\vec{u} = (1; 2; -2)$ làm một vectơ chỉ phương.
+    \item Đường thẳng $d$ vuông góc với mặt phẳng $(P)$.
+    \item Mặt phẳng $(Q)$ đi qua điểm $A$ và song song với mặt phẳng $(P)$ có phương trình là $2x - y + 2z + 2 = 0$.
+    \item Đường thẳng $\Delta$ đi qua điểm $A$ và song song với đường thẳng $d$ có phương trình chính tắc là $\dfrac{x-1}{1} = \dfrac{y-2}{2} = \dfrac{z+1}{-2}$.
+\end{enumerate}
+
+\needspace{6.5cm}
+\item Trong không gian $Oxyz$, cho mặt cầu $(S): x^2 + y^2 + z^2 - 4x + 2y - 6z - 11 = 0$ và mặt phẳng $(P): 2x + 2y - z + 17 = 0$.
+\begin{enumerate}[label=\alph*),leftmargin=*,itemsep=3pt]
+    \item Mặt cầu $(S)$ có tâm $I(2; -1; 3)$ và bán kính $R = 5$.
+    \item Khoảng cách từ tâm $I$ của mặt cầu $(S)$ đến mặt phẳng $(P)$ bằng $4$.
+    \item Mặt phẳng $(P)$ cắt mặt cầu $(S)$ theo giao tuyến là một đường tròn có bán kính bằng $3$.
+    \item Có hai mặt phẳng song song với mặt phẳng $(P)$ và tiếp xúc với mặt cầu $(S)$, có phương trình lần lượt là $2x + 2y - z + 16 = 0$ và $2x + 2y - z - 14 = 0$.
+\end{enumerate}
+
+\needspace{6.5cm}
+\item Trong không gian $Oxyz$, cho hai đường thẳng $d_1: \dfrac{x-1}{2} = \dfrac{y}{1} = \dfrac{z+2}{-2}$ và $d_2: \dfrac{x+2}{-1} = \dfrac{y-1}{2} = \dfrac{z}{2}$.
+\begin{enumerate}[label=\alph*),leftmargin=*,itemsep=3pt]
+    \item Một vectơ chỉ phương của $d_1$ là $\vec{u}_1 = (2; 1; -2)$ và một vectơ chỉ phương của $d_2$ là $\vec{u}_2 = (-1; 2; 2)$.
+    \item Hai đường thẳng $d_1$ và $d_2$ vuông góc với nhau.
+    \item Côsin của góc giữa hai đường thẳng $d_1$ và $d_2$ bằng $\dfrac{4}{9}$.
+    \item Hai đường thẳng $d_1$ và $d_2$ chéo nhau.
+\end{enumerate}
+
+\needspace{6.5cm}
+\item Một thiết bị bay không người lái (drone) bay theo quỹ đạo đường thẳng trong không gian từ vị trí $A(1; 2; 3)$ đến vị trí $B(7; 10; 3)$ (đơn vị toạ độ được tính bằng trăm mét, tức $1$ đơn vị độ dài tương ứng với $100\text{ m}$). Giả sử mặt đất bằng phẳng trùng với mặt phẳng tọa độ $(Oxy): z = 0$.
+\begin{enumerate}[label=\alph*),leftmargin=*,itemsep=3pt]
+    \item Trong suốt chuyến bay từ $A$ đến $B$, drone luôn bay ở độ cao không đổi bằng $300\text{ m}$ so với mặt đất.
+    \item Vectơ $\vec{u} = (3; 4; 0)$ là một vectơ chỉ phương của đường bay.
+    \item Quãng đường drone bay được từ vị trí $A$ đến vị trí $B$ bằng $1000\text{ m}$.
+    \item Một trạm phát tín hiệu đặt tại gốc tọa độ $O(0; 0; 0)$ trên mặt đất. Khoảng cách ngắn nhất từ trạm phát tín hiệu $O$ đến drone trong suốt hành trình bay là $150\text{ m}$.
+\end{enumerate}
+\end{enumerate}
+
+\newpage
+%% ==============================================================
+%% PHẦN III: TRẢ LỜI NGẮN (25 CÂU)
+%% ==============================================================
+\begin{center}
+    {\fontsize{13}{15}\selectfont\textbf{PHẦN III. CÂU TRẮC NGHIỆM TRẢ LỜI NGẮN KÈM Ô LI (25 CÂU)}}
+\end{center}
+\textit{Thí sinh trình bày lời giải và điền đáp số vào khung ô li làm bài tương ứng.}
+
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*:},leftmargin=*,itemsep=6pt,topsep=4pt}
+
+\subsubsection*{Mạch 1. Phương trình mặt phẳng và khoảng cách (Câu 1 -- 6)}
+
+\begin{enumerate}
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, cho hai điểm $A(1; 2; 3)$ và $B(3; 0; 1)$. Mặt phẳng trung trực của đoạn thẳng $AB$ có phương trình tổng quát dạng $x - y - z + D = 0$. Tìm giá trị của hằng số $D$.
+\khungOli[5.2cm]
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, mặt phẳng $(P)$ đi qua điểm $M(1; -2; 1)$ và vuông góc với cả hai mặt phẳng $(Q): x - y + z - 1 = 0$ và $(R): 2x + y - z + 3 = 0$. Biết phương trình mặt phẳng $(P)$ có dạng $By + Cz + D = 0$ với $B = 3$. Tìm giá trị của $D$.
+\khungOli[5.2cm]
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, tính khoảng cách từ gốc tọa độ $O(0; 0; 0)$ đến mặt phẳng $(P): 2x - 3y + 6z - 14 = 0$.
+\khungOli[5.2cm]
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, tính khoảng cách giữa hai mặt phẳng song song $(P): 2x - y + 2z - 4 = 0$ và $(Q): 2x - y + 2z + 5 = 0$.
+\khungOli[5.2cm]
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, tìm giá trị của tham số $m$ để mặt phẳng $(P): mx + 2y - z + 1 = 0$ song song với mặt phẳng $(Q): 4x + 4y - 2z + 3 = 0$.
+\khungOli[5.2cm]
+
+\needspace{7.8cm}
+\item Trong không gian $Oxyz$, một mái hiên che nắng phẳng của ngôi nhà có phương trình mặt phẳng là $x + 2y + 2z - 10 = 0$ (đơn vị trên các trục tọa độ là mét). Một bóng đèn LED được treo cố định tại điểm $S(2; 3; 4)$. Tính khoảng cách từ bóng đèn $S$ đến mặt phẳng mái hiên che nắng (đơn vị: mét).
+\khungOli[5.2cm]
+
+\subsubsection*{Mạch 2. Phương trình đường thẳng và vị trí tương đối (Câu 7 -- 12)}
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, tìm tọa độ giao điểm $M(x_0; y_0; z_0)$ của đường thẳng $d: \dfrac{x-1}{2} = \dfrac{y+2}{-1} = \dfrac{z-3}{1}$ và mặt phẳng $(P): 2x + y - z + 1 = 0$. Tính giá trị của biểu thức $T = x_0 + y_0 + z_0$.
+\khungOli[5.2cm]
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, cho điểm $A(1; 3; -1)$ và mặt phẳng $(P): x + 2y - z - 2 = 0$. Gọi $H(x_0; y_0; z_0)$ là hình chiếu vuông góc của điểm $A$ lên mặt phẳng $(P)$. Tính giá trị của $S = x_0 + y_0 + z_0$.
+\khungOli[5.2cm]
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, cho điểm $A(1; -2; 3)$. Gọi $A'$ là điểm đối xứng với điểm $A$ qua mặt phẳng tọa độ $(Oyz)$. Tính độ dài đoạn thẳng $AA'$.
+\khungOli[5.2cm]
+
+\needspace{8.5cm}
+\item Trong không gian $Oxyz$, cho hai đường thẳng cắt nhau:
+\[
+d_1: \begin{cases} x = 2 + t \\ y = 1 - t \\ z = 3 + 2t \end{cases}\quad\text{và}\quad d_2: \begin{cases} x = 2 + 2t' \\ y = 1 + t' \\ z = 3 - t'. \end{cases}
+\]
+Gọi $I(x_0; y_0; z_0)$ là giao điểm của $d_1$ và $d_2$. Tính giá trị của $x_0 + y_0 + z_0$.
+\khungOli[5.2cm]
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, tính khoảng cách từ điểm $M(4; 5; 3)$ đến đường thẳng $d: \dfrac{x-1}{1} = \dfrac{y-2}{2} = \dfrac{z-3}{2}$.
+\khungOli[5.2cm]
+
+\needspace{7.8cm}
+\item Trong một không gian kiểm soát đường bay $Oxyz$ (đơn vị: km), hai máy bay chuyển động đều trên hai đường thẳng chéo nhau. Máy bay thứ nhất bay dọc theo đường thẳng $d_1$ đi qua $A(0; 0; 5)$ có vectơ chỉ phương $\vec{u}_1 = (1; 0; 0)$, máy bay thứ hai bay dọc theo đường thẳng $d_2$ đi qua $B(0; 2; 1)$ có vectơ chỉ phương $\vec{u}_2 = (0; 1; 0)$. Tính khoảng cách ngắn nhất giữa hai đường bay của hai máy bay (đơn vị: km).
+\khungOli[5.2cm]
+
+\subsubsection*{Mạch 3. Công thức tính góc trong không gian (Câu 13 -- 17)}
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, tính số đo góc (theo độ, $^\circ$) giữa hai đường thẳng $d_1: \dfrac{x}{1} = \dfrac{y-1}{\sqrt{2}} = \dfrac{z+1}{1}$ và $d_2: \dfrac{x+1}{1} = \dfrac{y}{-\sqrt{2}} = \dfrac{z-2}{1}$.
+\khungOli[5.2cm]
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, tính số đo góc (theo độ, $^\circ$) giữa đường thẳng $d: \dfrac{x-1}{1} = \dfrac{y+2}{0} = \dfrac{z-3}{1}$ và mặt phẳng $(P): x + y - 2 = 0$.
+\khungOli[5.2cm]
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, côsin của góc giữa hai mặt phẳng $(P): 2x + 2y - z + 1 = 0$ và $(Q): 4x - 3y + 1 = 0$ viết dưới dạng phân số tối giản $\dfrac{a}{b}$ với $a, b \in \mathbb{Z}^+$. Tính giá trị của $a + b$.
+\khungOli[5.2cm]
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, tìm giá trị dương của tham số $m$ để góc giữa hai mặt phẳng $(P): x + z - 1 = 0$ và $(Q): y + mz = 0$ bằng $60^\circ$.
+\khungOli[5.2cm]
+
+\needspace{7.8cm}
+\item Một sườn dốc nhân tạo của một khu du lịch trượt tuyết nằm trên mặt phẳng $(\alpha): 3x + 4y + 12z = 0$. Mặt phẳng nằm ngang là mặt phẳng tọa độ $(Oxy): z = 0$. Côsin của góc nghiêng tạo bởi sườn dốc $(\alpha)$ và mặt phẳng ngang $(Oxy)$ có dạng phân số tối giản $\dfrac{a}{b}$ với $a, b \in \mathbb{Z}^+$. Tính giá trị của biểu thức $a + b$.
+\khungOli[5.2cm]
+
+\subsubsection*{Mạch 4. Phương trình mặt cầu và vị trí tương đối (Câu 18 -- 22)}
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, cho hai điểm $A(1; 2; -3)$ và $B(3; -2; 1)$. Mặt cầu có đường kính $AB$ có bán kính $R$ bằng bao nhiêu?
+\khungOli[5.2cm]
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, mặt cầu $(S)$ có tâm $I(1; 2; 3)$ và cắt mặt phẳng $(P): 2x - 2y + z + 8 = 0$ theo giao tuyến là một đường tròn có bán kính $r = 4$. Tính bán kính $R$ của mặt cầu $(S)$.
+\khungOli[5.2cm]
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, tìm giá trị của tham số $m$ để phương trình $x^2 + y^2 + z^2 - 2x + 4y - 6z + m = 0$ là phương trình của một mặt cầu có bán kính $R = 5$.
+\khungOli[5.2cm]
+
+\needspace{7.8cm}
+\item Một ngọn hải đăng phát tín hiệu cảnh báo ban đêm trong phạm vi một khối cầu bán kính $15\text{ km}$. Thiết lập hệ trục tọa độ $Oxyz$ với vị trí ngọn đèn hải đăng tại điểm $I(1; 2; 3)$ (đơn vị: km). Một con tàu chở hàng chuyển động thẳng đều theo đường thẳng $d: \begin{cases} x = 1 + 4t \\ y = 2 + 3t \\ z = 12 \end{cases}$ ($t \in \mathbb{R}$). Tính tổng độ dài quãng đường (đơn vị: km) mà con tàu di chuyển trong vùng nhận được tín hiệu cảnh báo từ ngọn hải đăng.
+\khungOli[5.2cm]
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, cho mặt cầu $(S): (x-1)^2 + (y-2)^2 + (z-3)^2 = 9$. Mặt phẳng $(\alpha)$ tiếp xúc với mặt cầu $(S)$ tại điểm $M(2; 4; 5)$ có phương trình dạng $x + by + cz + d = 0$. Tính giá trị của biểu thức $P = b + c + d$.
+\khungOli[5.2cm]
+
+\subsubsection*{Mạch 5. Bài toán tổng hợp và cực trị hình học Oxyz (Câu 23 -- 25)}
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, cho hai điểm $A(1; 2; 3)$, $B(3; 4; 5)$ và mặt phẳng $(P): x + y + z - 3 = 0$. Điểm $M(x_M; y_M; z_M)$ thuộc mặt phẳng $(P)$ sao cho biểu thức $MA^2 + MB^2$ đạt giá trị nhỏ nhất. Tính tổng hoành độ, tung độ và cao độ $x_M + y_M + z_M$.
+\khungOli[5.2cm]
+
+\needspace{7.6cm}
+\item Trong không gian $Oxyz$, cho điểm $A(3; 1; 2)$ và đường thẳng $d: \begin{cases} x = 1 + t \\ y = -1 + 2t \\ z = 2 + 2t \end{cases}$. Gọi $(P)$ là mặt phẳng chứa đường thẳng $d$ sao cho khoảng cách từ điểm $A$ đến mặt phẳng $(P)$ đạt giá trị lớn nhất. Tính giá trị lớn nhất đó của khoảng cách.
+\khungOli[5.2cm]
+
+\needspace{7.8cm}
+\item Trong hệ thống giám sát bay tự động, hai thiết bị bay không người lái $D_1$ và $D_2$ chuyển động trong không gian với phương trình vị trí phụ thuộc vào thời gian $t$ (phút, $t \ge 0$) lần lượt là $D_1(2t; t; 0)$ và $D_2(t + 3; 2t - 3; 2)$. Khoảng cách giữa hai thiết bị bay $D_1$ và $D_2$ đạt giá trị nhỏ nhất tại thời điểm $t$ bằng bao nhiêu phút?
+\khungOli[5.2cm]
+\end{enumerate}
+
+\end{document}
