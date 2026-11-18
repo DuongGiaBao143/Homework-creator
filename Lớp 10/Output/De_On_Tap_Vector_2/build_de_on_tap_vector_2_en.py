@@ -1,0 +1,648 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+"""
+Build pipeline for English version of Grade 10 Review Exam #2: Chapter IV. Vectors (Toán 10 KNTT, Code 1043-EN).
+Generates standalone English student exam PDF (3 pages), answer key PDF (2 pages), and combined PDF,
+audits pagination, and exports to Grade 10 teaching folders.
+"""
+
+import re
+import shutil
+import subprocess
+from pathlib import Path
+import pymupdf
+
+BASE_DIR = Path(r"d:\Tao_De\Lớp 10\Output\De_On_Tap_Vector_2")
+OUT_DIR = BASE_DIR
+TEX_PATH = OUT_DIR / "De_On_Tap_Vector_2_EN.tex"
+FULL_PDF = OUT_DIR / "De_On_Tap_Vector_2_EN.pdf"
+EXAM_PDF = OUT_DIR / "De_On_Tap_Vector_2_EN_Exam.pdf"
+ANS_PDF = OUT_DIR / "De_On_Tap_Vector_2_EN_Ans.pdf"
+
+EXPORT_TARGETS = [
+    (Path(r"D:\Document\Dạy học\Dạy lớp 10\Ôn tập\Vector\De_On_Tap_Vector_2_EN.pdf"), "exam"),
+    (Path(r"D:\Document\Dạy học\Dạy lớp 10\Ôn tập\Vector\Ans\De_On_Tap_Vector_2_EN_Ans.pdf"), "ans"),
+    (Path(r"D:\Document\Dạy học\Dạy lớp 10\BTVN\Chương IV\Đề ôn tập Chương 4 - Vectơ (Đề 2 - English).pdf"), "exam"),
+    (Path(r"D:\Document\Dạy học\Dạy lớp 10\BTVN\Chương IV\Ans\Đề ôn tập Chương 4 - Vectơ (Đề 2 - English - Đáp án).pdf"), "ans"),
+    (Path(r"D:\Document\Dạy học\Dạy lớp 10\BTVN\Chương IV\Ans\Đề ôn tập Chương 4 - Vectơ (Đề 2 - English - có đáp án).pdf"), "full"),
+]
+
+QUOTES = [
+    "Math gives us hope that every problem has a solution",
+    "Math + You = Champion",
+    "Where Frustration Becomes Inspiration",
+    "Turning Confusion into Clarity",
+    "Don't be an X, be a Y of mathematics",
+    "Don't get mad. Learn to add",
+    "The only way to learn mathematics is to do mathematics",
+    "Small steps every day lead to big results",
+    "Every expert was once a beginner",
+    "Success is the sum of small efforts repeated daily",
+    "Mathematics is the music of reason",
+    "Believe you can and you're halfway there",
+]
+
+
+def build_header_quote_macro(max_p: int = 30) -> str:
+    lines = [r"\newcommand{\headerQuote}{%", r"  \ifcase\value{page}\relax"]
+    for i in range(1, max_p + 1):
+        q = QUOTES[(i - 1) % len(QUOTES)]
+        lines.append(f"    \\or {q}% Page {i}")
+    lines.append(f"    \\else {QUOTES[0]}%")
+    lines.append(r"  \fi")
+    lines.append(r"}")
+    return "\n".join(lines)
+
+
+PREAMBLE = r"""\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese,english]{babel}
+\usepackage[margin=1.3cm,top=0.75cm,bottom=1.0cm,includehead,includefoot,headheight=18pt,headsep=5pt,footskip=16pt]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace,multicol}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel}
+
+\definecolor{ink}{RGB}{30,55,70}
+\definecolor{accent}{RGB}{18,82,112}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+
+__HEADER_QUOTE__
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\textit{\color{gray!70!black}\headerQuote}}
+\rhead{\small\textbf{\color{ink}Compiled by: Dương Gia Bảo}}
+\lfoot{}
+\rfoot{\small Page \thepage/__EXAM_PAGES__}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancypagestyle{dapan}{
+  \fancyhf{}
+  \lhead{\footnotesize\textit{\color{gray!70!black}\headerQuote}}
+  \rhead{\small\textbf{\color{ink}Compiled by: Dương Gia Bảo}}
+  \lfoot{\small\textit{\color{gray!60!black}Answer Key — Grade 10 Math Review (Chapter IV: Vectors — Test 2)}}
+  \rfoot{\small Page \thepage/__ANS_PAGES__}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\newcommand{\parttitle}[1]{\par\vspace{3.5pt}\needspace{3\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{2pt}}
+\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[3.8pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\one}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{}}\textbf{A.} #1\\[4pt]\textbf{B.} #2\\[4pt]\textbf{C.} #3\\[4pt]\textbf{D.} #4\end{tabularx}}
+\newcommand{\answerbox}{\unskip\nobreak\hfil\penalty50\hskip6pt\hbox{}\nobreak\hfill\mbox{\textit{Answer:}\ \fbox{\rule{0pt}{7.5pt}\hspace{1.8cm}}}}
+
+\setlist[enumerate,1]{label=\textbf{Question \arabic*.},leftmargin=2.1cm,labelsep=.15cm,itemsep=1.2pt,topsep=1.2pt,parsep=0pt}
+\setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=1.5pt,topsep=0.2pt,parsep=0pt}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+"""
+
+TIKZ_P2_Q1 = r"""\begin{tikzpicture}[scale=0.60, >=Stealth]
+  \coordinate (A) at (0,2.2);
+  \coordinate (B) at (2.2,2.2);
+  \coordinate (C) at (2.2,0);
+  \coordinate (D) at (0,0);
+  \coordinate (O) at (1.1,1.1);
+  \draw[thick, ink] (A) -- (B) -- (C) -- (D) -- cycle;
+  \draw[dashed, gray!70] (A) -- (C);
+  \draw[dashed, gray!70] (B) -- (D);
+  \draw[gray!70] (0,0.28) -- (0.28,0.28) -- (0.28,0);
+  \fill[ink] (O) circle (1.6pt);
+  \node[above left, font=\scriptsize] at (A) {$A$};
+  \node[above right, font=\scriptsize] at (B) {$B$};
+  \node[below right, font=\scriptsize] at (C) {$C$};
+  \node[below left, font=\scriptsize] at (D) {$D$};
+  \node[above=1pt, font=\tiny] at (O) {$O$};
+\end{tikzpicture}"""
+
+TIKZ_P3_Q6 = r"""\begin{tikzpicture}[scale=0.35, >=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (F1) at (3.2,0);
+  \coordinate (F2) at (2.5, 4.33);
+  \coordinate (F) at (5.7, 4.33);
+  \draw[->, very thick, accent] (O) -- (F1) node[below, font=\scriptsize] {$\vec{F}_1$};
+  \draw[->, very thick, accent] (O) -- (F2) node[above left, font=\scriptsize] {$\vec{F}_2$};
+  \draw[dashed, gray!60] (F1) -- (F) -- (F2);
+  \draw[->, line width=1.1pt, ink] (O) -- (F) node[above right, font=\scriptsize] {$\vec{F}$};
+  \draw[ink!80] (0.95,0) arc (0:60:0.95);
+  \node[font=\tiny] at (18:1.85) {$60^\circ$};
+  \fill[ink] (O) circle (2.2pt);
+  \node[below left, font=\scriptsize] at (O) {$O$};
+\end{tikzpicture}"""
+
+TIKZ_P4_B3 = r"""\begin{tikzpicture}[scale=0.50, >=Stealth]
+  \fill[gray!18] (-0.5,-0.16) rectangle (4.0,0);
+  \fill[gray!18] (-0.5,2.8) rectangle (4.0,2.96);
+  \draw[thick, ink] (-0.5,0) -- (4.0,0);
+  \draw[thick, ink] (-0.5,2.8) -- (4.0,2.8);
+  \coordinate (A) at (0.6, 0);
+  \coordinate (B) at (0.6, 2.8);
+  \coordinate (C) at (2.7, 2.8);
+  \coordinate (V1) at (0.6, 1.6);
+  \coordinate (V2) at (1.8, 0);
+  \coordinate (V) at (1.8, 1.6);
+  \draw[dashed, gray!70] (A) -- (B);
+  \draw[dashed, ink!70] (A) -- (C);
+  \draw[gray!60] (0.6,0.28) -- (0.88,0.28) -- (0.88,0);
+  \draw[->, very thick, accent] (A) -- (V1) node[left, font=\scriptsize] {$\vec{v}_1$};
+  \draw[->, very thick, accent] (A) -- (V2) node[below=2pt, font=\scriptsize] {$\vec{v}_2$};
+  \draw[dashed, gray!60] (V1) -- (V) -- (V2);
+  \draw[->, line width=1.1pt, ink] (A) -- (V) node[right, font=\scriptsize] {$\vec{v}$};
+  \pic[draw, angle radius=0.45cm, "$\alpha$", angle eccentricity=1.45, font=\tiny] {angle = V--A--V1};
+  \fill[ink] (A) circle (1.8pt) node[below left, font=\tiny] {$A$};
+  \fill[ink] (B) circle (1.8pt) node[above, font=\tiny] {$B$};
+  \fill[ink] (C) circle (1.8pt) node[above, font=\tiny] {$C$};
+  \node[left, font=\tiny, gray!50!black] at (0.55, 2.15) {$d$};
+  \node[above, font=\tiny, gray!50!black] at (1.65, 2.94) {$s$};
+\end{tikzpicture}"""
+
+
+def generate_tex(exam_pages_str: str = "XX", ans_pages_str: str = "YY") -> str:
+    preamble = PREAMBLE.replace("__HEADER_QUOTE__", build_header_quote_macro(30))
+    preamble = preamble.replace("__EXAM_PAGES__", exam_pages_str)
+    preamble = preamble.replace("__ANS_PAGES__", ans_pages_str)
+
+    parts = [preamble, r"\begin{document}"]
+
+    # ==================== EXAM ====================
+    parts.append(r"""\noindent
+\begin{minipage}[c]{0.38\textwidth}
+    \centering
+    \textbf{DO MATH TO BE HAPPY}\\[-2pt]
+    \rule{3.2cm}{0.6pt}\\[2pt]
+    \textbf{OFFICIAL REVIEW TEST 2}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.52\textwidth}
+    \centering
+    \textbf{GRADE 10 MATH REVIEW — CHAPTER IV. VECTORS}\\[1pt]
+    \textbf{ACADEMIC YEAR 2026 -- 2027}\\[1pt]
+    \textbf{Subject: MATHEMATICS -- Grade 10}\\
+    \textit{\small Time allowed: 90 minutes (excluding distribution time)}
+\end{minipage}
+
+\vspace{0.05cm}
+\noindent
+\begin{minipage}[b]{0.78\textwidth}
+    \textbf{Full Name:}\dotfill\textbf{ID:}\makebox[3.5cm]{\dotfill}
+\end{minipage}\hfill
+\begin{minipage}[b]{0.20\textwidth}
+    \hfill
+    \setlength{\fboxrule}{0.8pt}%
+    \fbox{\begin{minipage}{2.3cm}
+        \centering
+        \textbf{\small Test Code}\\
+        \textbf{1043-EN}
+    \end{minipage}}
+\end{minipage}
+\vspace{0.05cm}
+
+\parttitle{PART I. Multiple-Choice Questions}
+\textit{Answer Questions 1 to 20. Choose only one correct option for each question.}
+\begin{enumerate}
+\item Given a regular pentagon $ABCDE$ with center $O$. How many nonzero vectors have their initial and terminal points at the vertices of the given pentagon?
+\four{$10$.}{$20$.}{$25$.}{$15$.}
+
+\item Given a rectangle $ABCD$ with center $O$. Which of the following vectors is equal to $\vec{BO}$?
+\four{$\vec{DO}$.}{$\vec{OB}$.}{$\vec{OA}$.}{$\vec{OD}$.}
+
+\item For any four points $M, N, P, Q$, which of the following vector identities is correct?
+\two{$\vec{MN} - \vec{MP} = \vec{PN}$.}{$\vec{MN} + \vec{PQ} = \vec{MQ}$.}{$\vec{MN} - \vec{PN} = \vec{PM}$.}{$\vec{MN} + \vec{NP} + \vec{PQ} = \vec{QM}$.}
+
+\item Given triangle $ABC$ right-angled at $A$ with $AB = 3$ and $AC = 4$. What is the magnitude of the vector $\vec{u} = \vec{AB} - \vec{AC}$?
+\four{$7$.}{$1$.}{$5$.}{$\sqrt{7}$.}
+
+\item Given a square $ABCD$ with side length $a$. What is the magnitude of the vector $\vec{v} = \vec{AB} + \vec{AD}$?
+\four{$a$.}{$2a$.}{$\dfrac{a\sqrt{2}}{2}$.}{$a\sqrt{2}$.}
+
+\item Given line segment $AB$ with midpoint $I$. For any point $M$, which of the following identities is correct?
+\two{$\vec{MA} + \vec{MB} = 2\vec{MI}$.}{$\vec{MA} + \vec{MB} = \vec{MI}$.}{$\vec{MA} - \vec{MB} = 2\vec{MI}$.}{$\vec{IA} + \vec{IB} = 2\vec{AB}$.}
+
+\item Given triangle $ABC$. Let $K$ be a point on segment $BC$ such that $KC = 4KB$. Which of the following identities is correct?
+\two{$\vec{AK} = \dfrac{1}{5}\vec{AB} + \dfrac{4}{5}\vec{AC}$.}{$\vec{AK} = \dfrac{4}{5}\vec{AB} + \dfrac{1}{5}\vec{AC}$.}{$\vec{AK} = \dfrac{3}{4}\vec{AB} + \dfrac{1}{4}\vec{AC}$.}{$\vec{AK} = \dfrac{4}{5}\vec{AB} - \dfrac{1}{5}\vec{AC}$.}
+
+\item Given two nonzero vectors $\vec{a}$ and $\vec{b}$. Vectors $\vec{a}$ and $\vec{b}$ have opposite directions if and only if
+\two{$\vec{a} \cdot \vec{b} = 0$.}{$|\vec{a}| = |\vec{b}|$.}{There exists a real number $k < 0$ such that $\vec{a} = k\vec{b}$.}{There exists a real number $k > 0$ such that $\vec{a} = k\vec{b}$.}
+
+\item In the coordinate plane $Oxy$, given the vector $\vec{a} = -3\vec{i} + 4\vec{j}$. What are the coordinates of $\vec{a}$?
+\four{$(-3, 4)$.}{$(4, -3)$.}{$(3, -4)$.}{$(-3, -4)$.}
+
+\item In the coordinate plane $Oxy$, given two vectors $\vec{u} = (3, -1)$ and $\vec{v} = (-2, 5)$. What are the coordinates of the vector $\vec{w} = 2\vec{u} - \vec{v}$?
+\four{$(4, -7)$.}{$(8, 3)$.}{$(4, 3)$.}{$(8, -7)$.}
+
+\item In the coordinate plane $Oxy$, given triangle $ABC$ with $A(1, 4)$, $B(-3, 2)$, and $C(5, -3)$. What are the coordinates of the centroid $G$ of triangle $ABC$?
+\four{$G(3, 3)$.}{$G(1, -1)$.}{$G(1, 1)$.}{$G(-1, 1)$.}
+
+\item In the coordinate plane $Oxy$, given point $A(2, -1)$ and let $M(4, 3)$ be the midpoint of segment $AB$. What are the coordinates of point $B$?
+\four{$B(3, 1)$.}{$B(6, 7)$.}{$B(2, 4)$.}{$B(6, 5)$.}
+\pagebreak
+
+\item In the coordinate plane $Oxy$, given two vectors $\vec{u} = (-4, 6)$ and $\vec{v} = (2, m)$. Vectors $\vec{u}$ and $\vec{v}$ are parallel (collinear) if and only if
+\four{$m = 3$.}{$m = -\dfrac{4}{3}$.}{$m = 12$.}{$m = -3$.}
+
+\item Given a square $ABCD$ with center $O$. What is the angle between the vectors $\vec{AB}$ and $\vec{BD}$?
+\four{$135^\circ$.}{$45^\circ$.}{$90^\circ$.}{$60^\circ$.}
+
+\item Given an equilateral triangle $ABC$ with side length $a$. What is the value of the dot product $\vec{AB} \cdot \vec{BC}$?
+\four{$\dfrac{a^2}{2}$.}{$\dfrac{a^2\sqrt{3}}{2}$.}{$-\dfrac{a^2}{2}$.}{$-\dfrac{a^2\sqrt{3}}{2}$.}
+
+\item In the coordinate plane $Oxy$, given two vectors $\vec{a} = (4, -3)$ and $\vec{b} = (-2, 5)$. What is the value of the dot product $\vec{a} \cdot \vec{b}$?
+\four{$7$.}{$-23$.}{$-7$.}{$23$.}
+
+\item In the coordinate plane $Oxy$, given two points $A(1, -2)$ and $B(-5, 6)$. What is the length of segment $AB$?
+\four{$14$.}{$2\sqrt{7}$.}{$5$.}{$10$.}
+
+\item In the coordinate plane $Oxy$, given two vectors $\vec{u} = (m, 3)$ and $\vec{v} = (6, -4)$. Vectors $\vec{u}$ and $\vec{v}$ are orthogonal (perpendicular) if and only if
+\four{$m = 2$.}{$m = -2$.}{$m = -9$.}{$m = \dfrac{1}{2}$.}
+
+\item In the coordinate plane $Oxy$, given two vectors $\vec{a} = (1, 3)$ and $\vec{b} = (-2, -1)$. What is the angle between $\vec{a}$ and $\vec{b}$?
+\four{$45^\circ$.}{$120^\circ$.}{$135^\circ$.}{$60^\circ$.}
+
+\item A constant force $\vec{F}$ of magnitude $40\text{ N}$ acts on an object, moving it a distance of $5\text{ m}$ in a direction making an angle of $30^\circ$ with $\vec{F}$. What is the work $W$ done by the force $\vec{F}$?
+\four{$100\text{ J}$.}{$100\sqrt{3}\text{ J}$.}{$200\text{ J}$.}{$200\sqrt{3}\text{ J}$.}
+\end{enumerate}
+
+\vspace{3pt}
+\parttitle{PART II. True/False Questions}
+\textit{Answer Questions 1 to 4. For each statement a), b), c), d) in every question, indicate whether it is True or False.}
+\begin{enumerate}
+\item Given a square $ABCD$ with side length $a$ and center $O$ (as shown in the figure).
+\par\noindent\begin{minipage}[t]{0.72\linewidth}
+\begin{enumerate}
+    \item $\vec{AB} = \vec{CD}$.
+    \item $\vec{OA} + \vec{OB} + \vec{OC} + \vec{OD} = \vec{0}$.
+    \item The magnitude of the vector $\vec{v} = \vec{OA} - \vec{OB}$ is $a$.
+    \item The magnitude of the vector $\vec{w} = \vec{OB} + \vec{OC}$ is $a\sqrt{2}$.
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.26\linewidth}\raggedleft\vspace{-6pt}
+""" + TIKZ_P2_Q1 + r"""
+\end{minipage}
+
+\item Given parallelogram $ABCD$. Let $M$ be the midpoint of side $BC$, $N$ be a point on side $CD$ such that $NC = 3ND$, and $I$ be the midpoint of segment $MN$.
+\begin{enumerate}
+    \item $\vec{AM} = \vec{AB} + \dfrac{1}{2}\vec{AD}$.
+    \item $\vec{AN} = \dfrac{1}{3}\vec{AB} + \vec{AD}$.
+    \item $\vec{MN} = \dfrac{3}{4}\vec{AB} - \dfrac{1}{2}\vec{AD}$.
+    \item $\vec{AI} = \dfrac{5}{8}\vec{AB} + \dfrac{3}{4}\vec{AD}$.
+\end{enumerate}
+
+\item In the coordinate plane $Oxy$, given three points $A(-1, 1)$, $B(2, 7)$, and $C(5, -2)$.
+\begin{enumerate}
+    \item The three points $A, B, C$ are collinear.
+    \item Vectors $\vec{AB}$ and $\vec{AC}$ are perpendicular to each other.
+    \item The centroid $G$ of triangle $ABC$ has coordinates $G(2, 3)$.
+    \item The dot product is $\vec{BA} \cdot \vec{BC} = 45$.
+\end{enumerate}
+
+\item Given triangle $ABC$ with $AB = 5$, $AC = 8$, and angle $\widehat{BAC} = 60^\circ$. Let $M$ be the midpoint of side $BC$.
+\begin{enumerate}
+    \item The dot product is $\vec{AB} \cdot \vec{AC} = 20$.
+    \item The length of side $BC$ is $7$.
+    \item The length of median $AM$ is $6$.
+    \item The dot product is $\vec{BA} \cdot \vec{BC} = 15$.
+\end{enumerate}
+\end{enumerate}
+
+\pagebreak
+\parttitle{PART III. Short-Answer Questions}
+\textit{Answer Questions 1 to 6. Write your final answer in the corresponding box.}
+\begin{enumerate}
+\item Given rhombus $ABCD$ with side length $9$ and angle $\widehat{BAD} = 120^\circ$. Find the magnitude of $\vec{u} = \vec{AB} + \vec{AD}$.\answerbox
+
+\item Given triangle $ABC$. Let $M$ be the midpoint of side $AB$ and $N$ be a point on side $BC$ such that $BN = 2NC$. Given that $\vec{MN} = x\vec{AB} + y\vec{AC}$ where $x, y \in \mathbb{R}$, find the value of $P = 6x + 9y$.\answerbox
+
+\item In the coordinate plane $Oxy$, given the vectors $\vec{a} = (2, -3)$, $\vec{b} = (-1, 4)$, and $\vec{c} = (m, 4)$. Find the value of the parameter $m$ such that $\vec{c}$ is parallel to $\vec{w} = 2\vec{a} + \vec{b}$.\answerbox
+
+\item In the coordinate plane $Oxy$, given triangle $ABC$ with $A(-1, 2)$, $B(4, 2)$, and $C(2, 6)$. Calculate the value of $\cos\widehat{BAC}$ (write your answer as a decimal).\answerbox
+
+\item In the coordinate plane $Oxy$, given two points $A(1, 3)$ and $B(5, 1)$. Point $M(m, 0)$ lies on the $x$-axis ($m > 3$) such that triangle $MAB$ is right-angled at $M$. Find the value of $m$.\answerbox
+
+\item \begin{minipage}[t]{0.70\linewidth}
+Two forces $\vec{F}_1$ and $\vec{F}_2$ simultaneously act on a particle at point $O$, making an angle of $60^\circ$ with each other (as shown in the figure). Given that their magnitudes are $F_1 = 30\text{ N}$ and $F_2 = 50\text{ N}$, calculate the magnitude of the resultant force $\vec{F} = \vec{F}_1 + \vec{F}_2$ (in Newtons).\answerbox
+\end{minipage}\hfill
+\begin{minipage}[t]{0.28\linewidth}\raggedleft\vspace{-6pt}
+""" + TIKZ_P3_Q6 + r"""
+\end{minipage}
+\end{enumerate}
+
+\vspace{3pt}
+\parttitle{PART IV. Free-Response Problems}
+\textit{Show complete reasoning and step-by-step solutions for the following problems:}
+
+\vspace{4pt}
+\textbf{Problem 1 (1.0 point).} Given parallelogram $ABCD$. Let $E$ be the midpoint of side $AB$, $F$ be a point on side $AD$ such that $AF = \dfrac{1}{3}AD$, and $K$ be a point on diagonal $AC$ such that $AK = \dfrac{1}{5}AC$.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=2pt]
+    \item (0.5 point) Express vectors $\vec{EF}$ and $\vec{EK}$ in terms of $\vec{AB}$ and $\vec{AD}$.
+    \item (0.5 point) Using the result from part a), prove that the three points $E, K, F$ are collinear.
+\end{enumerate}
+
+\vspace{6pt}
+\textbf{Problem 2 (1.0 point).} In the coordinate plane $Oxy$, given three points $A(-2, 6)$, $B(1, 2)$, and $C(9, 8)$.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=2pt]
+    \item (0.5 point) Prove that triangle $ABC$ is right-angled at $B$, and calculate the area of triangle $ABC$.
+    \item (0.5 point) Find the coordinates of point $D$ such that quadrilateral $ABCD$ is a rectangle.
+\end{enumerate}
+
+\vspace{6pt}
+\textbf{Problem 3 (1.0 point).} A motorboat travels straight across a river of width $d = 120\text{ m}$ with two parallel banks (as shown in the figure). The boat's velocity relative to the water is $\vec{v}_1$, directed perpendicular to the riverbank with speed $v_1 = 4\text{ m/s}$. The river current flows parallel to the bank with velocity $\vec{v}_2$ of speed $v_2 = 3\text{ m/s}$.
+\par\noindent\begin{minipage}[t]{0.68\linewidth}
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=2pt]
+    \item (0.5 point) Write the vector equation expressing the boat's resultant (actual) velocity $\vec{v}$ in terms of $\vec{v}_1$ and $\vec{v}_2$, and calculate the resultant speed $v = |\vec{v}|$.
+    \item (0.5 point) Find the drift angle $\alpha$ between the boat's actual path and the perpendicular direction across the river (round to the nearest tenth of a degree), and find the downstream drift distance $s$ when the boat reaches the opposite bank.
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.30\linewidth}\raggedleft\vspace{-10pt}
+""" + TIKZ_P4_B3 + r"""
+\end{minipage}
+""")
+
+    # ==================== ANSWER KEY & SOLUTIONS ====================
+    parts.append(r"""\newpage
+\pagestyle{dapan}
+\setcounter{page}{1}
+
+\begin{center}
+  {\Large\bfseries\color{ink} COMPREHENSIVE ANSWER KEY}\\[2pt]
+  {\small\color{gray!75!black} Grade 10 Math Review — Chapter IV. Vectors — Test 2 (Code 1043-EN)}
+\end{center}
+\vspace{1pt}
+
+\noindent\textbf{PART I. Multiple-Choice Questions (20 questions)}
+\vspace{1.5pt}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|}
+\hline
+\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \\ \hline
+\textbf{B} & \textbf{D} & \textbf{A} & \textbf{C} & \textbf{D} & \textbf{A} & \textbf{B} & \textbf{C} & \textbf{A} & \textbf{D} \\ \hline
+\hline
+\textbf{11} & \textbf{12} & \textbf{13} & \textbf{14} & \textbf{15} & \textbf{16} & \textbf{17} & \textbf{18} & \textbf{19} & \textbf{20} \\ \hline
+\textbf{C} & \textbf{B} & \textbf{D} & \textbf{A} & \textbf{C} & \textbf{B} & \textbf{D} & \textbf{A} & \textbf{C} & \textbf{B} \\ \hline
+\end{tabular}
+\end{center}
+
+\vspace{1pt}
+\noindent\begin{minipage}[t]{0.58\linewidth}
+\textbf{PART II. True/False Questions}\\[1.5pt]
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{|c|c|c|c|c|}
+\hline
+\textbf{Q} & \textbf{a)} & \textbf{b)} & \textbf{c)} & \textbf{d)} \\ \hline
+\textbf{1} & \textbf{F} & \textbf{T} & \textbf{T} & \textbf{F} \\ \hline
+\textbf{2} & \textbf{T} & \textbf{F} & \textbf{F} & \textbf{T} \\ \hline
+\textbf{3} & \textbf{F} & \textbf{T} & \textbf{F} & \textbf{T} \\ \hline
+\textbf{4} & \textbf{T} & \textbf{T} & \textbf{F} & \textbf{F} \\ \hline
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.40\linewidth}
+\textbf{PART III. Short-Answer Questions}\\[1.5pt]
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Q} & \textbf{Answer} & \textbf{Q} & \textbf{Answer} \\ \hline
+\textbf{1} & $9$     & \textbf{4} & $0.6$ \\ \hline
+\textbf{2} & $5$     & \textbf{5} & $4$ \\ \hline
+\textbf{3} & $-6$    & \textbf{6} & $70$ \\ \hline
+\end{tabular}
+\end{minipage}
+
+\vspace{5pt}
+\noindent\textbf{PART IV. Free-Response Summary:}\\[2pt]
+- \textbf{Problem 1:} a) $\vec{EF} = -\dfrac{1}{2}\vec{AB} + \dfrac{1}{3}\vec{AD}$; $\vec{EK} = -\dfrac{3}{10}\vec{AB} + \dfrac{1}{5}\vec{AD}$. b) $\vec{EK} = \dfrac{3}{5}\vec{EF} \Rightarrow E, K, F$ are collinear.\\
+- \textbf{Problem 2:} a) $\vec{BA}\cdot\vec{BC} = 0 \Rightarrow \triangle ABC$ is right-angled at $B$, $S_{\triangle ABC} = 25$. b) $D(6, 12)$.\\
+- \textbf{Problem 3:} a) $\vec{v} = \vec{v}_1 + \vec{v}_2$, $v = 5\text{ m/s}$. b) $\alpha \approx 36.9^\circ$, $s = 90\text{ m}$.
+
+\vspace{4pt}
+\begin{center}
+  {\large\bfseries\color{ink} DETAILED SOLUTIONS}
+\end{center}
+\vspace{1pt}
+
+\begin{multicols}{2}
+\raggedcolumns
+\small
+
+\textbf{\color{accent}PART I. MULTIPLE-CHOICE}
+
+\textbf{Question 1.} The pentagon has $5$ vertices. The number of nonzero vectors formed by choosing an ordered pair of distinct vertices is $P(5,2) = 5 \times 4 = 20$. Choice \textbf{B}.
+
+\textbf{Question 2.} In rectangle $ABCD$, center $O$ is the midpoint of diagonal $BD$, so $\vec{BO}$ and $\vec{OD}$ have the same direction and length, hence $\vec{BO} = \vec{OD}$. Choice \textbf{D}.
+
+\textbf{Question 3.} By the vector subtraction rule (common initial point): $\vec{MN} - \vec{MP} = \vec{PN}$. Choice \textbf{A}.
+
+\textbf{Question 4.} We have $\vec{u} = \vec{AB} - \vec{AC} = \vec{CB}$. Since $\triangle ABC$ is right-angled at $A$, $BC = \sqrt{3^2 + 4^2} = 5$. Choice \textbf{C}.
+
+\textbf{Question 5.} By the parallelogram rule: $\vec{AB} + \vec{AD} = \vec{AC}$. The diagonal of a square of side $a$ is $AC = a\sqrt{2}$. Choice \textbf{D}.
+
+\textbf{Question 6.} Since $I$ is the midpoint of $AB$, by the midpoint property for any point $M$, $\vec{MA} + \vec{MB} = 2\vec{MI}$. Choice \textbf{A}.
+
+\textbf{Question 7.} Since $K$ lies on segment $BC$ with $KC = 4KB$, we have $BK = \dfrac{1}{5}BC \Rightarrow \vec{BK} = \dfrac{1}{5}\vec{BC}$. Thus $\vec{AK} = \vec{AB} + \dfrac{1}{5}(\vec{AC} - \vec{AB}) = \dfrac{4}{5}\vec{AB} + \dfrac{1}{5}\vec{AC}$. Choice \textbf{B}.
+
+\textbf{Question 8.} Two nonzero vectors have opposite directions if and only if there exists a real scalar $k < 0$ such that $\vec{a} = k\vec{b}$. Choice \textbf{C}.
+
+\textbf{Question 9.} Vector $\vec{a} = -3\vec{i} + 4\vec{j}$ has coordinates $(-3, 4)$. Choice \textbf{A}.
+
+\textbf{Question 10.} $\vec{w} = 2(3, -1) - (-2, 5) = (6 + 2, -2 - 5) = (8, -7)$. Choice \textbf{D}.
+
+\columnbreak
+
+\textbf{Question 11.} Centroid $G$: $x_G = \dfrac{1 - 3 + 5}{3} = 1$, $y_G = \dfrac{4 + 2 - 3}{3} = 1 \Rightarrow G(1, 1)$. Choice \textbf{C}.
+
+\textbf{Question 12.} Since $M$ is the midpoint of $AB$: $x_B = 2x_M - x_A = 8 - 2 = 6$, $y_B = 2y_M - y_A = 6 - (-1) = 7 \Rightarrow B(6, 7)$. Choice \textbf{B}.
+
+\textbf{Question 13.} Vectors $\vec{u}, \vec{v}$ are parallel iff $(-4)m - 6 \cdot 2 = 0 \Leftrightarrow -4m = 12 \Leftrightarrow m = -3$. Choice \textbf{D}.
+
+\textbf{Question 14.} In square $ABCD$, $\widehat{ABD} = 45^\circ$. The angle between $\vec{AB}$ and $\vec{BD}$ is $180^\circ - 45^\circ = 135^\circ$. Choice \textbf{A}.
+
+\textbf{Question 15.} Since $\triangle ABC$ is equilateral of side $a$, $(\vec{AB}, \vec{BC}) = 120^\circ \Rightarrow \vec{AB} \cdot \vec{BC} = a \cdot a \cdot \cos 120^\circ = -\dfrac{a^2}{2}$. Choice \textbf{C}.
+
+\textbf{Question 16.} $\vec{a} \cdot \vec{b} = 4(-2) + (-3)(5) = -8 - 15 = -23$. Choice \textbf{B}.
+
+\textbf{Question 17.} $\vec{AB} = (-6, 8) \Rightarrow AB = \sqrt{(-6)^2 + 8^2} = \sqrt{100} = 10$. Choice \textbf{D}.
+
+\textbf{Question 18.} $\vec{u} \perp \vec{v} \Leftrightarrow 6m + 3(-4) = 0 \Leftrightarrow 6m = 12 \Leftrightarrow m = 2$. Choice \textbf{A}.
+
+\textbf{Question 19.} $\cos(\vec{a}, \vec{b}) = \dfrac{1(-2) + 3(-1)}{\sqrt{1^2+3^2}\sqrt{(-2)^2+(-1)^2}} = \dfrac{-5}{\sqrt{50}} = -\dfrac{\sqrt{2}}{2} \Rightarrow (\vec{a}, \vec{b}) = 135^\circ$. Choice \textbf{C}.
+
+\textbf{Question 20.} $W = F \cdot d \cdot \cos 30^\circ = 40 \cdot 5 \cdot \dfrac{\sqrt{3}}{2} = 100\sqrt{3}\text{ J}$. Choice \textbf{B}.
+
+\end{multicols}
+\newpage
+\begin{multicols}{2}
+\raggedcolumns
+\small
+
+\textbf{\color{accent}PART II. TRUE / FALSE}
+
+\textbf{Question 1.}
+a) Vectors $\vec{AB}$ and $\vec{CD}$ have opposite directions, so $\vec{AB} = -\vec{CD} \ne \vec{CD} \Rightarrow$ \textbf{False}.\\
+b) Since $O$ is the midpoint of $AC$ and $BD$, $\vec{OA} + \vec{OC} = \vec{0}$ and $\vec{OB} + \vec{OD} = \vec{0}$, so the sum is $\vec{0} \Rightarrow$ \textbf{True}.\\
+c) $\vec{v} = \vec{OA} - \vec{OB} = \vec{BA} \Rightarrow |\vec{v}| = BA = a \Rightarrow$ \textbf{True}.\\
+d) Diagonals of a square are perpendicular and equal: $\vec{OB} \perp \vec{OC}$, $OB = OC = \dfrac{a\sqrt{2}}{2} \Rightarrow |\vec{OB} + \vec{OC}| = \sqrt{OB^2 + OC^2} = a \ne a\sqrt{2} \Rightarrow$ \textbf{False}.
+
+\textbf{Question 2.}
+a) $\vec{AM} = \vec{AB} + \vec{BM} = \vec{AB} + \dfrac{1}{2}\vec{BC} = \vec{AB} + \dfrac{1}{2}\vec{AD} \Rightarrow$ \textbf{True}.\\
+b) Since $NC = 3ND$ on $CD$, $DN = \dfrac{1}{4}DC \Rightarrow \vec{AN} = \vec{AD} + \dfrac{1}{4}\vec{AB} \ne \dfrac{1}{3}\vec{AB} + \vec{AD} \Rightarrow$ \textbf{False}.\\
+c) $\vec{MN} = \vec{AN} - \vec{AM} = -\dfrac{3}{4}\vec{AB} + \dfrac{1}{2}\vec{AD} \ne \dfrac{3}{4}\vec{AB} - \dfrac{1}{2}\vec{AD} \Rightarrow$ \textbf{False}.\\
+d) Since $I$ is the midpoint of $MN$, $\vec{AI} = \dfrac{1}{2}(\vec{AM} + \vec{AN}) = \dfrac{1}{2}\left(\dfrac{5}{4}\vec{AB} + \dfrac{3}{2}\vec{AD}\right) = \dfrac{5}{8}\vec{AB} + \dfrac{3}{4}\vec{AD} \Rightarrow$ \textbf{True}.
+
+\textbf{Question 3.}
+a) $\vec{AB} = (3, 6)$, $\vec{AC} = (6, -3)$. Since $3(-3) - 6(6) = -45 \ne 0$, $A, B, C$ are not collinear $\Rightarrow$ \textbf{False}.\\
+b) $\vec{AB} \cdot \vec{AC} = 3(6) + 6(-3) = 0 \Rightarrow \vec{AB} \perp \vec{AC} \Rightarrow$ \textbf{True}.\\
+c) $x_G = \dfrac{-1+2+5}{3} = 2$, $y_G = \dfrac{1+7-2}{3} = 2 \Rightarrow G(2, 2) \ne G(2, 3) \Rightarrow$ \textbf{False}.\\
+d) $\vec{BA} = (-3, -6)$, $\vec{BC} = (3, -9) \Rightarrow \vec{BA} \cdot \vec{BC} = -9 + 54 = 45 \Rightarrow$ \textbf{True}.
+
+\textbf{Question 4.}
+a) $\vec{AB} \cdot \vec{AC} = 5 \cdot 8 \cdot \cos 60^\circ = 20 \Rightarrow$ \textbf{True}.\\
+b) $BC^2 = AB^2 + AC^2 - 2\vec{AB}\cdot\vec{AC} = 25 + 64 - 40 = 49 \Rightarrow BC = 7 \Rightarrow$ \textbf{True}.\\
+c) $AM^2 = \dfrac{AB^2 + AC^2 + 2\vec{AB}\cdot\vec{AC}}{4} = \dfrac{25 + 64 + 40}{4} = \dfrac{129}{4} \Rightarrow AM = \dfrac{\sqrt{129}}{2} \ne 6 \Rightarrow$ \textbf{False}.\\
+d) $\vec{BA} \cdot \vec{BC} = \vec{BA} \cdot (\vec{BA} + \vec{AC}) = BA^2 - \vec{AB}\cdot\vec{AC} = 25 - 20 = 5 \ne 15 \Rightarrow$ \textbf{False}.
+
+\textbf{\color{accent}PART III. SHORT-ANSWER}
+
+\textbf{Question 1.} $\vec{AB} + \vec{AD} = \vec{AC}$. Since $\widehat{BAD} = 120^\circ$, $\widehat{ABC} = 60^\circ$; with $BA = BC = 9$, $\triangle ABC$ is equilateral $\Rightarrow |\vec{u}| = AC = \mathbf{9}$.
+
+\textbf{Question 2.} $\vec{AM} = \dfrac{1}{2}\vec{AB}$, $\vec{AN} = \vec{AB} + \dfrac{2}{3}\vec{BC} = \dfrac{1}{3}\vec{AB} + \dfrac{2}{3}\vec{AC}$. Thus $\vec{MN} = \vec{AN} - \vec{AM} = -\dfrac{1}{6}\vec{AB} + \dfrac{2}{3}\vec{AC}$. Hence $P = 6\left(-\dfrac{1}{6}\right) + 9\left(\dfrac{2}{3}\right) = -1 + 6 = \mathbf{5}$.
+
+\textbf{Question 3.} $\vec{w} = 2(2, -3) + (-1, 4) = (3, -2)$. For $\vec{c} = (m, 4)$ to be parallel to $\vec{w}$, $3 \cdot 4 - (-2)m = 0 \Leftrightarrow 2m = -12 \Leftrightarrow m = \mathbf{-6}$.
+
+\textbf{Question 4.} $\vec{AB} = (5, 0)$, $\vec{AC} = (3, 4)$. Thus $\cos\widehat{BAC} = \dfrac{5 \cdot 3 + 0 \cdot 4}{5 \cdot \sqrt{3^2+4^2}} = \dfrac{15}{25} = \mathbf{0.6}$.
+
+\textbf{Question 5.} $\vec{MA} = (1-m, 3)$, $\vec{MB} = (5-m, 1)$. $\triangle MAB$ is right at $M \Leftrightarrow (1-m)(5-m) + 3 = 0 \Leftrightarrow m^2 - 6m + 8 = 0 \Leftrightarrow m = 2$ or $m = 4$. Since $m > 3$, $m = \mathbf{4}$.
+
+\textbf{Question 6.} We have:\\
+$|\vec{F}| = \sqrt{F_1^2 + F_2^2 + 2F_1 F_2 \cos 60^\circ} = \sqrt{30^2 + 50^2 + 30 \cdot 50} = \sqrt{4900} = \mathbf{70}\text{ N}$.
+
+\textbf{\color{accent}PART IV. FREE-RESPONSE}
+
+\textbf{Problem 1.}
+a) We have $\vec{AE} = \dfrac{1}{2}\vec{AB}$ and $\vec{AF} = \dfrac{1}{3}\vec{AD}$, so:
+$$\vec{EF} = \vec{AF} - \vec{AE} = -\dfrac{1}{2}\vec{AB} + \dfrac{1}{3}\vec{AD}.$$
+In parallelogram $ABCD$, $\vec{AC} = \vec{AB} + \vec{AD} \Rightarrow \vec{AK} = \dfrac{1}{5}\vec{AC} = \dfrac{1}{5}\vec{AB} + \dfrac{1}{5}\vec{AD}$.\\
+Hence $\vec{EK} = \vec{AK} - \vec{AE} = \left(\dfrac{1}{5} - \dfrac{1}{2}\right)\vec{AB} + \dfrac{1}{5}\vec{AD} = -\dfrac{3}{10}\vec{AB} + \dfrac{1}{5}\vec{AD}$.\\
+b) Observe that $\vec{EK} = \dfrac{3}{5}\left(-\dfrac{1}{2}\vec{AB} + \dfrac{1}{3}\vec{AD}\right) = \dfrac{3}{5}\vec{EF}$.\\
+Since $\vec{EK}$ and $\vec{EF}$ are parallel, the three points $E, K, F$ are collinear.
+
+\textbf{Problem 2.}
+a) We have $\vec{BA} = (-3, 4)$ and $\vec{BC} = (8, 6)$.\\
+Thus $\vec{BA} \cdot \vec{BC} = (-3)(8) + 4(6) = -24 + 24 = 0 \Rightarrow BA \perp BC$.\\
+Therefore, $\triangle ABC$ is right-angled at $B$.\\
+Side lengths: $BA = \sqrt{(-3)^2 + 4^2} = 5$, $BC = \sqrt{8^2 + 6^2} = 10$.\\
+Area of triangle $ABC$: $S_{\triangle ABC} = \dfrac{1}{2} BA \cdot BC = \dfrac{1}{2} \cdot 5 \cdot 10 = \mathbf{25}$.\\
+b) Since $\triangle ABC$ is right-angled at $B$, quadrilateral $ABCD$ is a rectangle iff $\vec{AD} = \vec{BC}$.\\
+Let $D(x, y)$; then $\vec{AD} = (x + 2, y - 6) = (8, 6) \Leftrightarrow \begin{cases} x + 2 = 8 \\ y - 6 = 6 \end{cases} \Leftrightarrow \begin{cases} x = 6 \\ y = 12 \end{cases}$.\\
+Thus, the required point is $D(6, 12)$.
+
+\textbf{Problem 3.}
+a) The vector equation for the boat's resultant velocity is $\vec{v} = \vec{v}_1 + \vec{v}_2$.\\
+Since $\vec{v}_1 \perp \vec{v}_2$, the magnitude of the resultant velocity is:
+$$v = |\vec{v}| = \sqrt{v_1^2 + v_2^2} = \sqrt{4^2 + 3^2} = 5\text{ m/s}.$$
+b) In the right triangle formed by $\vec{v}_1$ and $\vec{v}$, $\tan\alpha = \dfrac{v_2}{v_1} = \dfrac{3}{4} \Rightarrow \alpha \approx 36.9^\circ$.\\
+Time to cross the river: $t = \dfrac{d}{v_1} = \dfrac{120}{4} = 30\text{ s}$.\\
+Downstream drift distance: $s = v_2 \cdot t = 3 \cdot 30 = 90\text{ m}$.
+
+\end{multicols}
+\end{document}
+""")
+
+    return "\n\n".join(parts)
+
+
+def run_pdflatex():
+    cmd = ["pdflatex", "-interaction=nonstopmode", "-halt-on-error", TEX_PATH.name]
+    res = subprocess.run(cmd, cwd=OUT_DIR, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
+    if res.returncode != 0:
+        log_txt = res.stdout.decode("utf-8", errors="replace")
+        raise RuntimeError(f"pdflatex failed!\n{log_txt[-2500:]}")
+
+
+def find_ans_start_page(pdf_path: Path) -> int:
+    doc = pymupdf.open(pdf_path)
+    for i, page in enumerate(doc):
+        txt = page.get_text("text")
+        if "COMPREHENSIVE ANSWER KEY" in txt:
+            doc.close()
+            return i
+    doc.close()
+    raise RuntimeError("Could not locate Answer Key start page in compiled PDF!")
+
+
+def audit_pagination(exam_pdf: Path, ans_pdf: Path):
+    doc_exam = pymupdf.open(exam_pdf)
+    print(f"\n=== AUDIT ENGLISH EXAM PDF ({len(doc_exam)} pages) ===")
+    for pno, page in enumerate(doc_exam, start=1):
+        txt = page.get_text("text")
+        qs = re.findall(r"Question\s+(\d+)\.", txt)
+        probs = re.findall(r"Problem\s+(\d+)", txt)
+        rect = page.rect
+        max_y = 0
+        for d in page.get_drawings():
+            max_y = max(max_y, d["rect"].y1)
+        print(f"  Page {pno:2d}: Qs={qs} | Probs={probs} | max_y={max_y:.1f}/{rect.height:.1f}pt")
+    doc_exam.close()
+
+    doc_ans = pymupdf.open(ans_pdf)
+    print(f"\n=== AUDIT ENGLISH ANS PDF ({len(doc_ans)} pages) ===")
+    for pno, page in enumerate(doc_ans, start=1):
+        rect = page.rect
+        max_y = 0
+        for d in page.get_drawings():
+            max_y = max(max_y, d["rect"].y1)
+        print(f"  Page {pno:2d}: max_y={max_y:.1f}/{rect.height:.1f}pt")
+    doc_ans.close()
+
+
+def main():
+    OUT_DIR.mkdir(parents=True, exist_ok=True)
+    TEX_PATH.write_text(generate_tex("XX", "YY"), encoding="utf-8")
+    print("[1/4] Pass 1 pdflatex...")
+    run_pdflatex()
+
+    ans_start = find_ans_start_page(FULL_PDF)
+    doc = pymupdf.open(FULL_PDF)
+    total_pages = len(doc)
+    doc.close()
+
+    exam_pages = ans_start
+    ans_pages = total_pages - exam_pages
+    print(f"[2/4] Detected exam_pages={exam_pages}, ans_pages={ans_pages} (total={total_pages}). Updating footers...")
+
+    TEX_PATH.write_text(generate_tex(str(exam_pages), str(ans_pages)), encoding="utf-8")
+    run_pdflatex()
+    run_pdflatex()
+
+    ans_start2 = find_ans_start_page(FULL_PDF)
+    doc = pymupdf.open(FULL_PDF)
+    total2 = len(doc)
+    assert ans_start2 == exam_pages and total2 == total_pages, f"Page counts shifted: {ans_start2}/{total2}"
+
+    print("[3/4] Splitting into De_On_Tap_Vector_2_EN_Exam.pdf and De_On_Tap_Vector_2_EN_Ans.pdf...")
+    exam_doc = pymupdf.open()
+    exam_doc.insert_pdf(doc, from_page=0, to_page=exam_pages - 1)
+    exam_doc.save(EXAM_PDF)
+    exam_doc.close()
+
+    ans_doc = pymupdf.open()
+    ans_doc.insert_pdf(doc, from_page=exam_pages, to_page=total_pages - 1)
+    ans_doc.save(ANS_PDF)
+    ans_doc.close()
+    doc.close()
+
+    audit_pagination(EXAM_PDF, ANS_PDF)
+
+    print("[4/4] Exporting English PDFs to Grade 10 teaching folders...")
+    src_map = {"exam": EXAM_PDF, "ans": ANS_PDF, "full": FULL_PDF}
+    for dst, kind in EXPORT_TARGETS:
+        dst.parent.mkdir(parents=True, exist_ok=True)
+        shutil.copy2(src_map[kind], dst)
+        print(f"  Copied -> {dst}")
+
+    print("\nBUILD COMPLETE FOR ENGLISH VERSION — TEST 2!")
+
+
+if __name__ == "__main__":
+    main()
