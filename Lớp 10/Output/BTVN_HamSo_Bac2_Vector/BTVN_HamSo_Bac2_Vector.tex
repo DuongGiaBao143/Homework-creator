@@ -1,0 +1,637 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.3cm,top=0.8cm,bottom=1.0cm,includehead,includefoot,headheight=18pt,headsep=6pt,footskip=16pt]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace,multicol}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel}
+
+\definecolor{ink}{RGB}{30,55,70}
+\definecolor{accent}{RGB}{18,82,112}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{2pt}
+
+\newcommand{\headerQuote}{%
+  \ifcase\numexpr\value{page}-1\relax
+    Mathematics is about understanding, not just numbers%
+  \or The essence of mathematics lies in its freedom%
+  \or Pure mathematics is the poetry of logical ideas%
+  \or In mathematics, asking good questions matters most%
+  \or Everything around you is built on mathematics%
+  \or Mathematics is the queen of the sciences%
+  \or Stay with tough problems a little bit longer%
+  \or Math gives us hope that every problem has a solution%
+  \or Success is the sum of small daily efforts%
+  \or Think deeply, check carefully, solve cleanly%
+  \or Genius is 1\% inspiration and 99\% perspiration%
+  \or Practice makes perfect — keep solving!%
+  \or Mathematics is about understanding, not just numbers%
+  \or The essence of mathematics lies in its freedom%
+  \or Pure mathematics is the poetry of logical ideas%
+  \or In mathematics, asking good questions matters most%
+  \or Everything around you is built on mathematics%
+  \or Mathematics is the queen of the sciences%
+  \or Stay with tough problems a little bit longer%
+  \or Math gives us hope that every problem has a solution%
+  \or Success is the sum of small daily efforts%
+  \or Think deeply, check carefully, solve cleanly%
+  \or Genius is 1\% inspiration and 99\% perspiration%
+  \or Practice makes perfect — keep solving!%
+  \or Mathematics is about understanding, not just numbers%
+  \or The essence of mathematics lies in its freedom%
+  \or Pure mathematics is the poetry of logical ideas%
+  \or In mathematics, asking good questions matters most%
+  \or Everything around you is built on mathematics%
+  \or Mathematics is the queen of the sciences%
+  \or Stay with tough problems a little bit longer%
+  \or Math gives us hope that every problem has a solution%
+  \or Success is the sum of small daily efforts%
+  \or Think deeply, check carefully, solve cleanly%
+  \or Genius is 1\% inspiration and 99\% perspiration%
+  \or Practice makes perfect — keep solving!%
+  \or Mathematics is about understanding, not just numbers%
+  \or The essence of mathematics lies in its freedom%
+  \or Pure mathematics is the poetry of logical ideas%
+  \or In mathematics, asking good questions matters most%
+  \else Practice makes perfect — keep solving!%
+  \fi
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\textit{\color{gray!70!black}\headerQuote}}
+\rhead{\small\textbf{\color{ink}Người biên soạn: Dương Gia Bảo}}
+\lfoot{}
+\rfoot{\small Trang \thepage/10}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancypagestyle{dapan}{
+  \fancyhf{}
+  \lhead{\footnotesize\textit{\color{gray!70!black}\headerQuote}}
+  \rhead{\small\textbf{\color{ink}Người biên soạn: Dương Gia Bảo}}
+  \lfoot{\small\textit{\color{gray!60!black}Đáp án BTVN Hàm số, Hàm số bậc hai \& Vectơ — Toán 10 KNTT}}
+  \rfoot{\small Trang \thepage/2}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+\newcommand{\chapterbanner}[2]{%
+  \par\vspace{3pt}\noindent
+  \begin{tikzpicture}
+    \node[draw=accent, fill=accent!6, rounded corners=4pt, inner xsep=10pt, inner ysep=6pt, text width=\dimexpr\linewidth-20.8pt\relax, line width=0.8pt] {%
+      {\large\bfseries\color{ink}#1}\\[2pt]
+      {\small\color{gray!75!black}#2}%
+    };
+  \end{tikzpicture}\par\nopagebreak\vspace{5pt}
+}
+
+\newcommand{\parttitle}[1]{\par\vspace{3pt}\needspace{3\baselineskip}{\normalsize\bfseries\color{accent}#1}\par\nopagebreak\vspace{2pt}}
+\newcommand{\four}[4]{\par\nopagebreak\vspace{1.5pt}\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\nopagebreak\vspace{1.5pt}\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[3.8pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
+
+\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.15cm,labelsep=.15cm,itemsep=2pt,topsep=2pt,parsep=0pt}
+
+\newcommand{\oli}[1]{%
+  \par\nopagebreak\vspace{2.5pt}\noindent
+  \begin{tikzpicture}
+    \draw[step=0.5cm, color=cyan!25!gray!25, line width=0.25pt] (0,0) grid (\linewidth, #1);
+    \draw[color=cyan!50!gray!45, line width=0.45pt, rounded corners=2pt] (0,0) rectangle (\linewidth, #1);
+    \node[anchor=north west, font=\scriptsize\itshape\color{gray!75}, inner sep=3pt] at (0, #1) {Bài làm:};
+  \end{tikzpicture}\par\vspace{3.5pt}
+}
+
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+
+\begin{document}
+
+\chapterbanner{BÀI TẬP VỀ NHÀ: HÀM SỐ, HÀM SỐ BẬC HAI \& CHƯƠNG VECTƠ}{Môn Toán 10 KNTT — Gồm 30 câu Trắc nghiệm ABCD \& 20 Bài Tự luận (có ô li trình bày)}
+
+\parttitle{PHẦN I. CÂU TRẮC NGHIỆM NHIỀU PHƯƠNG ÁN LỰA CHỌN (30 CÂU)}
+\textit{Học sinh khoanh tròn vào chữ cái đứng trước phương án trả lời đúng nhất.}
+
+\parttitle{Chủ đề 1. Bài 15: Hàm số (Câu 1 – 8)}
+
+\begin{enumerate}
+
+\needspace{4\baselineskip}\item Tập xác định $D$ của hàm số $y = \dfrac{3x - 1}{\sqrt{5 - x}}$ là
+\four{$(-\infty; 5]$.}{$(-\infty; 5)$.}{$(5; +\infty)$.}{$\mathbb{R} \setminus \{5\}$.}
+
+\needspace{4\baselineskip}\item Tập xác định $D$ của hàm số $y = \sqrt{2x + 6} + \dfrac{1}{x - 2}$ là
+\two{$(-3; +\infty) \setminus \{2\}$.}{$[-3; +\infty)$.}{$\mathbb{R} \setminus \{2\}$.}{$[-3; +\infty) \setminus \{2\}$.}
+
+\needspace{4\baselineskip}\item Cho hàm số $f(x) = \begin{cases} 2x + 5 & \text{khi } x \ge 1 \\ x^2 - 3 & \text{khi } x < 1 \end{cases}$. Giá trị của biểu thức $f(3) - f(-2)$ bằng
+\four{$10$.}{$12$.}{$8$.}{$6$.}
+
+\needspace{4\baselineskip}\item Điểm nào sau đây thuộc đồ thị của hàm số $y = \dfrac{\sqrt{x + 7}}{x - 1}$?
+\four{$(1; 0)$.}{$(-7; 1)$.}{$(2; 3)$.}{$(2; -3)$.}
+
+\needspace{4\baselineskip}\item Cho hàm số bậc nhất $y = (2m - 4)x + 3$. Tất cả các giá trị của tham số $m$ để hàm số đồng biến trên $\mathbb{R}$ là
+\four{$m > 2$.}{$m \ge 2$.}{$m < 2$.}{$m \ne 2$.}
+
+\needspace{4\baselineskip}\item Cho hàm số $y = f(x)$ có đồ thị là đường gấp khúc đi qua các điểm $A(-4; 2)$, $B(-1; 6)$, $C(2; -1)$ và $D(5; 4)$. Hàm số đồng biến trên khoảng nào sau đây?
+\four{$(-1; 2)$.}{$(-4; 2)$.}{$(-1; 5)$.}{$(2; 5)$.}
+
+\needspace{4\baselineskip}\item Tập giá trị của hàm số $y = 2 + \sqrt{16 - x^2}$ là
+\four{$[0; 6]$.}{$[2; 6]$.}{$[2; +\infty)$.}{$[-4; 4]$.}
+
+\needspace{4\baselineskip}\item Đồ thị của hàm số $y = \begin{cases} x + 2 & \text{khi } x \ge 0 \\ 3 - 2x & \text{khi } x < 0 \end{cases}$ cắt trục tung tại điểm có tung độ bằng
+\four{$3$.}{$0$.}{$2$.}{$-2$.}
+
+\end{enumerate}
+
+\parttitle{Chủ đề 2. Bài 16: Hàm số bậc hai (Câu 9 – 18)}
+
+\begin{enumerate}[resume*]
+
+\needspace{4\baselineskip}\item Tọa độ đỉnh $I$ của parabol $(P): y = 3x^2 - 12x + 8$ là
+\four{$I(-2; 44)$.}{$I(2; 4)$.}{$I(4; 8)$.}{$I(2; -4)$.}
+
+\needspace{4\baselineskip}\item Trục đối xứng của parabol $(P): y = -2x^2 - 8x + 5$ là đường thẳng có phương trình
+\four{$x = -2$.}{$x = 2$.}{$y = -2$.}{$x = 4$.}
+
+\end{enumerate}
+
+\newpage
+
+\begin{enumerate}[resume*]
+
+\needspace{4\baselineskip}\item Hàm số bậc hai $y = -x^2 + 6x - 4$ đồng biến trên khoảng nào sau đây?
+\four{$(3; +\infty)$.}{$(0; +\infty)$.}{$(-\infty; 3)$.}{$(-3; +\infty)$.}
+
+\needspace{4\baselineskip}\item Parabol $(P): y = 2x^2 - 5x + 2$ cắt trục hoành tại hai điểm phân biệt $A$ và $B$. Độ dài đoạn thẳng $AB$ bằng
+\four{$2$.}{$\dfrac{3}{2}$.}{$\dfrac{5}{2}$.}{$1$.}
+
+\needspace{4\baselineskip}\item Giá trị nhỏ nhất của hàm số $y = 2x^2 - 4x + 5$ trên đoạn $[0; 3]$ bằng
+\four{$3$.}{$5$.}{$11$.}{$1$.}
+
+\needspace{4\baselineskip}\item Giá trị lớn nhất của hàm số $y = -x^2 + 4x + 1$ trên đoạn $[-1; 1]$ bằng
+\four{$5$.}{$-4$.}{$1$.}{$4$.}
+
+\needspace{4\baselineskip}\item Biết parabol $(P): y = ax^2 + bx + 4$ đi qua $A(1; 1)$ và có trục đối xứng $x = 2$. Giá trị của tích $a \cdot b$ bằng
+\four{$4$.}{$-4$.}{$-3$.}{$3$.}
+
+\needspace{4\baselineskip}\item Cho parabol $(P): y = ax^2 + bx + c$ ($a \ne 0$) quay bề lõm xuống dưới, có đỉnh $I(2; 5)$ và cắt trục tung tại điểm có tung độ bằng $1$. Khẳng định nào sau đây đúng?
+\two{$a < 0,\; b < 0,\; c > 0$.}{$a > 0,\; b > 0,\; c > 0$.}{$a < 0,\; b > 0,\; c > 0$.}{$a < 0,\; b > 0,\; c < 0$.}
+
+\needspace{4\baselineskip}\item Số giao điểm của đường thẳng $d: y = 2x + 1$ và parabol $(P): y = x^2 - 2x + 5$ là
+\four{$1$.}{$0$.}{$2$.}{$3$.}
+
+\needspace{4\baselineskip}\item Một quả bóng được đá lên theo quỹ đạo parabol $h(t) = -5t^2 + 15t + 2$ (m), với $t \ge 0$ tính bằng giây. Độ cao lớn nhất của quả bóng bằng
+\four{$12{,}5\text{ m}$.}{$13{,}25\text{ m}$.}{$15\text{ m}$.}{$11{,}25\text{ m}$.}
+
+\end{enumerate}
+
+\parttitle{Chủ đề 3. Chương IV: Vectơ (Câu 19 – 30)}
+
+\begin{enumerate}[resume*]
+
+\needspace{4\baselineskip}\item Cho ngũ giác đều $ABCDE$. Số vectơ khác vectơ-không có điểm đầu và điểm cuối là các đỉnh của ngũ giác bằng
+\four{$10$.}{$25$.}{$15$.}{$20$.}
+
+\needspace{4\baselineskip}\item Cho hình bình hành $ABCD$ tâm $O$. Khẳng định nào sau đây \textbf{sai}?
+\two{$\vec{AB} = \vec{DC}$.}{$\vec{OA} + \vec{OC} = \vec{0}$.}{$\vec{AB} + \vec{AD} = \vec{BD}$.}{$\vec{AD} - \vec{AB} = \vec{BD}$.}
+
+\end{enumerate}
+
+\newpage
+
+\begin{enumerate}[resume*]
+
+\needspace{4\baselineskip}\item Cho tam giác $ABC$ vuông tại $A$ có $AB = 5$, $AC = 12$. Độ dài của vectơ $\vec{u} = \vec{AB} + \vec{AC}$ bằng
+\four{$17$.}{$13$.}{$7$.}{$\sqrt{119}$.}
+
+\needspace{4\baselineskip}\item Cho hình thoi $ABCD$ cạnh $a$ có góc $\widehat{ABC} = 120^\circ$. Độ dài của vectơ $\vec{v} = \vec{BA} + \vec{BC}$ bằng
+\four{$a$.}{$a\sqrt{3}$.}{$a\sqrt{2}$.}{$2a$.}
+
+\needspace{4\baselineskip}\item Cho đoạn thẳng $AB$ có $M$ là trung điểm và $O$ là một điểm bất kì. Khẳng định nào sau đây luôn đúng?
+\two{$\vec{OA} + \vec{OB} = \vec{OM}$.}{$\vec{MA} = \vec{MB}$.}{$\vec{OA} - \vec{OB} = 2\vec{OM}$.}{$\vec{OA} + \vec{OB} = 2\vec{OM}$.}
+
+\needspace{4\baselineskip}\item Cho tam giác $ABC$. Gọi $N$ là điểm thuộc cạnh $BC$ sao cho $NC = 3NB$. Biểu diễn vectơ $\vec{AN}$ theo hai vectơ $\vec{AB}$ và $\vec{AC}$ là
+\two{$\vec{AN} = \dfrac{1}{4}\vec{AB} + \dfrac{3}{4}\vec{AC}$.}{$\vec{AN} = \dfrac{3}{4}\vec{AB} - \dfrac{1}{4}\vec{AC}$.}{$\vec{AN} = \dfrac{3}{4}\vec{AB} + \dfrac{1}{4}\vec{AC}$.}{$\vec{AN} = \dfrac{2}{3}\vec{AB} + \dfrac{1}{3}\vec{AC}$.}
+
+\needspace{4\baselineskip}\item Trong mặt phẳng tọa độ $Oxy$, cho $\vec{a} = (3; -1)$ và $\vec{b} = (-2; 4)$. Tọa độ của vectơ $\vec{w} = 2\vec{a} - \vec{b}$ là
+\four{$(8; -6)$.}{$(4; 2)$.}{$(8; 2)$.}{$(4; -6)$.}
+
+\needspace{4\baselineskip}\item Trong mặt phẳng tọa độ $Oxy$, cho tam giác $ABC$ có $A(1; 4)$, $B(-3; 2)$ và $C(5; -3)$. Tọa độ trọng tâm $G$ của tam giác $ABC$ là
+\four{$G(3; 3)$.}{$G(1; 1)$.}{$G(1; -1)$.}{$G(-1; 1)$.}
+
+\needspace{4\baselineskip}\item Trong mặt phẳng tọa độ $Oxy$, cho hai vectơ $\vec{u} = (m; 3)$ và $\vec{v} = (4; -6)$. Hai vectơ $\vec{u}$ và $\vec{v}$ vuông góc với nhau khi và chỉ khi
+\four{$m = -2$.}{$m = 2$.}{$m = -\dfrac{9}{2}$.}{$m = \dfrac{9}{2}$.}
+
+\needspace{4\baselineskip}\item Cho tam giác đều $ABC$ cạnh $a$. Giá trị của tích vô hướng $\vec{AB} \cdot \vec{BC}$ bằng
+\four{$-\dfrac{a^2}{2}$.}{$\dfrac{a^2}{2}$.}{$-\dfrac{a^2\sqrt{3}}{2}$.}{$\dfrac{a^2\sqrt{3}}{2}$.}
+
+\needspace{4\baselineskip}\item Trong mặt phẳng tọa độ $Oxy$, cho $\vec{x} = (1; -3)$ và $\vec{y} = (2; -1)$. Côsin của góc giữa hai vectơ $\vec{x}$ và $\vec{y}$ bằng
+\four{$\dfrac{1}{2}$.}{$-\dfrac{\sqrt{2}}{2}$.}{$\dfrac{\sqrt{2}}{2}$.}{$\dfrac{\sqrt{3}}{2}$.}
+
+\needspace{4\baselineskip}\item Một người kéo một chiếc xe hàng trên mặt đường nằm ngang bằng lực $\vec{F}$ có độ lớn $80\text{ N}$, hướng lực kéo hợp với phương ngang một góc $30^\circ$. Khi xe dịch chuyển được $15\text{ m}$, công của lực $\vec{F}$ thực hiện được là
+\four{$600\text{ J}$.}{$600\sqrt{3}\text{ J}$.}{$1200\text{ J}$.}{$400\sqrt{3}\text{ J}$.}
+
+\end{enumerate}
+
+\newpage
+
+\chapterbanner{PHẦN II. BÀI TẬP TỰ LUẬN (20 BÀI)}{(Học sinh trình bày đầy đủ lập luận và lời giải chi tiết vào phần ô li bên dưới mỗi bài)}
+\parttitle{Chủ đề 1. Bài 15: Hàm số (Bài 1 – 4)}
+
+\needspace{5\baselineskip}\textbf{Bài 1.} Tìm tập xác định của các hàm số sau:
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item $y = \dfrac{\sqrt{x + 3}}{x^2 - 4x + 3}$;
+    \item $y = \sqrt{4 - x} + \dfrac{x}{\sqrt{2x + 6}}$.
+\end{enumerate}
+\oli{5.2cm}
+
+\needspace{5\baselineskip}\textbf{Bài 2.} Cho hàm số $f(x) = \begin{cases} 2x^2 - 3x & \text{khi } x \ge 2 \\ \sqrt{6 - x} & \text{khi } -3 \le x < 2 \\ \dfrac{x - 1}{x + 1} & \text{khi } x < -3 \end{cases}$.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Tính giá trị của $f(3)$, $f(-3)$ và $f(-5)$.
+    \item Tìm tất cả các giá trị thực của $x$ thuộc $[2; +\infty)$ sao cho $f(x) = 2$.
+\end{enumerate}
+\oli{5.2cm}
+
+\newpage
+
+\needspace{5\baselineskip}\textbf{Bài 3.} \begin{minipage}[t]{0.56\linewidth}
+Cho hàm số $y = f(x)$ xác định trên đoạn $[-3; 5]$ có đồ thị là đường gấp khúc như hình vẽ bên.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Lập bảng biến thiên của hàm số trên $[-3; 5]$ và chỉ rõ các khoảng đồng biến, nghịch biến.
+    \item Tìm giá trị lớn nhất, nhỏ nhất của hàm số trên đoạn $[-3; 5]$.
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.41\linewidth}
+\vspace{-6pt}\centering
+\begin{tikzpicture}[scale=0.42, >=Stealth]
+  \draw[step=1, color=gray!22, line width=0.2pt] (-3.5,-2.5) grid (5.5,4.5);
+  \draw[->, line width=0.6pt] (-3.8,0) -- (5.8,0) node[below, font=\scriptsize] {$x$};
+  \draw[->, line width=0.6pt] (0,-2.8) -- (0,4.8) node[right, font=\scriptsize] {$y$};
+  \node[below right, font=\scriptsize] at (0,0) {$O$};
+  \draw[dashed, gray!70, line width=0.4pt] (-3,0) -- (-3,2) -- (0,2);
+  \draw[dashed, gray!70, line width=0.4pt] (-1,0) -- (-1,-2) -- (0,-2);
+  \draw[dashed, gray!70, line width=0.4pt] (2,0) -- (2,4) -- (0,4);
+  \draw[dashed, gray!70, line width=0.4pt] (5,0) -- (5,1) -- (0,1);
+  \draw[accent, line width=1.25pt] (-3,2) -- (-1,-2) -- (2,4) -- (5,1);
+  \foreach \x/\y in {-3/2, -1/-2, 2/4, 5/1} {
+    \fill[accent] (\x,\y) circle (2.6pt);
+  }
+  \node[below, font=\scriptsize] at (-3,0) {$-3$};
+  \node[above, font=\scriptsize] at (-1,0) {$-1$};
+  \node[below, font=\scriptsize] at (2,0) {$2$};
+  \node[below, font=\scriptsize] at (5,0) {$5$};
+  \node[right, font=\scriptsize] at (0,-2) {$-2$};
+  \node[right, font=\scriptsize] at (0,1) {$1$};
+  \node[right, font=\scriptsize] at (0,2) {$2$};
+  \node[left, font=\scriptsize] at (0,4) {$4$};
+\end{tikzpicture}
+\end{minipage}
+\oli{5.0cm}
+
+\needspace{5\baselineskip}\textbf{Bài 4.} Tiền cước nước sinh hoạt hàng tháng của một hộ gia đình được tính theo bậc thang: $10\text{ m}^3$ đầu giá $7\,000\text{ đồng/m}^3$; từ trên $10\text{ m}^3$ đến $20\text{ m}^3$ giá $8\,500\text{ đồng/m}^3$; từ trên $20\text{ m}^3$ trở lên giá $10\,000\text{ đồng/m}^3$.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Lập công thức hàm số biểu thị số tiền $T(x)$ (nghìn đồng) theo lượng nước $x\ (\text{m}^3)$ khi $x > 20$.
+    \item Tháng 11, gia đình phải trả tổng cộng $255\,000$ đồng tiền nước. Hỏi gia đình đã dùng bao nhiêu $\text{m}^3$ nước?
+\end{enumerate}
+\oli{5.2cm}
+
+\parttitle{Chủ đề 2. Bài 16: Hàm số bậc hai (Bài 5 – 11)}
+
+\needspace{5\baselineskip}\textbf{Bài 5.} Xác định hàm số bậc hai $y = ax^2 + bx + c$ ($a \ne 0$), biết đồ thị $(P)$ của nó:
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Đi qua điểm $A(0; -3)$ và có đỉnh $I(2; -7)$.
+    \item Đi qua ba điểm $M(0; 1)$, $N(1; 4)$ và $P(-1; 2)$.
+\end{enumerate}
+\oli{5.2cm}
+
+\newpage
+
+\needspace{5\baselineskip}\textbf{Bài 6.} Cho hàm số bậc hai $y = -x^2 + 4x - 3$.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Tìm tọa độ đỉnh, trục đối xứng, giao điểm với hai trục tọa độ và lập bảng biến thiên của hàm số.
+    \item Tìm giá trị lớn nhất và giá trị nhỏ nhất của hàm số trên đoạn $[-1; 3]$.
+\end{enumerate}
+\oli{5.2cm}
+
+\needspace{5\baselineskip}\textbf{Bài 7.} \begin{minipage}[t]{0.58\linewidth}
+Cho hàm số bậc hai $y = ax^2 + bx + c$ ($a \ne 0$) có đồ thị là parabol $(P)$ như hình vẽ bên.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Xác định công thức của hàm số bậc hai $(P)$.
+    \item Tìm tọa độ các giao điểm của $(P)$ và đường thẳng $d: y = 2x - 5$.
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.39\linewidth}
+\vspace{-6pt}\centering
+\begin{tikzpicture}[scale=0.46, >=Stealth]
+  \draw[step=1, color=gray!22, line width=0.2pt] (-0.8,-1.6) grid (4.5,3.8);
+  \draw[->, line width=0.6pt] (-1.0,0) -- (4.8,0) node[below, font=\scriptsize] {$x$};
+  \draw[->, line width=0.6pt] (0,-1.8) -- (0,4.0) node[right, font=\scriptsize] {$y$};
+  \node[below left, font=\scriptsize] at (0,0) {$O$};
+  \draw[dashed, gray!70] (2,0) -- (2,-1) -- (0,-1);
+  \draw[dashed, gray!70] (2,-1.6) -- (2,3.8);
+  \draw[thick, accent, domain=-0.15:4.15, samples=100] plot (\x, {(\x)^2 - 4*(\x) + 3});
+  \fill[accent] (2,-1) circle (2.4pt) node[below right, font=\scriptsize] {$I(2;-1)$};
+  \fill[ink] (1,0) circle (2pt) node[above right, font=\scriptsize] {$1$};
+  \fill[ink] (3,0) circle (2pt) node[above left, font=\scriptsize] {$3$};
+  \fill[ink] (0,3) circle (2pt) node[left, font=\scriptsize] {$3$};
+  \node[left, font=\scriptsize] at (0,-1) {$-1$};
+  \node[above, font=\scriptsize] at (2,0) {$2$};
+\end{tikzpicture}
+\end{minipage}
+\oli{5.0cm}
+
+\needspace{5\baselineskip}\textbf{Bài 8.} Cho đường thẳng $d: y = 2x + m$ và parabol $(P): y = x^2 - 2x + 3$. Tìm tất cả các giá trị của tham số $m$ để $d$ cắt $(P)$ tại hai điểm phân biệt $A, B$ có hoành độ $x_A, x_B$ thỏa mãn $x_A^2 + x_B^2 = 12$.
+\oli{5.2cm}
+
+\newpage
+
+\needspace{5\baselineskip}\textbf{Bài 9.} \begin{minipage}[t]{0.58\linewidth}
+Một cây cầu vòm có nhịp vòm dạng parabol bề rộng ở mặt sông là $AB = 20\text{ m}$ và chiều cao từ đỉnh vòm xuống mặt sông là $h = 5\text{ m}$ (hình vẽ).
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Với hệ trục $Oxy$ như hình vẽ, hãy viết phương trình của vòm parabol.
+    \item Một sà lan rộng $8\text{ m}$ đi qua chính giữa gầm cầu. Tìm chiều cao phần nổi tối đa (mét) của sà lan để qua được gầm cầu.
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.39\linewidth}
+\vspace{-6pt}\centering
+\begin{tikzpicture}[scale=0.24, >=Stealth]
+  \fill[cyan!8] (-12,-0.6) rectangle (12,0);
+  \draw[->, line width=0.6pt] (-12,0) -- (12.5,0) node[below, font=\scriptsize] {$x$};
+  \draw[->, line width=0.6pt] (0,-1.0) -- (0,6.5) node[right, font=\scriptsize] {$y$};
+  \draw[thick, accent, domain=-10:10, samples=100] plot (\x, {-0.05*(\x)^2 + 5});
+  \draw[line width=0.9pt, fill=gray!25] (-4,0) rectangle (4,4.2);
+  \node[font=\tiny] at (0,2.1) {Sà lan};
+  \node[below left, font=\scriptsize] at (0,0) {$O$};
+  \node[below, font=\scriptsize] at (-10,0) {$A(-10;0)$};
+  \node[below, font=\scriptsize] at (10,0) {$B(10;0)$};
+  \node[above left, font=\scriptsize, accent] at (0,5) {$5\text{m}$};
+  \draw[<->, gray!80!black] (-4,-1.5) -- (4,-1.5) node[midway, below, font=\scriptsize] {$8\text{m}$};
+\end{tikzpicture}
+\end{minipage}
+\oli{4.0cm}
+
+\needspace{5\baselineskip}\textbf{Bài 10.} Một xưởng sản xuất đồ lưu niệm bán mỗi sản phẩm giá $120$ nghìn đồng thì tiêu thụ được $200$ sản phẩm/tháng. Biết chi phí sản xuất mỗi sản phẩm là $50$ nghìn đồng. Khảo sát cho thấy cứ giảm giá bán $5$ nghìn đồng/sản phẩm thì số lượng bán ra tăng thêm $25$ sản phẩm/tháng.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Gọi $x$ là số lần giảm giá $5$ nghìn đồng ($0 \le x < 14$). Lập hàm số biểu diễn lợi nhuận $L(x)$ (nghìn đồng) theo $x$.
+    \item Xưởng nên bán giá bao nhiêu nghìn đồng mỗi sản phẩm để lợi nhuận đạt lớn nhất? Tính lợi nhuận lớn nhất đó (triệu đồng).
+\end{enumerate}
+\oli{4.0cm}
+
+\needspace{5\baselineskip}\textbf{Bài 11.} Từ mặt đất, một vận động viên đá một quả bóng bay lên theo quỹ đạo có độ cao $h(t) = -4{,}9t^2 + 19{,}6t$ (mét), với $t$ (giây) là thời gian chuyển động ($t \ge 0$).
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Sau bao lâu kể từ lúc đá thì quả bóng đạt độ cao lớn nhất? Độ cao lớn nhất đó bằng bao nhiêu mét?
+    \item Sau bao lâu quả bóng chạm đất trở lại? Khoảng thời gian quả bóng ở độ cao từ $14{,}7\text{ m}$ trở lên là bao nhiêu giây?
+\end{enumerate}
+\oli{4.0cm}
+
+\newpage
+
+\parttitle{Chủ đề 3. Chương IV: Vectơ (Bài 12 – 20)}
+
+\needspace{5\baselineskip}\textbf{Bài 12.} Cho $6$ điểm bất kì $A, B, C, D, E, F$ và hình bình hành $ABCD$ tâm $O$. Chứng minh rằng:
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item $\vec{AB} + \vec{CD} + \vec{EF} = \vec{AF} + \vec{CB} + \vec{ED}$.
+    \item Với mọi điểm $M$ tùy ý, ta luôn có $\vec{MA} + \vec{MC} = \vec{MB} + \vec{MD} = 2\vec{MO}$.
+\end{enumerate}
+\oli{5.2cm}
+
+\needspace{5\baselineskip}\textbf{Bài 13.} Cho tam giác $ABC$. Gọi $G$ là trọng tâm tam giác $ABC$, $K$ là điểm trên cạnh $AB$ sao cho $\vec{AK} = \dfrac{1}{3}\vec{AB}$, và $N$ là điểm trên cạnh $AC$ sao cho $\vec{AN} = \dfrac{2}{3}\vec{AC}$.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Phân tích các vectơ $\vec{AG}$ và $\vec{KN}$ theo hai vectơ $\vec{AB}$ và $\vec{AC}$.
+    \item Trên tia đối của tia $CB$ lấy điểm $P$ sao cho $CP = \dfrac{1}{3}BC$ (tức $\vec{BP} = \dfrac{4}{3}\vec{BC}$). Chứng minh ba điểm $K, N, P$ thẳng hàng.
+\end{enumerate}
+\oli{5.2cm}
+
+\needspace{5\baselineskip}\textbf{Bài 14.} Cho hình vuông $ABCD$ cạnh $a$.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Tính độ dài của các vectơ $\vec{u} = \vec{AB} + \vec{AD}$ và $\vec{v} = \vec{AB} - \vec{AC}$.
+    \item Tính các tích vô hướng $\vec{AB} \cdot \vec{BD}$ và $(\vec{AB} + \vec{AD}) \cdot (\vec{AB} - \vec{AD})$.
+\end{enumerate}
+\oli{5.2cm}
+
+\newpage
+
+\needspace{5\baselineskip}\textbf{Bài 15.} Cho tam giác $ABC$ có $AB = 6$, $AC = 8$ và góc $\widehat{BAC} = 60^\circ$.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Tính tích vô hướng $\vec{AB} \cdot \vec{AC}$ và độ dài cạnh $BC$.
+    \item Gọi $M$ là trung điểm cạnh $BC$. Tính độ dài đường trung tuyến $AM$ bằng phương pháp vectơ.
+\end{enumerate}
+\oli{5.5cm}
+
+\needspace{5\baselineskip}\textbf{Bài 16.} Trong mặt phẳng tọa độ $Oxy$, cho ba điểm $A(1; 3)$, $B(-2; 1)$ và $C(4; -1)$.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Tìm tọa độ các vectơ $\vec{AB}$, $\vec{AC}$ và chứng minh ba điểm $A, B, C$ lập thành một tam giác.
+    \item Tìm tọa độ điểm $D$ sao cho tứ giác $ABDC$ là hình bình hành.
+\end{enumerate}
+\oli{5.5cm}
+
+\needspace{5\baselineskip}\textbf{Bài 17.} Trong mặt phẳng tọa độ $Oxy$, cho tam giác $ABC$ có $A(2; 5)$, $B(-1; 2)$ và $C(5; -4)$.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Chứng minh tam giác $ABC$ vuông tại $B$ và tính diện tích tam giác $ABC$.
+    \item Tìm tọa độ tâm $I$ và bán kính $R$ của đường tròn ngoại tiếp tam giác $ABC$.
+\end{enumerate}
+\oli{5.5cm}
+
+\newpage
+
+\needspace{5\baselineskip}\textbf{Bài 18.} Trong mặt phẳng tọa độ $Oxy$, cho hai điểm $A(1; 4)$ và $B(5; -2)$.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Tìm tọa độ điểm $M$ thuộc trục hoành $Ox$ sao cho ba điểm $M, A, B$ thẳng hàng.
+    \item Tìm tọa độ điểm $N$ thuộc trục tung $Oy$ sao cho $|\vec{NA} + \vec{NB}|$ đạt giá trị nhỏ nhất. Tính giá trị nhỏ nhất đó.
+\end{enumerate}
+\oli{5.5cm}
+
+\needspace{5\baselineskip}\textbf{Bài 19.} Trong mặt phẳng tọa độ $Oxy$, cho hai vectơ $\vec{a} = (3; 4)$ và $\vec{b} = (m; 1)$.
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Khi $m = 7$, tính tích vô hướng $\vec{a} \cdot \vec{b}$ và số đo góc giữa hai vectơ $\vec{a}$ và $\vec{b}$.
+    \item Tìm tất cả các giá trị của tham số $m$ sao cho hai vectơ $\vec{a}$ và $\vec{b}$ hợp với nhau một góc tù.
+\end{enumerate}
+\oli{5.5cm}
+
+\needspace{5\baselineskip}\textbf{Bài 20.} \begin{minipage}[t]{0.58\linewidth}
+Hai lực $\vec{F}_1, \vec{F}_2$ cùng tác dụng vào một vật tại $O$ có độ lớn $|\vec{F}_1| = 30\text{ N}$, $|\vec{F}_2| = 50\text{ N}$, góc giữa hai lực bằng $60^\circ$ (hình vẽ).
+\begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=1.5pt, topsep=1.5pt]
+    \item Tính độ lớn của hợp lực $\vec{F} = \vec{F}_1 + \vec{F}_2$.
+    \item Vật dịch chuyển theo hướng hợp lực $\vec{F}$ một đoạn $12\text{ m}$. Tính công $A$ của hợp lực $\vec{F}$ và công $A_1$ của riêng lực $\vec{F}_1$.
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.39\linewidth}
+\vspace{-6pt}\centering
+\begin{tikzpicture}[scale=0.45, >=Stealth]
+  \coordinate (O) at (0,0);
+  \coordinate (F1) at (3,0);
+  \coordinate (F2) at (2.5, 4.33);
+  \coordinate (F) at (5.5, 4.33);
+  \draw[->, very thick, accent] (O) -- (F1) node[below, font=\scriptsize] {$\vec{F}_1$};
+  \draw[->, very thick, accent] (O) -- (F2) node[above left, font=\scriptsize] {$\vec{F}_2$};
+  \draw[dashed, gray!60] (F1) -- (F) -- (F2);
+  \draw[->, line width=1.1pt, ink] (O) -- (F) node[above right, font=\scriptsize] {$\vec{F}$};
+  \pic[draw, angle radius=0.45cm, "$60^\circ$", angle eccentricity=1.55, font=\tiny] {angle = F1--O--F2};
+  \node[below left, font=\scriptsize] at (O) {$O$};
+\end{tikzpicture}
+\end{minipage}
+\oli{5.2cm}
+
+\newpage
+\pagestyle{dapan}
+\setcounter{page}{1}
+
+\begin{center}
+  {\Large\bfseries\color{ink} BẢNG ĐÁP ÁN TỔNG HỢP (50 CÂU)}\\[2pt]
+  {\small\color{gray!75!black} BTVN Toán 10 KNTT — Hàm số, Hàm số bậc hai \& Chương Vectơ}
+\end{center}
+\vspace{2pt}
+
+\noindent\textbf{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn (30 câu)}
+\vspace{1.5pt}
+\begin{center}
+\renewcommand{\arraystretch}{1.15}
+\begin{tabular}{|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|}
+\hline
+\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \\ \hline
+\textbf{B} & \textbf{D} & \textbf{A} & \textbf{C} & \textbf{A} & \textbf{D} & \textbf{B} & \textbf{C} & \textbf{D} & \textbf{A} \\ \hline
+\hline
+\textbf{11} & \textbf{12} & \textbf{13} & \textbf{14} & \textbf{15} & \textbf{16} & \textbf{17} & \textbf{18} & \textbf{19} & \textbf{20} \\ \hline
+\textbf{C} & \textbf{B} & \textbf{A} & \textbf{D} & \textbf{B} & \textbf{C} & \textbf{A} & \textbf{B} & \textbf{D} & \textbf{C} \\ \hline
+\hline
+\textbf{21} & \textbf{22} & \textbf{23} & \textbf{24} & \textbf{25} & \textbf{26} & \textbf{27} & \textbf{28} & \textbf{29} & \textbf{30} \\ \hline
+\textbf{B} & \textbf{A} & \textbf{D} & \textbf{C} & \textbf{A} & \textbf{B} & \textbf{D} & \textbf{A} & \textbf{C} & \textbf{B} \\ \hline
+\end{tabular}
+\end{center}
+
+\vspace{4pt}
+\begin{center}
+  {\large\bfseries\color{ink} HƯỚNG DẪN GIẢI CHI TIẾT}
+\end{center}
+\vspace{1pt}
+
+\begin{multicols}{2}
+\raggedcolumns
+\footnotesize
+
+\textbf{\color{accent}PHẦN I. TRẮC NGHIỆM (30 CÂU)}
+
+\textbf{Câu 1.} ĐK: $5 - x > 0 \Leftrightarrow x < 5 \Rightarrow D = (-\infty; 5)$. Chọn \textbf{B}.
+
+\textbf{Câu 2.} ĐK: $2x + 6 \ge 0 \Leftrightarrow x \ge -3$ và $x \ne 2$. Chọn \textbf{D}.
+
+\textbf{Câu 3.} $f(3) = 2(3) + 5 = 11$; $f(-2) = (-2)^2 - 3 = 1 \Rightarrow 11 - 1 = 10$. Chọn \textbf{A}.
+
+\textbf{Câu 4.} Với $x = 2 \Rightarrow y = \dfrac{\sqrt{2+7}}{2-1} = 3$. Chọn \textbf{C}.
+
+\textbf{Câu 5.} Đồng biến trên $\mathbb{R} \Leftrightarrow 2m - 4 > 0 \Leftrightarrow m > 2$. Chọn \textbf{A}.
+
+\textbf{Câu 6.} Từ $C(2; -1)$ đến $D(5; 4)$, giá trị $y$ tăng từ $-1$ lên $4$ nên đồng biến trên $(2; 5)$. Chọn \textbf{D}.
+
+\textbf{Câu 7.} Vì $0 \le \sqrt{16 - x^2} \le 4$ nên $2 \le y \le 6$. Chọn \textbf{B}.
+
+\textbf{Câu 8.} Giao $Oy$ tại $x = 0 \Rightarrow y = 0 + 2 = 2$. Chọn \textbf{C}.
+
+\textbf{Câu 9.} $x_I = -\dfrac{-12}{6} = 2$, $y_I = 3(4) - 24 + 8 = -4 \Rightarrow I(2; -4)$. Chọn \textbf{D}.
+
+\textbf{Câu 10.} Trục đối xứng $x = -\dfrac{-8}{2(-2)} = -2$. Chọn \textbf{A}.
+
+\textbf{Câu 11.} $a = -1 < 0$, đỉnh $x = 3 \Rightarrow$ đồng biến trên $(-\infty; 3)$. Chọn \textbf{C}.
+
+\textbf{Câu 12.} $2x^2 - 5x + 2 = 0 \Leftrightarrow x = \dfrac{1}{2}$ hoặc $x = 2 \Rightarrow AB = \left|2 - \dfrac{1}{2}\right| = \dfrac{3}{2}$. Chọn \textbf{B}.
+
+\textbf{Câu 13.} Đỉnh $x = 1 \in [0; 3]$. $y(1) = 3, y(0) = 5, y(3) = 11 \Rightarrow \min = 3$. Chọn \textbf{A}.
+
+\textbf{Câu 14.} Đỉnh $x = 2 \notin [-1; 1]$, hàm đồng biến trên $[-1; 1] \Rightarrow \max = y(1) = 4$. Chọn \textbf{D}.
+
+\textbf{Câu 15.} $-\dfrac{b}{2a} = 2 \Rightarrow b = -4a$. Qua $(1; 1) \Rightarrow a - 4a + 4 = 1 \Rightarrow a = 1, b = -4 \Rightarrow ab = -4$. Chọn \textbf{B}.
+
+\textbf{Câu 16.} Bề lõm xuống $\Rightarrow a < 0$; $x_I = -\dfrac{b}{2a} = 2 \Rightarrow b = -4a > 0$; cắt $Oy$ tại $c = 1 > 0$. Chọn \textbf{C}.
+
+\textbf{Câu 17.} $x^2 - 2x + 5 = 2x + 1 \Leftrightarrow (x - 2)^2 = 0 \Leftrightarrow x = 2$ ($1$ giao điểm). Chọn \textbf{A}.
+
+\textbf{Câu 18.} Đỉnh $t = 1{,}5\text{ s} \Rightarrow h_{\max} = -5(2{,}25) + 22{,}5 + 2 = 13{,}25\text{ m}$. Chọn \textbf{B}.
+
+\textbf{Câu 19.} Số vectơ khác $\vec{0}$: $A_5^2 = 5 \times 4 = 20$. Chọn \textbf{D}.
+
+\textbf{Câu 20.} Quy tắc hình bình hành: $\vec{AB} + \vec{AD} = \vec{AC} \ne \vec{BD}$. Chọn \textbf{C}.
+
+\textbf{Câu 21.} $|\vec{AB} + \vec{AC}| = \sqrt{5^2 + 12^2} = 13$. Chọn \textbf{B}.
+
+\textbf{Câu 22.} $\vec{BA} + \vec{BC} = \vec{BD}$. Vì $\widehat{ABC} = 120^\circ \Rightarrow \widehat{BAD} = 60^\circ \Rightarrow \triangle ABD$ đều $\Rightarrow BD = a$. Chọn \textbf{A}.
+
+\textbf{Câu 23.} Tính chất trung điểm: $\vec{OA} + \vec{OB} = 2\vec{OM}$. Chọn \textbf{D}.
+
+\textbf{Câu 24.} $\vec{NC} = -3\vec{NB} \Leftrightarrow \vec{AC} - \vec{AN} = -3(\vec{AB} - \vec{AN}) \Leftrightarrow 4\vec{AN} = 3\vec{AB} + \vec{AC}$. Chọn \textbf{C}.
+
+\textbf{Câu 25.} $\vec{w} = (6; -2) - (-2; 4) = (8; -6)$. Chọn \textbf{A}.
+
+\textbf{Câu 26.} $G\left(\dfrac{1-3+5}{3}; \dfrac{4+2-3}{3}\right) = (1; 1)$. Chọn \textbf{B}.
+
+\textbf{Câu 27.} $\vec{u} \perp \vec{v} \Leftrightarrow 4m + 3(-6) = 0 \Leftrightarrow m = \dfrac{9}{2}$. Chọn \textbf{D}.
+
+\textbf{Câu 28.} $\vec{AB} \cdot \vec{BC} = a \cdot a \cdot \cos 120^\circ = -\dfrac{a^2}{2}$. Chọn \textbf{A}.
+
+\textbf{Câu 29.} $\cos(\vec{x}, \vec{y}) = \dfrac{1(2) + (-3)(-1)}{\sqrt{10}\sqrt{5}} = \dfrac{5}{5\sqrt{2}} = \dfrac{\sqrt{2}}{2}$. Chọn \textbf{C}.
+
+\textbf{Câu 30.} $A = 80 \cdot 15 \cdot \cos 30^\circ = 600\sqrt{3}\text{ J}$. Chọn \textbf{B}.
+
+\columnbreak
+
+\textbf{\color{accent}PHẦN II. TỰ LUẬN (20 BÀI)}
+
+\textbf{Bài 1.} a) $x + 3 \ge 0$ và $x^2 - 4x + 3 \ne 0 \Rightarrow D_a = [-3; +\infty) \setminus \{1; 3\}$.\\
+b) $4 - x \ge 0$ và $2x + 6 > 0 \Rightarrow D_b = (-3; 4]$.
+
+\textbf{Bài 2.} a) $f(3) = 2(9) - 9 = 9$; $f(-3) = \sqrt{9} = 3$; $f(-5) = \dfrac{-6}{-4} = \dfrac{3}{2}$.\\
+b) Với $x \ge 2$: $2x^2 - 3x = 2 \Leftrightarrow 2x^2 - 3x - 2 = 0 \Leftrightarrow x = 2$ (nhận) hoặc $x = -\dfrac{1}{2}$ (loại). Vậy $x = 2$.
+
+\textbf{Bài 3.} a) Đồng biến trên $(-1; 2)$; nghịch biến trên $(-3; -1)$ và $(2; 5)$.\\
+b) $\max_{[-3; 5]} f(x) = 4$ (tại $x=2$); $\min_{[-3; 5]} f(x) = -2$ (tại $x=-1$).
+
+\textbf{Bài 4.} a) $T(x) = 10(7) + 10(8{,}5) + 10(x - 20) = 155 + 10x - 200 = 10x - 45$ (nghìn đồng, $x > 20$).\\
+b) $10x - 45 = 255 \Leftrightarrow 10x = 300 \Leftrightarrow x = 30\text{ m}^3$.
+
+\textbf{Bài 5.} a) Đỉnh $I(2; -7) \Rightarrow y = a(x - 2)^2 - 7$. Qua $A(0; -3) \Rightarrow 4a - 7 = -3 \Rightarrow a = 1 \Rightarrow y = x^2 - 4x - 3$.\\
+b) Qua $M(0; 1) \Rightarrow c = 1$. Giải hệ từ $N, P$: $a + b = 3$ và $a - b = 1 \Rightarrow a = 2, b = 1 \Rightarrow y = 2x^2 + x + 1$.
+
+\textbf{Bài 6.} a) Đỉnh $I(2; 1)$, trục $x = 2$, cắt $Ox$ tại $(1; 0), (3; 0)$, cắt $Oy$ tại $(0; -3)$. Đồng biến $(-\infty; 2)$, nghịch biến $(2; +\infty)$.\\
+b) Trên $[-1; 3]$: $y(2) = 1, y(-1) = -8, y(3) = 0 \Rightarrow \max = 1, \min = -8$.
+
+\textbf{Bài 7.} a) Đỉnh $I(2; -1)$, qua $(0; 3) \Rightarrow y = a(x-2)^2 - 1 \Rightarrow 4a - 1 = 3 \Rightarrow a = 1 \Rightarrow y = x^2 - 4x + 3$.\\
+b) $x^2 - 4x + 3 = 2x - 5 \Leftrightarrow x^2 - 6x + 8 = 0 \Rightarrow (2; -1)$ và $(4; 3)$.
+
+\textbf{Bài 8.} $x^2 - 4x + 3 - m = 0$. $\Delta' = m + 1 > 0 \Leftrightarrow m > -1$. Theo Vi-ét: $x_A + x_B = 4, x_A x_B = 3 - m \Rightarrow x_A^2 + x_B^2 = 16 - 2(3 - m) = 10 + 2m = 12 \Rightarrow m = 1$ (thỏa).
+
+\textbf{Bài 9.} a) Đỉnh $(0; 5)$, qua $(10; 0) \Rightarrow y = a x^2 + 5 \Rightarrow 100a + 5 = 0 \Rightarrow a = -\dfrac{1}{20} \Rightarrow y = -\dfrac{1}{20}x^2 + 5$.\\
+b) Tại $x = \pm 4 \Rightarrow y = -\dfrac{16}{20} + 5 = 4{,}2\text{ m}$.
+
+\textbf{Bài 10.} a) $L(x) = (70 - 5x)(200 + 25x) = -125x^2 + 750x + 14000$ (nghìn đồng).\\
+b) Đỉnh $x = 3 \Rightarrow$ giá bán $120 - 15 = 105$ nghìn đồng; $L_{\max} = L(3) = 15\,125$ nghìn đồng $= 15{,}125$ triệu đồng.
+
+\textbf{Bài 11.} a) Đỉnh $t = \dfrac{19{,}6}{9{,}8} = 2\text{ s} \Rightarrow h_{\max} = 19{,}6\text{ m}$.\\
+b) Chạm đất $h(t) = 0 \Rightarrow t = 4\text{ s}$. $h(t) \ge 14{,}7 \Leftrightarrow t^2 - 4t + 3 \le 0 \Leftrightarrow 1 \le t \le 3 \Rightarrow 2\text{ giây}$.
+
+\textbf{Bài 12.} a) $\text{VT} = (\vec{AF} + \vec{FB}) + (\vec{CB} + \vec{BD}) + (\vec{ED} + \vec{DF}) = \vec{AF} + \vec{CB} + \vec{ED} + (\vec{FB} + \vec{BD} + \vec{DF}) = \text{VP}$.\\
+b) $O$ trung điểm $AC, BD \Rightarrow \vec{MA} + \vec{MC} = 2\vec{MO}$ và $\vec{MB} + \vec{MD} = 2\vec{MO}$.
+
+\textbf{Bài 13.} a) $\vec{AG} = \dfrac{1}{3}\vec{AB} + \dfrac{1}{3}\vec{AC}$; $\vec{KN} = \vec{AN} - \vec{AK} = -\dfrac{1}{3}\vec{AB} + \dfrac{2}{3}\vec{AC}$.\\
+b) $\vec{AP} = \vec{AB} + \dfrac{4}{3}(\vec{AC} - \vec{AB}) = -\dfrac{1}{3}\vec{AB} + \dfrac{4}{3}\vec{AC} \Rightarrow \vec{KP} = -\dfrac{2}{3}\vec{AB} + \dfrac{4}{3}\vec{AC} = 2\vec{KN} \Rightarrow K, N, P$ thẳng hàng.
+
+\textbf{Bài 14.} a) $|\vec{u}| = AC = a\sqrt{2}$; $\vec{v} = \vec{CB} \Rightarrow |\vec{v}| = a$.\\
+b) $\vec{AB} \cdot \vec{BD} = a \cdot a\sqrt{2}\cos 135^\circ = -a^2$; $(\vec{AB}+\vec{AD})\cdot(\vec{AB}-\vec{AD}) = AB^2 - AD^2 = 0$.
+
+\textbf{Bài 15.} a) $\vec{AB}\cdot\vec{AC} = 6 \cdot 8 \cdot \cos 60^\circ = 24$; $BC^2 = AB^2 + AC^2 - 2\vec{AB}\cdot\vec{AC} = 52 \Rightarrow BC = 2\sqrt{13}$.\\
+b) $AM^2 = \dfrac{1}{4}(\vec{AB}+\vec{AC})^2 = \dfrac{1}{4}(36 + 64 + 48) = 37 \Rightarrow AM = \sqrt{37}$.
+
+\textbf{Bài 16.} a) $\vec{AB} = (-3; -2), \vec{AC} = (3; -4)$. Do $\dfrac{-3}{3} \ne \dfrac{-2}{-4}$ nên $A, B, C$ không thẳng hàng.\\
+b) $ABDC$ là hình bình hành $\Leftrightarrow \vec{AB} = \vec{CD} \Rightarrow D = (4 - 3; -1 - 2) = (1; -3)$.
+
+\textbf{Bài 17.} a) $\vec{BA} = (3; 3), \vec{BC} = (6; -6) \Rightarrow \vec{BA}\cdot\vec{BC} = 0 \Rightarrow$ vuông tại $B$. $S = \dfrac{1}{2}(3\sqrt{2})(6\sqrt{2}) = 18$.\\
+b) Tâm $I$ trung điểm $AC$: $I\left(\dfrac{7}{2}; \dfrac{1}{2}\right)$; $R = \dfrac{AC}{2} = \dfrac{3\sqrt{10}}{2}$.
+
+\textbf{Bài 18.} a) $M(x; 0)$ thẳng hàng $\Leftrightarrow \dfrac{x - 1}{4} = \dfrac{-4}{-6} \Rightarrow x = \dfrac{11}{3} \Rightarrow M\left(\dfrac{11}{3}; 0\right)$.\\
+b) Gọi $I(3; 1)$ trung điểm $AB$: $|\vec{NA} + \vec{NB}| = 2NI$. Nhỏ nhất khi $N$ là hình chiếu lên $Oy \Rightarrow N(0; 1)$, $\min = 6$.
+
+\textbf{Bài 19.} a) $m = 7 \Rightarrow \vec{a}\cdot\vec{b} = 25$; $\cos(\vec{a},\vec{b}) = \dfrac{25}{5 \cdot 5\sqrt{2}} = \dfrac{\sqrt{2}}{2} \Rightarrow 45^\circ$.\\
+b) Góc tù $\Leftrightarrow \vec{a}\cdot\vec{b} < 0$ (và không ngược hướng) $\Leftrightarrow 3m + 4 < 0 \Leftrightarrow m < -\dfrac{4}{3}$.
+
+\textbf{Bài 20.} a) $|\vec{F}| = \sqrt{30^2 + 50^2 + 2\cdot 30\cdot 50\cos 60^\circ} = \sqrt{4900} = 70\text{ N}$.\\
+b) $A = 70 \cdot 12 = 840\text{ J}$. Ta có $\vec{F}_1\cdot\vec{F} = 30^2 + 30\cdot 50\cos 60^\circ = 1650 \Rightarrow A_1 = \dfrac{12}{70}\cdot 1650 = \dfrac{1980}{7} \approx 282{,}9\text{ J}$.
+
+\end{multicols}
+\end{document}
