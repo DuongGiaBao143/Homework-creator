@@ -1,0 +1,289 @@
+\documentclass[10pt,a4paper]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T5]{fontenc}
+\usepackage[vietnamese]{babel}
+\usepackage[margin=1.4cm,top=0.85cm,bottom=1.05cm,includehead,includefoot,headheight=20pt,headsep=6pt,footskip=16pt]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace,multicol,colortbl,microtype}
+\usepackage{tgheros}
+\usetikzlibrary{calc,angles,quotes,arrows.meta,babel}
+
+% =========================================================================
+% MINIMALIST SLATE-NAVY DESIGN SYSTEM (UI-STYLING / PRINT EDITORIAL)
+% Nguyên tắc: Sạch, thoáng, tương phản cao, 1 màu nhấn Navy duy nhất,
+% viền mảnh, không tô nền sặc sỡ -> dễ đọc cả trên màn hình lẫn bản in đen trắng.
+% =========================================================================
+\definecolor{ink}{HTML}{0F172A}       % Slate 900 - Chữ tiêu đề / nội dung chính
+\definecolor{navy}{HTML}{1E3A5F}      % Academic Navy - Màu nhấn duy nhất
+\definecolor{slateBody}{HTML}{334155} % Slate 700 - Nhãn phụ
+\definecolor{muted}{HTML}{64748B}     % Slate 500 - Chú thích, quote, số trang
+\definecolor{hairline}{HTML}{CBD5E1}  % Slate 300 - Đường kẻ phân tách mảnh
+\definecolor{surface}{HTML}{F8FAFC}   % Slate 50  - Nền xám rất nhẹ (ô đáp số, header bảng)
+
+% ---- Thông số đề (chỉnh nhanh tại đây) ----
+\newcommand{\examSeries}{LÀM TOÁN ĐỂ HẠNH PHÚC}
+\newcommand{\examKind}{ĐỀ ÔN TẬP SỐ 01}
+\newcommand{\examTitle}{ĐỀ ÔN TẬP TOÁN 10 — CHƯƠNG IV. VECTƠ}
+\newcommand{\examYear}{NĂM HỌC 2026 -- 2027}
+\newcommand{\examMeta}{Môn: TOÁN -- Khối lớp 10}
+\newcommand{\examTime}{Thời gian làm bài: 90 phút (không kể thời gian phát đề)}
+\newcommand{\examCode}{101}
+\newcommand{\examAuthor}{Dương Gia Bảo}
+\newcommand{\examPages}{1}
+\newcommand{\ansPages}{1}
+
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\columnseprule}{0.4pt}
+\def\columnseprulecolor{\color{hairline}}
+
+\newcommand{\headerQuote}{%
+  \ifcase\value{page}\relax
+    \or Math gives us hope that every problem has a solution%
+    \or Math + You = Champion%
+    \or Where Frustration Becomes Inspiration%
+    \or Turning Confusion into Clarity%
+    \or Don't be an X, be a Y of mathematics%
+    \or Don't get mad. Learn to add%
+    \else Math gives us hope that every problem has a solution%
+  \fi
+}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{\footnotesize\textsf{\textit{\color{muted}\headerQuote}}}
+\rhead{\footnotesize\textsf{\color{muted}Người biên soạn:\ \color{ink}\textbf{\examAuthor}}}
+\lfoot{\footnotesize\textsf{\color{muted}Toán 10 KNTT}}
+\rfoot{\footnotesize\textsf{\color{muted}Trang \color{ink}\textbf{\thepage/\examPages}}}
+\renewcommand{\headrulewidth}{0.4pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{hairline}\leaders\hrule height \headrulewidth\hfill}}
+\renewcommand{\footrulewidth}{0pt}
+
+\fancypagestyle{dapan}{
+  \fancyhf{}
+  \lhead{\footnotesize\textsf{\textit{\color{muted}\headerQuote}}}
+  \rhead{\footnotesize\textsf{\color{muted}Người biên soạn:\ \color{ink}\textbf{\examAuthor}}}
+  \lfoot{\footnotesize\textsf{\textit{\color{muted}Đáp án \& Hướng dẫn giải — \examKind}}}
+  \rfoot{\footnotesize\textsf{\color{muted}Trang \color{ink}\textbf{\thepage/\ansPages}}}
+  \renewcommand{\headrulewidth}{0.4pt}
+  \renewcommand{\headrule}{\hbox to\headwidth{\color{hairline}\leaders\hrule height \headrulewidth\hfill}}
+  \renewcommand{\footrulewidth}{0pt}
+}
+
+% ---- Macro trình bày tối giản ----
+\newcommand{\parttitle}[1]{%
+  \par\vspace{6pt}\needspace{3\baselineskip}%
+  \noindent{\color{navy}\rule[-2.5pt]{2pt}{11.5pt}}\hspace{5pt}%
+  {\sffamily\normalsize\bfseries\color{ink}#1}%
+  \par\vspace{1.5pt}{\color{hairline}\hrule height 0.45pt}\vspace{3pt}\nopagebreak%
+}
+\newcommand{\partnote}[1]{{\footnotesize\color{muted}\textit{#1}}\par\vspace{2pt}}
+
+\newcommand{\four}[4]{\par\vspace{1.5pt}\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textsf{\textbf{\color{ink}A.}} #1&\textsf{\textbf{\color{ink}B.}} #2&\textsf{\textbf{\color{ink}C.}} #3&\textsf{\textbf{\color{ink}D.}} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\vspace{1.5pt}\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textsf{\textbf{\color{ink}A.}} #1&\textsf{\textbf{\color{ink}B.}} #2\\[4pt]\textsf{\textbf{\color{ink}C.}} #3&\textsf{\textbf{\color{ink}D.}} #4\end{tabularx}}
+\newcommand{\one}[4]{\par\vspace{1.5pt}\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{}}\textsf{\textbf{\color{ink}A.}} #1\\[4pt]\textsf{\textbf{\color{ink}B.}} #2\\[4pt]\textsf{\textbf{\color{ink}C.}} #3\\[4pt]\textsf{\textbf{\color{ink}D.}} #4\end{tabularx}}
+
+\newcommand{\answerbox}{\unskip{\nobreak\hfill\penalty50\hskip1em\hbox{}\nobreak\hfill\mbox{\textsf{\footnotesize\color{muted}Đáp số:}\ \tikz[baseline=-3pt]\node[draw=hairline!70!ink,line width=0.55pt,fill=surface,rounded corners=2pt,minimum width=1.85cm,minimum height=13.5pt,inner sep=0pt]{};}}}
+\newcommand{\essayitem}[2]{\par\vspace{4pt}\needspace{3\baselineskip}\textsf{\textbf{\color{navy}#1.}}\ \textsf{\footnotesize\color{muted}(#2)}\ }
+
+\setlist[enumerate,1]{label=\textsf{\textbf{\color{navy}Câu \arabic*.}},leftmargin=1.18cm,labelsep=.15cm,itemsep=3pt,topsep=2pt,parsep=0pt}
+\setlist[enumerate,2]{label=\textsf{\color{slateBody}\alph*)},leftmargin=.55cm,itemsep=2pt,topsep=1pt,parsep=0pt}
+\newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
+
+\begin{document}
+
+% ==================== HEADER ĐỀ THI TỐI GIẢN ====================
+{\color{navy}\hrule height 1.2pt}\vspace{6pt}
+\noindent
+\begin{minipage}[c]{0.31\textwidth}
+    \centering
+    {\footnotesize\sffamily\color{muted}\examSeries}\\[2pt]
+    {\color{hairline}\rule{2.4cm}{0.5pt}}\\[3pt]
+    {\normalsize\sffamily\bfseries\color{ink}\examKind}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.52\textwidth}
+    \centering
+    {\normalsize\sffamily\bfseries\color{ink}\examTitle}\\[2pt]
+    {\small\sffamily\color{slateBody}\examYear\ \textbullet\ \examMeta}\\[1pt]
+    {\footnotesize\textit{\color{muted}\examTime}}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.14\textwidth}
+    \raggedleft
+    \tikz\node[draw=navy,line width=0.65pt,fill=surface,rounded corners=2.5pt,inner xsep=8pt,inner ysep=4pt,align=center]{%
+        {\scriptsize\sffamily\color{muted}MÃ ĐỀ}\\[-1pt]
+        {\normalsize\sffamily\bfseries\color{navy}\examCode}%
+    };
+\end{minipage}
+
+\vspace{6pt}{\color{hairline}\hrule height 0.45pt}\vspace{5pt}
+\noindent\textsf{\small\color{ink}\textbf{Họ và tên thí sinh:}}\dotfill\quad\textsf{\small\color{ink}\textbf{SBD:}}\makebox[3.2cm]{\dotfill}\quad\textsf{\small\color{ink}\textbf{Lớp:}}\makebox[1.8cm]{\dotfill}
+\vspace{4pt}{\color{hairline}\hrule height 0.45pt}\vspace{2pt}
+
+% ==================== PHẦN I: TRẮC NGHIỆM 4 PHƯƠNG ÁN ====================
+\parttitle{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn}
+\partnote{Thí sinh trả lời từ câu 1 đến câu 4. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}
+\begin{enumerate}
+\item Cho hình bình hành $ABCD$ tâm $O$. Khẳng định nào sau đây \textbf{đúng}?
+\four{$\vec{AB} = \vec{CD}$.}{$\vec{OA} = \vec{OC}$.}{$\vec{AB} = \vec{DC}$.}{$\vec{AD} = \vec{CB}$.}
+
+\item Trong mặt phẳng tọa độ $Oxy$, cho $\vec{a} = (2; -3)$ và $\vec{b} = (-1; 4)$. Tọa độ của vectơ $\vec{u} = 2\vec{a} + \vec{b}$ là
+\four{$(3; -2)$.}{$(5; 2)$.}{$(3; 2)$.}{$(1; 1)$.}
+
+\item Cho tam giác $ABC$ có trọng tâm $G$. Với mọi điểm $M$ bất kì trong mặt phẳng, đẳng thức nào sau đây đúng?
+\two{$\vec{MA} + \vec{MB} + \vec{MC} = 3\vec{MG}$.}{$\vec{MA} + \vec{MB} + \vec{MC} = 2\vec{MG}$.}{$\vec{MA} + \vec{MB} + \vec{MC} = 3\vec{GM}$.}{$\vec{MA} + \vec{MB} + \vec{MC} = \vec{MG}$.}
+
+\item Trong mặt phẳng tọa độ $Oxy$, cho hai vectơ $\vec{x} = (m; 2)$ và $\vec{y} = (3; -6)$. Giá trị của $m$ để $\vec{x} \perp \vec{y}$ là
+\four{$m = -4$.}{$m = 4$.}{$m = -1$.}{$m = 1$.}
+\end{enumerate}
+
+% ==================== PHẦN II: ĐÚNG / SAI ====================
+\parttitle{PHẦN II. Câu trắc nghiệm đúng sai}
+\partnote{Thí sinh trả lời từ câu 1 đến câu 2. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\begin{enumerate}
+\item Cho tam giác $ABC$ vuông tại $A$ có $AB = 6$, $AC = 8$ và $M$ là trung điểm cạnh $BC$ (xem hình vẽ bên).
+\par\noindent\begin{minipage}[t]{0.74\linewidth}
+\begin{enumerate}
+    \item Độ dài cạnh huyền $BC = 10$.
+    \item Độ dài vectơ tổng $|\vec{AB} + \vec{AC}| = 14$.
+    \item Tích vô hướng $\vec{AB} \cdot \vec{AC} = 0$.
+    \item Độ dài đường trung tuyến $AM = 5$.
+\end{enumerate}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.24\linewidth}\raggedleft\vspace{-8pt}
+\begin{tikzpicture}[scale=0.58, >=Stealth]
+  \coordinate (A) at (0,0);
+  \coordinate (B) at (2.4,0);
+  \coordinate (C) at (0,3.2);
+  \coordinate (M) at (1.2,1.6);
+  \draw[thick, ink] (A) -- (B) -- (C) -- cycle;
+  \draw[dashed, navy] (A) -- (M);
+  \draw[hairline] (0,0.3) -- (0.3,0.3) -- (0.3,0);
+  \fill[navy] (M) circle (1.8pt);
+  \node[below left, font=\scriptsize\sffamily] at (A) {$A$};
+  \node[below right, font=\scriptsize\sffamily] at (B) {$B$};
+  \node[above left, font=\scriptsize\sffamily] at (C) {$C$};
+  \node[above right, font=\scriptsize\sffamily] at (M) {$M$};
+\end{tikzpicture}
+\end{minipage}
+
+\item Trong mặt phẳng tọa độ $Oxy$, cho ba điểm $A(1; 2)$, $B(4; 6)$ và $C(5; -1)$.
+\begin{enumerate}
+    \item Tọa độ vectơ $\vec{AB} = (3; 4)$.
+    \item Độ dài đoạn thẳng $AB = 5$.
+    \item Tọa độ trung điểm $I$ của $AC$ là $I(3; 1)$.
+    \item Tích vô hướng $\vec{AB} \cdot \vec{AC} = 0$.
+\end{enumerate}
+\end{enumerate}
+
+% ==================== PHẦN III: TRẢ LỜI NGẮN ====================
+\parttitle{PHẦN III. Câu trắc nghiệm trả lời ngắn}
+\partnote{Thí sinh trả lời từ câu 1 đến câu 2.}
+\begin{enumerate}
+\item Cho hình thoi $ABCD$ cạnh $10$ có góc $\widehat{BAD} = 60^\circ$. Tính độ dài vectơ $\vec{u} = \vec{AB} - \vec{AD}$. \answerbox
+
+\item Trong mặt phẳng tọa độ $Oxy$, cho $\vec{a} = (3; 4)$ và $\vec{b} = (4; 3)$. Tính $\cos(\vec{a}, \vec{b})$ (viết dưới dạng số thập phân). \answerbox
+\end{enumerate}
+
+% ==================== PHẦN IV: TỰ LUẬN ====================
+\parttitle{PHẦN IV. Câu tự luận}
+\partnote{Thí sinh trình bày lời giải chi tiết từ Bài 1 đến Bài 2.}
+
+\essayitem{Bài 1}{1,0 điểm} Cho tam giác $ABC$. Gọi $M$ là trung điểm $BC$ và $N$ là điểm thuộc cạnh $AC$ sao cho $NC = 2NA$.
+\begin{enumerate}[label=\textsf{\color{slateBody}\alph*)}, leftmargin=0.6cm, itemsep=2pt]
+    \item (0,5 điểm) Biểu diễn $\vec{AM}$ và $\vec{BN}$ theo hai vectơ $\vec{AB}$ và $\vec{AC}$.
+    \item (0,5 điểm) Gọi $I$ là giao điểm của $AM$ và $BN$, đặt $\vec{AI} = k\vec{AM}$. Hãy tìm tỉ số $k$.
+\end{enumerate}
+
+\essayitem{Bài 2}{1,0 điểm} Một vật chịu tác dụng đồng thời của hai lực $\vec{F}_1, \vec{F}_2$ có độ lớn lần lượt là $30\text{ N}$ và $50\text{ N}$, hợp với nhau góc $60^\circ$. Tính độ lớn hợp lực $\vec{F} = \vec{F}_1 + \vec{F}_2$.
+
+% ==================== TRANG ĐÁP ÁN & HƯỚNG DẪN GIẢI ====================
+\newpage
+\pagestyle{dapan}
+\setcounter{page}{1}
+
+{\color{navy}\hrule height 1.2pt}\vspace{6pt}
+\begin{center}
+  {\Large\sffamily\bfseries\color{ink} BẢNG ĐÁP ÁN TỔNG HỢP}\\[2pt]
+  {\small\sffamily\color{muted} \examTitle\ — \examKind\ (Mã đề \examCode)}
+\end{center}
+\vspace{2pt}{\color{hairline}\hrule height 0.45pt}\vspace{6pt}
+
+\noindent\textsf{\small\textbf{\color{ink}PHẦN I. Trắc nghiệm nhiều phương án lựa chọn}}
+\vspace{3pt}
+
+\begin{center}
+\renewcommand{\arraystretch}{1.28}
+\arrayrulecolor{hairline}
+\begin{tabular}{|C{1.4cm}|C{1.4cm}|C{1.4cm}|C{1.4cm}|}
+\hline
+\rowcolor{surface}
+\textsf{\textbf{\color{navy}1}} & \textsf{\textbf{\color{navy}2}} & \textsf{\textbf{\color{navy}3}} & \textsf{\textbf{\color{navy}4}} \\ \hline
+\textbf{\color{ink}C} & \textbf{\color{ink}A} & \textbf{\color{ink}A} & \textbf{\color{ink}B} \\ \hline
+\end{tabular}
+\end{center}
+
+\vspace{4pt}
+\noindent\begin{minipage}[t]{0.52\linewidth}
+\textsf{\small\textbf{\color{ink}PHẦN II. Trắc nghiệm đúng/sai}}\\[3pt]
+\renewcommand{\arraystretch}{1.25}
+\arrayrulecolor{hairline}
+\begin{tabular}{|C{1.0cm}|C{0.75cm}|C{0.75cm}|C{0.75cm}|C{0.75cm}|}
+\hline
+\rowcolor{surface}
+\textsf{\textbf{\color{navy}Câu}} & \textsf{\textbf{\color{navy}a)}} & \textsf{\textbf{\color{navy}b)}} & \textsf{\textbf{\color{navy}c)}} & \textsf{\textbf{\color{navy}d)}} \\ \hline
+\textbf{\color{ink}1} & \textbf{\color{navy}Đ} & \color{muted}S & \textbf{\color{navy}Đ} & \textbf{\color{navy}Đ} \\ \hline
+\textbf{\color{ink}2} & \textbf{\color{navy}Đ} & \textbf{\color{navy}Đ} & \color{muted}S & \textbf{\color{navy}Đ} \\ \hline
+\end{tabular}
+\end{minipage}\hfill
+\begin{minipage}[t]{0.44\linewidth}
+\textsf{\small\textbf{\color{ink}PHẦN III. Trả lời ngắn}}\\[3pt]
+\renewcommand{\arraystretch}{1.25}
+\arrayrulecolor{hairline}
+\begin{tabular}{|C{1.0cm}|C{1.8cm}|}
+\hline
+\rowcolor{surface}
+\textsf{\textbf{\color{navy}Câu}} & \textsf{\textbf{\color{navy}Đáp số}} \\ \hline
+\textbf{\color{ink}1} & $10$ \\ \hline
+\textbf{\color{ink}2} & $0{,}96$ \\ \hline
+\end{tabular}
+\end{minipage}
+
+\vspace{8pt}
+\parttitle{HƯỚNG DẪN GIẢI CHI TIẾT}
+\vspace{2pt}
+
+\begin{multicols}{2}
+\raggedcolumns
+\small
+\arrayrulecolor{black}
+
+\textsf{\textbf{\color{navy}PHẦN I. TRẮC NGHIỆM}}
+
+\textbf{Câu 1.} Hình bình hành $ABCD$ có $\vec{AB} = \vec{DC}$. Chọn \textbf{C}.
+
+\textbf{Câu 2.} $\vec{u} = 2(2; -3) + (-1; 4) = (3; -2)$. Chọn \textbf{A}.
+
+\textbf{Câu 3.} Tính chất trọng tâm: $\vec{MA} + \vec{MB} + \vec{MC} = 3\vec{MG}$. Chọn \textbf{A}.
+
+\textbf{Câu 4.} $\vec{x}\perp\vec{y} \Leftrightarrow 3m - 12 = 0 \Leftrightarrow m = 4$. Chọn \textbf{B}.
+
+\textsf{\textbf{\color{navy}PHẦN II. ĐÚNG / SAI}}
+
+\textbf{Câu 1.} a) $BC = 10$ (\textbf{Đ}). b) $|\vec{AB} + \vec{AC}| = 2AM = 10$ (\textbf{S}). c) $\vec{AB}\cdot\vec{AC} = 0$ (\textbf{Đ}). d) $AM = 5$ (\textbf{Đ}).
+
+\textbf{Câu 2.} a) $\vec{AB} = (3; 4)$ (\textbf{Đ}). b) $AB = 5$ (\textbf{Đ}). c) $I(3; 0{,}5)$ (\textbf{S}). d) $\vec{AC} = (4; -3) \Rightarrow \vec{AB}\cdot\vec{AC} = 12 - 12 = 0$ (\textbf{Đ}).
+
+\textsf{\textbf{\color{navy}PHẦN III. TRẢ LỜI NGẮN}}
+
+\textbf{Câu 1.} $|\vec{AB} - \vec{AD}| = BD = \mathbf{10}$.
+
+\textbf{Câu 2.} $\cos(\vec{a}, \vec{b}) = \dfrac{24}{25} = \mathbf{0{,}96}$.
+
+\textsf{\textbf{\color{navy}PHẦN IV. TỰ LUẬN}}
+
+\textbf{Bài 1.} a) $\vec{AM} = \dfrac{1}{2}\vec{AB} + \dfrac{1}{2}\vec{AC}$; $\vec{BN} = -\vec{AB} + \dfrac{1}{3}\vec{AC}$.\\
+b) $\vec{BI} = \vec{AI} - \vec{AB} = \left(\dfrac{k}{2} - 1\right)\vec{AB} + \dfrac{k}{2}\vec{AC}$. Để $B, I, N$ thẳng hàng thì $\dfrac{k/2 - 1}{-1} = \dfrac{k/2}{1/3} \Leftrightarrow 1 - \dfrac{k}{2} = \dfrac{3k}{2} \Leftrightarrow k = \dfrac{1}{2}$.
+
+\textbf{Bài 2.} $|\vec{F}| = \sqrt{30^2 + 50^2 + 2\cdot 30\cdot 50\cos 60^\circ} = 70\text{ N}$.
+
+\end{multicols}
+\end{document}
