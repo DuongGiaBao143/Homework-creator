@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.29)  26 NOV 2026 14:52
+This is pdfTeX, Version 3.141592653-2.6-1.40.28 (MiKTeX 25.12) (preloaded format=pdflatex 2026.8.29)  26 NOV 2026 14:57
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -884,6 +884,107 @@ Package: multicol 2025/10/21 v2.0b multicolumn formatting (FMi)
 \mc@col@check@num=\count333
 \g__mc_curr_col_int=\count334
 )
+(D:\MiKTeX\tex/latex/colortbl\colortbl.sty
+Package: colortbl 2026/05/01 v1.0l Color table columns (DPC)
+\everycr=\toks42
+\minrowclearance=\skip73
+\rownum=\count335
+)
+(D:\MiKTeX\tex/latex/booktabs\booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen292
+\lightrulewidth=\dimen293
+\cmidrulewidth=\dimen294
+\belowrulesep=\dimen295
+\belowbottomsep=\dimen296
+\aboverulesep=\dimen297
+\abovetopsep=\dimen298
+\cmidrulesep=\dimen299
+\cmidrulekern=\dimen300
+\defaultaddspace=\dimen301
+\@cmidla=\count336
+\@cmidlb=\count337
+\@aboverulesep=\dimen302
+\@belowrulesep=\dimen303
+\@thisruleclass=\count338
+\@lastruleclass=\count339
+\@thisrulewidth=\dimen304
+)
+(D:\MiKTeX\tex/latex/microtype\microtype.sty
+Package: microtype 2026/03/01 v3.2d Micro-typographical refinements (RS)
+
+(D:\MiKTeX\tex/latex/etoolbox\etoolbox.sty
+Package: etoolbox 2025/10/02 v2.5m e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count340
+)
+\MT@toks=\toks43
+\MT@tempbox=\box115
+\MT@count=\count341
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1084.
+LaTeX Info: Redefining \leftprotrusion on input line 1085.
+\MT@prot@toks=\toks44
+LaTeX Info: Redefining \rightprotrusion on input line 1104.
+LaTeX Info: Redefining \textls on input line 1449.
+\MT@outer@kern=\dimen305
+LaTeX Info: Redefining \microtypecontext on input line 2053.
+LaTeX Info: Redefining \textmicrotypecontext on input line 2070.
+\MT@listname@count=\count342
+
+(D:\MiKTeX\tex/latex/microtype\microtype-pdftex.def
+File: microtype-pdftex.def 2026/03/01 v3.2d Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 944.
+LaTeX Info: Redefining \lslig on input line 944.
+\MT@outer@space=\skip74
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(D:\MiKTeX\tex/latex/microtype\microtype.cfg
+File: microtype.cfg 2026/03/01 v3.2d microtype main configuration file (RS)
+)
+LaTeX Info: Redefining \microtypesetup on input line 3065.
+)
+(D:\MiKTeX\tex/latex/tcolorbox\tcolorbox.sty
+Package: tcolorbox 2025/11/28 version 6.9.0 text color boxes
+
+(D:\MiKTeX\tex/latex/tools\verbatim.sty
+Package: verbatim 2024-01-22 v1.5x LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks45
+\verbatim@line=\toks46
+\verbatim@in@stream=\read4
+)
+(D:\MiKTeX\tex/latex/environ\environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(D:\MiKTeX\tex/latex/trimspaces\trimspaces.sty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+))
+\tcb@titlebox=\box116
+\tcb@upperbox=\box117
+\tcb@lowerbox=\box118
+\tcb@phantombox=\box119
+\c@tcbbreakpart=\count343
+\c@tcblayer=\count344
+\c@tcolorbox@number=\count345
+\l__tcobox_tmpa_box=\box120
+\l__tcobox_tmpa_dim=\dimen306
+\tcb@temp=\box121
+\tcb@temp=\box122
+\tcb@temp=\box123
+\tcb@temp=\box124
+)
+(D:\MiKTeX\tex/latex/tex-gyre\tgheros.sty
+Package: tgheros 2009/09/27 v1.2 TeX Gyre Heros as default sans serif family
+
+(D:\MiKTeX\tex/latex/kvoptions\kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(D:\MiKTeX\tex/generic/ltxcmds\ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+(D:\MiKTeX\tex/latex/kvsetkeys\kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+)))
 (D:\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarycalc.code.te
 x
 File: tikzlibrarycalc.code.tex 2025-08-29 v3.1.11a (3.1.11a)
@@ -897,40 +998,52 @@ tex
 File: tikzlibraryquotes.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 ) (D:\MiKTeX\tex/generic/pgf/libraries\pgflibraryarrows.meta.code.tex
 File: pgflibraryarrows.meta.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-\pgfarrowinset=\dimen292
-\pgfarrowlength=\dimen293
-\pgfarrowwidth=\dimen294
-\pgfarrowlinewidth=\dimen295
+\pgfarrowinset=\dimen307
+\pgfarrowlength=\dimen308
+\pgfarrowwidth=\dimen309
+\pgfarrowlinewidth=\dimen310
 )
 (D:\MiKTeX\tex/generic/pgf/frontendlayer/tikz/libraries\tikzlibrarybabel.code.t
 ex
 File: tikzlibrarybabel.code.tex 2025-08-29 v3.1.11a (3.1.11a)
-) (D:\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
+) (D:\MiKTeX\tex/latex/tcolorbox\tcbskins.code.tex
+Library (tcolorbox): 'tcbskins.code.tex' version '6.9.0'
+(D:\MiKTeX\tex/latex/tikzfill\tikzfill.image.sty
+Package: tikzfill.image 2026/04/23 v1.2.0 Image filling library for TikZ
+
+(D:\MiKTeX\tex/latex/tikzfill\tikzlibraryfill.image.code.tex
+File: tikzlibraryfill.image.code.tex 2026/04/23 v1.2.0 Image filling library
+\l__tikzfill_tmpa_dim=\dimen311
+\l__tikzfill_tmpb_dim=\dimen312
+\l__tikzfill_img_box=\box125
+))
+(D:\MiKTeX\tex/latex/tcolorbox\tcbskinsjigsaw.code.tex
+Library (tcolorbox): 'tcbskinsjigsaw.code.tex' version '6.9.0'
+)) (D:\MiKTeX\tex/latex/l3backend\l3backend-pdftex.def
 File: l3backend-pdftex.def 2025-10-09 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count335
-)
-(De_On_Tap_Vector_6.aux
+\l__color_backend_stack_int=\count346
+) (De_On_Tap_Vector_6.aux
 Package babel Info: 'vietnamese' activates 'vietnamese' shorthands.
 (babel)             Reported on input line 5.
 )
 \openout1 = `De_On_Tap_Vector_6.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
-LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 81.
-LaTeX Font Info:    ... okay on input line 81.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
+LaTeX Font Info:    Checking defaults for T5/cmr/m/n on input line 103.
+LaTeX Font Info:    ... okay on input line 103.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -941,16 +1054,16 @@ LaTeX Font Info:    ... okay on input line 81.
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
 * h-part:(L,W,R)=(36.98866pt, 523.53055pt, 36.98866pt)
-* v-part:(T,H,B)=(21.33955pt, 795.25455pt, 28.45274pt)
+* v-part:(T,H,B)=(22.1931pt, 793.83182pt, 29.02193pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
 * \textwidth=523.53055pt
-* \textheight=756.25455pt
+* \textheight=751.83182pt
 * \oddsidemargin=-35.28133pt
 * \evensidemargin=-35.28133pt
-* \topmargin=-50.93044pt
-* \headheight=18.0pt
-* \headsep=5.0pt
+* \topmargin=-50.07689pt
+* \headheight=20.0pt
+* \headsep=6.0pt
 * \topskip=10.0pt
 * \footskip=16.0pt
 * \marginparwidth=57.0pt
@@ -968,17 +1081,17 @@ LaTeX Font Info:    ... okay on input line 81.
 
 (D:\MiKTeX\tex/context/base/mkii\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count336
-\scratchdimen=\dimen296
-\scratchbox=\box115
-\nofMPsegments=\count337
-\nofMParguments=\count338
-\everyMPshowfont=\toks42
-\MPscratchCnt=\count339
-\MPscratchDim=\dimen297
-\MPnumerator=\count340
-\makeMPintoPDFobject=\count341
-\everyMPtoPDFconversion=\toks43
+\scratchcounter=\count347
+\scratchdimen=\dimen313
+\scratchbox=\box126
+\nofMPsegments=\count348
+\nofMParguments=\count349
+\everyMPshowfont=\toks47
+\MPscratchCnt=\count350
+\MPscratchDim=\dimen314
+\MPnumerator=\count351
+\makeMPintoPDFobject=\count352
+\everyMPtoPDFconversion=\toks48
 ) (D:\MiKTeX\tex/latex/epstopdf-pkg\epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
 Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
@@ -987,55 +1100,171 @@ Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
 (D:\MiKTeX\tex/latex/00miktex\epstopdf-sys.cfg
 File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
 ))
-LaTeX Font Info:    Trying to load font information for U+msa on input line 89.
+LaTeX Info: Redefining \microtypecontext on input line 103.
+Package microtype Info: Applying patch `item' on input line 103.
+Package microtype Info: Applying patch `toc' on input line 103.
+Package microtype Info: Applying patch `eqnum' on input line 103.
+Package microtype Info: Applying patch `footnote' on input line 103.
+Package microtype Info: Applying patch `verbatim' on input line 103.
+LaTeX Info: Redefining \microtypesetup on input line 103.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+Package microtype Info: Patching command `\showhyphens'.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+(D:\MiKTeX\tex/latex/microtype\mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+LaTeX Font Info:    Trying to load font information for T5+qhv on input line 10
+9.
+
+(D:\MiKTeX\tex/latex/tex-gyre\t5qhv.fd
+File: t5qhv.fd 2009/09/25 v1.2 font definition file for T5/qhv
+)
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/qhv/m/n/8'. Switching off
+(microtype)                protrusion for this font on input line 109.
 
 
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/qhv/b/n/8'. Switching off
+(microtype)                protrusion for this font on input line 109.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/qhv/m/n/12'. Switching off
+(microtype)                protrusion for this font on input line 111.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/qhv/b/n/12'. Switching off
+(microtype)                protrusion for this font on input line 111.
+
+LaTeX Font Info:    Trying to load font information for U+msa on input line 112
+.
 (D:\MiKTeX\tex/latex/amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 89.
+(D:\MiKTeX\tex/latex/microtype\mt-msa.cfg
+File: mt-msa.cfg 2006/02/04 v1.1 microtype config. file: AMS symbols (a) (RS)
+)
+LaTeX Font Info:    Trying to load font information for U+msb on input line 112
+.
 
- (D:\MiKTeX\tex/latex/amsfonts\umsb.fd
+(D:\MiKTeX\tex/latex/amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-[1{C:/Users/Crink/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}
+(D:\MiKTeX\tex/latex/microtype\mt-msb.cfg
+File: mt-msb.cfg 2005/06/01 v1.0 microtype config. file: AMS symbols (b) (RS)
+)
 
-] [2]
-[3] [1] [2] (De_On_Tap_Vector_6.aux)
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/qhv/m/n/10'. Switching off
+(microtype)                protrusion for this font on input line 115.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/qhv/b/n/10'. Switching off
+(microtype)                protrusion for this font on input line 115.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/qhv/m/n/9'. Switching off
+(microtype)                protrusion for this font on input line 116.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/qhv/b/n/9'. Switching off
+(microtype)                protrusion for this font on input line 116.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/qhv/m/it/8'. Switching off
+(microtype)                protrusion for this font on input line 118.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/qhv/m/n/7'. Switching off
+(microtype)                protrusion for this font on input line 124.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/qhv/b/n/7'. Switching off
+(microtype)                protrusion for this font on input line 124.
+
+LaTeX Font Info:    Trying to load font information for TS1+qhv on input line 1
+73.
+(D:\MiKTeX\tex/latex/tex-gyre\ts1qhv.fd
+File: ts1qhv.fd 2009/09/25 v1.2 font definition file for TS1/qhv
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `qhv' (encoding: TS1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+ [1{C:/Users/Crink/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map}{D:/MiKTeX/
+fonts/enc/dvips/tex-gyre/q-t5.enc}
+
+{D:/MiKTeX/fonts/enc/dvips/tex-gyre/q-ts1.enc}] [2]
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/qhv/m/n/5'. Switching off
+(microtype)                protrusion for this font on input line 321.
+
+[3]
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/qhv/m/n/14.4'. Switching off
+(microtype)                protrusion for this font on input line 342.
+
+
+Package microtype Warning: I cannot find a protrusion list for font
+(microtype)                `T5/qhv/b/n/14.4'. Switching off
+(microtype)                protrusion for this font on input line 342.
+
+[1] [2] (De_On_Tap_Vector_6.aux)
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2025-12-24>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 17087 strings out of 467871
- 328867 string characters out of 5435211
- 778674 words of memory out of 5000000
- 45656 multiletter control sequences out of 15000+600000
- 647626 words of font info for 78 fonts, out of 8000000 for 9000
+ 23514 strings out of 467871
+ 471165 string characters out of 5435211
+ 1011188 words of memory out of 5000000
+ 51796 multiletter control sequences out of 15000+600000
+ 681555 words of font info for 193 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 102i,13n,107p,756b,1095s stack positions out of 10000i,1000n,20000p,200000b,200000s
-<D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmex10.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cmextra/cmex
-9.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/MiKTeX/fonts/typ
-e1/public/amsfonts/cm/cmmi5.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi6
-.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/MiKTeX/fonts/type1
-/public/amsfonts/cm/cmmi9.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr10.p
-fb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/MiKTeX/fonts/type1/pu
-blic/amsfonts/cm/cmr6.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.pfb><D
-:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/MiKTeX/fonts/type1/public/
-amsfonts/cm/cmsy10.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pfb><D:/
-MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/MiKTeX/fonts/type1/public/a
-msfonts/cm/cmsy7.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb><D:/Mi
-KTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/MiKTeX/fonts/type1/vnte
-x/vnr/vnbx10.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnbx12.pfb><D:/MiKTeX/fonts/t
-ype1/vntex/vnr/vnbx9.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><D:/MiKTeX/
-fonts/type1/vntex/vnr/vnr5.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnr9.pfb><D:/Mi
-KTeX/fonts/type1/vntex/vnr/vnti10.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnti8.pf
-b><D:/MiKTeX/fonts/type1/vntex/vnr/vnti9.pfb>
-Output written on De_On_Tap_Vector_6.pdf (5 pages, 382574 bytes).
+ 102i,17n,107p,1017b,1214s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ <C:\Users\Crink\AppData\Local\MiKTeX\fonts/pk/ljfour/jknappen/ec/dpi600\tcrm
+0900.pk><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmbx9.pfb><D:/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmex10.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cmextr
+a/cmex9.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi10.pfb><D:/MiKTeX/fon
+ts/type1/public/amsfonts/cm/cmmi5.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm
+/cmmi6.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmmi7.pfb><D:/MiKTeX/fonts
+/type1/public/amsfonts/cm/cmmi9.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/c
+mr10.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr5.pfb><D:/MiKTeX/fonts/ty
+pe1/public/amsfonts/cm/cmr6.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr7.
+pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmr9.pfb><D:/MiKTeX/fonts/type1/p
+ublic/amsfonts/cm/cmsy10.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy5.pf
+b><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy6.pfb><D:/MiKTeX/fonts/type1/pu
+blic/amsfonts/cm/cmsy7.pfb><D:/MiKTeX/fonts/type1/public/amsfonts/cm/cmsy9.pfb>
+<D:/MiKTeX/fonts/type1/public/amsfonts/symbols/msbm10.pfb><D:/MiKTeX/fonts/type
+1/public/tex-gyre/qhvb.pfb><D:/MiKTeX/fonts/type1/public/tex-gyre/qhvr.pfb><D:/
+MiKTeX/fonts/type1/public/tex-gyre/qhvri.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/v
+nb10.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnr10.pfb><D:/MiKTeX/fonts/type1/vnte
+x/vnr/vnr5.pfb><D:/MiKTeX/fonts/type1/vntex/vnr/vnr9.pfb><D:/MiKTeX/fonts/type1
+/vntex/vnr/vnti9.pfb>
+Output written on De_On_Tap_Vector_6.pdf (5 pages, 390821 bytes).
 PDF statistics:
- 161 PDF objects out of 1000 (max. 8388607)
+ 168 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 13 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 73747 words of extra memory for PDF output out of 74296 (max. 10000000)
 

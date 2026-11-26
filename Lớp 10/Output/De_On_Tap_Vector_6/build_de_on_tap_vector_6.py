@@ -57,45 +57,67 @@ PREAMBLE = r"""\documentclass[10pt,a4paper]{article}
 \usepackage[utf8]{inputenc}
 \usepackage[T5]{fontenc}
 \usepackage[vietnamese]{babel}
-\usepackage[margin=1.3cm,top=0.75cm,bottom=1.0cm,includehead,includefoot,headheight=18pt,headsep=5pt,footskip=16pt]{geometry}
-\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace,multicol}
+\usepackage[margin=1.3cm,top=0.78cm,bottom=1.02cm,includehead,includefoot,headheight=20pt,headsep=6pt,footskip=16pt]{geometry}
+\usepackage{amsmath,amssymb,array,tabularx,enumitem,fancyhdr,tikz,xcolor,needspace,multicol,colortbl,booktabs,microtype,tcolorbox}
+\usepackage{tgheros}
 \usetikzlibrary{calc,angles,quotes,arrows.meta,babel}
+\tcbuselibrary{skins}
 
-\definecolor{ink}{RGB}{30,55,70}
-\definecolor{accent}{RGB}{18,82,112}
+% UI/UX Pro Max Design Tokens: Minimalism & Swiss Style + Education Teal Palette
+\definecolor{ink}{HTML}{134E4A}
+\definecolor{brand}{HTML}{0D9488}
+\definecolor{brandDark}{HTML}{0F766E}
+\definecolor{accent}{HTML}{0F766E}
+\definecolor{brandTint}{HTML}{F0FDFA}
+\definecolor{brandLine}{HTML}{99F6E4}
+\definecolor{slateText}{HTML}{334155}
+\definecolor{mutedSlate}{HTML}{64748B}
+\definecolor{ruleGray}{HTML}{CBD5E1}
+\definecolor{amberAccent}{HTML}{D97706}
+\definecolor{amberTint}{HTML}{FFFBEB}
 
 \setlength{\parindent}{0pt}
 \setlength{\parskip}{0pt}
+\setlength{\columnseprule}{0.5pt}
+\def\columnseprulecolor{\color{ruleGray}}
 
 __HEADER_QUOTE__
 
 \pagestyle{fancy}
 \fancyhf{}
-\lhead{\footnotesize\textit{\color{gray!70!black}\headerQuote}}
-\rhead{\small\textbf{\color{ink}Người biên soạn: Dương Gia Bảo}}
-\lfoot{}
-\rfoot{\small Trang \thepage/__EXAM_PAGES__}
-\renewcommand{\headrulewidth}{0.4pt}
+\lhead{\footnotesize\textsf{\textit{\color{mutedSlate}\headerQuote}}}
+\rhead{\footnotesize\textsf{\textbf{\color{ink}Người biên soạn:} \color{slateText}Dương Gia Bảo}}
+\lfoot{\footnotesize\textsf{\color{mutedSlate}Toán 10 KNTT \textbullet\ Chương IV. Vectơ}}
+\rfoot{\tikz[baseline=(p.base)]\node[fill=brandTint,draw=brandLine,rounded corners=2.5pt,inner xsep=5pt,inner ysep=1.8pt,font=\footnotesize\sffamily\bfseries,text=ink] (p) {Trang \thepage/\,__EXAM_PAGES__};}
+\renewcommand{\headrulewidth}{0.5pt}
+\renewcommand{\headrule}{\hbox to\headwidth{\color{ruleGray}\leaders\hrule height \headrulewidth\hfill}}
 \renewcommand{\footrulewidth}{0pt}
 
 \fancypagestyle{dapan}{
   \fancyhf{}
-  \lhead{\footnotesize\textit{\color{gray!70!black}\headerQuote}}
-  \rhead{\small\textbf{\color{ink}Người biên soạn: Dương Gia Bảo}}
-  \lfoot{\small\textit{\color{gray!60!black}Đáp án Đề ôn tập Chương IV. Vectơ (Đề số 6) — Toán 10 KNTT}}
-  \rfoot{\small Trang \thepage/__ANS_PAGES__}
-  \renewcommand{\headrulewidth}{0.4pt}
+  \lhead{\footnotesize\textsf{\textit{\color{mutedSlate}\headerQuote}}}
+  \rhead{\footnotesize\textsf{\textbf{\color{ink}Người biên soạn:} \color{slateText}Dương Gia Bảo}}
+  \lfoot{\footnotesize\textsf{\textit{\color{mutedSlate}Đáp án Đề ôn tập Chương IV. Vectơ (Đề số 6) — Toán 10 KNTT}}}
+  \rfoot{\tikz[baseline=(p.base)]\node[fill=brandTint,draw=brandLine,rounded corners=2.5pt,inner xsep=5pt,inner ysep=1.8pt,font=\footnotesize\sffamily\bfseries,text=ink] (p) {Trang \thepage/\,__ANS_PAGES__};}
+  \renewcommand{\headrulewidth}{0.5pt}
+  \renewcommand{\headrule}{\hbox to\headwidth{\color{ruleGray}\leaders\hrule height \headrulewidth\hfill}}
   \renewcommand{\footrulewidth}{0pt}
 }
 
-\newcommand{\parttitle}[1]{\par\vspace{3.5pt}\needspace{3\baselineskip}{\large\bfseries\color{ink}#1}\par\nopagebreak\vspace{2pt}}
-\newcommand{\four}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2&\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
-\newcommand{\two}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textbf{A.} #1&\textbf{B.} #2\\[3.8pt]\textbf{C.} #3&\textbf{D.} #4\end{tabularx}}
-\newcommand{\one}[4]{\par\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{}}\textbf{A.} #1\\[4pt]\textbf{B.} #2\\[4pt]\textbf{C.} #3\\[4pt]\textbf{D.} #4\end{tabularx}}
-\newcommand{\answerbox}{\hfill\mbox{\textit{Đáp số:}\ \fbox{\rule{0pt}{7.5pt}\hspace{1.8cm}}}}
+\newcommand{\parttitle}[1]{%
+  \par\vspace{4.5pt}\needspace{3\baselineskip}%
+  \begin{tcolorbox}[enhanced,frame hidden,interior style={left color=brandTint,right color=white},borderline west={3pt}{0pt}{brand},sharp corners,left=6pt,right=4pt,top=3pt,bottom=3pt,boxsep=0pt,before skip=0pt,after skip=2pt]
+    {\sffamily\normalsize\bfseries\color{ink}#1}
+  \end{tcolorbox}\nopagebreak%
+}
+\newcommand{\four}[4]{\par\vspace{1.2pt}\noindent\begin{tabularx}{\linewidth}{@{}*{4}{>{\raggedright\arraybackslash}X}@{}}\textsf{\textbf{\color{ink}A.}} #1&\textsf{\textbf{\color{ink}B.}} #2&\textsf{\textbf{\color{ink}C.}} #3&\textsf{\textbf{\color{ink}D.}} #4\end{tabularx}}
+\newcommand{\two}[4]{\par\vspace{1.2pt}\noindent\begin{tabularx}{\linewidth}{@{}*{2}{>{\raggedright\arraybackslash}X}@{}}\textsf{\textbf{\color{ink}A.}} #1&\textsf{\textbf{\color{ink}B.}} #2\\[3.5pt]\textsf{\textbf{\color{ink}C.}} #3&\textsf{\textbf{\color{ink}D.}} #4\end{tabularx}}
+\newcommand{\one}[4]{\par\vspace{1.2pt}\noindent\begin{tabularx}{\linewidth}{@{}>{\raggedright\arraybackslash}X@{}}\textsf{\textbf{\color{ink}A.}} #1\\[3.5pt]\textsf{\textbf{\color{ink}B.}} #2\\[3.5pt]\textsf{\textbf{\color{ink}C.}} #3\\[3.5pt]\textsf{\textbf{\color{ink}D.}} #4\end{tabularx}}
+\newcommand{\answerbox}{\hfill\mbox{\textsf{\footnotesize\textit{\color{mutedSlate}Đáp số:}}\ \tikz[baseline=-3pt]\node[draw=brand,line width=0.65pt,fill=brandTint,rounded corners=2.5pt,minimum width=1.85cm,minimum height=13.5pt,inner sep=0pt]{};}}
+\newcommand{\baibadge}[2]{\par\vspace{2.5pt}\needspace{3\baselineskip}\tikz[baseline=(b.base)]\node[fill=brandDark,text=white,rounded corners=2pt,inner xsep=5pt,inner ysep=1.5pt,font=\small\sffamily\bfseries] (b) {#1};\ \textsf{\footnotesize\textbf{\color{amberAccent}#2}}\ }
 
-\setlist[enumerate,1]{label=\textbf{Câu \arabic*.},leftmargin=1.1cm,labelsep=.1cm,itemsep=1.2pt,topsep=1.2pt,parsep=0pt}
-\setlist[enumerate,2]{label=\alph*),leftmargin=.55cm,itemsep=1.5pt,topsep=0.2pt,parsep=0pt}
+\setlist[enumerate,1]{label=\textsf{\textbf{\color{brandDark}Câu \arabic*.}},leftmargin=1.18cm,labelsep=.14cm,itemsep=2.2pt,topsep=1.8pt,parsep=0pt}
+\setlist[enumerate,2]{label=\textsf{\textbf{\color{slateText}\alph*)}},leftmargin=.55cm,itemsep=1.5pt,topsep=0.5pt,parsep=0pt}
 \newcolumntype{C}[1]{>{\centering\arraybackslash}m{#1}}
 """
 
@@ -105,45 +127,46 @@ TIKZ_P2_Q1 = r"""\begin{tikzpicture}[scale=0.62, >=Stealth]
   \coordinate (C) at (2.0,2.8);
   \coordinate (D) at (0,2.8);
   \coordinate (M) at (2.0,1.4);
+  \fill[brandTint!75] (A) -- (B) -- (C) -- (D) -- cycle;
   \draw[thick, ink] (A) -- (B) -- (C) -- (D) -- cycle;
-  \draw[dashed, gray!75] (A) -- (C);
-  \draw[dashed, accent!80] (A) -- (M);
-  \draw[gray!75] (0,0.28) -- (0.28,0.28) -- (0.28,0);
-  \fill[ink] (M) circle (2pt);
-  \node[below left, font=\scriptsize] at (A) {$A$};
-  \node[below right, font=\scriptsize] at (B) {$B$};
-  \node[above right, font=\scriptsize] at (C) {$C$};
-  \node[above left, font=\scriptsize] at (D) {$D$};
-  \node[right, font=\scriptsize] at (M) {$M$};
+  \draw[dashed, mutedSlate] (A) -- (C);
+  \draw[dashed, amberAccent, thick] (A) -- (M);
+  \draw[brand] (0,0.28) -- (0.28,0.28) -- (0.28,0);
+  \fill[amberAccent] (M) circle (2.2pt);
+  \node[below left, font=\scriptsize\sffamily] at (A) {$A$};
+  \node[below right, font=\scriptsize\sffamily] at (B) {$B$};
+  \node[above right, font=\scriptsize\sffamily] at (C) {$C$};
+  \node[above left, font=\scriptsize\sffamily] at (D) {$D$};
+  \node[right, font=\scriptsize\sffamily] at (M) {$M$};
 \end{tikzpicture}"""
 
 TIKZ_P3_Q6 = r"""\begin{tikzpicture}[scale=0.56, >=Stealth]
-  \fill[accent!18] (-0.35,-0.25) rectangle (0.35,0.25);
-  \draw[thick, ink] (-0.35,-0.25) rectangle (0.35,0.25);
+  \fill[brandTint] (-0.35,-0.25) rectangle (0.35,0.25);
+  \draw[thick, ink, rounded corners=1.5pt] (-0.35,-0.25) rectangle (0.35,0.25);
   \coordinate (O) at (0.35,0);
   \coordinate (F1) at (2.35,0);
   \coordinate (F2) at (1.95, 2.77);
-  \draw[->, very thick, ink] (O) -- (F1) node[below, font=\scriptsize] {$\vec{F}_1$};
-  \draw[->, very thick, accent] (O) -- (F2) node[above left, font=\scriptsize] {$\vec{F}_2$};
-  \pic[draw, angle radius=0.45cm, "$60^\circ$", angle eccentricity=1.65, font=\tiny] {angle = F1--O--F2};
+  \draw[->, very thick, brandDark] (O) -- (F1) node[below, font=\scriptsize] {$\vec{F}_1$};
+  \draw[->, very thick, amberAccent] (O) -- (F2) node[above left, font=\scriptsize] {$\vec{F}_2$};
+  \pic[draw=mutedSlate, angle radius=0.45cm, "$60^\circ$", angle eccentricity=1.65, font=\tiny] {angle = F1--O--F2};
 \end{tikzpicture}"""
 
 TIKZ_P4_B3 = r"""\begin{tikzpicture}[scale=0.62, >=Stealth]
-  \fill[cyan!8] (-1.8,0) rectangle (2.3,2.0);
-  \draw[thick, gray!80] (-1.8,0) -- (2.3,0);
-  \draw[thick, gray!80] (-1.8,2.0) -- (2.3,2.0);
+  \fill[brandTint] (-1.8,0) rectangle (2.3,2.0);
+  \draw[thick, brandDark] (-1.8,0) -- (2.3,0);
+  \draw[thick, brandDark] (-1.8,2.0) -- (2.3,2.0);
   \coordinate (O) at (0,0);
   \coordinate (B) at (0,2.0);
   \coordinate (Vn) at (1.125,0);
   \coordinate (Vp) at (-1.125,1.5);
   \coordinate (V) at (0,1.5);
-  \draw[->, gray!70] (O) -- (2.25,0) node[below, font=\tiny] {$x$ (Đông)};
-  \draw[->, gray!70] (O) -- (0,2.55) node[above, font=\tiny] {$y$ (Bắc)};
-  \draw[->, very thick, accent] (O) -- (Vn) node[below, font=\tiny] {$\vec{v}_n$};
+  \draw[->, mutedSlate] (O) -- (2.25,0) node[below, font=\tiny\sffamily] {$x$ (Đông)};
+  \draw[->, mutedSlate] (O) -- (0,2.55) node[above, font=\tiny\sffamily] {$y$ (Bắc)};
+  \draw[->, very thick, amberAccent] (O) -- (Vn) node[below, font=\tiny] {$\vec{v}_n$};
   \draw[->, very thick, ink] (O) -- (Vp) node[midway, below left, font=\tiny] {$\vec{v}_p$};
-  \draw[->, very thick, ink!75!cyan] (O) -- (V) node[right, font=\tiny] {$\vec{v}$};
-  \draw[dashed, gray!65] (Vp) -- (V) -- (Vn);
-  \draw[<->, gray!75] (2.05,0) -- (2.05,2.0) node[midway, right, font=\tiny] {$240\text{ m}$};
+  \draw[->, very thick, brand] (O) -- (V) node[right, font=\tiny] {$\vec{v}$};
+  \draw[dashed, mutedSlate!80] (Vp) -- (V) -- (Vn);
+  \draw[<->, mutedSlate] (2.05,0) -- (2.05,2.0) node[midway, right, font=\tiny] {$240\text{ m}$};
   \fill[ink] (O) circle (1.6pt);
   \fill[ink] (B) circle (1.6pt);
   \node[below left, font=\tiny] at (O) {$A \equiv O$};
@@ -159,39 +182,37 @@ def generate_tex(exam_pages_str: str = "XX", ans_pages_str: str = "YY") -> str:
     parts = [preamble, r"\begin{document}"]
 
     # ==================== ĐỀ THI ====================
-    parts.append(r"""\noindent
-\begin{minipage}[c]{0.38\textwidth}
-    \centering
-    \textbf{LÀM TOÁN ĐỂ HẠNH PHÚC}\\[-2pt]
-    \rule{3.2cm}{0.6pt}\\[2pt]
-    \textbf{ĐỀ ÔN TẬP SỐ 6}
-\end{minipage}\hfill
-\begin{minipage}[c]{0.52\textwidth}
-    \centering
-    \textbf{ĐỀ ÔN TẬP TOÁN 10 — CHƯƠNG IV. VECTƠ}\\[1pt]
-    \textbf{NĂM HỌC 2026 -- 2027}\\[1pt]
-    \textbf{Môn: TOÁN -- Khối lớp 10}\\
-    \textit{\small Thời gian làm bài: 90 phút (không kể thời gian phát đề)}
-\end{minipage}
-
-\vspace{0.05cm}
+    parts.append(r"""\begin{tcolorbox}[enhanced,colback=brandTint,colframe=brandLine,boxrule=0.7pt,arc=4pt,borderline west={3.5pt}{0pt}{brandDark},left=9pt,right=9pt,top=6pt,bottom=6pt,before skip=0pt,after skip=4pt]
 \noindent
-\begin{minipage}[b]{0.78\textwidth}
-    \textbf{Họ và tên:}\dotfill\textbf{SBD:}\makebox[3.5cm]{\dotfill}
+\begin{minipage}[c]{0.34\textwidth}
+    \centering
+    {\footnotesize\sffamily\bfseries\color{brandDark} LÀM TOÁN ĐỂ HẠNH PHÚC}\\[2pt]
+    {\color{brandLine}\rule{3.0cm}{0.8pt}}\\[3pt]
+    {\large\sffamily\bfseries\color{ink} ĐỀ ÔN TẬP SỐ 6}
 \end{minipage}\hfill
-\begin{minipage}[b]{0.20\textwidth}
-    \hfill
-    \setlength{\fboxrule}{0.8pt}%
-    \fbox{\begin{minipage}{2.3cm}
+\begin{minipage}[c]{0.49\textwidth}
+    \centering
+    {\normalsize\sffamily\bfseries\color{ink} ĐỀ ÔN TẬP TOÁN 10 — CHƯƠNG IV. VECTƠ}\\[2pt]
+    {\small\sffamily\bfseries\color{slateText} NĂM HỌC 2026 -- 2027}\\[1pt]
+    {\footnotesize\sffamily\textbf{\color{brandDark}Môn: TOÁN -- Khối lớp 10}}\\
+    {\footnotesize\sffamily\textit{\color{mutedSlate}Thời gian làm bài: 90 phút (không kể thời gian phát đề)}}
+\end{minipage}\hfill
+\begin{minipage}[c]{0.15\textwidth}
+    \raggedleft
+    \begin{tcolorbox}[colback=amberTint,colframe=amberAccent,boxrule=0.8pt,arc=3pt,left=3pt,right=3pt,top=3pt,bottom=3pt,boxsep=1pt]
         \centering
-        \textbf{\small Mã đề}\\
-        \textbf{1047}
-    \end{minipage}}
+        {\scriptsize\sffamily\bfseries\color{amberAccent} MÃ ĐỀ}\\[-1pt]
+        {\normalsize\sffamily\bfseries\color{ink} 1047}
+    \end{tcolorbox}
 \end{minipage}
-\vspace{0.05cm}
+\end{tcolorbox}
+
+\begin{tcolorbox}[colback=white,colframe=ruleGray,boxrule=0.5pt,arc=3pt,left=8pt,right=8pt,top=3.5pt,bottom=3.5pt,before skip=0pt,after skip=4pt]
+\noindent\textsf{\small\textbf{\color{ink}Họ và tên thí sinh:}}\dotfill\quad\textsf{\small\textbf{\color{ink}SBD:}}\makebox[3.2cm]{\dotfill}\quad\textsf{\small\textbf{\color{ink}Lớp:}}\makebox[1.8cm]{\dotfill}
+\end{tcolorbox}
 
 \parttitle{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn}
-\textit{Thí sinh trả lời từ câu 1 đến câu 20. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}
+\textit{\color{mutedSlate}\small Thí sinh trả lời từ câu 1 đến câu 20. Mỗi câu hỏi thí sinh chỉ chọn một phương án.}
 \begin{enumerate}
 \item Cho $6$ điểm phân biệt nằm trên cùng một đường thẳng. Số vectơ khác vectơ-không có điểm đầu và điểm cuối là $2$ trong $6$ điểm đã cho là
 \four{$15$.}{$30$.}{$12$.}{$36$.}
@@ -256,7 +277,7 @@ def generate_tex(exam_pages_str: str = "XX", ans_pages_str: str = "YY") -> str:
 \end{enumerate}
 
 \parttitle{PHẦN II. Câu trắc nghiệm đúng sai}
-\textit{Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
+\textit{\color{mutedSlate}\small Thí sinh trả lời từ câu 1 đến câu 4. Trong mỗi ý a), b), c), d) ở mỗi câu, thí sinh chọn đúng hoặc sai.}
 \begin{enumerate}
 \item Cho hình chữ nhật $ABCD$ có $AB = 8$, $AD = 12$ và $M$ là trung điểm của cạnh $BC$ (xem hình vẽ bên).
 \par\noindent\begin{minipage}[t]{0.73\linewidth}
@@ -298,7 +319,7 @@ def generate_tex(exam_pages_str: str = "XX", ans_pages_str: str = "YY") -> str:
 \pagebreak
 
 \parttitle{PHẦN III. Câu trắc nghiệm trả lời ngắn}
-\textit{Thí sinh trả lời từ câu 1 đến câu 6.}
+\textit{\color{mutedSlate}\small Thí sinh trả lời từ câu 1 đến câu 6.}
 \begin{enumerate}
 \item Cho hình thoi $ABCD$ có cạnh bằng $12$ và $\widehat{BAD} = 60^\circ$. Tính độ dài của vectơ $\vec{u} = \vec{AB} - \vec{AD}$. \answerbox
 
@@ -320,21 +341,21 @@ def generate_tex(exam_pages_str: str = "XX", ans_pages_str: str = "YY") -> str:
 \end{enumerate}
 
 \parttitle{PHẦN IV. Câu tự luận}
-\textit{Thí sinh trình bày lời giải chi tiết từ Bài 1 đến Bài 3.}
+\textit{\color{mutedSlate}\small Thí sinh trình bày lời giải chi tiết từ Bài 1 đến Bài 3.}
 
-\textbf{Bài 1. (1,0 điểm)} Cho tam giác $ABC$. Gọi $I$ là trung điểm của cạnh $BC$, $M$ là trung điểm của đoạn thẳng $AI$, và điểm $N$ thuộc cạnh $AC$ sao cho $NC = 2NA$.
+\baibadge{Bài 1}{(1,0 điểm)} Cho tam giác $ABC$. Gọi $I$ là trung điểm của cạnh $BC$, $M$ là trung điểm của đoạn thẳng $AI$, và điểm $N$ thuộc cạnh $AC$ sao cho $NC = 2NA$.
 \begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=2pt]
     \item (0,5 điểm) Hãy biểu diễn hai vectơ $\vec{BM}$ và $\vec{BN}$ theo hai vectơ $\vec{AB}$ và $\vec{AC}$.
     \item (0,5 điểm) Chứng minh rằng ba điểm $B, M, N$ thẳng hàng.
 \end{enumerate}
 
-\textbf{Bài 2. (1,0 điểm)} Trong mặt phẳng tọa độ $Oxy$, cho ba điểm $A(2; 5)$, $B(-1; -1)$ và $C(4; 4)$.
+\baibadge{Bài 2}{(1,0 điểm)} Trong mặt phẳng tọa độ $Oxy$, cho ba điểm $A(2; 5)$, $B(-1; -1)$ và $C(4; 4)$.
 \begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=2pt]
     \item (0,5 điểm) Chứng minh tam giác $ABC$ vuông tại $A$ và tìm tọa độ điểm $D$ sao cho tứ giác $ABCD$ là hình bình hành.
     \item (0,5 điểm) Tìm tọa độ điểm $P$ nằm trên trục hoành $Ox$ sao cho biểu thức $T = |\vec{PA} + \vec{PB} + 2\vec{PC}|$ đạt giá trị nhỏ nhất, và tính giá trị nhỏ nhất đó.
 \end{enumerate}
 
-\textbf{Bài 3. (1,0 điểm)} Một chiếc phà muốn đi thẳng qua một con sông rộng $240\text{ m}$ (vuông góc với hai bờ sông song song) từ bến $A$ ở bờ Nam sang bến $B$ ở bờ Bắc. Biết nước sông chảy theo hướng từ Tây sang Đông với vận tốc $\vec{v}_n$ có độ lớn $v_n = 3\text{ m/s}$, còn vận tốc thực của phà khi nước đứng yên có độ lớn $v_p = 5\text{ m/s}$ theo vectơ $\vec{v}_p$. Chọn hệ trục tọa độ $Oxy$ gắn với mặt đất có gốc $O \equiv A$, tia $Ox$ hướng về phía Đông và tia $Oy$ hướng về phía Bắc (đơn vị trên trục vận tốc là $\text{m/s}$, xem hình vẽ).
+\baibadge{Bài 3}{(1,0 điểm)} Một chiếc phà muốn đi thẳng qua một con sông rộng $240\text{ m}$ (vuông góc với hai bờ sông song song) từ bến $A$ ở bờ Nam sang bến $B$ ở bờ Bắc. Biết nước sông chảy theo hướng từ Tây sang Đông với vận tốc $\vec{v}_n$ có độ lớn $v_n = 3\text{ m/s}$, còn vận tốc thực của phà khi nước đứng yên có độ lớn $v_p = 5\text{ m/s}$ theo vectơ $\vec{v}_p$. Chọn hệ trục tọa độ $Oxy$ gắn với mặt đất có gốc $O \equiv A$, tia $Ox$ hướng về phía Đông và tia $Oy$ hướng về phía Bắc (đơn vị trên trục vận tốc là $\text{m/s}$, xem hình vẽ).
 \par\noindent\begin{minipage}[t]{0.66\linewidth}
 \begin{enumerate}[label=\alph*), leftmargin=0.6cm, itemsep=2pt]
     \item (0,5 điểm) Để phà đi thẳng theo hướng $AB$ (trùng tia $Oy$), vận tốc tổng hợp $\vec{v} = \vec{v}_p + \vec{v}_n$ phải cùng hướng với tia $Oy$. Hãy tìm tọa độ của vectơ $\vec{v}_p$ và vectơ $\vec{v}$ trong hệ trục $Oxy$.
@@ -351,69 +372,82 @@ def generate_tex(exam_pages_str: str = "XX", ans_pages_str: str = "YY") -> str:
 \pagestyle{dapan}
 \setcounter{page}{1}
 
-\begin{center}
-  {\Large\bfseries\color{ink} BẢNG ĐÁP ÁN TỔNG HỢP}\\[2pt]
-  {\small\color{gray!75!black} Đề ôn tập Toán 10 — Chương IV. Vectơ — Đề số 6 (Mã đề 1047)}
-\end{center}
-\vspace{1pt}
+\begin{tcolorbox}[enhanced,colback=brandTint,colframe=brandLine,boxrule=0.7pt,arc=4pt,borderline west={3.5pt}{0pt}{brandDark},top=5pt,bottom=5pt,before skip=0pt,after skip=5pt]
+  \centering
+  {\Large\sffamily\bfseries\color{ink} BẢNG ĐÁP ÁN TỔNG HỢP}\\[2pt]
+  {\small\sffamily\color{mutedSlate} Đề ôn tập Toán 10 — Chương IV. Vectơ — Đề số 6 (Mã đề 1047)}
+\end{tcolorbox}
 
-\noindent\textbf{PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn (20 câu)}
-\vspace{1.5pt}
+\noindent\textsf{\small\textbf{\color{ink}PHẦN I. Câu trắc nghiệm nhiều phương án lựa chọn (20 câu)}}
+\vspace{2pt}
 
 \begin{center}
-\renewcommand{\arraystretch}{1.15}
+\renewcommand{\arraystretch}{1.22}
+\arrayrulecolor{ruleGray}
 \begin{tabular}{|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|C{0.95cm}|}
 \hline
-\textbf{1} & \textbf{2} & \textbf{3} & \textbf{4} & \textbf{5} & \textbf{6} & \textbf{7} & \textbf{8} & \textbf{9} & \textbf{10} \\ \hline
-\textbf{B} & \textbf{D} & \textbf{A} & \textbf{C} & \textbf{D} & \textbf{B} & \textbf{A} & \textbf{C} & \textbf{D} & \textbf{A} \\ \hline
-\hline
-\textbf{11} & \textbf{12} & \textbf{13} & \textbf{14} & \textbf{15} & \textbf{16} & \textbf{17} & \textbf{18} & \textbf{19} & \textbf{20} \\ \hline
-\textbf{C} & \textbf{B} & \textbf{C} & \textbf{A} & \textbf{D} & \textbf{B} & \textbf{A} & \textbf{D} & \textbf{C} & \textbf{B} \\ \hline
+\rowcolor{brandDark}
+\color{white}\textsf{\textbf{1}} & \color{white}\textsf{\textbf{2}} & \color{white}\textsf{\textbf{3}} & \color{white}\textsf{\textbf{4}} & \color{white}\textsf{\textbf{5}} & \color{white}\textsf{\textbf{6}} & \color{white}\textsf{\textbf{7}} & \color{white}\textsf{\textbf{8}} & \color{white}\textsf{\textbf{9}} & \color{white}\textsf{\textbf{10}} \\ \hline
+\rowcolor{brandTint}
+\textbf{\color{ink}B} & \textbf{\color{ink}D} & \textbf{\color{ink}A} & \textbf{\color{ink}C} & \textbf{\color{ink}D} & \textbf{\color{ink}B} & \textbf{\color{ink}A} & \textbf{\color{ink}C} & \textbf{\color{ink}D} & \textbf{\color{ink}A} \\ \hline
+\rowcolor{brandDark}
+\color{white}\textsf{\textbf{11}} & \color{white}\textsf{\textbf{12}} & \color{white}\textsf{\textbf{13}} & \color{white}\textsf{\textbf{14}} & \color{white}\textsf{\textbf{15}} & \color{white}\textsf{\textbf{16}} & \color{white}\textsf{\textbf{17}} & \color{white}\textsf{\textbf{18}} & \color{white}\textsf{\textbf{19}} & \color{white}\textsf{\textbf{20}} \\ \hline
+\rowcolor{brandTint}
+\textbf{\color{ink}C} & \textbf{\color{ink}B} & \textbf{\color{ink}C} & \textbf{\color{ink}A} & \textbf{\color{ink}D} & \textbf{\color{ink}B} & \textbf{\color{ink}A} & \textbf{\color{ink}D} & \textbf{\color{ink}C} & \textbf{\color{ink}B} \\ \hline
 \end{tabular}
 \end{center}
 
-\vspace{1pt}
-\noindent\begin{minipage}[t]{0.58\linewidth}
-\textbf{PHẦN II. Câu trắc nghiệm đúng/sai}\\[1.5pt]
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular}{|c|c|c|c|c|}
+\vspace{2pt}
+\noindent\begin{minipage}[t]{0.55\linewidth}
+\textsf{\small\textbf{\color{ink}PHẦN II. Câu trắc nghiệm đúng/sai}}\\[2pt]
+\renewcommand{\arraystretch}{1.22}
+\arrayrulecolor{ruleGray}
+\begin{tabular}{|C{0.9cm}|C{0.7cm}|C{0.7cm}|C{0.7cm}|C{0.7cm}|}
 \hline
-\textbf{Câu} & \textbf{a)} & \textbf{b)} & \textbf{c)} & \textbf{d)} \\ \hline
-\textbf{1} & \textbf{S} & \textbf{Đ} & \textbf{S} & \textbf{Đ} \\ \hline
-\textbf{2} & \textbf{Đ} & \textbf{S} & \textbf{Đ} & \textbf{S} \\ \hline
-\textbf{3} & \textbf{S} & \textbf{S} & \textbf{Đ} & \textbf{Đ} \\ \hline
-\textbf{4} & \textbf{Đ} & \textbf{Đ} & \textbf{S} & \textbf{S} \\ \hline
+\rowcolor{brandDark}
+\color{white}\textsf{\textbf{Câu}} & \color{white}\textsf{\textbf{a)}} & \color{white}\textsf{\textbf{b)}} & \color{white}\textsf{\textbf{c)}} & \color{white}\textsf{\textbf{d)}} \\ \hline
+\rowcolor{brandTint}
+\textbf{\color{ink}1} & \color{mutedSlate}\textbf{S} & \color{brandDark}\textbf{Đ} & \color{mutedSlate}\textbf{S} & \color{brandDark}\textbf{Đ} \\ \hline
+\textbf{\color{ink}2} & \color{brandDark}\textbf{Đ} & \color{mutedSlate}\textbf{S} & \color{brandDark}\textbf{Đ} & \color{mutedSlate}\textbf{S} \\ \hline
+\rowcolor{brandTint}
+\textbf{\color{ink}3} & \color{mutedSlate}\textbf{S} & \color{mutedSlate}\textbf{S} & \color{brandDark}\textbf{Đ} & \color{brandDark}\textbf{Đ} \\ \hline
+\textbf{\color{ink}4} & \color{brandDark}\textbf{Đ} & \color{brandDark}\textbf{Đ} & \color{mutedSlate}\textbf{S} & \color{mutedSlate}\textbf{S} \\ \hline
 \end{tabular}
 \end{minipage}\hfill
-\begin{minipage}[t]{0.40\linewidth}
-\textbf{PHẦN III. Trả lời ngắn}\\[1.5pt]
-\renewcommand{\arraystretch}{1.15}
-\begin{tabular}{|c|c|c|c|}
+\begin{minipage}[t]{0.42\linewidth}
+\textsf{\small\textbf{\color{ink}PHẦN III. Trả lời ngắn}}\\[2pt]
+\renewcommand{\arraystretch}{1.22}
+\arrayrulecolor{ruleGray}
+\begin{tabular}{|C{0.85cm}|C{1.35cm}|C{0.85cm}|C{1.35cm}|}
 \hline
-\textbf{Câu} & \textbf{Đáp số} & \textbf{Câu} & \textbf{Đáp số} \\ \hline
-\textbf{1} & $12$ & \textbf{4} & $0{,}28$ \\ \hline
-\textbf{2} & $7$  & \textbf{5} & $3$ \\ \hline
-\textbf{3} & $10$ & \textbf{6} & $700$ \\ \hline
+\rowcolor{brandDark}
+\color{white}\textsf{\textbf{Câu}} & \color{white}\textsf{\textbf{Đáp số}} & \color{white}\textsf{\textbf{Câu}} & \color{white}\textsf{\textbf{Đáp số}} \\ \hline
+\rowcolor{brandTint}
+\textbf{\color{ink}1} & \textbf{$12$} & \textbf{\color{ink}4} & \textbf{$0{,}28$} \\ \hline
+\textbf{\color{ink}2} & \textbf{$7$}  & \textbf{\color{ink}5} & \textbf{$3$} \\ \hline
+\rowcolor{brandTint}
+\textbf{\color{ink}3} & \textbf{$10$} & \textbf{\color{ink}6} & \textbf{$700$} \\ \hline
 \end{tabular}
 \end{minipage}
 
-\vspace{5pt}
-\noindent\textbf{PHẦN IV. Đáp số tự luận:}\\[2pt]
-- \textbf{Bài 1:} a) $\vec{BM} = -\dfrac{3}{4}\vec{AB} + \dfrac{1}{4}\vec{AC}$; $\vec{BN} = -\vec{AB} + \dfrac{1}{3}\vec{AC}$. b) $\vec{BM} = \dfrac{3}{4}\vec{BN} \Rightarrow B, M, N$ thẳng hàng.\\
-- \textbf{Bài 2:} a) $\vec{AB}\cdot\vec{AC} = 0$; $D(7; 10)$. b) $P\!\left(\dfrac{9}{4}; 0\right)$, GTNN bằng $12$.\\
-- \textbf{Bài 3:} a) $\vec{v}_p = (-3; 4)\text{ m/s}$, $\vec{v} = (0; 4)\text{ m/s}$. b) $t = 60\text{ s}$; góc $\approx 126{,}9^\circ$.
-
 \vspace{4pt}
-\begin{center}
-  {\large\bfseries\color{ink} HƯỚNG DẪN GIẢI CHI TIẾT}
-\end{center}
+\begin{tcolorbox}[enhanced,colback=amberTint,colframe=ruleGray,boxrule=0.5pt,arc=3pt,borderline west={3pt}{0pt}{amberAccent},left=7pt,right=7pt,top=4pt,bottom=4pt,before skip=2pt,after skip=4pt]
+\noindent\textsf{\small\textbf{\color{ink}PHẦN IV. Đáp số tự luận:}}\\[2pt]
+\small
+\textbullet\ \textbf{\color{ink}Bài 1:} a) $\vec{BM} = -\dfrac{3}{4}\vec{AB} + \dfrac{1}{4}\vec{AC}$; $\vec{BN} = -\vec{AB} + \dfrac{1}{3}\vec{AC}$. b) $\vec{BM} = \dfrac{3}{4}\vec{BN} \Rightarrow B, M, N$ thẳng hàng.\\
+\textbullet\ \textbf{\color{ink}Bài 2:} a) $\vec{AB}\cdot\vec{AC} = 0$; $D(7; 10)$. b) $P\!\left(\dfrac{9}{4}; 0\right)$, GTNN bằng $12$.\\
+\textbullet\ \textbf{\color{ink}Bài 3:} a) $\vec{v}_p = (-3; 4)\text{ m/s}$, $\vec{v} = (0; 4)\text{ m/s}$. b) $t = 60\text{ s}$; góc $\approx 126{,}9^\circ$.
+\end{tcolorbox}
+
+\parttitle{\centering HƯỚNG DẪN GIẢI CHI TIẾT}
 \vspace{1pt}
 
 \begin{multicols}{2}
 \raggedcolumns
 \small
+\arrayrulecolor{black}
 
-\textbf{\color{accent}PHẦN I. TRẮC NGHIỆM}
+\textbf{\color{accent}\textsf{PHẦN I. TRẮC NGHIỆM}}
 
 \textbf{Câu 1.} Số vectơ khác $\vec{0}$ tạo bởi $2$ trong $6$ điểm là $A_6^2 = 6 \times 5 = 30$. Chọn \textbf{B}.
 
@@ -455,7 +489,7 @@ def generate_tex(exam_pages_str: str = "XX", ans_pages_str: str = "YY") -> str:
 
 \textbf{Câu 20.} $|\vec{F}| = \sqrt{30^2 + 30^2 + 2\cdot 30\cdot 30\cos 60^\circ} = 30\sqrt{3}\text{ N}$. Chọn \textbf{B}.
 
-\textbf{\color{accent}PHẦN II. ĐÚNG / SAI}
+\textbf{\color{brandDark}\textsf{PHẦN II. ĐÚNG / SAI}}
 
 \textbf{Câu 1.}
 a) $AC = \sqrt{8^2 + 12^2} = 4\sqrt{13} \neq 20$ (\textbf{S}).
@@ -481,7 +515,7 @@ b) $BC = \sqrt{6^2 + 10^2 - 2(-30)} = \sqrt{196} = 14$ (\textbf{Đ}).
 c) $|\vec{AB} + \vec{AC}| = \sqrt{36 + 100 + 2(-30)} = \sqrt{76} = 2\sqrt{19} \neq 16$ (\textbf{S}).
 d) $\vec{BA}\cdot\vec{BC} = (-\vec{AB})\cdot(\vec{AC} - \vec{AB}) = AB^2 - \vec{AB}\cdot\vec{AC} = 36 - (-30) = 66$ (\textbf{S}).
 
-\textbf{\color{accent}PHẦN III. TRẢ LỜI NGẮN}
+\textbf{\color{brandDark}\textsf{PHẦN III. TRẢ LỜI NGẮN}}
 
 \textbf{Câu 1.} $|\vec{AB} - \vec{AD}| = |\vec{DB}| = DB$. Vì $\widehat{BAD} = 60^\circ$ nên $\triangle ABD$ đều cạnh $12 \Rightarrow DB = \mathbf{12}$.
 
@@ -495,7 +529,7 @@ d) $\vec{BA}\cdot\vec{BC} = (-\vec{AB})\cdot(\vec{AC} - \vec{AB}) = AB^2 - \vec{
 
 \textbf{Câu 6.} $|\vec{F}| = \sqrt{300^2 + 500^2 + 2\cdot 300\cdot 500\cos 60^\circ} = \sqrt{490\,000} = \mathbf{700}\text{ N}$.
 
-\textbf{\color{accent}PHẦN IV. TỰ LUẬN}
+\textbf{\color{brandDark}\textsf{PHẦN IV. TỰ LUẬN}}
 
 \textbf{Bài 1.}
 a) $\vec{AM} = \dfrac{1}{2}\vec{AI} = \dfrac{1}{4}\vec{AB} + \dfrac{1}{4}\vec{AC} \Rightarrow \vec{BM} = \vec{AM} - \vec{AB} = -\dfrac{3}{4}\vec{AB} + \dfrac{1}{4}\vec{AC}$.\\
