@@ -19,6 +19,14 @@
 \definecolor{hairline}{HTML}{CBD5E1}  % Slate 300 - Đường kẻ phân tách mảnh
 \definecolor{surface}{HTML}{F8FAFC}   % Slate 50  - Nền xám rất nhẹ (ô đáp số, header bảng)
 
+% ---- Bảng màu riêng cho hình vẽ TikZ (tách biệt rõ nét các đối tượng/vectơ) ----
+\definecolor{figEdge}{HTML}{1E3A5F}      % Viền hình chính (Navy đậm)
+\definecolor{figFill}{HTML}{EFF6FF}      % Tô nền hình nhẹ (Sky 50)
+\definecolor{figPrimary}{HTML}{0284C7}   % Vectơ / đường phụ 1 (Xanh dương sáng)
+\definecolor{figSecondary}{HTML}{D97706} % Vectơ / đường phụ 2 (Cam hổ phách)
+\definecolor{figHighlight}{HTML}{DC2626} % Góc vuông, góc xen giữa, điểm nhấn (Đỏ san hô)
+\definecolor{figAxis}{HTML}{64748B}      % Trục tọa độ, đường gióng (Xám slate)
+
 % ---- Thông số đề (chỉnh nhanh tại đây) ----
 \newcommand{\examSeries}{LÀM TOÁN ĐỂ HẠNH PHÚC}
 \newcommand{\examKind}{ĐỀ ÔN TẬP SỐ 01}
@@ -154,14 +162,16 @@
   \coordinate (B) at (2.4,0);
   \coordinate (C) at (0,3.2);
   \coordinate (M) at (1.2,1.6);
-  \draw[thick, ink] (A) -- (B) -- (C) -- cycle;
-  \draw[dashed, navy] (A) -- (M);
-  \draw[hairline] (0,0.3) -- (0.3,0.3) -- (0.3,0);
-  \fill[navy] (M) circle (1.8pt);
-  \node[below left, font=\scriptsize\sffamily] at (A) {$A$};
-  \node[below right, font=\scriptsize\sffamily] at (B) {$B$};
-  \node[above left, font=\scriptsize\sffamily] at (C) {$C$};
-  \node[above right, font=\scriptsize\sffamily] at (M) {$M$};
+  \fill[figFill] (A) -- (B) -- (C) -- cycle;
+  \draw[thick, figEdge] (A) -- (B) -- (C) -- cycle;
+  \draw[dashed, thick, figPrimary] (A) -- (M);
+  \draw[figHighlight, semithick] (0,0.32) -- (0.32,0.32) -- (0.32,0);
+  \foreach \pt in {A,B,C} \fill[figEdge] (\pt) circle (1.5pt);
+  \fill[figHighlight] (M) circle (2pt);
+  \node[below left, font=\scriptsize\sffamily, text=figEdge] at (A) {$A$};
+  \node[below right, font=\scriptsize\sffamily, text=figEdge] at (B) {$B$};
+  \node[above left, font=\scriptsize\sffamily, text=figEdge] at (C) {$C$};
+  \node[above right, font=\scriptsize\sffamily, text=figHighlight] at (M) {$M$};
 \end{tikzpicture}
 \end{minipage}
 
@@ -193,7 +203,21 @@
     \item (0,5 điểm) Gọi $I$ là giao điểm của $AM$ và $BN$, đặt $\vec{AI} = k\vec{AM}$. Hãy tìm tỉ số $k$.
 \end{enumerate}
 
-\essayitem{Bài 2}{1,0 điểm} Một vật chịu tác dụng đồng thời của hai lực $\vec{F}_1, \vec{F}_2$ có độ lớn lần lượt là $30\text{ N}$ và $50\text{ N}$, hợp với nhau góc $60^\circ$. Tính độ lớn hợp lực $\vec{F} = \vec{F}_1 + \vec{F}_2$.
+\par\noindent\begin{minipage}[t]{0.72\linewidth}
+\essayitem{Bài 2}{1,0 điểm} Một vật chịu tác dụng đồng thời của hai lực $\vec{F}_1, \vec{F}_2$ có độ lớn lần lượt là $30\text{ N}$ và $50\text{ N}$, hợp với nhau góc $60^\circ$ (như hình minh họa bên). Tính độ lớn hợp lực $\vec{F} = \vec{F}_1 + \vec{F}_2$.
+\end{minipage}\hfill
+\begin{minipage}[t]{0.26\linewidth}\raggedleft\vspace{-2pt}
+\begin{tikzpicture}[scale=0.52, >=Stealth]
+  \fill[figFill, rounded corners=1.5pt] (-0.35,-0.25) rectangle (0.35,0.25);
+  \draw[thick, figEdge, rounded corners=1.5pt] (-0.35,-0.25) rectangle (0.35,0.25);
+  \coordinate (O) at (0.35,0);
+  \coordinate (F1) at (2.15,0);
+  \coordinate (F2) at (1.85, 2.60);
+  \draw[->, very thick, figPrimary] (O) -- (F1) node[below, font=\scriptsize, text=figPrimary] {$\vec{F}_1$};
+  \draw[->, very thick, figSecondary] (O) -- (F2) node[above left, font=\scriptsize, text=figSecondary] {$\vec{F}_2$};
+  \pic[draw=figHighlight, thick, angle radius=0.45cm, "$60^\circ$", angle eccentricity=1.68, font=\tiny, text=figHighlight] {angle = F1--O--F2};
+\end{tikzpicture}
+\end{minipage}
 
 % ==================== TRANG ĐÁP ÁN & HƯỚNG DẪN GIẢI ====================
 \newpage
